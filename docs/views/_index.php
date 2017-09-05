@@ -31,6 +31,6 @@
   </section>
 
 <?php else : ?>
-  <?php include'resources/views/parts/'.$part.'.php'; ?>
+  <?php include'docs/views/parts/'.$part.'.php'; ?>
 
 <?php endif; ?>

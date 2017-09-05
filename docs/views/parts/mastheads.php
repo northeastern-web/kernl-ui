@@ -5,9 +5,9 @@
 <!-- start base masthead -->
 <header class="masthead">
   <a class="masthead__logo" href="/">
-    <img class="masthead__logo__image" alt="Logo" src="/resources/assets/images/logo.png">
+    <img class="masthead__logo__image" alt="Logo" src="/src/images/logo.png">
   </a>
-  <?php include $_SERVER["DOCUMENT_ROOT"] . '/resources/views/partials/_masthead-ul.php'; ?>
+  <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
 <!-- end base masthead -->
 <div class="section --banner +bgimg +middle ta--c">
@@ -23,9 +23,9 @@
 <!-- start base masthead -->
 <header class="masthead">
   <a class="masthead__logo" href="/">
-    <img class="masthead__logo__image" alt="Logo" src="/resources/assets/images/logo.png">
+    <img class="masthead__logo__image" alt="Logo" src="/src/images/logo.png">
   </a>
-  <?php include $_SERVER["DOCUMENT_ROOT"] . '/resources/views/partials/_masthead-ul.php'; ?>
+  <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
 <!-- end base masthead -->
 <div class="section --banner +fixed +bgimg +middle ta--c">
@@ -41,9 +41,9 @@
 <!-- end background-image-overlay masthead -->
 <header class="masthead --overlay">
   <a class="masthead__logo" href="/">
-    <img class="masthead__logo__image" alt="Logo" src="/resources/assets/images/logo-white.png">
+    <img class="masthead__logo__image" alt="Logo" src="/src/images/logo-white.png">
   </a>
-  <?php include $_SERVER["DOCUMENT_ROOT"] . '/resources/views/partials/_masthead-ul.php'; ?>
+  <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
 <!-- end base masthead -->
 <div class="section --banner +bgimg +middle ta--c">
@@ -59,9 +59,9 @@
 <!-- end background-image-overlay masthead -->
 <header class="masthead --overlay">
   <a class="masthead__logo" href="/">
-    <img class="masthead__logo__image" alt="Logo" src="/resources/assets/images/logo-white.png">
+    <img class="masthead__logo__image" alt="Logo" src="/src/images/logo-white.png">
   </a>
-  <?php include $_SERVER["DOCUMENT_ROOT"] . '/resources/views/partials/_masthead-ul.php'; ?>
+  <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
 <!-- end base masthead -->
 <div class="section --banner +bgimg +fixed +middle ta--c">
@@ -76,9 +76,9 @@
 
 <header class="masthead --border">
   <a class="masthead__logo" href="/">
-    <img class="masthead__logo__image" alt="Logo" src="/resources/assets/images/logo.png">
+    <img class="masthead__logo__image" alt="Logo" src="/src/images/logo.png">
   </a>
-  <?php include $_SERVER["DOCUMENT_ROOT"] . '/resources/views/partials/_masthead-ul.php'; ?>
+  <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
 <!-- end border-bottom masthead -->
 <div class="section --banner +bgimg +large +middle ta--c">

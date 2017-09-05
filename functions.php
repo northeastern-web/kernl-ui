@@ -4,7 +4,7 @@
  * @return array list of files
  */
 function getKernlFiles() {
-  $dir = new DirectoryIterator(dirname(__FILE__).'/resources/views/parts');
+  $dir = new DirectoryIterator(dirname(__FILE__).'/docs/views/parts');
   $files = [];
   foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {

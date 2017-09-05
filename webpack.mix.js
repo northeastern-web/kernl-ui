@@ -11,13 +11,13 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/scripts/docs.js', 'dist/scripts')
-   .sass('resources/assets/styles/docs.scss', 'dist/styles')
-   .copy('resources/assets/fonts/*', 'dist/fonts');
+mix.js('docs/main.js', 'dist/scripts')
+   .sass('docs/main.scss', 'dist/styles')
+   .copy('src/fonts/*', 'dist/fonts');
 
 mix.browserSync({
-  proxy: 'https://ui.kernl.dev/',
-  host: 'ui.kernl.dev',
+  proxy: 'https://kernl-wp.dev/',
+  host: 'kernl-wp.dev',
   open: 'external',
   https: true
 });

@@ -2,10 +2,10 @@
 // Typography trumps
 //
 
-.type--d-4 { @include k_get_type($type-display-4); }
-.type--d-3 { @include k_get_type($type-display-3); }
-.type--d-2 { @include k_get_type($type-display-2); }
-.type--d-1 { @include k_get_type($type-display-1); }
+.type--d4 { @include k_get_type($type-display-4); }
+.type--d3 { @include k_get_type($type-display-3); }
+.type--d2 { @include k_get_type($type-display-2); }
+.type--d1 { @include k_get_type($type-display-1); }
 
 .type--headline { @include k_get_type($type-headline); }
 .type--title { @include k_get_type($type-title); }
