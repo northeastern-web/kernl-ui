@@ -1,0 +1,216 @@
+/**
+ * Utilities
+ */
+
+ // bootstrap utility for mapping warnings
+ // remove these eventually?
+ @mixin k_assert-ascending($map, $map-name) {
+   $prev-key: null;
+   $prev-num: null;
+   @each $key, $num in $map {
+     @if $prev-num == null {
+       // Do nothing
+     } @else if not comparable($prev-num, $num) {
+       @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+     } @else if $prev-num >= $num {
+       @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+     }
+     $prev-key: $key;
+     $prev-num: $num;
+   }
+ }
+
+ @function str-replace($string, $search, $replace: "") {
+   $index: str-index($string, $search);
+
+   @if $index {
+     @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+   }
+
+   @return $string;
+ }
+
+ @mixin k_assert-starts-at-zero($map) {
+   $values: map-values($map);
+   $first-value: nth($values, 1);
+   @if $first-value != 0 {
+     @warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
+   }
+ }
+
+/**
+ * Shadows
+ */
+@mixin k_box_shadow($shadow: $component-shadow) {
+  box-shadow: $shadow;
+}
+
+/**
+ * Clearfix
+ */
+@mixin k_clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/**
+ * Transitions
+ */
+@mixin k_transition($transition...) {
+  @if length($transition) == 0 {
+    transition: $transition-base;
+  } @else {
+    transition: $transition;
+  }
+}
+
+/**
+ * Border Radius
+ */
+@mixin k_border_radius($radius: $border-radius) {
+  border-radius: $radius;
+}
+
+@mixin k_border_top_radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin k_border_right_radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin k_border_bottom_radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin k_border_left_radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+/**
+ * Hover
+ */
+@mixin k_hover {
+  &:hover { @content }
+}
+
+@mixin k_hover_focus {
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin k_plain_hover_focus {
+  &,
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin k_hover_focus_active {
+  &:focus,
+  &:active,
+  &:hover {
+    @content
+  }
+}
+
+/*
+ * Tab Focus
+ */
+@mixin k_tab_focus() {
+  // WebKit-specific. Other browsers will keep their default outline style.
+  // (Initially tried to also force default via `outline: initial`,
+  // but that seems to erroneously remove the outline in Firefox altogether.)
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/**
+ * Responsive Images
+ */
+
+// Keep images from scaling beyond the width of their parents.
+@mixin k_img_fluid($display: block) {
+  display: $display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+/* Sizing shortcuts */
+@mixin k_size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin k_square($size) {
+  @include k_size($size, $size);
+}
+
+@mixin k_bg_color($color, $i) {
+  background-color: $color !important;
+  // @if $i <= 2 {
+  //   color: $type-color !important;
+  // }
+}
+
+@mixin k_type_color($color, $i) {
+  color: $color !important;
+}
+
+//
+// Mixin to retrieve a component passing
+@mixin k_get_component($item, $color, $i) {
+  $item_text_color: #fff;
+
+  @if $i <= 2 {
+    $item_text_color: $type-color;
+  }
+
+  @if $item == 'alert' { @include k_alert_variant($item_text_color, $color, $color, false); }
+  @if $item == 'badge' { @include k_badge_variant($item_text_color, $color, $color); }
+  @if $item == 'banner' { @include k_banner_variant($item_text_color, $color); }
+  @if $item == 'btn' { @include k_button_variant($item_text_color, $color, $color); }
+  @if $item == 'card' { @include k_card_variant($item_text_color, $color); }
+
+  @if $item == 'bg' { @include k_bg_color($color, $i); }
+  @if $item == 'tc' { @include k_type_color($color, $i); }
+
+  // @if $item == 'tile' {
+  //   @include k_tile_variant($item_text_color, $color);
+  // }
+}
+
+//
+// Color Palette Generator
+@mixin k_generate_colors
+($item, $colors) {
+  @each $label, $color, $base_component in $colors {
+    $current_palette: $colors;
+    $current_color: $color;
+
+    @each $color_grade in $current_color {
+      $i: index($current_color, $color_grade);
+      $current_grade: $i + '00';
+
+      .#{$item}--#{$label}-#{$current_grade} {
+        @include k_get_component($item, $color_grade, $i);
+      }
+
+      @if $current_grade == $base_component {
+        .#{$item}--#{$label} {
+          @include k_get_component($item, $color_grade, $i);
+        }
+      }
+    }
+  }
+}

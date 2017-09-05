@@ -1,0 +1,34 @@
+/**
+ * Typography Mixins
+ */
+
+@mixin k_list_unstyled() {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* apply font smoothing to element(s) */
+@mixin k_font_smoothing() {
+  @media 
+    (-webkit-min-device-pixel-ratio: 2), 
+    (min-resolution: 192dpi) { 
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@mixin k_get_type($type, $colorContrast: false) {
+  @each $property, $value in map-get($type, properties) {
+    #{$property}: $value;
+  }
+
+  @each $breakpoint, $size in map-get($type, sizes) {
+    @include k_media_breakpoint_up($breakpoint) {
+      font-size: $size;
+    }
+  }
+
+  @if $colorContrast {
+    opacity: 0.54;
+  }
+}

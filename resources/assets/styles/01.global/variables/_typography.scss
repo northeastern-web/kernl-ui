@@ -1,0 +1,187 @@
+//
+// Settings: Typography
+//
+
+//
+// Family
+$type-sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$type-serif: "Baskerville", Georgia, "Times New Roman", Times, serif !default;
+$type-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$type-family: // family collection
+  $type-sans,
+  $type-serif,
+  $type-mono !default;
+
+//
+// Weight
+$type-light: 300 !default;
+$type-regular: 400 !default;
+$type-bold: 700 !default;
+$type-black: 900 !default;
+
+$type-weight: // weight collection
+  $type-light,
+  $type-regular,
+  $type-bold,
+  $type-black !default;
+
+
+//
+// Sizing and Properties
+
+$font-xs: .75rem;
+$font-sm: .875rem;
+
+$type-root: (
+  properties: (
+    (font-weight, $type-regular),
+    (line-height, 1.5)
+  ),
+  sizes: (
+    (xs, 15px),
+    (sm, 16px),
+    (xl, 17px),
+    (xx, 18px)
+  )
+) !default;
+
+$type-body: (
+  properties: (
+    (font-weight, $type-regular),
+    (line-height, 1.5)
+  ),
+  sizes: (
+    (xs, 1rem)
+  )
+) !default;
+
+$type-display-1: (
+  properties: (
+    (font-weight, $type-light),
+    (line-height, 1),
+    (letter-spacing, -0.04em)
+  ),
+  sizes: (
+    (xs, 3rem),
+    (sm, 4rem),
+    (lg, 5rem)
+  )
+) !default;
+
+$type-display-2: (
+  properties: (
+    (line-height, 1.05),
+    (font-weight, $type-light),
+    (letter-spacing, -0.02em)
+  ),
+  sizes: (
+    (xs, 2.75rem),
+    (xl, 3.25rem)
+  )
+) !default;
+
+$type-display-3: (
+  properties: (
+    (line-height, 1.2),
+    (font-weight, $type-regular),
+    (letter-spacing, 0)
+  ),
+  sizes: (
+    (xs, 2rem),
+    (xl, 2.15rem)
+  )
+) !default;
+
+$type-display-4: (
+  properties: (
+    (line-height, 1.175),
+    (font-weight, $type-bold),
+    (letter-spacing, 0)
+  ),
+  sizes: (
+    (xs, 1.5rem),
+    (xl, 1.75rem)
+  )
+) !default;
+
+$type-headline: (
+  properties: (
+    (line-height, 1.175),
+    (font-weight, $type-bold),
+    (letter-spacing, 0)
+  ),
+  sizes: (
+    (xs, 1.2rem),
+    (xl, 1.5rem)
+  )
+) !default;
+
+$type-title: (
+  properties: (
+    (line-height, 1.175),
+    (font-weight, $type-bold)
+  ),
+  sizes: (
+    (xs, 1.15rem),
+    (xl, 1.22rem)
+  )
+) !default;
+
+$type-lead: (
+  properties: (
+    (font-weight, $type-light),
+    (line-height, 1.25)
+  ),
+  sizes: (
+    (xs, 1.1rem),
+    (sm, 1.1rem),
+    (lg, 1.4rem)
+  )
+) !default;
+
+$type-sm: (
+  properties: (
+    (font-weight, 400)
+    (line-height, 1.4)
+  ),
+  sizes: (
+    (xs, $font-sm),
+    (sm, $font-sm)
+  )
+) !default;
+
+$type-xs: (
+  properties: (
+    (font-weight, 400)
+    (line-height, 1.3)
+  ),
+  sizes: (
+    (xs, $font-xs),
+    (sm, $font-xs)
+  )
+) !default;
+
+$type-size: // Size collection
+  $type-root,
+  $type-body,
+  $type-display-4,
+  $type-display-3,
+  $type-display-2,
+  $type-display-1,
+  $type-headline,
+  $type-title,
+  $type-lead,
+  $type-sm,
+  $type-xs !default;
+
+//
+// Colors
+$type-color: $gray-800 !default;
+
+//
+// Links
+$link-color:            $blue;
+$link-decoration:       none;
+$link-hover-color:      darken($link-color, 15%);
+$link-hover-decoration: none;

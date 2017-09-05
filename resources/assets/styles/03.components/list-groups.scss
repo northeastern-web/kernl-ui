@@ -1,0 +1,78 @@
+//
+// List Groups
+//
+
+.list-group {
+  @include k_list_unstyled();
+  @include k_list_group_size();
+  @include k_list_group_variant($color-text);
+  position: relative;
+  margin-bottom: 1rem;
+
+  // 
+  // Modifiers
+  &.\--white { @include k_list_group_variant($color-text, #fff); }
+  &.\--striped {
+    @include k_list_group_variant(#fff);
+    a { color: #fff; }
+    &.\--white {
+      @include k_list_group_variant($color-text, transparent, rgba(0, 0, 0, 0.1));
+      a { color: $link-color; }
+    }
+  }
+
+  //
+  // Sizing
+  &.\--sm { @include k_list_group-size($list-group-padding-y/2, $list-group-padding-x/1.5, $font-xs) }
+  &.\--lg { @include k_list_group-size($list-group-padding-y, $list-group-padding-x, 1rem); }
+}
+
+
+//
+// Elements
+.list-group__item {
+  display: block;
+  position: relative;
+  padding: $list-group-padding-y $list-group-padding-x;
+  border-width: 1px;
+  border-style: solid;
+  border-bottom: 0 none;
+  color: inherit;
+
+  &:link:hover,
+  &:link:active,
+  &:link:focus {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  a {
+    display: block;
+    color: $link-color;
+  }
+
+  &:hover,
+  &:active {
+    a { color: darken($link-color, 10%); }
+  }
+
+  &:last-child() {
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+.list-group > div,
+.list-group > a,
+.list-group > li { @extend .list-group__item; }
+
+.list-group > a {
+  color: $link-color;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:active {
+    background: lighten($link-color, 40%) !important;
+    color: darken($link-color, 10%);
+  }
+}

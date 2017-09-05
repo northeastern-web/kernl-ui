@@ -1,0 +1,132 @@
+//
+// Component variables
+//
+
+
+/* Components */
+$component-base:  rgba(255,255,255,0.8);
+$component-light: $gray-100;
+$component-dark:  $gray-800 !default;
+$component-shadow:        0 0 .25rem rgba(0,0,0,.25) !default;
+$component-shadow-hover:  0 0 .4rem rgba(0,0,0,.35) !default;
+
+$transition-base:         all .25s ease !default;
+
+//
+// Alerts
+$alert-padding-x:       1.5rem;
+$alert-padding-y:       1.5rem;
+
+//
+// Banners
+$banner-padding-base:   5% !default;
+$banner-padding-sm:     2.5% !default;
+$banner-padding-lg:     10% !default;
+$banner-padding-xl:     15% !default;
+
+//
+// Buttons
+$btn-type-base:         15px !default;
+$btn-type-lg:           16px !default;
+$btn-type-sm:           13px !default;
+$btn-type-xs:           11px !default;
+$btn-border-radius:     2px !default;
+$btn-padding-t:         0.45rem !default;
+$btn-padding-y:         1.5rem !default;
+$btn-padding-b:         0.5rem !default;
+$btn-box-shadow:        inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075) !default;
+$btn-active-box-shadow: inset 0 3px 5px rgba(0,0,0,.125) !default;
+$cursor-disabled:       not-allowed !default;
+
+//
+// Cards
+$card_height_xs: 300px !default;
+$card_height_sm: 350px !default;
+$card_height_md: 400px !default;
+$card_height_lg: 400px !default;
+$card_height_xl: 425px !default;
+$card_height_xx: 450px !default;
+
+//
+// List Groups
+$list-group-padding-x:       1.25rem;
+$list-group-padding-y:       .75rem;
+
+
+//
+// Placeholders
+//
+
+//
+// Cover a relative element
+%component-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+//
+// Component outline
+%component-outline {
+  color: $type-color;
+  background-color: transparent !important;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba($type-color, 0.5) !important;
+}
+
+//
+// Component header
+%component-header {
+  margin-bottom: .25rem;
+  padding: 0.5rem 0;
+  font-size: .75rem;
+}
+
+//
+// Component footer
+%component-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem 1rem;
+  max-width: 100%;
+  text-align: center;
+  @include k_media-breakpoint-up(lg) {
+    padding: 1rem;
+  }
+}
+
+//
+// Component interior columns
+%component-column {
+  @include k_make-col(1, 2);
+  flex: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &:first-child { text-align: left; }
+  &:last-child { text-align: right; }
+  &:only-child { @include k_make-col(2, 2); text-align: left; }
+}
+
+//
+// Block display
+%block {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  border-radius: 0 !important;
+}
+
+%bgimg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+%pill {
+  border-radius: 10rem;
+}

@@ -1,0 +1,20 @@
+/**
+* List Groups
+*/
+@mixin k_list_group_size($padding-y, $padding-x, $font-size: 1rem) {
+  font-size: $font-size;
+
+  .list-group__item, li { padding: $padding-y $padding-x; }
+}
+
+@mixin k_list_group_variant($color: inherit, $background: #fff, $border: $type-color, $striped: rgba(#000, .1)) {
+  background: $background;
+  // color: $color;
+
+  .list-group__item, li { border-color: lighten($color, 55%); }
+
+  &.list-group--striped .list-group__item,
+  &.list-group--striped >li {
+    &:nth-child(odd) { background-color: $striped; }
+  }
+}

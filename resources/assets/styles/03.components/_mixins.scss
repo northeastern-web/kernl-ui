@@ -1,0 +1,488 @@
+//
+// Component utility placeholders and mixins
+//
+
+
+/**
+ * Shadows
+ */
+@mixin k_box_shadow($shadow: $component-shadow) {
+  box-shadow: $shadow;
+}
+
+/**
+ * Transitions
+ */
+@mixin k_transition($transition...) {
+  @if length($transition) == 0 {
+    transition: $transition-base;
+  } @else {
+    transition: $transition;
+  }
+}
+
+/**
+ * Hover
+ */
+@mixin k_hover {
+  &:hover { @content }
+}
+
+@mixin k_hover_focus {
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin k_plain_hover_focus {
+  &,
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin k_hover_focus_active {
+  &:focus,
+  &:active,
+  &:hover {
+    @content
+  }
+}
+
+/*
+ * Tab Focus
+ */
+@mixin k_tab_focus() {
+  // WebKit-specific. Other browsers will keep their default outline style.
+  // (Initially tried to also force default via `outline: initial`,
+  // but that seems to erroneously remove the outline in Firefox altogether.)
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/**
+ * Border Radius
+ */
+@mixin k_border_radius($radius: $border-radius) {
+  border-radius: $radius;
+}
+
+@mixin k_border_top_radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin k_border_right_radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin k_border_bottom_radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin k_border_left_radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+//
+// Accordion mixins
+@mixin k_accordion_variant($color: $type-color, $trigger: lighten($type-color,70%), $background: transparent) {
+  color: $color;
+
+  .txt_title {
+    background: $trigger;
+
+    &:after { color: rgba($color, 0.5); }
+
+    &.collapsed {
+      &:after { color: $color; }
+    }
+  }
+
+  .wys_copy { background: $background; }
+}
+
+
+//
+// Alert mixins
+//
+
+//
+// Alert Size
+@mixin k_alert_size($padding-y, $padding-x) {
+  padding: $padding-y $padding-x;
+  @include k_get_type();
+}
+
+//
+// Alert Variant
+@mixin k_alert_variant($color, $background, $border: transparent, $add_shadow: false) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  @if ($add_shadow == false) {
+    box-shadow: none;
+  }
+
+  .alert__link:hover { background-color: darken($background, 10%); }
+}
+
+
+//
+// Badge mixins
+//
+
+//
+// Badge Variant
+@mixin k_badge_variant($color, $background, $border) {
+  color: $color;
+  border-color: $border;
+  background-color: $background;
+
+  &.badge--outline {
+    color: $background;
+    background-color: transparent;
+  }
+}
+
+
+//
+// Button mixins
+//
+
+//
+// Button color variants
+@mixin k_button_variant($color, $background, $border) {
+  $active-background: darken($background, 10%);
+  $active-border: darken($border, 12%);
+
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  @include k_hover {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+  }
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+    // Remove the gradient for the pressed/active state
+    background-image: none;
+    // @include _box_shadow($btn-active-box-shadow);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+    @include k_hover {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+
+  &.\+outline {
+    color: $background;
+    background-color: transparent;
+    border-color: $background;
+
+    @include k_hover {
+      color: #fff;
+      background-color: $background;
+          border-color: $background;
+    }
+
+    &.\--white {
+      color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0);
+      border-color: rgba(255, 255, 255, 0.5) !important;
+
+      @include k_hover {
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border-color: rgba(255, 255, 255, 0.9);
+      }
+    }
+
+    &:focus,
+    &.focus {
+      color: #fff;
+      background-color: $background;
+          border-color: $background;
+    }
+
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      color: #fff;
+      background-color: $background;
+          border-color: $background;
+
+      &:hover,
+      &:focus,
+      &.focus {
+        color: #fff;
+        background-color: darken($background, 17%);
+            border-color: darken($background, 25%);
+      }
+    }
+
+    &.disabled,
+    &:disabled {
+      &:focus,
+      &.focus {
+        border-color: lighten($background, 20%);
+      }
+      @include k_hover {
+        border-color: lighten($background, 20%);
+      }
+    }
+  }
+}
+
+//
+// Button sizing
+@mixin k_button_size($padding-t, $padding-y, $padding-b, $font-size, $border-radius) {
+  padding: $padding-t $padding-y $padding-b;
+  font-size: $font-size;
+  @include k_border_radius($border-radius);
+
+  .btn__icon {
+    height: $font-size;
+    width: $font-size;
+
+    i, svg {
+      height: $font-size * 1.25;
+      width: $font-size * 1.25;
+    }
+
+    &.\+left {
+      margin-right: round($font-size / 2);
+    }
+
+    &.\+right {
+      margin-left: round($font-size / 2);
+    }
+
+    &.\+large {
+      height: $font-size * 2;
+      width: $font-size * 2;
+      margin: ($font-size / 2) 0;
+
+      i, svg {
+        height: $font-size * 2;
+        width: $font-size * 2;
+      }
+    }
+  }
+}
+
+//
+// Card mixins
+//
+
+/* TODO: card__footer should not be transparent, but should be the background color. */
+
+//
+// Card Variant
+@mixin k_card_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $is_transparent: 0) {
+  color: $color;
+  background: $background;
+  border-color: $background;
+
+  .card__body,
+  .card__footer,
+  .list-group__item { border-color: darken($background, 20%); }
+
+  &:not(.card--overlay):not(.card--bottom) {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 3rem;
+      background: linear-gradient(to bottom, rgba($background,0) 0%,rgba($background,1) 70%);
+      z-index: 10;
+
+      @include k_media_breakpoint_up(md) { height: 4rem; }
+      @include k_media_breakpoint_up(lg) { height: 5rem; }
+    }
+
+    &.card--outline {
+      &:after { background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 70%); }
+    }
+  }
+
+  .card__footer {
+    background: $background;
+    z-index: 11; // appear over gradient
+  }
+
+  &.card--outline { color: $background; }
+
+  @if $background != rgba(255, 255, 255, 1) {
+    .card__body,
+    .card__footer,
+    .list-group__item { border-color: rgba(255, 255, 255, .2); }
+
+    &:hover { background: darken($background, 5%); }
+  }
+
+  /* don't change this, or else white cards will darken to light gray on hover */
+  @if $background == rgba(255, 255, 255, 1) {
+    &:hover { background: rgba(255, 255, 255, 1); }
+  }
+}
+
+
+// set image and text side by side
+@mixin k_card_horizontal($background: rgba(255, 255, 255, 1), $width_graphic: 100%, $width_text: auto) {
+  .card__graphic {
+    width: $width_graphic;
+    height: 100%;
+    padding: 0;
+  }
+
+  .card__graphic__img {
+    max-width: none;
+    height: 100%;
+    top: -10rem;
+    bottom: -10rem;
+    left: -10rem;
+    right: -10rem;
+  }
+
+  .card__body {
+    position: absolute;
+    width: $width_text;
+    left: $width_graphic;
+    top: 0;
+    height: 100%;
+  }
+
+  &:after {
+    height: 0;
+    display: none;
+  }
+
+  .card__graphic + .card__header {
+    width: $width_graphic;
+  }
+
+  .card__footer {
+    right: 0;
+    left: $width_graphic;
+    width: $width_text;
+  }
+
+  .card__link { padding-bottom: 0; }
+}
+
+
+// reset card_horizontal back to stacked when necessary;
+// required for cases like .g-6@md.g-3@lg
+@mixin k_card_vertical() {
+  .card__graphic {
+    width: 100%;
+    height: 0;
+    padding: 56.25% 0 0;
+  }
+
+  .card__graphic__img {
+    max-width: 110%;
+    width: auto;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: -5%;
+    right: 0;
+  }
+
+  .card__body {
+    position: relative;
+    width: auto;
+    left: auto;
+    top: auto;
+    height: auto;
+  }
+
+  .card__header,
+  .card__footer {
+    right: auto;
+    left: auto;
+    width: 100%;
+  }
+
+  .card__header + .card__body { padding-top: 1rem; }
+}
+
+
+@mixin k_fill_width() {
+  .card__graphic__img {
+    width: 110%;
+    height: auto;
+  }
+}
+
+
+@mixin k_fill_height() {
+  .card__graphic__img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+//
+// List Groups
+//
+@mixin k_list_group_size($padding-y: $list-group-padding-y/2, $padding-x: $list-group-padding-x/1.5, $font-size: $font-sm) {
+  font-size: $font-size;
+
+  .list-group__item, li { padding: $padding-y $padding-x; }
+}
+
+@mixin k_list_group_variant($color: inherit, $background: transparent, $striped: rgba(255, 255, 255, 0.1)) {
+  background: $background;
+  color: $color;
+
+  .list-group__item, li { border-color: rgba($color, 0.4); }
+
+  &.\--striped .list-group__item,
+  &.\--striped > li {
+    border: 0 none;
+
+    &:nth-child(odd) {
+      background-color: $striped;
+    }
+  }
+}

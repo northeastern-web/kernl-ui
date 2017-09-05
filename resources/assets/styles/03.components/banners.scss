@@ -1,0 +1,73 @@
+//
+// Alerts
+//
+
+.--banner {
+  position: relative;
+  background-color: $gray-700;
+  color: #fff;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  @include k_font_smoothing();
+
+  &.\+bgimg {
+    @extend %bgimg;
+    text-shadow: 0 0 .5rem rgba(0,0,0,.25);
+
+    &:after {
+      @extend %component-cover;
+      content: "";
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 0;
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+      @include k_font_smoothing();
+    }
+
+    &.\+fixed {
+      position: relative;
+      background-attachment: fixed;
+    }
+  }
+
+  &.\+sm {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &.\+lg {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  &.\+xl {
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
+
+  &.\+top {
+    padding-top: 1rem;
+  }
+
+  &.\+bottom {
+    padding-bottom: 1rem;
+  }
+
+  &.\+transparent {
+    background-color: transparent;
+    color: $color-text;
+  }
+
+  &.\+white {
+    background-color: white;
+    color: $color-text;
+  }
+
+  &.\--shadow {
+    border-top: 2px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+  }
+}

@@ -1,0 +1,81 @@
+/**
+ * Accordions
+ */
+
+.accordion {
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  @include k_accordion_variant();
+}
+
+.collapse {
+  display: none;
+  position: relative;
+  &.show {
+    display: block;
+  }
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition-timing-function: ease;
+  transition-duration: .35s;
+  transition-property: height;
+}
+
+
+/**
+ * Elements
+ */
+
+.txt_title {
+  padding: 1rem 3rem 1rem 0.75rem;
+  margin-top: 1px;
+  cursor: pointer;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    font-family: "Ionicons";
+    content: "\f208";
+    font-weight: normal;
+    top: 1rem;
+    right: 1.5rem;
+  }
+
+  &.collapsed { &:after { content: "\f217"; } }
+}
+
+.wys_copy {
+  padding: 1rem 3rem 1rem 0.75rem;
+  font-size: $font-sm;
+  background: #fff;
+}
+
+.collapsed .txt_title {
+  border-top: 0 none;
+}
+
+.accordion .card {
+  &:first-child .txt_title {
+    border-top: 0 none;
+  }
+}
+
+
+/**
+ * Modifiers
+ */
+
+/* Colors */
+.accordion--white {
+  @include k_accordion_variant($color-text, #fff, #fff);
+  .txt_title { font-weight: 700; }
+  .wys_copy { padding-top: 0; }
+}
+
+.accordion--dark {
+  @include k_accordion_variant(#fff, $color-text, lighten($color-text, 20%));
+}

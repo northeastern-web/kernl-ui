@@ -1,0 +1,11 @@
+/**
+ * Modals
+ */
+@mixin k_modal_variant($color: $type-color, $background: #fff) {
+  .modal__content {
+    background: $background;
+    color: $color;
+  }
+  .close { color: $color; }
+  .modal-backdrop { background-color: $color; }
+}

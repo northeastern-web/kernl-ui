@@ -1,0 +1,530 @@
+//
+// Cards
+//
+
+.card {
+  @include k_card_variant();
+  @include k_transition();
+  @include k_box_shadow();
+  width: 100%;
+  height: auto;
+  margin-bottom: $grid-gutter-width-base;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+
+  &:hover { @include k_box_shadow($component-shadow-hover); }
+
+  @include k_media_breakpoint_up(xx) { margin-bottom: $grid-gutter-width-base + 10; }
+
+  .badge {
+    display: inline-flex;
+    top: 0.5rem;
+
+    &.\--left {
+      left: 0.5rem;
+    }
+  }
+
+  //
+  // Columns in header/footer
+  .__column { @extend %component-column; }
+}
+
+
+//
+// Link
+.card__link {
+  height: 100%;
+  display: block;
+
+  &, &:hover { color: inherit; }
+}
+
+
+//
+// Graphic
+.card__graphic {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+  padding-top: 56.25%;
+
+  &:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background 0.2s ease;
+  }
+}
+
+// Image within .card__graphic
+.card__graphic__img {
+  max-width: 110%;
+  width: auto; height: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: -5%;
+}
+
+
+//
+// Body
+.card__body {
+  padding: 1rem 1rem 3rem;
+  @include k_get_type($type-sm);
+
+  p {
+    font-size: inherit;
+    line-height: inherit;
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+//
+// Titles with .card__body
+.card__title {
+  margin-bottom: 0.25rem;
+  @include k_get_type($type-title);
+  @include k_font_smoothing();
+}
+
+.card__pretitle {
+  font-size: .8rem;
+  margin-bottom: 0.2rem;
+}
+
+.card__subtitle {}
+
+//
+// Icon
+.card__icon {
+  @include k_get_type($type-display-2);
+  padding: 3% 0;
+  text-align: center;
+}
+
+
+//
+// Header & Footer
+.card__header,
+.card__footer {
+  // @extend .\--row;
+  @include k_get_type($type-sm);
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.card__header {
+  top: 0;
+
+  +.card__body {
+    margin-top: 2.5rem;
+    border-top: 1px solid $gray-200;
+  }
+}
+
+.card__footer {
+  bottom: 0;
+  border-top: 1px solid $gray-200;
+}
+
+// Link within footer
+.card__footer__link {
+  @extend .btn;
+  @extend .btn.\--dark;
+  @extend .btn.\+block;
+  margin-bottom: 0;
+  height: 2.5rem;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+//
+// Dark
+.card--dark { @include k_card_variant(#fff, $component-dark); }
+
+
+//
+// Outline card with white bg and dark text
+.card--outline {
+  @extend %component-outline;
+  background-color: #fff !important;
+  box-shadow: none;
+}
+
+
+//
+// Position card bottom-left
+.card--bottom {
+  min-height: $card_height_xs;
+
+  .card__body {
+    padding-bottom: 1rem;
+    border: none;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .card__icon { text-align: left; }
+}
+
+
+//
+// Overlay's .card__graphic
+.card--overlay {
+  color: #fff;
+  min-height: $card_height_sm;
+
+  .card__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .card__graphic {
+    height: 100%;
+    width: 100%;
+    max-width: initial;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 0;
+  }
+
+  .card__graphic__img {
+    max-width: none;
+    max-height: 122%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: -10rem;
+    bottom: -10rem;
+    left: -10rem;
+    right: -10rem;
+    margin: auto;
+
+    @include k_media_breakpoint_up(md) {
+      max-height: 110%;
+    }
+  }
+
+  .card__body {
+    position: absolute;
+    top: 0; left: 0;
+    width: auto; height: 100%;
+  }
+
+  &.card--middle {
+    .card__body {
+      height: auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.card--bottom {
+    .card__body {
+      height: auto; width: auto;
+      padding-bottom: 1rem;
+      top: initial;
+    }
+  }
+
+  &:not(.card--middle) {
+    .card__header ~ .card__body { margin-top: 2.5rem; }
+  }
+
+  &:hover {
+    .card__graphic {
+      &:after { background: rgba(0, 0, 0, 0.3); }
+    }
+  }
+}
+
+
+//
+// Tiles
+.card {
+  &.\--tile {
+    .card__excerpt,
+    .card__body p,
+    .card__header,
+    .card__footer {
+      @include k_get_type($type-xs);
+    }
+    .card__title {
+      font-size: 1rem;
+    }
+
+    .card__icon {
+      font-size: 2.75rem;
+    }
+  }
+}
+
+@include k_media_breakpoint_up(sm) {
+  .\--3\@sm, .\--4\@sm, .\--5\@sm, .\--6\@sm {
+    .card {
+      height: $card_height_sm;
+    }
+  }
+
+  .card.\--tile,
+  .card.\--tile.card--overlay {
+    height: 250px;
+    min-height: 0;
+  }
+}
+
+
+@include k_media_breakpoint_up(md) {
+  [class^="\\--"][class$="sm"],
+  [class^="\\--"][class$="md"],
+  [class^="\\--"][class$="lg"] {
+    .card {
+      height: $card_height_md;
+    }
+  }
+
+  .\--6\@md,
+  .\--7\@md,
+  .\--8\@md,
+  .\--9\@md,
+  .\--10\@md,
+  .\--11\@md,
+  .\--5\@lg,
+  .\--6\@lg,
+  .\--7\@lg,
+  .\--9\@lg,
+  .\--10\@lg,
+  .\--11\@lg {
+    .card:not(.card--overlay):not(.card--scroll):not(.card--middle) {
+      @include k_card_horizontal($width_graphic: 50%, $width_text: 50%);
+    }
+  }
+
+  .card.\--tile,
+  .card.\--tile.card--overlay {
+    height: 200px !important;
+  }
+}
+
+@include k_media_breakpoint_up(lg) {
+  [class^="\\--"][class$="sm"],
+  [class^="\\--"][class$="md"],
+  [class^="\\--"][class$="lg"] {
+    .card {
+      height: $card_height_lg;
+    }
+  }
+
+  .\--9\@lg,
+  .\--10\@lg,
+  .\--11\@lg {
+    .card:not(.card--overlay):not(.card--scroll):not(.card--middle) {
+      @include k_card_horizontal($width_graphic: 66.6%, $width_text: 33.3%);
+    }
+  }
+
+  .\--6\@md,
+  .\--7\@md,
+  .\--6\@lg,
+  .\--7\@lg,
+  .\--8\@lg {
+    .card:not(.card--overlay):not(.card--scroll):not(.card--middle) {
+      @include k_card_horizontal($width_graphic: 50%, $width_text: 50%);
+    }
+  }
+
+  .\--3\@lg,
+  .\--4\@lg {
+    .card:not(.card--overlay):not(.card--scroll):not(.card--middle) {
+      @include k_card_vertical();
+    }
+  }
+}
+
+@include k_media_breakpoint_up(xl) {
+  [class^="\\--"][class$="sm"],
+  [class^="\\--"][class$="md"],
+  [class^="\\--"][class$="lg"],
+  [class^="\\--"][class$="xl"] {
+    .card {
+      height: $card_height_xl;
+    }
+  }
+
+  .\--9\@lg,
+  .\--10\@lg,
+  .\--11\@lg {
+    @include k_fill_height();
+  }
+}
+
+@include k_media_breakpoint_up(xx) {
+  .card {
+    height: $card_height_xx;
+    margin-bottom: 40px; // = match xx gutter
+  }
+
+  .\--9\@lg,
+  .\--10\@lg,
+  .\--11\@lg {
+    .card:not(.card--overlay):not(.card--scroll):not(.card--middle) {
+      @include k_card_horizontal($width_graphic: 56.25%, $width_text: 43.75%);
+    }
+
+    .card__graphic__img {
+      width: 106%;
+      height: auto !important;
+      left: -3%;
+    }
+  }
+}
+
+
+//
+// Scrolling within card
+.card--scroll {
+  height: $card_height_sm;
+
+  &:after { display: none; } // kill box-shadow
+
+  .card__body {
+    height: 90%;
+    overflow-y: scroll;
+  }
+}
+
+//
+// Extend card past fixed height
+.card--extend { height: auto !important; }
+
+
+//
+// Middle
+.card--middle {
+  text-align: center;
+  min-height: $card_height_xs;
+
+  .card__body {
+    margin-top: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.\--tile {
+    .card__body {
+      height: 100%;
+      padding: 2.5rem 1rem 1rem;
+    }
+  }
+
+  @include k_media_breakpoint_up(sm) {
+    min-height: $card_height_sm;
+  }
+}
+
+
+//
+// Sizing
+.card {
+  @include k_media_breakpoint_up(md) { height: $card_height_sm; max-height: none; }
+  @include k_media_breakpoint_up(lg) { height: $card_height_lg; }
+  @include k_media_breakpoint_up(xl) { height: $card_height_xl; }
+  @include k_media_breakpoint_up(xx) { height: $card_height_xx; }
+
+  &.\--tile:after { height: 2.5rem!important; }
+}
+
+//
+// List groups within cards
+.card {
+  .list-group {
+    // position: absolute; // required for full-width with negative margins
+    // margin-bottom: 0;
+    // padding-top: 1rem;
+    background: transparent;
+    margin: -1px -1rem 0;
+  }
+
+  .list-group__item, 
+  .list-group > div,
+  .list-group > a,
+  .list-group > li {
+    padding: 0.75rem 1rem;
+    border-right: 0 none;
+    border-left: 0 none;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-right: 0 none;
+      border-left: 0 none;
+      border-bottom: 0 none;
+    }
+  }
+
+  &.card--overlay {
+    .list-group {
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 70%);
+      color: #fff;
+    }
+
+    .list-group__item, 
+    .list-group > div,
+    .list-group > a,
+    .list-group > li {
+      border-top-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &.card--bottom {
+    .card__body {
+      position: absolute !important;
+    }
+
+    .list-group {
+      position: relative;
+      margin-bottom: -1rem;
+    }
+
+    .list-group__item, 
+    .list-group > div,
+    .list-group > a,
+    .list-group > li {
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: 0 none;
+      }
+    }
+  }
+
+  &.\+list-group {
+    .card__body {
+      padding-top: 0;
+      padding-bottom: 2.25rem;
+    }
+  }
+}

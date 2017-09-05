@@ -1,0 +1,31 @@
+//
+// Visibilty Utilities
+//
+
+.hidden { display: none !important; }
+
+/* Responsive visibility utilities */
+@each $breakpoint in map-keys($grid-breakpoints) {
+  .hidden--up\@#{$breakpoint} {
+    @include k_media-breakpoint-up($breakpoint) {
+      display: none !important;
+    }
+  }
+
+  .hidden--down\@#{$breakpoint} {
+    @include k_media-breakpoint-down($breakpoint) {
+      display: none !important;
+    }
+  }
+}
+
+.sr--only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

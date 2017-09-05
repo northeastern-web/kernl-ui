@@ -1,0 +1,33 @@
+/**
+* Accessibility
+*/
+
+a.skip {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  text-align: left;
+  overflow: hidden;
+  font-weight: 700;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+  text-decoration: none;
+  border: 0 none;
+}
+
+a.skip:focus,
+a.skip:active {
+  position: relative;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  overflow: visible;
+  z-index: 5000;
+  outline: none;
+}

@@ -1,0 +1,151 @@
+//
+// Card mixins
+//
+
+/* TODO: card__footer should not be transparent, but should be the background color. */
+
+//
+// Card Variant
+@mixin k_card_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $is_transparent: 0) {
+  color: $color;
+  background: $background;
+  border-color: $background;
+
+  .card__body,
+  .card__footer,
+  .list-group__item { border-color: darken($background, 20%); }
+
+  &:not(.card--overlay):not(.card--bottom) {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 6rem;
+      background: linear-gradient(to bottom, rgba($background,0) 0%,rgba($background,1) 70%);
+      z-index: 10;
+    }
+    &.card--outline {
+      &:after { background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 70%); }
+    }
+  }
+
+  .card__footer {
+    background: $background;
+    z-index: 11; // appear over gradient
+  }
+
+  &.card--outline { color: $background; }
+
+  @if $background != rgba(255, 255, 255, 1) {
+    .card__body,
+    .card__footer,
+    .list-group__item { border-color: rgba(255, 255, 255, .2); }
+
+    &:hover { background: darken($background, 5%); }
+  }
+
+  /* don't change this, or else white cards will darken to light gray on hover */
+  @if $background == rgba(255, 255, 255, 1) {
+    &:hover { background: rgba(255, 255, 255, 1); }
+  }
+}
+
+
+// set image and text side by side
+@mixin k_card_horizontal($background: rgba(255, 255, 255, 1), $width_graphic: 100%, $width_text: auto) {
+  .card__graphic {
+    width: $width_graphic;
+    height: 100%;
+    padding: 0;
+  }
+
+  .card__graphic__img {
+    max-width: none;
+    height: 100%;
+    top: -10rem;
+    bottom: -10rem;
+    left: -10rem;
+    right: -10rem;
+  }
+
+  .card__body {
+    position: absolute;
+    width: $width_text;
+    left: $width_graphic;
+    top: 0;
+    height: 100%;
+  }
+
+  &:after {
+    height: 0;
+    display: none;
+  }
+
+  .card__graphic + .card__header {
+    width: $width_graphic;
+  }
+
+  .card__footer {
+    right: 0;
+    left: $width_graphic;
+    width: $width_text;
+  }
+
+  .card__link { padding-bottom: 0; }
+}
+
+
+// reset card_horizontal back to stacked when necessary;
+// required for cases like .g-6@md.g-3@lg
+@mixin k_card_vertical() {
+  .card__graphic {
+    width: 100%;
+    height: 0;
+    padding: 56.25% 0 0;
+  }
+
+  .card__graphic__img {
+    max-width: 110%;
+    width: auto;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: -5%;
+    right: 0;
+  }
+
+  .card__body {
+    position: relative;
+    width: auto;
+    left: auto;
+    top: auto;
+    height: auto;
+  }
+
+  .card__header,
+  .card__footer {
+    right: auto;
+    left: auto;
+    width: 100%;
+  }
+
+  .card__header + .card__body { padding-top: 1rem; }
+}
+
+
+@mixin k_fill_width() {
+  .card__graphic__img {
+    width: 110%;
+    height: auto;
+  }
+}
+
+
+@mixin k_fill_height() {
+  .card__graphic__img {
+    width: auto;
+    height: 100%;
+  }
+}

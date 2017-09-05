@@ -1,0 +1,16 @@
+//
+// Badge mixins
+//
+
+//
+// Badge Variant
+@mixin k_badge_variant($color, $background, $border) {
+  color: $color;
+  border-color: $border;
+  background-color: $background;
+
+  &.badge--outline {
+    color: $background;
+    background-color: transparent;
+  }
+}

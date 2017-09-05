@@ -1,0 +1,28 @@
+//
+// Icons
+// uses Feather Icons <https://feathericons.com/>
+
+%icon {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  text-align: left;
+  transform: translate(0, 5%);
+
+  i, svg {
+    position: absolute;
+  }
+
+  &.\+thin {
+    i, svg {
+      stroke-width: 1;
+    }
+  }
+
+  &.\+large {
+    i, svg {
+      width: 110%;
+      height: 110%;
+    }
+  }
+}

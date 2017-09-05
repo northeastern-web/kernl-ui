@@ -1,0 +1,11 @@
+/**
+ * Clearfix
+ */
+
+@mixin k_clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
