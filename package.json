@@ -4,9 +4,9 @@
   "author": "NU PODS <provost-digital@northeastern.edu>",
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:nupods/ui.kernl.git"
+    "url": "git://bitbucket.org/nupods/kernl-ui"
   },
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
