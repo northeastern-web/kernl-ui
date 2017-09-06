@@ -119,7 +119,9 @@
   @each $breakpoint in map-keys($gutters) {
     @include k_media-breakpoint-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      padding: ($gutter / 2) $gutter;
+      // padding: ($gutter / 2) $gutter;
+      padding-left: $gutter;
+      padding-right: $gutter;
     }
   }
 }
