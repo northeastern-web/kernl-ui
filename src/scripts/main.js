@@ -13,16 +13,24 @@ require('./bootstrap/modal.js');
 require('./bootstrap/scrollspy.js');
 require('./bootstrap/tab.js');
 require('./bootstrap/util.js');
-require('feather-icons/dist/feather.min.js');
 
+
+require('feather-icons/dist/feather.min.js');
 var feather = require('feather-icons');
 feather.replace();
+
+
+
+
+
 
 
 /* Reveal mobile navigation */
 $('.masthead__toggler').on('click touch', function() {
   $('body').toggleClass('menu-open');
 });
+
+
 
 // SAVE THIS and FIX IT
 /* swap accordion +/- action icon */
