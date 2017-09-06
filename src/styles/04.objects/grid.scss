@@ -8,10 +8,7 @@
 // Set the document margin
 .section {
   @include k_make-section();
-}
-
-.\--banner { // this might not belong in this file. is it grid or is layout? etc
-  background: rgba(0, 0, 0, 0.7); // opinionated
+  margin-bottom: 1rem;
 }
 
 
@@ -45,4 +42,5 @@
   padding-right: ($grid-gutter-width-base / 2);
 }
 
+// Create columns
 @include k_make-grid-columns();
