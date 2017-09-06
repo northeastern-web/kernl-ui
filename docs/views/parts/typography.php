@@ -128,13 +128,13 @@
   <div class="row">
     <div class="col --12@xs --10@lg offset-1@lg">
       <p class="text-style-block">Display Size 1:</p>
-      <p class="type--d-1">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
+      <p class="type--d1">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
       <p class="text-style-block">Display Size 2:</p>
-      <p class="type--d-2">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
+      <p class="type--d2">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
       <p class="text-style-block">Display Size 3:</p>
-      <p class="type--d-3">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
+      <p class="type--d3">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
       <p class="text-style-block">Display Size 4:</p>
-      <p class="type--d-4">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
+      <p class="type--d4">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
 
   </div>
 </section>

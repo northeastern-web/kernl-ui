@@ -253,12 +253,12 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration: none;
-  color: #aec2da;
+  color: #5c7d9e;
   font-weight: 500;
 }
 
 a:hover {
-  color: #688dba;
+  color: #364a5e;
 }
 
 a:active,
