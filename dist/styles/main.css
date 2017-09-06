@@ -738,26 +738,100 @@ audio:not([controls]) {
 }
 
 .accordion {
+  color: #333333;
   border-radius: 2px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  color: #333333;
 }
 
-.accordion .txt_title {
+.accordion .__title {
   background: #e6e5e5;
 }
 
-.accordion .txt_title:after {
+.accordion .__title:after {
   color: rgba(51, 51, 51, 0.5);
 }
 
-.accordion .txt_title.collapsed:after {
+.accordion .__title.collapsed:after {
   color: #333333;
 }
 
-.accordion .wys_copy {
+.accordion .__copy {
   background: transparent;
+}
+
+.accordion.\--white {
+  color: #333333;
+}
+
+.accordion.\--white .__title {
+  background: #fff;
+}
+
+.accordion.\--white .__title:after {
+  color: rgba(51, 51, 51, 0.5);
+}
+
+.accordion.\--white .__title.collapsed:after {
+  color: #333333;
+}
+
+.accordion.\--white .__copy {
+  background: #fff;
+}
+
+.accordion.\--white .__title {
+  font-weight: 700;
+}
+
+.accordion.\--white .__copy {
+  padding-top: 0;
+}
+
+.accordion.\--dark {
+  color: #fff;
+}
+
+.accordion.\--dark .__title {
+  background: #333333;
+}
+
+.accordion.\--dark .__title:after {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.accordion.\--dark .__title.collapsed:after {
+  color: #fff;
+}
+
+.accordion.\--dark .__copy {
+  background: #666666;
+}
+
+.accordion .__title {
+  padding: 1rem 3rem 1rem 0.75rem;
+  margin-top: 1px;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion .__title:after {
+  position: absolute;
+  font-family: "Ionicons";
+  content: "\F208";
+  font-weight: normal;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.accordion .__title.collapsed:after {
+  content: "\F217";
+}
+
+.accordion .__copy {
+  padding: 1rem 3rem 1rem 0.75rem;
+  font-size: 0.875rem;
+  background: #fff;
 }
 
 .collapse {
@@ -781,96 +855,12 @@ audio:not([controls]) {
   transition-property: height;
 }
 
-/**
- * Elements
- */
-
-.txt_title {
-  padding: 1rem 3rem 1rem 0.75rem;
-  margin-top: 1px;
-  cursor: pointer;
-  position: relative;
-}
-
-.txt_title:after {
-  position: absolute;
-  font-family: "Ionicons";
-  content: "\F208";
-  font-weight: normal;
-  top: 1rem;
-  right: 1.5rem;
-}
-
-.txt_title.collapsed:after {
-  content: "\F217";
-}
-
-.wys_copy {
-  padding: 1rem 3rem 1rem 0.75rem;
-  font-size: 0.875rem;
-  background: #fff;
-}
-
-.collapsed .txt_title {
+.collapsed .__title {
   border-top: 0 none;
 }
 
-.accordion .card:first-child .txt_title {
+.accordion .card:first-child .__title {
   border-top: 0 none;
-}
-
-/**
- * Modifiers
- */
-
-/* Colors */
-
-.accordion--white {
-  color: #333333;
-}
-
-.accordion--white .txt_title {
-  background: #fff;
-}
-
-.accordion--white .txt_title:after {
-  color: rgba(51, 51, 51, 0.5);
-}
-
-.accordion--white .txt_title.collapsed:after {
-  color: #333333;
-}
-
-.accordion--white .wys_copy {
-  background: #fff;
-}
-
-.accordion--white .txt_title {
-  font-weight: 700;
-}
-
-.accordion--white .wys_copy {
-  padding-top: 0;
-}
-
-.accordion--dark {
-  color: #fff;
-}
-
-.accordion--dark .txt_title {
-  background: #333333;
-}
-
-.accordion--dark .txt_title:after {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.accordion--dark .txt_title.collapsed:after {
-  color: #fff;
-}
-
-.accordion--dark .wys_copy {
-  background: #666666;
 }
 
 .alert {
@@ -4338,41 +4328,44 @@ audio:not([controls]) {
   overflow-x: hidden;
   margin-right: auto;
   margin-left: auto;
-  padding: 0.5rem 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 576px) {
   .section {
-    padding: 0.5rem 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 @media (min-width: 768px) {
   .section {
-    padding: 15px 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
 @media (min-width: 992px) {
   .section {
-    padding: 15px 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
 @media (min-width: 1200px) {
   .section {
-    padding: 18px 36px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
 }
 
 @media (min-width: 1600px) {
   .section {
-    padding: 20px 40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
-}
-
-.\--banner {
-  background: rgba(0, 0, 0, 0.7);
 }
 
 .row {
