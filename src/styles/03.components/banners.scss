@@ -1,5 +1,5 @@
 //
-// Alerts
+// Banners
 //
 
 .--banner {
@@ -58,12 +58,12 @@
 
   &.\+transparent {
     background-color: transparent;
-    color: $color-text;
+    color: $type-color;
   }
 
   &.\+white {
     background-color: white;
-    color: $color-text;
+    color: $type-color;
   }
 
   &.\--shadow {

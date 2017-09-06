@@ -168,7 +168,7 @@
   .card__title {
     text-transform: capitalize;
     transition: all 0.25s ease;
-    color: lighten($color-text, 10%);
+    color: lighten($type-color, 10%);
     padding-bottom: 0;
     font-weight: 200;
     text-shadow: none;
@@ -233,7 +233,7 @@
 //
 // Grid demonstration styles
 .k_grid {
-  .g-col {
+  .col {
     margin-top: ($grid-gutter-width-base / 2);
     margin-bottom: ($grid-gutter-width-base / 2);
   }
@@ -255,7 +255,7 @@
   .section .section .col-content,
   .\--banner .col-content { border: 1px solid #aed8da; }
 
-  .g--nogutters {
+  .\--nogutters {
     .col-content {
       border-right: 1px solid #aed8da;
     }

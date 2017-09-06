@@ -5,19 +5,19 @@
 .list-group {
   @include k_list_unstyled();
   @include k_list_group_size();
-  @include k_list_group_variant($color-text);
+  @include k_list_group_variant($type-color);
   position: relative;
   margin-bottom: 1rem;
 
-  // 
+  //
   // Modifiers
-  &.\--white { @include k_list_group_variant($color-text, #fff); }
+  &.\--white { @include k_list_group_variant($type-color, #fff); }
   &.\--striped {
     @include k_list_group_variant(#fff);
     a { color: #fff; }
     &.\--white {
-      @include k_list_group_variant($color-text, transparent, rgba(0, 0, 0, 0.1));
-      a { color: $link-color; }
+      @include k_list_group_variant($type-color, transparent, rgba(0, 0, 0, 0.1));
+      a { color: $blue; }
     }
   }
 
@@ -48,12 +48,12 @@
 
   a {
     display: block;
-    color: $link-color;
+    color: $blue;
   }
 
   &:hover,
   &:active {
-    a { color: darken($link-color, 10%); }
+    a { color: darken($blue, 10%); }
   }
 
   &:last-child() {
@@ -67,12 +67,12 @@
 .list-group > li { @extend .list-group__item; }
 
 .list-group > a {
-  color: $link-color;
+  color: $blue;
   transition: all 0.2s ease;
 
   &:hover,
   &:active {
-    background: lighten($link-color, 40%) !important;
-    color: darken($link-color, 10%);
+    background: lighten($blue, 40%) !important;
+    color: darken($blue, 10%);
   }
 }

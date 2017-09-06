@@ -1,6 +1,6 @@
 <section class="section">
-  <div class="g-row">
-    <div class="g-col --12@xs --4@md">
+  <div class="row">
+    <div class="col --12@xs --4@md">
       <article class="card card--dark">
         <header class="card__header">
           <div class="__column">
@@ -15,10 +15,10 @@
             <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
           </div>
         </div>
-      </article>    
+      </article>
     </div>
 
-    <div class="g-col --12@xs --4@md">
+    <div class="col --12@xs --4@md">
       <article class="card">
         <header class="card__header">
           <div class="__column">
@@ -37,10 +37,10 @@
             <div class="__column">Footing</div>
           </a>
         </footer>
-      </article>    
+      </article>
     </div>
 
-    <div class="g-col --12@xs --4@md">
+    <div class="col --12@xs --4@md">
       <article class="card card--overlay card--middle">
         <header class="card__header">
           <div class="__column">YoYoYo</div>
@@ -55,7 +55,7 @@
       </article>
     </div>
 
-    <div class="g-col --12@xs --3@md">
+    <div class="col --12@xs --3@md">
       <article class="card card--dark card--outline card--middle">
         <div class="card__body">
           <h2 class="card__title">Very Outlined Title</h2>
@@ -63,10 +63,10 @@
             <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
           </div>
         </div>
-      </article>    
+      </article>
     </div>
 
-    <div class="g-col --12@xs --3@md">
+    <div class="col --12@xs --3@md">
       <article class="card card--scroll">
         <header class="card__header">
           <div class="__column">
@@ -85,10 +85,10 @@
             <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
           </div>
         </div>
-      </article>    
+      </article>
     </div>
 
-    <div class="g-col --12@xs --3@md">
+    <div class="col --12@xs --3@md">
       <article class="card card--overlay card--bottom">
         <div class="card__graphic"></div>
         <div class="card__body">
@@ -97,10 +97,10 @@
           <div class="card__excerpt">
           </div>
         </div>
-      </article>    
+      </article>
     </div>
 
-    <div class="g-col --12@xs --3@md">
+    <div class="col --12@xs --3@md">
       <article class="card card--dark card--middle">
         <div class="card__body">
           <div class="card__icon">
@@ -111,14 +111,14 @@
             <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           </div>
         </div>
-      </article>    
+      </article>
     </div>
   </div>
 </section>
 
 <section  class="section">
-  <div class="g-row">
-    <div class="g-col --12@xs --9@md">
+  <div class="row">
+    <div class="col --12@xs --9@md">
       <article class="card">
         <a href="#" class="card__link">
           <header class="card__header">
@@ -140,7 +140,7 @@
       </article>
     </div>
 
-    <div class="g-col --12@xs --3@md">
+    <div class="col --12@xs --3@md">
       <article class="card +list-group">
         <header class="card__header">
           <div class="__column">Events</div>
@@ -161,14 +161,14 @@
             <div class="__column">Go Now</div>
           </a>
         </footer>
-      </article>    
+      </article>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="g-row">
-    <div class="g-col --12@xs --3@md">
+  <div class="row">
+    <div class="col --12@xs --3@md">
       <article class="card card--dark">
         <header class="card__header">
           <div class="__column">
@@ -183,7 +183,7 @@
       </article>
     </div>
 
-    <div class="g-col --12@xs --3@md">
+    <div class="col --12@xs --3@md">
       <article class="card card--scroll +list-group">
         <header class="card__header">
           <div class="__column">
@@ -207,10 +207,10 @@
             <div class="__column">Read More</div>
           </a>
         </footer>
-      </article>    
+      </article>
     </div>
 
-    <div class="g-col --12@xs --3@md">
+    <div class="col --12@xs --3@md">
       <article class="card card--middle">
         <header class="card__header">
           <div class="__column">
@@ -223,10 +223,10 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
           </div>
         </div>
-      </article>    
+      </article>
     </div>
 
-    <div class="g-col --12@xs --3@md">
+    <div class="col --12@xs --3@md">
       <article class="card card--overlay card--bottom">
         <a href="#" class="card__link">
           <div class="card__graphic"></div>
@@ -242,14 +242,14 @@
             </div>
           </div>
         </a>
-      </article>    
+      </article>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="g-row">
-    <div class="g-col --12@xs --3@sm --2@lg">
+  <div class="row">
+    <div class="col --12@xs --3@sm --2@lg">
       <article class="card --tile">
         <a href="#" class="card__link">
           <div class="card__body">
@@ -262,7 +262,7 @@
       </article>
     </div>
 
-    <div class="g-col --12@xs --3@sm --2@lg">
+    <div class="col --12@xs --3@sm --2@lg">
       <article class="card --tile ">
         <a href="#" class="card__link">
           <div class="card__graphic"></div>
@@ -273,10 +273,10 @@
             </div>
           </div>
         </a>
-      </article>    
+      </article>
     </div>
 
-    <div class="g-col --12@xs --3@sm --2@lg">
+    <div class="col --12@xs --3@sm --2@lg">
       <article class="card --tile card--overlay card--bottom">
         <a href="#" class="card__link">
           <header class="card__header">
@@ -290,10 +290,10 @@
             </div>
           </div>
         </a>
-      </article>    
+      </article>
     </div>
 
-    <div class="g-col --12@xs --3@sm --2@lg">
+    <div class="col --12@xs --3@sm --2@lg">
       <article class="card --tile card--dark">
         <a href="#" class="card__link">
           <div class="card__body">
@@ -306,10 +306,10 @@
             <div class="__column">Learn More</div>
           </footer>
         </a>
-      </article>    
+      </article>
     </div>
 
-    <div class="g-col --12@xs --3@sm --2@lg">
+    <div class="col --12@xs --3@sm --2@lg">
       <article class="card --tile card--dark card--outline">
         <a href="#" class="card__link">
           <div class="card__body">
@@ -319,10 +319,10 @@
             </div>
           </div>
         </a>
-      </article>    
+      </article>
     </div>
 
-    <div class="g-col --12@xs --3@sm --2@lg">
+    <div class="col --12@xs --3@sm --2@lg">
       <article class="card card--dark --tile">
         <div class="card__body">
           <div class="card__icon">
@@ -332,7 +332,7 @@
             <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
           </div>
         </div>
-      </article>    
+      </article>
     </div>
   </div>
 </section>

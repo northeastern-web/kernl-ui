@@ -1,10 +1,10 @@
 <section class="section">
   <header class="k_section__header">Interior Nav</header>
-  <div class="g-row">
+  <div class="row">
     <div class="hidden--up@md ta--c p--t-2@xs">
       <button class="nav--interior__toggler btn btn--sm"><i class="ion-android-funnel"></i> Page Menu</button>
     </div>
-    <div class="g-col --12@xs --3@md">
+    <div class="col --12@xs --3@md">
       <nav class="nav nav--interior">
         <ul class="nav__list">
           <li class="nav__item">
@@ -33,7 +33,7 @@
         </ul>
       </nav>
     </div>
-    <div class="g-col --12@xs g-9@md p--t-2@xs">
+    <div class="col --12@xs g-9@md p--t-2@xs">
       <h2>Page Content Here</h2>
       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
       <h3>Change the viewport width</h3>
@@ -44,8 +44,8 @@
 
 <section class="section">
   <header class="k_section__header">Tabbed Nav</header>
-  <div class="g-row">
-    <div class="g-col --12@xs p--t-2@xs">
+  <div class="row">
+    <div class="col --12@xs p--t-2@xs">
       <nav class="nav nav--tabbed">
         <ul class="nav__list">
           <li class="nav__item nav-item">
@@ -109,8 +109,8 @@
 
 <section class="section">
   <header class="k_section__header">Tabbed Nav with Borders</header>
-  <div class="g-row">
-    <div class="g-col --12@xs p--t-2@xs">
+  <div class="row">
+    <div class="col --12@xs p--t-2@xs">
       <nav class="nav nav--tabbed nav--tabbed--border">
         <ul class="nav__list">
           <li class="nav__item nav-item">

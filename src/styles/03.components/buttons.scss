@@ -4,7 +4,7 @@
 
 .btn {
   @include k_button_size($btn-padding-t, $btn-padding-y, $btn-padding-b, $btn-type-base, $btn-border-radius);
-  @include k_button_variant($color-text, #fff, rgba($color-text, 0.7));
+  @include k_button_variant($type-color, #fff, rgba($type-color, 0.7));
   display: inline-block;
   border-width: 1px;
   border-style: solid;

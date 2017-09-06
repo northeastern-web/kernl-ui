@@ -3,16 +3,17 @@
 //
 
 
-/**
- * Shadows
- */
+//
+// Shadows
+
 @mixin k_box_shadow($shadow: $component-shadow) {
   box-shadow: $shadow;
 }
 
-/**
- * Transitions
- */
+
+//
+// Transitions
+
 @mixin k_transition($transition...) {
   @if length($transition) == 0 {
     transition: $transition-base;
@@ -21,9 +22,10 @@
   }
 }
 
-/**
- * Hover
- */
+
+//
+// Hover
+
 @mixin k_hover {
   &:hover { @content }
 }
@@ -51,20 +53,19 @@
   }
 }
 
-/*
- * Tab Focus
- */
+
+//
+// Tab Focus
+
 @mixin k_tab_focus() {
-  // WebKit-specific. Other browsers will keep their default outline style.
-  // (Initially tried to also force default via `outline: initial`,
-  // but that seems to erroneously remove the outline in Firefox altogether.)
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-/**
- * Border Radius
- */
+
+//
+// Border Radius
+
 @mixin k_border_radius($radius: $border-radius) {
   border-radius: $radius;
 }
@@ -89,8 +90,10 @@
   border-top-left-radius: $radius;
 }
 
+
 //
 // Accordion mixins
+
 @mixin k_accordion_variant($color: $type-color, $trigger: lighten($type-color,70%), $background: transparent) {
   color: $color;
 
@@ -110,16 +113,13 @@
 
 //
 // Alert mixins
-//
 
-//
 // Alert Size
 @mixin k_alert_size($padding-y, $padding-x) {
   padding: $padding-y $padding-x;
   @include k_get_type();
 }
 
-//
 // Alert Variant
 @mixin k_alert_variant($color, $background, $border: transparent, $add_shadow: false) {
   color: $color;
@@ -135,9 +135,7 @@
 
 //
 // Badge mixins
-//
 
-//
 // Badge Variant
 @mixin k_badge_variant($color, $background, $border) {
   color: $color;
@@ -153,10 +151,8 @@
 
 //
 // Button mixins
-//
 
-//
-// Button color variants
+// Button variants
 @mixin k_button_variant($color, $background, $border) {
   $active-background: darken($background, 10%);
   $active-border: darken($border, 12%);
@@ -269,7 +265,6 @@
   }
 }
 
-//
 // Button sizing
 @mixin k_button_size($padding-t, $padding-y, $padding-b, $font-size, $border-radius) {
   padding: $padding-t $padding-y $padding-b;
@@ -306,13 +301,10 @@
   }
 }
 
+
 //
 // Card mixins
-//
 
-/* TODO: card__footer should not be transparent, but should be the background color. */
-
-//
 // Card Variant
 @mixin k_card_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $is_transparent: 0) {
   color: $color;
@@ -364,7 +356,6 @@
   }
 }
 
-
 // set image and text side by side
 @mixin k_card_horizontal($background: rgba(255, 255, 255, 1), $width_graphic: 100%, $width_text: auto) {
   .card__graphic {
@@ -407,7 +398,6 @@
 
   .card__link { padding-bottom: 0; }
 }
-
 
 // reset card_horizontal back to stacked when necessary;
 // required for cases like .g-6@md.g-3@lg
@@ -454,7 +444,6 @@
   }
 }
 
-
 @mixin k_fill_height() {
   .card__graphic__img {
     width: auto;
@@ -462,15 +451,11 @@
   }
 }
 
+
 //
 // List Groups
-//
-@mixin k_list_group_size($padding-y: $list-group-padding-y/2, $padding-x: $list-group-padding-x/1.5, $font-size: $font-sm) {
-  font-size: $font-size;
 
-  .list-group__item, li { padding: $padding-y $padding-x; }
-}
-
+// List Groups variant
 @mixin k_list_group_variant($color: inherit, $background: transparent, $striped: rgba(255, 255, 255, 0.1)) {
   background: $background;
   color: $color;
@@ -485,4 +470,11 @@
       background-color: $striped;
     }
   }
+}
+
+// List Groups Sizing
+@mixin k_list_group_size($padding-y: $list-group-padding-y/2, $padding-x: $list-group-padding-x/1.5, $font-size: $font-sm) {
+  font-size: $font-size;
+
+  .list-group__item, li { padding: $padding-y $padding-x; }
 }

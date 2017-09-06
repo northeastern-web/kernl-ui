@@ -1,6 +1,53 @@
-// Framework grid generation
 //
-// Generate the correct number of grid classes given value of `$grid-columns`.
+// Mixins
+// * Typography, Grid, Media Queries, Misc
+
+
+//
+// Typography
+
+// Get responsive type and properties
+  // @param  {array} $type
+  // @param  {bool} $colorContrast: false
+  // @return {[type]}
+
+@mixin k_get_type($type, $colorContrast: false) {
+
+  // Loop through properties
+  @each $property, $value in map-get($type, properties) {
+    #{$property}: $value;
+  }
+
+  // Loop through font-sizes by breakpoint
+  @each $breakpoint, $size in map-get($type, sizes) {
+    @include k_media_breakpoint_up($breakpoint) {
+      font-size: $size;
+    }
+  }
+
+  // Apply color contrast
+  @if $colorContrast { opacity: 0.54; }
+}
+
+// List Unstyled
+@mixin k_list_unstyled() {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Font Smoothing / Antialiased
+@mixin k_font_smoothing() {
+  @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+
+//
+// Grid
 
 @mixin k_make-grid-columns($columns: $grid-columns, $gutters: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
   // Common properties for all breakpoints
@@ -63,11 +110,6 @@
   }
 }
 
-
-// Grid system
-//
-// Generate semantic grid columns with these mixins.
-
 @mixin k_make-section($gutters: $grid-gutter-widths) {
   position: relative;
   overflow-x: hidden;
@@ -92,16 +134,6 @@
   }
 }
 
-@mixin k_make-masthead($gutters: $grid-gutter-widths) {
-  @each $breakpoint in map-keys($gutters) {
-    @include k_media-breakpoint-up($breakpoint) {
-      $gutter: map-get($gutters, $breakpoint);
-      margin-right: ($gutter);
-      margin-left:  ($gutter);
-    }
-  }
-}
-
 @mixin k_make-row($gutters: $grid-gutter-widths) {
   display: flex;
   flex-wrap: wrap;
@@ -113,12 +145,6 @@
       margin-left:  ($gutter / -2);
     }
   }
-}
-
-.#{$grid-prefix}-col {
-  flex: 0 0 100%;
-  padding-left: ($grid-gutter-width-base / 2);
-  padding-right: ($grid-gutter-width-base / 2);
 }
 
 @mixin k_make-col($size, $columns: $grid-columns) {
@@ -146,5 +172,73 @@
     @include k_make-col-pull($size, $columns);
   } @else if $type == offset {
     @include k_make-col-offset($size, $columns);
+  }
+}
+
+// Masthead?
+@mixin k_make-masthead($gutters: $grid-gutter-widths) {
+  @each $breakpoint in map-keys($gutters) {
+    @include k_media-breakpoint-up($breakpoint) {
+      $gutter: map-get($gutters, $breakpoint);
+      margin-right: ($gutter);
+      margin-left:  ($gutter);
+    }
+  }
+}
+
+
+//
+// Media Queries
+
+// Media of at least the minimum breakpoint width
+@mixin k_media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: k_breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+@mixin k_media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media that spans multiple breakpoint widths.
+@mixin k_media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+  @include k_media-breakpoint-up($lower, $breakpoints) {
+    @include k_media-breakpoint-down($upper, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+@mixin k_media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+  @include k_media-breakpoint-between($name, $name, $breakpoints) {
+    @content;
+  }
+}
+
+
+//
+// Miscellaneous
+
+// Clearfix
+@mixin k_clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
   }
 }

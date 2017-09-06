@@ -169,13 +169,13 @@
   display: block;
   padding: 1rem 1.25rem 1rem 0;
   font-size: 19px;
-  color: lighten($color-text, 70%);
-  border-bottom: 1px solid rgba(lighten($color-text, 70%), 0.2);
+  color: lighten($type-color, 70%);
+  border-bottom: 1px solid rgba(lighten($type-color, 70%), 0.2);
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: lighten($color-text, 70%);
+    color: lighten($type-color, 70%);
   }
 
   &:after {
@@ -200,7 +200,7 @@
 
     &:hover,
     &:focus {
-      color: $color-text;
+      color: $type-color;
     }
   }
 
@@ -212,9 +212,9 @@
 .menu-item.active > a,
 .active > .menu-link {
   font-weight: bold;
-  color: lighten($color-text, 80%);
+  color: lighten($type-color, 80%);
   @include k_media-breakpoint-up(lg) {
-    color: $color-text;
+    color: $type-color;
   }
 }
 
@@ -280,7 +280,7 @@
 
           &:hover,
           &:focus {
-            background: $color-text;
+            background: $type-color;
             color: #fff;
             text-decoration: none;
             border-radius: 2px;
@@ -332,7 +332,7 @@
 }
 
 
-// 
+//
 // Modifiers
 
 // add a border to the bottom of active nav link
@@ -341,7 +341,7 @@
     .active > .menu-link,
     .active.menu-item > a {
       @include k_media-breakpoint-up(lg) {
-        border-bottom: 3px solid rgba($color-text, 0.35);
+        border-bottom: 3px solid rgba($type-color, 0.35);
       }
 
       @include k_media-breakpoint-up(xl) {

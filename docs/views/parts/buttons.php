@@ -1,7 +1,7 @@
 <section class="section ta--c">
   <header class="k_section__header ta--l">Buttons on White</header>
-  <div class="g-row">
-    <div class="g-col --12@xs --6@md --3@xl p--b-1@xs">
+  <div class="row">
+    <div class="col --12@xs --6@md --3@xl p--b-1@xs">
       <p class="text-style-block">Base Buttons</p>
       <p><a class="btn --xs" data-component="button" href="#">Button xs</a></p>
       <p><a class="btn --sm +pill" data-component="button" href="#">Button Pill sm</a></p>
@@ -9,7 +9,7 @@
       <p><a class="btn --lg" data-component="button" href="#">Button lg</a></p>
       <p><a class="btn +block --lg" data-component="button" href="#">Button block lg</a></p>
     </div>
-    <div class="g-col --12@xs --6@md --3@xl p--b-1@xs">
+    <div class="col --12@xs --6@md --3@xl p--b-1@xs">
       <p class="text-style-block">(Semi) Transparent</p>
       <p><a class="btn --transparent --xs" data-component="button" href="#">Transparent xs</a></p>
       <p><a class="btn --transparent --sm" data-component="button" href="#">Transparent sm</a></p>
@@ -17,7 +17,7 @@
       <p><a class="btn --transparent --lg" data-component="button" href="#">Transparent lg</a></p>
       <p><a class="btn --transparent --lg +block" data-component="button" href="#">Block Transparent lg</a></p>
     </div>
-    <div class="g-col --12@xs --6@md --3@xl p--b-1@xs">
+    <div class="col --12@xs --6@md --3@xl p--b-1@xs">
       <p class="text-style-block">Dark Buttons</p>
       <p><a class="btn --dark --xs" data-component="button" href="#">Dark xs</a></p>
       <p><a class="btn --dark --sm" data-component="button" href="#">Dark sm</a></p>
@@ -25,7 +25,7 @@
       <p><a class="btn --dark --lg" data-component="button" href="#">Dark lg</a></p>
       <p><a class="btn --dark --lg +block" data-component="button" href="#">Block Dark lg</a></p>
     </div>
-    <div class="g-col --12@xs --6@md --3@xl p--b-1@xs">
+    <div class="col --12@xs --6@md --3@xl p--b-1@xs">
       <p class="text-style-block">Thick Buttons</p>
       <p><a class="btn +thick --xs" data-component="button" href="#">Thick xs</a></p>
       <p><a class="btn +thick --sm" data-component="button" href="#">Thick sm</a></p>
@@ -37,8 +37,8 @@
 </section>
 <section class="section ta--c k_bg-dark">
   <header class="k_section__header ta--l">Buttons on Dark</header>
-  <div class="g-row">
-    <div class="g-col --12@xs --6@md --3@xl p--b-1@xs">
+  <div class="row">
+    <div class="col --12@xs --6@md --3@xl p--b-1@xs">
       <p class="text-style-block">Base Buttons</p>
       <p><a class="btn --xs" data-component="button" href="#">Button xs</a></p>
       <p><a class="btn --sm +pill" data-component="button" href="#">Button Pill sm</a></p>
@@ -46,7 +46,7 @@
       <p><a class="btn --lg" data-component="button" href="#">Button lg</a></p>
       <p><a class="btn --lg +block" data-component="button" href="#">Button block lg</a></p>
     </div>
-    <div class="g-col --12@xs --6@md --3@xl p--b-1@xs">
+    <div class="col --12@xs --6@md --3@xl p--b-1@xs">
       <p class="text-style-block">(Semi) Transparent</p>
       <p><a class="btn --transparent --xs" data-component="button" href="#">Transparent xs</a></p>
       <p><a class="btn --transparent --sm" data-component="button" href="#">Transparent sm</a></p>
@@ -54,7 +54,7 @@
       <p><a class="btn --transparent --lg" data-component="button" href="#">Transparent lg</a></p>
       <p><a class="btn --transparent --lg +block" data-component="button" href="#">Block Transparent lg</a></p>
     </div>
-    <div class="g-col --12@xs --6@md --3@xl p--b-1@xs">
+    <div class="col --12@xs --6@md --3@xl p--b-1@xs">
       <p class="text-style-block">(Semi) Transparent Light</p>
       <p><a class="btn --transparent --light --xs" data-component="button" href="#">Transparent Light xs</a></p>
       <p><a class="btn --transparent --light --sm" data-component="button" href="#">Transparent Light sm</a></p>
@@ -62,7 +62,7 @@
       <p><a class="btn --transparent --light --lg" data-component="button" href="#">Transparent Light lg</a></p>
       <p><a class="btn --transparent --light --lg +block" data-component="button" href="#">Block Transparent Light lg</a></p>
     </div>
-    <div class="g-col --12@xs --6@md --3@xl p--b-1@xs">
+    <div class="col --12@xs --6@md --3@xl p--b-1@xs">
       <p class="text-style-block">White Outline Buttons</p>
       <p><a class="btn --white --xs +outline" data-component="button" href="#">White Outline xs</a></p>
       <p><a class="btn --white --sm +outline" data-component="button" href="#">White Outline sm</a></p>
@@ -74,8 +74,8 @@
 </section>
 <section class="section k_bg-light">
   <header class="k_section__header">Button Goodies</header>
-  <div class="g-row">
-    <div class="g-col --12@xs --6@md p--b-1@xs">
+  <div class="row">
+    <div class="col --12@xs --6@md p--b-1@xs">
       <p>
         <span class="text-style-block">Inline Buttons</span><br>
         <small><i>Default behavior. Just keep them in the same element.</i></small>
@@ -97,7 +97,7 @@
         <button class="btn --sm" data-component="button" disabled="disabled">Not This One</button>
       </p>
     </div>
-    <div class="g-col --12@xs --6@md p--b-1@xs">
+    <div class="col --12@xs --6@md p--b-1@xs">
       <p>
         <span class="text-style-block">With Iconography</span><br>
         <small><i>Feather Icons wrapped in a <code>.btn__icon</code> span.<br>
@@ -121,7 +121,7 @@
         </a>
       </p>
       <p>
-        <a class="btn --lg" data-component="button" href="#">Now Fly Away 
+        <a class="btn --lg" data-component="button" href="#">Now Fly Away
           <span class="btn__icon +right"><i data-feather="feather"></i></span>
         </a>
       </p>
@@ -129,7 +129,7 @@
         <a class="btn --lg --transparent" data-component="button" href="#">
           <span class="btn__icon +large +thin"><i data-feather="cloud-rain"></i></span><br>
           Looks Like We're In For<br>
-          Some Nasty Weather          
+          Some Nasty Weather
         </a>
       </p>
     </div>

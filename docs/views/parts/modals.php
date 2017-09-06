@@ -1,7 +1,7 @@
 <section class="section">
   <header class="k_section__header">Base</header>
-  <div class="g-row">
-    <div class="g-col --12@xs --4@md offset-4@md">
+  <div class="row">
+    <div class="col --12@xs --4@md offset-4@md">
       <p><a class="btn btn--outline btn--gray btn--sm" href="#" data-toggle="modal" data-target="#modal_base">Modal Me</a></p>
       <div class="modal fade" id="modal_base" tabindex="-1" role="dialog" aria-labelledby="modal_base_label" aria-hidden="true">
         <div class="modal-dialog modal__dialog" role="document">
@@ -28,8 +28,8 @@
 
 <section class="section">
   <header class="k_section__header">Dark</header>
-  <div class="g-row">
-    <div class="g-col --12@xs --4@md offset-4@md">
+  <div class="row">
+    <div class="col --12@xs --4@md offset-4@md">
       <p><a class="btn btn--outline btn--gray btn--sm" href="#" data-toggle="modal" data-target="#modal_dark">Modal Me</a></p>
       <div class="modal modal--dark fade" id="modal_dark" tabindex="-1" role="dialog" aria-labelledby="modal_dark_label" aria-hidden="true">
         <div class="modal-dialog modal__dialog" role="document">
@@ -56,8 +56,8 @@
 
 <section class="section">
   <header class="k_section__header">Contact</header>
-  <div class="g-row">
-    <div class="g-col --12@xs --4@md offset-4@md">
+  <div class="row">
+    <div class="col --12@xs --4@md offset-4@md">
       <p><a class="btn btn--outline btn--gray btn--sm" href="#" data-toggle="modal" data-target="#modal_contact">Contact Me</a></p>
       <div class="modal modal--contact fade" id="modal_contact" tabindex="-1" role="dialog" aria-labelledby="modal_contact_label" aria-hidden="true">
         <div class="modal-dialog modal__dialog" role="document">
@@ -65,8 +65,8 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-            <div class="g-row">
-              <div class="g-col --12@xs --4@md">
+            <div class="row">
+              <div class="col --12@xs --4@md">
                 <div class="modal__image__wrapper">
                   <img class="modal__image" src="//farm2.staticflickr.com/1672/23697640273_90b5c92b84_z_d.jpg" alt="">
                 </div>
@@ -75,7 +75,7 @@
                   617.373.5555</p>
                 </div>
               </div>
-              <div class="g-col --12@xs g-8@md">
+              <div class="col --12@xs g-8@md">
                 <div class="modal__body modal--contact__bio">
                   <h3 class="modal--contact__name">David Mary Davenport</h3>
                   <p class="modal--contact__title">Curabitur Blandit Tempus Porttitor<br>

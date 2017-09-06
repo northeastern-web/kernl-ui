@@ -1,6 +1,6 @@
 <section class="section">
-  <div class="g-row">
-    <div class="g-col --12@xs --8@lg offset-2@lg">
+  <div class="row">
+    <div class="col --12@xs --8@lg offset-2@lg">
       <form action="" method="">
         <div class="form__group">
           <label for="exampleInputEmail1">Email address</label>

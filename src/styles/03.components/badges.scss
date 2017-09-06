@@ -14,7 +14,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  @include k_badge_variant($color-text, rgba(255, 255, 255, 0.75), transparent);
+  @include k_badge_variant($type-color, rgba(255, 255, 255, 0.75), transparent);
   @include k_font_smoothing();
 
   a {

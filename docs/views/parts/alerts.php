@@ -1,7 +1,7 @@
 <section class="section k_bg-light">
   <header class="k_section__header">Base Alerts</header>
-  <div class="g-row">
-    <div class="g-col --12@xs">
+  <div class="row">
+    <div class="col --12@xs">
 
       <div class="alert --sm">
         <div class="alert__body">

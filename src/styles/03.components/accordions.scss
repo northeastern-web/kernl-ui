@@ -1,6 +1,7 @@
-/**
- * Accordions
- */
+//
+// Accordions
+//
+
 
 .accordion {
   border-radius: 2px;
@@ -71,11 +72,11 @@
 
 /* Colors */
 .accordion--white {
-  @include k_accordion_variant($color-text, #fff, #fff);
+  @include k_accordion_variant($type-color, #fff, #fff);
   .txt_title { font-weight: 700; }
   .wys_copy { padding-top: 0; }
 }
 
 .accordion--dark {
-  @include k_accordion_variant(#fff, $color-text, lighten($color-text, 20%));
+  @include k_accordion_variant(#fff, $type-color, lighten($type-color, 20%));
 }

@@ -1,0 +1,348 @@
+//
+// Global Variables
+// * Color Palette, Typography, Grid
+
+
+//
+// Color Palette
+
+// Grays
+$gray-100: #efefef !default;
+$gray-200: #d0d0d0 !default;
+$gray-300: #b5b5b5 !default;
+$gray-400: #969696 !default;
+$gray-500: #797979 !default;
+$gray-600: #666666 !default;
+$gray-700: #535353 !default;
+$gray-800: #333333 !default;
+$gray-900: #1a1a1a !default;
+$gray: #58585a !default;
+$gray-dark: $gray-900 !default;
+$gray-light: #7b7778 !default;
+$black: #000 !default;
+
+$gray-scale: (
+  ($gray-100, '100'),
+  ($gray-200, '200'),
+  ($gray-300, '300'),
+  ($gray-400, '400'),
+  ($gray-500, '500'),
+  ($gray-600, '600'),
+  ($gray-700, '700'),
+  ($gray-800, '800'),
+  ($gray-900, '900'),
+  ($gray, false),
+  ($gray-dark, 'dark'),
+  ($gray-light, 'light'),
+  ($black, 'false')
+) !default;
+
+// Reds
+$red:       #cc0000 !default;
+$red-dark:  #7e0000 !default;
+$red-light: #e34553 !default;
+
+$red-scale: (
+  ($red, false),
+  ($red-dark, 'dark'),
+  ($red-light, 'light')
+) !default;
+
+// Oranges
+$orange:       #f68c1e !default;
+$orange-dark:  #d15f08 !default;
+$orange-light: #f9b268 !default;
+
+$orange-scale: (
+  ($orange, false),
+  ($orange-dark, 'dark'),
+  ($orange-light, 'light', 'dark')
+) !default;
+
+// Yellows
+$yellow:       #fec42f !default;
+$yellow-dark:  #f9b301 !default;
+$yellow-light: #fed262 !default;
+
+$yellow-scale: (
+  ($yellow, false, 'dark'),
+  ($yellow-dark, 'dark', 'dark'),
+  ($yellow-light, 'light', 'dark')
+) !default;
+
+// Greens
+$green:       #aebe42 !default;
+$green-dark:  #808c15 !default;
+$green-light: #d4e291 !default;
+
+$green-scale: (
+  ($green, false, 'dark'),
+  ($green-dark, 'dark'),
+  ($green-light, 'light', 'dark')
+) !default;
+
+// Teals
+$teal:       #309aa8 !default;
+$teal-dark:  #13606d !default;
+$teal-light: #aed8da !default;
+
+$teal-scale: (
+  ($teal, false),
+  ($teal-dark, 'dark'),
+  ($teal-light, 'light', 'dark')
+) !default;
+
+// Blues
+$blue:       #5c7d9e !default;
+$blue-dark:  #2f4a61 !default;
+$blue-light: #aec2da !default;
+
+$blue-scale: (
+  ($blue, false),
+  ($blue-dark, 'dark'),
+  ($blue-light, 'light', 'dark')
+) !default;
+
+// Purples
+$purple:       #9d64a2 !default;
+$purple-dark:  #511951 !default;
+$purple-light: #d0b7d5 !default;
+
+$purple-scale: (
+  ($purple, false),
+  ($purple-dark, 'dark'),
+  ($purple-light, 'light', 'dark')
+) !default;
+
+// Beige
+$beige:       #bdb29f !default;
+$beige-dark:  #615547 !default;
+$beige-light: #ece6d5 !default;
+
+$beige-scale: (
+  ($beige, false, 'dark'),
+  ($beige-dark, 'dark'),
+  ($beige-light, 'light', 'dark')
+) !default;
+
+// ** Full color palette collection
+$palette: (
+  ('gray', $gray-scale),
+  ('red', $red-scale),
+  ('blue', $blue-scale),
+  ('green', $green-scale),
+  ('purple', $purple-scale),
+  ('yellow', $yellow-scale),
+  ('orange', $orange-scale),
+  ('teal', $teal-scale),
+  ('beige', $beige-scale)
+) !default;
+
+// States
+// $color-success: $green !default;
+// $color-info:    $blue !default;
+// $color-warning: $orange !default;
+// $color-danger:  $red !default;
+
+
+//
+// Typography
+
+// Families
+$type-sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$type-serif: "Baskerville", Georgia, "Times New Roman", Times, serif !default;
+$type-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+// Weight
+$type-light: 300 !default;
+$type-regular: 400 !default;
+$type-bold: 700 !default;
+$type-black: 900 !default;
+
+// Base and Responsive sizing/properties
+$font-xs: .75rem !default;
+$font-sm: .875rem !default;
+
+$type-root: (
+  properties: (
+    (font-weight, $type-regular),
+    (line-height, 1.5)
+  ),
+  sizes: (
+    (xs, 15px),
+    (sm, 16px),
+    (xl, 17px),
+    (xx, 18px)
+  )
+) !default;
+
+$type-body: (
+  properties: (
+    (font-weight, $type-regular),
+    (line-height, 1.5)
+  ),
+  sizes: (
+    (xs, 1rem)
+  )
+) !default;
+
+$type-display-1: (
+  properties: (
+    (font-weight, $type-light),
+    (line-height, 1),
+    (letter-spacing, -0.04em)
+  ),
+  sizes: (
+    (xs, 3rem),
+    (sm, 4rem),
+    (lg, 5rem)
+  )
+) !default;
+
+$type-display-2: (
+  properties: (
+    (line-height, 1.05),
+    (font-weight, $type-light),
+    (letter-spacing, -0.02em)
+  ),
+  sizes: (
+    (xs, 2.75rem),
+    (xl, 3.25rem)
+  )
+) !default;
+
+$type-display-3: (
+  properties: (
+    (line-height, 1.2),
+    (font-weight, $type-regular),
+    (letter-spacing, 0)
+  ),
+  sizes: (
+    (xs, 2rem),
+    (xl, 2.15rem)
+  )
+) !default;
+
+$type-display-4: (
+  properties: (
+    (line-height, 1.175),
+    (font-weight, $type-bold),
+    (letter-spacing, 0)
+  ),
+  sizes: (
+    (xs, 1.5rem),
+    (xl, 1.75rem)
+  )
+) !default;
+
+$type-headline: (
+  properties: (
+    (line-height, 1.175),
+    (font-weight, $type-bold),
+    (letter-spacing, 0)
+  ),
+  sizes: (
+    (xs, 1.2rem),
+    (xl, 1.5rem)
+  )
+) !default;
+
+$type-title: (
+  properties: (
+    (line-height, 1.175),
+    (font-weight, $type-bold)
+  ),
+  sizes: (
+    (xs, 1.15rem),
+    (xl, 1.22rem)
+  )
+) !default;
+
+$type-lead: (
+  properties: (
+    (font-weight, $type-light),
+    (line-height, 1.25)
+  ),
+  sizes: (
+    (xs, 1.1rem),
+    (sm, 1.1rem),
+    (lg, 1.4rem)
+  )
+) !default;
+
+$type-sm: (
+  properties: (
+    (font-weight, 400)
+    (line-height, 1.4)
+  ),
+  sizes: (
+    (xs, $font-sm),
+    (sm, $font-sm)
+  )
+) !default;
+
+$type-xs: (
+  properties: (
+    (font-weight, 400)
+    (line-height, 1.3)
+  ),
+  sizes: (
+    (xs, $font-xs),
+    (sm, $font-xs)
+  )
+) !default;
+
+$type-size: // Size collection
+  $type-root,
+  $type-body,
+  $type-display-4,
+  $type-display-3,
+  $type-display-2,
+  $type-display-1,
+  $type-headline,
+  $type-title,
+  $type-lead,
+  $type-sm,
+  $type-xs !default;
+
+// Type bases
+$type-color:  $gray-800 !default;
+$type-link:   $blue-light !default;
+
+
+//
+// Grid
+
+$grid-prefix: 'g' !default;
+$col-prefix: '\\-' !default;
+$grid-columns: 12 !default;
+$grid-gutter-width-base: 30px !default;
+
+// Gutter widths
+$grid-gutter-widths: (
+  xs: 1rem,
+  sm: 1rem,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: 36px,
+  xx: 40px
+) !default;
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xx: 1600px
+) !default;
+
+// Maximum widths
+$container-max-widths: (
+  sm: 720px,
+  md: 960px,
+  lg: 1080px,
+  xl: 1400px,
+  xx: 1800px
+) !default;

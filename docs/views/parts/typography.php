@@ -1,6 +1,6 @@
 <header class="section --banner +bgimg +large +fixed p--t-3@xs p--t-6@lg">
-  <div class="g-row">
-    <div class="g-col --12@xs ta--c">
+  <div class="row">
+    <div class="col --12@xs ta--c">
       <div class="banner__pretitle p--b-1@xs">What's your type?</div>
       <h1 class="banner__title p--b-1@xs">Typography Styles</h1>
       <div class="banner__subtitle">This is a page of base typography styles for kernl(ui).</div>
@@ -8,8 +8,8 @@
   </div>
 </header>
 <section class="section">
-  <div class="g-row">
-    <div class="g-col --12@xs --10@lg offset-1@lg">
+  <div class="row">
+    <div class="col --12@xs --10@lg offset-1@lg">
       <h1>Here is Heading 1 <span class="show-font-size">(<span class="element-font-size"></span> @ 2.25rem)</span></h1>
       <p class="type--lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
       <ul class="list--unstyled type--sm">
@@ -104,12 +104,12 @@
     <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
     <h4>Definition List</h4>
-    <dl class="g-row">
-      <dt class="g-col --3@xs">Single room</dt>
-      <dd class="g-col --9@xs">$199/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
+    <dl class="row">
+      <dt class="col --3@xs">Single room</dt>
+      <dd class="col --9@xs">$199/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
 
-      <dt class="g-col --3@xs">Double room</dt>
-      <dd class="g-col --9@xs">$239/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
+      <dt class="col --3@xs">Double room</dt>
+      <dd class="col --9@xs">$239/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
     </dl>
     <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
@@ -125,8 +125,8 @@
 
 <section class="section k_bg-light">
   <header class="k_section__header">Display Sizes</header>
-  <div class="g-row">
-    <div class="g-col --12@xs --10@lg offset-1@lg">
+  <div class="row">
+    <div class="col --12@xs --10@lg offset-1@lg">
       <p class="text-style-block">Display Size 1:</p>
       <p class="type--d-1">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
       <p class="text-style-block">Display Size 2:</p>
@@ -140,18 +140,18 @@
 </section>
 <section class="section">
   <header class="k_section__header">Blockquotes</header>
-  <div class="g-row">
-    <div class="g-col --12@xs --4@lg">
+  <div class="row">
+    <div class="col --12@xs --4@lg">
       <blockquote class="blockquote">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </blockquote>
     </div>
-    <div class="g-col --12@xs --4@lg">
+    <div class="col --12@xs --4@lg">
       <blockquote class="blockquote --mark">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </blockquote>
     </div>
-    <div class="g-col --12@xs --4@lg">
+    <div class="col --12@xs --4@lg">
       <blockquote class="blockquote --mark --purple-dark">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         <div class="blockquote__cite">Person Name</div>
@@ -163,18 +163,18 @@
 
 <section class="section">
   <header class="k_section__header">White Blockquotes</header>
-  <div class="g-row">
-    <div class="g-col --12@xs --4@lg">
+  <div class="row">
+    <div class="col --12@xs --4@lg">
       <blockquote class="blockquote --white shadow--none">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </blockquote>
     </div>
-    <div class="g-col --12@xs --4@lg">
+    <div class="col --12@xs --4@lg">
       <blockquote class="blockquote --white --mark shadow--none">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </blockquote>
     </div>
-    <div class="g-col --12@xs --4@lg">
+    <div class="col --12@xs --4@lg">
       <blockquote class="blockquote --white blockquote--mark">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         <div class="blockquote__cite">Person Name</div>
@@ -186,18 +186,18 @@
 
 <section class="section">
   <header class="k_section__header">Outlined Blockquotes</header>
-  <div class="g-row">
-    <div class="g-col --12@xs --4@lg">
+  <div class="row">
+    <div class="col --12@xs --4@lg">
       <blockquote class="blockquote --outline">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </blockquote>
     </div>
-    <div class="g-col --12@xs --4@lg">
+    <div class="col --12@xs --4@lg">
       <blockquote class="blockquote --outline --mark blockquote--teal">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </blockquote>
     </div>
-    <div class="g-col --12@xs --4@lg">
+    <div class="col --12@xs --4@lg">
       <blockquote class="blockquote --outline --mark blockquote--orange-dark">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         <div class="blockquote__cite">Person Name</div>
@@ -209,8 +209,8 @@
 
 <section class="section">
   <header class="k_section__header">Basic Table</header>
-  <div class="g-row">
-    <div class="g-col --12@xs">
+  <div class="row">
+    <div class="col --12@xs">
       <table class="table">
         <thead>
           <tr class="th--sm">
@@ -243,8 +243,8 @@
 
 <section class="section">
   <header class="k_section__header">With Vertical Borders</header>
-  <div class="g-row">
-    <div class="g-col --12@xs">
+  <div class="row">
+    <div class="col --12@xs">
       <table class="table +border-vertical">
         <thead>
           <tr class="th--sm">
@@ -277,8 +277,8 @@
 
 <section class="section">
   <header class="k_section__header">With Alternating Stripes</header>
-  <div class="g-row">
-    <div class="g-col --12@xs">
+  <div class="row">
+    <div class="col --12@xs">
       <table class="table +striped">
         <thead>
           <tr class="th--sm">
@@ -326,8 +326,8 @@
 
 <section class="section">
   <header class="k_section__header">Responsive (Vertically-Scrolling) Table</header>
-  <div class="g-row">
-    <div class="g-col --12@xs">
+  <div class="row">
+    <div class="col --12@xs">
       <table class="table --responsive">
         <thead>
           <tr class="th--sm">
