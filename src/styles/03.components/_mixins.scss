@@ -97,7 +97,7 @@
 @mixin k_accordion_variant($color: $type-color, $trigger: lighten($type-color,70%), $background: transparent) {
   color: $color;
 
-  .txt_title {
+  .\__title {
     background: $trigger;
 
     &:after { color: rgba($color, 0.5); }
@@ -107,7 +107,7 @@
     }
   }
 
-  .wys_copy { background: $background; }
+  .\__copy { background: $background; }
 }
 
 
