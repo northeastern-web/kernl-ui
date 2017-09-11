@@ -16,8 +16,8 @@ mix.js('resources/assets/scripts/docs.js', 'dist/scripts')
    .copy('resources/assets/fonts/*', 'dist/fonts');
 
 mix.browserSync({
-  proxy: 'https://ui.kernl.dev/',
-  host: 'ui.kernl.dev',
+  proxy: 'https://kernl-ui.dev/',
+  host: 'kernl-ui.dev',
   open: 'external',
   https: true
 });

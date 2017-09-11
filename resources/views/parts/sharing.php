@@ -8,9 +8,9 @@ define( 'SHARE_URL', url_elements() );
 ?>
 
 <section class="section">
-  <header class="k_section__header">Base</header>
   <div class="g-row">
-    <div class="g-col --12@xs p--y-2@xs">
+    <div class="g-col --12@xs --6@md p--y-2@xs">
+      <header class="k_section__header">Base</header>
       <ul class="share-buttons">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
@@ -34,12 +34,8 @@ define( 'SHARE_URL', url_elements() );
         </li>
       </ul>
     </div>
-  </div>
-</section>
-<section class="section">
-  <header class="k_section__header">Stacked</header>
-  <div class="g-row">
-    <div class="g-col --12@xs p--y-2@xs">
+    <div class="g-col --12@xs --6@md p--y-2@xs">
+      <header class="k_section__header">Stacked</header>
       <ul class="share-buttons share-buttons--stacked">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
