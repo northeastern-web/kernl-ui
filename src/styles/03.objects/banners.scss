@@ -4,7 +4,7 @@
 
 .\--banner {
   position: relative;
-  background-color: $gray-700;
+  background-color: $gray-900;
   // background: rgba(0, 0, 0, 0.7); // opinionated
   color: #fff;
   padding-top: 5%;
@@ -28,46 +28,46 @@
       @include k_font_smoothing();
     }
 
-    &.\+fixed {
+    &.\--fixed {
       position: relative;
       background-attachment: fixed;
     }
   }
 
-  &.\+sm {
+  &.\--sm {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 
-  &.\+lg {
+  &.\--lg {
     padding-top: 10%;
     padding-bottom: 10%;
   }
 
-  &.\+xl {
+  &.\--xl {
     padding-top: 15%;
     padding-bottom: 15%;
   }
 
-  &.\+top {
+  &.\--top {
     padding-top: 1rem;
   }
 
-  &.\+bottom {
+  &.\--bottom {
     padding-bottom: 1rem;
   }
 
-  &.\+transparent {
+  &.\--transparent {
     background-color: transparent;
     color: $type-color;
   }
 
-  &.\+white {
+  &.\--white {
     background-color: white;
     color: $type-color;
   }
 
-  &.\--shadow {
+  &.\+shadow {
     border-top: 2px solid rgba(0,0,0,.1);
     border-bottom: 1px solid rgba(0,0,0,.1);
   }
