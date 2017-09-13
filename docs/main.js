@@ -18,10 +18,10 @@ $('#kernl .\\+bgimg').each(function() {
   $(this).attr("style","background-image: url(" + path + selectedImg + ");");
 });
 
-$('#kernl .card__graphic').each(function() {
+$('#kernl .__graphic').each(function() {
   var randomImages = Math.floor(Math.random() * images.length);
   var selectedImg = images.splice(randomImages,1); // no repeated images
-  $(this).append("<img class='card__graphic__img' src='" + path + selectedImg + "' alt=''>");
+  $(this).append("<img class='__graphic__img' src='" + path + selectedImg + "' alt=''>");
 });
 
 

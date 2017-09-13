@@ -29,131 +29,129 @@
   //
   // Columns in header/footer
   .__column { @extend %component-column; }
-}
 
-
-//
-// Link
-.card__link {
-  height: 100%;
-  display: block;
-
-  &, &:hover { color: inherit; }
-}
-
-
-//
-// Graphic
-.card__graphic {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  height: 0;
-  padding-top: 56.25%;
-
-  &:after {
-    content: "";
+  //
+  // Link
+  .__link {
     height: 100%;
+    display: block;
+
+    &, &:hover { color: inherit; }
+  }
+
+
+  //
+  // Graphic
+  .__graphic {
+    position: relative;
     width: 100%;
-    background: rgba(0,0,0,.15);
+    overflow: hidden;
+    height: 0;
+    padding-top: 56.25%;
+
+    &:after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,.15);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: background 0.2s ease;
+    }
+  }
+
+  // Image within .__graphic
+  .__graphic__img {
+    max-width: 110%;
+    width: auto; height: auto;
+    margin: auto;
     position: absolute;
-    top: 0;
+    top: 0; right: 0; bottom: 0; left: -5%;
+  }
+
+
+  //
+  // Body
+  .__body {
+    padding: 1rem 1rem 3rem;
+    @include k_get_type($type-sm);
+
+    p {
+      font-size: inherit;
+      line-height: inherit;
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  //
+  // Titles with .__body
+  .__title {
+    margin-bottom: 0.25rem;
+    @include k_get_type($type-title);
+    @include k_font_smoothing();
+  }
+
+  .__pretitle {
+    font-size: .8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .__subtitle {}
+
+  //
+  // Icon
+  .__icon {
+    @include k_get_type($type-display-2);
+    padding: 3% 0;
+    text-align: center;
+  }
+
+
+  //
+  // Header & Footer
+  .__header,
+  .__footer {
+    // @extend .\--row;
+    @include k_get_type($type-sm);
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
     left: 0;
-    transition: background 0.2s ease;
+    z-index: 15;
   }
-}
 
-// Image within .card__graphic
-.card__graphic__img {
-  max-width: 110%;
-  width: auto; height: auto;
-  margin: auto;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: -5%;
-}
+  .__header {
+    top: 0;
 
-
-//
-// Body
-.card__body {
-  padding: 1rem 1rem 3rem;
-  @include k_get_type($type-sm);
-
-  p {
-    font-size: inherit;
-    line-height: inherit;
-    &:last-child { margin-bottom: 0; }
+    +.__body {
+      margin-top: 2.5rem;
+      border-top: 1px solid $gray-200;
+    }
   }
-}
 
-//
-// Titles with .card__body
-.card__title {
-  margin-bottom: 0.25rem;
-  @include k_get_type($type-title);
-  @include k_font_smoothing();
-}
-
-.card__pretitle {
-  font-size: .8rem;
-  margin-bottom: 0.2rem;
-}
-
-.card__subtitle {}
-
-//
-// Icon
-.card__icon {
-  @include k_get_type($type-display-2);
-  padding: 3% 0;
-  text-align: center;
-}
-
-
-//
-// Header & Footer
-.card__header,
-.card__footer {
-  // @extend .\--row;
-  @include k_get_type($type-sm);
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  position: absolute;
-  left: 0;
-  z-index: 1;
-}
-
-.card__header {
-  top: 0;
-
-  +.card__body {
-    margin-top: 2.5rem;
+  .__footer {
+    bottom: 0;
     border-top: 1px solid $gray-200;
   }
-}
 
-.card__footer {
-  bottom: 0;
-  border-top: 1px solid $gray-200;
+  // Link within footer
+  .__footer__link {
+    @extend .btn;
+    @extend .btn.\--dark;
+    @extend .btn.\+block;
+    margin-bottom: 0;
+    height: 2.5rem;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
 }
-
-// Link within footer
-.card__footer__link {
-  @extend .btn;
-  @extend .btn.\--dark;
-  @extend .btn.\+block;
-  margin-bottom: 0;
-  height: 2.5rem;
-  border: none;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
 
 //
 // Dark
@@ -174,24 +172,24 @@
 .card--bottom {
   min-height: $card_height_xs;
 
-  .card__body {
+  .__body {
     padding-bottom: 1rem;
     border: none;
     position: absolute;
     bottom: 0;
   }
 
-  .card__icon { text-align: left; }
+  .__icon { text-align: left; }
 }
 
 
 //
-// Overlay's .card__graphic
+// Overlay's .__graphic
 .card--overlay {
   color: #fff;
   min-height: $card_height_sm;
 
-  .card__link {
+  .__link {
     position: absolute;
     top: 0;
     right: 0;
@@ -199,7 +197,7 @@
     left: 0;
   }
 
-  .card__graphic {
+  .__graphic {
     height: 100%;
     width: 100%;
     max-width: initial;
@@ -208,7 +206,7 @@
     padding: 0;
   }
 
-  .card__graphic__img {
+  .__graphic__img {
     max-width: none;
     max-height: 122%;
     width: auto;
@@ -225,14 +223,14 @@
     }
   }
 
-  .card__body {
+  .__body {
     position: absolute;
     top: 0; left: 0;
     width: auto; height: 100%;
   }
 
   &.card--middle {
-    .card__body {
+    .__body {
       height: auto;
       top: 50%;
       transform: translateY(-50%);
@@ -240,7 +238,7 @@
   }
 
   &.card--bottom {
-    .card__body {
+    .__body {
       height: auto; width: auto;
       padding-bottom: 1rem;
       top: initial;
@@ -248,11 +246,11 @@
   }
 
   &:not(.card--middle) {
-    .card__header ~ .card__body { margin-top: 2.5rem; }
+    .__header ~ .__body { margin-top: 2.5rem; }
   }
 
   &:hover {
-    .card__graphic {
+    .__graphic {
       &:after { background: rgba(0, 0, 0, 0.3); }
     }
   }
@@ -263,17 +261,17 @@
 // Tiles
 .card {
   &.\--tile {
-    .card__excerpt,
-    .card__body p,
-    .card__header,
-    .card__footer {
+    .__excerpt,
+    .__body p,
+    .__header,
+    .__footer {
       @include k_get_type($type-xs);
     }
-    .card__title {
+    .__title {
       font-size: 1rem;
     }
 
-    .card__icon {
+    .__icon {
       font-size: 2.75rem;
     }
   }
@@ -391,7 +389,7 @@
       @include k_card_horizontal($width_graphic: 56.25%, $width_text: 43.75%);
     }
 
-    .card__graphic__img {
+    .__graphic__img {
       width: 106%;
       height: auto !important;
       left: -3%;
@@ -407,7 +405,7 @@
 
   &:after { display: none; } // kill box-shadow
 
-  .card__body {
+  .__body {
     height: 90%;
     overflow-y: scroll;
   }
@@ -424,7 +422,7 @@
   text-align: center;
   min-height: $card_height_xs;
 
-  .card__body {
+  .__body {
     margin-top: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -436,7 +434,7 @@
   }
 
   &.\--tile {
-    .card__body {
+    .__body {
       height: 100%;
       padding: 2.5rem 1rem 1rem;
     }
@@ -470,7 +468,7 @@
     margin: -1px -1rem 0;
   }
 
-  .list-group__item, 
+  .list-group__item,
   .list-group > div,
   .list-group > a,
   .list-group > li {
@@ -492,7 +490,7 @@
       color: #fff;
     }
 
-    .list-group__item, 
+    .list-group__item,
     .list-group > div,
     .list-group > a,
     .list-group > li {
@@ -501,7 +499,7 @@
   }
 
   &.card--bottom {
-    .card__body {
+    .__body {
       position: absolute !important;
     }
 
@@ -510,7 +508,7 @@
       margin-bottom: -1rem;
     }
 
-    .list-group__item, 
+    .list-group__item,
     .list-group > div,
     .list-group > a,
     .list-group > li {
@@ -522,7 +520,7 @@
   }
 
   &.\+list-group {
-    .card__body {
+    .__body {
       padding-top: 0;
       padding-bottom: 2.25rem;
     }
