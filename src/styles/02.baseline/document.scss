@@ -69,12 +69,3 @@ template { display: none; }
 // Hidden
 
 [hidden] { display: none !important; }
-
-
-// 
-// Set the document margin
-
-.section {
-  @include k_make-section();
-  // margin-bottom: 1rem; <- NO. Leaves 1rem of white (as in #fff) space below each section
-}

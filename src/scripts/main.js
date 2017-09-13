@@ -1,7 +1,7 @@
 window._ = require('lodash');
 
 try {
-    window.$ = window.jQuery = require('jquery');
+  window.$ = window.jQuery = require('jquery');
 } catch (e) {}
 
 require('./bootstrap/alert.js');
@@ -78,6 +78,7 @@ $('.nav--tabbed .nav__item a').on('shown.bs.tab', function (e) {
 $('.nav--tabbed .nav__link').on('click touch', function (e) {
   var $this = $(this);
   if ($this.siblings().hasClass('nav__child-list')) {
+    // console.log('click');
     $($this.siblings().find('.active').removeClass('active').attr('aria-expanded', false));
     $('.tab-pane').parent().siblings().find('.active').removeClass('active').attr('aria-expanded', false);
   }
