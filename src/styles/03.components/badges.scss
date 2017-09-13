@@ -26,64 +26,68 @@
 
   //
   // Colors
-  &.--dark { @include k_badge_variant(#fff, rgba(0, 0, 0, 0.6), transparent); }
-  &.--transparent { @include k_badge_variant(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2), transparent); }
+  &.\--dark { @include k_badge_variant(#fff, rgba(0, 0, 0, 0.6), transparent); }
+  &.\--transparent { @include k_badge_variant(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2), transparent); }
 
   //
   // Outline
-  &.--outline { @extend %component-outline; }
+  &.\--outline { @extend %component-outline; }
 
   //
   // Positioning
-  &.--left {
+  &.\--left {
     position: absolute;
     top: .75rem;
     left: .75rem;
   }
 
-  &.--center {
+  &.\--center {
     top: 0;
     right: auto;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  &.--right {
+  &.\--right {
     top: .75rem;
     right: .75rem;
     left: auto;
   }
 
   @include k_media_breakpoint_up(md) {
-    &.--left {
-      top: 0;
-      left: 0;
+    &.\--left {
+      // &:not(.\--pill) {
+        top: 0;
+        left: 0;
+      // }
     }
 
-    &.--center {
+    &.\--center {
       left: 50%;
       right: auto;
     }
 
-    &.--right {
-      top: 0;
+    &.\--right {
+      // &:not(.\--pill) {
+        top: 0;
+        right: 0;
+      // }
       left: auto;
-      right: 0;
     }
   }
 
   @include k_media_breakpoint_up(xl) {
-    &.--left {
+    &.\--left {
       top: 0.5rem;
       left: 0.5rem;
     }
 
-    &.--center {
+    &.\--center {
       top: 0;
       left: 50%;
     }
 
-    &.--right {
+    &.\--right {
       left: auto;
       right: 0.5rem;
       top: 0.75rem;
@@ -91,23 +95,23 @@
   }
 
   @include k_media_breakpoint_up(xx) {
-    &.--left {
+    &.\--left {
       top: 0.75rem;
       left: 0.75rem;
     }
 
-    &.--center {
+    &.\--center {
       top: 0;
       left: 50%;
     }
 
-    &.--right {
+    &.\--right {
       left: auto;
       right: 0.75rem;
     }
   }
 
-  &.--pill {
+  &.\--pill {
     @extend %pill;
   }
 }

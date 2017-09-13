@@ -83,7 +83,7 @@ blockquote {
   &, p {
     @include k_get_type($type-lead);
     margin-bottom: 1rem;
-    font-family: $type-serif;
+    // font-family: $type-serif;
   }
 }
 

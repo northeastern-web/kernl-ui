@@ -5,11 +5,9 @@
 
 // Sections
 //
-// Set the document margin
-.section {
-  @include k_make-section();
-  margin-bottom: 1rem;
-}
+// Moved to baseline/document. Arguably a document
+// component that contains a grid; also, must load 
+// before any call to .--banner [rmk, 2017-09-12]document
 
 
 // Row

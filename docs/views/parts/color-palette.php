@@ -20,8 +20,8 @@
     <!-- Blues -->
     <div class="row color-cell">
       <div class="col --12@xs --4@sm --3@lg bg-blue--dark"><span class="hex-color">#2f4a61</span> Dark Blue</div>
-      <div class="col --12@xs --4@sm --6@lg bg-blue"><span class="hex-color">#5c7d9e</span> Blue <span class="fw--n">*</span></div>
-      <div class="col --12@xs --4@sm --3@lg bg-blue--light"><span class="hex-color">#aec2da</span> Light Blue</div>
+      <div class="col --12@xs --4@sm --6@lg bg-blue"><span class="hex-color">#2b7be3</span> Blue <span class="fw--n">*</span></div>
+      <div class="col --12@xs --4@sm --3@lg bg-blue--light"><span class="hex-color">#bbd1ec</span> Light Blue <span class="fw--n">**</span></div>
     </div>
     <!-- Greens -->
     <div class="row color-cell">
@@ -74,7 +74,8 @@
 
     <div class="row">
       <div class="col --12@xs">
-        <small>* Created by PODS to augment the 2017 NU brand colors.</small>
+        <small>* Created by PODS to augment the 2017 NU brand colors.</small><br>
+        <small>** Very slightly modified by PODS from the 2017 NU brand colors.</small>
       </div>
     </div>
   </div>

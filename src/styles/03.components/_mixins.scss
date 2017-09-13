@@ -2,6 +2,18 @@
 // Component utility placeholders and mixins
 //
 
+// Shadows
+// Transitions
+// Hover/Focus
+// Tab Focus
+// Border radius
+// Component: Accordions
+// Component: Alerts
+// Component: Badges
+// Component: Buttons
+// Component: Cards
+// Component: List Groups
+// Component: Modals
 
 //
 // Shadows
@@ -477,4 +489,17 @@
   font-size: $font-size;
 
   .list-group__item, li { padding: $padding-y $padding-x; }
+}
+
+
+//
+// Modals
+
+@mixin k_modal_variant($color: $type-color, $background: #fff) {
+  .__content {
+    background: $background;
+    color: $color;
+  }
+  .close { color: $color; }
+  .modal-backdrop { background-color: $color; }
 }

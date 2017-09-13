@@ -42,5 +42,5 @@ $("#kernl .element-font-size").each(function() {
  * Toggle 'parts' menu
  */
 $('#kernl .k_nav__toggle').on('click touch', function(e) {
-  $('#kernl .k_nav').toggle('slow');
+  $('#kernl .k_nav').toggle({ direction: "left" });
 });

@@ -1,7 +1,7 @@
 <section class="section">
-  <div class="g-row">
+  <div class="row">
     <?php $i = 1; while ($i < 4) : ?>
-      <div class="g-col --12@xs --4@md">
+      <div class="col --12@xs --4@md">
         <div class="badge__wrapper +bgimg">
           <div
             data-component="badge"
@@ -13,7 +13,7 @@
       </div>
     <?php $i++; endwhile; ?>
     <?php $i = 4; while ($i < 7) : ?>
-      <div class="g-col --12@xs --4@md">
+      <div class="col --12@xs --4@md">
         <div class="badge__wrapper +bgimg">
           <div
             data-component="badge"
@@ -24,7 +24,7 @@
       </div>
     <?php $i++; endwhile; ?>
     <?php $i = 7; while ($i < 10) : ?>
-      <div class="g-col --12@xs --4@md">
+      <div class="col --12@xs --4@md">
         <div class="badge__wrapper +bgimg">
           <div
             data-component="badge"

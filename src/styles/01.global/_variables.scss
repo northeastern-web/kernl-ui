@@ -93,9 +93,11 @@ $teal-scale: (
 ) !default;
 
 // Blues
-$blue:       #5c7d9e !default;
+// $blue:       #5c7d9e !default; // pods initial blue
+$blue:       #2b7be3 !default; // pods updated blue
 $blue-dark:  #2f4a61 !default;
-$blue-light: #aec2da !default;
+// $blue-light: #aec2da !default; // marcom
+$blue-light: #bbd1ec !default;
 
 $blue-scale: (
   ($blue, false),

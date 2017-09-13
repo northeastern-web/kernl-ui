@@ -36,3 +36,12 @@
   font-size: 90%;
   text-transform: uppercase;
 }
+
+
+//
+// Tables
+
+.th--sm th {
+  @include k_get_type($type-xs);
+  color: rgba($type-color, 0.65);
+}

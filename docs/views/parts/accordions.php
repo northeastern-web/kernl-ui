@@ -1,6 +1,6 @@
 <section class="section">
   <div class="row">
-    <div class="col --12@xs p--b-1@xs">
+    <div class="col --12@xs pb--1@xs">
       <header class="k_section__header">Base Accordion</header>
       <div id="accordion_1" class="l__grid__copy accordion">
         <div class="toggle-wrap">
@@ -56,9 +56,9 @@
   </div>
 </section>
 
-<section class="section k_bg-dark">
+<section class="section k_bg-dark pb--1@xs">
   <div class="row">
-    <div class="col --12@xs p--b-1@xs">
+    <div class="col --12@xs pb--1@xs">
       <header class="k_section__header">Dark Accordion</header>
       <div id="accordion_2" class="l__grid__copy accordion --dark">
         <div class="toggle-wrap">
@@ -116,7 +116,7 @@
 
 <section class="section k_bg-light">
   <div class="row">
-    <div class="col --12@xs p--b-1@xs">
+    <div class="col --12@xs pb--1@xs">
       <header class="k_section__header">White Accordion</header>
       <div id="accordion_3" class="l__grid__copy accordion --white">
         <div class="toggle-wrap">

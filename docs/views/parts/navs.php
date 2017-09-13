@@ -1,7 +1,7 @@
 <section class="section">
   <header class="k_section__header">Interior Nav</header>
   <div class="row">
-    <div class="hidden--up@md ta--c p--t-2@xs">
+    <div class="hidden--up@md ta--c pt--2@xs">
       <button class="nav--interior__toggler btn btn--sm"><i class="ion-android-funnel"></i> Page Menu</button>
     </div>
     <div class="col --12@xs --3@md">
@@ -33,7 +33,7 @@
         </ul>
       </nav>
     </div>
-    <div class="col --12@xs g-9@md p--t-2@xs">
+    <div class="col --12@xs --9@md pt--2@xs">
       <h2>Page Content Here</h2>
       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
       <h3>Change the viewport width</h3>
@@ -42,10 +42,10 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section k_bg-light">
   <header class="k_section__header">Tabbed Nav</header>
   <div class="row">
-    <div class="col --12@xs p--t-2@xs">
+    <div class="col --12@xs pt--2@xs">
       <nav class="nav nav--tabbed">
         <ul class="nav__list">
           <li class="nav__item nav-item">
@@ -85,19 +85,19 @@
             <h3>Content 3</h3>
             <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
           </div>
-          <div class="tab-pane p--t-2@md" id="tab_4">
+          <div class="tab-pane pt--2@md" id="tab_4">
             <h3>Content 4</h3>
             <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
           </div>
-          <div class="tab-pane p--t-2@md" id="tab_4a">
+          <div class="tab-pane pt--2@md" id="tab_4a">
             <h3>Content 4a</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
           </div>
-          <div class="tab-pane p--t-2@md" id="tab_4b">
+          <div class="tab-pane pt--2@md" id="tab_4b">
             <h3>Content 4b</h3>
             <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod.</p>
           </div>
-          <div class="tab-pane p--t-2@md" id="tab_4c">
+          <div class="tab-pane pt--2@md" id="tab_4c">
             <h3>Content 4c</h3>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec sed odio dui. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur.</p>
           </div>
@@ -110,7 +110,7 @@
 <section class="section">
   <header class="k_section__header">Tabbed Nav with Borders</header>
   <div class="row">
-    <div class="col --12@xs p--t-2@xs">
+    <div class="col --12@xs pt--2@xs">
       <nav class="nav nav--tabbed nav--tabbed--border">
         <ul class="nav__list">
           <li class="nav__item nav-item">
@@ -150,19 +150,19 @@
             <h3>Content 3</h3>
             <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
           </div>
-          <div class="tab-pane p--t-2@xs" id="tab_40">
+          <div class="tab-pane pt--2@xs" id="tab_40">
             <h3>Content 4</h3>
             <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
           </div>
-          <div class="tab-pane p--t-2@xs" id="tab_40a">
+          <div class="tab-pane pt--2@xs" id="tab_40a">
             <h3>Content 4a</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
           </div>
-          <div class="tab-pane p--t-2@xs" id="tab_40b">
+          <div class="tab-pane pt--2@xs" id="tab_40b">
             <h3>Content 4b</h3>
             <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod.</p>
           </div>
-          <div class="tab-pane p--t-2@xs" id="tab_40c">
+          <div class="tab-pane pt--2@xs" id="tab_40c">
             <h3>Content 4c</h3>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec sed odio dui. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur.</p>
           </div>

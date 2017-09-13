@@ -11,12 +11,12 @@
 </header>
 <!-- end base masthead -->
 <div class="section --banner +bgimg +middle ta--c">
-  <h2 class="banner__title p--y-5@xs">{ <i>Example Hero</i> }</h2>
+  <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>
 
 
 <!-- Fixed background  masthead -->
-<section class="section m--t-1@xs m--t-2@lg k_bg-light">
+<section class="section k_bg-light">
   <header class="k_section__header">Fixed Background Example</header>
 </section>
 
@@ -29,12 +29,12 @@
 </header>
 <!-- end base masthead -->
 <div class="section --banner +fixed +bgimg +middle ta--c">
-  <h2 class="banner__title p--y-5@xs">{ <i>Example Hero</i> }</h2>
+  <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>
 
 
 <!-- Image background overlay masthead -->
-<section class="section m--t-1@xs m--t-2@lg k_bg-light">
+<section class="section k_bg-light">
   <header class="k_section__header">Image Background Overlay</header>
 </section>
 
@@ -47,12 +47,12 @@
 </header>
 <!-- end base masthead -->
 <div class="section --banner +bgimg +middle ta--c">
-  <h2 class="banner__title p--y-5@xs">{ <i>Example Hero</i> }</h2>
+  <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>
 
 
 <!-- Fixed image background overlay masthead -->
-<section class="section m--t-1@xs m--t-2@lg k_bg-light">
+<section class="section k_bg-light">
   <header class="k_section__header">Overlay Fixed Background</header>
 </section>
 
@@ -65,12 +65,12 @@
 </header>
 <!-- end base masthead -->
 <div class="section --banner +bgimg +fixed +middle ta--c">
-  <h2 class="banner__title p--y-5@xs">{ <i>Example Hero</i> }</h2>
+  <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>
 
 
 <!-- masthead with border-bottom nav -->
-<section class="section m--t-1@xs m--t-2@lg k_bg-light">
+<section class="section k_bg-light">
   <header class="k_section__header">Masthead, Bottom-Bordered Selection</header>
 </section>
 
@@ -82,5 +82,5 @@
 </header>
 <!-- end border-bottom masthead -->
 <div class="section --banner +bgimg +large +middle ta--c">
-  <h2 class="banner__title p--y-5@xs">{ <i>Example Hero</i> }</h2>
+  <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>
