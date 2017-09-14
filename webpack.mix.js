@@ -12,8 +12,9 @@ let mix = require('laravel-mix');
  */
 
 mix.js('docs/main.js', 'dist/scripts')
-   .sass('docs/main.scss', 'dist/styles')
-   .copy('src/fonts/*', 'dist/fonts');
+  .sass('docs/main.scss', 'dist/styles')
+  .copy('src/fonts/*', 'dist/fonts')
+  .options({ processCssUrls: false });
 
 mix.browserSync({
   proxy: 'https://kernl-ui.dev/',
