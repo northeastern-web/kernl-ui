@@ -48,16 +48,16 @@
     <div class="col --12@xs pt--2@xs">
       <nav class="nav nav--tabbed">
         <ul class="nav__list">
-          <li class="nav__item nav-item">
+          <li class="nav__item">
             <a class="nav__link active" data-toggle="tab" href="#tab_1">Tab 1</a>
           </li>
-          <li class="nav__item nav-item">
+          <li class="nav__item">
             <a class="nav__link" data-toggle="tab" href="#tab_2">Tab 2</a>
           </li>
-          <li class="nav__item nav-item">
+          <li class="nav__item">
             <a class="nav__link" data-toggle="tab" href="#tab_3">Tab 3</a>
           </li>
-          <li class="nav__item nav-item nav__item--haschildren">
+          <li class="nav__item nav__item--haschildren">
             <a class="nav__link" data-toggle="tab" href="#tab_4">Tab 4 Parent</a>
             <ul class="nav__child-list">
               <li class="nav__child-item">
@@ -113,16 +113,16 @@
     <div class="col --12@xs pt--2@xs">
       <nav class="nav nav--tabbed nav--tabbed--border">
         <ul class="nav__list">
-          <li class="nav__item nav-item">
+          <li class="nav__item">
             <a class="nav__link active" data-toggle="tab" href="#tab_10">Tab 1</a>
           </li>
-          <li class="nav__item nav-item">
+          <li class="nav__item">
             <a class="nav__link" data-toggle="tab" href="#tab_20">Tab 2</a>
           </li>
-          <li class="nav__item nav-item">
+          <li class="nav__item">
             <a class="nav__link" data-toggle="tab" href="#tab_30">Tab 3</a>
           </li>
-          <li class="nav__item nav-item nav__item--haschildren">
+          <li class="nav__item nav__item--haschildren">
             <a class="nav__link" data-toggle="tab" href="#tab_40">Tab 4 Parent</a>
             <ul class="nav__child-list">
               <li class="nav__child-item">

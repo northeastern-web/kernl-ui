@@ -70,18 +70,14 @@ $('.menu-item-has-children > a')
 
 
 //
-// Tabbed Navigation
-$('.nav--tabbed .nav__item a').on('shown.bs.tab', function (e) {
-  $(e.relatedTarget).removeClass('active');
+// Tabbed Navigation, nested
+$('.nav__link').on('shown.bs.tab', function(e) {
+  $(e.relatedTarget).removeClass('active')
+  $('.nav__item--haschildren a').removeClass('child--active')
 });
 
-$('.nav--tabbed .nav__link').on('click touch', function (e) {
-  var $this = $(this);
-  if ($this.siblings().hasClass('nav__child-list')) {
-    // console.log('click');
-    $($this.siblings().find('.active').removeClass('active').attr('aria-expanded', false));
-    $('.tab-pane').parent().siblings().find('.active').removeClass('active').attr('aria-expanded', false);
-  }
+$('.nav__child-link').on('click touch', function(e) {
+   $(this).parent().parent().prev('a').addClass('child--active')
 });
 
 

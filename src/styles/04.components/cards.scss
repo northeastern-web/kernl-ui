@@ -155,12 +155,12 @@
 
 //
 // Dark
-.card--dark { @include k_card_variant(#fff, $component-dark); }
+.\--dark { @include k_card_variant(#fff, $component-dark); }
 
 
 //
 // Outline card with white bg and dark text
-.card--outline {
+.\--outline {
   @extend %component-outline;
   background-color: #fff !important;
   box-shadow: none;
@@ -169,7 +169,7 @@
 
 //
 // Position card bottom-left
-.card--bottom {
+.\--bottom {
   min-height: $card_height_xs;
 
   .__body {
@@ -185,7 +185,7 @@
 
 //
 // Overlay's .__graphic
-.card--overlay {
+.\--overlay {
   color: #fff;
   min-height: $card_height_sm;
 
@@ -229,7 +229,7 @@
     width: auto; height: 100%;
   }
 
-  &.card--middle {
+  &.\--middle {
     .__body {
       height: auto;
       top: 50%;
@@ -237,7 +237,7 @@
     }
   }
 
-  &.card--bottom {
+  &.\--bottom {
     .__body {
       height: auto; width: auto;
       padding-bottom: 1rem;
@@ -245,7 +245,7 @@
     }
   }
 
-  &:not(.card--middle) {
+  &:not(.\--middle) {
     .__header ~ .__body { margin-top: 2.5rem; }
   }
 
@@ -285,7 +285,7 @@
   }
 
   .card.\--tile,
-  .card.\--tile.card--overlay {
+  .card.\--tile.\--overlay {
     height: 250px;
     min-height: 0;
   }
@@ -313,13 +313,13 @@
   .\--9\@lg,
   .\--10\@lg,
   .\--11\@lg {
-    .card:not(.card--overlay):not(.card--scroll):not(.card--middle) {
+    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
       @include k_card_horizontal($width_graphic: 50%, $width_text: 50%);
     }
   }
 
   .card.\--tile,
-  .card.\--tile.card--overlay {
+  .card.\--tile.\--overlay {
     height: 200px !important;
   }
 }
@@ -336,7 +336,7 @@
   .\--9\@lg,
   .\--10\@lg,
   .\--11\@lg {
-    .card:not(.card--overlay):not(.card--scroll):not(.card--middle) {
+    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
       @include k_card_horizontal($width_graphic: 66.6%, $width_text: 33.3%);
     }
   }
@@ -346,14 +346,14 @@
   .\--6\@lg,
   .\--7\@lg,
   .\--8\@lg {
-    .card:not(.card--overlay):not(.card--scroll):not(.card--middle) {
+    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
       @include k_card_horizontal($width_graphic: 50%, $width_text: 50%);
     }
   }
 
   .\--3\@lg,
   .\--4\@lg {
-    .card:not(.card--overlay):not(.card--scroll):not(.card--middle) {
+    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
       @include k_card_vertical();
     }
   }
@@ -385,7 +385,7 @@
   .\--9\@lg,
   .\--10\@lg,
   .\--11\@lg {
-    .card:not(.card--overlay):not(.card--scroll):not(.card--middle) {
+    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
       @include k_card_horizontal($width_graphic: 56.25%, $width_text: 43.75%);
     }
 
@@ -400,7 +400,7 @@
 
 //
 // Scrolling within card
-.card--scroll {
+.\--scroll {
   height: $card_height_sm;
 
   &:after { display: none; } // kill box-shadow
@@ -413,12 +413,12 @@
 
 //
 // Extend card past fixed height
-.card--extend { height: auto !important; }
+.\--extend { height: auto !important; }
 
 
 //
 // Middle
-.card--middle {
+.\--middle {
   text-align: center;
   min-height: $card_height_xs;
 
@@ -484,7 +484,7 @@
     }
   }
 
-  &.card--overlay {
+  &.\--overlay {
     .list-group {
       background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 70%);
       color: #fff;
@@ -498,7 +498,7 @@
     }
   }
 
-  &.card--bottom {
+  &.\--bottom {
     .__body {
       position: absolute !important;
     }

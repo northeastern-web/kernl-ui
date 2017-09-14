@@ -153,7 +153,10 @@
 
     &.active,
     &.active:hover,
-    &.active:active {
+    &.active:active,
+    &.child--active,
+    &.child--active:hover,
+    &.child--active:active {
       color: inherit;
       border-left: 3px solid $type-link;
       background: none;
@@ -185,6 +188,7 @@
           }
 
           &.active,
+          &.child--active,
           &:active {
             font-weight: 700;
             background: none;
@@ -216,7 +220,10 @@
 
     &.active,
     &.active:hover,
-    &.active:active {
+    &.active:active,
+    &.child--active,
+    &.child--active:hover,
+    &.child--active:active {
       border-bottom: 0 none;
       background: $type-link;
       color: #fff;

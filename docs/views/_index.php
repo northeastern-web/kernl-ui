@@ -17,11 +17,11 @@
     <div class="row">
       <?php foreach (getKernlFiles() as $file) : ?>
         <div class="col --12@xs --6@sm --3@md --2@xl">
-          <div class="card card--overlay card--middle card--sg-home">
-            <a class="card__link" href="/?part=<?= $file; ?>">
-              <div class="card__graphic"></div>
-              <div class="card__body">
-                <h4 class="card__title"><?= $file; ?></h4>
+          <div class="card --overlay --middle --sg-home">
+            <a class="__link" href="/?part=<?= $file; ?>">
+              <div class="__graphic"></div>
+              <div class="__body">
+                <h4 class="__title"><?= $file; ?></h4>
               </div>
             </a>
           </div>

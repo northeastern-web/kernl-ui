@@ -323,11 +323,11 @@
   background: $background;
   border-color: $background;
 
-  .card__body,
-  .card__footer,
+  .__body,
+  .__footer,
   .list-group__item { border-color: darken($background, 20%); }
 
-  &:not(.card--overlay):not(.card--bottom) {
+  &:not(.\--overlay):not(.\--bottom) {
     &:after {
       content: "";
       position: absolute;
@@ -342,21 +342,21 @@
       @include k_media_breakpoint_up(lg) { height: 5rem; }
     }
 
-    &.card--outline {
+    &.\--outline {
       &:after { background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 70%); }
     }
   }
 
-  .card__footer {
+  .__footer {
     background: $background;
     z-index: 11; // appear over gradient
   }
 
-  &.card--outline { color: $background; }
+  &.\--outline { color: $background; }
 
   @if $background != rgba(255, 255, 255, 1) {
-    .card__body,
-    .card__footer,
+    .__body,
+    .__footer,
     .list-group__item { border-color: rgba(255, 255, 255, .2); }
 
     &:hover { background: darken($background, 5%); }
@@ -370,13 +370,13 @@
 
 // set image and text side by side
 @mixin k_card_horizontal($background: rgba(255, 255, 255, 1), $width_graphic: 100%, $width_text: auto) {
-  .card__graphic {
+  .__graphic {
     width: $width_graphic;
     height: 100%;
     padding: 0;
   }
 
-  .card__graphic__img {
+  .__graphic__img {
     max-width: none;
     height: 100%;
     top: -10rem;
@@ -385,7 +385,7 @@
     right: -10rem;
   }
 
-  .card__body {
+  .__body {
     position: absolute;
     width: $width_text;
     left: $width_graphic;
@@ -398,29 +398,29 @@
     display: none;
   }
 
-  .card__graphic + .card__header {
+  .__graphic + .__header {
     width: $width_graphic;
   }
 
-  .card__footer {
+  .__footer {
     right: 0;
     left: $width_graphic;
     width: $width_text;
   }
 
-  .card__link { padding-bottom: 0; }
+  .__link { padding-bottom: 0; }
 }
 
 // reset card_horizontal back to stacked when necessary;
 // required for cases like .g-6@md.g-3@lg
 @mixin k_card_vertical() {
-  .card__graphic {
+  .__graphic {
     width: 100%;
     height: 0;
     padding: 56.25% 0 0;
   }
 
-  .card__graphic__img {
+  .__graphic__img {
     max-width: 110%;
     width: auto;
     height: auto;
@@ -430,7 +430,7 @@
     right: 0;
   }
 
-  .card__body {
+  .__body {
     position: relative;
     width: auto;
     left: auto;
@@ -438,26 +438,26 @@
     height: auto;
   }
 
-  .card__header,
-  .card__footer {
+  .__header,
+  .__footer {
     right: auto;
     left: auto;
     width: 100%;
   }
 
-  .card__header + .card__body { padding-top: 1rem; }
+  .__header + .__body { padding-top: 1rem; }
 }
 
 
 @mixin k_fill_width() {
-  .card__graphic__img {
+  .__graphic__img {
     width: 110%;
     height: auto;
   }
 }
 
 @mixin k_fill_height() {
-  .card__graphic__img {
+  .__graphic__img {
     width: auto;
     height: 100%;
   }
