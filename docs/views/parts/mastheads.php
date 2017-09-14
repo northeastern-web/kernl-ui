@@ -10,7 +10,7 @@
   <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
 <!-- end base masthead -->
-<div class="section --banner +bgimg +middle ta--c">
+<div class="section --banner --middle +bgimg ta--c">
   <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>
 
@@ -28,7 +28,7 @@
   <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
 <!-- end base masthead -->
-<div class="section --banner +fixed +bgimg +middle ta--c">
+<div class="section --banner --fixed --middle +bgimg ta--c">
   <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>
 
@@ -46,7 +46,7 @@
   <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
 <!-- end base masthead -->
-<div class="section --banner +bgimg +middle ta--c">
+<div class="section --banner --middle +bgimg ta--c">
   <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>
 
@@ -64,7 +64,7 @@
   <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
 <!-- end base masthead -->
-<div class="section --banner +bgimg +fixed +middle ta--c">
+<div class="section --banner --fixed --middle +bgimg ta--c">
   <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>
 
@@ -81,6 +81,6 @@
   <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
 <!-- end border-bottom masthead -->
-<div class="section --banner +bgimg +large +middle ta--c">
+<div class="section --banner +bgimg +large --middle ta--c">
   <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>

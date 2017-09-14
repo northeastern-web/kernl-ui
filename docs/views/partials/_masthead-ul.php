@@ -1,4 +1,4 @@
-<?php $url = "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+<?php $url = "{$_SERVER['REQUEST_URI']}";
  ?>
 <button class="masthead__toggler hidden--up@lg"><i data-feather="menu"></i></button>
 <nav class="masthead__drawer" role="navigation">
