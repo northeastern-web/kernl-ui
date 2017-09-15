@@ -23,17 +23,14 @@
     "npm": ">=2.1.5"
   },
   "devDependencies": {
-    "laravel-mix": "^1.4.3",
-    "lodash": "^4.17.4"
-  },
-  "dependencies": {
-    "bootstrap": "^4.0.0-beta",
     "browser-sync": "^2.18.13",
     "browser-sync-webpack-plugin": "^1.2.0",
-    "clipboard": "^1.7.1",
     "cross-env": "^5.0.5",
+    "laravel-mix": "^1.4.3"
+  },
+  "dependencies": {
     "feather-icons": "^3.2.2",
-    "jquery": "^3.1.1",
-    "popper.js": "^1.12.5"
+    "jquery": "^3.0.0",
+    "popper.js": "^1.12.3"
   }
 }
