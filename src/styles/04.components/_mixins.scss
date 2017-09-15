@@ -219,7 +219,7 @@
     }
   }
 
-  &.\+outline {
+  &.\--outline {
     color: $background;
     background-color: transparent;
     border-color: $background;
@@ -284,7 +284,7 @@
   font-size: $font-size;
   @include k_border_radius($border-radius);
 
-  .btn__icon {
+  .__icon {
     height: $font-size;
     width: $font-size;
 
@@ -293,15 +293,15 @@
       width: $font-size * 1.25;
     }
 
-    &.\+left {
+    &.\--left {
       margin-right: round($font-size / 2);
     }
 
-    &.\+right {
+    &.\--right {
       margin-left: round($font-size / 2);
     }
 
-    &.\+large {
+    &.\--large {
       height: $font-size * 2;
       width: $font-size * 2;
       margin: ($font-size / 2) 0;
@@ -326,7 +326,7 @@
 
   .__body,
   .__footer,
-  .list-group__item { border-color: darken($background, 20%); }
+  .list-group .__item { border-color: darken($background, 20%); }
 
   &:not(.\--overlay):not(.\--bottom) {
     &:after {
@@ -513,4 +513,62 @@
   }
   .close { color: $color; }
   .modal-backdrop { background-color: $color; }
+}
+
+
+//
+// Forms
+@mixin _form-control-validation($color) {
+  // Color the label and help text
+  .form__control--feedback,
+  .form__control--label,
+  .col-form-label,
+  .form-check-label,
+  .custom-control {
+    color: $color;
+  }
+
+  .form__control {
+    border-color: $color;
+
+    &:focus {
+      @include k_box-shadow();
+    }
+  }
+
+  .input-group-addon {
+    color: $color;
+    border-color: $color;
+    background-color: lighten($color, 40%);
+  }
+}
+
+@mixin _form-control-focus() {
+  &:focus {
+    color: $input-color-focus;
+    background-color: $input-bg-focus;
+    border-color: $input-border-focus;
+    outline: none;
+    @include k_box-shadow($input-box-shadow-focus);
+  }
+}
+
+@mixin _input-size($parent, $input-height, $padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  #{$parent} {
+    height: $input-height;
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+    @include _border-radius($border-radius);
+  }
+
+  select#{$parent} {
+    height: $input-height;
+    line-height: $input-height;
+  }
+
+  textarea#{$parent},
+  select[multiple]#{$parent} {
+    height: auto;
+  }
 }

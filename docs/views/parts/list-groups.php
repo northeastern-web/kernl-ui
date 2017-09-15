@@ -139,10 +139,10 @@
   </div>
 </section>
 <section class="k_section k_bg-dark">
-  <header class="k_section__header">Striped On Dark</header>
+  <header class="k_section__header">Dark Striped On Dark</header>
   <div class="row">
     <div class="col --12@xs --3@md">
-      <div class="list-group --striped --sm">
+      <div class="list-group --dark --striped --sm">
         <div class="list-group__item">Lorem ipsum dolor sit amet do eiusmod</div>
         <div class="list-group__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
         <div class="list-group__item">Maecenas faucibus mollis interdum</div>
@@ -152,7 +152,7 @@
       </div>
     </div>
     <div class="col --12@xs --4@md">
-      <div class="list-group --striped">
+      <div class="list-group --dark --striped">
         <div class="list-group__item">Lorem ipsum dolor sit amet do eiusmod</div>
         <div class="list-group__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
         <div class="list-group__item">Maecenas faucibus mollis interdum</div>
@@ -162,7 +162,7 @@
       </div>
     </div>
     <div class="col --12@xs --5@md">
-      <div class="list-group --striped --lg">
+      <div class="list-group --dark --striped --lg">
         <div class="list-group__item">Lorem ipsum dolor sit amet do eiusmod</div>
         <div class="list-group__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
         <div class="list-group__item">Maecenas faucibus mollis interdum</div>

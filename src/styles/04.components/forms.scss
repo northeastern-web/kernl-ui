@@ -1,0 +1,490 @@
+$spacer: 1rem;
+$border-width: 1px;
+$border-radius: .1rem;
+$border-radius-sm: 0;
+$border-radius-lg: .2rem;
+
+$input-padding-x:                .75rem !default;
+$input-padding-y:                .5rem !default;
+$input-line-height:              1.25 !default;
+
+$input-bg:                       #fff !default;
+$input-bg-disabled:              $gray-300 !default;
+
+$input-color:                    $gray-600; //$gray !default;
+$input-border-color:             rgba(0,0,0,.15) !default;
+$input-btn-border-width:         $border-width !default; // For form controls and buttons
+$input-box-shadow:               inset 0 1px 1px rgba(0,0,0,.075) !default;
+
+$input-border-radius:            $border-radius !default;
+$input-border-radius-lg:         $border-radius-lg !default;
+$input-border-radius-sm:         $border-radius-sm !default;
+
+$input-bg-focus:                 $input-bg !default;
+$input-border-focus:             #66afe9 !default;
+$input-box-shadow-focus:         $input-box-shadow, 0 0 8px rgba($input-border-focus,.6) !default;
+$input-color-focus:              $input-color !default;
+
+$input-color-placeholder:        $gray-300 !default;
+
+$input-padding-x-sm:             .5rem !default;
+$input-padding-y-sm:             .25rem !default;
+
+$input-padding-x-lg:             1.5rem !default;
+$input-padding-y-lg:             .75rem !default;
+
+$input-height:                   ((1rem * $input-line-height) + ($input-padding-y * 2)) !default;
+$input-height-lg:                ((1.5rem * $input-line-height) + ($input-padding-y-lg * 2)) !default;
+$input-height-sm:                (($font-sm * $input-line-height) + ($input-padding-y-sm * 2)) !default;
+
+$form-group-margin-bottom:       $spacer; //$spacer-y !default;
+
+$input-group-addon-bg:           $gray-300; // $gray-lighter !default;
+$input-group-addon-border-color: $input-border-color !default;
+
+$cursor-disabled:                not-allowed !default;
+
+$custom-control-gutter:   1.5rem !default;
+$custom-control-spacer-x: 1rem !default;
+$custom-control-spacer-y: .25rem !default;
+
+$custom-control-indicator-size:       1rem !default;
+$custom-control-indicator-bg:         $gray-200 !default;
+$custom-control-indicator-bg-size:    50% 50% !default;
+$custom-control-indicator-box-shadow: inset 0 .25rem .25rem rgba(0,0,0,.1) !default;
+
+$custom-control-disabled-cursor:             $cursor-disabled !default;
+$custom-control-disabled-indicator-bg:       $gray-100 !default;
+$custom-control-disabled-description-color:  #767676 !default;
+
+$custom-control-checked-indicator-color:      #fff !default;
+$custom-control-checked-indicator-bg:         #0074d9 !default;
+$custom-control-checked-indicator-box-shadow: none !default;
+
+$custom-control-focus-indicator-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9 !default;
+
+$custom-control-active-indicator-color:      #fff !default;
+$custom-control-active-indicator-bg:         #84c6ff !default;
+$custom-control-active-indicator-box-shadow: none !default;
+
+$custom-checkbox-radius: $border-radius !default;
+$custom-checkbox-checked-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-checked-indicator-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$custom-checkbox-indeterminate-bg: #0074d9 !default;
+$custom-checkbox-indeterminate-indicator-color: $custom-control-checked-indicator-color !default;
+$custom-checkbox-indeterminate-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indeterminate-indicator-color}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-checkbox-indeterminate-box-shadow: none !default;
+
+$custom-radio-radius: 50% !default;
+$custom-radio-checked-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-checked-indicator-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$custom-select-padding-x:          .75rem  !default;
+$custom-select-padding-y:          .375rem !default;
+$custom-select-indicator-padding:  1rem !default; // Extra padding to account for the presence of the background-image based indicator
+$custom-select-color:          $input-color !default;
+$custom-select-disabled-color: $gray-400; //$gray-light !default;
+$custom-select-bg:            #fff !default;
+$custom-select-disabled-bg:   $gray-300; // $gray-lighter !default;
+$custom-select-bg-size:       8px 10px !default; // In pixels because image dimensions
+$custom-select-indicator-color: #333 !default;
+$custom-select-indicator:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-select-border-width:  $input-btn-border-width !default;
+$custom-select-border-color:  $input-border-color !default;
+$custom-select-border-radius: $border-radius !default;
+
+$custom-select-focus-border-color: #51a7e8 !default;
+$custom-select-focus-box-shadow:   inset 0 1px 2px rgba(0, 0, 0, .075), 0 0 5px rgba($custom-select-focus-border-color, .5) !default;
+
+$custom-select-sm-padding-y: .2rem !default;
+$custom-select-sm-font-size: 75% !default;
+
+$custom-file-height:           2.5rem !default;
+$custom-file-width:            14rem !default;
+$custom-file-focus-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9 !default;
+
+$custom-file-padding-x:     .5rem !default;
+$custom-file-padding-y:     1rem !default;
+$custom-file-line-height:   1.5 !default;
+$custom-file-color:         #555 !default;
+$custom-file-bg:            #fff !default;
+$custom-file-border-width:  $border-width !default;
+$custom-file-border-color:  #ddd !default;
+$custom-file-border-radius: $border-radius !default;
+$custom-file-box-shadow:    inset 0 .2rem .4rem rgba(0,0,0,.05) !default;
+$custom-file-button-color:  $custom-file-color !default;
+$custom-file-button-bg:     #eee !default;
+$custom-file-text: (
+  placeholder: (
+    en: "Choose file..."
+  ),
+  button-label: (
+    en: "Browse"
+  )
+) !default;
+
+// Form validation icons
+$form-icon-success-color: $green !default;
+$form-icon-success: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$form-icon-success-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$form-icon-warning-color: $yellow !default;
+$form-icon-warning: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$form-icon-warning-color}' d='M4.4 5.324h-.8v-2.46h.8zm0 1.42h-.8V5.89h.8zM3.76.63L.04 7.075c-.115.2.016.425.26.426h7.397c.242 0 .372-.226.258-.426C6.726 4.924 5.47 2.79 4.253.63c-.113-.174-.39-.174-.494 0z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$form-icon-danger-color: $red !default;
+$form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$form-icon-danger-color}' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+
+//
+// Textual form controls
+//
+
+.form__control {
+  display: block;
+  width: 100%;
+  // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  // height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  font-size: 1rem;
+  line-height: $input-line-height;
+  color: $input-color;
+  background-color: $input-bg;
+  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
+  background-image: none;
+  background-clip: padding-box;
+  border: $input-btn-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+
+  @include k_box-shadow($input-box-shadow);
+  @include k_transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  @include _form-control-focus();
+
+  // Placeholder
+  &::placeholder {
+    color: $input-color-placeholder;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    background-color: $input-bg-disabled;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+
+  &:disabled {
+    cursor: $cursor-disabled;
+  }
+}
+
+select.form__control {
+  &:not([size]):not([multiple]) {
+    $select-border-width: ($border-width * 2);
+    height: calc(#{$input-height} + #{$select-border-width});
+  }
+
+  &:focus::-ms-value {
+    // Suppress the nested default white text on blue background highlight given to
+    // the selected option text when the (still closed) <select> receives focus
+    // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+    // match the appearance of the native widget.
+    // See https://github.com/twbs/bootstrap/issues/19398.
+    color: $input-color;
+    background-color: $input-bg;
+  }
+}
+
+// Make file inputs better match text inputs by forcing them to new lines.
+.form__control--file,
+.form__control--range {
+  display: block;
+}
+
+
+//
+// Labels
+//
+
+// For use with horizontal and inline forms, when you need the label text to
+// align with the form controls.
+.col-form-label {
+  padding-top: $input-padding-y;
+  padding-bottom: $input-padding-y;
+  margin-bottom: 0; // Override the `<label>` default
+}
+
+.col-form-label-lg {
+  padding-top: $input-padding-y-lg;
+  padding-bottom: $input-padding-y-lg;
+  font-size: 1.5rem;
+}
+
+.col-form-label-sm {
+  padding-top: $input-padding-y-sm;
+  padding-bottom: $input-padding-y-sm;
+  font-size: $font-sm;
+}
+
+
+//
+// Legends
+//
+
+// For use with horizontal and inline forms, when you need the legend text to
+// be the same size as regular labels, and to align with the form controls.
+.col-form-legend {
+  padding-top: $input-padding-y;
+  padding-bottom: $input-padding-y;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+
+// Static form control text
+//
+// Apply class to an element to make any string of text align with labels in a
+// horizontal form layout.
+
+.form__control--static {
+  padding-top: $input-padding-y;
+  padding-bottom: $input-padding-y;
+  line-height: $input-line-height;
+  border: solid transparent;
+  border-width: 1px 0;
+
+  &.form__control--sm,
+  &.form__control--lg {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+// Form control sizing
+//
+// Build on `.form__control` with modifier classes to decrease or increase the
+// height and font-size of form controls.
+//
+// The `.form__group-* form-control` variations are sadly duplicated to avoid the
+// issue documented in https://github.com/twbs/bootstrap/issues/15074.
+
+.form__control--sm {
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  font-size: $font-sm;
+  @include k_border-radius($input-border-radius-sm);
+}
+
+select.form__control--sm {
+  &:not([size]):not([multiple]) {
+    height: $input-height-sm;
+  }
+}
+
+.form__control--lg {
+  padding: $input-padding-y-lg $input-padding-x-lg;
+  font-size: 1.5rem;
+  @include k_border-radius($input-border-radius-lg);
+}
+
+select.form__control--lg {
+  &:not([size]):not([multiple]) {
+    height: $input-height-lg;
+  }
+}
+
+
+// Form groups
+//
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+
+.form__group {
+  margin-bottom: $form-group-margin-bottom;
+}
+
+.form-text {
+  display: block;
+  margin-top: ($spacer * .25);
+}
+
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+.form__check {
+  position: relative;
+  display: block;
+  margin-bottom: ($spacer * .75);
+
+  // Move up sibling radios or checkboxes for tighter spacing
+  + .form__check {
+    margin-top: -.25rem;
+  }
+
+  &.disabled {
+    .form__check__label {
+      color: $gray-400;
+      cursor: $cursor-disabled;
+    }
+  }
+}
+
+.form__check__label {
+  padding-left: 1.25rem;
+  margin-bottom: 0; // Override default `<label>` bottom margin
+  cursor: pointer;
+}
+
+.form__check__input {
+  position: absolute;
+  margin-top: .25rem;
+  margin-left: -1.25rem;
+
+  &:only-child {
+    position: static;
+  }
+}
+
+// Radios and checkboxes on same line
+.form__check--inline {
+  display: inline-block;
+
+  .form__check__label {
+    vertical-align: middle;
+  }
+
+  + .form__check--inline {
+    margin-left: .75rem;
+  }
+}
+
+
+// Form control feedback states
+//
+// Apply contextual and semantic states to individual form controls.
+
+.form__control--feedback {
+  margin-top: ($spacer * .25);
+}
+
+.form__control--success,
+.form__control--warning,
+.form__control--danger {
+  padding-right: ($input-padding-x * 3);
+  background-repeat: no-repeat;
+  background-position: center right ($input-height / 4);
+  background-size: ($input-height / 2) ($input-height / 2);
+}
+
+// Form validation states
+.has-success {
+  @include _form-control-validation($green);
+
+  .form__control--success {
+    background-image: $form-icon-success;
+  }
+}
+
+.has-warning {
+  @include _form-control-validation($yellow);
+
+  .form__control--warning {
+    background-image: $form-icon-warning;
+  }
+}
+
+.has-danger {
+  @include _form-control-validation($red);
+
+  .form__control--danger {
+    background-image: $form-icon-danger;
+  }
+}
+
+.form-inline {
+  // Kick in the inline
+  @include k_media-breakpoint-up(sm) {
+    label {
+      margin-bottom: 0;
+    }
+
+    .form__group {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+
+    .form__control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+    }
+
+    .form__control--static {
+      display: inline-block;
+    }
+
+    .input-group {
+      width: auto;
+      display: inline-table;
+      vertical-align: middle;
+
+      .input-group-addon,
+      .input-group-btn,
+      .form__control {
+        width: auto;
+      }
+    }
+
+    .input-group > .form__control {
+      width: 100%;
+    }
+
+    .form__control--label {
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    .form__check {
+      display: inline-block;
+      vertical-align: middle;
+      width: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .form__check__label {
+      padding-left: 0;
+    }
+    .form__check__input {
+      position: relative;
+      margin-left: 0;
+    }
+
+    .custom-control {
+      padding-left: 0;
+      vertical-align: middle;
+    }
+    .custom-control-indicator {
+      position: static;
+      display: inline-block;
+      vertical-align: text-bottom;
+    }
+
+    .has-feedback .form__control--feedback {
+      top: 0;
+    }
+  }
+}

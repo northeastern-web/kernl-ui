@@ -143,7 +143,7 @@
   .__footer__link {
     @extend .btn;
     @extend .btn.\--dark;
-    @extend .btn.\+block;
+    @extend .btn.\--block;
     margin-bottom: 0;
     height: 2.5rem;
     border: none;

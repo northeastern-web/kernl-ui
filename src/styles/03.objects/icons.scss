@@ -13,13 +13,13 @@
     position: absolute;
   }
 
-  &.\+thin {
+  &.\--thin {
     i, svg {
       stroke-width: 1;
     }
   }
 
-  &.\+large {
+  &.\--large {
     i, svg {
       width: 110%;
       height: 110%;

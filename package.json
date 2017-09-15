@@ -31,6 +31,6 @@
   "dependencies": {
     "feather-icons": "^3.2.2",
     "jquery": "^3.0.0",
-    "popper.js": "^1.12.3"
+    "popper.js": "^1.12.5"
   }
 }
