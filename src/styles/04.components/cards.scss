@@ -222,7 +222,8 @@
     .__body {
       position: absolute;
       top: 0; left: 0;
-      width: auto; height: 100%;
+      // width: auto;
+      height: 100%;
     }
 
     &.\--middle {
@@ -230,6 +231,7 @@
         height: auto;
         top: 50%;
         transform: translateY(-50%);
+        border-top: 0 none;
       }
     }
 
