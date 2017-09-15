@@ -1,167 +1,172 @@
-<section class="k_section">
+<section class="section">
   <header class="k_section__header">Base</header>
-  <div class="g-contain p--y-2@xs">
-    <div class="g-row">
-      <div class="g-12@xs g-8@md offset-2@md g-6@lg offset-3@lg">
-        <div class="media media--xs">
-          <a class="media__block-link" href="#">
-            <div class="media__image__wrapper">
-              <img class="media__image" src="http://www.josephklevenefineartltd.com/AndyWarholZebra.jpg" alt="">
-            </div>
-            <div class="media__body">
-              <h4 class="media__title">This is a XS media object.</h4>
-              <p class="media__copy">"C" is for "cookie", nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur.</p>
-            </div>
-          </a>
-        </div>
-        <div class="media media--sm">
-          <a class="media__block-link" href="#">
-            <div class="media__image__wrapper">
-              <img class="media__image" src="https://learnodo-newtonic.com/wp-content/uploads/2013/07/Marilyn-Diptych-Close-Up.jpg" alt="">
-            </div>
-            <div class="media__body">
-              <h4 class="media__title">This is a SM media object.</h4>
-              <p class="media__copy">"C" is for "cookie", nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur.</p>
-            </div>
-          </a>
-        </div>
-        <div class="media">
-          <a class="media__block-link" href="#">
-            <div class="media__image__wrapper">
-              <img class="media__image" src="https://learnodo-newtonic.com/wp-content/uploads/2014/09/Mao-1973-Andy-Warhol.jpg" alt="">
-            </div>
-            <div class="media__body">
-              <h4 class="media__title">This is a basic media object.</h4>
-              <p class="media__copy">"C" is for "cookie", nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur.</p>
-            </div>
-          </a>
-        </div>
-        <div class="media media--lg">
-          <a class="media__block-link" href="#">
-            <div class="media__image__wrapper">
-              <img class="media__image" src="https://theartjunkie.files.wordpress.com/2012/08/soup3.jpg?w=1112" alt="">
-            </div>
-            <div class="media__body">
-              <h4 class="media__title">This is a LG media object.</h4>
-              <p class="media__copy">"C" is for "cookie", nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur.</p>
-            </div>
-          </a>
-        </div>
+  <div class="row">
+    <div class="col --12@xs --6@lg">
+      <p class="text-style-block">Default: thumb on the left</p>
+      <div class="media --xs">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">This is a XS media object.</h4>
+            <p class="__copy">Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+          </div>
+        </a>
+      </div>
+      <div class="media --sm">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">This is a SM media object.</h4>
+            <p class="__copy">Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum.</p>
+          </div>
+        </a>
+      </div>
+      <div class="media">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">This is a basic media object.</h4>
+            <p class="__copy">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          </div>
+        </a>
+      </div>
+      <div class="media --lg">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">This is a LG media object.</h4>
+            <p class="__copy">Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col --12@xs --6@lg">
+      <p class="text-style-block">Variation: thumb on the right</p>
+      <div class="media --xs --right">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">This is a XS media object.</h4>
+            <p class="__copy">Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+          </div>
+        </a>
+      </div>
+      <div class="media --sm --right">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">This is a SM media object.</h4>
+            <p class="__copy">Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum.</p>
+          </div>
+        </a>
+      </div>
+      <div class="media --right">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">This is a basic media object.</h4>
+            <p class="__copy">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          </div>
+        </a>
+      </div>
+      <div class="media --lg --right">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">This is a LG media object.</h4>
+            <p class="__copy">Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-  <!-- media object list -->
-<section class="k_section">
-  <header class="k_section__header">Media Object List (Default: circular thumb)</header>
-  <div class="g-contain p--y-2@xs">
-    <div class="g-row">
-      <div class="g-12@xs g-8@md offset-2@md g-6@lg offset-3@lg">
-        <ul class="media__list">
-          <li class="media">
-            <a class="media__block-link" href="#">
-              <div class="media__image__wrapper">
-                <img class="media__image" src="http://content.wfmynews2.com/photo/2016/11/01/Cookie%20Monster%20USAT_1478046170218_6692962_ver1.0.JPG" alt="">
-              </div>
-              <div class="media__body">
-                <h4 class="media__title">This: media object list item.</h4>
-              <p class="media__copy">"C" is for "cookie", nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nomnomnom...</p>
-              </div>
-            </a>
-          </li>
-          <li class="media">
-            <a class="media__block-link" href="#">
-              <div class="media__image__wrapper">
-                <img class="media__image" src="https://s-media-cache-ak0.pinimg.com/236x/c3/ca/67/c3ca67481cd8019f8aa863d83300f2a5.jpg" alt="">
-              </div>
-              <div class="media__body">
-                <h4 class="media__title">Another media object list item.</h4>
-                <p class="media__copy">Animal etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum eat drums!</p>
-              </div>
-            </a>
-          </li>
-          <li class="media">
-            <a class="media__block-link" href="#">
-              <div class="media__image__wrapper">
-                <img class="media__image" src="//vignette3.wikia.nocookie.net/muppet/images/3/3c/CT-p0001-ST.jpg/revision/latest?cb=20060205225316" alt="">
-              </div>
-              <div class="media__body">
-                <h4 class="media__title">Three media object items! &mdash; ah-ah-aahh!</h4>
-                <p class="media__copy">One praesent commodo cursus magna, two vel scelerisque nisl consectetur et, three maecenas sed diam eget risus varius blandit sit amet non magna, ah-ah-aahh!</p>
-              </div>
-            </a>
-          </li>
-          <li class="media">
-            <a class="media__block-link" href="#">
-              <div class="media__image__wrapper">
-                <img class="media__image" src="https://muppetmindset.files.wordpress.com/2009/11/849d4-oscarandslimey.jpg" alt="">
-              </div>
-              <div class="media__body">
-                <h4 class="media__title">I love trash.</h4>
-                <p class="media__copy">Smelly morbi leo risus, porta ac consectetur ac stink, vestibulum at eros. Moldy aenean lacinia bibendum nulla sed consectetur.</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
+<!-- media object list -->
+<section class="section">
+  <header class="k_section__header">Media Object List</header>
+  <div class="row">
+    <div class="col --12@xs --6@lg">
+      <p class="text-style-block">Default: circular thumb</p>
+      <ul class="media__list">
+        <li class="media">
+          <a class="__link" href="#">
+            <div class="__graphic"></div>
+            <div class="__body">
+              <h4 class="__title">This: media object list item.</h4>
+            <p class="__copy">Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+            </div>
+          </a>
+        </li>
+        <li class="media">
+          <a class="__link" href="#">
+            <div class="__graphic"></div>
+            <div class="__body">
+              <h4 class="__title">Another media object list item.</h4>
+              <p class="__copy">Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+            </div>
+          </a>
+        </li>
+        <li class="media">
+          <a class="__link" href="#">
+            <div class="__graphic"></div>
+            <div class="__body">
+              <h4 class="__title">Three shall be the number thou shalt count.</h4>
+              <p class="__copy">Four shalt thou not count, nor either count thou two, excepting that thou then proceed to three. Five is right out!</p>
+            </div>
+          </a>
+        </li>
+        <li class="media">
+          <a class="__link" href="#">
+            <div class="__graphic"></div>
+            <div class="__body">
+              <h4 class="__title">Nibh Ornare Parturient Amet</h4>
+              <p class="__copy">Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
+            </div>
+          </a>
+        </li>
+      </ul>
     </div>
-  </div>
-</section>
-
-  <!-- media object list -->
-<section class="k_section">
-  <header class="k_section__header">Media Object List (Variation: rectangular thumb)</header>
-  <div class="g-contain p--y-2@xs">
-    <div class="g-row">
-      <div class="g-12@xs g-8@md offset-2@md g-6@lg offset-3@lg">
-        <ul class="media__list media__list--rect">
-          <li class="media">
-            <a class="media__block-link" href="#">
-              <div class="media__image__wrapper">
-                <img class="media__image" src="http://content.wfmynews2.com/photo/2016/11/01/Cookie%20Monster%20USAT_1478046170218_6692962_ver1.0.JPG" alt="">
-              </div>
-              <div class="media__body">
-                <h4 class="media__title">This: media object list item.</h4>
-              <p class="media__copy">"C" is for "cookie", nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nomnomnom...</p>
-              </div>
-            </a>
-          </li>
-          <li class="media">
-            <a class="media__block-link" href="#">
-              <div class="media__image__wrapper">
-                <img class="media__image" src="https://s-media-cache-ak0.pinimg.com/236x/c3/ca/67/c3ca67481cd8019f8aa863d83300f2a5.jpg" alt="">
-              </div>
-              <div class="media__body">
-                <h4 class="media__title">Another media object list item.</h4>
-                <p class="media__copy">Animal etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum eat drums!</p>
-              </div>
-            </a>
-          </li>
-          <li class="media">
-            <a class="media__block-link" href="#">
-              <div class="media__image__wrapper">
-                <img class="media__image" src="//vignette3.wikia.nocookie.net/muppet/images/3/3c/CT-p0001-ST.jpg/revision/latest?cb=20060205225316" alt="">
-              </div>
-              <div class="media__body">
-                <h4 class="media__title">Three media object items! &mdash; ah-ah-aahh!</h4>
-                <p class="media__copy">One praesent commodo cursus magna, two vel scelerisque nisl consectetur et, three maecenas sed diam eget risus varius blandit sit amet non magna, ah-ah-aahh!</p>
-              </div>
-            </a>
-          </li>
-          <li class="media">
-            <a class="media__block-link" href="#">
-              <div class="media__image__wrapper">
-                <img class="media__image" src="https://muppetmindset.files.wordpress.com/2009/11/849d4-oscarandslimey.jpg" alt="">
-              </div>
-              <div class="media__body">
-                <h4 class="media__title">I love trash.</h4>
-                <p class="media__copy">Smelly morbi leo risus, porta ac consectetur ac stink, vestibulum at eros. Moldy aenean lacinia bibendum nulla sed consectetur.</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div class="col --12@xs --6@lg">
+      <p class="text-style-block">Variation: rectangular thumb</p>
+      <ul class="media__list +rect">
+        <li class="media">
+          <a class="__link" href="#">
+            <div class="__graphic"></div>
+            <div class="__body">
+              <h4 class="__title">This: media object list item.</h4>
+            <p class="__copy">Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper.</p>
+            </div>
+          </a>
+        </li>
+        <li class="media">
+          <a class="__link" href="#">
+            <div class="__graphic"></div>
+            <div class="__body">
+              <h4 class="__title">Another media object list item.</h4>
+              <p class="__copy">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur.</p>
+            </div>
+          </a>
+        </li>
+        <li class="media">
+          <a class="__link" href="#">
+            <div class="__graphic"></div>
+            <div class="__body">
+              <h4 class="__title">Three shall be the number thou shalt count.</h4>
+              <p class="__copy">Four shalt thou not count, nor either count thou two, excepting that thou then proceed to three. Five is right out!</p>
+            </div>
+          </a>
+        </li>
+        <li class="media">
+          <a class="__link" href="#">
+            <div class="__graphic"></div>
+            <div class="__body">
+              <h4 class="__title">Vehicula Nullam Ipsum Justo</h4>
+              <p class="__copy">Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            </div>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

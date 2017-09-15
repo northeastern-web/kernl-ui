@@ -13,6 +13,7 @@
 // Component: Buttons
 // Component: Cards
 // Component: List Groups
+// Component: Media Objects
 // Component: Modals
 
 //
@@ -489,6 +490,16 @@
   font-size: $font-size;
 
   .list-group__item, li { padding: $padding-y $padding-x; }
+}
+
+
+// Media Objects
+@mixin _media_object_size($font-size: $font-sm, $font-size-title: 1rem, $img-size: 4rem) {
+  .__title { font-size: $font-size-title; }
+
+  .__copy { font-size: $font-size; }
+
+  .__graphic { @include size($img-size, $img-size); }
 }
 
 
