@@ -1,24 +1,46 @@
-window._ = require('lodash');
+import $ from 'jquery'
+import Alert from './bootstrap/alert'
+import Button from './bootstrap/button'
+import Carousel from './bootstrap/carousel'
+import Collapse from './bootstrap/collapse'
+import Dropdown from './bootstrap/dropdown'
+import Modal from './bootstrap/modal'
+import Popover from './bootstrap/popover'
+import Scrollspy from './bootstrap/scrollspy'
+import Tab from './bootstrap/tab'
+import Tooltip from './bootstrap/tooltip'
+import Util from './bootstrap/util'
 
-try {
-  window.$ = window.jQuery = require('jquery');
-} catch (e) {}
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0-alpha.6): index.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
-require('./bootstrap/alert.js');
-require('./bootstrap/button.js');
-require('./bootstrap/carousel.js');
-require('./bootstrap/collapse.js');
-require('./bootstrap/dropdown.js');
-require('./bootstrap/modal.js');
-require('./bootstrap/scrollspy.js');
-require('./bootstrap/tab.js');
-require('./bootstrap/util.js');
+(() => {
+  if (typeof jQuery === 'undefined') {
+    throw new Error('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.')
+  }
 
-require('feather-icons/dist/feather.min.js');
-var feather = require('feather-icons');
-feather.replace();
+  const version = $.fn.jquery.split(' ')[0].split('.')
+  const min = 3
+  const max = 4
+  if (version[0] < min || version[0] >= max) {
+    throw new Error('Bootstrap\'s JavaScript requires at least jQuery v3.0.0 but less than v4.0.0')
+  }
+})(jQuery)
 
-require('./components/accordions.js');
-require('./components/mastheads.js');
-require('./components/navs.js');
-require('./components/sharing.js');
+export {
+  Util,
+  Alert,
+  Button,
+  Carousel,
+  Collapse,
+  Dropdown,
+  Modal,
+  Popover,
+  Scrollspy,
+  Tab,
+  Tooltip
+}

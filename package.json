@@ -23,17 +23,17 @@
     "npm": ">=2.1.5"
   },
   "devDependencies": {
-    "jquery": "^3.1.1",
-    "laravel-mix": "^1.0",
-    "lodash": "^4.17.4",
-    "tether": "^1.4.0"
+    "laravel-mix": "^1.4.3",
+    "lodash": "^4.17.4"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-beta",
     "browser-sync": "^2.18.13",
     "browser-sync-webpack-plugin": "^1.2.0",
     "clipboard": "^1.7.1",
     "cross-env": "^5.0.5",
     "feather-icons": "^3.2.2",
-    "highlight.js": "^9.12.0"
+    "jquery": "^3.1.1",
+    "popper.js": "^1.12.5"
   }
 }

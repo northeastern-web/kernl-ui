@@ -1,8 +1,4 @@
 {
     "/dist/scripts/main.js": "/dist/scripts/main.js",
-    "/dist/styles/main.css": "/dist/styles/main.css",
-    "/dist/fonts/ionicons.eot": "/dist/fonts/ionicons.eot",
-    "/dist/fonts/ionicons.svg": "/dist/fonts/ionicons.svg",
-    "/dist/fonts/ionicons.ttf": "/dist/fonts/ionicons.ttf",
-    "/dist/fonts/ionicons.woff": "/dist/fonts/ionicons.woff"
+    "/dist/styles/main.css": "/dist/styles/main.css"
 }
