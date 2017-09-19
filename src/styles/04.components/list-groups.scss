@@ -8,6 +8,8 @@
   @include k_list_group_variant($type-color);
   position: relative;
   margin-bottom: 1rem;
+  @include k_border-radius();
+
 
 
   //
@@ -15,32 +17,20 @@
   .__item {
     display: block;
     position: relative;
-    padding: $list-group-padding-y $list-group-padding-x;
-    border-width: 1px;
-    border-style: solid;
-    border-bottom: 0 none;
+    padding: $list-group-padding-y 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.25);
     color: inherit;
 
     &:link:hover,
     &:link:active,
     &:link:focus {
       text-decoration: none;
-      background: rgba(0, 0, 0, 0.15);
-    }
-
-    a {
-      display: block;
-      color: $type-link;
-    }
-
-    &:hover,
-    &:active {
-      a { color: desaturate(darken($type-link, 5%), 20%); }
     }
 
     &:last-child() {
-      border-width: 1px;
-      border-style: solid;
+      border: 0 none;
     }
   }
 
@@ -48,44 +38,29 @@
   > a,
   > li { @extend .__item; }
 
-  > a {
-    color: $type-link;
-    transition: all 0.2s ease;
-
-    &:hover,
-    &:active {
-      background: rgba($type-link, 0.1) !important;
-      color: desaturate(darken($type-link, 5%), 20%);
-    }
-  }
+  a { transition: all 0.2s ease; }
 
   //
   // Modifiers
-  &.\--white { @include k_list_group_variant($type-color, #fff); }
+  &.\--white { @include k_list_group_variant($type-color, #fff, $type-link); }
 
-  &.\--dark {
-    @include k_list_group_variant(#fff, $type-color);
+  &.\--on-dark { @include k_list_group_variant(#fff, transparent, #fff); }
 
-    > div,
-    > li { 
-      a:hover,
-      &:hover a {
-        color: lighten($type-link, 20%) !important;
-      }
-    }
-  }
+  &.\--dark { @include k_list_group_variant(#fff, rgba($type-color, 0.5), #fff); }
 
   &.\--striped {
-    @include k_list_group_variant(#fff);
-    a { color: #fff; }
-    &.\--white {
-      @include k_list_group_variant($type-color, transparent, rgba(0, 0, 0, 0.1));
-      a { color: $type-link; }
+    @include k_list_group_variant($type-color, rgba(0, 0, 0, 0.02), $type-color, rgba(0, 0, 0, 0.05));
+
+    &.\--on-dark {
+      @include k_list_group_variant(#fff, rgba(255, 255, 255, 0.05), #fff, rgba(255, 255, 255, 0.1));
     }
   }
 
   //
   // Sizing
-  &.\--sm { @include k_list_group-size($list-group-padding-y/2, $list-group-padding-x/1.5, $font-xs) }
-  &.\--lg { @include k_list_group-size($list-group-padding-y, $list-group-padding-x, 1rem); }
+  @include k_media_breakpoint_up(md) {
+    &.\--sm { @include k_list_group-size($list-group-padding-y/1.25, $list-group-padding-x/1.125, $font-xs) }
+  }
+
+  &.\+shadow { @include k_box_shadow(); }
 }

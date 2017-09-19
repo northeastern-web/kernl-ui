@@ -53,7 +53,7 @@
       content: "";
       height: 100%;
       width: 100%;
-      background: rgba(0,0,0,.15);
+      background: rgba(0, 0, 0, 0.15);
       position: absolute;
       top: 0;
       left: 0;
@@ -87,8 +87,9 @@
   //
   // Titles with .__body
   .__title {
-    margin-bottom: 0.25rem;
-    @include k_get_type($type-title);
+    @include k_get_type($type-root);
+    font-weight: 900;
+    line-height: 1.25;
     @include k_font_smoothing();
   }
 
@@ -200,6 +201,10 @@
       position: absolute;
       top: 0; left: 0;
       padding: 0;
+
+      &:after {
+        background: rgba(0, 0, 0, 0.25);
+      }
     }
 
     .__graphic__img {
@@ -249,7 +254,7 @@
 
     &:hover {
       .__graphic {
-        &:after { background: rgba(0, 0, 0, 0.3); }
+        &:after { background: rgba(0, 0, 0, 0.35); }
       }
     }
   }
@@ -520,6 +525,22 @@
     .__body {
       padding-top: 0;
       padding-bottom: 2.25rem;
+    }
+  }
+
+  &.\+shade {
+    .__graphic:after,
+    &:hover .__graphic:after {
+      background: none;
+    }
+
+    .__body {
+      background: rgba(0, 0, 0, 0.25);
+      transition: background 0.2s ease;
+    }
+
+    &:hover {
+      .__body { background: rgba(0, 0, 0, 0.35); }
     }
   }
 }

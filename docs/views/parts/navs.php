@@ -45,7 +45,7 @@
 <section class="section k_bg-light">
   <header class="k_section__header">Tabbed Nav</header>
   <div class="row">
-    <div class="col --12@xs pt--2@xs">
+    <div class="col --12@xs">
       <nav class="nav --tabbed">
         <ul class="__list">
           <li class="__item">
