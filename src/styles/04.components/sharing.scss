@@ -8,7 +8,7 @@
   padding-left: 1px;
   display: inline-block;
   width: auto;
-  @include k_clearfix();
+  @include clearfix();
 
   li {
     margin: 0 -1px 0 0;

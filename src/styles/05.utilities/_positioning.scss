@@ -9,7 +9,7 @@
 
 /* Responsive floats */
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @include k_media_breakpoint-up($breakpoint) {
+  @include media_breakpoint-up($breakpoint) {
     .f--l\@#{$breakpoint} {
       float: left !important;
     }

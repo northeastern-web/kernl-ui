@@ -83,21 +83,21 @@ $list-group-padding-x:       1rem;
   padding: 0 1rem 1rem;
   max-width: 100%;
   text-align: center;
-  @include k_media-breakpoint-up(lg) {
+  @include media-breakpoint-up(lg) {
     padding: 1rem;
   }
 }
 
 // Component interior columns
 %component-column {
-  @include k_make-col(1, 2);
+  @include make-col(1, 2);
   flex: 1;
   padding-left: 1rem;
   padding-right: 1rem;
 
   &:first-child { text-align: left; }
   &:last-child { text-align: right; }
-  &:only-child { @include k_make-col(2, 2); text-align: left; }
+  &:only-child { @include make-col(2, 2); text-align: left; }
 }
 
 // Block display

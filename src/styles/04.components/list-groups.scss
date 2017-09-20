@@ -3,12 +3,12 @@
 //
 
 .list-group {
-  @include k_list_unstyled();
-  @include k_list_group_size();
-  @include k_list_group_variant($type-color);
+  @include list_unstyled();
+  @include list_group_size();
+  @include list_group_variant($type-color);
   position: relative;
   margin-bottom: 1rem;
-  @include k_border-radius();
+  @include border-radius();
 
 
 
@@ -42,25 +42,25 @@
 
   //
   // Modifiers
-  &.\--white { @include k_list_group_variant($type-color, #fff, $type-link); }
+  &.\--white { @include list_group_variant($type-color, #fff, $type-link); }
 
-  &.\--on-dark { @include k_list_group_variant(#fff, transparent, #fff); }
+  &.\--on-dark { @include list_group_variant(#fff, transparent, #fff); }
 
-  &.\--dark { @include k_list_group_variant(#fff, rgba($type-color, 0.5), #fff); }
+  &.\--dark { @include list_group_variant(#fff, rgba($type-color, 0.5), #fff); }
 
   &.\--striped {
-    @include k_list_group_variant($type-color, rgba(0, 0, 0, 0.02), $type-color, rgba(0, 0, 0, 0.05));
+    @include list_group_variant($type-color, rgba(0, 0, 0, 0.02), $type-color, rgba(0, 0, 0, 0.05));
 
     &.\--on-dark {
-      @include k_list_group_variant(#fff, rgba(255, 255, 255, 0.05), #fff, rgba(255, 255, 255, 0.1));
+      @include list_group_variant(#fff, rgba(255, 255, 255, 0.05), #fff, rgba(255, 255, 255, 0.1));
     }
   }
 
   //
   // Sizing
-  @include k_media_breakpoint_up(md) {
-    &.\--sm { @include k_list_group-size($list-group-padding-y/1.25, $list-group-padding-x/1.125, $font-xs) }
+  @include media_breakpoint_up(md) {
+    &.\--sm { @include list_group-size($list-group-padding-y/1.25, $list-group-padding-x/1.125, $font-xs) }
   }
 
-  &.\+shadow { @include k_box_shadow(); }
+  &.\+shadow { @include box_shadow(); }
 }

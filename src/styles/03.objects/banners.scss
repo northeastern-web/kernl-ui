@@ -9,7 +9,7 @@
   color: #fff;
   padding-top: 5%;
   padding-bottom: 5%;
-  @include k_font_smoothing();
+  @include font_smoothing();
 
   &.\+bgimg {
     @extend %bgimg;
@@ -25,7 +25,7 @@
     > * {
       position: relative;
       z-index: 1;
-      @include k_font_smoothing();
+      @include font_smoothing();
     }
 
     &.\--fixed {

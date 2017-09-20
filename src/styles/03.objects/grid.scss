@@ -7,7 +7,7 @@
 // 
 // Set the document margin
 .section {
-  @include k_make-section();
+  @include make-section();
   // margin-bottom: 1rem; <- NO. Leaves 1rem of white (as in #fff) space below each section
 }
 
@@ -15,7 +15,7 @@
 //
 // Rows (display:flex) contain the columns (flex items).
 .row {
-  @include k_make-row();
+  @include make-row();
 }
 
 // Remove the negative margin from default .g-row, then the horizontal padding
@@ -42,4 +42,4 @@
 }
 
 // Create columns
-@include k_make-grid-columns();
+@include make-grid-columns();

@@ -4,18 +4,18 @@
 
 
 .accordion {
-  @include k_accordion_variant();
+  @include accordion_variant();
   border-radius: 2px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 
   &.\--white {
-    @include k_accordion_variant($type-color, #fff, #fff);
+    @include accordion_variant($type-color, #fff, #fff);
     .\__title { font-weight: 700; }
     .\__copy { padding-top: 0; }
   }
 
   &.\--dark {
-    @include k_accordion_variant(#fff, $type-color, lighten($type-color, 20%));
+    @include accordion_variant(#fff, $type-color, lighten($type-color, 20%));
   }
 
   .\__title {

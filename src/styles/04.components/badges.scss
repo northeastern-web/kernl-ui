@@ -14,8 +14,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  @include k_badge_variant($type-color, rgba(255, 255, 255, 0.75), transparent);
-  @include k_font_smoothing();
+  @include badge_variant($type-color, rgba(255, 255, 255, 0.75), transparent);
+  @include font_smoothing();
 
   a {
     color: inherit;
@@ -26,8 +26,8 @@
 
   //
   // Colors
-  &.\--dark { @include k_badge_variant(#fff, rgba(0, 0, 0, 0.6), transparent); }
-  &.\--transparent { @include k_badge_variant(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2), transparent); }
+  &.\--dark { @include badge_variant(#fff, rgba(0, 0, 0, 0.6), transparent); }
+  &.\--transparent { @include badge_variant(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2), transparent); }
 
   //
   // Outline
@@ -54,7 +54,7 @@
     left: auto;
   }
 
-  @include k_media_breakpoint_up(md) {
+  @include media_breakpoint_up(md) {
     &.\--left {
       // &:not(.\--pill) {
         top: 0;
@@ -76,7 +76,7 @@
     }
   }
 
-  @include k_media_breakpoint_up(xl) {
+  @include media_breakpoint_up(xl) {
     &.\--left {
       top: 0.5rem;
       left: 0.5rem;
@@ -94,7 +94,7 @@
     }
   }
 
-  @include k_media_breakpoint_up(xx) {
+  @include media_breakpoint_up(xx) {
     &.\--left {
       top: 0.75rem;
       left: 0.75rem;

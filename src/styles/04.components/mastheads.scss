@@ -9,28 +9,28 @@
   padding-bottom: 0;
   overflow: visible;
   z-index: 1000 !important;
-  @include k_clearfix();
-  @include k_font_smoothing();
+  @include clearfix();
+  @include font_smoothing();
 
   .__logo {
     max-width: 240px;
     float: left;
     margin: 1.25rem 1rem 1rem;
 
-    @include k_media-breakpoint-up(sm) {
+    @include media-breakpoint-up(sm) {
       max-width: 270px;
     }
 
-    @include k_media-breakpoint-up(md) {
-      @include k_make-masthead();
+    @include media-breakpoint-up(md) {
+      @include make-masthead();
     }
 
-    @include k_media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
       max-width: 300px;
       margin-top: 1.5rem;
     }
 
-    @include k_media-breakpoint-up(xl) {
+    @include media-breakpoint-up(xl) {
       max-width: 350px;
       margin-top: 1.75rem;
     }
@@ -66,16 +66,16 @@
       color: #999;
     }
 
-    @include k_media-breakpoint-up(sm) {
+    @include media-breakpoint-up(sm) {
       margin-top: 1.25rem;
     }
 
-    @include k_media-breakpoint-up(md) {
-      @include k_make-masthead();
+    @include media-breakpoint-up(md) {
+      @include make-masthead();
       margin-top: 1.35rem;
     }
 
-    @include k_media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
       display: none;
       width: 0;
       height: 0;
@@ -84,8 +84,8 @@
   }
 
   .__list {
-    @include k_list_unstyled();
-    @include k_make-masthead();
+    @include list_unstyled();
+    @include make-masthead();
     clear: both;
     padding-top: 1rem;
 
@@ -93,7 +93,7 @@
       display: block;
     }
 
-    @include k_media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
       padding-top: 0;
       margin: 0;
      >.__item {
@@ -134,7 +134,7 @@
       line-height: 1.2;
     }
 
-    @include k_media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
       padding: 2.125rem 0.75rem;
       font-size: 16px;
       color: #333;
@@ -150,7 +150,7 @@
       }
     }
 
-    @include k_media-breakpoint-up(xl) {
+    @include media-breakpoint-up(xl) {
       padding: 2.25rem 0.75rem;
     }
   }
@@ -159,7 +159,7 @@
   .active > .__link {
     font-weight: bold;
     color: lighten($type-color, 80%);
-    @include k_media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
       color: $type-color;
       cursor: default;
     }
@@ -179,7 +179,7 @@
       &:after {
         content: "\e970" !important;
 
-        @include k_media-breakpoint-up(lg) {
+        @include media-breakpoint-up(lg) {
           content: none !important;
         }
       }
@@ -191,13 +191,13 @@
         content: "\e922" !important;
         color: #666;
 
-        @include k_media-breakpoint-up(lg) {
+        @include media-breakpoint-up(lg) {
           content: none !important;
         }
       }
     }
 
-    @include k_media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
       &.__item > a,
       > .__link::after {
         content: none !important;
@@ -221,7 +221,7 @@
 
           .__item > a,
           .__link {
-            @include k_get_type($type-sm);
+            @include get_type($type-sm);
             padding: 0.5rem;
             color: inherit;
 
@@ -252,7 +252,7 @@
     }
 
     &:last-child {
-      @include k_media-breakpoint-up(lg) {
+      @include media-breakpoint-up(lg) {
         &.__item > a,
         >.__link::after {
           content: none !important;
@@ -290,7 +290,7 @@
       right: 0;
     }
 
-    @include k_media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
       position: absolute;
       right: 0;
 
@@ -313,11 +313,11 @@
   &.\+border .__list {
     .active > .__link,
     .active.__item > a {
-      @include k_media-breakpoint-up(lg) {
+      @include media-breakpoint-up(lg) {
         border-bottom: 3px solid rgba($type-color, 0.35);
       }
 
-      @include k_media-breakpoint-up(xl) {
+      @include media-breakpoint-up(xl) {
         padding: 2.5rem 0.75rem 2.4rem;
       }
     }
@@ -339,13 +339,13 @@
   transition: transform 0.375s ease-in,
   visibility 0.375s ease-in;
 
-  @include k_media-breakpoint-up(lg) {
+  @include media-breakpoint-up(lg) {
     position: relative;
     float: right;
     width: auto;
     max-width: none;
     padding: 0;
-    @include k_make-masthead();
+    @include make-masthead();
     visibility: visible;
     background: transparent;
     transition: none;
@@ -380,5 +380,5 @@
 }
 
 .menu-is-open {
-  @include k_media-breakpoint-up(lg) { display: none; }
+  @include media-breakpoint-up(lg) { display: none; }
 }

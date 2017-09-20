@@ -15,13 +15,13 @@
   }
 
   &.\--interior {
-    @include k_media_breakpoint_up(lg) {
+    @include media_breakpoint_up(lg) {
       border-top: 1px solid $gray-200;
     }
   }
 
   .__list,
-  .__child-list { @include k_list_unstyled(); }
+  .__child-list { @include list_unstyled(); }
 
   .__child-list { margin-top: -0.25rem; }
 
@@ -109,13 +109,13 @@
       display: block;
       visibility: visible;
       height: auto;
-      @include k_clearfix();
+      @include clearfix();
     }
 
     .__item {
       vertical-align: top;
 
-      @include k_media_breakpoint_up(lg) {
+      @include media_breakpoint_up(lg) {
         // was (md), but after abou four items, it would wrap.
         float: left;
       }
@@ -130,7 +130,7 @@
       font-weight: 400;
       white-space: nowrap;
 
-      @include k_media_breakpoint_up(md) {
+      @include media_breakpoint_up(md) {
         border-left: 0 none;
         border-bottom: 3px solid transparent;
         transition: border-bottom 0.25s ease;
@@ -153,14 +153,14 @@
         +.__child-list {
           display: block;
 
-          @include k_media_breakpoint_up(md) {
+          @include media_breakpoint_up(md) {
             position: absolute;
             left: 0;
-            @include k_clearfix();
+            @include clearfix();
           }
 
           .__child-item {
-            @include k_media_breakpoint_up(md) {
+            @include media_breakpoint_up(md) {
               float: left;
             }
           }
@@ -188,7 +188,7 @@
           }
         }
 
-        @include k_media_breakpoint_up(md) {
+        @include media_breakpoint_up(md) {
           border-left: 0 none;
           border-bottom: 3px solid $type-link;
         }
@@ -211,7 +211,7 @@
     text-align: center;
 
     .__list {
-      @include k_list_unstyled();
+      @include list_unstyled();
     }
 
     .__item {
@@ -245,7 +245,7 @@
     }
   }
 
-  @include k_media_breakpoint_up(md) {
+  @include media_breakpoint_up(md) {
     .__list {
       visibility: visible;
       background: transparent;

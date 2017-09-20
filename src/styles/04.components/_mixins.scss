@@ -19,7 +19,7 @@
 //
 // Shadows
 
-@mixin k_box_shadow($shadow: $component-shadow) {
+@mixin box_shadow($shadow: $component-shadow) {
   box-shadow: $shadow;
 }
 
@@ -27,7 +27,7 @@
 //
 // Transitions
 
-@mixin k_transition($transition...) {
+@mixin transition($transition...) {
   @if length($transition) == 0 {
     transition: $transition-base;
   } @else {
@@ -39,18 +39,18 @@
 //
 // Hover
 
-@mixin k_hover {
+@mixin hover {
   &:hover { @content }
 }
 
-@mixin k_hover_focus {
+@mixin hover_focus {
   &:focus,
   &:hover {
     @content
   }
 }
 
-@mixin k_plain_hover_focus {
+@mixin plain_hover_focus {
   &,
   &:focus,
   &:hover {
@@ -58,7 +58,7 @@
   }
 }
 
-@mixin k_hover_focus_active {
+@mixin hover_focus_active {
   &:focus,
   &:active,
   &:hover {
@@ -70,7 +70,7 @@
 //
 // Tab Focus
 
-@mixin k_tab_focus() {
+@mixin tab_focus() {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -79,26 +79,26 @@
 //
 // Border Radius
 
-@mixin k_border_radius($radius: $border-radius) {
+@mixin border_radius($radius: $border-radius) {
   border-radius: $radius;
 }
 
-@mixin k_border_top_radius($radius) {
+@mixin border_top_radius($radius) {
   border-top-right-radius: $radius;
   border-top-left-radius: $radius;
 }
 
-@mixin k_border_right_radius($radius) {
+@mixin border_right_radius($radius) {
   border-bottom-right-radius: $radius;
   border-top-right-radius: $radius;
 }
 
-@mixin k_border_bottom_radius($radius) {
+@mixin border_bottom_radius($radius) {
   border-bottom-right-radius: $radius;
   border-bottom-left-radius: $radius;
 }
 
-@mixin k_border_left_radius($radius) {
+@mixin border_left_radius($radius) {
   border-bottom-left-radius: $radius;
   border-top-left-radius: $radius;
 }
@@ -107,7 +107,7 @@
 //
 // Accordion mixins
 
-@mixin k_accordion_variant($color: $type-color, $trigger: lighten($type-color,70%), $background: transparent) {
+@mixin accordion_variant($color: $type-color, $trigger: lighten($type-color,70%), $background: transparent) {
   color: $color;
 
   .\__title {
@@ -128,13 +128,13 @@
 // Alert mixins
 
 // Alert Size
-@mixin k_alert_size($padding-y, $padding-x) {
+@mixin alert_size($padding-y, $padding-x) {
   padding: $padding-y $padding-x;
-  @include k_get_type();
+  @include get_type();
 }
 
 // Alert Variant
-@mixin k_alert_variant($color, $background, $border: transparent, $add_shadow: false) {
+@mixin alert_variant($color, $background, $border: transparent, $add_shadow: false) {
   color: $color;
   background-color: $background;
   border-color: $border;
@@ -150,7 +150,7 @@
 // Badge mixins
 
 // Badge Variant
-@mixin k_badge_variant($color, $background, $border) {
+@mixin badge_variant($color, $background, $border) {
   color: $color;
   border-color: $border;
   background-color: $background;
@@ -166,7 +166,7 @@
 // Button mixins
 
 // Button variants
-@mixin k_button_variant($color, $background, $border) {
+@mixin button_variant($color, $background, $border) {
   $active-background: darken($background, 10%);
   $active-border: darken($border, 12%);
 
@@ -174,7 +174,7 @@
   background-color: $background;
   border-color: $border;
 
-  @include k_hover {
+  @include hover {
     color: $color;
     background-color: $active-background;
         border-color: $active-border;
@@ -213,7 +213,7 @@
       background-color: $background;
           border-color: $border;
     }
-    @include k_hover {
+    @include hover {
       background-color: $background;
           border-color: $border;
     }
@@ -224,7 +224,7 @@
     background-color: transparent;
     border-color: $background;
 
-    @include k_hover {
+    @include hover {
       color: #fff;
       background-color: $background;
           border-color: $background;
@@ -235,7 +235,7 @@
       background-color: rgba(255, 255, 255, 0);
       border-color: rgba(255, 255, 255, 0.5) !important;
 
-      @include k_hover {
+      @include hover {
         color: rgba(255, 255, 255, 1);
         background-color: rgba(255, 255, 255, 0.1) !important;
         border-color: rgba(255, 255, 255, 0.9);
@@ -271,7 +271,7 @@
       &.focus {
         border-color: lighten($background, 20%);
       }
-      @include k_hover {
+      @include hover {
         border-color: lighten($background, 20%);
       }
     }
@@ -279,10 +279,10 @@
 }
 
 // Button sizing
-@mixin k_button_size($padding-t, $padding-y, $padding-b, $font-size, $border-radius) {
+@mixin button_size($padding-t, $padding-y, $padding-b, $font-size, $border-radius) {
   padding: $padding-t $padding-y $padding-b;
   font-size: $font-size;
-  @include k_border_radius($border-radius);
+  @include border_radius($border-radius);
 
   .__icon {
     height: $font-size;
@@ -319,7 +319,7 @@
 // Card mixins
 
 // Card Variant
-@mixin k_card_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $is_transparent: 0) {
+@mixin card_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $is_transparent: 0) {
   color: $color;
   background: $background;
   border-color: $background;
@@ -340,8 +340,8 @@
         background: linear-gradient(to bottom, rgba($background,0) 0%,rgba($background,1) 70%);
         z-index: 10;
 
-        @include k_media_breakpoint_up(md) { height: 4rem; }
-        @include k_media_breakpoint_up(xx) { height: 5rem; }
+        @include media_breakpoint_up(md) { height: 4rem; }
+        @include media_breakpoint_up(xx) { height: 5rem; }
       }
     }
 
@@ -374,7 +374,7 @@
 }
 
 // set image and text side by side
-@mixin k_card_horizontal($background: rgba(255, 255, 255, 1), $width_graphic: 100%, $width_text: auto) {
+@mixin card_horizontal($background: rgba(255, 255, 255, 1), $width_graphic: 100%, $width_text: auto) {
   .__graphic {
     width: $width_graphic;
     height: 100%;
@@ -418,7 +418,7 @@
 
 // reset card_horizontal back to stacked when necessary;
 // required for cases like .g-6@md.g-3@lg
-@mixin k_card_vertical() {
+@mixin card_vertical() {
   .__graphic {
     width: 100%;
     height: 0;
@@ -453,14 +453,14 @@
   .__header + .__body { padding-top: 1rem; }
 }
 
-@mixin k_fill_width() {
+@mixin fill_width() {
   .__graphic__img {
     width: 110%;
     height: auto;
   }
 }
 
-@mixin k_fill_height() {
+@mixin fill_height() {
   .__graphic__img {
     width: auto;
     height: 100%;
@@ -472,7 +472,7 @@
 // List Groups
 
 // List Groups variant
-@mixin k_list_group_variant($color: inherit, $background: transparent, $link: $type-link, $striped: rgba(255, 255, 255, 0.1)) {
+@mixin list_group_variant($color: inherit, $background: transparent, $link: $type-link, $striped: rgba(255, 255, 255, 0.1)) {
   background: $background;
   color: $color;
 
@@ -525,7 +525,7 @@
 }
 
 // List Groups Sizing
-@mixin k_list_group_size($padding-y: $list-group-padding-y, $padding-x: $list-group-padding-x, $font-size: $font-sm) {
+@mixin list_group_size($padding-y: $list-group-padding-y, $padding-x: $list-group-padding-x, $font-size: $font-sm) {
   font-size: $font-size;
 
   .__item, li {
@@ -565,7 +565,7 @@
 
 //
 // Modals
-@mixin k_modal_variant($color: $type-color, $background: #fff) {
+@mixin modal_variant($color: $type-color, $background: #fff) {
   .__content {
     background: $background;
     color: $color;
@@ -591,7 +591,7 @@
     border-color: $color;
 
     &:focus {
-      @include k_box-shadow();
+      @include box-shadow();
     }
   }
 
@@ -608,7 +608,7 @@
     background-color: $input-bg-focus;
     border-color: $input-border-focus;
     outline: none;
-    @include k_box-shadow($input-box-shadow-focus);
+    @include box-shadow($input-box-shadow-focus);
   }
 }
 

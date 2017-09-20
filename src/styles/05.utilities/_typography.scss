@@ -20,7 +20,7 @@
 .ta--c  { text-align: center !important; }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @include k_media_breakpoint_up($breakpoint) {
+  @include media_breakpoint_up($breakpoint) {
     .ta--l\@#{$breakpoint}  { text-align: left !important; }
     .ta--r\@#{$breakpoint}  { text-align: right !important; }
     .ta--c\@#{$breakpoint}  { text-align: center !important; }
@@ -42,6 +42,6 @@
 // Tables
 
 .th--sm th {
-  @include k_get_type($type-xs);
+  @include get_type($type-xs);
   color: rgba($type-color, 0.65);
 }

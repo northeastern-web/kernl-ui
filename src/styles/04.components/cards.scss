@@ -3,9 +3,9 @@
 //
 
 .card {
-  @include k_card_variant();
-  @include k_transition();
-  @include k_box_shadow();
+  @include card_variant();
+  @include transition();
+  @include box_shadow();
   width: 100%;
   height: auto;
   margin-bottom: $grid-gutter-width-base;
@@ -13,9 +13,9 @@
   overflow: hidden;
   position: relative;
 
-  &:hover { @include k_box_shadow($component-shadow-hover); }
+  &:hover { @include box_shadow($component-shadow-hover); }
 
-  @include k_media_breakpoint_up(xx) { margin-bottom: $grid-gutter-width-base + 10; }
+  @include media_breakpoint_up(xx) { margin-bottom: $grid-gutter-width-base + 10; }
 
   .badge {
     display: inline-flex;
@@ -75,7 +75,7 @@
   // Body
   .__body {
     padding: 1rem 1rem 3rem;
-    @include k_get_type($type-sm);
+    @include get_type($type-sm);
 
     p {
       font-size: inherit;
@@ -87,10 +87,10 @@
   //
   // Titles with .__body
   .__title {
-    @include k_get_type($type-root);
+    @include get_type($type-root);
     font-weight: 900;
     line-height: 1.25;
-    @include k_font_smoothing();
+    @include font_smoothing();
   }
 
   .__pretitle {
@@ -103,7 +103,7 @@
   //
   // Icon
   .__icon {
-    @include k_get_type($type-display-2);
+    @include get_type($type-display-2);
     padding: 3% 0;
     text-align: center;
   }
@@ -114,7 +114,7 @@
   .__header,
   .__footer {
     // @extend .\--row;
-    @include k_get_type($type-sm);
+    @include get_type($type-sm);
     height: 2.5rem;
     display: flex;
     align-items: center;
@@ -155,7 +155,7 @@
 
   //
   // Dark
-  &.\--dark { @include k_card_variant(#fff, $component-dark); }
+  &.\--dark { @include card_variant(#fff, $component-dark); }
 
   //
   // Outline card with white bg and dark text
@@ -219,7 +219,7 @@
       right: -10rem;
       margin: auto;
 
-      @include k_media_breakpoint_up(md) {
+      @include media_breakpoint_up(md) {
         max-height: 110%;
       }
     }
@@ -266,7 +266,7 @@
     .__body p,
     .__header,
     .__footer {
-      @include k_get_type($type-xs);
+      @include get_type($type-xs);
     }
     .__title {
       font-size: 1rem;
@@ -279,7 +279,7 @@
 }
 
 
-@include k_media_breakpoint_up(sm) {
+@include media_breakpoint_up(sm) {
   .\--3\@sm, .\--4\@sm, .\--5\@sm, .\--6\@sm {
     .card {
       height: $card_height_sm;
@@ -294,7 +294,7 @@
 }
 
 
-@include k_media_breakpoint_up(md) {
+@include media_breakpoint_up(md) {
   [class^="\\--"][class$="sm"],
   [class^="\\--"][class$="md"],
   [class^="\\--"][class$="lg"] {
@@ -316,7 +316,7 @@
   .\--10\@lg,
   .\--11\@lg {
     .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
-      @include k_card_horizontal($width_graphic: 50%, $width_text: 50%);
+      @include card_horizontal($width_graphic: 50%, $width_text: 50%);
     }
   }
 
@@ -326,7 +326,7 @@
   }
 }
 
-@include k_media_breakpoint_up(lg) {
+@include media_breakpoint_up(lg) {
   [class^="\\--"][class$="sm"],
   [class^="\\--"][class$="md"],
   [class^="\\--"][class$="lg"] {
@@ -339,7 +339,7 @@
   .\--10\@lg,
   .\--11\@lg {
     .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
-      @include k_card_horizontal($width_graphic: 66.6%, $width_text: 33.3%);
+      @include card_horizontal($width_graphic: 66.6%, $width_text: 33.3%);
     }
   }
 
@@ -349,19 +349,19 @@
   .\--7\@lg,
   .\--8\@lg {
     .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
-      @include k_card_horizontal($width_graphic: 50%, $width_text: 50%);
+      @include card_horizontal($width_graphic: 50%, $width_text: 50%);
     }
   }
 
   .\--3\@lg,
   .\--4\@lg {
     .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
-      @include k_card_vertical();
+      @include card_vertical();
     }
   }
 }
 
-@include k_media_breakpoint_up(xl) {
+@include media_breakpoint_up(xl) {
   [class^="\\--"][class$="sm"],
   [class^="\\--"][class$="md"],
   [class^="\\--"][class$="lg"],
@@ -374,11 +374,11 @@
   .\--9\@lg,
   .\--10\@lg,
   .\--11\@lg {
-    @include k_fill_height();
+    @include fill_height();
   }
 }
 
-@include k_media_breakpoint_up(xx) {
+@include media_breakpoint_up(xx) {
   .card {
     height: $card_height_xx;
     margin-bottom: 40px; // = match xx gutter
@@ -388,7 +388,7 @@
   .\--10\@lg,
   .\--11\@lg {
     .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
-      @include k_card_horizontal($width_graphic: 56.25%, $width_text: 43.75%);
+      @include card_horizontal($width_graphic: 56.25%, $width_text: 43.75%);
     }
 
     .__graphic__img {
@@ -442,7 +442,7 @@
     }
   }
 
-  @include k_media_breakpoint_up(sm) {
+  @include media_breakpoint_up(sm) {
     min-height: $card_height_sm;
   }
 }
@@ -451,10 +451,10 @@
 //
 // Sizing
 .card {
-  @include k_media_breakpoint_up(md) { height: $card_height_sm; max-height: none; }
-  @include k_media_breakpoint_up(lg) { height: $card_height_lg; }
-  @include k_media_breakpoint_up(xl) { height: $card_height_xl; }
-  @include k_media_breakpoint_up(xx) { height: $card_height_xx; }
+  @include media_breakpoint_up(md) { height: $card_height_sm; max-height: none; }
+  @include media_breakpoint_up(lg) { height: $card_height_lg; }
+  @include media_breakpoint_up(xl) { height: $card_height_xl; }
+  @include media_breakpoint_up(xx) { height: $card_height_xx; }
 
   &.\--tile:after { height: 2.5rem!important; }
 }

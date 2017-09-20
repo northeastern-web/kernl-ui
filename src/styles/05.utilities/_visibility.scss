@@ -7,13 +7,13 @@
 /* Responsive visibility utilities */
 @each $breakpoint in map-keys($grid-breakpoints) {
   .hidden--up\@#{$breakpoint} {
-    @include k_media-breakpoint-up($breakpoint) {
+    @include media-breakpoint-up($breakpoint) {
       display: none !important;
     }
   }
 
   .hidden--down\@#{$breakpoint} {
-    @include k_media-breakpoint-down($breakpoint) {
+    @include media-breakpoint-down($breakpoint) {
       display: none !important;
     }
   }

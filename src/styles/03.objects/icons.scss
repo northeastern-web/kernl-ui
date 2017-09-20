@@ -50,7 +50,7 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  @include k_font-smoothing();
+  @include font-smoothing();
 }
 
 .icon--activity {

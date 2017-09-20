@@ -16,8 +16,8 @@
     color: inherit;
     height: 100%;
     overflow: hidden;
-    @include k_box_shadow();
-    @include k_clearfix();
+    @include box_shadow();
+    @include clearfix();
 
     &:hover,
     &:focus {

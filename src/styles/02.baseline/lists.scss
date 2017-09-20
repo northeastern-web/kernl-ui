@@ -48,7 +48,7 @@ dd {
 
 // Unstyled List
 .list--unstyled {
-  @include k_list_unstyled();
+  @include list_unstyled();
 
   .list__item, li {
     padding-top: .25rem;
@@ -59,7 +59,7 @@ dd {
 
 // Inline List
 .list--inline {
-  @include k_list_unstyled();
+  @include list_unstyled();
 
   li,
   .list__item {

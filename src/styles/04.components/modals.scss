@@ -19,7 +19,7 @@
   overflow: hidden;
   outline: 0;
   -webkit-overflow-scrolling: touch;
-  @include k_modal_variant();
+  @include modal_variant();
 
   // When fading in the modal, animate it to slide down
   &.fade .__dialog {
@@ -38,7 +38,7 @@
     margin: 3rem auto;
     max-width: 450px;
 
-    @include k_media_breakpoint_up(md) {
+    @include media_breakpoint_up(md) {
       max-width: 760px;
     }
   }
@@ -50,13 +50,13 @@
     border: 0 none;
     border-radius: 2px;
     outline: 0;
-    @include k_box_shadow();
+    @include box_shadow();
   }
 
   .__header {
     padding: 1rem 1.25rem;
     border-bottom: 1px solid $gray-300;
-    @include k_clearfix;
+    @include clearfix;
   }
 
   .__title {
@@ -81,11 +81,11 @@
     padding: 1rem 1.25rem;
     text-align: right; // right align buttons
     border-top: 1px solid $gray-300;
-    @include k_clearfix();
+    @include clearfix();
   }
 
   &.\--dark {
-    @include k_modal_variant(#fff, $gray-800);
+    @include modal_variant(#fff, $gray-800);
 
     .__header,
     .__footer {
@@ -96,17 +96,17 @@
 
   &.\--contact {}
 
-  .\--contact__info { @include k_get_type($type-sm); }
+  .\--contact__info { @include get_type($type-sm); }
 
-  .__body.\--contact__bio { @include k_media_breakpoint_up(md) { padding: 7rem 2.5rem 1rem 1.25rem; } }
+  .__body.\--contact__bio { @include media_breakpoint_up(md) { padding: 7rem 2.5rem 1rem 1.25rem; } }
 
   .\--contact__name {
-    @include k_get_type($type-display-3);
+    @include get_type($type-display-3);
     font-weight: 900;
   }
 
   .\--contact__title {
-    @include k_get_type($type-lead);
+    @include get_type($type-lead);
     font-weight: 400;
   }
 }
@@ -124,7 +124,7 @@
   cursor: pointer;
   background: 0 none;
   border: 0;
-  @include k_get_type($type-display-4);
+  @include get_type($type-display-4);
   font-weight: 400;
   text-shadow: 0 1px 0 #fff;
   opacity: .5;

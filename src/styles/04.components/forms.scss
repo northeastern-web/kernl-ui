@@ -153,8 +153,8 @@ $form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns
   border: $input-btn-border-width solid $input-border-color;
   border-radius: $input-border-radius;
 
-  @include k_box-shadow($input-box-shadow);
-  @include k_transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+  @include box-shadow($input-box-shadow);
+  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
@@ -283,7 +283,7 @@ select.form__control {
 .form__control--sm {
   padding: $input-padding-y-sm $input-padding-x-sm;
   font-size: $font-sm;
-  @include k_border-radius($input-border-radius-sm);
+  @include border-radius($input-border-radius-sm);
 }
 
 select.form__control--sm {
@@ -295,7 +295,7 @@ select.form__control--sm {
 .form__control--lg {
   padding: $input-padding-y-lg $input-padding-x-lg;
   font-size: 1.5rem;
-  @include k_border-radius($input-border-radius-lg);
+  @include border-radius($input-border-radius-lg);
 }
 
 select.form__control--lg {
@@ -416,7 +416,7 @@ select.form__control--lg {
 
 .form-inline {
   // Kick in the inline
-  @include k_media-breakpoint-up(sm) {
+  @include media-breakpoint-up(sm) {
     label {
       margin-bottom: 0;
     }
