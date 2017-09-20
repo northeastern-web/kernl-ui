@@ -10,7 +10,6 @@
                data-target="#toggle_0a"
                aria-expanded="false">
             Play me some accordion!
-            <!-- <i class="toggle-action" data-feather="minus"></i> -->
           </div>
           <div class="collapse show" id="toggle_0a">
             <div class="__copy">
@@ -26,7 +25,6 @@
                data-target="#toggle_1a"
                aria-expanded="false">
                 Do you want to play some polka?
-            <!-- <i class="toggle-action" data-feather="plus"></i> -->
           </div>
           <div class="collapse" id="toggle_1a">
             <div class="__copy">
@@ -42,7 +40,6 @@
                data-target="#toggle_2a"
                aria-expanded="false">
                 Roll out the barrel!
-            <!-- <i class="toggle-action" data-feather="plus"></i> -->
           </div>
           <div class="collapse" id="toggle_2a">
             <div class="__copy">
@@ -68,7 +65,6 @@
                data-target="#toggle_0b"
                aria-expanded="false">
             Play me some accordion!
-            <!-- <i class="toggle-action" data-feather="minus"></i> -->
           </div>
           <div class="collapse show" id="toggle_0b">
             <div class="__copy">
@@ -84,7 +80,6 @@
                data-target="#toggle_1b"
                aria-expanded="false">
                 Do you want to play some polka?
-            <!-- <i class="toggle-action" data-feather="plus"></i> -->
           </div>
           <div class="collapse" id="toggle_1b">
             <div class="__copy">
@@ -100,7 +95,6 @@
                data-target="#toggle_2b"
                aria-expanded="false">
                 Roll out the barrel!
-            <!-- <i class="toggle-action" data-feather="plus"></i> -->
           </div>
           <div class="collapse" id="toggle_2b">
             <div class="__copy">
@@ -126,7 +120,6 @@
                data-target="#toggle_0c"
                aria-expanded="false">
             Play me some accordion!
-            <!-- <i class="toggle-action" data-feather="minus"></i> -->
           </div>
           <div class="collapse show" id="toggle_0c">
             <div class="__copy">
@@ -142,7 +135,6 @@
                data-target="#toggle_1c"
                aria-expanded="false">
                 Do you want to play some polka?
-            <!-- <i class="toggle-action" data-feather="plus"></i> -->
           </div>
           <div class="collapse" id="toggle_1c">
             <div class="__copy">
@@ -158,7 +150,6 @@
                data-target="#toggle_2c"
                aria-expanded="false">
                 Roll out the barrel!
-            <!-- <i class="toggle-action" data-feather="plus"></i> -->
           </div>
           <div class="collapse" id="toggle_2c">
             <div class="__copy">

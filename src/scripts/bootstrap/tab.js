@@ -44,7 +44,7 @@ const Tab = (() => {
 
   const Selector = {
     DROPDOWN              : '.dropdown',
-    NAV_LIST_GROUP        : '.nav, .list-group',
+    NAV_LIST_GROUP        : '.nav ul, .list-group', // added " ul" -- rmk, 9/20/17
     ACTIVE                : '.active',
     ACTIVE_UL             : '> li > .active',
     DATA_TOGGLE           : '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',

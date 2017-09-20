@@ -14,22 +14,22 @@ define( 'SHARE_URL', url_elements() );
       <ul class="share-buttons">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
-            <i class="ion ion-social-facebook"></i></a>
+            <i class="icon--facebook"></i></a>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('twitter', '<?php echo SHARE_URL; ?>', 520, 442)">
-            <i class="ion ion-social-twitter"></i>
+            <i class="icon--twitter"></i>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
-            <i class="ion ion-social-linkedin"></i>
+            <i class="icon--briefcase"></i>
           </a>
         </li>
         <li>
           <a id="podshare_email" href="javascript:PODShare('email', '<?php echo SHARE_URL; ?>', 100, 100)">
-            <i class="ion ion-email"></i>
+            <i class="icon--mail"></i>
           </a>
         </li>
       </ul>
@@ -39,22 +39,22 @@ define( 'SHARE_URL', url_elements() );
       <ul class="share-buttons share-buttons--stacked">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
-            <i class="ion ion-social-facebook"></i></a>
+            <i class="icon--facebook"></i></a>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('twitter', '<?php echo SHARE_URL; ?>', 520, 442)">
-            <i class="ion ion-social-twitter"></i>
+            <i class="icon--twitter"></i>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
-            <i class="ion ion-social-linkedin"></i>
+            <i class="icon--briefcase"></i>
           </a>
         </li>
         <li>
           <a id="podshare_email" href="javascript:PODShare('email', '<?php echo SHARE_URL; ?>', 100, 100)">
-            <i class="ion ion-email"></i>
+            <i class="icon--mail"></i>
           </a>
         </li>
       </ul>

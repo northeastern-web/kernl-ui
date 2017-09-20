@@ -4,8 +4,8 @@
 
 <!-- start base masthead -->
 <header class="masthead">
-  <a class="masthead__logo" href="/">
-    <img class="masthead__logo__image" alt="Logo" src="/src/images/logo.png">
+  <a class="__logo" href="/">
+    <img class="__logo__image" alt="Logo" src="/src/images/logo.png">
   </a>
   <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
@@ -22,8 +22,8 @@
 
 <!-- start base masthead -->
 <header class="masthead">
-  <a class="masthead__logo" href="/">
-    <img class="masthead__logo__image" alt="Logo" src="/src/images/logo.png">
+  <a class="__logo" href="/">
+    <img class="__logo__image" alt="Logo" src="/src/images/logo.png">
   </a>
   <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
@@ -40,8 +40,8 @@
 
 <!-- end background-image-overlay masthead -->
 <header class="masthead --overlay">
-  <a class="masthead__logo" href="/">
-    <img class="masthead__logo__image" alt="Logo" src="/src/images/logo-white.png">
+  <a class="__logo" href="/">
+    <img class="__logo__image" alt="Logo" src="/src/images/logo-white.png">
   </a>
   <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
@@ -58,8 +58,8 @@
 
 <!-- end background-image-overlay masthead -->
 <header class="masthead --overlay">
-  <a class="masthead__logo" href="/">
-    <img class="masthead__logo__image" alt="Logo" src="/src/images/logo-white.png">
+  <a class="__logo" href="/">
+    <img class="__logo__image" alt="Logo" src="/src/images/logo-white.png">
   </a>
   <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>
@@ -74,9 +74,9 @@
   <header class="k_section__header">Masthead, Bottom-Bordered Selection</header>
 </section>
 
-<header class="masthead --border">
-  <a class="masthead__logo" href="/">
-    <img class="masthead__logo__image" alt="Logo" src="/src/images/logo.png">
+<header class="masthead +border">
+  <a class="__logo" href="/">
+    <img class="__logo__image" alt="Logo" src="/src/images/logo.png">
   </a>
   <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
 </header>

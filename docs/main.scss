@@ -39,7 +39,8 @@
   }
 }
 
-.k_logo--home {
+.k_logo--home,
+.k_logo--home:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -132,7 +133,7 @@
 .k_section { padding: 1rem; }
 
 .k_section__header {
-  padding: 0.5rem 0 1rem;
+  padding: 0 0 1rem;
   font-size: 1.5rem;
   font-weight: 300;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
@@ -163,7 +164,7 @@
   .__title {
     text-transform: capitalize;
     transition: all 0.25s ease;
-    color: lighten($type-color, 10%);
+    color: $type-color;
     padding-bottom: 0;
     font-weight: 200;
     text-shadow: none;

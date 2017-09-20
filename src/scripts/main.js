@@ -1,9 +1,7 @@
-require('./bootstrap/index');
-import Feather from 'feather-icons';
+import './bootstrap/index'
+import './components/mastheads.js'
+import './components/navs.js'
+import './components/sharing.js'
+import Feather from 'feather-icons'
 
-Feather.replace();
-
-require('./components/accordions.js');
-require('./components/mastheads.js');
-require('./components/navs.js');
-require('./components/sharing.js');
+Feather.replace()

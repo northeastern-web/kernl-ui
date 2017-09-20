@@ -9,7 +9,7 @@
         </header>
         <div class="__body">
           <div class="__icon">
-            <i class="ion-network"></i>
+            <i class="icon--share"></i>
           </div>
           <div class="__excerpt">
             <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
@@ -104,7 +104,7 @@
       <article class="card --dark --middle">
         <div class="__body">
           <div class="__icon">
-            <i class="ion-help-buoy"></i>
+            <i class="icon--life-buoy"></i>
           </div>
           <h2 class="__title">Card with Icon</h2>
           <div class="__excerpt">
@@ -326,7 +326,7 @@
       <article class="card --dark --tile">
         <div class="__body">
           <div class="__icon">
-            <i class="ion-network"></i>
+            <i class="icon--share"></i>
           </div>
           <div class="__excerpt">
             <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>

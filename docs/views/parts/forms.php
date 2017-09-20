@@ -1,11 +1,19 @@
-<section class="section">
+<section class="section k_bg-light">
   <div class="row">
-    <div class="col --12@xs --8@lg offset-2@lg">
+    <div class="col --12@xs --8@lg --offset-2@lg">
       <form action="" method="">
         <div class="form__group">
+          <label for="exampleText">Text Label</label>
+          <input type="email" class="form__control" id="exampleText" aria-describedby="textHelp" placeholder="Enter some text">
+        </div>
+        <div class="form__group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form__control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"><br>
-          <small id="emailHelp" class="alert --sm text--muted">We'll never share your email with anyone else.</small>
+          <input type="email" class="form__control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <div class="alert --sm --dark">
+            <div class="__body">
+              <div class="__excerpt"><b>Here's an alert</b>: We'll never share your email with anyone else.</div>
+            </div>
+          </div>
         </div>
         <div class="form__group">
           <label for="exampleInputPassword1">Password</label>

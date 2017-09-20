@@ -36,7 +36,7 @@ figure out --middle with a heading.
         <a href="#" class="__link">
           <div class="__body">
             <div class="__excerpt">
-              <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+              <p>This card is so basic. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
             </div>
           </div>
         </a>
@@ -108,7 +108,7 @@ figure out --middle with a heading.
           <div class="__graphic"></div>
           <div class="__body">
             <div class="__excerpt">
-              <h2 class="__title">Goat Cheese on Toast Taleggio Cheeseburger Chalk and Swiss Feta Cheese</h2>
+              <h2 class="__title">Taleggio Cheeseburger Chalk and Swiss Feta Cheese</h2>
               <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
             </div>
           </div>

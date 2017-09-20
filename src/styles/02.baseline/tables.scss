@@ -14,7 +14,7 @@ table {
     th { border: 1px solid #ddd; }
   }
 
-  &.\+shaded,
+  .\+shaded,
   &.\+striped tr:nth-child(even) {
     background-color: rgba($type-color, 0.1);
   }

@@ -1,10 +1,10 @@
 <section class="section">
-  <header class="k_section__header">Interior Nav</header>
+  <header class="k_section__header">Interior/On-Page Nav</header>
   <div class="row">
-    <div class="hidden--up@md ta--c pt--2@xs">
-      <button class="__toggler btn btn--sm"><i class="ion-android-funnel"></i> Page Menu</button>
-    </div>
     <div class="col --12@xs --3@md">
+      <div class="hidden--up@md ta--c pt--2@xs">
+        <button class="nav__toggler btn --sm"><i class="icon--menu"></i> Page Menu</button>
+      </div>
       <nav class="nav --interior">
         <ul class="__list">
           <li class="__item">
@@ -47,57 +47,57 @@
   <div class="row">
     <div class="col --12@xs">
       <nav class="nav --tabbed">
-        <ul class="__list">
+        <ul class="__list" role="tablist">
           <li class="__item">
-            <a class="__link active" data-toggle="tab" href="#tab_1">Tab 1</a>
+            <a class="__link active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Tab 1</a>
           </li>
           <li class="__item">
-            <a class="__link" data-toggle="tab" href="#tab_2">Tab 2</a>
+            <a class="__link" data-toggle="tab" href="#tab_2" role="tab" aria-expanded="false">Tab 2</a>
           </li>
           <li class="__item">
-            <a class="__link" data-toggle="tab" href="#tab_3">Tab 3</a>
+            <a class="__link" data-toggle="tab" href="#tab_3" role="tab" aria-expanded="false">Tab 3</a>
           </li>
           <li class="__item +children">
-            <a class="__link" data-toggle="tab" href="#tab_4">Tab 4 Parent</a>
-            <ul class="__child-list">
+            <a class="__link" data-toggle="tab" href="#tab_4" role="tab" aria-expanded="false">Tab 4 Parent</a>
+            <ul class="__child-list" role="tablist">
               <li class="__child-item">
-                <a class="__child-link" data-toggle="tab" href="#tab_4a">Child Tab A</a>
+                <a class="__child-link" data-toggle="tab" href="#tab_4a" role="tab" aria-expanded="false">Child Tab A</a>
               </li>
               <li class="__child-item">
-                <a class="__child-link" data-toggle="tab" href="#tab_4b">Child Tab B</a>
+                <a class="__child-link" data-toggle="tab" href="#tab_4b" role="tab" aria-expanded="false">Child Tab B</a>
               </li>
               <li class="__child-item">
-                <a class="__child-link" data-toggle="tab" href="#tab_4c">Child Tab C</a>
+                <a class="__child-link" data-toggle="tab" href="#tab_4c" role="tab" aria-expanded="false">Child Tab C</a>
               </li>
             </ul>
           </li>
         </ul>
         <div class="tab-content">
-          <div class="tab-pane active" id="tab_1">
+          <div class="tab-pane active" id="tab_1" role="tabpanel">
             <h3>Content 1</h3>
             <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-          <div class="tab-pane" id="tab_2">
+          <div class="tab-pane" id="tab_2" role="tabpanel">
             <h3>Content 2</h3>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.</p>
           </div>
-          <div class="tab-pane" id="tab_3">
+          <div class="tab-pane" id="tab_3" role="tabpanel">
             <h3>Content 3</h3>
             <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
           </div>
-          <div class="tab-pane pt--2@md" id="tab_4">
+          <div class="tab-pane pt--2@md" id="tab_4" role="tabpanel">
             <h3>Content 4</h3>
             <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
           </div>
-          <div class="tab-pane pt--2@md" id="tab_4a">
+          <div class="tab-pane pt--2@md" id="tab_4a" role="tabpanel">
             <h3>Content 4a</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
           </div>
-          <div class="tab-pane pt--2@md" id="tab_4b">
+          <div class="tab-pane pt--2@md" id="tab_4b" role="tabpanel">
             <h3>Content 4b</h3>
             <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod.</p>
           </div>
-          <div class="tab-pane pt--2@md" id="tab_4c">
+          <div class="tab-pane pt--2@md" id="tab_4c" role="tabpanel">
             <h3>Content 4c</h3>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec sed odio dui. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur.</p>
           </div>
@@ -113,7 +113,7 @@
     <ul class="__list">
       <li class="__item">
         <a class="__link" href="#" aria-label="Previous">
-          <span aria-hidden="true" class="ion-ios-arrow-thin-left"></span>
+          <i aria-hidden="true" class="icon--arrow-left"></i>
           <span class="sr--only">Previous</span>
         </a>
       </li>
@@ -124,7 +124,7 @@
       <li class="__item"><a class="__link" href="#">5</a></li>
       <li class="__item">
         <a class="__link" href="#" aria-label="Next">
-          <span aria-hidden="true" class="ion-ios-arrow-thin-right"></span>
+          <i aria-hidden="true" class="icon--arrow-right"></i>
           <span class="sr--only">Next</span>
         </a>
       </li>

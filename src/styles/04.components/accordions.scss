@@ -26,14 +26,14 @@
 
     &:after {
       position: absolute;
-      font-family: "Ionicons";
-      content: "\f208";
+      font-family: "feathericons";
+      content: "\e95c";
       font-weight: normal;
       top: 1rem;
       right: 1.5rem;
     }
 
-    &.collapsed { &:after { content: "\f217"; } }
+    &.collapsed { &:after { content: "\e970"; } }
   }
 
   .\__copy {

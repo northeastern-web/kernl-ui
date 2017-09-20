@@ -60,7 +60,7 @@
   }
 
   @each $breakpoint in map-keys($breakpoints) {
-    $infix: k_breakpoint-infix($breakpoint, $breakpoints);
+    $infix: _breakpoint-infix($breakpoint, $breakpoints);
 
     // Allow columns to stretch full width below their breakpoints
     @for $i from 1 through $columns {
@@ -192,7 +192,7 @@
 
 // Media of at least the minimum breakpoint width
 @mixin k_media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-  $min: k_breakpoint-min($name, $breakpoints);
+  $min: _breakpoint-min($name, $breakpoints);
   @if $min {
     @media (min-width: $min) {
       @content;

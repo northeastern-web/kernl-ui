@@ -1,15 +1,14 @@
-/**
- * Navs
- */
-
 //
+// Navs
+//
+
 // Tabbed Navigation, nested
+$('.__link').on('click touch', function(e) {
+  $('.__child-link').removeClass('active')
+  $(this).tab('show')
+});
 
-/*$('.__link').on('shown.bs.tab', e => {
-  $(e.relatedTarget).removeClass('active')
-  // $('.\\+children a').removeClass('child--active')
-});*/
-
-/*$('.__child-link').on('click touch', function(e) {
-   $(this).parent().parent().prev('a').addClass('child--active')
-});*/
+// On-screen nav toggle for small screens
+$('.nav__toggler').on('click touch', function(e) {
+  $('body').toggleClass('nav--open')
+});

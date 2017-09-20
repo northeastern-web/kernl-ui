@@ -351,7 +351,7 @@
           <tr>
             <th>Fusce Condimentum</th>
             <td>Adipiscing dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</td>
-            <td class="shaded">Shading on this cell (using <code>td.shaded</code>). Curabitur blandit tempus porttitor.</td>
+            <td class="+shaded">Shading on this cell (using <code>td.+shaded</code>). Curabitur blandit tempus porttitor.</td>
             <td>Justo Ultricies</td>
             <td>Aenean lacinia bibendum nulla sed consectetur.</td>
             <td>Cras mattis consectetur purus sit amet fermentum.</td>
@@ -361,7 +361,7 @@
             <td>Donec ullamcorper nulla non metus auctor fringilla.</td>
             <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
             <td>Adipiscing Condimentum</td>
-            <td class="shaded">Shading on this cell (using <code>td.shaded</code>). Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</td>
+            <td class="+shaded">Shading on this cell (using <code>td.+shaded</code>). Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</td>
             <td>Curabitur blandit tempus porttitor.</td>
           </tr>
           <tr>
@@ -372,8 +372,8 @@
             <td>Donec ullamcorper nulla non metus auctor fringilla.</td>
             <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
           </tr>
-          <tr class="shaded">
-            <th>Shading On Whole Row (using <code>tr.shaded</code>)</th>
+          <tr class="+shaded">
+            <th>Shading On Whole Row (using <code>tr.+shaded</code>)</th>
             <td>Adipiscing dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</td>
             <td>Shading on this cell. Curabitur blandit tempus porttitor.</td>
             <td>Justo Ultricies</td>

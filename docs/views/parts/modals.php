@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col --12@xs --4@md">
       <header class="k_section__header">Base</header>
-      <p><a class="btn --outline" href="#" data-toggle="modal" data-target="#modal_base">Modal Me</a></p>
+      <p><a class="btn" href="#" data-toggle="modal" data-target="#modal_base">Modal Me</a></p>
       <div class="modal fade" id="modal_base" tabindex="-1" role="dialog" aria-labelledby="modal_base_label" aria-hidden="true">
         <div class="modal-dialog __dialog" role="document">
           <div class="__content">
@@ -25,7 +25,7 @@
     </div>
     <div class="col --12@xs --4@md">
       <header class="k_section__header">Dark</header>
-      <p><a class="btn --outline" href="#" data-toggle="modal" data-target="#modal_dark">Modal Me</a></p>
+      <p><a class="btn --transparent" href="#" data-toggle="modal" data-target="#modal_dark">Modal Me</a></p>
       <div class="modal --dark fade" id="modal_dark" tabindex="-1" role="dialog" aria-labelledby="modal_dark_label" aria-hidden="true">
         <div class="modal-dialog __dialog" role="document">
           <div class="__content">
@@ -48,7 +48,7 @@
     </div>
     <div class="col --12@xs --4@md">
       <header class="k_section__header">Contact</header>
-      <p><a class="btn --outline" href="#" data-toggle="modal" data-target="#modal_contact">Contact Me</a></p>
+      <p><a class="btn" href="#" data-toggle="modal" data-target="#modal_contact">Contact Me</a></p>
       <div class="modal --contact fade" id="modal_contact" tabindex="-1" role="dialog" aria-labelledby="modal_contact_label" aria-hidden="true">
         <div class="modal-dialog __dialog" role="document">
           <div class="__content">

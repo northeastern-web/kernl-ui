@@ -7,7 +7,7 @@
             data-component="badge"
             class="badge --left<?= $i == 2 ? ' --transparent' : ''; ?><?= $i == 3 ? ' --dark' : ''; ?>">
               <a href="#">Badge (Link)</a>
-              <i class="badge__icon ion-ios-videocam"></i>
+              <i class="__icon icon--video"></i>
           </div>
         </div>
       </div>

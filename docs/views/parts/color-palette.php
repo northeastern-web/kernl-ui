@@ -1,6 +1,6 @@
-<section class="k_section">
+<section class="section">
   <header class="k_section__header">Color Palette</header>
-  <div class="p--b-1@xs">
+  <div class="pb--1@xs">
     <!-- Black -->
     <div class="row color-cell">
       <div class="col --12@xs bg-black"><span class="hex-color">#000000</span> Black</div>
