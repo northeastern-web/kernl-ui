@@ -11,7 +11,7 @@
         </div>
       </div>
 
-      <div class="alert --sm">
+      <div class="alert --sm +shadow">
         <a href="#" class="__link">
           <div class="__body">
             <div class="__excerpt">
@@ -47,7 +47,7 @@
 
       <div class="alert --btn">
         <div class="__body">
-          <div class="__icon +thin +lg">
+          <div class="__icon --thin --lg">
             <i data-feather="alert-octagon"></i>
           </div>
           <div class="__excerpt">

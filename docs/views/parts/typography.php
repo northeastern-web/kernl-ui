@@ -1,4 +1,4 @@
-<header class="section --banner +bgimg +large +fixed p--t-3@xs p--t-6@lg">
+<header class="section --banner +bgimg --lg --fixed p--t-3@xs p--t-6@lg">
   <div class="row">
     <div class="col --12@xs ta--c">
       <div class="banner__pretitle p--b-1@xs">What's your type?</div>
@@ -9,7 +9,7 @@
 </header>
 <section class="section">
   <div class="row">
-    <div class="col --12@xs --10@lg offset-1@lg">
+    <div class="col --12@xs --10@lg --offset-1@lg --8@xl --offset-2@xl">
       <h1>Here is Heading 1 <span class="show-font-size">(<span class="element-font-size"></span> @ 2.25rem)</span></h1>
       <p class="type--lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
       <ul class="list--unstyled type--sm">
@@ -124,9 +124,9 @@
 </section>
 
 <section class="section k_bg-light">
-  <header class="k_section__header">Display Sizes</header>
   <div class="row">
-    <div class="col --12@xs --10@lg offset-1@lg">
+    <div class="col --12@xs --10@lg --offset-1@lg --8@xl --offset-2@xl">
+      <header class="k_section__header">Display Sizes</header>
       <p class="text-style-block">Display Size 1:</p>
       <p class="type--d1">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
       <p class="text-style-block">Display Size 2:</p>
@@ -135,7 +135,6 @@
       <p class="type--d3">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
       <p class="text-style-block">Display Size 4:</p>
       <p class="type--d4">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
-
   </div>
 </section>
 <section class="section">

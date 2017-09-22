@@ -528,17 +528,18 @@
 @mixin list_group_size($padding-y: $list-group-padding-y, $padding-x: $list-group-padding-x, $font-size: $font-sm) {
   font-size: $font-size;
 
-  .__item, li {
-    padding: $padding-y 0;
+  > .__item,
+  > li {
+    padding: $padding-y 0 !important;
 
-    &:first-child() { padding-top: 0; }
-    &:last-child() { padding-bottom: 0; }
+    &:first-child { padding-top: 0 !important; }
+    &:last-child { padding-bottom: 0 !important; }
   }
 
   &.\+shadow,
   &.\+outline,
   &.\--dark {
-    padding: $padding-y $padding-x;
+    padding: $padding-y $padding-x !important;
   }
 
 
@@ -547,7 +548,7 @@
   &.\--striped > li,
   &.\--striped > a {
     border: 0 none;
-    padding: $padding-y $padding-x;
+    padding: $padding-y $padding-x !important;
   }
 }
 

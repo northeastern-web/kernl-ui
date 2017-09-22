@@ -59,7 +59,7 @@
       max-width: 10%;
     }
 
-    &.\+lg {
+    &.\--lg {
       margin: 1rem 0;
 
       i, svg {
@@ -160,4 +160,6 @@
       }
     }
   }
+
+  &.\+shadow { @include box-shadow(); }
 }
