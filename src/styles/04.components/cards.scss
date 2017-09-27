@@ -103,9 +103,12 @@
   //
   // Icon
   .__icon {
-    @include get_type($type-display-2);
-    padding: 3% 0;
-    text-align: center;
+    @extend %icon;
+
+    i, svg {
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
 
@@ -266,14 +269,13 @@
     .__body p,
     .__header,
     .__footer {
-      @include get_type($type-xs);
-    }
-    .__title {
-      font-size: 1rem;
+      @include get_type($type-sm);
+
+      @include media_breakpoint_up(lg) { @include get_type($type-xs); }
     }
 
-    .__icon {
-      font-size: 2.75rem;
+    .__title {
+      font-size: 1rem;
     }
   }
 }

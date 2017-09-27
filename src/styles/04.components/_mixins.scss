@@ -301,7 +301,7 @@
       margin-left: round($font-size / 2);
     }
 
-    &.\--large {
+    &.\--lg {
       height: $font-size * 2;
       width: $font-size * 2;
       margin: ($font-size / 2) 0;
@@ -319,7 +319,7 @@
 // Card mixins
 
 // Card Variant
-@mixin card_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $is_transparent: 0) {
+@mixin card_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $is_transparent: 0, $icon-size: 24px) {
   color: $color;
   background: $background;
   border-color: $background;
@@ -327,6 +327,27 @@
   .__body,
   .__footer,
   .list-group .__item { border-color: darken($background, 20%); }
+
+  .__icon {
+    height: $icon-size;
+    display: block;
+    transform: none;
+
+    i, svg {
+      height: $icon-size;
+      width: $icon-size;
+    }
+
+    &.\--lg {
+      height: $icon-size * 2;
+      margin: 0 0 ($icon-size / 2);
+
+      i, svg {
+        height: $icon-size * 2;
+        width: $icon-size * 2;
+      }
+    }
+  }
 
   &:not(.\--overlay):not(.\--bottom) {
     .__link {
@@ -370,6 +391,19 @@
   /* don't change this, or else white cards will darken to light gray on hover */
   @if $background == rgba(255, 255, 255, 1) {
     &:hover { background: rgba(255, 255, 255, 1); }
+  }
+
+  .__graphic.\+round {
+    margin: 1rem auto 0;
+    max-width: $icon-size * 2.5 !important;
+    height: $icon-size * 2.5 !important;
+    padding: 0 !important;
+    border-radius: $icon-size * 1.5 !important;
+    
+    .__graphic__img {
+      max-width: 200% !important;
+      left: -50% !important;
+    }
   }
 }
 

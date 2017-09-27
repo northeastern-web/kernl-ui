@@ -147,12 +147,12 @@
         </header>
         <div class="__body">
           <div class="__excerpt">
-            <ul class="list-group">
-              <li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-              <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-              <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-              <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-              <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
+            <ul class="list-group --sm">
+              <li class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</li>
+              <li class="__item"><b>Lorem ipsum</b>: dolor sit amet, consectetur</li>
+              <li class="__item"><b>Maecenas</b>: faucibus mollis interdum</li>
+              <li class="__item"><b>Lorem ipsum</b>: dolor sit amet, consectetur</li>
+              <li class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</li>
             </ul>
           </div>
         </div>

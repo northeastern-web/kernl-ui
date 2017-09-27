@@ -31,12 +31,93 @@ figure out --middle with a heading.
 <section class="section">
   <div class="row">
 
+    <div class="col --12@xs --6@sm --4@lg --2@xl">
+      <article class="card --tile">
+        <a href="#" class="__link">
+          <div class="__body">
+            <div class="__excerpt">
+              <h2 class="__title">Tile Card</h2>
+              <p>Basic card with tile variant. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col --12@xs --6@sm --4@lg --2@xl">
+      <article class="card --tile --outline">
+        <a href="#" class="__link">
+          <div class="__body">
+            <div class="__excerpt">
+              <h2 class="__title">Outlined Tile Card</h2>
+              <p>Basic card with no frills. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col --12@xs --6@sm --4@lg --2@xl">
+      <article class="card --tile">
+        <a href="#" class="__link">
+          <div class="__graphic +round"></div>
+          <div class="__body">
+            <div class="__excerpt">
+              <p>Basic card with no frills. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col --12@xs --6@sm --4@lg --2@xl">
+      <article class="card --tile">
+        <a href="#" class="__link">
+          <div class="__body">
+            <div class="__excerpt">
+              <p>Basic card with no frills. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col --12@xs --6@sm --4@lg --2@xl">
+      <article class="card --tile">
+        <a href="#" class="__link">
+          <div class="__body">
+            <div class="__excerpt">
+              <p>Basic card with no frills. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col --12@xs --6@sm --4@lg --2@xl">
+      <article class="card --tile">
+        <a href="#" class="__link">
+          <div class="__body">
+            <div class="__icon --thin --lg">
+              <i data-feather="command"></i>
+            </div>
+            <div class="__excerpt">
+              <h2 class="__title">With Large, Thin Icon</h2>
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <!-- Basic cards -->
+
     <div class="col --12@xs --6@sm --3@lg">
       <article class="card">
         <a href="#" class="__link">
           <div class="__body">
             <div class="__excerpt">
-              <p>This card is so basic. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+              <p>Basic card with no frills. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
             </div>
           </div>
         </a>

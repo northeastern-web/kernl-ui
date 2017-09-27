@@ -127,7 +127,7 @@
       </p>
       <p class="ta--c@xs">
         <a class="btn --lg --transparent" data-component="button" href="#">
-          <span class="__icon --large --thin"><i data-feather="cloud-rain"></i></span><br>
+          <span class="__icon --lg --thin"><i data-feather="cloud-rain"></i></span><br>
           Looks Like We're In For<br>
           Some Nasty Weather
         </a>

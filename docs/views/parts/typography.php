@@ -10,7 +10,6 @@
 <section class="section">
   <div class="row">
     <div class="col --12@xs --10@lg --offset-1@lg --8@xl --offset-2@xl">
-      <h1>Here is Heading 1 <span class="show-font-size">(<span class="element-font-size"></span> @ 2.25rem)</span></h1>
       <p class="type--lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
       <ul class="list--unstyled type--sm">
         <li>15px base font-size (<code>xs</code>)</li>
@@ -20,7 +19,14 @@
       </ul>
       <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       <p class="type--sm">This a little note set at <code>type--sm</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.875rem)</span>.</p>
+    </div>
+  </div>
+</section>
+<section class="section k_bg-light">
+  <div class="row">
+    <div class="col --12@xs --10@lg --offset-1@lg --8@xl --offset-2@xl">
       <h2>Here is a Heading Two <span class="show-font-size">(<span class="element-font-size"></span> @ 2rem)</span></h2>
+      <p class="type--lead">This is a lead paragraph <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span></p>
       <p>Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
       <h3>Heading Three and Listy Lists <span class="show-font-size">(<span class="element-font-size"></span> @ 1.5rem)</span></h3>
       <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
