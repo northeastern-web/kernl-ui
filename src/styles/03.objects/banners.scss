@@ -78,6 +78,7 @@
 
   .__title {
     @include get_type($type-d6);
+    font-weight: $type-light;
   }
 
   .__subtitle {
