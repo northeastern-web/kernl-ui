@@ -226,8 +226,8 @@
 
     @include hover {
       color: #fff;
-      background-color: $background;
-          border-color: $background;
+      background-color: $background !important;
+          border-color: $background !important;
     }
 
     &.\--white {
@@ -533,13 +533,13 @@
   }
 
   > div,
-  > li { 
+  > li {
     a:hover,
     &:hover a {
       color: desaturate(darken($link, 7%), 20%);
     }
   }
-  
+
   > a {
     color: $color;
     &:hover { color: $link;  }
@@ -556,13 +556,13 @@
 
   &.\--on-dark {
     > div,
-    > li { 
+    > li {
       a:hover,
       &:hover a {
         color: lighten($type-link, 20%) !important;
       }
     }
-  
+
     > a {
       &:hover { color: lighten($type-link, 20%) !important; }
     }
