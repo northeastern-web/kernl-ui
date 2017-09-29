@@ -13,7 +13,7 @@
       </div>
     </div>
   </section>
-  <section class="section pt--2@xs k_bg-light">
+  <section class="section pt--2@xs k_bg-light --full">
     <div class="row">
       <?php foreach (getKernlFiles() as $file) : ?>
         <div class="col --12@xs --6@sm --3@md --2@xl">

@@ -314,6 +314,20 @@ $type-lead: (
   )
 ) !default;
 
+// 'lead' text settings
+$type-title: (
+  properties: (
+    (font-weight, $type-light),
+    (line-height, 1.1),
+    (letter-spacing, -0.1rem)
+  ),
+  sizes: (
+    (xs, $fs-d2),
+    (sm, $fs-d3),
+    (lg, $fs-d6)
+  )
+) !default;
+
 // Size/property collection:
 $type-size:
   $type-root,

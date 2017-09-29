@@ -1,15 +1,16 @@
-<header class="section --banner +bgimg --lg --fixed p--t-3@xs p--t-6@lg">
+<header class="section --banner +bgimg --lg --fixed">
   <div class="row">
     <div class="col --12@xs ta--c">
-      <div class="banner__pretitle p--b-1@xs">What's your type?</div>
-      <h1 class="banner__title p--b-1@xs">Typography Styles</h1>
-      <div class="banner__subtitle">This is a page of base typography styles for kernl(ui).</div>
+      <div class="__pretitle">What's your type?</div>
+      <h1 class="__title">Typography Styles</h1>
+      <div class="__subtitle">This is a page of base typography styles for kernl(ui).</div>
     </div>
   </div>
 </header>
 <section class="section">
   <div class="row">
-    <div class="col --12@xs --10@lg --offset-1@lg --8@xl --offset-2@xl">
+    <!-- <div class="col --12@xs --10@lg --offset-1@lg --8@xl --offset-2@xl"> -->
+    <div class="col --12@xs">
       <p class="type--lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
       <ul class="list--unstyled type--sm">
         <li>15px base font-size (<code>xs</code>)</li>
@@ -18,13 +19,16 @@
         <li>18px base font-size (<code>xx</code>)</li>
       </ul>
       <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+      <section class="section --banner +bgimg">
+        <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+      </section>
       <p class="type--sm">This a little note set at <code>type--sm</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.875rem)</span>.</p>
     </div>
   </div>
 </section>
 <section class="section k_bg-light">
   <div class="row">
-    <div class="col --12@xs --10@lg --offset-1@lg --8@xl --offset-2@xl">
+    <div class="col --12@xs">
       <h2>Here is a Heading Two <span class="show-font-size">(<span class="element-font-size"></span> @ 2rem)</span></h2>
       <p class="type--lead">This is a lead paragraph <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span></p>
       <p>Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
@@ -131,7 +135,7 @@
 
 <section class="section k_bg-light">
   <div class="row">
-    <div class="col --12@xs --10@lg --offset-1@lg --8@xl --offset-2@xl">
+    <div class="col --12@xs">
       <header class="k_section__header">Display Sizes</header>
       <p class="text-style-block">Display Size 1:</p>
       <p class="type--d1">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
@@ -329,7 +333,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section --full">
   <header class="k_section__header">Responsive (Vertically-Scrolling) Table</header>
   <div class="row">
     <div class="col --12@xs">

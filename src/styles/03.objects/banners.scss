@@ -67,8 +67,8 @@
   }
 
   &.\+shadow {
-    border-top: 2px solid rgba(0,0,0,.1);
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .__pretitle {
@@ -77,8 +77,7 @@
   }
 
   .__title {
-    @include get_type($type-d6);
-    font-weight: $type-light;
+    @include get_type($type-title);
   }
 
   .__subtitle {
