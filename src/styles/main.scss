@@ -33,8 +33,4 @@
 @import "05.utilities/spacing";
 @import "05.utilities/positioning";
 @import "05.utilities/typography";
-
-
-@include generate_component_colors('alert');
-@include generate_component_colors('badge');
-@include generate_component_colors('btn');
+@import "05.utilities/colors";

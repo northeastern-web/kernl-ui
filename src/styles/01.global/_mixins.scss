@@ -263,8 +263,8 @@
   @if $component == 'badge' { @include badge_variant($component_text_color, $color, $color); }
   @if $component == 'btn' { @include button_variant($component_text_color, $color, $color); }
   @if $component == 'card' { @include card_variant($component_text_color, $color); }
-  // @if $component == 'bg' { @include _color_bg($color); }
-  // @if $component == 'text' { @include _color_font($color); }
+  @if $component == 'bg' { @include bg_variant($color); }
+  @if $component == 'text' { @include text_variant($color); }
 }
 
 @mixin generate_component_colors($component, $palette_collection: $palette) {
@@ -272,15 +272,20 @@
   @each $palette_label, $palette_colors in $palette_collection {
     @each $current_color, $current_variant, $current_text_dark in $palette_colors {
 
+      $delimiter: '.\--';
+      @if ($component == 'bg' or $component == 'text') {
+        $delimiter: '--';
+      }
+
       // checks to see if color has a variant
       // if false: make color the component's base
       // if true: append grade to class
       @if ($current_variant == false) {
-        .#{$component}.\--#{$palette_label} {
+        .#{$component}#{$delimiter}#{$palette_label} {
           @include get_component($component, $current_color, false, $current_text_dark);
         }
       } @else {
-        .#{$component}.\--#{$palette_label}-#{$current_variant} {
+        .#{$component}#{$delimiter}#{$palette_label}-#{$current_variant} {
           @include get_component($component, $current_color, $current_variant, $current_text_dark);
         }
       }

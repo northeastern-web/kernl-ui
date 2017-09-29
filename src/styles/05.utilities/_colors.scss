@@ -1,0 +1,9 @@
+//
+// Color Utilities
+//
+
+@include generate_component_colors('alert');
+@include generate_component_colors('badge');
+@include generate_component_colors('bg');
+@include generate_component_colors('btn');
+@include generate_component_colors('text');

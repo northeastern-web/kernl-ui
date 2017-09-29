@@ -408,7 +408,7 @@
     height: $icon-size * 3 !important;
     padding: 0 !important;
     border-radius: $icon-size * 2 !important;
-    
+
     .__graphic__img {
       max-width: 200% !important;
       left: -50% !important;
@@ -622,6 +622,17 @@
   }
   .close { color: $color; }
   .modal-backdrop { background-color: $color; }
+}
+
+//
+// Colors
+
+@mixin bg_variant($color) {
+  background-color: $color !important;
+}
+
+@mixin text_variant($color) {
+  color: $color !important;
 }
 
 
