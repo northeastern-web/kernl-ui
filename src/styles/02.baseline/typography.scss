@@ -16,34 +16,34 @@ html {
 // Headings
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 .5rem;
+  margin: 0 0 0.5rem;
   padding: 0;
 }
 
 h1,
-.type--d1 { @include get_type($type-display-1); }
+.type--d1 { @include get_type($type-d5); }
 
 h2,
-.type--d2 { @include get_type($type-display-2); }
+.type--d2 { @include get_type($type-d4); }
 
 h3,
-.type--d3 { @include get_type($type-display-3); }
+.type--d3 { @include get_type($type-d3); }
 
 h4,
-.type--d4 { @include get_type($type-display-4); }
+.type--d4 { @include get_type($type-d2); }
 
 h5,
-.type--headline { @include get_type($type-headline); }
+.type--headline { @include get_type($type-d1); }
 
 h6,
-.type--title { @include get_type($type-title); }
+.type--title { @include get_type($type-root); }
 
 
 //
 // Paragraphs
 
 p {
-  @include get_type($type-body);
+  @include get_type($type-base);
   margin: 0 0 1rem;
 }
 
@@ -56,6 +56,12 @@ small,
 
 // Extra Small
 .type--xs { @include get_type($type-xs); }
+
+// Large
+.type--lg { @include get_type($type-d5); }
+
+// Extra Large
+.type--xl { @include get_type($type-d7); }
 
 
 //

@@ -87,7 +87,7 @@
   //
   // Titles with .__body
   .__title {
-    @include get_type($type-root);
+    @include get_type($type-base);
     font-weight: 900;
     line-height: 1.25;
     @include font_smoothing();
@@ -229,7 +229,7 @@
 
     .__body {
       position: absolute;
-      top: 0; left: 0;
+      top: 0; left: 0; right: 0;
       // width: auto;
       height: 100%;
     }
@@ -435,13 +435,6 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-  }
-
-  &.\--tile {
-    .__body {
-      height: 100%;
-      padding: 2.5rem 1rem 1rem;
-    }
   }
 
   @include media_breakpoint_up(sm) {

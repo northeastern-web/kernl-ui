@@ -231,12 +231,12 @@
     }
 
     &.\--white {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 1);
       background-color: rgba(255, 255, 255, 0);
       border-color: rgba(255, 255, 255, 0.5) !important;
 
       @include hover {
-        color: rgba(255, 255, 255, 1);
+        color: rgba(255, 255, 255, 0.9);
         background-color: rgba(255, 255, 255, 0.1) !important;
         border-color: rgba(255, 255, 255, 0.9);
       }
@@ -393,12 +393,21 @@
     &:hover { background: rgba(255, 255, 255, 1); }
   }
 
+  &.\--tile {
+    .__link {
+      &:after {
+        @include media_breakpoint_up(md) { height: 2rem !important; }
+        @include media_breakpoint_up(xx) { height: 3rem !important; }
+      }
+    }
+  }
+
   .__graphic.\+round {
     margin: 1rem auto 0;
-    max-width: $icon-size * 2.5 !important;
-    height: $icon-size * 2.5 !important;
+    max-width: $icon-size * 3 !important;
+    height: $icon-size * 3 !important;
     padding: 0 !important;
-    border-radius: $icon-size * 1.5 !important;
+    border-radius: $icon-size * 2 !important;
     
     .__graphic__img {
       max-width: 200% !important;
@@ -447,7 +456,13 @@
     width: $width_text;
   }
 
-  .__link { padding-bottom: 0; }
+  .__link {
+    padding-bottom: 0;
+
+    &:after {
+      width: $width_text;
+    }
+  }
 }
 
 // reset card_horizontal back to stacked when necessary;
@@ -559,7 +574,7 @@
 }
 
 // List Groups Sizing
-@mixin list_group_size($padding-y: $list-group-padding-y, $padding-x: $list-group-padding-x, $font-size: $font-sm) {
+@mixin list_group_size($padding-y: $list-group-padding-y, $padding-x: $list-group-padding-x, $font-size: $fs-sm) {
   font-size: $font-size;
 
   > .__item,
@@ -589,7 +604,7 @@
 
 //
 // Media Objects
-@mixin _media_object_size($font-size: $font-sm, $font-size-title: 1rem, $img-size: 4rem) {
+@mixin _media_object_size($font-size: $fs-sm, $font-size-title: 1rem, $img-size: 4rem) {
   .__title { font-size: $font-size-title; }
 
   .__copy { font-size: $font-size; }

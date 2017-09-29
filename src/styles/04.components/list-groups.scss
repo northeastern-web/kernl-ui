@@ -61,7 +61,7 @@
   //
   // Sizing
   @include media_breakpoint_up(md) {
-    &.\--sm { @include list_group-size($list-group-padding-y/1.25, $list-group-padding-x/1.125, $font-xs) }
+    &.\--sm { @include list_group-size($list-group-padding-y/1.25, $list-group-padding-x/1.125, $fs-xs) }
   }
 
   &.\+shadow { @include box_shadow(); }
@@ -79,7 +79,7 @@
   &.\--sm {
     > .__item,
     > li {
-      padding: $list-group-padding-y/1.25 $list-group-padding-x/1.25 !important;
+      padding: $list-group-padding-y/1.25 $list-group-padding-x !important;
 
       &:first-child { padding-top: $list-group-padding-y/1.25 !important; }
       &:last-child { padding-bottom: $list-group-padding-y/1.25 !important; }

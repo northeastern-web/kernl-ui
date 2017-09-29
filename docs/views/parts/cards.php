@@ -23,6 +23,7 @@ card
   +badge
   +scroll
   +icon
+  +round
 
 figure out --middle with a heading.
 
@@ -50,7 +51,7 @@ figure out --middle with a heading.
           <div class="__body">
             <div class="__excerpt">
               <h2 class="__title">Outlined Tile Card</h2>
-              <p>Basic card with no frills. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+              <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
             </div>
           </div>
         </a>
@@ -58,12 +59,13 @@ figure out --middle with a heading.
     </div>
 
     <div class="col --12@xs --6@sm --4@lg --2@xl">
-      <article class="card --tile">
+      <article class="card --tile ta--c">
         <a href="#" class="__link">
           <div class="__graphic +round"></div>
           <div class="__body">
             <div class="__excerpt">
-              <p>Basic card with no frills. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+              <h2 class="__title">Little Round Thumb</h2>
+              <p>Cheesy grin gouda with some swiss and a dry red.</p>
             </div>
           </div>
         </a>
@@ -71,11 +73,13 @@ figure out --middle with a heading.
     </div>
 
     <div class="col --12@xs --6@sm --4@lg --2@xl">
-      <article class="card --tile">
+      <article class="card --tile --overlay --bottom">
         <a href="#" class="__link">
+          <div class="__graphic"></div>
           <div class="__body">
             <div class="__excerpt">
-              <p>Basic card with no frills. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+              <h2 class="__title">Overlay Tile</h2>
+              <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
             </div>
           </div>
         </a>
@@ -84,18 +88,28 @@ figure out --middle with a heading.
 
     <div class="col --12@xs --6@sm --4@lg --2@xl">
       <article class="card --tile">
-        <a href="#" class="__link">
-          <div class="__body">
-            <div class="__excerpt">
-              <p>Basic card with no frills. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
-            </div>
+        <div class="__header">
+          <div class="__column">
+            Heading Out
+            <div class="badge --right --dark">Badge</div>
           </div>
-        </a>
+        </div>
+        <div class="__body">
+          <div class="__excerpt">
+            <h2 class="__title">No Tile Like the Present</h2>
+            <p>How much can we really cram into just this tiny tile?</p>
+          </div>
+        </div>
+        <footer class="__footer">
+          <a href="#" class="__footer__link">
+            <div class="__column">Clique Moi</div>
+          </a>
+        </footer>
       </article>
     </div>
 
     <div class="col --12@xs --6@sm --4@lg --2@xl">
-      <article class="card --tile">
+      <article class="card --tile --dark --middle">
         <a href="#" class="__link">
           <div class="__body">
             <div class="__icon --thin --lg">
@@ -169,7 +183,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --3@lg">
+    <div class="col --12@xs --6@sm --4@lg">
       <article class="card --overlay --bottom +shade">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -183,51 +197,73 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --3@lg">
+    <div class="col --12@xs --6@sm --4@lg">
       <article class="card --overlay">
-        <a href="#" class="__link">
           <div class="__graphic"></div>
+          <div class="__header">
+            <div class="__column">
+              This Header is Just Super
+            </div>
+          </div>
           <div class="__body">
             <div class="__excerpt">
               <h2 class="__title">Taleggio Cheeseburger Chalk and Swiss Feta Cheese</h2>
               <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
+              <a class="btn --white --outline" href="#">Have a Clickity</a>
             </div>
           </div>
-        </a>
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --3@lg">
-      <article class="card --overlay">
+    <div class="col --12@xs --6@sm --4@lg">
+      <article class="card --overlay --bottom">
         <a href="" class="__link">
           <div class="__graphic"></div>
           <div class="__body">
             <div class="__excerpt">
+              <div class="__pretitle">The World is My Pre-Title</div>
               <h2 class="__title">Fromage Airedale Halloumi</h2>
-              <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
-              <p>Pommy ipsum dignified bloody shambles some mothers do 'ave 'em the fuzz pigeons in Trafalgar Square.</p>
+              <p>Some dignified shambles have the fuzz pigeons in Trafalgar Square.</p>
+              <ul class="list-group">
+                <li class="__item">Lorem ipsum dolor sit amet do eiusmod</li>
+                <li class="__item">Lorem dolor sit amet, consectetur</li>
+                <li class="__item">Maecenas faucibus mollis interdum</li>
+              </ul>
             </div>
           </div>
         </a>
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --3@lg">
-      <article class="card --overlay">
+    <div class="col --12@xs --6@lg">
+      <article class="card">
         <a href="#" class="__link">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <div class="__excerpt">
+              <h2 class="__title">Six-Column Jack</h2>
+              <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col --12@xs --6@lg">
+      <article class="card --overlay">
           <div class="__graphic"></div>
           <div class="__header">
             <div class="__column">
-              Cheesy Header
+              This Header is Just Super
             </div>
           </div>
           <div class="__body">
             <div class="__excerpt">
-              <h2 class="__title">Cheeseball Covered Title</h2>
-              <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+              <h2 class="__title">String Cheese Six-Pack</h2>
+              <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
+              <a class="btn --white --outline" href="#">Have a Clickity</a>
             </div>
           </div>
-        </a>
       </article>
     </div>
 

@@ -101,7 +101,7 @@
   .__body.\--contact__bio { @include media_breakpoint_up(md) { padding: 7rem 2.5rem 1rem 1.25rem; } }
 
   .\--contact__name {
-    @include get_type($type-display-3);
+    @include get_type($type-d5);
     font-weight: 900;
   }
 
@@ -124,7 +124,7 @@
   cursor: pointer;
   background: 0 none;
   border: 0;
-  @include get_type($type-display-4);
+  font-size: 1.5rem;
   font-weight: 400;
   text-shadow: 0 1px 0 #fff;
   opacity: .5;

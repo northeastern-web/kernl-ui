@@ -4,7 +4,7 @@
 
 .media {
   margin-bottom: 1rem;
-  @include _media_object_size($font-sm, 1rem);
+  @include _media_object_size($fs-sm, 1rem);
 
 
   // 
@@ -70,7 +70,7 @@
   }
 
   .__copy {
-    font-size: $font-sm;
+    font-size: $fs-sm;
   }
 
 
@@ -80,11 +80,11 @@
 
   /* Sizing */
   &.\--xs {
-    @include _media_object_size($font-xs, $font-xs, 3rem);
+    @include _media_object_size($fs-xs, $fs-xs, 3rem);
     .__title { margin-bottom: 0.2rem; }
   }
-  &.\--sm { @include _media_object_size($font-sm, 1rem, 3rem); }
-  &.\--lg { @include _media_object_size($font-sm, 1rem, 5rem); }
+  &.\--sm { @include _media_object_size($fs-sm, 1rem, 3rem); }
+  &.\--lg { @include _media_object_size($fs-sm, 1rem, 5rem); }
 
   /* Positioning */
   &.\--left {}

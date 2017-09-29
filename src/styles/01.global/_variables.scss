@@ -150,15 +150,24 @@ $type-serif: "Baskerville", Georgia, "Times New Roman", Times, serif !default;
 $type-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 // Weight
-$type-light: 300 !default;
-$type-regular: 400 !default;
-$type-bold: 700 !default;
-$type-black: 900 !default;
+$type-light:    300 !default;
+$type-regular:  400 !default;
+$type-bold:     700 !default;
+$type-black:    900 !default;
 
 // Base and Responsive sizing/properties
-$font-xs: .75rem !default;
-$font-sm: .875rem !default;
+$fs-xs:   0.75rem   !default;
+$fs-sm:   0.875rem  !default;
+$fs-root: 1rem      !default;
+$fs-d1:   1.25rem   !default;
+$fs-d2:   1.4rem    !default;
+$fs-d3:   1.5rem    !default;
+$fs-d4:   1.75rem   !default;
+$fs-d5:   2rem      !default;
+$fs-d6:   3.25rem   !default;
+$fs-d7:   5rem      !default;
 
+// html-level settings
 $type-root: (
   properties: (
     (font-weight, $type-regular),
@@ -172,134 +181,153 @@ $type-root: (
   )
 ) !default;
 
-$type-body: (
+// 2 degrees below root
+$type-xs: (
   properties: (
-    (font-weight, $type-regular),
+    (line-height, 1.3),
+    (letter-spacing, 0)
+  ),
+  sizes: (
+    (xs, $fs-xs),
+    (sm, $fs-xs)
+  )
+) !default;
+
+// 1 degree below root
+$type-sm: (
+  properties: (
+    (line-height, 1.4),
+    (letter-spacing, 0)
+  ),
+  sizes: (
+    (xs, $fs-sm),
+    (sm, $fs-sm)
+  )
+) !default;
+
+// base-level 1-rem setting
+$type-base: (
+  properties: (
     (line-height, 1.5)
   ),
   sizes: (
-    (xs, 1rem)
+    (xs, $fs-root),
+    (sm, $fs-root)
   )
 ) !default;
 
-$type-display-1: (
+// 1 degree above root
+$type-d1: (
   properties: (
-    (font-weight, $type-light),
-    (line-height, 1),
-    (letter-spacing, -0.04em)
+    (line-height, 1.175),
+    (letter-spacing, 0)
   ),
   sizes: (
-    (xs, 3rem),
-    (sm, 4rem),
-    (lg, 5rem)
+    (xs, $fs-d2),
+    (xl, $fs-d2)
   )
 ) !default;
 
-$type-display-2: (
+// 2 degrees above root
+$type-d2: (
   properties: (
-    (line-height, 1.05),
-    (font-weight, $type-light),
-    (letter-spacing, -0.02em)
+    (line-height, 1.175),
+    (letter-spacing, 0)
   ),
   sizes: (
-    (xs, 2.75rem),
-    (xl, 3.25rem)
+    (xs, $fs-d2),
+    (xl, $fs-d2)
   )
 ) !default;
 
-$type-display-3: (
+// 3 degrees above root
+$type-d3: (
+  properties: (
+    (line-height, 1.175),
+    (letter-spacing, 0)
+  ),
+  sizes: (
+    (xs, $fs-d2),
+    (xl, $fs-d3)
+  )
+) !default;
+
+// 4 degrees above root
+$type-d4: (
+  properties: (
+    (line-height, 1.175),
+    (letter-spacing, 0)
+  ),
+  sizes: (
+    (xs, $fs-d3),
+    (xl, $fs-d4)
+  )
+) !default;
+
+// 5 degrees above root
+$type-d5: (
   properties: (
     (line-height, 1.2),
-    (font-weight, $type-regular),
     (letter-spacing, 0)
   ),
   sizes: (
-    (xs, 2rem),
-    (xl, 2.15rem)
+    (xs, $fs-d4),
+    (lg, $fs-d5)
   )
 ) !default;
 
-$type-display-4: (
+// 6 degrees above root
+$type-d6: (
   properties: (
-    (line-height, 1.175),
-    (font-weight, $type-bold),
+    (line-height, 1.05),
     (letter-spacing, 0)
   ),
   sizes: (
-    (xs, 1.5rem),
-    (xl, 1.75rem)
+    (xs, $fs-d5),
+    (xl, $fs-d6)
   )
 ) !default;
 
-$type-headline: (
+// 7 degrees above root
+$type-d7: (
   properties: (
-    (line-height, 1.175),
-    (font-weight, $type-bold),
-    (letter-spacing, 0)
+    (line-height, 1),
+    (letter-spacing, -0.04rem)
   ),
   sizes: (
-    (xs, 1.2rem),
-    (xl, 1.5rem)
+    (xs, $fs-d5),
+    (sm, $fs-d6),
+    (lg, $fs-d7)
   )
 ) !default;
 
-$type-title: (
-  properties: (
-    (line-height, 1.175),
-    (font-weight, $type-bold)
-  ),
-  sizes: (
-    (xs, 1.15rem),
-    (xl, 1.22rem)
-  )
-) !default;
-
+// 'lead' text settings
 $type-lead: (
   properties: (
     (font-weight, $type-light),
     (line-height, 1.25)
   ),
   sizes: (
-    (xs, 1.1rem),
-    (sm, 1.1rem),
-    (lg, 1.4rem)
+    (xs, $fs-d1),
+    (sm, $fs-d1),
+    (lg, $fs-d2)
   )
 ) !default;
 
-$type-sm: (
-  properties: (
-    (font-weight, 400)
-    (line-height, 1.4)
-  ),
-  sizes: (
-    (xs, $font-sm),
-    (sm, $font-sm)
-  )
-) !default;
-
-$type-xs: (
-  properties: (
-    (font-weight, 400)
-    (line-height, 1.3)
-  ),
-  sizes: (
-    (xs, $font-xs),
-    (sm, $font-xs)
-  )
-) !default;
-
-$type-size: // Size collection
+// Size/property collection:
+$type-size:
   $type-root,
-  $type-body,
-  $type-display-4,
-  $type-display-3,
-  $type-display-2,
-  $type-display-1,
-  $type-headline,
-  $type-title,
-  $type-lead,
+  $type-xs,
   $type-sm,
-  $type-xs !default;
+  $type-base,
+  $type-d1,
+  $type-d2,
+  $type-d3,
+  $type-d4,
+  $type-d5,
+  $type-d6,
+  $type-d7,
+  $type-lead !default;
 
 // color bases
 $type-color:  $gray-800 !default;

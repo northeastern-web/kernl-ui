@@ -35,7 +35,7 @@ $input-padding-y-lg:             .75rem !default;
 
 $input-height:                   ((1rem * $input-line-height) + ($input-padding-y * 2)) !default;
 $input-height-lg:                ((1.5rem * $input-line-height) + ($input-padding-y-lg * 2)) !default;
-$input-height-sm:                (($font-sm * $input-line-height) + ($input-padding-y-sm * 2)) !default;
+$input-height-sm:                (($fs-sm * $input-line-height) + ($input-padding-y-sm * 2)) !default;
 
 $form-group-margin-bottom:       $spacer; //$spacer-y !default;
 
@@ -234,7 +234,7 @@ select.form__control {
 .col-form-label-sm {
   padding-top: $input-padding-y-sm;
   padding-bottom: $input-padding-y-sm;
-  font-size: $font-sm;
+  font-size: $fs-sm;
 }
 
 
@@ -282,7 +282,7 @@ select.form__control {
 
 .form__control--sm {
   padding: $input-padding-y-sm $input-padding-x-sm;
-  font-size: $font-sm;
+  font-size: $fs-sm;
   @include border-radius($input-border-radius-sm);
 }
 
