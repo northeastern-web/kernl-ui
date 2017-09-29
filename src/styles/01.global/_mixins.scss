@@ -267,7 +267,7 @@
   @if $component == 'text' { @include text_variant($color); }
 }
 
-@mixin generate_component_colors($component, $palette_collection: $palette) {
+@mixin generate_colors($component, $palette_collection: $palette) {
   // Loop through each palette collection and then each color set
   @each $palette_label, $palette_colors in $palette_collection {
     @each $current_color, $current_variant, $current_text_dark in $palette_colors {
