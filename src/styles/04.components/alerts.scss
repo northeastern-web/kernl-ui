@@ -77,11 +77,11 @@
 
   // Title
   .__title {
-    @include get_type($type-d1);
     margin-right: .5rem;
     margin-bottom: 0;
     display: inline-block;
     width: auto;
+    font-size: $fs-root;
   }
   .__pretitle {}
   .__subtitle {}

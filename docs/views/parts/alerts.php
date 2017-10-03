@@ -64,7 +64,7 @@
           <div class="__column">Header Text has Words</div>
         </header>
         <div class="__body">
-          <h2 class="__title">Welcome to the Jungle</h2>
+          <div class="__title">Welcome to the Jungle</div>
           <div class="__excerpt">
             <p>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
           </div>
