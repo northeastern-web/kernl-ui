@@ -7,9 +7,8 @@
     </div>
   </div>
 </header>
-<section class="section">
+<section class="section --contain">
   <div class="row">
-    <!-- <div class="col --12@xs --10@lg --offset-1@lg --8@xl --offset-2@xl"> -->
     <div class="col --12@xs">
       <p class="type--lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
       <ul class="list--unstyled type--sm">
@@ -26,7 +25,7 @@
     </div>
   </div>
 </section>
-<section class="section k_bg-light">
+<section class="section --contain k_bg-light">
   <div class="row">
     <div class="col --12@xs">
       <h2>Here is a Heading Two <span class="show-font-size">(<span class="element-font-size"></span> @ 2rem)</span></h2>
@@ -133,7 +132,7 @@
   </div>
 </section>
 
-<section class="section k_bg-light">
+<section class="section --contain k_bg-light">
   <div class="row">
     <div class="col --12@xs">
       <header class="k_section__header">Display Sizes</header>
@@ -333,7 +332,7 @@
   </div>
 </section>
 
-<section class="section --full">
+<section class="section">
   <header class="k_section__header">Responsive (Vertically-Scrolling) Table</header>
   <div class="row">
     <div class="col --12@xs">

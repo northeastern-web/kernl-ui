@@ -267,5 +267,37 @@ figure out --middle with a heading.
       </article>
     </div>
 
+    <div class="col --12@xs --5@lg">
+      <article class="card">
+        <a href="#" class="__link">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <div class="__excerpt">
+              <h2 class="__title">Five Columns at Large</h2>
+              <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col --12@xs --7@lg">
+      <article class="card --overlay">
+          <div class="__graphic"></div>
+          <div class="__header">
+            <div class="__column">
+              This Header is Just Super
+            </div>
+          </div>
+          <div class="__body">
+            <div class="__excerpt">
+              <h2 class="__title">Seven Columns at Large</h2>
+              <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
+              <a class="btn --white --outline" href="#">Have a Clickity</a>
+            </div>
+          </div>
+      </article>
+    </div>
+
   </div>
 </section>
