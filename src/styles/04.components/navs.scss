@@ -196,12 +196,114 @@
     }
   }
 
-  .tab-content { padding-top: 1rem; }
+  &.\--bordered {
+    @include media_breakpoint_up(md) {
+      .__list { border-bottom: 1px solid $gray-200; }
 
-  .tab-pane {
-    display: none;
+      .__item { margin-bottom: -2px; }
 
-    &.active { display: block; }
+      .__link {
+        color: $type-link;
+        border: 1px solid transparent;
+        border-bottom: 0 none;
+        padding: 8px 2rem 8px;
+        @include border_top_radius(3px);
+        transition: all 0.2s ease;
+        margin-bottom: 1px;
+
+        &:hover {
+          background-color: rgba($blue, 0.8);
+          color: #fff;
+        }
+
+        &.active,
+        &.active:hover,
+        &.active:active,
+        &.child--active,
+        &.child--active:hover,
+        &.child--active:active {
+          padding: 8px 2rem 8px;
+          background-color: #fff;
+          border: 1px solid $gray-200;
+          border-bottom: 0 none;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &.\--buttons {
+    .__list { }
+
+    .__item { 
+      margin-bottom: -1px;
+      &:last-child { margin-bottom: 0; }
+
+      @include media_breakpoint_up(lg) {
+        margin-bottom: 0;
+        margin-right: 1rem;
+        &:last-child { margin-right: 0; }
+      }
+    }
+
+    .__link {
+      color: $type-color;
+      border: 1px solid $gray-200;
+      padding: 1rem 1rem 1rem 2.5rem;
+      position: relative;
+
+      @include media_breakpoint_up(lg) {
+        padding: 8px 1rem 8px 2.5rem;
+      }
+
+      &:hover {
+        background-color: $gray-100;
+        border-color: $gray-300;
+        color: $type-color;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1rem;
+        width: 1rem;
+        height: 1rem;
+        @include border-radius(1rem);
+        border-width: 1px;
+        border-style: solid;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1rem;
+        width: 1rem;
+        height: 1rem;
+        @include border-radius(1rem);
+        border-width: 1px;
+        border-style: solid;
+      }
+
+      // arbitrary class names for colorized identifiers;
+      // we can change this approach if desired!
+      &.\--color-1:before { background-color: rgba($red, 0.5); border-color: rgba($red, 0.6); }
+      &.\--color-2:before { background-color: rgba($green, 0.5); border-color: rgba($green, 0.6); }
+      &.\--color-3:before { background-color: rgba($purple, 0.5); border-color: rgba($purple, 0.6); }
+
+      &.active,
+      &.active:hover,
+      &.active:active,
+      &.child--active,
+      &.child--active:hover,
+      &.child--active:active {
+        background-color: rgba($blue-light, 0.25);
+        border: 1px solid $blue-light;
+      }
+    }
   }
 
 
@@ -253,6 +355,12 @@
       height: auto;
     }
   }
+}
+
+// .tab-content { padding-top: 1rem; }
+
+.hidden {
+  &.active { display: block !important; }
 }
 
 .nav--open {
