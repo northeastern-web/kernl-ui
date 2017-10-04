@@ -15,6 +15,7 @@
 .fs--d6 { font-size: $fs-d6; }
 .fs--d7 { font-size: $fs-d7; }
 
+
 // Weight
 .fw--100  { font-weight: 100; }
 .fw--200  { font-weight: 200; }
@@ -54,16 +55,13 @@
 // Section Headers
 .section {
   > .__header {
-    .__pretitle {
-      @extend .tt--caps;
-      margin-bottom: 0.25rem;
-    }
-
     .__title {
+      @include get_type($type-d6);
       margin-bottom: 0.25rem;
-      @include get_type($type-d5);
       font-weight: $type-light;
     }
+
+    .__pretitle { margin-bottom: 0.25rem; }
 
     .__subtitle {
       @include get_type($type-d2);
