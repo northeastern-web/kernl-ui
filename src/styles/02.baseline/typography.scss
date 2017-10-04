@@ -44,7 +44,7 @@ h6,
 // Paragraphs
 
 p {
-  @include get_type($type-base);
+  // @include get_type($type-base);
   margin: 0 0 1rem;
 }
 
