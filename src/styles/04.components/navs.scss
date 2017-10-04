@@ -206,7 +206,8 @@
         color: $type-link;
         border: 1px solid transparent;
         border-bottom: 0 none;
-        padding: 8px 2rem 8px;
+        padding: 8px 1.5rem 8px;
+        font-size: $fs-sm;
         @include border_top_radius(3px);
         transition: all 0.2s ease;
         margin-bottom: 1px;
@@ -222,7 +223,7 @@
         &.child--active,
         &.child--active:hover,
         &.child--active:active {
-          padding: 8px 2rem 8px;
+          padding: 8px 1.5rem 8px;
           background-color: #fff;
           border: 1px solid $gray-200;
           border-bottom: 0 none;
@@ -357,7 +358,11 @@
   }
 }
 
-// .tab-content { padding-top: 1rem; }
+.tabcontent {
+  padding: 1rem 1.5rem;
+  border: 1px solid $gray-200;
+  border-top: 0 none;
+}
 
 .hidden {
   &.active { display: block !important; }

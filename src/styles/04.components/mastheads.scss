@@ -300,10 +300,68 @@
       .active.__item a {
         color: #fff;
       }
+    }
+  }
 
-      .\+children:hover .__submenu {
-        .__link {
-          &:hover {}
+  &.\+megamenu {
+
+    @include media-breakpoint-up(lg) {
+      .__drawer,
+      .__list,
+      .__item { position: static; }
+
+      .\+children {
+
+        &:hover {
+          .__submenu {
+            @include make-row();
+            top: 5.75rem;
+            background: rgba($gray-100, 0.9);
+            min-width: 0;
+            max-width: none;
+            width: auto;
+            left: 0;
+            right: 0;
+            border-radius: 0;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+            .__item > a,
+            .__link {
+              @include get_type($type-sm);
+              padding: 0.5rem;
+              color: inherit;
+
+              &:hover,
+              &:focus {
+                background: $type-color;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 2px;
+              }
+            }
+
+            ul {
+              @include list_unstyled();
+              padding: 0.5rem;
+
+              a {
+                &:hover {
+                  background-color: transparent !important;
+                  color: $type-link;
+                }
+              }
+            }
+
+            .\--heading {
+              font-size: $fs-d1 !important;
+              border-bottom: 1px solid $gray-200;
+            }
+
+            &:after {
+              display: none;
+            }
+          }
         }
       }
     }

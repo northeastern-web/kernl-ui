@@ -139,6 +139,41 @@
 </section>
 
 <section class="section">
+  <header class="k_section__header" style="border-bottom: 0 none;">Tabbed Nav: Bordered with Bordered Content</header>
+  <div class="row">
+    <div class="col --12@xs">
+      <nav class="nav --tabbed --bordered">
+        <ul class="__list" role="tablist">
+          <li class="__item">
+            <a class="__link active" data-toggle="tab" href="#tab_50" role="tab" aria-expanded="true">Mozzarella Sticks</a>
+          </li>
+          <li class="__item">
+            <a class="__link" data-toggle="tab" href="#tab_60" role="tab" aria-expanded="false">Mushroom Pizza Pie</a>
+          </li>
+          <li class="__item">
+            <a class="__link" data-toggle="tab" href="#tab_70" role="tab" aria-expanded="false">Fried Ice Cream</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="tabcontent">
+        <div class="hidden pt--1@xs active" id="tab_50" role="tabpanel">
+          <h3>Mozzarella Sticks</h3>
+          <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="hidden pt--1@xs" id="tab_60" role="tabpanel">
+          <h3>Mushroom Pizza Pie</h3>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+        <div class="hidden pt--1@xs" id="tab_70" role="tabpanel">
+          <h3>Fried Ice Cream</h3>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <header class="k_section__header">Tabbed Nav: Buttons</header>
   <div class="row">
     <div class="col --12@xs">
