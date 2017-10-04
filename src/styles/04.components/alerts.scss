@@ -43,6 +43,12 @@
   .__body {
     display: block;
     padding: 1rem;
+
+    p, ul, ol, dl {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   // Icon

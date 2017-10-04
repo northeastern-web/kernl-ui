@@ -146,6 +146,25 @@
       <p class="type--d4">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span>)</p>
   </div>
 </section>
+
+<section class="section">
+  <div class="__header mb--1@xs">
+    <div class="__pretitle">Section Header: Default</div>
+    <h2 class="__title">Here's a Default Section Title</h2>
+    <div class="__subtitle">Subtitle Inceptos Bibendum Amet Mollis Dapibus</div>
+  </div>
+  <p>And some text to follow maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
+</section>
+
+<section class="section --banner">
+  <div class="__header mb--1@xs">
+    <div class="__pretitle">Section Header: Banner (not page-title banner)</div>
+    <h2 class="__title">Here's a Banner Section Title</h2>
+    <div class="__subtitle">Subtitle Inceptos Bibendum Amet Mollis Dapibus</div>
+  </div>
+  <p>And some text to follow maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
+</section>
+
 <section class="section">
   <header class="k_section__header">Blockquotes</header>
   <div class="row">

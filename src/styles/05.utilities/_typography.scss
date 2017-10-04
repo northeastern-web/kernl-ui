@@ -35,6 +35,29 @@
 .tt--caps {
   font-size: 90%;
   text-transform: uppercase;
+  letter-spacing: 0.03rem;
+}
+
+
+// Section Headers
+.section {
+  > .__header {
+    .__pretitle {
+      @extend .tt--caps;
+      margin-bottom: 0.25rem;
+    }
+
+    .__title {
+      margin-bottom: 0.25rem;
+      @include get_type($type-d5);
+      font-weight: $type-light;
+    }
+
+    .__subtitle {
+      @include get_type($type-d2);
+      font-weight: $type-light;
+    }
+  }
 }
 
 

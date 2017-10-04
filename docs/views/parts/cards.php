@@ -299,5 +299,79 @@ figure out --middle with a heading.
       </article>
     </div>
 
+    <div class="col --12@xs --4@lg">
+      <article class="card">
+        <a href="#" class="__link">
+          <div class="__graphic"></div>
+          <div class="__header">
+            <div class="__column">
+              Issues at Medium +
+            </div>
+          </div>
+          <div class="__body">
+            <div class="__excerpt">
+              <h2 class="__title">Four Columns at Large</h2>
+              <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col --12@xs --8@lg">
+      <article class="card --blue-dark">
+          <div class="__graphic"></div>
+          <div class="__header">
+            <div class="__column">
+              Issues at Medium +
+            </div>
+          </div>
+          <div class="__body">
+            <div class="__excerpt">
+              <h2 class="__title">Eight Columns at Large</h2>
+              <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
+              <a class="btn --white --outline" href="#">Have a Clickity</a>
+            </div>
+          </div>
+      </article>
+    </div>
+
+    <div class="col --12@xs --4@lg">
+      <article class="card --overlay">
+        <a href="#" class="__link">
+          <div class="__graphic"></div>
+          <div class="__header">
+            <div class="__column">
+              Issues at Medium +
+            </div>
+          </div>
+          <div class="__body">
+            <div class="__excerpt">
+              <h2 class="__title">Four Columns at Large</h2>
+              <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col --12@xs --8@lg">
+      <article class="card --overlay">
+          <div class="__graphic"></div>
+          <div class="__header">
+            <div class="__column">
+              Issues at Medium +
+            </div>
+          </div>
+          <div class="__body">
+            <div class="__excerpt">
+              <h2 class="__title">Eight Columns at Large</h2>
+              <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
+              <a class="btn --white --outline" href="#">Have a Clickity</a>
+            </div>
+          </div>
+      </article>
+    </div>
+
   </div>
 </section>
