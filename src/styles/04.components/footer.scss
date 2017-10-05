@@ -1,0 +1,54 @@
+//
+// Footer
+//
+
+.footer {
+  padding: 2rem 0 4rem;
+  background: $gray-900;
+  color: #eee;
+  font-size: $fs-sm;
+  line-height: 1.7;
+
+  a { color: inherit; }
+
+  .__logo {
+    display: block;
+    padding: 1rem;
+    font-size: 17px;
+    background: url('//undergraduate.northeastern.edu/app/themes/doric/assets/images/logo-footer.png') no-repeat scroll 0 0 transparent;
+    text-indent: -9999px;
+    background-size: 173px 17px;
+    display: block;
+    height: 25px;
+    opacity: .8;
+    -webkit-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+
+    @include media-breakpoint-up(lg) {
+      width: 30%;
+      float: left;
+    }
+
+    &:hover { opacity: 1; }
+  }
+
+  .__body {
+    @include media-breakpoint-up(lg) {
+      width: 70%;
+      float: left;
+    }
+  }
+
+  .__copy { font-size: 0.75rem; color: #aaa; }
+
+  .__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+
+    li {
+      display: inline-block;
+      &:not(:last-child):after { content: '•'; padding: 0 5px; }
+    }
+  }
+}
