@@ -87,10 +87,23 @@ a {
 // Blockquotes
 
 blockquote {
+  margin: 0 0 1rem;
+  padding: 1rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 2rem;
+  }
+
   &, p {
     @include get_type($type-lead);
     margin-bottom: 1rem;
     // font-family: $type-serif;
+  }
+
+  cite {
+    display: block;
+    @include get_type($type-base);
+    line-height: 1.5;
   }
 }
 

@@ -165,70 +165,24 @@
   <p>And some text to follow maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
 </section>
 
-<section class="section">
+<section class="section k_bg-light">
   <header class="k_section__header">Blockquotes</header>
   <div class="row">
     <div class="col --12@xs --4@lg">
-      <blockquote class="blockquote">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+      <blockquote>
+        Default blockquote says lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </blockquote>
     </div>
     <div class="col --12@xs --4@lg">
-      <blockquote class="blockquote --mark">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+      <blockquote class="bg--yellow">
+        Blockquote says a colored background is nice sometimes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </blockquote>
     </div>
     <div class="col --12@xs --4@lg">
-      <blockquote class="blockquote --mark --purple-dark">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-        <div class="blockquote__cite">Person Name</div>
-        <div class="blockquote__source">Washington Post</div>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <header class="k_section__header">White Blockquotes</header>
-  <div class="row">
-    <div class="col --12@xs --4@lg">
-      <blockquote class="blockquote --white shadow--none">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-      </blockquote>
-    </div>
-    <div class="col --12@xs --4@lg">
-      <blockquote class="blockquote --white --mark shadow--none">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-      </blockquote>
-    </div>
-    <div class="col --12@xs --4@lg">
-      <blockquote class="blockquote --white blockquote--mark">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-        <div class="blockquote__cite">Person Name</div>
-        <div class="blockquote__source">Washington Post</div>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <header class="k_section__header">Outlined Blockquotes</header>
-  <div class="row">
-    <div class="col --12@xs --4@lg">
-      <blockquote class="blockquote --outline">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-      </blockquote>
-    </div>
-    <div class="col --12@xs --4@lg">
-      <blockquote class="blockquote --outline --mark blockquote--teal">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-      </blockquote>
-    </div>
-    <div class="col --12@xs --4@lg">
-      <blockquote class="blockquote --outline --mark blockquote--orange-dark">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-        <div class="blockquote__cite">Person Name</div>
-        <div class="blockquote__source">Washington Post</div>
+      <blockquote class="+shadow">
+        Shadowy blockquote has class. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        <cite>Person Name<br>
+        Washington Post</cite>
       </blockquote>
     </div>
   </div>

@@ -1,0 +1,8 @@
+//
+// Shadows
+// * Add a shadow ad hoc
+
+.\+shadow {
+  @include box-shadow();
+  background-color: #fff;
+}
