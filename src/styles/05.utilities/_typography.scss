@@ -56,7 +56,7 @@
 .section {
   > .__header {
     .__title {
-      @include get_type($type-d6);
+      @include get_type($type-d5);
       margin-bottom: 0.25rem;
       font-weight: $type-light;
     }
