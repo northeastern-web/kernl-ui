@@ -158,7 +158,7 @@
 
 <section class="section --banner">
   <div class="__header mb--1@xs">
-    <div class="__pretitle">Section Header: Banner (not page-title banner)</div>
+    <div class="__pretitle">Inceptos Bibendum</div>
     <h2 class="__title">Here's a Banner Section Title</h2>
     <div class="__subtitle">Subtitle Inceptos Bibendum Amet Mollis Dapibus</div>
   </div>

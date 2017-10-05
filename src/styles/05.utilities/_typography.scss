@@ -58,13 +58,13 @@
     .__title {
       @include get_type($type-d5);
       margin-bottom: 0.25rem;
-      font-weight: $type-light;
+      font-weight: $type-regular;
     }
 
-    .__pretitle { margin-bottom: 0.25rem; }
+    .__pretitle { margin-bottom: 0.5rem; }
 
     .__subtitle {
-      @include get_type($type-d2);
+      @include get_type($type-lead);
       font-weight: $type-light;
     }
   }
