@@ -313,10 +313,15 @@
       .\+children {
 
         &:hover {
+          > .__link { background: $gray-100; }
+
           .__submenu {
+            border-top: 1px solid $gray-800;
+            padding: 0;
             @include make-row();
+            margin-right: 0 !important;
             top: 5.75rem;
-            background: rgba($gray-100, 0.9);
+            background: rgba($gray-100, 1);
             min-width: 0;
             max-width: none;
             width: auto;
@@ -326,10 +331,16 @@
             padding-top: 1rem;
             padding-bottom: 1rem;
 
+            > li {
+              padding-top: 1rem;
+              padding-bottom: 1rem;
+            }
+
             .__item > a,
             .__link {
-              @include get_type($type-sm);
-              padding: 0.5rem;
+              @include make-masthead();
+              @include get_type($type-xs);
+              padding: 0.5rem 0;
               color: inherit;
 
               &:hover,
@@ -343,24 +354,52 @@
 
             ul {
               @include list_unstyled();
-              padding: 0.5rem;
 
               a {
                 &:hover {
                   background-color: transparent !important;
-                  color: $type-link;
+                  color: $type-link !important;
                 }
               }
             }
 
             .\--heading {
-              font-size: $fs-d1 !important;
+              font-size: $fs-root !important;
               border-bottom: 1px solid $gray-200;
+
+              &:hover {
+                background-color: transparent;
+                color: $type-link !important;
+              }
             }
 
             &:after {
               display: none;
             }
+
+            .\--feature {
+              flex-basis: 22%;
+              max-width: 22%;
+              @include border-radius(2px);
+
+              a,
+              .__link {
+                margin-left: 1rem;
+
+                &:hover { color: #fff !important; }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      .\+children {
+        &:hover {
+          .__submenu {
+            // margin-top: -1px;
+            // top: 6rem;
           }
         }
       }
