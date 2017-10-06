@@ -1,18 +1,14 @@
+<?php
+$url = "{$_SERVER['REQUEST_URI']}";
+include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
+?>
+
 <section class="section k_bg-light">
   <header class="k_section__header">Masthead</header>
 </section>
 
 <!-- start base masthead -->
-<header class="masthead">
-  <a class="__logo" href="/">
-    <img class="__logo__image" alt="Logo" src="/src/images/logo.png">
-  </a>
-  <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
-</header>
-<!-- end base masthead -->
-<div class="section --banner --middle +bgimg ta--c">
-  <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
-</div>
+<?= masthead(0, '', ''); ?>
 
 
 <!-- Fixed background  masthead -->
@@ -20,17 +16,8 @@
   <header class="k_section__header">Fixed Background Example</header>
 </section>
 
-<!-- start base masthead -->
-<header class="masthead">
-  <a class="__logo" href="/">
-    <img class="__logo__image" alt="Logo" src="/src/images/logo.png">
-  </a>
-  <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
-</header>
-<!-- end base masthead -->
-<div class="section --banner --fixed --middle +bgimg ta--c">
-  <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
-</div>
+<!-- start fixed masthead -->
+<?= masthead(1, '', '--fixed'); ?>
 
 
 <!-- Image background overlay masthead -->
@@ -39,16 +26,7 @@
 </section>
 
 <!-- end background-image-overlay masthead -->
-<header class="masthead --overlay">
-  <a class="__logo" href="/">
-    <img class="__logo__image" alt="Logo" src="/src/images/logo-white.png">
-  </a>
-  <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
-</header>
-<!-- end base masthead -->
-<div class="section --banner --middle +bgimg ta--c">
-  <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
-</div>
+<?= masthead(2, '--overlay', ''); ?>
 
 
 <!-- Fixed image background overlay masthead -->
@@ -56,17 +34,7 @@
   <header class="k_section__header">Overlay Fixed Background</header>
 </section>
 
-<!-- end background-image-overlay masthead -->
-<header class="masthead --overlay">
-  <a class="__logo" href="/">
-    <img class="__logo__image" alt="Logo" src="/src/images/logo-white.png">
-  </a>
-  <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
-</header>
-<!-- end base masthead -->
-<div class="section --banner --fixed --middle +bgimg ta--c">
-  <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
-</div>
+<?= masthead(3, '--overlay', '--fixed'); ?>
 
 
 <!-- masthead with border-bottom nav -->
@@ -74,16 +42,7 @@
   <header class="k_section__header">Masthead, Bottom-Bordered Selection</header>
 </section>
 
-<header class="masthead +border">
-  <a class="__logo" href="/">
-    <img class="__logo__image" alt="Logo" src="/src/images/logo.png">
-  </a>
-  <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php'; ?>
-</header>
-<!-- end border-bottom masthead -->
-<div class="section --banner +bgimg +large --middle ta--c">
-  <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
-</div>
+<?= masthead(4, '+border', ''); ?>
 
 
 <!-- masthead with border-bottom nav -->
@@ -91,14 +50,14 @@
   <header class="k_section__header">Masthead, Mega-Menu</header>
 </section>
 
-<header class="masthead +megamenu">
-  <a class="__logo" href="/">
+<header class="masthead --megamenu +utility">
+  <a class="__logo" href="<?= $url; ?>">
     <img class="__logo__image" alt="Logo" src="/src/images/logo.png">
   </a>
-<button class="__toggler hidden--up@lg"><i data-feather="menu"></i></button>
-<nav class="__drawer" role="navigation">
+<button class="__toggler hidden--up@lg id="toggle_5"><i data-feather="menu"></i></button>
+<nav class="__drawer" id="drawer_5" role="navigation">
   <div class="clearfix hidden--up@lg">
-    <a data-ga-click="" class="__logo" href="/">
+    <a data-ga-click="" class="__logo" href="<?= $url; ?>">
       <img class="__logo__image" alt="Logo" src="/src/images/logo-white.png">
     </a>
     <button class="__toggler menu-is-open"><i data-feather="x"></i></button>
@@ -147,7 +106,7 @@
       </ul>
     </li>
     <li class="__item +children">
-      <a class="__link" href="<?= $url; ?>">Bibendumo</a>
+      <a class="__link" href="<?= $url; ?>">Bibendum</a>
       <ul class="__submenu">
         <li class="col --12@xs --3@lg">
           <a class="__link --heading" href="<?= $url; ?>">Tortor Fusce</a>
@@ -266,6 +225,21 @@
           </ul>
         </li>
       </ul>
+    </li>
+    <li class="__item +icon">
+      <a class="__link" href="<?= $url; ?>"><i data-feather="search"></i></a>
+    </li>
+  </ul>
+
+  <ul class="__list --utility">
+    <li class="__item">
+      <a class="__link" href="<?= $url; ?>">About</a>
+    </li>
+    <li class="__item">
+      <a class="__link" href="<?= $url; ?>">Forms</a>
+    </li>
+    <li class="__item">
+      <a class="__link" href="<?= $url; ?>">Faculty &amp; Staff</a>
     </li>
   </ul>
 </nav>

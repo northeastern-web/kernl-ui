@@ -571,6 +571,15 @@
   &.\+outline {
     border: 1px solid rgba($color, 0.25);
   }
+
+  &.\+indent:not(.\--striped) {
+    > .__item,
+    > li {
+      &:hover {
+        background-color: rgba($color, 0.05);
+      }
+    }
+  }
 }
 
 // List Groups Sizing
@@ -580,15 +589,12 @@
   > .__item,
   > li {
     padding: $padding-y 0 !important;
-
-    &:first-child { padding-top: 0 !important; }
-    &:last-child { padding-bottom: 0 !important; }
   }
 
   &.\+shadow,
   &.\+outline,
   &.\--dark {
-    padding: $padding-y $padding-x !important;
+    padding: 0 $padding-x !important;
   }
 
 
@@ -598,6 +604,20 @@
   &.\--striped > a {
     border: 0 none;
     padding: $padding-y $padding-x !important;
+  }
+
+  &.\+indent:not(.\--striped) {
+    > .__item,
+    > li {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:hover {
+        padding-left: $padding-y !important;
+        padding-right: $padding-y/2 !important;
+      }
+    }
   }
 }
 

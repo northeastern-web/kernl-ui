@@ -97,8 +97,7 @@
       padding-top: 0;
       margin: 0;
      >.__item {
-        display: inline-block;
-        margin-right: -3px;
+        float: left;
       }
     }
   }
@@ -303,7 +302,7 @@
     }
   }
 
-  &.\+megamenu {
+  &.\--megamenu {
 
     @include media-breakpoint-up(lg) {
       .__drawer,
@@ -311,12 +310,13 @@
       .__item { position: static; }
 
       .\+children {
+        > .__link { border-bottom: 4px solid transparent; }
 
         &:hover {
-          > .__link { background: $gray-100; }
+          > .__link { border-bottom-color: rgba($type-color, 0.25); }
 
           .__submenu {
-            border-top: 1px solid $gray-800;
+            border-top: 1px solid $gray-200;
             padding: 0;
             @include make-row();
             margin-right: 0 !important;
@@ -348,7 +348,6 @@
                 background: $type-color;
                 color: #fff;
                 text-decoration: none;
-                border-radius: 2px;
               }
             }
 
@@ -393,29 +392,78 @@
         }
       }
     }
+  }
 
-    @include media-breakpoint-up(xl) {
-      .\+children {
-        &:hover {
-          .__submenu {
-            // margin-top: -1px;
-            // top: 6rem;
-          }
-        }
-      }
+  .\+icon {
+    @include media-breakpoint-up(lg) {
+      a { padding-bottom: 0 !important; }
     }
   }
 
   // add a border to the bottom of active nav link
-  &.\+border .__list {
-    .active > .__link,
-    .active.__item > a {
+  &.\+border {
+    .__list {
       @include media-breakpoint-up(lg) {
-        border-bottom: 3px solid rgba($type-color, 0.35);
+        .__link,
+        .__item > a {
+          border-bottom: 3px solid transparent;
+
+          &:hover { border-bottom-color: rgba($type-color, 0.5); }
+        }
+
+        .active > .__link,
+        .active.__item > a { border-bottom-color: rgba($type-color, 0.35); }
       }
 
       @include media-breakpoint-up(xl) {
-        padding: 2.5rem 0.75rem 2.4rem;
+        .__link,
+        .__item > a {padding: 2.5rem 0.75rem 2.4rem; }
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      .\+children:hover .__submenu { top: 4.75rem; }
+    }
+  }
+
+  &.\+utility {
+    @include media-breakpoint-up(lg) {
+      .__logo { margin-top: 1.625rem; }
+
+      .__list:not(.\--utility) {
+        margin-top: 2.5rem;
+
+        .__link {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+
+    .\+children:hover .__submenu { 
+      @include media-breakpoint-up(lg) {top: 6.25rem; }
+      @include media-breakpoint-up(xl) { top: 6.125rem; }
+    }
+  }
+
+  .\--utility {
+    @include media-breakpoint-up(lg) {
+      @include make-masthead();
+      position: absolute !important;
+      top: 0.5rem;
+      right: 0;
+
+      .__link {
+        padding: 0.625rem 0.5rem;
+      }
+    }
+
+    .__link {
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      font-size: $fs-root;
+      @include media-breakpoint-up(lg) {
+        font-size: $fs-xs;
       }
     }
   }
@@ -427,6 +475,10 @@
   top: 0;
   right: auto;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1 100%;
+  overflow-y: scroll;
   width: 100%;
   height: 100%;
   max-width: 35rem;
@@ -435,6 +487,10 @@
   transform: translateX(-100%);
   transition: transform 0.375s ease-in,
   visibility 0.375s ease-in;
+
+  .__toggler {
+    margin-top: 1.125rem;
+  }
 
   @include media-breakpoint-up(lg) {
     position: relative;
@@ -447,6 +503,7 @@
     background: transparent;
     transition: none;
     transform: none;
+    overflow-y: visible;
   }
 }
 
@@ -467,10 +524,6 @@
       .__toggler,
       .__list {
         animation: bump 0.375s ease 0.375s;
-      }
-
-      .__toggler {
-        margin-top: 1.125rem;
       }
     }
   }
