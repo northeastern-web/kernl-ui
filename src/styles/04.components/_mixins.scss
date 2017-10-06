@@ -130,7 +130,7 @@
 // Alert Size
 @mixin alert_size($padding-y, $padding-x) {
   padding: $padding-y $padding-x;
-  @include get_type();
+  // @include get_type();
 }
 
 // Alert Variant

@@ -56,7 +56,7 @@
 .section {
   > .__header {
     .__title {
-      @include get_type($type-d5);
+      @include type-d5();
       margin-bottom: 0.25rem;
       font-weight: $type-regular;
     }
@@ -64,7 +64,7 @@
     .__pretitle { margin-bottom: 0.5rem; }
 
     .__subtitle {
-      @include get_type($type-lead);
+      @include type-lead();
       font-weight: $type-light;
     }
   }
@@ -75,6 +75,6 @@
 // Tables
 
 .th--sm th {
-  @include get_type($type-xs);
+  @include type-xs();
   color: rgba($type-color, 0.65);
 }

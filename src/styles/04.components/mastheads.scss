@@ -220,7 +220,7 @@
 
           .__item > a,
           .__link {
-            @include get_type($type-sm);
+            @include type-sm();
             padding: 0.5rem;
             color: inherit;
 
@@ -339,7 +339,7 @@
             .__item > a,
             .__link {
               @include make-masthead();
-              @include get_type($type-xs);
+              @include type-xs();
               padding: 0.5rem 0;
               color: inherit;
 
@@ -440,7 +440,7 @@
       }
     }
 
-    .\+children:hover .__submenu { 
+    .\+children:hover .__submenu {
       @include media-breakpoint-up(lg) {top: 6.25rem; }
       @include media-breakpoint-up(xl) { top: 6.125rem; }
     }

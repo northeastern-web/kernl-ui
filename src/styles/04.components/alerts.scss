@@ -130,12 +130,12 @@
   //
   // Sizing
   &.\--sm {
-    @include get_type($type-sm);
+    @include type-sm();
     display: inline-block;
     vertical-align: top; // to prevent extra vertical space on bottom
     width: auto;
 
-    @include media-breakpoint-up(lg) { @include get_type($type-xs); }
+    @include media-breakpoint-up(lg) { @include type-xs(); }
 
     .__body { padding: .5rem .75rem; }
   }

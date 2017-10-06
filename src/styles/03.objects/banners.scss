@@ -72,16 +72,16 @@
   }
 
   .__pretitle {
-    @include get_type($type-base);
     margin-bottom: 0.25rem;
+    font-size: $fs-root;
   }
 
   .__title {
-    @include get_type($type-title);
+    @include type-d5();
   }
 
   .__subtitle {
-    @include get_type($type-d1);
+    @include type-d1();
     margin-bottom: 0.25rem;
   }
 }

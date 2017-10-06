@@ -75,7 +75,7 @@
   // Body
   .__body {
     padding: 1rem 1rem 3rem;
-    @include get_type($type-sm);
+    @include type-sm();
 
     p {
       font-size: inherit;
@@ -87,9 +87,9 @@
   //
   // Titles with .__body
   .__title {
-    @include get_type($type-base);
-    font-weight: 900;
     line-height: 1.25;
+    font-weight: 900;
+    font-size: $fs-root;
     @include font_smoothing();
   }
 
@@ -117,7 +117,7 @@
   .__header,
   .__footer {
     // @extend .\--row;
-    @include get_type($type-sm);
+    @include type-sm();
     height: 2.5rem;
     display: flex;
     align-items: center;
@@ -271,9 +271,9 @@
     .__body p,
     .__header,
     .__footer {
-      @include get_type($type-sm);
+      @include type-sm();
 
-      @include media_breakpoint_up(lg) { @include get_type($type-xs); }
+      @include media_breakpoint_up(lg) { @include type-xs(); }
     }
 
     .__graphic__img {
@@ -330,7 +330,7 @@
     .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
       @include card_horizontal($width_graphic: 50%, $width_text: 50%);
     }
-    
+
     .card.\--overlay {
       .__graphic__img {
 

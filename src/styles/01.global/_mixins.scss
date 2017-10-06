@@ -6,26 +6,86 @@
 //
 // Typography
 
-// Get responsive type and properties
-  // @param  {array} $type
-  // @param  {bool} $colorContrast: false
-  // @return {[type]}
+@mixin type-root($colorContrast: false) {
+  line-height: 1.5;
 
-@mixin get_type($type, $colorContrast: false) {
+  @include media_breakpoint_up(xs) { font-size: 15px; }
+  @include media_breakpoint_up(sm) { font-size: 16px; }
+  @include media_breakpoint_up(xl) { font-size: 17px; }
+  @include media_breakpoint_up(xx) { font-size: 18px; }
 
-  // Loop through properties
-  @each $property, $value in map-get($type, properties) {
-    #{$property}: $value;
-  }
+  @if $colorContrast { opacity: 0.54; }
+}
 
-  // Loop through font-sizes by breakpoint
-  @each $breakpoint, $size in map-get($type, sizes) {
-    @include media_breakpoint_up($breakpoint) {
-      font-size: $size;
-    }
-  }
+@mixin type-d1($colorContrast: false) {
+  line-height: 1.175;
+  font-size: $fs-d1;
 
-  // Apply color contrast
+  @if $colorContrast { opacity: 0.54; }
+}
+
+@mixin type-d2($colorContrast: false) {
+  line-height: 1.175;
+  font-size: $fs-d2;
+
+  @if $colorContrast { opacity: 0.54; }
+}
+
+@mixin type-d3($colorContrast: false) {
+  line-height: 1.175;
+  font-size: $fs-d3;
+
+  @if $colorContrast { opacity: 0.54; }
+}
+
+@mixin type-d4($colorContrast: false) {
+  line-height: 1.175;
+  font-size: $fs-d4;
+
+  @if $colorContrast { opacity: 0.54; }
+}
+
+@mixin type-d5($colorContrast: false) {
+  line-height: 1.2;
+  font-size: $fs-d5;
+
+  @if $colorContrast { opacity: 0.54; }
+}
+
+@mixin type-d6($colorContrast: false) {
+  line-height: 1.05;
+  font-size: $fs-d6;
+
+  @if $colorContrast { opacity: 0.54; }
+}
+
+@mixin type-d7($colorContrast: false) {
+  letter-spacing: -0.04rem;
+  line-height: 1;
+  font-size: $fs-d7;
+
+  @if $colorContrast { opacity: 0.54; }
+}
+
+@mixin type-lead($colorContrast: false) {
+  line-height: 1.25;
+  font-weight: $type-light;
+  font-size: $fs-d1;
+
+  @if $colorContrast { opacity: 0.54; }
+}
+
+@mixin type-sm($colorContrast: false) {
+  line-height: 1.35;
+  font-size: $fs-sm;
+
+  @if $colorContrast { opacity: 0.54; }
+}
+
+@mixin type-xs($colorContrast: false) {
+  line-height: 1.3;
+  font-size: $fs-xs;
+
   @if $colorContrast { opacity: 0.54; }
 }
 

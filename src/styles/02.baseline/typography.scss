@@ -4,7 +4,7 @@
 
 
 html {
-  @include get_type($type-root);
+  @include type-root();
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-family: $type-sans;
@@ -22,47 +22,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1,
-.type--d1 { @include get_type($type-d5); }
+.fs--d5,
+.fs--lg { @include type_d5(); }
 
 h2,
-.type--d2 { @include get_type($type-d4); }
+.fs--d4 { @include type_d4(); }
 
 h3,
-.type--d3 { @include get_type($type-d3); }
+.fs--d3 { @include type_d3(); }
 
 h4,
-.type--d4 { @include get_type($type-d2); }
+.fs--d2 { @include type_d2(); }
 
 h5,
-.type--headline { @include get_type($type-d1); }
+.fs--d1 { @include type_d1(); }
 
-h6,
-.type--title { @include get_type($type-root); }
+h6 { font-size: $fs-root; }
 
 
 //
 // Paragraphs
 
 p {
-  // @include get_type($type-base);
-  margin: 0 0 1rem;
+  margin-bottom: 1rem;
 }
 
 // Lead
-.type--lead { @include get_type($type-lead); }
+.type--lead { @include type-lead(); }
 
 // Small
 small,
-.type--sm { @include get_type($type-sm); }
+.type--sm { @include type_sm(); }
 
 // Extra Small
-.type--xs { @include get_type($type-xs); }
+.type--xs { @include type_xs(); }
 
 // Large
-.type--lg { @include get_type($type-d5); }
+.type--lg { @include type_d5(); }
 
 // Extra Large
-.type--xl { @include get_type($type-d7); }
+.type--xl { @include type_d7(); }
 
 
 //
@@ -95,14 +94,13 @@ blockquote {
   }
 
   &, p {
-    @include get_type($type-lead);
+    @include type_lead();
     margin-bottom: 1rem;
-    // font-family: $type-serif;
   }
 
   cite {
     display: block;
-    @include get_type($type-base);
+    font-size: $fs-root;
     line-height: 1.5;
   }
 }

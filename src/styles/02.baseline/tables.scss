@@ -28,7 +28,7 @@ table {
 }
 
 td, th {
-  @include get_type($type-sm);
+  @include type-sm();
   margin: 0;
   padding: .75rem;
   border-bottom: 1px solid #ddd;

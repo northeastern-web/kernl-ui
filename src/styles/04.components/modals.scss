@@ -96,17 +96,17 @@
 
   &.\--contact {}
 
-  .\--contact__info { @include get_type($type-sm); }
+  .\--contact__info { @include type-sm(); }
 
   .__body.\--contact__bio { @include media_breakpoint_up(md) { padding: 7rem 2.5rem 1rem 1.25rem; } }
 
   .\--contact__name {
-    @include get_type($type-d5);
+    @include type-d5();
     font-weight: 900;
   }
 
   .\--contact__title {
-    @include get_type($type-lead);
+    @include type-lead();
     font-weight: 400;
   }
 }
