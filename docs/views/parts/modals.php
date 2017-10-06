@@ -81,3 +81,17 @@
     </div>
   </div>
 </section>
+
+<section class="section k_bg-light">
+  <header class="k_section__header">Full-Screen Search</header>
+  <div class="row">
+    <div class="col --12@xs">
+      <div class="ta--c py--1@xs py--3@md">
+        <a href="#" data-toggle="modal" data-target="#modal_search">
+          <i data-feather="search"></i>
+        </a>
+      </div>
+      <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_modal-search.php'; ?>
+    </div>
+  </div>
+</section>

@@ -109,6 +109,35 @@
     @include type-lead();
     font-weight: 400;
   }
+
+  &.\--search {
+    background-color: $blue-dark;
+    color: #fff;
+
+    .__dialog {
+      max-width: none;
+    }
+
+    .__content {
+      width: 40%;
+      margin: 5% auto;
+      background: transparent;
+      box-shadow: none;
+      color: #fff;
+    }
+
+    .form__control {
+      background: transparent;
+      border: 0 none;
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+      @include type-d4();
+      font-weight: $type-light;
+      padding-left: 0;
+      color: #fff;
+      outline: none;
+      box-shadow: none;
+    }
+  }
 }
 
 .modal-open .modal {
