@@ -8,7 +8,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
 </section>
 
 <!-- start base masthead -->
-<?= masthead(0, '+utility', ''); ?>
+<?= masthead(0, '', ''); ?>
 
 
 <!-- Fixed background  masthead -->
