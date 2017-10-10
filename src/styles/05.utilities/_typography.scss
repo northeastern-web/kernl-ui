@@ -33,7 +33,7 @@
 .ta--c  { text-align: center !important; }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @include media_breakpoint_up($breakpoint) {
+  @include mqbp-up($breakpoint) {
     .ta--l\@#{$breakpoint}  { text-align: left !important; }
     .ta--r\@#{$breakpoint}  { text-align: right !important; }
     .ta--c\@#{$breakpoint}  { text-align: center !important; }

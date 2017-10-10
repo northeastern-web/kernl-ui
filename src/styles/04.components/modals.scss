@@ -38,7 +38,7 @@
     margin: 3rem auto;
     max-width: 450px;
 
-    @include media_breakpoint_up(md) {
+    @include mqbp-up(md) {
       max-width: 760px;
     }
   }
@@ -98,7 +98,7 @@
 
   .\--contact__info { @include type-sm(); }
 
-  .__body.\--contact__bio { @include media_breakpoint_up(md) { padding: 7rem 2.5rem 1rem 1.25rem; } }
+  .__body.\--contact__bio { @include mqbp-up(md) { padding: 7rem 2.5rem 1rem 1.25rem; } }
 
   .\--contact__name {
     @include type-d5();

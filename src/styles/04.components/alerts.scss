@@ -59,7 +59,7 @@
     justify-content: center;
     align-items: center;
 
-    @include media-breakpoint-up(lg) {
+    @include mqbp-up(lg) {
       padding: 0 0.5rem 0 0;
       flex: 0 0 10%;
       max-width: 10%;
@@ -75,7 +75,7 @@
         max-height: 2rem;
       }
 
-      @include media-breakpoint-up(lg) {
+      @include mqbp-up(lg) {
         margin: 0 auto;
       }
     }
@@ -100,7 +100,7 @@
         margin-bottom: 0;
       }
 
-      @include media-breakpoint-up(lg) {
+      @include mqbp-up(lg) {
         display: inline-block;
       }
     }
@@ -135,7 +135,7 @@
     vertical-align: top; // to prevent extra vertical space on bottom
     width: auto;
 
-    @include media-breakpoint-up(lg) { @include type-xs(); }
+    @include mqbp-up(lg) { @include type-xs(); }
 
     .__body { padding: .5rem .75rem; }
   }
@@ -143,7 +143,7 @@
   //
   // Adds a button look to the right
   &.\--btn {
-    @include media-breakpoint-up(lg) {
+    @include mqbp-up(lg) {
       &, .__link { display: flex; }
     }
 
@@ -152,7 +152,7 @@
       display: flex;
       flex-direction: column;
 
-      @include media-breakpoint-up(lg) {
+      @include mqbp-up(lg) {
         @include make-col(8, 10);
         flex-direction: row;
       }
@@ -161,7 +161,7 @@
     .__footer {
       @extend %grid-column;
 
-      @include media-breakpoint-up(lg) {
+      @include mqbp-up(lg) {
         @include make-col(2, 10);
         padding: 1rem;
       }

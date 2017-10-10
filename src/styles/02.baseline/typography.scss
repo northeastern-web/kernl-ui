@@ -89,7 +89,7 @@ blockquote {
   margin: 0 0 1rem;
   padding: 1rem;
 
-  @include media-breakpoint-up(md) {
+  @include mqbp-up(md) {
     padding: 2rem;
   }
 

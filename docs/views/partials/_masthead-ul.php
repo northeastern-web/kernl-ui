@@ -47,6 +47,18 @@ function masthead($id, $masthead_classes, $banner_classes) {
         <a class="__link" href="' . $url .'">Malesuada Nucleus</a>
       </li>
     </ul>
+
+    <ul class="__list --utility">
+      <li class="__item">
+        <a class="__link" href="#">About</a>
+      </li>
+      <li class="__item">
+        <a class="__link" href="#">Forms</a>
+      </li>
+      <li class="__item">
+        <a class="__link" href="#">Faculty &amp; Staff</a>
+      </li>
+    </ul>
   </nav>
 </header>
 <div class="section --banner --middle +bgimg ta--c ' . $banner_classes . '">

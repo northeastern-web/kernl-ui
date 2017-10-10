@@ -416,7 +416,7 @@ select.form__control--lg {
 
 .form-inline {
   // Kick in the inline
-  @include media-breakpoint-up(sm) {
+  @include mqbp-up(sm) {
     label {
       margin-bottom: 0;
     }

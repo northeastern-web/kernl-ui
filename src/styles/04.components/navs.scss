@@ -15,7 +15,7 @@
   }
 
   &.\--interior {
-    @include media_breakpoint_up(lg) {
+    @include mqbp-up(lg) {
       border-top: 1px solid $gray-200;
     }
   }
@@ -115,7 +115,7 @@
     .__item {
       vertical-align: top;
 
-      @include media_breakpoint_up(lg) {
+      @include mqbp-up(lg) {
         // was (md), but after about four items, it would wrap.
         float: left;
       }
@@ -130,7 +130,7 @@
       font-weight: 400;
       white-space: nowrap;
 
-      @include media_breakpoint_up(md) {
+      @include mqbp-up(md) {
         border-left: 0 none;
         border-bottom: 3px solid transparent;
         transition: border-bottom 0.25s ease;
@@ -153,14 +153,14 @@
         +.__child-list {
           display: block;
 
-          @include media_breakpoint_up(md) {
+          @include mqbp-up(md) {
             position: absolute;
             left: 0;
             @include clearfix();
           }
 
           .__child-item {
-            @include media_breakpoint_up(md) {
+            @include mqbp-up(md) {
               float: left;
             }
           }
@@ -188,7 +188,7 @@
           }
         }
 
-        @include media_breakpoint_up(md) {
+        @include mqbp-up(md) {
           border-left: 0 none;
           border-bottom: 3px solid $type-link;
         }
@@ -197,7 +197,7 @@
   }
 
   &.\--bordered {
-    @include media_breakpoint_up(md) {
+    @include mqbp-up(md) {
       .__list { border-bottom: 1px solid $gray-200; }
 
       .__item { margin-bottom: -2px; }
@@ -238,7 +238,7 @@
       margin-bottom: -1px;
       &:last-child { margin-bottom: 0; }
 
-      @include media_breakpoint_up(lg) {
+      @include mqbp-up(lg) {
         margin-bottom: 0;
         margin-right: 1rem;
         &:last-child { margin-right: 0; }
@@ -251,7 +251,7 @@
       padding: 1rem 1rem 1rem 2.5rem;
       position: relative;
 
-      @include media_breakpoint_up(lg) {
+      @include mqbp-up(lg) {
         padding: 8px 1rem 8px 2.5rem;
       }
 
@@ -347,7 +347,7 @@
     }
   }
 
-  @include media_breakpoint_up(md) {
+  @include mqbp-up(md) {
     .__list {
       visibility: visible;
       background: transparent;

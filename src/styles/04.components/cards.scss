@@ -15,7 +15,7 @@
 
   &:hover { @include box_shadow($component-shadow-hover); }
 
-  @include media_breakpoint_up(xx) { margin-bottom: $grid-gutter-width-base + 10; }
+  @include mqbp-up(xx) { margin-bottom: $grid-gutter-width-base + 10; }
 
   .badge {
     display: inline-flex;
@@ -222,7 +222,7 @@
       right: -10rem;
       margin: auto;
 
-      @include media_breakpoint_up(sm) {
+      @include mqbp-up(sm) {
         max-height: 120%;
       }
     }
@@ -273,15 +273,15 @@
     .__footer {
       @include type-sm();
 
-      @include media_breakpoint_up(lg) { @include type-xs(); }
+      @include mqbp-up(lg) { @include type-xs(); }
     }
 
     .__graphic__img {
         max-height: 175%;
-        @include media_breakpoint_up(sm) { max-height: 110%; }
-        @include media_breakpoint_up(md) { max-height: 130%; }
-        @include media_breakpoint_up(lg) { max-height: 106%; }
-        @include media_breakpoint_up(xx) { max-height: 130%; }
+        @include mqbp-up(sm) { max-height: 110%; }
+        @include mqbp-up(md) { max-height: 130%; }
+        @include mqbp-up(lg) { max-height: 106%; }
+        @include mqbp-up(xx) { max-height: 130%; }
     }
 
     .__title {
@@ -291,7 +291,7 @@
 }
 
 
-@include media_breakpoint_up(sm) {
+@include mqbp-up(sm) {
   .\--3\@sm, .\--4\@sm, .\--5\@sm, .\--6\@sm {
     .card {
       height: $card_height_sm;
@@ -306,7 +306,7 @@
 }
 
 
-@include media_breakpoint_up(md) {
+@include mqbp-up(md) {
   [class^="\\--"][class$="sm"],
   [class^="\\--"][class$="md"],
   [class^="\\--"][class$="lg"] {
@@ -334,11 +334,11 @@
     .card.\--overlay {
       .__graphic__img {
 
-        @include media_breakpoint_up(md) {
+        @include mqbp-up(md) {
           max-height: 110%;
         }
 
-        @include media_breakpoint_up(md) {
+        @include mqbp-up(md) {
           max-height: 150%;
         }
       }
@@ -351,7 +351,7 @@
   }
 }
 
-@include media_breakpoint_up(lg) {
+@include mqbp-up(lg) {
   [class^="\\--"][class$="sm"],
   [class^="\\--"][class$="md"],
   [class^="\\--"][class$="lg"] {
@@ -386,7 +386,7 @@
   }
 }
 
-@include media_breakpoint_up(xl) {
+@include mqbp-up(xl) {
   [class^="\\--"][class$="sm"],
   [class^="\\--"][class$="md"],
   [class^="\\--"][class$="lg"],
@@ -403,7 +403,7 @@
   }
 }
 
-@include media_breakpoint_up(xx) {
+@include mqbp-up(xx) {
   .card {
     height: $card_height_xx;
     margin-bottom: 40px; // = match xx gutter
@@ -460,7 +460,7 @@
     transform: translateY(-50%);
   }
 
-  @include media_breakpoint_up(sm) {
+  @include mqbp-up(sm) {
     min-height: $card_height_sm;
   }
 }
@@ -469,10 +469,10 @@
 //
 // Sizing
 .card {
-  @include media_breakpoint_up(md) { height: $card_height_sm; max-height: none; }
-  @include media_breakpoint_up(lg) { height: $card_height_lg; }
-  @include media_breakpoint_up(xl) { height: $card_height_xl; }
-  @include media_breakpoint_up(xx) { height: $card_height_xx; }
+  @include mqbp-up(md) { height: $card_height_sm; max-height: none; }
+  @include mqbp-up(lg) { height: $card_height_lg; }
+  @include mqbp-up(xl) { height: $card_height_xl; }
+  @include mqbp-up(xx) { height: $card_height_xx; }
 
   &.\--tile:after { height: 2.5rem!important; }
 }

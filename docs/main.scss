@@ -61,7 +61,7 @@
   flex: 1;
   flex-direction: column;
 
-  @include media_breakpoint_up(md) {
+  @include mqbp-up(md) {
     flex-direction: row;
   }
 }
@@ -84,7 +84,7 @@
     columns: 4;
   }
 
-  @include media_breakpoint_up(md) {
+  @include mqbp-up(md) {
     columns: initial;
   }
 }
@@ -183,13 +183,13 @@
       filter: grayscale(1);
       opacity: 0.2;
 
-      @include media_breakpoint_up(md) {
+      @include mqbp-up(md) {
         width: auto;
         max-width: 300%;
         height: 100%;
       }
 
-      @include media_breakpoint_up(xx) {
+      @include mqbp-up(xx) {
         min-width: 100%;
         max-width: 150%;
         height: auto;
@@ -330,11 +330,11 @@ $black-alpha: rgba(0, 0, 0, 0.7);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    @include media_breakpoint_up(sm) {
+    @include mqbp-up(sm) {
       font-size: 0.75rem;
     }
 
-    @include media_breakpoint_up(md) {
+    @include mqbp-up(md) {
       font-size: 0.825rem;
 
       &:first-child {
@@ -415,7 +415,7 @@ $black-alpha: rgba(0, 0, 0, 0.7);
   text-align: center;
 
   &.\--1\@lg {
-    @include media_breakpoint_up(lg) {
+    @include mqbp-up(lg) {
       max-width: 11.1111% !important;
       flex-basis: 11.1111%;
     }

@@ -9,10 +9,10 @@
 @mixin type-root($colorContrast: false) {
   line-height: 1.5;
 
-  @include media_breakpoint_up(xs) { font-size: 15px; }
-  @include media_breakpoint_up(sm) { font-size: 16px; }
-  @include media_breakpoint_up(xl) { font-size: 17px; }
-  @include media_breakpoint_up(xx) { font-size: 18px; }
+  @include mqbp-up(xs) { font-size: 15px; }
+  @include mqbp-up(sm) { font-size: 16px; }
+  @include mqbp-up(xl) { font-size: 17px; }
+  @include mqbp-up(xx) { font-size: 18px; }
 
   @if $colorContrast { opacity: 0.54; }
 }
@@ -132,7 +132,7 @@
       @extend %grid-column;
     }
 
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
+    @include mqbp-up($breakpoint, $breakpoints) {
       // Provide basic `.#{$col-prefix}-{bp}` classes for equal-width flexbox columns
       .#{$col-prefix}#{$infix} {
         flex-basis: 0;
@@ -177,7 +177,7 @@
   margin-left: auto;
 
   @each $breakpoint in map-keys($gutters) {
-    @include media-breakpoint-up($breakpoint) {
+    @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       padding: $gutter;
     }
@@ -186,7 +186,7 @@
 
 @mixin make-gutters($gutters: $grid-gutter-widths) {
   @each $breakpoint in map-keys($gutters) {
-    @include media-breakpoint-up($breakpoint) {
+    @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       padding-right: ($gutter / 2);
       padding-left:  ($gutter / 2);
@@ -199,7 +199,7 @@
   flex-wrap: wrap;
 
   @each $breakpoint in map-keys($gutters) {
-    @include media-breakpoint-up($breakpoint) {
+    @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       margin-right: ($gutter / -2);
       margin-left:  ($gutter / -2);
@@ -238,7 +238,7 @@
 // Masthead?
 @mixin make-masthead($gutters: $grid-gutter-widths) {
   @each $breakpoint in map-keys($gutters) {
-    @include media-breakpoint-up($breakpoint) {
+    @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       margin-right: ($gutter);
       margin-left:  ($gutter);
@@ -251,7 +251,7 @@
 // Media Queries
 
 // Media of at least the minimum breakpoint width
-@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+@mixin mqbp-up($name, $breakpoints: $grid-breakpoints) {
   $min: _breakpoint-min($name, $breakpoints);
   @if $min {
     @media (min-width: $min) {
@@ -263,7 +263,7 @@
 }
 
 // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
-@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+@mixin mqbp-down($name, $breakpoints: $grid-breakpoints) {
   $max: breakpoint-max($name, $breakpoints);
   @if $max {
     @media (max-width: $max) {
@@ -275,17 +275,17 @@
 }
 
 // Media that spans multiple breakpoint widths.
-@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
-  @include media-breakpoint-up($lower, $breakpoints) {
-    @include media-breakpoint-down($upper, $breakpoints) {
+@mixin mqbp-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+  @include mqbp-up($lower, $breakpoints) {
+    @include mqbp-down($upper, $breakpoints) {
       @content;
     }
   }
 }
 
 // Media between the breakpoint's minimum and maximum widths.
-@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
-  @include media-breakpoint-between($name, $name, $breakpoints) {
+@mixin mqbp-only($name, $breakpoints: $grid-breakpoints) {
+  @include mqbp-between($name, $name, $breakpoints) {
     @content;
   }
 }

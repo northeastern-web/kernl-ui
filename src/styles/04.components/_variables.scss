@@ -84,7 +84,7 @@ $list-group-padding-x:       1rem;
   padding: 0 1rem 1rem;
   max-width: 100%;
   text-align: center;
-  @include media-breakpoint-up(lg) {
+  @include mqbp-up(lg) {
     padding: 1rem;
   }
 }

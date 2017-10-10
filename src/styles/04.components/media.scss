@@ -4,7 +4,7 @@
 
 .media {
   margin-bottom: 1rem;
-  @include _media_object_size($fs-sm, 1rem);
+  @include media-object-size($fs-sm, 1rem);
 
 
   // 
@@ -80,11 +80,11 @@
 
   /* Sizing */
   &.\--xs {
-    @include _media_object_size($fs-xs, $fs-xs, 3rem);
+    @include media-object-size($fs-xs, $fs-xs, 3rem);
     .__title { margin-bottom: 0.2rem; }
   }
-  &.\--sm { @include _media_object_size($fs-sm, 1rem, 3rem); }
-  &.\--lg { @include _media_object_size($fs-sm, 1rem, 5rem); }
+  &.\--sm { @include media-object-size($fs-sm, 1rem, 3rem); }
+  &.\--lg { @include media-object-size($fs-sm, 1rem, 5rem); }
 
   /* Positioning */
   &.\--left {}

@@ -54,7 +54,7 @@
     left: auto;
   }
 
-  @include media_breakpoint_up(md) {
+  @include mqbp-up(md) {
     &.\--left {
       // &:not(.\--pill) {
         top: 0;
@@ -76,7 +76,7 @@
     }
   }
 
-  @include media_breakpoint_up(xl) {
+  @include mqbp-up(xl) {
     &.\--left {
       top: 0.5rem;
       left: 0.5rem;
@@ -94,7 +94,7 @@
     }
   }
 
-  @include media_breakpoint_up(xx) {
+  @include mqbp-up(xx) {
     &.\--left {
       top: 0.75rem;
       left: 0.75rem;

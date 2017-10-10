@@ -60,7 +60,7 @@
 
   //
   // Sizing
-  @include media_breakpoint_up(md) {
+  @include mqbp-up(md) {
     &.\--sm { @include list_group-size($list-group-padding-y/1.25, $list-group-padding-x/1.125, $fs-xs) }
   }
 

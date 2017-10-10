@@ -24,7 +24,7 @@
     -webkit-transition: all .3s ease 0s;
     transition: all .3s ease 0s;
 
-    @include media-breakpoint-up(lg) {
+    @include mqbp-up(lg) {
       width: 30%;
       float: left;
     }
@@ -33,7 +33,7 @@
   }
 
   .__body {
-    @include media-breakpoint-up(lg) {
+    @include mqbp-up(lg) {
       width: 70%;
       float: left;
     }

@@ -13,12 +13,12 @@
   &.\--contain {
     @include make-section();
 
-    @include media-breakpoint-up(lg) {
+    @include mqbp-up(lg) {
       padding-left: 6%;
       padding-right: 6%;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include mqbp-up(xl) {
       padding-left: 14%;
       padding-right: 14%;
     }
