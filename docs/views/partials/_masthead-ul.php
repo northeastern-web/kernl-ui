@@ -25,7 +25,7 @@ function masthead($id, $masthead_classes, $banner_classes) {
     </div>
 
     <ul class="__list">
-      <li class="__item active">
+      <li class="__item --active">
         <a class="__link" href="' . $url .'">Lorem Ipsum</a>
       </li>
       <li class="__item +children">

@@ -163,7 +163,7 @@ $form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns
   }
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  @include _form-control-focus();
+  @include form-control-focus();
 
   // Placeholder
   &::placeholder {
@@ -391,7 +391,7 @@ select.form__control--lg {
 
 // Form validation states
 .has-success {
-  @include _form-control-validation($green);
+  @include form-control-validation($green);
 
   .form__control--success {
     background-image: $form-icon-success;
@@ -399,7 +399,7 @@ select.form__control--lg {
 }
 
 .has-warning {
-  @include _form-control-validation($yellow);
+  @include form-control-validation($yellow);
 
   .form__control--warning {
     background-image: $form-icon-warning;
@@ -407,7 +407,7 @@ select.form__control--lg {
 }
 
 .has-danger {
-  @include _form-control-validation($red);
+  @include form-control-validation($red);
 
   .form__control--danger {
     background-image: $form-icon-danger;

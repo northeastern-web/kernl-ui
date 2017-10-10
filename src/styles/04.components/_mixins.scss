@@ -195,7 +195,6 @@
         border-color: $active-border;
     // Remove the gradient for the pressed/active state
     background-image: none;
-    // @include _box_shadow($btn-active-box-shadow);
 
     &:hover,
     &:focus,
@@ -658,7 +657,7 @@
 
 //
 // Forms
-@mixin _form-control-validation($color) {
+@mixin form-control-validation($color) {
   // Color the label and help text
   .form__control--feedback,
   .form__control--label,
@@ -683,7 +682,7 @@
   }
 }
 
-@mixin _form-control-focus() {
+@mixin form-control-focus() {
   &:focus {
     color: $input-color-focus;
     background-color: $input-bg-focus;
@@ -693,13 +692,13 @@
   }
 }
 
-@mixin _input-size($parent, $input-height, $padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+@mixin input-size($parent, $input-height, $padding-y, $padding-x, $font-size, $line-height, $border-radius) {
   #{$parent} {
     height: $input-height;
     padding: $padding-y $padding-x;
     font-size: $font-size;
     line-height: $line-height;
-    @include _border-radius($border-radius);
+    @include border-radius($border-radius);
   }
 
   select#{$parent} {

@@ -154,8 +154,8 @@
     }
   }
 
-  .__item.active > a,
-  .active > .__link {
+  .__item.\--active > a,
+  .\--active > .__link {
     font-weight: bold;
     color: lighten($type-color, 80%);
     @include mqbp-up(lg) {
@@ -211,7 +211,7 @@
           background: rgba(#f2f2f2, 0.9);
           padding: 0.5rem;
           border-radius: 2px;
-          box-shadow: 0 0 2px 0 rgba(0,0,0,0.25);
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
           z-index: 200;
           min-width: 190%;
           max-width: 300%;
@@ -295,8 +295,8 @@
 
       .__item a,
       .__link,
-      .active>.__link,
-      .active.__item a {
+      .\--active>.__link,
+      .\--active.__item a {
         color: #fff;
       }
     }
@@ -320,7 +320,7 @@
             @include make-row();
             margin-right: 0 !important;
             top: 5.75rem;
-            background: rgba($gray-100, 1);
+            background: $gray-100;
             min-width: 0;
             max-width: none;
             width: auto;
@@ -418,8 +418,8 @@
           &:hover { border-bottom-color: rgba($type-color, 0.5); }
         }
 
-        .active > .__link,
-        .active.__item > a { border-bottom-color: rgba($type-color, 0.35); }
+        .\--active > .__link,
+        .\--active.__item > a { border-bottom-color: rgba($type-color, 0.35); }
       }
 
       @include mqbp-up(xl) {
