@@ -206,7 +206,7 @@
         @include border_top_radius(1px);
         color: $type-color;
         border: 1px solid transparent;
-        border-bottom: 0 none;
+        border-bottom: 1px solid $gray-200;
         padding: 1rem 1.5rem;
         font-size: $fs-sm;
         transition: all 0.2s ease;
@@ -223,9 +223,8 @@
         &.child--active:hover,
         &.child--active:active {
           background-color: #fff;
-          border: 1px solid $gray-200;
-          border-bottom: 0 none;
-          margin-bottom: 0;
+          border: 1px solid #d0d0d0;
+          border-bottom-color: #fff;
         }
       }
     }
