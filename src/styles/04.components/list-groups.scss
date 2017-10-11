@@ -17,13 +17,11 @@
   .__item {
     display: block;
     position: relative;
-    // padding: $list-group-padding-y 0;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgba(0, 0, 0, 0.25);
     color: inherit;
     float: none !important;
-    // background-color: magenta;
 
     &:link:hover,
     &:link:active,
@@ -40,7 +38,7 @@
   > a,
   > li { @extend .__item; }
 
-  a { transition: all 0.2s ease; }
+  a { transition: all 0.3s ease-out; }
 
   //
   // Modifiers

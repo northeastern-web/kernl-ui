@@ -29,11 +29,11 @@ figure out --middle with a heading.
 
  -->
 
-<section class="section">
+<section class="section k_bg-light">
   <div class="row">
 
     <div class="col --12@xs --6@sm --4@lg --2@xl">
-      <article class="card --tile">
+      <article class="card --tile --outline --blue">
         <a href="#" class="__link">
           <div class="__body">
             <div class="__excerpt">
@@ -109,7 +109,7 @@ figure out --middle with a heading.
     </div>
 
     <div class="col --12@xs --6@sm --4@lg --2@xl">
-      <article class="card --tile --dark --middle">
+      <article class="card --tile --teal --middle">
         <a href="#" class="__link">
           <div class="__body">
             <div class="__icon --thin --lg">

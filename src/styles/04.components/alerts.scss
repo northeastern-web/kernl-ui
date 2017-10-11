@@ -45,6 +45,8 @@
     padding: 1rem;
 
     p, ul, ol, dl {
+      margin-top: 0;
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -125,7 +127,11 @@
 
   //
   // Outline
-  &.\--outline { @extend %component-outline; }
+  &.\--outline {
+    @extend %component-outline;
+    background-color: transparent !important;
+    box-shadow: none;
+  }
 
   //
   // Sizing

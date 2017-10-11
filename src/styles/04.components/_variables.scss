@@ -62,8 +62,7 @@ $list-group-padding-x:       1rem;
 
 // Component outline
 %component-outline {
-  color: $type-color;
-  background-color: transparent !important;
+  background-color: transparent;
   border-width: 1px;
   border-style: solid;
   border-color: rgba($type-color, 0.5);
