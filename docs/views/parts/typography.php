@@ -21,17 +21,17 @@
       <section class="section --banner +bgimg">
         <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       </section>
-      <p class="type--sm">This a little note set at <code>type--sm</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.875rem)</span>.</p>
+      <p class="type--sm">This a little note set at <code>type--sm</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.88rem)</span>.</p>
     </div>
   </div>
 </section>
 <section class="section --contain k_bg-light">
   <div class="row">
     <div class="col --12@xs">
-      <h2>Here is a Heading Two <span class="show-font-size">(<span class="element-font-size"></span> @ 2rem)</span></h2>
+      <h2>Here is a Heading Two <span class="show-font-size">(<span class="element-font-size"></span> @ 1.76rem)</span></h2>
       <p class="type--lead">This is a lead paragraph <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span></p>
       <p>Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-      <h3>Heading Three and Listy Lists <span class="show-font-size">(<span class="element-font-size"></span> @ 1.5rem)</span></h3>
+      <h3>Heading Three and Listy Lists <span class="show-font-size">(<span class="element-font-size"></span> @ 1.53rem)</span></h3>
       <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
       <h4>Default List Style</h4>
       <ul>
@@ -122,9 +122,9 @@
     </dl>
     <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
-    <h4>May the Fourth be With You <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span></h4>
+    <h4>May the Fourth be With You <span class="show-font-size">(<span class="element-font-size"></span> @ 1.41rem)</span></h4>
     <p>Sed posuere consectetur est at lobortis. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-    <h5>Sometimes We'll Use Heading Five <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span></h5>
+    <h5>Sometimes We'll Use Heading Five <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem)</span></h5>
     <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
     <h6 class="text-uppercase">And Even Heading Six if We're Really Feeling It <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span></h6>
     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
