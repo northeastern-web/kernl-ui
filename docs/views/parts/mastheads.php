@@ -94,7 +94,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
               <li class="__item"><a class="__link" href="<?= $url; ?>">Tortor Fusce</a></li>
             </ul>
           </li>
-          <li class="col --12@xs --3@lg bg--blue-dark text--gray-100 --feature">
+          <li class="col --12@xs --3@lg --feature">
             <a class="__link --heading" href="<?= $url; ?>">Bibendum Mattis Dapibus</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Vulputate Nibh Quam</a></li>
@@ -134,7 +134,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
               <li class="__item"><a class="__link" href="<?= $url; ?>">Tortor Fusce</a></li>
             </ul>
           </li>
-          <li class="col --12@xs --3@lg bg--blue-dark text--gray-100 --feature">
+          <li class="col --12@xs --3@lg --feature">
             <a class="__link --heading" href="<?= $url; ?>">Purus Magna Pellentesque</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Vulputate Nibh Quam</a></li>
@@ -174,7 +174,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
               <li class="__item"><a class="__link" href="<?= $url; ?>">Malesuada Bibendum</a></li>
             </ul>
           </li>
-          <li class="col --12@xs --3@lg bg--blue-dark text--gray-100 --feature">
+          <li class="col --12@xs --3@lg --feature">
             <a class="__link --heading" href="<?= $url; ?>">Vulputate Nibh Quam</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Bibendum Mattis Dapibus</a></li>
@@ -215,7 +215,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
               <li class="__item"><a class="__link" href="<?= $url; ?>">Malesuada Bibendum</a></li>
             </ul>
           </li>
-          <li class="col --12@xs --3@lg bg--blue-dark text--gray-100 --feature">
+          <li class="col --12@xs --3@lg --feature">
             <a class="__link --heading" href="<?= $url; ?>">Dapibus Ornare Tellus</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Vulputate Nibh Quam</a></li>

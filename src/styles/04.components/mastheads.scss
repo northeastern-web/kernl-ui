@@ -376,15 +376,14 @@
             }
 
             .\--feature {
+              @include border-radius(2px);
               flex-basis: 22%;
               max-width: 22%;
-              @include border-radius(2px);
+              background: rgba($gray-400, .15);
 
               a,
               .__link {
                 margin-left: 1rem;
-
-                &:hover { color: #fff !important; }
               }
             }
           }
