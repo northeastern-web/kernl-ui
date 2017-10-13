@@ -7,7 +7,6 @@
 .section {
   > .__header {
     .__title {
-      @include type-d5();
       margin-bottom: 0.25rem;
       font-weight: $type-regular;
     }
