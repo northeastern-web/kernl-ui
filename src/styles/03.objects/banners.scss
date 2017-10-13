@@ -90,18 +90,4 @@
     border-top: 2px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-
-  > .__header {
-    .__pretitle {
-      margin-bottom: 0.25rem;
-      font-size: $fs-root;
-    }
-
-    .__title { @include type-d6(); }
-
-    .__subtitle {
-      @include type-d1();
-      margin-bottom: 0.25rem;
-    }
-  }
 }
