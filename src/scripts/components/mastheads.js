@@ -34,3 +34,16 @@ $('.\\+children > a')
   $parent.addClass('submenu-open');
   $submenu.show(350);
 });
+
+
+// animate megamenu reveal: almost there...
+$('.\\--megamenu .\\+children').hover(
+  function() {
+    $(this).not('.open').find('.__submenu').slideDown(400);
+    $(this).toggleClass('open');
+  },
+  function() {
+    $(this).find('.__submenu').slideUp(400);
+    $(this).toggleClass('open');
+  }
+);

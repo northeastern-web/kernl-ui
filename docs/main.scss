@@ -71,6 +71,38 @@
   order: -1;
   padding: 0.625rem 1rem 1rem 0;
   background: rgba(0, 0, 0, 0.1);
+
+  .k_logo { display: none; }
+
+  @include mqbp-up(md) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    height: 100%;
+    border-right: 1px dotted rgba(0, 0, 0, 0.1);
+    transform: translateX(-90%);
+    transition: all 0.2s ease;
+    z-index: 1100;
+    overflow-y: scroll;
+
+    &:hover,
+    &.k_nav__active {
+      transform: translateX(0);
+      background: rgba(229, 229, 229, 0.99);
+      border-right: 0 none;
+      @include box-shadow();
+
+      .k_logo {
+        display: block;
+        padding: 0.75rem 0 0.85rem 1.25rem;
+        color: rgba(255, 255, 255, 0.3);
+        background: rgba(0, 0, 0, 0.85);
+      }
+    }
+  }
+
+  @include mqbp-up(lg) { transform: translateX(-95%); }
 }
 
 .k_nav__list {
@@ -86,6 +118,7 @@
 
   @include mqbp-up(md) {
     columns: initial;
+    padding: 0.5rem 0 4rem;
   }
 }
 

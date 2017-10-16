@@ -175,6 +175,7 @@
   .\+children {
     &.__item > a,
     > .__link {
+
       &:after {
         content: "\e970" !important;
 
@@ -309,7 +310,19 @@
       .__item { position: static; }
 
       .\+children {
-        > .__link { border-bottom: 4px solid transparent; }
+        > .__link {
+          border-bottom: 4px solid transparent;
+          padding-left: 0.5rem;
+          padding-right: 1.75rem;
+
+          &:after {
+            content: "\e920" !important;
+            color: $gray-200;
+            font-size: 1rem;
+            top: 0.4rem;
+            right: 0.5rem;
+          }
+        }
 
         &:hover {
           > .__link { border-bottom-color: rgba($type-color, 0.25); }
@@ -320,12 +333,12 @@
             @include make-row();
             margin-right: 0 !important;
             top: 5.75rem;
+            left: 0;
+            right: 0;
             background: $gray-100;
             min-width: 0;
             max-width: none;
             width: auto;
-            left: 0;
-            right: 0;
             border-radius: 0;
             padding-top: 1rem;
             padding-bottom: 1rem;

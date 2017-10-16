@@ -4,7 +4,6 @@
 
 <header class="k_header">
 
-    <i class="k_nav__toggle" data-feather="more-horizontal"></i>
     <a class="k_logo" href="/">
       <b>kernl</b>(ui) 
     </a>

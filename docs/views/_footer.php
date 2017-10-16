@@ -3,5 +3,5 @@
   <p><a class="k_logo" href="/"><b>kernl</b>(ui)</a></p>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 <script src="/dist/scripts/main.js"></script>

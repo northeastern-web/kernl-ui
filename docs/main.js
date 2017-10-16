@@ -40,7 +40,8 @@ $("#kernl .element-font-size").each(function() {
 
 /**
  * Toggle 'parts' menu
+ * adds class to allow for touch
  */
-$('#kernl .k_nav__toggle').on('click touch', function(e) {
-  $('#kernl .k_nav').toggle({ direction: "left" });
+$('#kernl .k_nav').on('click touch', function(e) {
+  $('#kernl .k_nav').toggleClass( 'k_nav__active' );
 });
