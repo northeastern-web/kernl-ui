@@ -199,16 +199,17 @@
 
     @include mqbp-up(lg) {
       &.__item > a,
-      > .__link::after {
-        content: none !important;
+      > .__link::after { content: none !important; }
+
+      .__submenu {
+        position: absolute;
+        height: auto;
+        top: 4.5rem;
       }
 
       &:hover {
         .__submenu {
           display: block;
-          position: absolute;
-          top: 4.5rem;
-          height: auto;
           background: rgba(#f2f2f2, 0.9);
           padding: 0.5rem;
           border-radius: 2px;
@@ -304,7 +305,6 @@
   }
 
   &.\--megamenu {
-
     @include mqbp-up(lg) {
       .__list,
       .__item { position: static; }
@@ -324,81 +324,89 @@
           }
         }
 
+        .__submenu {
+          @include make-row();
+          margin-right: 0 !important;
+          // border-top: 1px solid $gray-200;
+          padding: 0;
+          top: 5.75rem;
+          left: 0;
+          right: 0;
+          background: $gray-100;
+          width: 0;
+          // height: 0;
+          max-height: 0;
+          min-width: 0;
+          max-width: none;
+          border-radius: 0;
+          box-shadow: none;
+          overflow: hidden;
+          transition: all 0.5s ease;
+
+          > li {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+
+          .__item > a,
+          .__link {
+            @include make-masthead();
+            @include type-xs();
+            padding: 0.5rem 0;
+            color: inherit;
+
+            &:hover,
+            &:focus {
+              background: $type-color;
+              color: #fff;
+              text-decoration: none;
+            }
+          }
+
+          ul {
+            @include list_unstyled();
+
+            a {
+              &:hover {
+                background-color: transparent !important;
+                color: $type-link !important;
+              }
+            }
+          }
+
+          .\--heading {
+            font-size: $fs-root !important;
+            border-bottom: 1px solid $gray-200;
+
+            &:hover {
+              background-color: transparent;
+              color: $type-link !important;
+            }
+          }
+
+          &:after { display: none; }
+
+          .\--feature {
+            @include border-radius(2px);
+            flex-basis: 22%;
+            max-width: 22%;
+            background: rgba($gray-400, .15);
+
+            a,
+            .__link { margin-left: 1rem; }
+          }
+        }
+
         &:hover {
           > .__link { border-bottom-color: rgba($type-color, 0.25); }
 
           .__submenu {
-            border-top: 1px solid $gray-200;
-            padding: 0;
-            @include make-row();
-            margin-right: 0 !important;
-            top: 5.75rem;
-            left: 0;
-            right: 0;
-            background: $gray-100;
-            min-width: 0;
-            max-width: none;
+            overflow: auto;
             width: auto;
-            border-radius: 0;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-
-            > li {
-              padding-top: 1rem;
-              padding-bottom: 1rem;
-            }
-
-            .__item > a,
-            .__link {
-              @include make-masthead();
-              @include type-xs();
-              padding: 0.5rem 0;
-              color: inherit;
-
-              &:hover,
-              &:focus {
-                background: $type-color;
-                color: #fff;
-                text-decoration: none;
-              }
-            }
-
-            ul {
-              @include list_unstyled();
-
-              a {
-                &:hover {
-                  background-color: transparent !important;
-                  color: $type-link !important;
-                }
-              }
-            }
-
-            .\--heading {
-              font-size: $fs-root !important;
-              border-bottom: 1px solid $gray-200;
-
-              &:hover {
-                background-color: transparent;
-                color: $type-link !important;
-              }
-            }
-
-            &:after {
-              display: none;
-            }
-
-            .\--feature {
-              @include border-radius(2px);
-              flex-basis: 22%;
-              max-width: 22%;
-              background: rgba($gray-400, .15);
-
-              a,
-              .__link {
-                margin-left: 1rem;
-              }
-            }
+            height: auto;
+            max-height: 20rem;
           }
         }
       }

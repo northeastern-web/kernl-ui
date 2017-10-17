@@ -207,7 +207,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
             </ul>
           </li>
           <li class="col --12@xs --3@lg">
-            <a class="__link --heading" href="<?= $url; ?>">Tortor Fusce</a>
+            <a class="__link --heading" href="<?= $url; ?>">Mollis Elit</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Malesuada Bibendum</a></li>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Bibendum Mattis Dapibus</a></li>
