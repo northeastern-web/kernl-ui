@@ -1,0 +1,62 @@
+//
+// Breadcrumbs
+
+.breadcrumb {
+  margin-bottom: 1rem;
+  color: lighten($type-color, 15%);
+  @include type-sm();
+
+  a {
+    padding-right: 1rem;
+    position: relative;
+
+    &:after {
+      content: "\/";
+      color: $gray-400;
+      position: absolute;
+      top: 2px;
+      right: 4px;
+      line-height: 1;
+    }
+  }
+
+  .\--active {
+    color: lighten($type-color, 15%);
+    cursor: default;
+  }
+
+  &.\+dot {
+    a:after {
+      content: "\00b7";
+      right: 5px;
+    }
+  }
+
+  &.\+icon {
+    a:after {
+      font-family: "feathericons";
+      top: 4px;
+      right: 0px;
+    }
+
+    &.\+chevron {
+      a:after { content: "\e922"; }
+    }
+
+    &.\+arrow {
+      a:after { content: "\e90d"; }
+    }
+  }
+
+  &.\--sm {
+    @include type-xs();
+
+    &.\+icon {
+      a:after {
+        top: 3px;
+      }
+    }
+  }
+
+  a:last-child:after { display: none; }
+}
