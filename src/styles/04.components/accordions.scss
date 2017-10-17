@@ -2,7 +2,6 @@
 // Accordions
 //
 
-
 .accordion {
   @include accordion_variant();
   border-radius: 2px;
@@ -46,9 +45,8 @@
 .collapse {
   display: none;
   position: relative;
-  &.show {
-    display: block;
-  }
+
+  &.show { display: block; }
 }
 
 .collapsing {
@@ -60,12 +58,8 @@
   transition-property: height;
 }
 
-.collapsed .\__title {
-  border-top: 0 none;
-}
+.collapsed .\__title { border-top: 0 none; }
 
 .accordion .card {
-  &:first-child .\__title {
-    border-top: 0 none;
-  }
+  &:first-child .\__title { border-top: 0 none; }
 }

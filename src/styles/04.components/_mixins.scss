@@ -15,6 +15,8 @@
 // Component: List Groups
 // Component: Media Objects
 // Component: Modals
+// Component: Colors
+// Component: Form Inputs
 
 //
 // Shadows
@@ -667,22 +669,19 @@
 
 //
 // Forms
+
 @mixin form-control-validation($color) {
   // Color the label and help text
   .form__control--feedback,
   .form__control--label,
   .col-form-label,
   .form-check-label,
-  .custom-control {
-    color: $color;
-  }
+  .custom-control { color: $color; }
 
   .form__control {
     border-color: $color;
 
-    &:focus {
-      @include box-shadow();
-    }
+    &:focus { @include box-shadow(); }
   }
 
   .input-group-addon {

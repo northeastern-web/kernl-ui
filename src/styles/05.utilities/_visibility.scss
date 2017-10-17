@@ -4,7 +4,7 @@
 
 .hidden { display: none !important; }
 
-/* Responsive visibility utilities */
+// Responsive visibility utilities
 @each $breakpoint in map-keys($grid-breakpoints) {
   .hidden--up\@#{$breakpoint} {
     @include mqbp-up($breakpoint) {

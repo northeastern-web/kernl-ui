@@ -11,7 +11,7 @@
       font-weight: $type-regular;
     }
 
-    .__pretitle { margin-bottom: 0.5rem; }
+    .__pretitle { margin-bottom: 0.25rem; }
 
     .__subtitle {
       @include type-lead();
@@ -28,6 +28,8 @@
   padding-top: 5%;
   padding-bottom: 5%;
   @include font_smoothing();
+
+  .__title { margin-bottom: 0.25rem; }
 
   &.\+bgimg {
     @extend %bgimg;

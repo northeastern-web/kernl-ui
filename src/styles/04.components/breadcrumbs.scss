@@ -1,5 +1,6 @@
 //
 // Breadcrumbs
+//
 
 .breadcrumb {
   margin-bottom: 1rem;
@@ -15,7 +16,7 @@
       color: $gray-400;
       position: absolute;
       top: 2px;
-      right: 4px;
+      right: 5px;
       line-height: 1;
     }
   }
@@ -26,25 +27,28 @@
   }
 
   &.\+dot {
-    a:after {
-      content: "\00b7";
-      right: 5px;
-    }
+    a:after { content: "\00b7"; }
   }
 
   &.\+icon {
     a:after {
       font-family: "feathericons";
       top: 4px;
-      right: 0px;
     }
 
     &.\+chevron {
-      a:after { content: "\e922"; }
+      a:after {
+        content: "\e922";
+        right: 0px;
+      }
     }
 
     &.\+arrow {
-      a:after { content: "\e90d"; }
+      a {
+        padding-right: 1.5rem;
+
+        &:after { content: "\e90d"; }
+      }
     }
   }
 

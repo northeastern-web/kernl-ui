@@ -3,16 +3,15 @@
 //
 
 
-/**
- * Interior (interior pages)
- */
-
 .nav {
   .__list {
     visibility: hidden;
     height: 0;
     transition: all 0.05s ease-in;
   }
+
+  //
+  // On-page/interior nav menus
 
   &.\--interior {
     @include mqbp-up(lg) {
@@ -73,7 +72,8 @@
   }
 
 
-  /* Modifiers */
+  //
+  // Modifiers
 
   .__item--active {
     > .__link,
@@ -100,8 +100,8 @@
     > .__link { border-bottom: none; }
   }
 
-
-  // tabs
+  //
+  // Tabs
 
   &.\--tabbed {
     .__list {
@@ -212,9 +212,7 @@
         transition: all 0.2s ease;
         margin-bottom: 1px;
 
-        &:hover {
-          background-color: $gray-100;
-        }
+        &:hover { background-color: $gray-100; }
 
         &.active,
         &.active:hover,
@@ -231,7 +229,7 @@
   }
 
   &.\--buttons {
-    .__list { }
+    .__list {}
 
     .__item {
       margin-bottom: -1px;
@@ -310,13 +308,9 @@
   &.\--pagination {
     text-align: center;
 
-    .__list {
-      @include list_unstyled();
-    }
+    .__list { @include list_unstyled(); }
 
-    .__item {
-      display: inline-block;
-    }
+    .__item { display: inline-block; }
 
     .__link,
     .__link:active {
@@ -333,9 +327,7 @@
       border: 0 none;
       font-weight: initial;
 
-      &:hover {
-        background: $gray-100;
-      }
+      &:hover { background: $gray-100; }
 
       &.active,
       &.active:hover {

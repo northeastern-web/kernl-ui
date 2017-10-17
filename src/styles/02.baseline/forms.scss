@@ -38,9 +38,7 @@ button::-moz-focus-inner,
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+[type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; }
 
 button:focus {
   outline: 1px dotted;
@@ -89,9 +87,7 @@ textarea {
   box-sizing: border-box;
   padding: 0;
 
-  &:disabled {
-    cursor: not-allowed;
-  }
+  &:disabled { cursor: not-allowed; }
 }
 
 input[type="date"],
@@ -108,15 +104,11 @@ input[type="month"] { -webkit-appearance: listbox; }
 }
 
 [type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
 }
 
-output {
-  display: inline-block;
-}
+output { display: inline-block; }

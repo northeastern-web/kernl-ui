@@ -2,6 +2,9 @@
 // Icons
 // * uses Feather Icons <https://feathericons.com/>
 
+
+//
+// For SVG inline
 %icon {
   position: relative;
   display: inline-block;
@@ -21,8 +24,8 @@
 }
 
 //
-// Feather Icons
-// https://icomoon.io/app/#/select/library
+// For font on pseudo-elements
+// * https://icomoon.io/app/#/select/library
 @font-face {
   font-family: 'feathericons';
   src:  url('../fonts/feathericons.eot?kn6kqz');

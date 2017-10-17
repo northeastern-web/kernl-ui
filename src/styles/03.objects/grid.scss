@@ -33,9 +33,7 @@
 // Row
 //
 // Rows (display:flex) contain the columns (flex items).
-.row {
-  @include make-row();
-}
+.row { @include make-row(); }
 
 // Remove the negative margin from default .g-row, then the horizontal padding
 // from all immediate children columns (to prevent runaway style inheritance).

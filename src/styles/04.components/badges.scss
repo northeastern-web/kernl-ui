@@ -55,11 +55,9 @@
   }
 
   @include mqbp-up(md) {
-    &.\--left {
-      // &:not(.\--pill) {
+    &.\--left:not(.\--pill) {
         top: 0;
         left: 0;
-      // }
     }
 
     &.\--center {
@@ -67,11 +65,9 @@
       right: auto;
     }
 
-    &.\--right {
-      // &:not(.\--pill) {
-        top: 0;
-        right: 0;
-      // }
+    &.\--right:not(.\--pill) {
+      top: 0;
+      right: 0;
       left: auto;
     }
   }
