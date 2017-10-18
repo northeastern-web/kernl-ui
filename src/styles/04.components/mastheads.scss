@@ -195,7 +195,7 @@
         height: auto;
         top: 4.5rem;
         background: rgba(#f2f2f2, 0.9);
-        padding: 0.5rem;
+        padding: 0.5rem !important;
         border-radius: 2px;
         box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
         z-index: 200;
@@ -295,7 +295,7 @@
 
   // add a border to the bottom of active nav link
   &.\+border {
-    .__list {
+    .__list:not(.\--utility) {
       @include mqbp-up(lg) {
         .__link,
         .__item > a {
@@ -333,7 +333,7 @@
         .__submenu {
           @include make-row();
           margin-right: 0 !important;
-          padding: 0;
+          padding: 0 !important;
           top: 5.85rem;
           left: 0;
           right: 0;
@@ -365,7 +365,7 @@
           .__link {
             @include make-masthead();
             @include type-xs();
-            padding: 0.5rem 0;
+            padding: 0.5rem 0 !important;
             color: inherit;
 
             &:hover,
@@ -380,6 +380,8 @@
             @include list_unstyled();
 
             a {
+              margin: 0;
+
               &:hover {
                 background-color: transparent !important;
                 color: $type-link !important;
@@ -389,8 +391,10 @@
 
           .\--heading {
             font-size: $fs-root !important;
+            padding-top: 0 !important;
             padding-bottom: 0.75rem !important;
             margin-bottom: 0.25rem;
+            margin-right: 0 !important;
             border-bottom: 1px solid $gray-200;
 
             &:hover {
@@ -464,15 +468,12 @@
       @include mqbp-up(xl) {
         margin-top: 3.125rem;
 
-        .__link {
-          // padding-top: 0.25rem;
-          padding-bottom: 1.35rem;
-        }
+        .__link { padding-bottom: 1.35rem; }
       }
     }
 
     .\+children .__submenu {
-      @include mqbp-up(lg) { top: 4.5rem; }
+      @include mqbp-up(lg) { top: 2.5rem; }
       @include mqbp-up(xl) { top: 2.5rem; }
     }
 
