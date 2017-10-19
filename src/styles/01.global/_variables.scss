@@ -19,6 +19,7 @@ $gray-900: #1a1a1a !default;
 $gray: #58585a !default;
 $gray-dark: $gray-900 !default;
 $gray-light: #7b7778 !default;
+$white: #fff !default;
 $black: #000 !default;
 
 $gray-scale: (
@@ -33,8 +34,7 @@ $gray-scale: (
   ($gray-900, '900'),
   ($gray, false),
   ($gray-dark, 'dark'),
-  ($gray-light, 'light'),
-  ($black, 'false')
+  ($gray-light, 'light')
 ) !default;
 
 // Reds
@@ -126,6 +126,12 @@ $beige-scale: (
   ($beige-light, 'light', 'dark')
 ) !default;
 
+// White
+
+$white-scale: (
+  ($white, false),
+) !default;
+
 // ** Full color palette collection
 $palette: (
   ('gray', $gray-scale),
@@ -136,7 +142,8 @@ $palette: (
   ('yellow', $yellow-scale),
   ('orange', $orange-scale),
   ('teal', $teal-scale),
-  ('beige', $beige-scale)
+  ('beige', $beige-scale),
+  ('white', $white-scale)
 ) !default;
 
 

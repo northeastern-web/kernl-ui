@@ -15,7 +15,7 @@ function accordion($id, $variant, $section_classes, $acc_class) {
       <div class="col --12@xs pb--1@xs">
         <header class="k_section__header">' . $variant . ' Accordion</header>
         <div id="accordion_' . $id . '" class="l__grid__copy accordion ' . $acc_class . '">
-          <div class="__toggle-wrap">
+          <div class="__item">
             <div class="__title"
                  data-toggle="collapse"
                  data-parent="#accordion_' . $id . '"
@@ -30,7 +30,7 @@ function accordion($id, $variant, $section_classes, $acc_class) {
               </div>
             </div>
           </div>
-          <div class="__toggle-wrap">
+          <div class="__item">
             <div class="__title collapsed"
                  data-toggle="collapse"
                  data-parent="#accordion_' . $id . '"
@@ -45,7 +45,7 @@ function accordion($id, $variant, $section_classes, $acc_class) {
               </div>
             </div>
           </div>
-          <div class="__toggle-wrap">
+          <div class="__item">
             <div class="__title collapsed"
                  data-toggle="collapse"
                  data-parent="#accordion_' . $id . '"
