@@ -580,3 +580,25 @@
 .menu-is-open {
   @include mqbp-up(lg) { display: none; }
 }
+
+// For troubleshooting
+
+.masthead.\--megamenu .\+children .__submenu > li {
+  border: 1px solid cyan;
+  background-color: rgba(cyan, 0.2);
+}
+
+.masthead.\--megamenu .\+children .__submenu .\--heading {
+  border: 1px solid magenta;
+  background-color: rgba(magenta, 0.2);
+}
+
+.masthead.\--megamenu .\+children .__submenu ul {
+  border: 1px solid brown;
+  background-color: rgba(brown, 0.2);
+}
+
+.masthead.\--megamenu .\+children .__submenu .__item > a.__link {
+  border: 1px solid magenta;
+  background-color: rgba(magenta, 0.2);
+}
