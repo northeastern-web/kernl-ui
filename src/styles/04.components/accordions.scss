@@ -4,12 +4,26 @@
 
 .accordion {
   @include accordion_variant();
-  border-radius: 2px;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  border-radius: 1px;
+  border: 1px solid rgba($gray-400, 0.4);
+
+  .__item {
+    border-top: 1px solid rgba($gray-400, 0.4);
+
+    &:first-child { border-top: 0 none; }
+  }
 
   &.\--white {
     @include accordion_variant($type-color, #fff, #fff);
-    .\__title { font-weight: 700; }
+
+    .\__title {
+      font-weight: 700;
+
+      &:not(.collapsed) {
+        color: rgba($type-color, 0.5);
+      }
+    }
+
     .\__copy { padding-top: 0; }
   }
 
@@ -17,18 +31,30 @@
     @include accordion_variant(#fff, $type-color, lighten($type-color, 20%));
   }
 
-  &.\+spacing {
-    box-shadow: none;
+  &.\+space {
+    border: 0 none;
 
     .\__item {
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2) !important;
+      border: 1px solid rgba($gray-400, 0.4);
       margin-bottom: 1rem;
+    }
+
+    &.\+shadow {
+      box-shadow: none !important;
+      background: transparent;
+
+      .\__item {
+        border: 0 none;
+        @include box-shadow();
+      }
     }
   }
 
+  &.\+shadow { border: 0 none; }
+
   .\__title {
     padding: 1rem 3rem 1rem 0.75rem;
-    margin-top: 1px;
+    // margin-top: 1px;
     cursor: pointer;
     position: relative;
 

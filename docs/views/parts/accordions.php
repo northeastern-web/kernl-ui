@@ -14,7 +14,10 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_accordions.php';
 <?= accordion(2, 'Dark', 'k_bg-dark', '--dark'); ?>
 
 <!-- start spaced accordion -->
-<?= accordion(3, 'Spaced', '', '+spacing'); ?>
+<?= accordion(3, 'Space on', '', '+space'); ?>
 
 <!-- start spaced white accordion -->
-<?= accordion(4, 'Spaced White', 'k_bg-light', '--white +spacing'); ?>
+<?= accordion(4, 'White with Space on', 'k_bg-light', '--white +space'); ?>
+
+<!-- start spaced white accordion -->
+<?= accordion(5, 'White with Space and Shadow on', '', '--white +space +shadow'); ?>
