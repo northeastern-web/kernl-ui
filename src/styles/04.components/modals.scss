@@ -111,15 +111,21 @@
   }
 
   &.\--search {
-    background-color: $blue-dark;
+    background-color: rgba($gray-900, .85);
     color: #fff;
+
+    .close {
+      font-size: 4rem;
+      top: 0;
+      right: 2rem;
+    }
 
     .__dialog {
       max-width: none;
     }
 
     .__content {
-      width: 40%;
+      width: 70%;
       margin: 5% auto;
       background: transparent;
       box-shadow: none;
@@ -127,12 +133,13 @@
     }
 
     .form__control {
+      @include type-d4();
+      padding-bottom: 1rem;
+      padding-left: 0;
       background: transparent;
       border: 0 none;
-      border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
-      @include type-d4();
+      border-bottom: 2px solid rgba(#fff, 0.5);
       font-weight: $type-light;
-      padding-left: 0;
       color: #fff;
       outline: none;
       box-shadow: none;
