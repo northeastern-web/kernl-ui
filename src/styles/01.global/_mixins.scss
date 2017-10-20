@@ -235,13 +235,29 @@
   }
 }
 
-// Masthead?
+// Masthead
 @mixin make-masthead($gutters: $grid-gutter-widths) {
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      margin-right: ($gutter);
-      margin-left:  ($gutter);
+      margin-right: $gutter;
+      margin-left:  $gutter;
+    }
+  }
+}
+
+// Mega menu
+// give megamenu same spacing as masthead;
+// same as make-row, but with padding and full gutter width
+@mixin make-megamenu($gutters: $grid-gutter-widths) {
+  display: flex;
+  flex-wrap: wrap;
+
+  @each $breakpoint in map-keys($gutters) {
+    @include mqbp-up($breakpoint) {
+      $gutter: map-get($gutters, $breakpoint);
+      padding-right: $gutter !important;
+      padding-left:  $gutter !important;
     }
   }
 }

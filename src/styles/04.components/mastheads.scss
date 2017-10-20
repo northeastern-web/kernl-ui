@@ -331,9 +331,10 @@
         }
 
         .__submenu {
-          @include make-row();
-          margin-right: 0 !important;
-          padding: 0 !important;
+          @include make-megamenu();
+          // margin: 0 !important;
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
           top: 5.85rem;
           left: 0;
           right: 0;
@@ -341,29 +342,29 @@
           max-height: 0;
           min-width: 0;
           border-radius: 0;
-          box-shadow: none;
+          box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0);
           overflow: hidden;
-          transition: max-height 0.4s ease 0.1s;
+          transition: max-height 0.4s ease 0.1s,
+                      box-shadow 0.1s ease 0s;
 
           &:before {
             content: "";
             position: absolute;
             top: 0;
+            left: 0;
             border-top: 1px solid $gray-200;
             width: 1%;
             transition: width 0.6s ease;
           }
 
           > li {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            padding: 1rem 1.5rem 1rem 0;
             margin-top: 1rem;
             margin-bottom: 1rem;
           }
 
           .__item > a,
           .__link {
-            @include make-masthead();
             @include type-xs();
             padding: 0.5rem 0 !important;
             color: inherit;
@@ -381,10 +382,18 @@
 
             a {
               margin: 0;
+              color: inherit;
+              transition: color 0.15s ease;
 
-              &:hover {
+              &:hover,
+              &:active {
                 background-color: transparent !important;
                 color: $type-link !important;
+              }
+
+              &:focus:not(:hover) {
+                background-color: transparent !important;
+                color: $type-color !important;
               }
             }
           }
@@ -407,12 +416,9 @@
 
           .\--feature {
             @include border-radius(2px);
-            flex-basis: 22%;
-            max-width: 22%;
-            background: rgba($gray-400, .15);
-
-            a,
-            .__link { margin-left: 1rem; }
+            padding-left: 1.5rem;
+            background: rgba($gray-400, 0);
+            transition: background 0.4s ease 0s;
           }
         }
 
@@ -427,10 +433,15 @@
           .__submenu {
             max-height: 20rem;
             z-index: 300;
-            transition: max-height 0.4s ease 0s;
+            box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.1);
+            transition: max-height 0.4s ease 0s,
+                        box-shadow 0.2s ease 0.3s;
 
-            &:before {
-              width: 100%;
+            &:before { width: 100%; }
+
+            > .\--feature {
+              background: rgba($gray-400, .15);
+              transition: background 0.3s ease 0.1s;
             }
           }
         }
@@ -442,6 +453,7 @@
     @include mqbp-up(lg) {
       a {
         padding-bottom: 0 !important;
+        color: rgba($type-color, 0.7);
 
         i, svg {
           width: 20px;
@@ -450,6 +462,8 @@
         }
       }
     }
+
+    &:last-child a { padding-right: 0; }
   }
 
   &.\+utility {
@@ -497,7 +511,12 @@
       .__item {
         border-right: 1px solid rgba($type-color, 0.3);
 
-        &:last-child { border-right: 0 none; }
+        &:last-child {
+          border-right: 0 none;
+
+          a,
+          .__link { padding-right: 0; }
+        }
       }
 
       @include make-masthead();
@@ -536,9 +555,7 @@
   transition: transform 0.375s ease-in,
   visibility 0.375s ease-in;
 
-  .__toggler {
-    margin-top: 1.125rem;
-  }
+  .__toggler { margin-top: 1.125rem; }
 
   @include mqbp-up(lg) {
     position: static;
@@ -582,7 +599,6 @@
 }
 
 // For troubleshooting
-
 /* 
 .masthead.\--megamenu .\+children .__submenu > li {
   border: 1px solid cyan;
@@ -602,5 +618,4 @@
 .masthead.\--megamenu .\+children .__submenu .__item > a.__link {
   border: 1px solid magenta;
   background-color: rgba(magenta, 0.2);
-}
- */
+} */
