@@ -55,6 +55,39 @@
     }
   }
 
+  &.\+icon {
+    a,
+    .__link {
+      position: relative;
+      padding-right: 1.5rem;
+
+      &:after {
+        font-family: "feathericons";
+        content: "\E922";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    &.\--left {
+      a,
+      .__link {
+        padding-left: 1.5rem;
+        padding-right: 0;
+
+        &:after {
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+  }
+
   //
   // Sizing
   @include mqbp-up(md) {

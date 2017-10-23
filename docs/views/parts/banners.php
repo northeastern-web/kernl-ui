@@ -30,7 +30,7 @@
   <div class="__subtitle">Banner Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
 </section>
 
-<section class="section --banner --lg +bgimg +bottom mb--1@xs mb--2@lg">
+<section class="section --banner --lg --bottom +bgimg mb--1@xs mb--2@lg">
   <div class="__pretitle">Banner Pre Title</div>
   <h1 class="__title">Banner: Large, Bottom</h1>
   <div class="__subtitle">Banner Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>

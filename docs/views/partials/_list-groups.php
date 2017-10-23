@@ -13,8 +13,8 @@ function listgroup($classes) {
       </div>
     </div>
     <div class="col --12@xs --4@md">
-      <p class="text-style-block mb--1@xs"><small>Small; items contain links</small></p>
-      <div class="list-group --sm' . $classes . '">
+      <p class="text-style-block mb--1@xs"><small>Small; items contain links; has icons</small></p>
+      <div class="list-group --sm' . $classes . ' +icon">
         <div class="__item"><a href="#"><b>Lorem ipsum dolor</b>: sit amet do blandit tempus porttitor</a></div>
         <div class="__item"><a href="#"><b>Lorem ipsum</b>: dolor sit amet, tempus porttitor consectetur</a></div>
         <div class="__item"><a href="#"><b>Maecenas</b>: Cras justo odio, dapibus in, faucibus</a></div>
@@ -37,7 +37,7 @@ function listgroup($classes) {
         </a>
         <a href="#" class="__item">
           <b>Lorem ipsum</b><br>
-          Lorem ipsumfaucibus mollis interdumdolor sit amet, consectetur.<br>
+          Lorem ipsum faucibus mollis interdumdolor sit amet, consectetur.<br>
           November 18, ' . date("Y") . ', 1:00 a.m.
         </a>
       </div>
@@ -45,8 +45,8 @@ function listgroup($classes) {
   </div>
   <div class="row">
     <div class="col --12@xs --4@md --offset-1@md">
-      <p class="text-style-block mb--1@xs"><small>Base size; items contain links</small></p>
-      <div class="list-group'  . $classes . '">
+      <p class="text-style-block mb--1@xs"><small>Base size; items contain links; icons on left</small></p>
+      <div class="list-group'  . $classes . ' +icon --left">
         <div class="__item"><a href="#"><b>Dolor lorem ipsum </b>: sit amet do blandit porttitor</a></div>
         <div class="__item"><a href="#"><b>Lorem ipsum</b>: dolor sit amet, tempus consectetur</a></div>
         <div class="__item"><a href="#"><b>Maecenas</b>: Cras justo odio, dapibus ac in, faucibus</a></div>

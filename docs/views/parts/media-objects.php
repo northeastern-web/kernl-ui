@@ -88,7 +88,7 @@
   <div class="row">
     <div class="col --12@xs --6@lg">
       <p class="text-style-block">Default: circular thumb</p>
-      <ul class="media__list">
+      <ul class="list-group +media">
         <li class="media">
           <a class="__link" href="#">
             <div class="__graphic"></div>
@@ -129,7 +129,7 @@
     </div>
     <div class="col --12@xs --6@lg">
       <p class="text-style-block">Variation: rectangular thumb</p>
-      <ul class="media__list +rect">
+      <ul class="list-group +media +rect">
         <li class="media">
           <a class="__link" href="#">
             <div class="__graphic"></div>
