@@ -1,4 +1,3 @@
-import $ from 'jquery'
 import Tooltip from './tooltip'
 
 

@@ -1,4 +1,4 @@
-require('../src/scripts/main.js');
+import '../src/scripts/main.js'
 
 //
 //

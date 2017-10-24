@@ -1,4 +1,3 @@
-import $ from 'jquery'
 import Util from './util'
 
 

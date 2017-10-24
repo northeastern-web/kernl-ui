@@ -1,4 +1,3 @@
-import $ from 'jquery'
 import Popper from 'popper.js'
 import Util from './util'
 

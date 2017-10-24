@@ -2,10 +2,10 @@
   <header class="k_section__header">Interior/On-Page Nav</header>
   <div class="row">
     <div class="col --12@xs --3@md">
-      <div class="hidden--up@md ta--c pt--2@xs">
-        <button class="nav__toggler btn --sm"><i class="icon--menu"></i> Page Menu</button>
+      <div class="hidden--up@md ta--c mb--1@xs">
+        <button class="nav__toggler btn --sm" data-toggle="collapse" data-target="#page_menu"><i class="icon--menu"></i> Page Menu</button>
       </div>
-      <nav class="nav --interior">
+      <nav class="nav --interior collapse" id="page_menu">
         <ul class="__list">
           <li class="__item">
             <a class="__link" href="#">Page</a>
@@ -33,7 +33,7 @@
         </ul>
       </nav>
     </div>
-    <div class="col --12@xs --9@md pt--2@xs">
+    <div class="col --12@xs --9@md">
       <h2>Page Content Here</h2>
       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
       <h3>Change the viewport width</h3>

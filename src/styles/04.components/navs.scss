@@ -4,18 +4,29 @@
 
 
 .nav {
-  .__list {
-    visibility: hidden;
-    height: 0;
-    transition: all 0.05s ease-in;
-  }
 
   //
   // On-page/interior nav menus
 
   &.\--interior {
-    @include mqbp-up(lg) {
+    .__list {
+      margin-bottom: 0;
+      visibility: hidden;
+      height: 0;
+      transition: all 0.05s ease-in;
+    }
+
+    @include mqbp-up(md) {
       border-top: 1px solid $gray-200;
+
+      .__list {
+        visibility: visible;
+        height: 100%;
+      }
+
+      &.collapse {
+        display: block;
+      }
     }
   }
 
@@ -358,9 +369,12 @@
 }
 
 .nav--open {
-  .__list {
-    visibility: visible;
-    height: 100%;
+  .nav.\--interior {
+    .__list {
+      visibility: visible;
+      height: 100%;
+      padding-bottom: 1rem;
+    }
   }
 }
 
