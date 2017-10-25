@@ -55,6 +55,7 @@
 @mixin type-d6($colorContrast: false) {
   line-height: 1.05;
   font-size: $fs-d6;
+  letter-spacing: -0.05rem;
 
   @if $colorContrast { opacity: 0.54; }
 }
@@ -63,6 +64,7 @@
   letter-spacing: -0.04rem;
   line-height: 1;
   font-size: $fs-d7;
+  letter-spacing: -0.05rem;
 
   @if $colorContrast { opacity: 0.54; }
 }

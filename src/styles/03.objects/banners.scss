@@ -19,6 +19,12 @@
       font-weight: $type-light;
     }
   }
+
+  &.--header.\--banner {
+    > .__header {
+      .__title {}
+    }
+  }
 }
 
 
