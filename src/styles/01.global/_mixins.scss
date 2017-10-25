@@ -68,11 +68,11 @@
 }
 
 @mixin type-lead($colorContrast: false) {
-  line-height: 1.25;
-  font-weight: $type-light;
-  font-size: $fs-d1;
+  line-height: 1.35;
+  font-weight: $type-regular;
+  font-size: $fs-d2;
 
-  @if $colorContrast { opacity: 0.54; }
+  @if $colorContrast { opacity: 0.75; }
 }
 
 @mixin type-sm($colorContrast: false) {

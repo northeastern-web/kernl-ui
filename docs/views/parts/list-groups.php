@@ -2,7 +2,7 @@
 
 <section>
   <nav class="nav --tabbed">
-    <ul class="__list type--sm" role="tablist">
+    <ul class="__list fs--sm" role="tablist">
       <li class="__item">
         <a class="__link active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Base</a>
       </li>

@@ -26,36 +26,21 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
   +h2, +h3, +h4, +h5, +h6 { padding-top: 0.25rem; }
 }
 
-h1,
-.fs--d5,
-.fs--lg { @include type_d5(); }
+h1 { @include type_d5(); }
 
-h2,
-.fs--d4 {
-  @include type_d4();
-  // font-weight: $type-bold;
-}
+h2 { @include type_d4(); }
 
-h3,
-.fs--d3 { @include type_d3(); }
+h3 { @include type_d3(); }
 
-h4,
-.fs--d2 { @include type_d2(); }
+h4 { @include type_d2(); }
 
-h5,
-.fs--d1,
-.type--lg { @include type_d1(); }
+h5 { @include type_d1(); }
 
 h6 {
   font-size: $fs-root;
   font-weight: $type-bold;
 }
 
-.fs--d6 { @include type_d6(); }
-
-// Extra Large
-.type--xl,
-.fs--d7 { @include type_d7(); }
 
 
 //
@@ -66,16 +51,8 @@ p {
   margin-bottom: 1rem;
 }
 
-// Lead
-.type--lead { @include type-lead(); }
-
 // Small
-small,
-.type--sm { @include type_sm(); }
-
-// Extra Small
-.type--xs { @include type_xs(); }
-
+small { @include type_sm(); }
 
 
 //

@@ -4,16 +4,20 @@
 
 
 // Sizing
-.fs--xs { font-size: $fs-xs !important; }
-.fs--sm { font-size: $fs-sm !important; }
-.fs--root { font-size: $fs-root !important; }
-.fs--d1 { font-size: $fs-d1 !important; }
-.fs--d2 { font-size: $fs-d2 !important; }
-.fs--d3 { font-size: $fs-d3 !important; }
-.fs--d4 { font-size: $fs-d4 !important; }
-.fs--d5 { font-size: $fs-d5 !important; }
-.fs--d6 { font-size: $fs-d6 !important; }
-.fs--d7 { font-size: $fs-d7 !important; }
+.fs--xs { @include type_xs(); }
+.fs--sm { @include type_sm(); }
+.fs--root { @include type-root(); }
+.fs--d1 { @include type_d1(); }
+.fs--d2 { @include type_d2(); }
+.fs--d3 { @include type_d3(); }
+.fs--d4 { @include type_d4(); }
+.fs--d5 { @include type_d5(); }
+.fs--d6 { @include type_d6(); }
+.fs--d7 { @include type_d7(); }
+
+
+// Lead
+.fs--lead { @include type-lead(1); }
 
 
 // Weight

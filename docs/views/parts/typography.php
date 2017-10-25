@@ -10,8 +10,8 @@
 <section class="section --contain">
   <div class="row">
     <div class="col --12@xs">
-      <p class="type--lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
-      <ul class="list--unstyled type--sm">
+      <p class="fs--lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
+      <ul class="list--unstyled fs--sm">
         <li>15px base font-size (<code>xs</code>)</li>
         <li>16px base font-size (<code>sm</code>, <code>md</code>, and <code>lg</code>)</li>
         <li>17px base font-size (<code>xl</code>)</li>
@@ -21,7 +21,7 @@
       <section class="section --banner +bgimg">
         <p><b>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> in a nested banner.</b> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       </section>
-      <p class="type--sm">This a little note set at <code>type--sm</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.88rem)</span>.</p>
+      <p class="fs--sm">This a little note set at <code>fs--sm</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.88rem)</span>.</p>
     </div>
   </div>
 </section>
@@ -29,7 +29,7 @@
   <div class="row">
     <div class="col --12@xs">
       <h2>Here is a Heading Two <span class="show-font-size">(<span class="element-font-size"></span> @ 1.88rem)</span></h2>
-      <p class="type--lead">This is a lead paragraph <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span></p>
+      <p class="fs--lead">This is a lead paragraph <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span></p>
       <p>Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
       <h3>Heading Three and Listy Lists <span class="show-font-size">(<span class="element-font-size"></span> @ 1.53rem)</span></h3>
       <h4>A Heading Four You</h4>
@@ -129,7 +129,7 @@
     <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
     <h6 class="text-uppercase">And Even Heading Six if We're Really Feeling It <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span></h6>
     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.</p>
-    <p class="type--xs">Here's a tiny footnote set at <code>type--xs</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.76rem)</span>.</p>
+    <p class="fs--xs">Here's a tiny footnote set at <code>fs--xs</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.76rem)</span>.</p>
   </div>
 </section>
 
