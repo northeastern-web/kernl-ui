@@ -26,18 +26,18 @@
 // Banners
 
 // Banner Spacing
-$padding-default: 3%;
+$padding-default: 5%;
 $padding-sm: 1rem;
-$padding-lg: 6%;
+$padding-lg: 7.5%;
 $padding-xl: 10%;
 
 .\--banner {
+  @include font_smoothing();
   position: relative;
   background-color: $gray-900;
   color: #fff;
   padding-top: $padding-default;
   padding-bottom: $padding-default;
-  @include font_smoothing();
 
   .__title { margin-bottom: 0.25rem; }
 
@@ -53,9 +53,9 @@ $padding-xl: 10%;
     }
 
     > * {
+      @include font_smoothing();
       position: relative;
       z-index: 1;
-      @include font_smoothing();
     }
 
     &.\--fixed {
