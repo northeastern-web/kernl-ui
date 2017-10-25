@@ -6,7 +6,7 @@ function listgroup($classes) {
       <p class="text-style-block mb--1@xs"><small>Small</small></p>
       <div class="list-group --sm' . $classes . '">
         <div class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</div>
-        <div class="__item"><b>Lorem ipsum</b>: dolor sit amet, consectetur</div>
+        <div class="__item"><b>Lorem ipsum</b>: dolor sit amet, consectetur faucibus mollis interdum</div>
         <div class="__item"><b>Maecenas</b>: faucibus mollis interdum</div>
         <div class="__item"><b>Lorem ipsum</b>: dolor sit amet, consectetur</div>
         <div class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</div>
@@ -15,11 +15,25 @@ function listgroup($classes) {
     <div class="col --12@xs --4@md">
       <p class="text-style-block mb--1@xs"><small>Small; items contain links; has icons</small></p>
       <div class="list-group --sm' . $classes . ' +icon">
-        <div class="__item"><a href="#"><b>Lorem ipsum dolor</b>: sit amet do blandit tempus porttitor</a></div>
-        <div class="__item"><a href="#"><b>Lorem ipsum</b>: dolor sit amet, tempus porttitor consectetur</a></div>
-        <div class="__item"><a href="#"><b>Maecenas</b>: Cras justo odio, dapibus in, faucibus</a></div>
-        <div class="__item"><a href="#"><b>Lorem ipsum</b>: dolor sit amet, consectetur mollis interdum</a></div>
-        <div class="__item"><a href="#"><b>Lorem ipsum dolor</b>: sit amet do eiusmod blandit porttitor</a></div>
+        <div class="__item">
+          <i data-feather="alert-octagon"></i>
+          <a href="#"><b>Lorem ipsum dolor</b>: sit amet do blandit tempus porttitor</a></div>
+        <div class="__item">
+          <i data-feather="command" class="text--green"></i>
+          <a href="#"><b>Lorem ipsum</b>: dolor sit amet, Cras justo odio, dapibus in, faucibus tempus porttitor consectetur</a>
+        </div>
+        <div class="__item">
+          <i data-feather="crosshair" class="text--purple"></i>
+          <a href="#"><b>Maecenas</b>: Cras justo odio, dapibus in, faucibus</a>
+        </div>
+        <div class="__item">
+          <i data-feather="chevron-right"></i>
+          <a href="#"><b>Lorem ipsum</b>: dolor sit amet, consectetur mollis interdum</a>
+        </div>
+        <div class="__item">
+          <i data-feather="life-buoy" class="text--red"></i>
+          <a href="#"><b>Lorem ipsum dolor</b>: sit amet do eiusmod blandit porttitor</a>
+        </div>
       </div>
     </div>
     <div class="col --12@xs --5@md">
@@ -46,13 +60,31 @@ function listgroup($classes) {
   <div class="row">
     <div class="col --12@xs --4@md --offset-1@md">
       <p class="text-style-block mb--1@xs"><small>Base size; items contain links; icons on left</small></p>
-      <div class="list-group'  . $classes . ' +icon --left">
-        <div class="__item"><a href="#"><b>Dolor lorem ipsum </b>: sit amet do blandit porttitor</a></div>
-        <div class="__item"><a href="#"><b>Lorem ipsum</b>: dolor sit amet, tempus consectetur</a></div>
-        <div class="__item"><a href="#"><b>Maecenas</b>: Cras justo odio, dapibus ac in, faucibus</a></div>
-        <div class="__item"><a href="#"><b>Faucibus mollis</b>: Maecenas interdum</a></div>
-        <div class="__item"><a href="#"><b>Ipsum Maecenas</b>: dolor sit amet, consectetur</a></div>
-        <div class="__item"><a href="#"><b>Tempus porttitor</b>: dolor sit amet, consectetur</a></div>
+      <div class="list-group'  . $classes . ' +icon --right">
+        <div class="__item">
+          <a href="#"><b>Dolor lorem ipsum </b>: sit amet do blandit porttitor</a>
+          <i data-feather="alert-octagon"></i>
+        </div>
+        <div class="__item">
+          <a href="#"><b>Lorem ipsum</b>: dolor sit amet, tempus consectetur</a>
+          <i data-feather="alert-octagon"></i>
+        </div>
+        <div class="__item">
+          <a href="#"><b>Maecenas</b>: Cras justo odio, dapibus ac in, faucibus</a>
+          <i data-feather="alert-octagon"></i>
+        </div>
+        <div class="__item">
+          <a href="#"><b>Faucibus mollis</b>: Maecenas interdum</a>
+          <i data-feather="alert-octagon"></i>
+        </div>
+        <div class="__item">
+          <a href="#"><b>Ipsum Maecenas</b>: dolor sit amet, consectetur</a>
+          <i data-feather="alert-octagon"></i>
+        </div>
+        <div class="__item">
+          <a href="#"><b>Tempus porttitor</b>: dolor sit amet, consectetur</a>
+          <i data-feather="alert-octagon"></i>
+        </div>
       </div>
     </div>
     <div class="col --12@xs --5@md --offset-1@md">

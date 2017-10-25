@@ -132,7 +132,6 @@
 // Alert Size
 @mixin alert_size($padding-y, $padding-x) {
   padding: $padding-y $padding-x;
-  // @include get_type();
 }
 
 // Alert Variant
@@ -560,18 +559,14 @@
   &.\--striped > li {
     border: 0 none;
 
-    &:nth-child(odd) {
-      background-color: $striped;
-    }
+    &:nth-child(odd) { background-color: $striped; }
   }
 
   &.\--on-dark {
     > div,
     > li {
       a:hover,
-      &:hover a {
-        color: lighten($type-link, 20%) !important;
-      }
+      &:hover a { color: lighten($type-link, 20%) !important; }
     }
 
     > a {
@@ -579,16 +574,12 @@
     }
   }
 
-  &.\+outline {
-    border: 1px solid rgba($color, 0.25);
-  }
+  &.\+outline { border: 1px solid rgba($color, 0.25); }
 
   &.\+indent:not(.\--striped) {
     > .__item,
     > li {
-      &:hover {
-        background-color: rgba($color, 0.05);
-      }
+      &:hover { background-color: rgba($color, 0.05); }
     }
   }
 }
@@ -598,15 +589,11 @@
   font-size: $font-size;
 
   > .__item,
-  > li {
-    padding: $padding-y 0 !important;
-  }
+  > li { padding: $padding-y 0 !important; }
 
   &.\+shadow,
   &.\+outline,
-  &.\--dark {
-    padding: 0 $padding-x !important;
-  }
+  &.\--dark { padding: 0 $padding-x !important; }
 
 
   &.\--striped .__item,
@@ -628,6 +615,37 @@
         padding-left: $padding-y/2 !important;
         padding-right: $padding-y/2 !important;
       }
+    }
+  }
+
+  &.\+icon {
+    > .__item,
+    > li,
+    > div {
+      padding-left: ($font-size * 1.75) !important;
+    }
+  }
+
+  i, svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: ($font-size * 1.25);
+    height: ($font-size * 1.25);
+  }
+
+  &.\+icon.\--right {
+    > .__item,
+    > li,
+    > div {
+      padding-right: ($font-size * 1.75) !important;
+      padding-left: 0 !important;
+    }
+
+    i, svg {
+      left: auto;
+      right: 0;
     }
   }
 }
