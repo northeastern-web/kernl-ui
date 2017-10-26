@@ -1,7 +1,7 @@
 <section class="section ta--c">
   <header class="k_section__header ta--l">Buttons on White</header>
   <div class="row">
-    <div class="col --12@xs --6@md --3@xl pb--1@xs">
+    <div class="col --12@xs --4@md pb--1@xs">
       <p class="text-style-block">Base Buttons</p>
       <p><a class="btn --xs" data-component="button" href="#">Button xs</a></p>
       <p><a class="btn --sm --pill" data-component="button" href="#">Button Pill sm</a></p>
@@ -9,7 +9,7 @@
       <p><a class="btn --lg" data-component="button" href="#">Button lg</a></p>
       <p><a class="btn --block --lg" data-component="button" href="#">Button block lg</a></p>
     </div>
-    <div class="col --12@xs --6@md --3@xl pb--1@xs">
+    <div class="col --12@xs --4@md pb--1@xs">
       <p class="text-style-block">(Semi) Transparent</p>
       <p><a class="btn --transparent --xs" data-component="button" href="#">Transparent xs</a></p>
       <p><a class="btn --transparent --sm" data-component="button" href="#">Transparent sm</a></p>
@@ -17,21 +17,13 @@
       <p><a class="btn --transparent --lg" data-component="button" href="#">Transparent lg</a></p>
       <p><a class="btn --transparent --lg --block" data-component="button" href="#">Block Transparent lg</a></p>
     </div>
-    <div class="col --12@xs --6@md --3@xl pb--1@xs">
+    <div class="col --12@xs --4@md pb--1@xs">
       <p class="text-style-block">Dark Buttons</p>
       <p><a class="btn --dark --xs" data-component="button" href="#">Dark xs</a></p>
       <p><a class="btn --dark --sm" data-component="button" href="#">Dark sm</a></p>
       <p><a class="btn --dark --pill" data-component="button" href="#">Pill Dark</a></p>
       <p><a class="btn --dark --lg" data-component="button" href="#">Dark lg</a></p>
       <p><a class="btn --dark --lg --block" data-component="button" href="#">Block Dark lg</a></p>
-    </div>
-    <div class="col --12@xs --6@md --3@xl pb--1@xs">
-      <p class="text-style-block">Thick Buttons</p>
-      <p><a class="btn --thick --xs" data-component="button" href="#">Thick xs</a></p>
-      <p><a class="btn --thick --sm" data-component="button" href="#">Thick sm</a></p>
-      <p><a class="btn --thick --pill" data-component="button" href="#">Pill Thick</a></p>
-      <p><a class="btn --thick --lg" data-component="button" href="#">Thick lg</a></p>
-      <p><a class="btn --thick --lg --block" data-component="button" href="#">Block Thick lg</a></p>
     </div>
   </div>
 </section>

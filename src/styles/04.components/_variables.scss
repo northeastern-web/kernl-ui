@@ -70,8 +70,8 @@ $input-border-radius-lg:         $border-radius-lg !default;
 $input-border-radius-sm:         $border-radius-sm !default;
 
 $input-bg-focus:                 $input-bg !default;
-$input-border-focus:             #66afe9 !default;
-$input-box-shadow-focus:         $input-box-shadow, 0 0 8px rgba($input-border-focus,.6) !default;
+$input-border-focus:             $gray !default;
+$input-box-shadow-focus:         $input-box-shadow, 0 0 1px rgba($input-border-focus, 0.3) !default;
 $input-color-focus:              $input-color !default;
 
 $input-color-placeholder:        $gray-300 !default;

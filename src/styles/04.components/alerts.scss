@@ -33,7 +33,14 @@
   }
 
   // Footer
-  .__footer { @extend %component-footer; }
+  .__footer {
+    @extend %component-footer;
+    justify-content: flex-start;
+
+    @include mqbp-up(lg) {
+      padding-top: 0;
+    }
+  }
 
   .__footer__link {
     @extend .btn;
@@ -144,7 +151,7 @@
 
     @include mqbp-up(lg) { @include type-xs(); }
 
-    .__body { padding: .5rem .75rem; }
+    .__body { padding: 0.5rem 0.75rem; }
   }
 
   //
@@ -167,6 +174,7 @@
 
     .__footer {
       @extend %grid-column;
+      justify-content: center;
 
       @include mqbp-up(lg) {
         @include make-col(2, 10);

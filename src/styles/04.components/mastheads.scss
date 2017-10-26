@@ -27,12 +27,11 @@
 
     @include mqbp-up(lg) {
       max-width: 280px;
-      margin-top: 1.625rem;
+      margin-top: 1.5rem;
     }
 
     @include mqbp-up(xl) {
       max-width: 350px;
-      margin-top: 1.75rem;
     }
   }
 
@@ -295,8 +294,10 @@
 
   // add a border to the bottom of active nav link
   &.\+border {
-    .__list:not(.\--utility) {
-      @include mqbp-up(lg) {
+    @include mqbp-up(lg) {
+      .__logo { margin-top: 1.6rem; }
+
+      .__list:not(.\--utility) {
         .__link,
         .__item > a {
           border-bottom: 3px solid transparent;
@@ -308,10 +309,16 @@
         .\--active.__item > a { border-bottom-color: rgba($type-color, 0.35); }
       }
     }
+
+    @include mqbp-up(xl) {
+      .__logo { margin-top: 1.7rem; }
+    }
   }
 
   &.\--megamenu {
     @include mqbp-up(lg) {
+      .__logo { margin-top: 1.625rem; }
+
       .__list,
       .__item { position: static; }
 
@@ -446,6 +453,10 @@
           }
         }
       }
+    }
+
+    @include mqbp-up(xl) {
+      .__logo { margin-top: 1.75rem; }
     }
   }
 
@@ -597,25 +608,3 @@
 .menu-is-open {
   @include mqbp-up(lg) { display: none; }
 }
-
-// For troubleshooting
-/* 
-.masthead.\--megamenu .\+children .__submenu > li {
-  border: 1px solid cyan;
-  background-color: rgba(cyan, 0.2);
-}
-
-.masthead.\--megamenu .\+children .__submenu .\--heading {
-  border: 1px solid magenta;
-  background-color: rgba(magenta, 0.2);
-}
-
-.masthead.\--megamenu .\+children .__submenu ul {
-  border: 1px solid brown;
-  background-color: rgba(brown, 0.2);
-}
-
-.masthead.\--megamenu .\+children .__submenu .__item > a.__link {
-  border: 1px solid magenta;
-  background-color: rgba(magenta, 0.2);
-} */

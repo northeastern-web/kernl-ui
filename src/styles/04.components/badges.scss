@@ -37,8 +37,10 @@
   // Positioning
   &.\--left {
     position: absolute;
-    top: .75rem;
-    left: .75rem;
+    top: 0;
+    left: 0;
+
+    &.\--pill { left: 0.75rem; }
   }
 
   &.\--center {
@@ -49,65 +51,15 @@
   }
 
   &.\--right {
-    top: .75rem;
-    right: .75rem;
+    top: 0;
+    right: 0;
     left: auto;
-  }
 
-  @include mqbp-up(md) {
-    &.\--left:not(.\--pill) {
-        top: 0;
-        left: 0;
-    }
-
-    &.\--center {
-      left: 50%;
-      right: auto;
-    }
-
-    &.\--right:not(.\--pill) {
-      top: 0;
-      right: 0;
-      left: auto;
-    }
-  }
-
-  @include mqbp-up(xl) {
-    &.\--left {
-      top: 0.5rem;
-      left: 0.5rem;
-    }
-
-    &.\--center {
-      top: 0;
-      left: 50%;
-    }
-
-    &.\--right {
-      left: auto;
-      right: 0.5rem;
-      top: 0.75rem;
-    }
-  }
-
-  @include mqbp-up(xx) {
-    &.\--left {
-      top: 0.75rem;
-      left: 0.75rem;
-    }
-
-    &.\--center {
-      top: 0;
-      left: 50%;
-    }
-
-    &.\--right {
-      left: auto;
-      right: 0.75rem;
-    }
+    &.\--pill { right: 0.75rem; }
   }
 
   &.\--pill {
     @extend %pill;
+    top: 0.75rem;
   }
 }

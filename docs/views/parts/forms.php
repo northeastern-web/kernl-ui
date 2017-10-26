@@ -2,94 +2,94 @@
   <div class="row">
     <div class="col --12@xs --8@lg --offset-2@lg">
       <form action="" method="">
-        <div class="form__group">
+        <div class="__group">
           <label for="exampleText">Text Label</label>
-          <input type="email" class="form__control" id="exampleText" aria-describedby="textHelp" placeholder="Enter some text">
+          <input type="email" class="__control" id="exampleText" aria-describedby="textHelp" placeholder="Enter some text">
         </div>
-        <div class="form__group">
+        <div class="__group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form__control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" class="__control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
           <div class="alert --sm --dark">
             <div class="__body">
               <div class="__excerpt"><b>Here's an alert</b>: We'll never share your email with anyone else.</div>
             </div>
           </div>
         </div>
-        <div class="form__group">
+        <div class="__group">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form__control" id="exampleInputPassword1" placeholder="Password">
+          <input type="password" class="__control" id="exampleInputPassword1" placeholder="Password">
         </div>
-        <div class="form__group">
+        <div class="__group">
           <label for="exampleSelect1">Example select</label>
-          <select class="form__control" id="exampleSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+          <select class="__control" id="exampleSelect1">
+            <option selected="selected" disabled="disabled">Select...</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>Extra Large</option>
           </select>
         </div>
-        <div class="form__group">
+        <div class="__group">
           <label for="exampleSelect2">Example multiple select</label>
-          <select multiple class="form__control" id="exampleSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+          <select multiple class="__control" id="exampleSelect2">
+            <option>Extra Small</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>Extra Large</option>
           </select>
         </div>
-        <div class="form__group">
+        <div class="__group">
           <label for="exampleTextarea">Example textarea</label>
-          <textarea class="form__control" id="exampleTextarea" rows="3"></textarea>
+          <textarea class="__control" id="exampleTextarea" rows="3"></textarea>
         </div>
-        <div class="form__group">
+        <div class="__group">
           <label for="exampleInputFile">File input</label>
-          <input type="file" class="form__control form__control--file" id="exampleInputFile" aria-describedby="fileHelp">
+          <input type="file" class="__control __control--file" id="exampleInputFile" aria-describedby="fileHelp">
           <small id="fileHelp" class="text--muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
         </div>
-        <fieldset class="form__group">
+        <fieldset class="__group">
           <legend>Radio buttons</legend>
-          <div class="form__check">
-            <label class="form__check__label">
-              <input type="radio" class="form__check__input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          <div class="__check">
+            <label class="__check__label">
+              <input type="radio" class="__check__input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
               Option one is this and that&mdash;be sure to include why it's great
             </label>
           </div>
-          <div class="form__check">
-            <label class="form__check__label">
-              <input type="radio" class="form__check__input" name="optionsRadios" id="optionsRadios2" value="option2">
+          <div class="__check">
+            <label class="__check__label">
+              <input type="radio" class="__check__input" name="optionsRadios" id="optionsRadios2" value="option2">
               Option two can be something else and selecting it will deselect option one
             </label>
           </div>
-          <div class="form__check disabled">
-            <label class="form__check__label">
-              <input type="radio" class="form__check__input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+          <div class="__check disabled">
+            <label class="__check__label">
+              <input type="radio" class="__check__input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
               Option three is disabled
             </label>
           </div>
         </fieldset>
 
-        <div class="form__group">
-          <div class="form__check form__check--inline">
-            <label class="form__check__label">
-              <input type="checkbox" class="form__check__input">
+        <div class="__group">
+          <div class="__check __check--inline">
+            <label class="__check__label">
+              <input type="checkbox" class="__check__input">
               Check me out
             </label>
           </div>
-          <div class="form__check form__check--inline">
-            <label class="form__check__label">
-              <input type="checkbox" class="form__check__input">
+          <div class="__check __check--inline">
+            <label class="__check__label">
+              <input type="checkbox" class="__check__input">
               Check me out
             </label>
           </div>
         </div>
 
-        <div class="form__group">
-          <input type="text" class="form__control form__control--lg" placeholder="form__control--lg">
+        <div class="__group">
+          <input type="text" class="__control __control--lg" placeholder="__control--lg">
         </div>
-        <div class="form__group">
-          <input type="text" class="form__control form__control--sm" placeholder="form__control--sm">
+        <div class="__group">
+          <input type="text" class="__control __control--sm" placeholder="__control--sm">
         </div>
 
         <button type="submit" class="btn btn--primary">Submit</button>

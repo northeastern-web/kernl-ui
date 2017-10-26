@@ -5,7 +5,7 @@
 
 //
 // Textual form controls
-.form__control {
+.__control {
   display: block;
   width: 100%;
   // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
@@ -57,7 +57,7 @@
   }
 }
 
-select.form__control {
+select.__control {
   &:not([size]):not([multiple]) {
     $select-border-width: ($border-width * 2);
     height: calc(#{$input-height} + #{$select-border-width});
@@ -75,9 +75,15 @@ select.form__control {
 }
 
 // Make file inputs better match text inputs by forcing them to new lines.
-.form__control--file,
-.form__control--range {
+.__control--file,
+.__control--range {
   display: block;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border: 0 none;
+  @include type-sm();
+  margin: 3px 0;
 }
 
 
@@ -123,15 +129,15 @@ select.form__control {
 // Apply class to an element to make any string of text align with labels in a
 // horizontal form layout.
 
-.form__control--static {
+.__control--static {
   padding-top: $input-padding-y;
   padding-bottom: $input-padding-y;
   line-height: $input-line-height;
   border: solid transparent;
   border-width: 1px 0;
 
-  &.form__control--sm,
-  &.form__control--lg {
+  &.__control--sm,
+  &.__control--lg {
     padding-right: 0;
     padding-left: 0;
   }
@@ -140,31 +146,31 @@ select.form__control {
 //
 // Form control sizing
 //
-// Build on `.form__control` with modifier classes to decrease or increase the
+// Build on `.__control` with modifier classes to decrease or increase the
 // height and font-size of form controls.
 //
-// The `.form__group-* form-control` variations are sadly duplicated to avoid the
+// The `.__group-* form-control` variations are sadly duplicated to avoid the
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
-.form__control--sm {
+.__control--sm {
   padding: $input-padding-y-sm $input-padding-x-sm;
   font-size: $fs-sm;
   @include border-radius($input-border-radius-sm);
 }
 
-select.form__control--sm {
+select.__control--sm {
   &:not([size]):not([multiple]) {
     height: $input-height-sm;
   }
 }
 
-.form__control--lg {
+.__control--lg {
   padding: $input-padding-y-lg $input-padding-x-lg;
   font-size: 1.5rem;
   @include border-radius($input-border-radius-lg);
 }
 
-select.form__control--lg {
+select.__control--lg {
   &:not([size]):not([multiple]) {
     height: $input-height-lg;
   }
@@ -175,11 +181,17 @@ select.form__control--lg {
 // Designed to help with the organization and spacing of vertical forms. For
 // horizontal forms, use the predefined grid classes.
 
-.form__group {
+.__group {
   margin-bottom: $form-group-margin-bottom;
+
+  label {
+    @include type-sm();
+    color: $gray-500;
+    margin-bottom: 0;
+  }
 }
 
-.form-text {
+.__text {
   display: block;
   margin-top: ($spacer * .25);
 }
@@ -188,34 +200,31 @@ select.form__control--lg {
 // Checkboxes and radios
 // Indent the labels to position radios/checkboxes as hanging controls.
 
-.form__check {
+.__check {
   position: relative;
   display: block;
   margin-bottom: ($spacer * .75);
 
   // Move up sibling radios or checkboxes for tighter spacing
-  + .form__check {
+  + .__check {
     margin-top: -.25rem;
   }
 
   &.disabled {
-    .form__check__label {
+    .__check__label {
       color: $gray-400;
       cursor: $cursor-disabled;
     }
   }
 }
 
-.form__check__label {
-  padding-left: 1.25rem;
+.__check__label {
   margin-bottom: 0; // Override default `<label>` bottom margin
   cursor: pointer;
 }
 
-.form__check__input {
-  position: absolute;
-  margin-top: .25rem;
-  margin-left: -1.25rem;
+.__check__input {
+  margin-right: 0.25rem;
 
   &:only-child {
     position: static;
@@ -223,29 +232,25 @@ select.form__control--lg {
 }
 
 // Radios and checkboxes on same line
-.form__check--inline {
+.__check--inline {
   display: inline-block;
 
-  .form__check__label {
-    vertical-align: middle;
-  }
+  .__check__label { vertical-align: middle; }
 
-  + .form__check--inline {
-    margin-left: .75rem;
-  }
+  + .__check--inline { margin-left: .75rem; }
 }
 
 // 
 // Form control feedback states
 // Apply contextual and semantic states to individual form controls.
 
-.form__control--feedback {
+.__control--feedback {
   margin-top: ($spacer * .25);
 }
 
-.form__control--success,
-.form__control--warning,
-.form__control--danger {
+.__control--success,
+.__control--warning,
+.__control--danger {
   padding-right: ($input-padding-x * 3);
   background-repeat: no-repeat;
   background-position: center right ($input-height / 4);
@@ -256,7 +261,7 @@ select.form__control--lg {
 .has-success {
   @include form-control-validation($green);
 
-  .form__control--success {
+  .__control--success {
     background-image: $form-icon-success;
   }
 }
@@ -264,7 +269,7 @@ select.form__control--lg {
 .has-warning {
   @include form-control-validation($yellow);
 
-  .form__control--warning {
+  .__control--warning {
     background-image: $form-icon-warning;
   }
 }
@@ -272,7 +277,7 @@ select.form__control--lg {
 .has-danger {
   @include form-control-validation($red);
 
-  .form__control--danger {
+  .__control--danger {
     background-image: $form-icon-danger;
   }
 }
@@ -284,19 +289,19 @@ select.form__control--lg {
       margin-bottom: 0;
     }
 
-    .form__group {
+    .__group {
       display: inline-block;
       vertical-align: middle;
       margin-bottom: 0;
     }
 
-    .form__control {
+    .__control {
       display: inline-block;
       width: auto;
       vertical-align: middle;
     }
 
-    .form__control--static {
+    .__control--static {
       display: inline-block;
     }
 
@@ -307,31 +312,31 @@ select.form__control--lg {
 
       .input-group-addon,
       .input-group-btn,
-      .form__control {
+      .__control {
         width: auto;
       }
     }
 
-    .input-group > .form__control {
+    .input-group > .__control {
       width: 100%;
     }
 
-    .form__control--label {
+    .__control--label {
       margin-bottom: 0;
       vertical-align: middle;
     }
 
-    .form__check {
+    .__check {
       display: inline-block;
       vertical-align: middle;
       width: auto;
       margin-top: 0;
       margin-bottom: 0;
     }
-    .form__check__label {
+    .__check__label {
       padding-left: 0;
     }
-    .form__check__input {
+    .__check__input {
       position: relative;
       margin-left: 0;
     }
@@ -346,7 +351,7 @@ select.form__control--lg {
       vertical-align: text-bottom;
     }
 
-    .has-feedback .form__control--feedback {
+    .has-feedback .__control--feedback {
       top: 0;
     }
   }
