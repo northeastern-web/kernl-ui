@@ -189,6 +189,78 @@ select.__control--lg {
     color: $gray-500;
     margin-bottom: 0;
   }
+
+  &.__search {
+    @extend .__control;
+    position: relative;
+    padding: 0.5rem;
+    @include clearfix();
+
+    .__control,
+    &:before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      font-family: "feathericons";
+      content: "\e97b";
+      left: 0.85rem;
+      color: rgba($type-color, 0.5);
+
+      @include mqbp-up(md) {
+        left: 1rem;
+      }
+
+      @include mqbp-up(lg) {
+        left: 1.25rem;
+      }
+    }
+
+    .__control {
+      background: transparent;
+      border: 0 none;
+      width: 65%;
+      float: left;
+      padding: 0;
+      margin-left: 2rem;
+      box-shadow: none !important;
+      @extend .__control--lg;
+
+      @include mqbp-up(md) {
+        width: 80%;
+        margin-left: 2.5rem;
+      }
+
+      @include mqbp-up(lg) {
+        margin-left: 2.5rem;
+      }
+    }
+
+    .btn {
+      padding: 0.5rem;
+      float: right;
+      margin-bottom: 0;
+    }
+
+    &.\+line {
+      background: transparent;
+      padding-right: 0;
+      padding-left: 0;
+      border: 0 none;
+      box-shadow: none;
+      border-bottom: 1px solid rgba($type-color, 0.5);
+
+      &:before {
+        left: 0 !important;
+      }
+
+      .btn:not(:hover) {
+        background: transparent;
+      }
+    }
+  }
 }
 
 .__text {

@@ -92,6 +92,16 @@
           <input type="text" class="__control __control--sm" placeholder="__control--sm">
         </div>
 
+        <div class="__group __search my--3@md">
+          <input type="text" class="__control __control--lg" placeholder="Search ( __search )">
+          <button type="submit" class="btn btn--primary">Go</button>
+        </div>
+
+        <div class="__group __search +line mb--3@md">
+          <input type="text" class="__control __control--lg" placeholder="Search ( __search +line )">
+          <button type="submit" class="btn btn--primary">Go</button>
+        </div>
+
         <button type="submit" class="btn btn--primary">Submit</button>
       </form>
     </div>
