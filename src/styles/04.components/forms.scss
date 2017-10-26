@@ -260,6 +260,23 @@ select.__control--lg {
         background: transparent;
       }
     }
+
+    &.\--dark {
+      border-color: rgba(255, 255, 255, 0.3);
+
+      &:before { color: rgba(255, 255, 255, 0.5); }
+      
+      .__control,
+      .btn { color: #fff; }
+
+      .btn {
+        border-color: rgba(255, 255, 255, 0.5);
+
+        &:hover { color: $type-color; }
+      }
+      
+      &::placeholder { color: #fff; }
+    }
   }
 }
 
