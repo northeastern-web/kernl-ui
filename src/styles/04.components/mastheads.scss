@@ -372,7 +372,7 @@
 
           .__item > a,
           .__link {
-            @include type-xs();
+            @include type-sm();
             padding: 0.5rem 0 !important;
             color: inherit;
 
