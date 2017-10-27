@@ -111,7 +111,7 @@
   }
 
   &.\--search {
-    background-color: rgba($gray-900, .85);
+    background-color: rgba($blue-dark, .85);
     color: #fff;
 
     .close {
@@ -202,10 +202,3 @@
   &.show,
   &.active { opacity: 0.65; }
 }
-
-
-/**
-* Modifiers
-*/
-
-
