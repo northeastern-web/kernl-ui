@@ -71,7 +71,7 @@
   //
   // Modifiers
 
-  .\--child {
+  .\+children .__list {
     margin-top: -0.05rem;
 
     .__item {
@@ -151,16 +151,21 @@
       &.active,
       &.active:hover,
       &.active:active,
-      &.child--active,
-      &.child--active:hover,
-      &.child--active:active {
+      .\+children .\--active,
+      .\+children .\--active:hover,
+      .\+children .\--active:active {
         color: inherit;
         border-left: 3px solid $type-link;
         background: none;
         font-weight: 700;
         cursor: default;
 
-        +.__child-list {
+        @include mqbp-up(md) {
+          border-left: 0 none;
+          border-bottom: 3px solid $type-link;
+        }
+
+        +.__list {
           display: block;
 
           @include mqbp-up(md) {
@@ -169,15 +174,16 @@
             @include clearfix();
           }
 
-          .__child-item {
+          .__item {
             @include mqbp-up(md) {
               float: left;
             }
           }
 
-          .__child-link {
+          .__link {
             color: $type-link;
             border-left: none;
+            margin-left: 1rem;
 
             &:hover {
               background: none;
@@ -185,10 +191,11 @@
             }
 
             &.active,
-            &.child--active,
+            .\--active,
             &:active {
               font-weight: 700;
               background: none;
+              border-bottom: 0 none;
 
               &:hover {
                 text-decoration: none;
@@ -196,11 +203,6 @@
               }
             }
           }
-        }
-
-        @include mqbp-up(md) {
-          border-left: 0 none;
-          border-bottom: 3px solid $type-link;
         }
       }
     }

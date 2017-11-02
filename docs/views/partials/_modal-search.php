@@ -8,7 +8,7 @@
         <form action="" method="">
           <div class="__group">
             <label for="exampleText" class="sr--only">Search</label>
-            <input type="search" class="__control mt--2@xs" id="exampleText" aria-describedby="textHelp" placeholder="Well, lookie here...">
+            <input type="search" class="__control mt--2@xs" id="modalSearch" aria-describedby="textHelp" placeholder="Well, lookie here...">
           </div>
           <div class="__group">
             <div class="__check __check--inline">

@@ -18,7 +18,7 @@
           </li>
           <li class="__item +children">
             <a class="__link" href="#">Parent Page</a>
-            <ul class="__list --child">
+            <ul class="__list">
               <li class="__item">
                 <a class="__link" href="#">Child Tab A</a>
               </li>
