@@ -5,10 +5,10 @@
 
 a.skip {
   position: absolute;
-  top: -1000px;
-  left: -1000px;
+  top: -100px;
   height: 1px;
-  width: 1px;
+  width: 100%;
+  padding: 0 1rem;
   text-align: left;
   overflow: hidden;
   font-weight: 700;
@@ -23,7 +23,6 @@ a.skip:focus,
 a.skip:active {
   position: relative;
   display: block;
-  left: 0;
   top: 0;
   width: 100%;
   height: auto;
