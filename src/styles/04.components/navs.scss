@@ -30,18 +30,14 @@
     }
   }
 
-  .__list,
-  .__child-list { @include list_unstyled(); }
-
-  .__child-list { margin-top: -0.25rem; }
+  .__list { @include list_unstyled(); }
 
   .__item {
     margin-bottom: 0;
     padding-top: 0;
   }
 
-  .__link,
-  .__child-link  {
+  .__link {
     display: block;
     color: inherit;
     border-left-width: 3px;
@@ -71,42 +67,45 @@
     line-height: 20px;
   }
 
-  .__child-item {
-    padding: 0;
-    margin: 0;
-  }
-
-  .__child-link {
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
-    border-bottom: none;
-    font-size: $fs-sm;
-  }
-
 
   //
   // Modifiers
 
-  .__item--active {
+  .\--child {
+    margin-top: -0.05rem;
+
+    .__item {
+      padding: 0;
+      margin: 0;
+
+      &.\--active {
+        font-weight: bold;
+        border-left-color: $gray-600;
+      }
+    }
+
+    .__link {
+      padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+      border-bottom: none;
+      font-size: $fs-sm;
+      font-weight: 400;
+    }
+  }
+
+  .\--active {
     > .__link,
-    > .__link:hover,
-    > .__child-link,
-    > .__child-link:hover {
+    > .__link:hover {
       background-color: $gray-100;
       border-left-color: transparent;
       cursor: default;
     }
-
-    > .__child-link {
-      font-weight: bold;
-      border-left-color: $gray-600;
-    }
   }
 
-  .__item--parent {
+  .\--parent {
     padding-bottom: 15px;
     border-bottom: 1px solid $gray-200;
 
-    &.__item--active { background: $gray-100; }
+    &.\--active { background: $gray-100; }
 
     > .__link { border-bottom: none; }
   }
@@ -121,6 +120,8 @@
       visibility: visible;
       height: auto;
       @include clearfix();
+
+      .__list { display: none; }
     }
 
     .__item {
@@ -131,8 +132,6 @@
         float: left;
       }
     }
-
-    .__child-list { display: none; }
 
     .__link {
       padding: 1rem;

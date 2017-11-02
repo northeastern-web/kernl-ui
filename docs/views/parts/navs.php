@@ -10,7 +10,7 @@
           <li class="__item">
             <a class="__link" href="#">Page</a>
           </li>
-          <li class="__item __item--active">
+          <li class="__item --active">
             <a class="__link" href="#">Page</a>
           </li>
           <li class="__item">
@@ -18,15 +18,15 @@
           </li>
           <li class="__item +children">
             <a class="__link" href="#">Parent Page</a>
-            <ul class="__child-list">
-              <li class="__child-item">
-                <a class="__child-link" href="#">Child Tab A</a>
+            <ul class="__list --child">
+              <li class="__item">
+                <a class="__link" href="#">Child Tab A</a>
               </li>
-              <li class="__child-item">
-                <a class="__child-link" href="#">Child Tab B</a>
+              <li class="__item --active">
+                <a class="__link" href="#">Child Tab B</a>
               </li>
-              <li class="__child-item">
-                <a class="__child-link" href="#">Child Tab C</a>
+              <li class="__item">
+                <a class="__link" href="#">Child Tab C</a>
               </li>
             </ul>
           </li>
@@ -59,15 +59,15 @@
           </li>
           <li class="__item +children">
             <a class="__link" data-toggle="tab" href="#tab_4" role="tab" aria-expanded="false">Tab 4 Parent</a>
-            <ul class="__child-list" role="tablist">
-              <li class="__child-item">
-                <a class="__child-link" data-toggle="tab" href="#tab_4a" role="tab" aria-expanded="false">Child Tab A</a>
+            <ul class="__list" role="tablist">
+              <li class="__item">
+                <a class="__link" data-toggle="tab" href="#tab_4a" role="tab" aria-expanded="false">Child Tab A</a>
               </li>
-              <li class="__child-item">
-                <a class="__child-link" data-toggle="tab" href="#tab_4b" role="tab" aria-expanded="false">Child Tab B</a>
+              <li class="__item">
+                <a class="__link" data-toggle="tab" href="#tab_4b" role="tab" aria-expanded="false">Child Tab B</a>
               </li>
-              <li class="__child-item">
-                <a class="__child-link" data-toggle="tab" href="#tab_4c" role="tab" aria-expanded="false">Child Tab C</a>
+              <li class="__item">
+                <a class="__link" data-toggle="tab" href="#tab_4c" role="tab" aria-expanded="false">Child Tab C</a>
               </li>
             </ul>
           </li>
