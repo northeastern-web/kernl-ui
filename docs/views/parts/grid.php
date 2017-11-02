@@ -118,10 +118,16 @@
     </div>
     <div class="row">
       <div class="col --12@xs --9@md">
-        <div class="col-content">9</div>
+        <div class="col-content">
+          <p>9</p>
+          <p>Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+        </div>
       </div>
       <div class="col --12@xs --3@md">
-        <div class="col-content">3</div>
+        <div class="col-content --sticky">
+          3. Sticky
+        </div>
       </div>
     </div>
     <div class="row">
