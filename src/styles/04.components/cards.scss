@@ -104,8 +104,11 @@
   // Icon
   .__icon {
     @extend %icon;
+    margin-bottom: .5rem;
 
-    i, svg {
+    i { font-size: 1.5rem; }
+
+    svg {
       margin-left: 50%;
       transform: translateX(-50%);
     }

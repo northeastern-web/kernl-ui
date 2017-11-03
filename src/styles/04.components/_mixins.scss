@@ -143,7 +143,7 @@
   @if ($add_shadow == false) {
     box-shadow: none;
   }
-  
+
   &.\--outline {
     @if $background != rgba(255, 255, 255, 1) {
       color: $background;
@@ -335,27 +335,6 @@
   .__body,
   .__footer,
   .list-group .__item { border-color: darken($background, 20%); }
-
-  .__icon {
-    height: $icon-size;
-    display: block;
-    transform: none;
-
-    i, svg {
-      height: $icon-size;
-      width: $icon-size;
-    }
-
-    &.\--lg {
-      height: $icon-size * 2;
-      margin: 0 0 ($icon-size / 2);
-
-      i, svg {
-        height: $icon-size * 2;
-        width: $icon-size * 2;
-      }
-    }
-  }
 
   &:not(.\--overlay):not(.\--bottom) {
     .__link {
