@@ -9,6 +9,8 @@
   font-size: $fs-sm;
   line-height: 1.7;
 
+  @include clearfix();
+
   a { color: inherit; }
 
   .__logo {
