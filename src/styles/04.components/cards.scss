@@ -404,6 +404,13 @@
   .\--11\@lg {
     @include fill_height();
   }
+
+  .\--4\@lg,
+  .\--4\@xl {
+    &:not(.\--2\@xl) {
+      .card.\--tile { height: 230px !important; }
+    }
+  }
 }
 
 @include mqbp-up(xx) {
