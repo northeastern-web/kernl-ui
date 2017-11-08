@@ -405,8 +405,9 @@
     @include fill_height();
   }
 
-  .\--4\@lg,
-  .\--4\@xl {
+  .\--4\@sm,
+  .\--4\@md,
+  .\--4\@lg {
     &:not(.\--2\@xl) {
       .card.\--tile { height: 230px !important; }
     }
