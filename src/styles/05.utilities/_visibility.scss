@@ -29,3 +29,11 @@
   clip: rect(0,0,0,0);
   border: 0;
 }
+
+.\+oh--x { overflow-x: hidden; }
+.\+oh--y { overflow-y: hidden; }
+.\+oh--a { overflow: hidden; }
+
+.\+ov--x { overflow-x: visible; }
+.\+ov--y { overflow-y: visible; }
+.\+ov--a { overflow: visible; }
