@@ -68,6 +68,8 @@ $padding-xl: 10%;
       position: relative;
       background-attachment: fixed;
     }
+
+    .card { text-shadow: none; }
   }
 
   &.\--sm {
