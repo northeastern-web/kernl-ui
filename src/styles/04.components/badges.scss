@@ -14,6 +14,7 @@
   text-overflow: ellipsis;
   vertical-align: middle; // req for inline use
   white-space: nowrap;
+  z-index: 1;
   @include badge_variant($type-color, rgba(255, 255, 255, 0.75), transparent);
   @include font_smoothing();
 

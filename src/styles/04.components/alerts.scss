@@ -143,9 +143,9 @@
 
   //
   // Sizing
+  &.\--xs,
   &.\--sm {
     @include type-sm();
-    display: inline-block;
     vertical-align: top; // to prevent extra vertical space on bottom
     width: auto;
 
@@ -153,6 +153,8 @@
 
     .__body { padding: 0.5rem 0.75rem; }
   }
+
+  &.\--xs { display: inline-block; }
 
   //
   // Adds a button look to the right

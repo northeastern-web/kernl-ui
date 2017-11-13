@@ -3,10 +3,10 @@
   <div class="row">
     <div class="col --12@xs">
 
-      <div class="alert --sm">
+      <div class="alert --xs">
         <div class="__body">
           <div class="__excerpt">
-            <b>Alert SM, <i>no surrounding href</i></b>: Lorem ipsum dolor sit amet defaults to <code>.inline-block</code>, consectetur adipisicing elit. Ut enim ad minim veniam.
+            <b>Alert XS, <i>no surrounding href</i></b>: Lorem ipsum dolor sit amet defaults to <code>.inline-block</code>, consectetur adipisicing elit. Ut enim ad minim veniam.
           </div>
         </div>
       </div>
@@ -15,7 +15,7 @@
         <a href="#" class="__link">
           <div class="__body">
             <div class="__excerpt">
-              <b>Alert SM, <i>in href</i></b>: Lorem ipsum dolor sit amet defaults to <code>.inline-block</code>, consectetur adipisicing elit. Ut enim ad minim veniam cras ridiclus penatibus et magnis.
+              <b>Alert SM, <i>in href</i></b>: Lorem ipsum dolor sit amet same size as XS (above), but displays as <code>.block</code>. Consectetur adipisicing elit. Ut enim ad minim veniam cras ridiclus penatibus et magnis.
             </div>
           </div>
         </a>

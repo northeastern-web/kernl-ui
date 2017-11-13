@@ -17,12 +17,13 @@
 
   @include mqbp-up(xx) { margin-bottom: $grid-gutter-width-base + 10; }
 
-  .badge {
-    display: inline-flex;
-    top: 0.5rem;
+  .__header {
+    .badge {
+      display: inline-flex;
+      top: 0.5rem;
 
-    &.\--left {
-      left: 0.5rem;
+      &.\--left { left: 0.5rem; }
+      &.\--right { right: 0.5rem; }
     }
   }
 

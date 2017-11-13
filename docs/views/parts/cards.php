@@ -154,6 +154,7 @@ figure out --middle with a heading.
     <div class="col --12@xs --6@sm --3@lg">
       <article class="card">
         <a href="" class="__link">
+          <div class="badge --right --dark">Badge</div>
           <div class="__graphic"></div>
           <div class="__body">
             <div class="__excerpt">

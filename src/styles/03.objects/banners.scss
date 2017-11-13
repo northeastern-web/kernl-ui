@@ -21,6 +21,8 @@
   }
 
   &.--header.\--banner {
+    background-color: $gray-900;
+
     > .__header {
       .__title {}
     }
@@ -40,7 +42,6 @@ $padding-xl: 10%;
 .\--banner {
   @include font_smoothing();
   position: relative;
-  background-color: $gray-900;
   color: #fff;
   padding-top: $padding-default;
   padding-bottom: $padding-default;

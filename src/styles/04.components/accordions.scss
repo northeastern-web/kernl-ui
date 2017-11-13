@@ -16,7 +16,7 @@
   &.\--white {
     @include accordion_variant($type-color, #fff, #fff);
 
-    .\__title {
+    > .__item > .__title {
       font-weight: 700;
 
       &:not(.collapsed) {
@@ -24,7 +24,7 @@
       }
     }
 
-    .\__copy { padding-top: 0; }
+    .__copy { padding-top: 0; }
   }
 
   &.\--dark {
@@ -34,7 +34,7 @@
   &.\+space {
     border: 0 none;
 
-    .\__item {
+    .__item {
       border: 1px solid rgba($gray-400, 0.4);
       margin-bottom: 1rem;
     }
@@ -43,7 +43,7 @@
       box-shadow: none !important;
       background: transparent;
 
-      .\__item {
+      .__item {
         border: 0 none;
         @include box-shadow();
       }
@@ -52,9 +52,8 @@
 
   &.\+shadow { border: 0 none; }
 
-  .\__title {
+  > .__item > .__title {
     padding: 1rem 3rem 1rem 0.75rem;
-    // margin-top: 1px;
     cursor: pointer;
     position: relative;
 
@@ -70,7 +69,7 @@
     &.collapsed { &:after { content: "\e970"; } }
   }
 
-  .\__copy {
+  .__copy {
     padding: 1rem 3rem 1rem 0.75rem;
     font-size: $fs-sm;
     background: #fff;
@@ -93,8 +92,8 @@
   transition-property: height;
 }
 
-.collapsed .\__title { border-top: 0 none; }
+.collapsed .__title { border-top: 0 none; }
 
 .accordion .card {
-  &:first-child .\__title { border-top: 0 none; }
+  &:first-child .__title { border-top: 0 none; }
 }
