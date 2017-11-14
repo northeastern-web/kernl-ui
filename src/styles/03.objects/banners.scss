@@ -42,7 +42,6 @@ $padding-xl: 10%;
 .\--banner {
   @include font_smoothing();
   position: relative;
-  color: #fff;
   padding-top: $padding-default;
   padding-bottom: $padding-default;
 
