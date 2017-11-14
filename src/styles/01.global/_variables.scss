@@ -7,6 +7,7 @@
 // Color Palette
 
 // Grays
+$gray-50:  #f7f7f7 !default;
 $gray-100: #efefef !default;
 $gray-200: #d0d0d0 !default;
 $gray-300: #b5b5b5 !default;
@@ -23,6 +24,7 @@ $white: #fff !default;
 $black: #000 !default;
 
 $gray-scale: (
+  ($gray-50, '50'),
   ($gray-100, '100'),
   ($gray-200, '200'),
   ($gray-300, '300'),
@@ -119,11 +121,13 @@ $purple-scale: (
 $beige:       #bdb29f !default;
 $beige-dark:  #615547 !default;
 $beige-light: #ece6d5 !default;
+$beige-extra-light: #f5f4f0 !default;
 
 $beige-scale: (
   ($beige, false, 'dark'),
   ($beige-dark, 'dark'),
-  ($beige-light, 'light', 'dark')
+  ($beige-light, 'light', 'dark'),
+  ($beige-extra-light, 'extra-light', 'dark')
 ) !default;
 
 // White

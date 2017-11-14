@@ -56,8 +56,9 @@
     <!-- Creams -->
     <div class="row color-cell">
       <div class="col --12@xs --4@sm --3@lg bg-beige--dark"><span class="hex-color">#615547</span> Dark Beige <span class="fw--n">*</span></div>
-      <div class="col --12@xs --4@sm --6@lg bg-beige"><span class="hex-color">#bdb29f</span> Beige <span class="fw--n">*</span></div>
-      <div class="col --12@xs --4@sm --3@lg bg-beige--light"><span class="hex-color">#ece6d5</span> Beige <i class="fw--n">(Cream)</i></div>
+      <div class="col --12@xs --4@sm --3@lg bg-beige"><span class="hex-color">#bdb29f</span> Beige <span class="fw--n">*</span></div>
+      <div class="col --12@xs --4@sm --3@lg bg-beige--light"><span class="hex-color">#ece6d5</span> Light Beige <i class="fw--n">(Cream)</i></div>
+      <div class="col --12@xs --4@sm --3@lg bg-beige--extra-light"><span class="hex-color">#f5f4f0</span> Extra Light Beige <i class="fw--n">*</i></div>
     </div>
     <!-- Neutral Grays -->
     <div class="row color-cell">
@@ -70,6 +71,7 @@
       <div class="col --4@xs --1@lg bg-gray--300"><span class="hex-color">#b5b5b5</span><br>Gray 300</div>
       <div class="col --4@xs --1@lg bg-gray--200"><span class="hex-color">#d0d0d0</span><br>Gray 200</div>
       <div class="col --4@xs --1@lg bg-gray--100"><span class="hex-color">#efefef</span><br>Gray 100</div>
+      <div class="col --4@xs --1@lg bg-gray--50"><span class="hex-color">#f7f7f7</span><br>Gray 50</div>
     </div>
 
     <div class="row">
