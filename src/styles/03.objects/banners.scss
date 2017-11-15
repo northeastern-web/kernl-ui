@@ -15,8 +15,8 @@
     .__pretitle { margin-bottom: 0.25rem; }
 
     .__subtitle {
-      @include type-lead();
-      font-weight: $type-light;
+      @include type-lead(1);
+      // font-weight: $type-light;
     }
   }
 
