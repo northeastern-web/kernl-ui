@@ -7,7 +7,7 @@
     <a class="__logo" href="http://www.northeastern.edu" aria-label="Northeastern University logo">Northeastern University</a>
     <div class="__body">
       <ul class="__list">
-        <li><a target="_blank" href="http://myneu.neu.edu/cp/home/displaylogin">MyNEU</a></li>
+        <li><a target="_blank" href="http://myneu.neu.edu/cp/home/displaylogin">myNEU</a></li>
         <li><a target="_blank" href="https://prod-web.neu.edu/webapp6/employeelookup/public/main.action">Find Faculty &amp; Staff</a></li>
         <li><a target="_blank" href="http://www.northeastern.edu/neuhome/adminlinks/findaz.html">Find A-Z</a></li>
         <li><a target="_blank" href="http://www.northeastern.edu/emergency/index.html">Emergency Information</a></li>
