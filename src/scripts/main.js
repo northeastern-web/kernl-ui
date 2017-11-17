@@ -1,7 +1,9 @@
-const getAccordion = $('.accordion .__title');
-const toggle = getAccordion.data('toggle');
-const parent = getAccordion.data('parent');
-const target = getAccordion.data('target');
+$('.accordion .__title').each(function() {
+  const toggle = $(this).attr('data-toggle');
+  const parent = $(this).attr('data-parent');
+  const target = $(this).attr('data-target');
+  console.log(`getAccordion ( ${toggle}, ${parent}, ${target} )`)
+});
 
 import './bootstrap/index'
 import './components/mastheads.js'
