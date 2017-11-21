@@ -115,25 +115,26 @@
     color: #fff;
 
     .close {
-      font-size: 4rem;
+      font-size: 3rem;
       top: 0;
       right: 2rem;
     }
 
-    .__dialog {
-      max-width: none;
-    }
+    .__dialog { max-width: none; }
 
     .__content {
-      width: 70%;
       margin: 5% auto;
       background: transparent;
       box-shadow: none;
       color: #fff;
+
+      @include mqbp-up(lg) {
+        width: 70%;
+      }
     }
 
-    .form__control {
-      @include type-d4();
+    .__control {
+      @include type-d1();
       padding-bottom: 1rem;
       padding-left: 0;
       background: transparent;
@@ -143,6 +144,10 @@
       color: #fff;
       outline: none;
       box-shadow: none;
+
+      @include mqbp-up(md) {
+        @include type-d4();
+      }
     }
   }
 }
