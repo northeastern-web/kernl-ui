@@ -6,6 +6,18 @@
 //
 // Color Palette
 
+// White
+$white: #fff !default;
+$white-scale: (
+  ($white, false),
+) !default;
+
+// Black
+$black: #000 !default;
+$black-scale: (
+  ($black, false),
+) !default;
+
 // Grays
 $gray-50:  #f7f7f7 !default;
 $gray-100: #efefef !default;
@@ -20,8 +32,6 @@ $gray-900: #1a1a1a !default;
 $gray: #58585a !default;
 $gray-dark: $gray-900 !default;
 $gray-light: #7b7778 !default;
-$white: #fff !default;
-$black: #000 !default;
 
 $gray-scale: (
   ($gray-50, '50'),
@@ -130,14 +140,11 @@ $beige-scale: (
   ($beige-extra-light, 'extra-light', 'dark')
 ) !default;
 
-// White
-
-$white-scale: (
-  ($white, false),
-) !default;
 
 // ** Full color palette collection
 $palette: (
+  ('black', $black-scale),
+  ('white', $white-scale),
   ('gray', $gray-scale),
   ('red', $red-scale),
   ('blue', $blue-scale),
@@ -146,8 +153,7 @@ $palette: (
   ('yellow', $yellow-scale),
   ('orange', $orange-scale),
   ('teal', $teal-scale),
-  ('beige', $beige-scale),
-  ('white', $white-scale)
+  ('beige', $beige-scale)
 ) !default;
 
 
