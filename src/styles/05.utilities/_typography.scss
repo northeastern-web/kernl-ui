@@ -1,0 +1,65 @@
+//
+// Typography trumps
+//
+
+
+// Sizing
+.fs--xs { @include type_xs(); }
+.fs--sm { @include type_sm(); }
+.fs--root { @include type-root(); }
+.fs--d1 { @include type_d1(); }
+.fs--d2 { @include type_d2(); }
+.fs--d3 { @include type_d3(); }
+.fs--d4 { @include type_d4(); }
+.fs--d5 { @include type_d5(); }
+.fs--d6 { @include type_d6(); }
+.fs--d7 { @include type_d7(); }
+
+
+// Lead
+.fs--lead { @include type-lead(1); }
+
+
+// Weight
+.fw--100  { font-weight: 100; }
+.fw--200  { font-weight: 200; }
+.fw--300  { font-weight: 300; }
+.fw--400  { font-weight: 400; }
+.fw--500  { font-weight: 500; }
+.fw--600  { font-weight: 600; }
+.fw--700  { font-weight: 700; }
+.fw--900  { font-weight: 900; }
+
+
+// Alignment
+.ta--l  { text-align: left !important; }
+.ta--r  { text-align: right !important; }
+.ta--c  { text-align: center !important; }
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include mqbp-up($breakpoint) {
+    .ta--l\@#{$breakpoint}  { text-align: left !important; }
+    .ta--r\@#{$breakpoint}  { text-align: right !important; }
+    .ta--c\@#{$breakpoint}  { text-align: center !important; }
+  }
+}
+
+
+// Text Transformation
+.tt--l    { text-transform: lowercase !important; }
+.tt--u    { text-transform: uppercase !important; }
+.tt--c    { text-transform: capitalize !important; }
+.tt--caps {
+  // font-size: 90%;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+}
+
+
+//
+// Tables
+
+.\+th--sm th {
+  @include type-xs();
+  color: rgba($type-color, 0.65);
+}

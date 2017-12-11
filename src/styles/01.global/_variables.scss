@@ -1,0 +1,393 @@
+//
+// Global Variables
+// * Color Palette, Typography, Grid
+
+
+//
+// Color Palette
+
+// White
+$white: #fff !default;
+$white-scale: (
+  ($white, false),
+) !default;
+
+// Black
+$black: #000 !default;
+$black-scale: (
+  ($black, false),
+) !default;
+
+// Grays
+$gray-50:  #f7f7f7 !default;
+$gray-100: #efefef !default;
+$gray-200: #d0d0d0 !default;
+$gray-300: #b5b5b5 !default;
+$gray-400: #969696 !default;
+$gray-500: #797979 !default;
+$gray-600: #666666 !default;
+$gray-700: #535353 !default;
+$gray-800: #333333 !default;
+$gray-900: #1a1a1a !default;
+$gray: #58585a !default;
+$gray-dark: $gray-900 !default;
+$gray-light: #7b7778 !default;
+
+$gray-scale: (
+  ($gray-50, '50'),
+  ($gray-100, '100'),
+  ($gray-200, '200'),
+  ($gray-300, '300'),
+  ($gray-400, '400'),
+  ($gray-500, '500'),
+  ($gray-600, '600'),
+  ($gray-700, '700'),
+  ($gray-800, '800'),
+  ($gray-900, '900'),
+  ($gray, false),
+  ($gray-dark, 'dark'),
+  ($gray-light, 'light')
+) !default;
+
+// Reds
+$red:       #cc0000 !default;
+$red-dark:  #7e0000 !default;
+$red-light: #e34553 !default;
+
+$red-scale: (
+  ($red, false),
+  ($red-dark, 'dark'),
+  ($red-light, 'light')
+) !default;
+
+// Oranges
+$orange:       #f68c1e !default;
+$orange-dark:  #d15f08 !default;
+$orange-light: #f9b268 !default;
+
+$orange-scale: (
+  ($orange, false),
+  ($orange-dark, 'dark'),
+  ($orange-light, 'light', 'dark')
+) !default;
+
+// Yellows
+$yellow:       #fec42f !default;
+$yellow-dark:  #f9b301 !default;
+$yellow-light: #fed262 !default;
+
+$yellow-scale: (
+  ($yellow, false, 'dark'),
+  ($yellow-dark, 'dark', 'dark'),
+  ($yellow-light, 'light', 'dark')
+) !default;
+
+// Greens
+$green:       #aebe42 !default;
+$green-dark:  #808c15 !default;
+$green-light: #d4e291 !default;
+
+$green-scale: (
+  ($green, false, 'dark'),
+  ($green-dark, 'dark'),
+  ($green-light, 'light', 'dark')
+) !default;
+
+// Teals
+$teal:       #309aa8 !default;
+$teal-dark:  #13606d !default;
+$teal-light: #aed8da !default;
+
+$teal-scale: (
+  ($teal, false),
+  ($teal-dark, 'dark'),
+  ($teal-light, 'light', 'dark')
+) !default;
+
+// Blues
+// $blue:       #5c7d9e !default; // pods initial blue
+$blue:       #2b7be3 !default; // pods updated blue
+$blue-dark:  #2f4a61 !default;
+$blue-light: #bbd1ec !default; // #aec2da (marcom)
+
+$blue-scale: (
+  ($blue, false),
+  ($blue-dark, 'dark'),
+  ($blue-light, 'light', 'dark')
+) !default;
+
+// Purples
+$purple:       #9d64a2 !default;
+$purple-dark:  #511951 !default;
+$purple-light: #d0b7d5 !default;
+
+$purple-scale: (
+  ($purple, false),
+  ($purple-dark, 'dark'),
+  ($purple-light, 'light', 'dark')
+) !default;
+
+// Beige
+$beige:       #bdb29f !default;
+$beige-dark:  #615547 !default;
+$beige-light: #ece6d5 !default;
+$beige-extra-light: #f5f4f0 !default;
+
+$beige-scale: (
+  ($beige, false, 'dark'),
+  ($beige-dark, 'dark'),
+  ($beige-light, 'light', 'dark'),
+  ($beige-extra-light, 'extra-light', 'dark')
+) !default;
+
+
+// ** Full color palette collection
+$palette: (
+  ('black', $black-scale),
+  ('white', $white-scale),
+  ('gray', $gray-scale),
+  ('red', $red-scale),
+  ('blue', $blue-scale),
+  ('green', $green-scale),
+  ('purple', $purple-scale),
+  ('yellow', $yellow-scale),
+  ('orange', $orange-scale),
+  ('teal', $teal-scale),
+  ('beige', $beige-scale)
+) !default;
+
+
+//
+// Typography
+
+// Families
+$type-sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$type-serif: "Baskerville", Georgia, "Times New Roman", Times, serif !default;
+$type-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+// Weight
+$type-light:    300 !default;
+$type-regular:  400 !default;
+$type-bold:     700 !default;
+$type-black:    900 !default;
+
+// Base and Responsive sizing/properties
+$fs-xs:   0.76rem   !default;
+$fs-sm:   0.88rem   !default;
+$fs-root: 1.00rem   !default;
+$fs-d1:   1.24rem   !default;
+$fs-d2:   1.35rem   !default;
+$fs-d3:   1.53rem   !default;
+$fs-d4:   1.88rem   !default;
+$fs-d5:   2.24rem   !default;
+$fs-d6:   3.00rem   !default;
+$fs-d7:   5.00rem   !default;
+
+// color bases
+$type-color:  $gray-800 !default;
+$type-link:   $blue !default;
+
+
+//
+// Grid
+
+$grid-prefix: 'g' !default;
+$col-prefix: '\\-' !default;
+$grid-columns: 12 !default;
+$grid-gutter-width-base: 30px !default;
+
+// Gutter widths
+$grid-gutter-widths: (
+  xs: 1rem,
+  sm: 1rem,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: 36px,
+  xx: 40px
+) !default;
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xx: 1600px
+) !default;
+
+// Maximum widths
+$container-max-widths: (
+  sm: 720px,
+  md: 960px,
+  lg: 1080px,
+  xl: 1400px,
+  xx: 1800px
+) !default;
+
+
+//
+// Feather Icons
+$icon--activity: "\e900";
+$icon--airplay: "\e901";
+$icon--alert-circle: "\e902";
+$icon--alert-octagon: "\e903";
+$icon--alert-triangle: "\e904";
+$icon--align-center: "\e905";
+$icon--align-justify: "\e906";
+$icon--align-left: "\e907";
+$icon--align-right: "\e908";
+$icon--anchor: "\e909";
+$icon--aperture: "\e90a";
+$icon--arrow-down: "\e90b";
+$icon--arrow-left: "\e90c";
+$icon--arrow-right: "\e90d";
+$icon--arrow-up: "\e90e";
+$icon--at-sign: "\e90f";
+$icon--award: "\e910";
+$icon--bar-chart-2: "\e911";
+$icon--bar-chart: "\e912";
+$icon--battery: "\e913";
+$icon--bell-off: "\e914";
+$icon--bell: "\e915";
+$icon--bluetooth: "\e916";
+$icon--book: "\e917";
+$icon--bookmark: "\e918";
+$icon--box: "\e919";
+$icon--briefcase: "\e91a";
+$icon--camera-off: "\e91b";
+$icon--camera: "\e91c";
+$icon--check-circle: "\e91d";
+$icon--check-square: "\e91e";
+$icon--check: "\e91f";
+$icon--chevron-down: "\e920";
+$icon--chevron-left: "\e921";
+$icon--chevron-right: "\e922";
+$icon--chevron-up: "\e923";
+$icon--chrome: "\e924";
+$icon--circle: "\e925";
+$icon--clipboard: "\e926";
+$icon--clock: "\e927";
+$icon--cloud-off: "\e928";
+$icon--cloud: "\e929";
+$icon--cog: "\e92a";
+$icon--command: "\e92b";
+$icon--comment-circle: "\e92c";
+$icon--comment-square: "\e92d";
+$icon--cpu: "\e92e";
+$icon--crosshair: "\e92f";
+$icon--delete: "\e930";
+$icon--disc: "\e931";
+$icon--download-cloud: "\e932";
+$icon--download: "\e933";
+$icon--droplet: "\e934";
+$icon--edit: "\e935";
+$icon--external-link: "\e936";
+$icon--eye-off: "\e937";
+$icon--eye: "\e938";
+$icon--facebook: "\e939";
+$icon--fast-forward: "\e93a";
+$icon--feather: "\e93b";
+$icon--file: "\e93c";
+$icon--filter: "\e93d";
+$icon--flag: "\e93e";
+$icon--folder: "\e93f";
+$icon--globe: "\e940";
+$icon--grid: "\e941";
+$icon--hash: "\e942";
+$icon--headphones: "\e943";
+$icon--heart: "\e944";
+$icon--home: "\e945";
+$icon--image: "\e946";
+$icon--inbox: "\e947";
+$icon--info: "\e948";
+$icon--instagram: "\e949";
+$icon--layers: "\e94a";
+$icon--layout: "\e94b";
+$icon--life-buoy: "\e94c";
+$icon--loader: "\e94d";
+$icon--location: "\e94e";
+$icon--lock: "\e94f";
+$icon--mail: "\e950";
+$icon--map-pin: "\e951";
+$icon--map: "\e952";
+$icon--maximize-2: "\e953";
+$icon--maximize: "\e954";
+$icon--menu: "\e955";
+$icon--mic-off: "\e956";
+$icon--mic: "\e957";
+$icon--minimize-2: "\e958";
+$icon--minimize: "\e959";
+$icon--minus-circle: "\e95a";
+$icon--minus-square: "\e95b";
+$icon--minus: "\e95c";
+$icon--monitor: "\e95d";
+$icon--moon: "\e95e";
+$icon--more-horizontal: "\e95f";
+$icon--more-vertical: "\e960";
+$icon--move: "\e961";
+$icon--music: "\e962";
+$icon--octagon: "\e963";
+$icon--pause: "\e964";
+$icon--phone-call: "\e965";
+$icon--phone-forwarded: "\e966";
+$icon--phone-incoming: "\e967";
+$icon--phone-missed: "\e968";
+$icon--phone-off: "\e969";
+$icon--phone-outgoing: "\e96a";
+$icon--phone: "\e96b";
+$icon--pie-chart: "\e96c";
+$icon--play: "\e96d";
+$icon--plus-circle: "\e96e";
+$icon--plus-square: "\e96f";
+$icon--plus: "\e970";
+$icon--pocket: "\e971";
+$icon--power: "\e972";
+$icon--printer: "\e973";
+$icon--radio: "\e974";
+$icon--refresh-ccw: "\e975";
+$icon--refresh-cw: "\e976";
+$icon--rewind: "\e977";
+$icon--rotate-ccw: "\e978";
+$icon--rotate-cw: "\e979";
+$icon--scissors: "\e97a";
+$icon--search: "\e97b";
+$icon--share: "\e97c";
+$icon--shuffle: "\e97d";
+$icon--skip-back: "\e97e";
+$icon--skip-forward: "\e97f";
+$icon--slash: "\e980";
+$icon--square: "\e981";
+$icon--star: "\e982";
+$icon--sun: "\e983";
+$icon--sunrise: "\e984";
+$icon--sunset: "\e985";
+$icon--tag: "\e986";
+$icon--target: "\e987";
+$icon--thermometer: "\e988";
+$icon--thumbs-down: "\e989";
+$icon--thumbs-up: "\e98a";
+$icon--toggle-left: "\e98b";
+$icon--toggle-right: "\e98c";
+$icon--trash-2: "\e98d";
+$icon--trash: "\e98e";
+$icon--triangle: "\e98f";
+$icon--twitter: "\e990";
+$icon--umbrella: "\e991";
+$icon--unlock: "\e992";
+$icon--upload-cloud: "\e993";
+$icon--upload: "\e994";
+$icon--user-minus: "\e995";
+$icon--user-plus: "\e996";
+$icon--user: "\e997";
+$icon--video-off: "\e998";
+$icon--video: "\e999";
+$icon--watch: "\e99a";
+$icon--wifi: "\e99b";
+$icon--wind: "\e99c";
+$icon--x-circle: "\e99d";
+$icon--x-square: "\e99e";
+$icon--x: "\e99f";
+$icon--zap: "\e9a0";
+$icon--zoom-in: "\e9a1";
+$icon--zoom-out: "\e9a2";

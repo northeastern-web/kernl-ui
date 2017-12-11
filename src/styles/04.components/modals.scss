@@ -1,0 +1,209 @@
+//
+// Modals
+//
+
+
+// Bootstrap utility to kill the scroll on the body
+.modal-open { overflow: hidden; }
+
+// Container that the modal scrolls within
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 4000;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+  -webkit-overflow-scrolling: touch;
+  @include modal_variant();
+
+  // When fading in the modal, animate it to slide down
+  &.fade .__dialog {
+    transition: transform .5s ease-out;
+    transform: translate(0, -25%);
+  }
+
+  &.in .__dialog,
+  &.show .__dialog,
+  &.active .__dialog { transform: translate(0, 0); }
+
+  // Shell div to position the modal with bottom padding
+  .__dialog {
+    position: relative;
+    width: auto;
+    margin: 3rem auto;
+    max-width: 450px;
+
+    @include mqbp-up(md) {
+      max-width: 760px;
+    }
+  }
+
+  // Actual modal
+  .__content {
+    position: relative;
+    background-clip: padding-box;
+    border: 0 none;
+    border-radius: 2px;
+    outline: 0;
+    @include box_shadow();
+  }
+
+  .__header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid $gray-300;
+    @include clearfix;
+  }
+
+  .__title {
+    margin: 0;
+  }
+
+  .__body {
+    position: relative;
+    padding: 1rem 1.25rem;
+  }
+
+  .__image__wrapper {
+    overflow: hidden;
+  }
+
+  .__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .__footer {
+    padding: 1rem 1.25rem;
+    text-align: right; // right align buttons
+    border-top: 1px solid $gray-300;
+    @include clearfix();
+  }
+
+  &.\--dark {
+    @include modal_variant(#fff, $gray-800);
+
+    .__header,
+    .__footer {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-color: $gray-700;
+    }
+  }
+
+  &.\--contact {}
+
+  .\--contact__info { @include type-sm(); }
+
+  .__body.\--contact__bio { @include mqbp-up(md) { padding: 7rem 2.5rem 1rem 1.25rem; } }
+
+  .\--contact__name {
+    @include type-d5();
+    font-weight: 900;
+  }
+
+  .\--contact__title {
+    @include type-lead();
+    font-weight: 400;
+  }
+
+  &.\--search {
+    background-color: rgba($gray-dark, .85);
+    color: #fff;
+
+    .close {
+      font-size: 3rem;
+      top: 0;
+      right: 2rem;
+    }
+
+    .__dialog { max-width: none; }
+
+    .__content {
+      margin: 5% auto;
+      background: transparent;
+      box-shadow: none;
+      color: #fff;
+
+      @include mqbp-up(lg) {
+        width: 70%;
+      }
+    }
+
+    .__control {
+      @include type-d1();
+      padding-bottom: 1rem;
+      padding-left: 0;
+      background: transparent;
+      border: 0 none;
+      border-bottom: 2px solid rgba(#fff, 0.5);
+      font-weight: $type-light;
+      color: #fff;
+      outline: none;
+      box-shadow: none;
+
+      @include mqbp-up(md) {
+        @include type-d4();
+      }
+    }
+  }
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal .close {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  background: 0 none;
+  border: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+  transition: opacity 0.2s ease;
+  z-index: 4001;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/**
+* Elements
+*/
+
+// Bootstrap utility to measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+
+// Bootstrap utility for lights-out behind the modal
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3999;
+  background-color: $gray-800;
+  transition: opacity 0.5s ease;
+
+  &.fade { opacity: 0; }
+  &.in,
+  &.show,
+  &.active { opacity: 0.65; }
+}

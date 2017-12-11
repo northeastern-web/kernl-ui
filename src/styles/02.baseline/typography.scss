@@ -1,0 +1,165 @@
+//
+// Typography
+//
+
+
+html {
+  @include type-root();
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: $type-sans;
+  color: $type-color;
+}
+
+
+//
+// Headings
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem;
+  padding: 0;
+  font-weight: $type-regular;
+}
+
+// extra padding for heading immediately following certain elements
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  +h2, +h3, +h4, +h5, +h6 { padding-top: 0.25rem; }
+}
+
+h1 { @include type_d5(); }
+
+h2 { @include type_d4(); }
+
+h3 { @include type_d3(); }
+
+h4 { @include type_d2(); }
+
+h5 { @include type_d1(); }
+
+h6 {
+  font-size: $fs-root;
+  font-weight: $type-bold;
+}
+
+
+
+//
+// Paragraphs
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+// Small
+small { @include type_sm(); }
+
+
+//
+// Links
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  color: $type-link;
+  font-weight: 500;
+
+  &:hover { color: darken($type-link, 20%); }
+  &:focus {}
+
+  &:active,
+  &:hover { outline-width: 0; }
+}
+
+
+//
+// Blockquotes
+
+blockquote {
+  margin: 0 0 1rem;
+  padding: 1rem;
+
+  @include mqbp-up(md) {
+    padding: 2rem;
+  }
+
+  &, p {
+    @include type_lead();
+    margin-bottom: 1rem;
+  }
+
+  cite {
+    display: block;
+    font-size: $fs-root;
+    line-height: 1.5;
+  }
+}
+
+
+//
+// Address
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+
+//
+// Abbreviations and acronyms
+
+abbr,
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: none;
+  border-bottom: 1px dotted $gray-300;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  padding: 0 1px;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: inherit;
+}
+
+dfn { font-style: italic; }
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+}

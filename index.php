@@ -3,17 +3,17 @@
 
 <!doctype html>
 <html id="kernl">
-  <?php include 'resources/views/_head.php'; ?>
+  <?php include 'docs/views/_head.php'; ?>
   <body class="chrm<?= $part ? ' part--' . $part : ' home'; ?>">
-    <?php include 'resources/views/_header.php'; ?>
+    <?php include 'docs/views/_header.php'; ?>
 
     <div class="k_wrap" id="main_content" role="document">
       <main class="k_main" role="document">
-        <?php include 'resources/views/_index.php'; ?>
+        <?php include 'docs/views/_index.php'; ?>
       </main>
-      <?php include 'resources/views/_nav.php'; ?>
+      <?php include 'docs/views/_nav.php'; ?>
     </div>
 
-    <?php include 'resources/views/_footer.php'; ?>
+    <?php include 'docs/views/_footer.php'; ?>
   </body>
 </html>

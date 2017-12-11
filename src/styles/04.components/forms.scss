@@ -1,0 +1,447 @@
+//
+// Forms
+//
+
+
+//
+// Textual form controls
+.__control {
+  display: block;
+  width: 100%;
+  // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  // height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  font-size: 1rem;
+  line-height: $input-line-height;
+  color: $input-color;
+  background-color: $input-bg;
+  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
+  background-image: none;
+  background-clip: padding-box;
+  border: $input-btn-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+
+  @include box-shadow($input-box-shadow);
+  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  @include form-control-focus();
+
+  // Placeholder
+  &::placeholder {
+    color: $input-color-placeholder;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    background-color: $input-bg-disabled;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+
+  &:disabled {
+    cursor: $cursor-disabled;
+  }
+}
+
+select.__control {
+  &:not([size]):not([multiple]) {
+    $select-border-width: ($border-width * 2);
+    height: calc(#{$input-height} + #{$select-border-width});
+  }
+
+  &:focus::-ms-value {
+    // Suppress the nested default white text on blue background highlight given to
+    // the selected option text when the (still closed) <select> receives focus
+    // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+    // match the appearance of the native widget.
+    // See https://github.com/twbs/bootstrap/issues/19398.
+    color: $input-color;
+    background-color: $input-bg;
+  }
+}
+
+// Make file inputs better match text inputs by forcing them to new lines.
+.__control--file,
+.__control--range {
+  display: block;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border: 0 none;
+  @include type-sm();
+  margin: 3px 0;
+}
+
+
+//
+// Labels
+
+// For use with horizontal and inline forms, when you need the label text to
+// align with the form controls.
+.col-form-label {
+  padding-top: $input-padding-y;
+  padding-bottom: $input-padding-y;
+  margin-bottom: 0; // Override the `<label>` default
+}
+
+.col-form-label-lg {
+  padding-top: $input-padding-y-lg;
+  padding-bottom: $input-padding-y-lg;
+  font-size: 1.5rem;
+}
+
+.col-form-label-sm {
+  padding-top: $input-padding-y-sm;
+  padding-bottom: $input-padding-y-sm;
+  font-size: $fs-sm;
+}
+
+
+//
+// Legends
+
+// For use with horizontal and inline forms, when you need the legend text to
+// be the same size as regular labels, and to align with the form controls.
+.col-form-legend {
+  padding-top: $input-padding-y;
+  padding-bottom: $input-padding-y;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+//
+// Static form control text
+//
+// Apply class to an element to make any string of text align with labels in a
+// horizontal form layout.
+
+.__control--static {
+  padding-top: $input-padding-y;
+  padding-bottom: $input-padding-y;
+  line-height: $input-line-height;
+  border: solid transparent;
+  border-width: 1px 0;
+
+  &.__control--sm,
+  &.__control--lg {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+//
+// Form control sizing
+//
+// Build on `.__control` with modifier classes to decrease or increase the
+// height and font-size of form controls.
+//
+// The `.__group-* form-control` variations are sadly duplicated to avoid the
+// issue documented in https://github.com/twbs/bootstrap/issues/15074.
+
+.__control--sm {
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  font-size: $fs-sm;
+  @include border-radius($input-border-radius-sm);
+}
+
+select.__control--sm {
+  &:not([size]):not([multiple]) {
+    height: $input-height-sm;
+  }
+}
+
+.__control--lg {
+  padding: $input-padding-y-lg $input-padding-x-lg;
+  font-size: 1.5rem;
+  @include border-radius($input-border-radius-lg);
+}
+
+select.__control--lg {
+  &:not([size]):not([multiple]) {
+    height: $input-height-lg;
+  }
+}
+
+//
+// Form groups
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+
+.__group {
+  margin-bottom: $form-group-margin-bottom;
+
+  label {
+    @include type-sm();
+    color: $gray-500;
+    margin-bottom: 0;
+  }
+
+  &.__search {
+    @extend .__control;
+    position: relative;
+    padding: 0.5rem;
+    @include clearfix();
+
+    .__control,
+    &:before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      font-family: "feathericons";
+      content: "\e97b";
+      left: 0.85rem;
+      color: rgba($type-color, 0.5);
+
+      @include mqbp-up(md) {
+        left: 1rem;
+      }
+
+      @include mqbp-up(lg) {
+        left: 1.25rem;
+      }
+    }
+
+    .__control {
+      background: transparent;
+      border: 0 none;
+      width: 65%;
+      float: left;
+      padding: 0;
+      margin-left: 2rem;
+      box-shadow: none !important;
+      @extend .__control--lg;
+
+      @include mqbp-up(md) {
+        width: 80%;
+        margin-left: 2.5rem;
+      }
+
+      @include mqbp-up(lg) {
+        margin-left: 2.5rem;
+      }
+    }
+
+    .btn {
+      padding: 0.5rem;
+      float: right;
+      margin-bottom: 0;
+    }
+
+    &.\+line {
+      background: transparent;
+      padding-right: 0;
+      padding-left: 0;
+      border: 0 none;
+      box-shadow: none;
+      border-bottom: 1px solid rgba($type-color, 0.5);
+
+      &:before {
+        left: 0 !important;
+      }
+
+      .btn:not(:hover) {
+        background: transparent;
+      }
+    }
+
+    &.\--dark {
+      border-color: rgba(255, 255, 255, 0.3);
+
+      &:before { color: rgba(255, 255, 255, 0.5); }
+      
+      .__control,
+      .btn { color: #fff; }
+
+      .btn {
+        border-color: rgba(255, 255, 255, 0.5);
+
+        &:hover { color: $type-color; }
+      }
+      
+      &::placeholder { color: #fff; }
+    }
+  }
+}
+
+.__text {
+  display: block;
+  margin-top: ($spacer * .25);
+}
+
+// 
+// Checkboxes and radios
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+.__check {
+  position: relative;
+  display: block;
+  margin-bottom: ($spacer * .75);
+
+  // Move up sibling radios or checkboxes for tighter spacing
+  + .__check {
+    margin-top: -.25rem;
+  }
+
+  &.disabled {
+    .__check__label {
+      color: $gray-400;
+      cursor: $cursor-disabled;
+    }
+  }
+}
+
+.__check__label {
+  margin-bottom: 0; // Override default `<label>` bottom margin
+  cursor: pointer;
+}
+
+.__check__input {
+  margin-right: 0.25rem;
+
+  &:only-child {
+    position: static;
+  }
+}
+
+// Radios and checkboxes on same line
+.__check--inline {
+  display: inline-block;
+
+  .__check__label { vertical-align: middle; }
+
+  + .__check--inline { margin-left: .75rem; }
+}
+
+// 
+// Form control feedback states
+// Apply contextual and semantic states to individual form controls.
+
+.__control--feedback {
+  margin-top: ($spacer * .25);
+}
+
+.__control--success,
+.__control--warning,
+.__control--danger {
+  padding-right: ($input-padding-x * 3);
+  background-repeat: no-repeat;
+  background-position: center right ($input-height / 4);
+  background-size: ($input-height / 2) ($input-height / 2);
+}
+
+// Form validation states
+.has-success {
+  @include form-control-validation($green);
+
+  .__control--success {
+    background-image: $form-icon-success;
+  }
+}
+
+.has-warning {
+  @include form-control-validation($yellow);
+
+  .__control--warning {
+    background-image: $form-icon-warning;
+  }
+}
+
+.has-danger {
+  @include form-control-validation($red);
+
+  .__control--danger {
+    background-image: $form-icon-danger;
+  }
+}
+
+.form-inline {
+  // Kick in the inline
+  @include mqbp-up(sm) {
+    label {
+      margin-bottom: 0;
+    }
+
+    .__group {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+
+    .__control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+    }
+
+    .__control--static {
+      display: inline-block;
+    }
+
+    .input-group {
+      width: auto;
+      display: inline-table;
+      vertical-align: middle;
+
+      .input-group-addon,
+      .input-group-btn,
+      .__control {
+        width: auto;
+      }
+    }
+
+    .input-group > .__control {
+      width: 100%;
+    }
+
+    .__control--label {
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    .__check {
+      display: inline-block;
+      vertical-align: middle;
+      width: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .__check__label {
+      padding-left: 0;
+    }
+    .__check__input {
+      position: relative;
+      margin-left: 0;
+    }
+
+    .custom-control {
+      padding-left: 0;
+      vertical-align: middle;
+    }
+    .custom-control-indicator {
+      position: static;
+      display: inline-block;
+      vertical-align: text-bottom;
+    }
+
+    .has-feedback .__control--feedback {
+      top: 0;
+    }
+  }
+}

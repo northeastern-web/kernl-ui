@@ -1,12 +1,12 @@
 {
-  "name": "kernl(ui)",
+  "name": "kernl-ui",
   "version": "0.1.0",
   "author": "NU PODS <provost-digital@northeastern.edu>",
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:nupods/ui.kernl.git"
+    "url": "git://bitbucket.org/nupods/kernl-ui"
   },
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -16,22 +16,21 @@
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
+  "sass": "src/styles/main.scss",
+  "main": "src/scripts/main.js",
   "engines": {
     "node": ">= 0.12.0",
     "npm": ">=2.1.5"
   },
   "devDependencies": {
-    "jquery": "^3.1.1",
-    "laravel-mix": "^1.0",
-    "lodash": "^4.17.4",
-    "tether": "^1.4.0"
-  },
-  "dependencies": {
     "browser-sync": "^2.18.13",
     "browser-sync-webpack-plugin": "^1.2.0",
-    "clipboard": "^1.7.1",
     "cross-env": "^5.0.5",
+    "laravel-mix": "^1.4.3"
+  },
+  "dependencies": {
     "feather-icons": "^3.2.2",
-    "highlight.js": "^9.12.0"
+    "jquery": "^3.0.0",
+    "popper.js": "^1.12.5"
   }
 }

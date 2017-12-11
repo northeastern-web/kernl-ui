@@ -1,0 +1,7 @@
+//
+// Clearfix Utilities
+//
+
+.\+clearfix { @include clearfix(); }
+
+.\+clear { clear: both; }

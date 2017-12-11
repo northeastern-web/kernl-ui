@@ -1,0 +1,576 @@
+//
+// Cards
+//
+
+.card {
+  @include card_variant();
+  @include transition();
+  @include box_shadow();
+  width: 100%;
+  height: auto;
+  margin-bottom: $grid-gutter-width-base;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+
+  &:hover { @include box_shadow($component-shadow-hover); }
+
+  @include mqbp-up(xx) { margin-bottom: $grid-gutter-width-base + 10; }
+
+  .__header {
+    .badge {
+      display: inline-flex;
+      top: 0.5rem;
+
+      &.\--left { left: 0.5rem; }
+      &.\--right { right: 0.5rem; }
+    }
+  }
+
+  //
+  // Columns in header/footer
+  .__column { @extend %component-column; }
+
+  //
+  // Link
+  .__link {
+    height: 100%;
+    display: block;
+
+    &, &:hover { color: inherit; }
+  }
+
+
+  //
+  // Graphic
+  .__graphic {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    padding-top: 56.25%;
+
+    &:after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.15);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: background 0.2s ease;
+    }
+  }
+
+  // Image within .__graphic
+  .__graphic__img {
+    max-width: 110%;
+    width: auto; height: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: -5%;
+  }
+
+
+  //
+  // Body
+  .__body {
+    padding: 1rem 1rem 3rem;
+    @include type-sm();
+
+    p {
+      font-size: inherit;
+      line-height: inherit;
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  //
+  // Titles with .__body
+  .__title {
+    line-height: 1.25;
+    font-weight: 900;
+    font-size: $fs-root;
+    @include font_smoothing();
+  }
+
+  .__pretitle {
+    font-size: .8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .__subtitle {}
+
+  //
+  // Icon
+  .__icon {
+    @extend %icon;
+    margin-bottom: .5rem;
+
+    i { font-size: 1.5rem; }
+
+    svg {
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+
+  //
+  // Header & Footer
+  .__header,
+  .__footer {
+    // @extend .\--row;
+    @include type-sm();
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    left: 0;
+    z-index: 15;
+  }
+
+  .__header {
+    top: 0;
+
+    +.__body {
+      margin-top: 2.5rem;
+      border-top: 1px solid $gray-200;
+    }
+  }
+
+  .__footer {
+    bottom: 0;
+    border-top: 1px solid $gray-200;
+  }
+
+  // Link within footer
+  .__footer__link {
+    @extend .btn;
+    @extend .btn.\--dark;
+    @extend .btn.\--block;
+    margin-bottom: 0;
+    height: 2.5rem;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  //
+  // Dark
+  &.\--dark { @include card_variant(#fff, $component-dark); }
+
+  //
+  // Outline card with white bg and dark text
+  &.\--outline {
+    @extend %component-outline;
+    background-color: #fff !important;
+    box-shadow: none;
+  }
+
+  //
+  // Position card bottom-left
+  &.\--bottom {
+    min-height: $card_height_xs;
+
+    .__body {
+      padding-bottom: 1rem;
+      border: none;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .__icon { text-align: left; }
+  }
+
+  //
+  // Overlay
+  &.\--overlay {
+    color: #fff;
+    min-height: $card_height_sm;
+
+    .__link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .__graphic {
+      height: 100%;
+      width: 100%;
+      max-width: initial;
+      position: absolute;
+      top: 0; left: 0;
+      padding: 0;
+
+      &:after {
+        background: rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    .__graphic__img {
+      max-width: none;
+      max-height: 110%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: -10rem;
+      bottom: -10rem;
+      left: -10rem;
+      right: -10rem;
+      margin: auto;
+
+      @include mqbp-up(sm) {
+        max-height: 120%;
+      }
+    }
+
+    .__body {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      // width: auto;
+      height: 100%;
+    }
+
+    &.\--middle {
+      .__body {
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        border-top: 0 none;
+      }
+    }
+
+    &.\--bottom {
+      .__body {
+        height: auto; width: auto;
+        padding-bottom: 1rem;
+        top: initial;
+      }
+    }
+
+    &:not(.\--middle) {
+      .__header ~ .__body { margin-top: 2.5rem; }
+    }
+
+    &:hover {
+      .__graphic {
+        &:after { background: rgba(0, 0, 0, 0.35); }
+      }
+    }
+  }
+
+  //
+  // Tiles
+  &.\--tile {
+    min-height: $tile_min_height;
+
+    .__excerpt,
+    .__body p,
+    .__header,
+    .__footer {
+      @include type-sm();
+
+      @include mqbp-up(lg) { @include type-xs(); }
+    }
+
+    .__graphic__img {
+        max-height: 175%;
+        @include mqbp-up(sm) { max-height: 110%; }
+        @include mqbp-up(md) { max-height: 130%; }
+        @include mqbp-up(lg) { max-height: 106%; }
+        @include mqbp-up(xx) { max-height: 130%; }
+    }
+
+    .__title {
+      font-size: 1rem;
+    }
+  }
+}
+
+
+@include mqbp-up(sm) {
+  .\--3\@sm, .\--4\@sm, .\--5\@sm, .\--6\@sm {
+    .card {
+      height: $card_height_sm;
+    }
+  }
+
+  .card.\--tile,
+  .card.\--tile.\--overlay {
+    height: 250px;
+    min-height: 0;
+  }
+}
+
+
+@include mqbp-up(md) {
+  [class^="\\--"][class$="sm"],
+  [class^="\\--"][class$="md"],
+  [class^="\\--"][class$="lg"] {
+    .card {
+      height: $card_height_md;
+    }
+  }
+
+  .\--6\@md,
+  .\--7\@md,
+  .\--8\@md,
+  .\--9\@md,
+  .\--10\@md,
+  .\--11\@md,
+  .\--5\@lg,
+  .\--6\@lg,
+  .\--7\@lg,
+  .\--9\@lg,
+  .\--10\@lg,
+  .\--11\@lg {
+    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
+      @include card_horizontal($width_graphic: 50%, $width_text: 50%);
+    }
+
+    .card.\--overlay {
+      .__graphic__img {
+
+        @include mqbp-up(md) {
+          max-height: 110%;
+        }
+
+        @include mqbp-up(md) {
+          max-height: 150%;
+        }
+      }
+    }
+  }
+
+  .card.\--tile,
+  .card.\--tile.\--overlay {
+    height: 200px !important;
+  }
+}
+
+@include mqbp-up(lg) {
+  [class^="\\--"][class$="sm"],
+  [class^="\\--"][class$="md"],
+  [class^="\\--"][class$="lg"] {
+    .card {
+      height: $card_height_lg;
+    }
+  }
+
+  .\--9\@lg,
+  .\--10\@lg,
+  .\--11\@lg {
+    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
+      @include card_horizontal($width_graphic: 66.6%, $width_text: 33.3%);
+    }
+  }
+
+  .\--6\@md,
+  .\--7\@md,
+  .\--6\@lg,
+  .\--7\@lg,
+  .\--8\@lg {
+    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
+      @include card_horizontal($width_graphic: 50%, $width_text: 50%);
+    }
+  }
+
+  .\--3\@lg,
+  .\--4\@lg {
+    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
+      @include card_vertical();
+    }
+  }
+}
+
+@include mqbp-up(xl) {
+  [class^="\\--"][class$="sm"],
+  [class^="\\--"][class$="md"],
+  [class^="\\--"][class$="lg"],
+  [class^="\\--"][class$="xl"] {
+    .card {
+      height: $card_height_xl;
+    }
+  }
+
+  .\--9\@lg,
+  .\--10\@lg,
+  .\--11\@lg {
+    @include fill_height();
+  }
+
+  .\--4\@sm,
+  .\--4\@md,
+  .\--4\@lg {
+    &:not(.\--2\@xl) {
+      .card.\--tile { height: 230px !important; }
+    }
+  }
+}
+
+@include mqbp-up(xx) {
+  .card {
+    height: $card_height_xx;
+    margin-bottom: 40px; // = match xx gutter
+  }
+
+  .\--9\@lg,
+  .\--10\@lg,
+  .\--11\@lg {
+    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
+      @include card_horizontal($width_graphic: 56.25%, $width_text: 43.75%);
+    }
+
+    .__graphic__img {
+      width: 106%;
+      height: auto !important;
+      left: -3%;
+    }
+  }
+}
+
+
+//
+// Scrolling within card
+.\--scroll {
+  height: $card_height_sm;
+
+  &:after { display: none; } // kill box-shadow
+
+  .__body {
+    height: 90%;
+    overflow-y: scroll;
+  }
+}
+
+//
+// Extend card past fixed height
+.\--extend { height: auto !important; }
+
+
+//
+// Middle
+.\--middle {
+  text-align: center;
+  min-height: $card_height_xs;
+
+  .__body {
+    margin-top: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include mqbp-up(sm) {
+    min-height: $card_height_sm;
+  }
+}
+
+
+//
+// Sizing
+.card {
+  @include mqbp-up(md) { height: $card_height_sm; max-height: none; }
+  @include mqbp-up(lg) { height: $card_height_lg; }
+  @include mqbp-up(xl) { height: $card_height_xl; }
+  @include mqbp-up(xx) { height: $card_height_xx; }
+
+  &.\--tile:after { height: 2.5rem!important; }
+}
+
+//
+// List groups within cards
+.card {
+  .list-group {
+    // position: absolute; // required for full-width with negative margins
+    // margin-bottom: 0;
+    // padding-top: 1rem;
+    background: transparent;
+    margin: -1px -1rem 0;
+  }
+
+  .list-group__item,
+  .list-group > div,
+  .list-group > a,
+  .list-group > li {
+    padding: 0.75rem 1rem;
+    border-right: 0 none;
+    border-left: 0 none;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-right: 0 none;
+      border-left: 0 none;
+      border-bottom: 0 none;
+    }
+  }
+
+  &.\--overlay {
+    .list-group {
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 70%);
+      color: #fff;
+    }
+
+    .list-group__item,
+    .list-group > div,
+    .list-group > a,
+    .list-group > li {
+      border-top-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &.\--bottom {
+    .__body {
+      position: absolute !important;
+    }
+
+    .list-group {
+      position: relative;
+      margin-bottom: -1rem;
+    }
+
+    .list-group__item,
+    .list-group > div,
+    .list-group > a,
+    .list-group > li {
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: 0 none;
+      }
+    }
+  }
+
+  &.\+list-group {
+    .__body {
+      padding-top: 0;
+      padding-bottom: 2.25rem;
+    }
+  }
+
+  &.\+shade {
+    .__graphic:after,
+    &:hover .__graphic:after {
+      background: none;
+    }
+
+    .__body {
+      background: rgba(0, 0, 0, 0.25);
+      transition: background 0.2s ease;
+    }
+
+    &:hover {
+      .__body { background: rgba(0, 0, 0, 0.35); }
+    }
+  }
+}

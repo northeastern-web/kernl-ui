@@ -1,0 +1,30 @@
+//
+// Positioning trumps
+//
+
+/* Flexbox vertical positioning */
+.\+equal { height: 100%; }
+.\+middle { align-items: center; }
+.\+bottom { align-items: flex-end; }
+
+/* Responsive floats */
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include mqbp-up($breakpoint) {
+    .f--l\@#{$breakpoint} {
+      float: left !important;
+    }
+
+    .f--r\@#{$breakpoint} {
+      float: right !important;
+    }
+
+    .f--n\@#{$breakpoint} {
+      float: none !important;
+    }
+  }
+}
+
+.\--sticky {
+  position: sticky;
+  top: 1rem;
+}

@@ -1,0 +1,719 @@
+//
+// Component utility placeholders and mixins
+//
+
+// Shadows
+// Transitions
+// Hover/Focus
+// Tab Focus
+// Border radius
+// Component: Accordions
+// Component: Alerts
+// Component: Badges
+// Component: Buttons
+// Component: Cards
+// Component: List Groups
+// Component: Media Objects
+// Component: Modals
+// Component: Colors
+// Component: Form Inputs
+
+//
+// Shadows
+
+@mixin box_shadow($shadow: $component-shadow) {
+  box-shadow: $shadow;
+}
+
+
+//
+// Transitions
+
+@mixin transition($transition...) {
+  @if length($transition) == 0 {
+    transition: $transition-base;
+  } @else {
+    transition: $transition;
+  }
+}
+
+
+//
+// Hover
+
+@mixin hover {
+  &:hover { @content }
+}
+
+@mixin hover_focus {
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin plain_hover_focus {
+  &,
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin hover_focus_active {
+  &:focus,
+  &:active,
+  &:hover {
+    @content
+  }
+}
+
+
+//
+// Tab Focus
+
+@mixin tab_focus() {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+//
+// Border Radius
+
+@mixin border_radius($radius: $border-radius) {
+  border-radius: $radius;
+}
+
+@mixin border_top_radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin border_right_radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border_bottom_radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border_left_radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+
+//
+// Accordion mixins
+
+@mixin accordion_variant($color: $type-color, $trigger: $gray-100, $background: transparent) {
+  color: $color;
+
+  > .__item > .__title {
+    background: $trigger;
+
+    &:after { color: rgba($color, 0.5); }
+
+    &.collapsed {
+      &:after { color: $color; }
+    }
+  }
+
+  .__copy { background: $background; }
+}
+
+
+//
+// Alert mixins
+
+// Alert Size
+@mixin alert_size($padding-y, $padding-x) {
+  padding: $padding-y $padding-x;
+}
+
+// Alert Variant
+@mixin alert_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $border: transparent, $add_shadow: false) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  @if ($add_shadow == false) {
+    box-shadow: none;
+  }
+
+  &.\--outline {
+    @if $background != rgba(255, 255, 255, 1) {
+      color: $background;
+      border-color: $background;
+    }
+  }
+
+  .__link:hover { background-color: darken($background, 10%); }
+}
+
+
+//
+// Badge mixins
+
+// Badge Variant
+@mixin badge_variant($color, $background, $border) {
+  color: $color;
+  border-color: $border;
+  background-color: $background;
+
+  &.badge--outline {
+    color: $background;
+    background-color: transparent;
+  }
+}
+
+
+//
+// Button mixins
+
+// Button variants
+@mixin button_variant($color, $background, $border) {
+  $active-background: darken($background, 10%);
+  $active-border: darken($border, 12%);
+
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  @include hover {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+  }
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: $active-background;
+        border-color: $active-border;
+    // Remove the gradient for the pressed/active state
+    background-image: none;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+    @include hover {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+
+  &.\--outline {
+    color: $background;
+    background-color: transparent;
+    border-color: $background;
+
+    @include hover {
+      color: #fff;
+      background-color: $background !important;
+          border-color: $background !important;
+    }
+
+    &.\--white {
+      color: rgba(255, 255, 255, 1);
+      background-color: rgba(255, 255, 255, 0);
+      border-color: rgba(255, 255, 255, 0.5) !important;
+
+      @include hover {
+        color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border-color: rgba(255, 255, 255, 0.9);
+      }
+    }
+
+    &:focus,
+    &.focus {
+      color: #fff;
+      background-color: $background;
+          border-color: $background;
+    }
+
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      color: #fff;
+      background-color: $background;
+          border-color: $background;
+
+      &:hover,
+      &:focus,
+      &.focus {
+        color: #fff;
+        background-color: darken($background, 17%);
+            border-color: darken($background, 25%);
+      }
+    }
+
+    &.disabled,
+    &:disabled {
+      &:focus,
+      &.focus {
+        border-color: lighten($background, 20%);
+      }
+      @include hover {
+        border-color: lighten($background, 20%);
+      }
+    }
+  }
+}
+
+// Button sizing
+@mixin button_size($padding-t, $padding-y, $padding-b, $font-size, $border-radius) {
+  padding: $padding-t $padding-y $padding-b;
+  font-size: $font-size;
+  @include border_radius($border-radius);
+
+  .__icon {
+    height: $font-size;
+    width: $font-size;
+
+    i, svg {
+      height: $font-size * 1.25;
+      width: $font-size * 1.25;
+    }
+
+    &.\--left {
+      margin-right: round($font-size / 2);
+    }
+
+    &.\--right {
+      margin-left: round($font-size / 2);
+    }
+
+    &.\--lg {
+      height: $font-size * 2;
+      width: $font-size * 2;
+      margin: ($font-size / 2) 0;
+
+      i, svg {
+        height: $font-size * 2;
+        width: $font-size * 2;
+      }
+    }
+  }
+}
+
+
+//
+// Card mixins
+
+// Card Variant
+@mixin card_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $is_transparent: 0, $icon-size: 24px) {
+  color: $color;
+  background: $background;
+  border-color: $background;
+
+  .__body,
+  .__footer,
+  .list-group .__item { border-color: darken($background, 20%); }
+
+  &:not(.\--overlay):not(.\--bottom) {
+    .__link {
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 3rem;
+        background: linear-gradient(to bottom, rgba($background,0) 0%,rgba($background,1) 70%);
+        z-index: 10;
+
+        @include mqbp-up(md) { height: 4rem; }
+        @include mqbp-up(xx) { height: 5rem; }
+      }
+    }
+
+    &.\--outline {
+      @if $background != rgba(255, 255, 255, 1) {
+        color: $background;
+      }
+
+      .__link {
+        &:after { background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 70%); }
+      }
+    }
+  }
+
+  .__footer {
+    background: $background;
+    z-index: 11; // appear over gradient
+  }
+
+  @if $background != rgba(255, 255, 255, 1) {
+    .__body,
+    .__footer,
+    .__item { border-color: rgba(255, 255, 255, .2); }
+
+    &:hover { background: darken($background, 5%); }
+  }
+
+  /* don't change this, or else white cards will darken to light gray on hover */
+  @if $background == rgba(255, 255, 255, 1) {
+    &:hover { background: rgba(255, 255, 255, 1); }
+  }
+
+  &.\--tile {
+    .__link {
+      &:after {
+        @include mqbp-up(md) { height: 2rem !important; }
+        @include mqbp-up(xx) { height: 3rem !important; }
+      }
+    }
+  }
+
+  .__graphic.\+round {
+    margin: 1rem auto 0;
+    max-width: $icon-size * 3 !important;
+    height: $icon-size * 3 !important;
+    padding: 0 !important;
+    border-radius: $icon-size * 2 !important;
+
+    .__graphic__img {
+      max-width: 200% !important;
+      left: -50% !important;
+    }
+  }
+}
+
+// set image and text side by side
+@mixin card_horizontal($background: rgba(255, 255, 255, 1), $width_graphic: 100%, $width_text: auto) {
+  .__graphic {
+    width: $width_graphic;
+    height: 100%;
+    padding: 0;
+  }
+
+  .__graphic__img {
+    max-width: none;
+    height: 100%;
+    top: -10rem;
+    bottom: -10rem;
+    left: -10rem;
+    right: -10rem;
+  }
+
+  .__body {
+    position: absolute;
+    width: $width_text;
+    left: $width_graphic;
+    top: 0;
+    height: 100%;
+  }
+
+  &:after {
+    height: 0;
+    display: none;
+  }
+
+  .__graphic + .__header {
+    width: $width_graphic;
+  }
+
+  .__footer {
+    right: 0;
+    left: $width_graphic;
+    width: $width_text;
+  }
+
+  .__link {
+    padding-bottom: 0;
+
+    &:after {
+      width: $width_text;
+    }
+  }
+}
+
+// reset card_horizontal back to stacked when necessary;
+// required for cases like .g-6@md.g-3@lg
+@mixin card_vertical() {
+  .__graphic {
+    width: 100%;
+    height: 0;
+    padding: 56.25% 0 0;
+  }
+
+  .__graphic__img {
+    max-width: 110%;
+    width: auto;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: -5%;
+    right: 0;
+  }
+
+  .__body {
+    position: relative;
+    width: auto;
+    left: auto;
+    top: auto;
+    height: auto;
+  }
+
+  .__header,
+  .__footer {
+    right: auto;
+    left: auto;
+    width: 100%;
+  }
+
+  .__header + .__body { padding-top: 1rem; }
+}
+
+@mixin fill_width() {
+  .__graphic__img {
+    width: 110%;
+    height: auto;
+  }
+}
+
+@mixin fill_height() {
+  .__graphic__img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+//
+// List Groups
+
+// List Groups variant
+@mixin list_group_variant($color: inherit, $background: transparent, $link: $type-link, $striped: rgba(255, 255, 255, 0.1)) {
+  background: $background;
+  color: $color;
+
+  .__item, li { border-color: rgba($color, 0.25); }
+
+  a {
+    display: block;
+    color: $link;
+  }
+
+  > div,
+  > li {
+    a:hover,
+    &:hover a {
+      color: desaturate(darken($link, 7%), 20%);
+    }
+  }
+
+  > a {
+    color: $color;
+    &:hover { color: $link;  }
+  }
+
+  &.\--striped .__item,
+  &.\--striped > li {
+    border: 0 none;
+
+    &:nth-child(odd) { background-color: $striped; }
+  }
+
+  &.\--on-dark {
+    > div,
+    > li {
+      a:hover,
+      &:hover a { color: lighten($type-link, 20%) !important; }
+    }
+
+    > a {
+      &:hover { color: lighten($type-link, 20%) !important; }
+    }
+  }
+
+  &.\+outline { border: 1px solid rgba($color, 0.25); }
+
+  &.\+indent:not(.\--striped) {
+    > .__item,
+    > li {
+      &:hover { background-color: rgba($color, 0.05); }
+    }
+  }
+}
+
+// List Groups Sizing
+@mixin list_group_size($padding-y: $list-group-padding-y, $padding-x: $list-group-padding-x, $font-size: $fs-sm) {
+  font-size: $font-size;
+
+  > .__item,
+  > li { padding: $padding-y 0 !important; }
+
+  &.\+shadow,
+  &.\+outline,
+  &.\--dark { padding: 0 $padding-x !important; }
+
+
+  &.\--striped .__item,
+  &.\--striped > div,
+  &.\--striped > li,
+  &.\--striped > a {
+    border: 0 none;
+    padding: $padding-y $padding-x !important;
+  }
+
+  &.\+indent:not(.\--striped) {
+    > .__item,
+    > li {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:hover {
+        padding-left: $padding-y/2 !important;
+        padding-right: $padding-y/2 !important;
+      }
+    }
+  }
+
+  &.\+icon {
+    > .__item,
+    > li,
+    > div {
+      padding-left: ($font-size * 1.75) !important;
+    }
+  }
+
+  i, svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: ($font-size * 1.25);
+    height: ($font-size * 1.25);
+  }
+
+  &.\+icon.\--right {
+    > .__item,
+    > li,
+    > div {
+      padding-right: ($font-size * 1.75) !important;
+      padding-left: 0 !important;
+    }
+
+    i, svg {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+
+//
+// Media Objects
+@mixin media-object-size($font-size: $fs-sm, $font-size-title: 1rem, $img-size: 4rem) {
+  .__title { font-size: $font-size-title; }
+
+  .__copy { font-size: $font-size; }
+
+  .__graphic { @include size($img-size, $img-size); }
+}
+
+
+//
+// Modals
+@mixin modal_variant($color: $type-color, $background: #fff) {
+  .__content {
+    background: $background;
+    color: $color;
+  }
+  .close { color: $color; }
+  .modal-backdrop { background-color: $color; }
+}
+
+//
+// Colors
+
+@mixin bg_variant($color) {
+  background-color: $color !important;
+}
+
+@mixin text_variant($color) {
+  color: $color !important;
+}
+
+
+//
+// Forms
+
+@mixin form-control-validation($color) {
+  // Color the label and help text
+  .form__control--feedback,
+  .form__control--label,
+  .col-form-label,
+  .form-check-label,
+  .custom-control { color: $color; }
+
+  .form__control {
+    border-color: $color;
+
+    &:focus { @include box-shadow(); }
+  }
+
+  .input-group-addon {
+    color: $color;
+    border-color: $color;
+    background-color: lighten($color, 40%);
+  }
+}
+
+@mixin form-control-focus() {
+  &:focus {
+    color: $input-color-focus;
+    background-color: $input-bg-focus;
+    border-color: $input-border-focus;
+    outline: none;
+    @include box-shadow($input-box-shadow-focus);
+  }
+}
+
+@mixin input-size($parent, $input-height, $padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  #{$parent} {
+    height: $input-height;
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+    @include border-radius($border-radius);
+  }
+
+  select#{$parent} {
+    height: $input-height;
+    line-height: $input-height;
+  }
+
+  textarea#{$parent},
+  select[multiple]#{$parent} {
+    height: auto;
+  }
+}

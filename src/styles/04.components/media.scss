@@ -1,0 +1,131 @@
+//
+// Navs
+//
+
+.media {
+  margin-bottom: 1rem;
+  @include media-object-size($fs-sm, 1rem);
+
+
+  // 
+  // Elements
+
+  .__link {
+    display: block;
+    padding: 1rem;
+    color: inherit;
+    height: 100%;
+    overflow: hidden;
+    @include box_shadow();
+    @include clearfix();
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:hover {
+      box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2);
+    }
+  }
+
+  .__graphic {
+    position: relative;
+    float: left;
+    width: 4rem;
+    height: 4rem;
+    background: #555;
+    overflow: hidden;
+    border-radius: 4rem;
+    margin-right: 1rem;
+    box-shadow: none;
+    transition: box-shadow 0.25s ease;
+  }
+
+  .__graphic__img {
+    position: absolute;
+    max-height: 130%; // min for 3:4 portrait images
+    max-width: 180%; // min for 16:9 landscape images
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .__body {
+    display: table-cell;
+    vertical-align: top;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .__title {
+    line-height: 1.3;
+    // font-size: $font-size-base;
+    font-weight: 900;
+    margin-bottom: 0;
+  }
+
+  .__copy {
+    font-size: $fs-sm;
+  }
+
+
+  /**
+   * Modifiers
+   */
+
+  /* Sizing */
+  &.\--xs {
+    @include media-object-size($fs-xs, $fs-xs, 3rem);
+    .__title { margin-bottom: 0.2rem; }
+  }
+  &.\--sm { @include media-object-size($fs-sm, 1rem, 3rem); }
+  &.\--lg { @include media-object-size($fs-sm, 1rem, 5rem); }
+
+  /* Positioning */
+  &.\--left {}
+  &.\--right {
+    .__graphic {
+      float: right;
+      margin-right: 0;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.list-group.\+media {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .media {
+    margin: 0;
+    border-bottom: 1px solid $gray-200;
+    padding: 0 !important;
+
+    &:last-child { border-bottom: 0 none; }
+  }
+
+  .__link,
+  .__link:hover { box-shadow: none; }
+
+  // rectangluar thumb variant
+  &.\+rect {
+
+    .__graphic {
+      border-radius: 0;
+      width: 8rem;
+      height: 5.5rem;
+    }
+
+    .__graphic__img {
+      top: 65%; // prevent head crop on portrait images
+      max-height: 170%; // min for 16:9 portrait images
+      max-width: 160%; // min for 3:4 landscape images
+    }
+  }
+}

@@ -1,0 +1,36 @@
+//
+// Media
+//
+
+
+//
+// Images
+
+img {
+  border-style: none;
+  vertical-align: middle;
+}
+
+svg:not(:root) { overflow: hidden; }
+
+
+//
+// Grouping
+
+figcaption,
+figure,
+main { display: block; }
+
+figure { margin: 0 0 1rem; }
+
+
+//
+// Embedded content
+
+audio,
+video { display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}

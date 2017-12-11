@@ -1,0 +1,11 @@
+//
+// Shadows
+// * Add or remove a shadow ad hoc
+
+.\+shadow {
+  @include box-shadow();
+  background-color: #fff;
+}
+
+.\+noshadow,
+.\+noshadow:hover { box-shadow: none; }

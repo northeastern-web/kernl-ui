@@ -1,0 +1,189 @@
+//
+// Alerts
+//
+
+.alert {
+  @include alert_variant($type-color, #fff, $component-base, false);
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  position: relative;
+  @include transition();
+
+  .__column { @extend %component-column; }
+
+  // Link
+  .__link {
+    display: block;
+    color: inherit;
+
+    &:hover { color: inherit; }
+  }
+
+  // Graphic
+  .__graphic {}
+
+  // Header
+  .__header {
+    @extend %component-header;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1rem);
+    margin-bottom: 0;
+  }
+
+  // Footer
+  .__footer {
+    @extend %component-footer;
+    justify-content: flex-start;
+
+    @include mqbp-up(lg) {
+      padding-top: 0;
+    }
+  }
+
+  .__footer__link {
+    @extend .btn;
+    margin-bottom: 0 !important;
+  }
+
+  // Body
+  .__body {
+    display: block;
+    padding: 1rem;
+
+    p, ul, ol, dl {
+      margin-top: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Icon
+  .__icon {
+    @extend %icon;
+    padding: 1rem 0 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mqbp-up(lg) {
+      padding: 0 0.5rem 0 0;
+      flex: 0 0 10%;
+      max-width: 10%;
+    }
+
+    &.\--lg {
+      margin: 1rem 0;
+
+      i, svg {
+        width: 100%;
+        height: 100%;
+        max-width: 2rem;
+        max-height: 2rem;
+      }
+
+      @include mqbp-up(lg) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // Title
+  .__title {
+    margin-right: .5rem;
+    margin-bottom: 0;
+    display: inline-block;
+    width: auto;
+    font-size: $fs-root;
+    font-weight: bold;
+  }
+  .__pretitle {}
+  .__subtitle {}
+
+  // Excerpt
+  .__excerpt {
+    &, p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include mqbp-up(lg) {
+        display: inline-block;
+      }
+    }
+  }
+
+
+  //
+  // Colors
+  &.\--dark {
+    @include alert_variant(#fff, $component-dark, $component-dark);
+
+    .__link,
+    a {
+      color: #fff;
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+
+      &:hover {
+        color: lighten($type-link, 35%);
+      }
+    }
+  }
+
+  //
+  // Outline
+  &.\--outline {
+    @extend %component-outline;
+    background-color: transparent !important;
+    box-shadow: none;
+  }
+
+  //
+  // Sizing
+  &.\--xs,
+  &.\--sm {
+    @include type-sm();
+    vertical-align: top; // to prevent extra vertical space on bottom
+    width: auto;
+
+    @include mqbp-up(lg) { @include type-xs(); }
+
+    .__body { padding: 0.5rem 0.75rem; }
+  }
+
+  &.\--xs { display: inline-block; }
+
+  //
+  // Adds a button look to the right
+  &.\--btn {
+    @include mqbp-up(lg) {
+      &, .__link { display: flex; }
+    }
+
+    .__body {
+      @extend %grid-column;
+      display: flex;
+      flex-direction: column;
+
+      @include mqbp-up(lg) {
+        @include make-col(8, 10);
+        flex-direction: row;
+      }
+    }
+
+    .__footer {
+      @extend %grid-column;
+      justify-content: center;
+
+      @include mqbp-up(lg) {
+        @include make-col(2, 10);
+        padding: 1rem;
+      }
+    }
+  }
+
+  &.\+shadow { @include box-shadow(); }
+}

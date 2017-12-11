@@ -1,0 +1,118 @@
+//
+// List Groups
+//
+
+.list-group {
+  @include list_unstyled();
+  @include list_group_size();
+  @include list_group_variant($type-color);
+  position: relative;
+  margin-bottom: 1rem;
+  @include border-radius();
+
+
+  //
+  // Elements
+  .__item {
+    display: block;
+    position: relative;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(#000, 0.25);
+    color: inherit;
+    float: none !important;
+
+    &:link:hover,
+    &:link:active,
+    &:link:focus {
+      text-decoration: none;
+    }
+
+    &:last-child() {
+      border: 0 none;
+    }
+  }
+
+  > div,
+  > a,
+  > li { @extend .__item; }
+
+  a { transition: all 0.3s ease-out; }
+
+  //
+  // Modifiers
+  &.\--white { @include list_group_variant($type-color, #fff, $type-link); }
+
+  &.\--on-dark { @include list_group_variant(#fff, transparent, #fff); }
+
+  &.\--dark { @include list_group_variant(#fff, rgba($type-color, 0.5), #fff); }
+
+  &.\--striped {
+    @include list_group_variant($type-color, rgba(0, 0, 0, 0.02), $type-color, rgba(0, 0, 0, 0.05));
+
+    &.\--on-dark {
+      @include list_group_variant(#fff, rgba(255, 255, 255, 0.05), #fff, rgba(255, 255, 255, 0.1));
+    }
+  }
+/*
+  &.\+icon {
+    a,
+    .__link {
+      position: relative;
+      padding-right: 1.5rem;
+
+      &:after {
+        font-family: "feathericons";
+        content: "\E922";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    &.\--left {
+      a,
+      .__link {
+        padding-left: 1.5rem;
+        padding-right: 0;
+
+        &:after {
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+  }
+ */
+  //
+  // Sizing
+  @include mqbp-up(md) {
+    &.\--sm { @include list_group-size($list-group-padding-y/1.25, $list-group-padding-x/1.125, $fs-xs) }
+  }
+
+  &.\+shadow { @include box_shadow(); }
+}
+
+.card .list-group {
+  > .__item,
+  > li {
+    padding: $list-group-padding-y $list-group-padding-x !important;
+
+    &:first-child { padding-top: $list-group-padding-y !important; }
+    &:last-child { padding-bottom: $list-group-padding-y !important; }
+  }
+
+  &.\--sm {
+    > .__item,
+    > li {
+      padding: $list-group-padding-y/1.25 $list-group-padding-x !important;
+
+      &:first-child { padding-top: $list-group-padding-y/1.25 !important; }
+      &:last-child { padding-bottom: $list-group-padding-y/1.25 !important; }
+    }
+  }
+}
