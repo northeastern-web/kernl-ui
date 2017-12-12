@@ -1,4 +1,4 @@
-<header class="section --banner +bgimg --lg --fixed">
+<header class="section --lg --fixed +bgimg">
   <div class="row">
     <div class="col --12@xs ta--c">
       <div class="__pretitle">What's your type?</div>
@@ -18,7 +18,7 @@
         <li>18px base font-size (<code>xx</code>)</li>
       </ul>
       <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-      <section class="section --banner +bgimg">
+      <section class="section +bgimg">
         <p><b>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> in a nested banner.</b> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       </section>
       <p class="fs--sm">This a little note set at <code>fs--sm</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.88rem)</span>.</p>
@@ -266,15 +266,6 @@
   <p>And some text to follow maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
 </section>
 
-<section class="section --banner">
-  <div class="__header mb--1@xs">
-    <div class="__pretitle">Inceptos Bibendum</div>
-    <h2 class="__title">Here's a Banner Section Title</h2>
-    <div class="__subtitle">Subtitle Inceptos Bibendum Amet Mollis Dapibus</div>
-  </div>
-  <p>And some text to follow maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
-</section>
-
 <section class="section k_bg-light">
   <header class="k_section__header">Blockquotes</header>
   <div class="row">
@@ -284,7 +275,7 @@
       </blockquote>
     </div>
     <div class="col --12@xs --4@lg">
-      <blockquote class="bg--yellow">
+      <blockquote class="bg--blue-dark text--white">
         Blockquote says a colored background is nice sometimes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </blockquote>
     </div>

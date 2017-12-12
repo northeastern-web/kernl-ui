@@ -35,28 +35,29 @@
 // Rows (display:flex) contain the columns (flex items).
 .row { @include make-row(); }
 
-// Remove the negative margin from default .g-row, then the horizontal padding
-// from all immediate children columns (to prevent runaway style inheritance).
-.\--nogutters {
-  margin-right: 0;
-  margin-left: 0;
-
-  > .col,
-  > [class*="-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
 // Columns
 //
 // Common styles for small and large grid columns
 
 .col {
   flex: 0 0 100%;
-  padding-left: ($grid-gutter-width-base / 2);
-  padding-right: ($grid-gutter-width-base / 2);
+  position: relative;
+  width: 100%;
+  min-height: 1px; // Prevent columns from collapsing when empty
+  @extend %grid-column;
 }
 
 // Create columns
 @include make-grid-columns();
+
+// Remove the negative margin from default .g-row, then the horizontal padding
+// from all immediate children columns (to prevent runaway style inheritance).
+.\--nogutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

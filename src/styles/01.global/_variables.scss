@@ -6,18 +6,6 @@
 //
 // Color Palette
 
-// White
-$white: #fff !default;
-$white-scale: (
-  ($white, false),
-) !default;
-
-// Black
-$black: #000 !default;
-$black-scale: (
-  ($black, false),
-) !default;
-
 // Grays
 $gray-50:  #f7f7f7 !default;
 $gray-100: #efefef !default;
@@ -29,9 +17,11 @@ $gray-600: #666666 !default;
 $gray-700: #535353 !default;
 $gray-800: #333333 !default;
 $gray-900: #1a1a1a !default;
-$gray: #58585a !default;
+$gray: #58595b !default;
 $gray-dark: $gray-900 !default;
 $gray-light: #7b7778 !default;
+$white: #fff !default;
+$black: #000 !default;
 
 $gray-scale: (
   ($gray-50, '50'),
@@ -62,7 +52,8 @@ $red-scale: (
 
 // Oranges
 $orange:       #f68c1e !default;
-$orange-dark:  #d15f08 !default;
+// $orange-dark:  #d15f08 !default;
+$orange-dark:  #e25734 !default;
 $orange-light: #f9b268 !default;
 
 $orange-scale: (
@@ -72,7 +63,8 @@ $orange-scale: (
 ) !default;
 
 // Yellows
-$yellow:       #fec42f !default;
+// $yellow:       #fec42f !default;
+$yellow:       #ffc50b !default;
 $yellow-dark:  #f9b301 !default;
 $yellow-light: #fed262 !default;
 
@@ -83,9 +75,11 @@ $yellow-scale: (
 ) !default;
 
 // Greens
-$green:       #aebe42 !default;
+// $green:       #aebe42 !default;
+$green:       #aebf37 !default;
 $green-dark:  #808c15 !default;
-$green-light: #d4e291 !default;
+// $green-light: #d4e291 !default;
+$green-light: #d5e48e !default;
 
 $green-scale: (
   ($green, false, 'dark'),
@@ -94,9 +88,11 @@ $green-scale: (
 ) !default;
 
 // Teals
-$teal:       #309aa8 !default;
+// $teal:       #309aa8 !default;
+$teal:       #2e9aa9 !default;
 $teal-dark:  #13606d !default;
-$teal-light: #aed8da !default;
+// $teal-light: #aed8da !default;
+$teal-light: #aed7db !default;
 
 $teal-scale: (
   ($teal, false),
@@ -105,10 +101,11 @@ $teal-scale: (
 ) !default;
 
 // Blues
-// $blue:       #5c7d9e !default; // pods initial blue
 $blue:       #2b7be3 !default; // pods updated blue
-$blue-dark:  #2f4a61 !default;
-$blue-light: #bbd1ec !default; // #aec2da (marcom)
+// $blue-dark:  #2f4a61 !default;
+$blue-dark:  #2e4962 !default;
+// $blue-light: #bbd1ec !default; // #aec2da (marcomm) summer 2017
+$blue-light: #bbd1ec !default; // #aec1da (marcomm) fall/winter 2017
 
 $blue-scale: (
   ($blue, false),
@@ -117,7 +114,8 @@ $blue-scale: (
 ) !default;
 
 // Purples
-$purple:       #9d64a2 !default;
+// $purple:       #9d64a2 !default;
+$purple:       #824091 !default;
 $purple-dark:  #511951 !default;
 $purple-light: #d0b7d5 !default;
 
@@ -130,7 +128,8 @@ $purple-scale: (
 // Beige
 $beige:       #bdb29f !default;
 $beige-dark:  #615547 !default;
-$beige-light: #ece6d5 !default;
+// $beige-light: #ece6d5 !default;
+$beige-light: #ebe4d4 !default;
 $beige-extra-light: #f5f4f0 !default;
 
 $beige-scale: (
@@ -140,20 +139,29 @@ $beige-scale: (
   ($beige-extra-light, 'extra-light', 'dark')
 ) !default;
 
+// White
+$white-scale: (
+  ($white, false),
+) !default;
+
+// Black
+$black-scale: (
+  ($black, false),
+) !default;
 
 // ** Full color palette collection
 $palette: (
-  ('black', $black-scale),
-  ('white', $white-scale),
   ('gray', $gray-scale),
   ('red', $red-scale),
   ('blue', $blue-scale),
-  ('green', $green-scale),
-  ('purple', $purple-scale),
-  ('yellow', $yellow-scale),
-  ('orange', $orange-scale),
-  ('teal', $teal-scale),
-  ('beige', $beige-scale)
+  // ('green', $green-scale),
+  // ('purple', $purple-scale),
+  // ('yellow', $yellow-scale),
+  // ('orange', $orange-scale),
+  // ('teal', $teal-scale),
+  // ('beige', $beige-scale),
+  ('white', $white-scale),
+  ('black', $black-scale)
 ) !default;
 
 
@@ -191,7 +199,6 @@ $type-link:   $blue !default;
 //
 // Grid
 
-$grid-prefix: 'g' !default;
 $col-prefix: '\\-' !default;
 $grid-columns: 12 !default;
 $grid-gutter-width-base: 30px !default;
@@ -199,9 +206,9 @@ $grid-gutter-width-base: 30px !default;
 // Gutter widths
 $grid-gutter-widths: (
   xs: 1rem,
-  sm: 1rem,
+  // sm: 1rem,
   md: $grid-gutter-width-base,
-  lg: $grid-gutter-width-base,
+  // lg: $grid-gutter-width-base,
   xl: 36px,
   xx: 40px
 ) !default;
@@ -214,15 +221,6 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xx: 1600px
-) !default;
-
-// Maximum widths
-$container-max-widths: (
-  sm: 720px,
-  md: 960px,
-  lg: 1080px,
-  xl: 1400px,
-  xx: 1800px
 ) !default;
 
 

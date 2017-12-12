@@ -323,19 +323,7 @@
       .__item { position: static; }
 
       .\+children {
-        > .__link {
-          border-bottom: 4px solid transparent;
-          padding-left: 0.5rem;
-          padding-right: 1.75rem;
-
-          &:after {
-            content: "\e920" !important;
-            color: $gray-200;
-            font-size: 1rem;
-            top: 2.375rem;
-            right: 0.5rem;
-          }
-        }
+        > .__link { border-bottom: 4px solid transparent; }
 
         .__link {
           &:focus:not(:hover) {
@@ -450,6 +438,23 @@
             > .\--feature {
               background: rgba($gray-400, .15);
               transition: background 0.3s ease 0.1s;
+            }
+          }
+        }
+      }
+
+      &.\+chevron {
+        .\+children {
+          > .__link {
+            padding-left: 0.5rem;
+            padding-right: 1.75rem;
+
+            &:after {
+              content: "\e920" !important;
+              color: $gray-200;
+              font-size: 1rem;
+              top: 2.375rem;
+              right: 0.5rem;
             }
           }
         }

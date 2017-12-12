@@ -183,48 +183,10 @@
   background-color: $background;
   border-color: $border;
 
-  @include hover {
+  @include hover_focus_active {
     color: $color;
     background-color: $active-background;
         border-color: $active-border;
-  }
-
-  &:focus,
-  &.focus {
-    color: $color;
-    background-color: $active-background;
-        border-color: $active-border;
-  }
-
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    color: $color;
-    background-color: $active-background;
-        border-color: $active-border;
-    // Remove the gradient for the pressed/active state
-    background-image: none;
-
-    &:hover,
-    &:focus,
-    &.focus {
-      color: $color;
-      background-color: darken($background, 17%);
-          border-color: darken($border, 25%);
-    }
-  }
-
-  &.disabled,
-  &:disabled {
-    &:focus,
-    &.focus {
-      background-color: $background;
-          border-color: $border;
-    }
-    @include hover {
-      background-color: $background;
-          border-color: $border;
-    }
   }
 
   &.\--outline {
@@ -232,10 +194,10 @@
     background-color: transparent;
     border-color: $background;
 
-    @include hover {
+    @include hover_focus_active {
       color: #fff;
-      background-color: $background !important;
-          border-color: $background !important;
+      background-color: $active-background;
+          border-color: $active-border;
     }
 
     &.\--white {
@@ -243,44 +205,10 @@
       background-color: rgba(255, 255, 255, 0);
       border-color: rgba(255, 255, 255, 0.5) !important;
 
-      @include hover {
+      @include hover_focus_active {
         color: rgba(255, 255, 255, 0.9);
         background-color: rgba(255, 255, 255, 0.1) !important;
         border-color: rgba(255, 255, 255, 0.9);
-      }
-    }
-
-    &:focus,
-    &.focus {
-      color: #fff;
-      background-color: $background;
-          border-color: $background;
-    }
-
-    &:active,
-    &.active,
-    .open > &.dropdown-toggle {
-      color: #fff;
-      background-color: $background;
-          border-color: $background;
-
-      &:hover,
-      &:focus,
-      &.focus {
-        color: #fff;
-        background-color: darken($background, 17%);
-            border-color: darken($background, 25%);
-      }
-    }
-
-    &.disabled,
-    &:disabled {
-      &:focus,
-      &.focus {
-        border-color: lighten($background, 20%);
-      }
-      @include hover {
-        border-color: lighten($background, 20%);
       }
     }
   }

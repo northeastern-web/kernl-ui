@@ -114,47 +114,23 @@
 @mixin make-grid-columns($columns: $grid-columns, $gutters: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
   // Common properties for all breakpoints
   %grid-column {
-    position: relative;
-    width: 100%;
-    min-height: 1px; // Prevent columns from collapsing when empty
-
     @include make-gutters($gutters);
   }
 
   @each $breakpoint in map-keys($breakpoints) {
     $infix: _breakpoint-infix($breakpoint, $breakpoints);
-
-    // Allow columns to stretch full width below their breakpoints
-    @for $i from 1 through $columns {
-      .#{$col-prefix}-#{$i}#{$infix} {
-        @extend %grid-column;
-      }
-    }
-    .#{$col-prefix}#{$infix} {
-      @extend %grid-column;
-    }
+    $i: 0;
 
     @include mqbp-up($breakpoint, $breakpoints) {
-      // Provide basic `.#{$col-prefix}-{bp}` classes for equal-width flexbox columns
-      .#{$col-prefix}#{$infix} {
-        flex-basis: 0;
-        flex-grow: 1;
-        max-width: 100%;
-      }
-      .#{$col-prefix}-auto#{$infix} {
-        flex: 0 0 auto;
-        width: auto;
-      }
-
       @for $i from 1 through $columns {
-        .#{$col-prefix}-#{$i}#{$infix} {
+        .#{$col-prefix}-#{$i}\@#{$infix} {
           @include make-col($i, $columns);
         }
       }
 
-      @each $modifier in (pull, push) {
+      @each $modifier in (pull, push, order) {
         @for $i from 0 through $columns {
-          .#{$modifier}-#{$i}#{$infix} {
+          .#{$modifier}--#{$i}\@#{$infix} {
             @include make-col-modifier($modifier, $i, $columns)
           }
         }
@@ -162,8 +138,8 @@
 
       // `$columns - 1` because offsetting by the width of an entire row isn't possible
       @for $i from 0 through ($columns - 1) {
-        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-xs-0
-          .#{$col-prefix}-offset-#{$i}#{$infix} {
+        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset--0-xs
+          .offset--#{$i}\@#{$infix} {
             @include make-col-modifier(offset, $i, $columns)
           }
         }
@@ -174,7 +150,6 @@
 
 @mixin make-section($gutters: $grid-gutter-widths) {
   position: relative;
-  // overflow-x: hidden; // uncomment if empty horizontal scroll appears
   margin-right: auto;
   margin-left: auto;
 
@@ -226,12 +201,18 @@
   right: if($size > 0, percentage($size / $columns), auto);
 }
 
+@mixin make-col-order($size, $columns: $grid-columns) {
+  order: if($size >= 0, $size, auto);
+}
+
 @mixin make-col-modifier($type, $size, $columns) {
   // Work around the lack of dynamic mixin @include support (https://github.com/sass/sass/issues/626)
   @if $type == push {
     @include make-col-push($size, $columns);
   } @else if $type == pull {
     @include make-col-pull($size, $columns);
+  } @else if $type == order {
+    @include make-col-order($size, $columns);
   } @else if $type == offset {
     @include make-col-offset($size, $columns);
   }
@@ -292,22 +273,6 @@
   }
 }
 
-// Media that spans multiple breakpoint widths.
-@mixin mqbp-between($lower, $upper, $breakpoints: $grid-breakpoints) {
-  @include mqbp-up($lower, $breakpoints) {
-    @include mqbp-down($upper, $breakpoints) {
-      @content;
-    }
-  }
-}
-
-// Media between the breakpoint's minimum and maximum widths.
-@mixin mqbp-only($name, $breakpoints: $grid-breakpoints) {
-  @include mqbp-between($name, $name, $breakpoints) {
-    @content;
-  }
-}
-
 
 //
 // Miscellaneous
@@ -333,15 +298,16 @@
 }
 
 
+// Color generation
 @mixin get_component($component, $color, $color_grade: false, $color_text_dark: null) {
   $component_text_color: #fff;
   @if $color_text_dark != null { $component_text_color: rgba($black, 0.7); }
   @if $component == '--outline' { $component_text_color: $color !important; }
 
-  @if $component == 'alert' { @include alert_variant($component_text_color, $color); }
-  @if $component == 'badge' { @include badge_variant($component_text_color, $color, $color); }
+  // @if $component == 'alert' { @include alert_variant($component_text_color, $color); }
+  // @if $component == 'badge' { @include badge_variant($component_text_color, $color, $color); }
   @if $component == 'btn' { @include button_variant($component_text_color, $color, $color); }
-  @if $component == 'card' { @include card_variant($component_text_color, $color); }
+  // @if $component == 'card' { @include card_variant($component_text_color, $color); }
   @if $component == 'bg' { @include bg_variant($color); }
   @if $component == 'text' { @include text_variant($color); }
 }

@@ -80,6 +80,8 @@ blockquote {
   margin: 0 0 1rem;
   padding: 1rem;
 
+  @include font-smoothing();
+
   @include mqbp-up(md) {
     padding: 2rem;
   }

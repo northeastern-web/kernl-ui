@@ -49,8 +49,8 @@ function masthead($id, $masthead_classes, $banner_classes) {
     </ul>
   </nav>
 </header>
-<div class="section --banner --middle +bgimg ta--c ' . $banner_classes . '">
-  <h2 class="banner__title py--5@xs">{ <i>Example Hero</i> }</h2>
+<div class="section --lg --middle +bgimg ta--c ' . $banner_classes . '">
+  <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>';
 }
 ?>

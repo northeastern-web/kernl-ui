@@ -20,6 +20,13 @@
       stroke-width: 1;
     }
   }
+
+  &.\--lg {
+    i, svg {
+      width: 180%;
+      height: 180%;
+    }
+  }
 }
 
 //
