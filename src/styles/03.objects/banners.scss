@@ -35,6 +35,8 @@ $padding-xl: 10%;
     @include font_smoothing();
     background-color: $gray-900;
     color: #fff;
+
+    .__title { font-size: $fs-d6; }
   }
 
   &.\+bgimg {
