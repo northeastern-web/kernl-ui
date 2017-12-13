@@ -1,5 +1,5 @@
 //
-// Sections/Banners
+// Sections
 //
 
 // Section Spacing
@@ -10,7 +10,7 @@ $padding-xl: 10%;
 
 
 //
-// Banners
+// Sections
 
 .section {
   position: relative;
@@ -36,7 +36,7 @@ $padding-xl: 10%;
     background-color: $gray-900;
     color: #fff;
 
-    .__title { font-size: $fs-d6; }
+    .__title { @include type_d3(); }
   }
 
   &.\+bgimg {
