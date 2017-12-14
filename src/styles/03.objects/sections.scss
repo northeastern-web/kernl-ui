@@ -17,6 +17,8 @@ $padding-xl: 10%;
   padding-top: $padding-default;
   padding-bottom: $padding-default;
 
+  .section { padding: 0; }
+
   &.\--banner,
   > .__header {
     .__title {
