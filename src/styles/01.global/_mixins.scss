@@ -299,23 +299,23 @@
 
 
 // Color generation
-@mixin get_component($component, $color, $color_grade: false, $color_text_dark: null) {
-  $component_text_color: #fff;
-  @if $color_text_dark != null { $component_text_color: rgba($black, 0.7); }
-  @if $component == '--outline' { $component_text_color: $color !important; }
+@mixin get_component($component, $color, $color_grade: false, $color_text: '#fff') {
+  @if $component == '--outline' { $color_text: $color !important; }
+  // @if $color_text_dark != null { $color_text: rgba($black, 0.7); }
+  // @warn($color_text);
 
-  // @if $component == 'alert' { @include alert_variant($component_text_color, $color); }
-  // @if $component == 'badge' { @include badge_variant($component_text_color, $color, $color); }
-  @if $component == 'btn' { @include button_variant($component_text_color, $color, $color); }
-  // @if $component == 'card' { @include card_variant($component_text_color, $color); }
-  @if $component == 'bg' { @include bg_variant($color); }
+  @if $component == 'alert' { @include alert_variant($color_text, $color); }
+  @if $component == 'badge' { @include badge_variant($color_text, $color, $color); }
+  @if $component == 'btn' { @include button_variant($color_text, $color, $color); }
+  @if $component == 'card' { @include card_variant($color_text, $color); }
+  @if $component == 'bg' { @include bg_variant($color, $color_text); }
   @if $component == 'text' { @include text_variant($color); }
 }
 
 @mixin generate_colors($component, $palette_collection: $palette) {
   // Loop through each palette collection and then each color set
   @each $palette_label, $palette_colors in $palette_collection {
-    @each $current_color, $current_variant, $current_text_dark in $palette_colors {
+    @each $current_color, $current_variant, $current_text_color in $palette_colors {
 
       $delimiter: '.\--';
       @if ($component == 'bg' or $component == 'text') {
@@ -327,11 +327,12 @@
       // if true: append grade to class
       @if ($current_variant == false) {
         .#{$component}#{$delimiter}#{$palette_label} {
-          @include get_component($component, $current_color, false, $current_text_dark);
+          @include get_component($component, $current_color, false, $current_text_color);
         }
+
       } @else {
         .#{$component}#{$delimiter}#{$palette_label}-#{$current_variant} {
-          @include get_component($component, $current_color, $current_variant, $current_text_dark);
+          @include get_component($component, $current_color, $current_variant, $current_text_color);
         }
       }
     }

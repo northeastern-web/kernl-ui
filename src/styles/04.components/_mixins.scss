@@ -583,8 +583,11 @@
 //
 // Colors
 
-@mixin bg_variant($color) {
+@mixin bg_variant($color, $text_color: null) {
   background-color: $color !important;
+  @if ($text_color) {
+    color: $text_color;
+  }
 }
 
 @mixin text_variant($color) {

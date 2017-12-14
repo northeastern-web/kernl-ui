@@ -24,19 +24,19 @@ $white: #fff !default;
 $black: #000 !default;
 
 $gray-scale: (
+  ($gray, false, $white),
+  ($gray-dark, 'dark', $white),
+  ($gray-light, 'light'),
   ($gray-50, '50'),
   ($gray-100, '100'),
   ($gray-200, '200'),
   ($gray-300, '300'),
-  ($gray-400, '400'),
-  ($gray-500, '500'),
-  ($gray-600, '600'),
-  ($gray-700, '700'),
-  ($gray-800, '800'),
-  ($gray-900, '900'),
-  ($gray, false),
-  ($gray-dark, 'dark'),
-  ($gray-light, 'light')
+  ($gray-400, '400', $white),
+  ($gray-500, '500', $white),
+  ($gray-600, '600', $white),
+  ($gray-700, '700', $white),
+  ($gray-800, '800', $white),
+  ($gray-900, '900', $white)
 ) !default;
 
 // Reds
@@ -45,8 +45,8 @@ $red-dark:  #7e0000 !default;
 $red-light: #e34553 !default;
 
 $red-scale: (
-  ($red, false),
-  ($red-dark, 'dark'),
+  ($red, false, $white),
+  ($red-dark, 'dark', $white),
   ($red-light, 'light')
 ) !default;
 
@@ -57,9 +57,9 @@ $orange-dark:  #e25734 !default;
 $orange-light: #f9b268 !default;
 
 $orange-scale: (
-  ($orange, false),
-  ($orange-dark, 'dark'),
-  ($orange-light, 'light', 'dark')
+  ($orange, false, $white),
+  ($orange-dark, 'dark', $white),
+  ($orange-light, 'light')
 ) !default;
 
 // Yellows
@@ -69,9 +69,9 @@ $yellow-dark:  #f9b301 !default;
 $yellow-light: #fed262 !default;
 
 $yellow-scale: (
-  ($yellow, false, 'dark'),
-  ($yellow-dark, 'dark', 'dark'),
-  ($yellow-light, 'light', 'dark')
+  ($yellow, false),
+  ($yellow-dark, 'dark'),
+  ($yellow-light, 'light')
 ) !default;
 
 // Greens
@@ -82,9 +82,9 @@ $green-dark:  #808c15 !default;
 $green-light: #d5e48e !default;
 
 $green-scale: (
-  ($green, false, 'dark'),
-  ($green-dark, 'dark'),
-  ($green-light, 'light', 'dark')
+  ($green, false, $white),
+  ($green-dark, 'dark', $white),
+  ($green-light, 'light')
 ) !default;
 
 // Teals
@@ -95,9 +95,9 @@ $teal-dark:  #13606d !default;
 $teal-light: #aed7db !default;
 
 $teal-scale: (
-  ($teal, false),
-  ($teal-dark, 'dark'),
-  ($teal-light, 'light', 'dark')
+  ($teal, false, $white),
+  ($teal-dark, 'dark', $white),
+  ($teal-light, 'light')
 ) !default;
 
 // Blues
@@ -108,9 +108,9 @@ $blue-dark:  #2e4962 !default;
 $blue-light: #bbd1ec !default; // #aec1da (marcomm) fall/winter 2017
 
 $blue-scale: (
-  ($blue, false),
-  ($blue-dark, 'dark'),
-  ($blue-light, 'light', 'dark')
+  ($blue, false, $white),
+  ($blue-dark, 'dark', $white),
+  ($blue-light, 'light')
 ) !default;
 
 // Purples
@@ -120,9 +120,9 @@ $purple-dark:  #511951 !default;
 $purple-light: #d0b7d5 !default;
 
 $purple-scale: (
-  ($purple, false),
-  ($purple-dark, 'dark'),
-  ($purple-light, 'light', 'dark')
+  ($purple, false, $white),
+  ($purple-dark, 'dark', $white),
+  ($purple-light, 'light')
 ) !default;
 
 // Beige
@@ -133,10 +133,10 @@ $beige-light: #ebe4d4 !default;
 $beige-extra-light: #f5f4f0 !default;
 
 $beige-scale: (
-  ($beige, false, 'dark'),
-  ($beige-dark, 'dark'),
-  ($beige-light, 'light', 'dark'),
-  ($beige-extra-light, 'extra-light', 'dark')
+  ($beige, false),
+  ($beige-dark, 'dark', $white),
+  ($beige-light, 'light'),
+  ($beige-extra-light, 'extra-light')
 ) !default;
 
 // White
@@ -146,7 +146,7 @@ $white-scale: (
 
 // Black
 $black-scale: (
-  ($black, false),
+  ($black, false, $white),
 ) !default;
 
 // ** Full color palette collection
@@ -154,12 +154,12 @@ $palette: (
   ('gray', $gray-scale),
   ('red', $red-scale),
   ('blue', $blue-scale),
-  // ('green', $green-scale),
-  // ('purple', $purple-scale),
-  // ('yellow', $yellow-scale),
-  // ('orange', $orange-scale),
-  // ('teal', $teal-scale),
-  // ('beige', $beige-scale),
+  ('green', $green-scale),
+  ('purple', $purple-scale),
+  ('yellow', $yellow-scale),
+  ('orange', $orange-scale),
+  ('teal', $teal-scale),
+  ('beige', $beige-scale),
   ('white', $white-scale),
   ('black', $black-scale)
 ) !default;

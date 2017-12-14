@@ -357,7 +357,7 @@ $black-alpha: rgba(0, 0, 0, 0.7);
     padding-bottom: 0.825rem;
     font-size: 0.825rem;
     font-weight: 900;
-    color: #fff;
+    // color: #fff;
     line-height: 1.3rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -387,72 +387,72 @@ $black-alpha: rgba(0, 0, 0, 0.7);
   }
 }
 
-.bg-black         { background-color: $black; }
+// .bg-black         { background-color: $black; }
 
-.bg-gray          { background-color: $gray; }
-.bg-gray--dark    { background-color: $gray-dark; }
-.bg-gray--light   { background-color: $gray-light; }
+// .bg-gray          { background-color: $gray; }
+// .bg-gray--dark    { background-color: $gray-dark; }
+// .bg-gray--light   { background-color: $gray-light; }
 
-.bg-red           { background-color: $red; }
-.bg-red--dark     { background-color: $red-dark; }
-.bg-red--light    { background-color: $red-light; }
+// .bg-red           { background-color: $red; }
+// .bg-red--dark     { background-color: $red-dark; }
+// .bg-red--light    { background-color: $red-light; }
 
-.bg-blue          { background-color: $blue; }
-.bg-blue--dark    { background-color: $blue-dark; }
-.bg-blue--light   { background-color: $blue-light; color: $black-alpha !important; }
+// .bg-blue          { background-color: $blue; }
+// .bg-blue--dark    { background-color: $blue-dark; }
+// .bg-blue--light   { background-color: $blue-light; color: $black-alpha !important; }
 
-.bg-teal          { background-color: $teal; }
-.bg-teal--dark    { background-color: $teal-dark; }
-.bg-teal--light   { background-color: $teal-light; color: $black-alpha !important; }
+// .bg-teal          { background-color: $teal; }
+// .bg-teal--dark    { background-color: $teal-dark; }
+// .bg-teal--light   { background-color: $teal-light; color: $black-alpha !important; }
 
-.bg-green         { background-color: $green; color: $black-alpha !important; }
-.bg-green--dark   { background-color: $green-dark; }
-.bg-green--light  { background-color: $green-light; color: $black-alpha !important; }
+// .bg-green         { background-color: $green; color: $black-alpha !important; }
+// .bg-green--dark   { background-color: $green-dark; }
+// .bg-green--light  { background-color: $green-light; color: $black-alpha !important; }
 
-.bg-purple        { background-color: $purple; }
-.bg-purple--dark  { background-color: $purple-dark; }
-.bg-purple--light { background-color: $purple-light; color: $black-alpha !important; }
+// .bg-purple        { background-color: $purple; }
+// .bg-purple--dark  { background-color: $purple-dark; }
+// .bg-purple--light { background-color: $purple-light; color: $black-alpha !important; }
 
-.bg-orange        { background-color: $orange; }
-.bg-orange--dark  { background-color: $orange-dark; }
-.bg-orange--light { background-color: $orange-light; color: $black-alpha !important; }
+// .bg-orange        { background-color: $orange; }
+// .bg-orange--dark  { background-color: $orange-dark; }
+// .bg-orange--light { background-color: $orange-light; color: $black-alpha !important; }
 
-.bg-yellow        { background-color: $yellow; color: $black-alpha !important; }
-.bg-yellow--dark  { background-color: $yellow-dark; color: $black-alpha !important; }
-.bg-yellow--light { background-color: $yellow-light; color: $black-alpha !important; }
+// .bg-yellow        { background-color: $yellow; color: $black-alpha !important; }
+// .bg-yellow--dark  { background-color: $yellow-dark; color: $black-alpha !important; }
+// .bg-yellow--light { background-color: $yellow-light; color: $black-alpha !important; }
 
-.bg-beige         { background-color: $beige; color: $black-alpha !important; }
-.bg-beige--dark   { background-color: $beige-dark; }
-.bg-beige--light  { background-color: $beige-light; color: $black-alpha !important; }
-.bg-beige--extra-light  { background-color: $beige-extra-light; color: $black-alpha !important; }
+// .bg-beige         { background-color: $beige; color: $black-alpha !important; }
+// .bg-beige--dark   { background-color: $beige-dark; }
+// .bg-beige--light  { background-color: $beige-light; color: $black-alpha !important; }
+// .bg-beige--extra-light  { background-color: $beige-extra-light; color: $black-alpha !important; }
 
-.bg-gray--50       { background-color: $gray-50; color: $black-alpha !important; }
-.bg-gray--100      { background-color: $gray-100; color: $black-alpha !important; }
-.bg-gray--200      { background-color: $gray-200; color: $black-alpha !important; }
-.bg-gray--300      { background-color: $gray-300; color: $black-alpha !important; }
-.bg-gray--400      { background-color: $gray-400; }
-.bg-gray--500      { background-color: $gray-500; }
-.bg-gray--600      { background-color: $gray-600; }
-.bg-gray--700      { background-color: $gray-700; }
-.bg-gray--800      { background-color: $gray-800; }
-.bg-gray--900      { background-color: $gray-900; }
+// .bg-gray--50       { background-color: $gray-50; color: $black-alpha !important; }
+// .bg-gray--100      { background-color: $gray-100; color: $black-alpha !important; }
+// .bg-gray--200      { background-color: $gray-200; color: $black-alpha !important; }
+// .bg-gray--300      { background-color: $gray-300; color: $black-alpha !important; }
+// .bg-gray--400      { background-color: $gray-400; }
+// .bg-gray--500      { background-color: $gray-500; }
+// .bg-gray--600      { background-color: $gray-600; }
+// .bg-gray--700      { background-color: $gray-700; }
+// .bg-gray--800      { background-color: $gray-800; }
+// .bg-gray--900      { background-color: $gray-900; }
 
-.bg-gray--50,
-.bg-gray--100,
-.bg-gray--200,
-.bg-gray--300,
-.bg-gray--400,
-.bg-gray--500,
-.bg-gray--600,
-.bg-gray--700,
-.bg-gray--800,
-.bg-gray--900 {
-  text-align: center;
+// .bg-gray--50,
+// .bg-gray--100,
+// .bg-gray--200,
+// .bg-gray--300,
+// .bg-gray--400,
+// .bg-gray--500,
+// .bg-gray--600,
+// .bg-gray--700,
+// .bg-gray--800,
+// .bg-gray--900 {
+//   text-align: center;
 
-  &.\--1\@lg {
-    @include mqbp-up(lg) {
-      max-width: 10% !important;
-      flex-basis: 10%;
-    }
-  }
-}
+//   &.\--1\@lg {
+//     @include mqbp-up(lg) {
+//       max-width: 10% !important;
+//       flex-basis: 10%;
+//     }
+//   }
+// }
