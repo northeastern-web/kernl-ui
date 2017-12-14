@@ -4,11 +4,10 @@
 
 
 // Sections
-// 
+//
 // Set the document margin
 .section {
   @include make-section();
-  // margin-bottom: 1rem; <- NO. Leaves 1rem of white (as in #fff) space below each section
 
   &.\--contain {
     @include make-section();

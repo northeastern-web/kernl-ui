@@ -17,7 +17,7 @@ $padding-xl: 10%;
   padding-top: $padding-default;
   padding-bottom: $padding-default;
 
-  &.\--header,
+  &.\--banner,
   > .__header {
     .__title {
       margin-bottom: 0.25rem;
@@ -31,7 +31,7 @@ $padding-xl: 10%;
     }
   }
 
-  &.\--header {
+  &.\--banner {
     @include font_smoothing();
     background-color: $gray-900;
     color: #fff;
