@@ -299,11 +299,8 @@
 
 
 // Color generation
-@mixin get_component($component, $color, $color_grade: false, $color_text: '#fff') {
+@mixin get_component($component, $color, $color_grade: false, $color_text: null) {
   @if $component == '--outline' { $color_text: $color !important; }
-  // @if $color_text_dark != null { $color_text: rgba($black, 0.7); }
-  // @warn($color_text);
-
   @if $component == 'alert' { @include alert_variant($color_text, $color); }
   @if $component == 'badge' { @include badge_variant($color_text, $color, $color); }
   @if $component == 'btn' { @include button_variant($color_text, $color, $color); }

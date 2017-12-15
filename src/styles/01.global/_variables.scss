@@ -26,7 +26,7 @@ $black: #000 !default;
 $gray-scale: (
   ($gray, false, $white),
   ($gray-dark, 'dark', $white),
-  ($gray-light, 'light'),
+  ($gray-light, 'light', $white),
   ($gray-50, '50'),
   ($gray-100, '100'),
   ($gray-200, '200'),
