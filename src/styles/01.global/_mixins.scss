@@ -17,76 +17,96 @@
   @if $colorContrast { opacity: 0.54; }
 }
 
-@mixin type-d1($colorContrast: false) {
+@mixin type-d1($colorContrast: false, $important: false) {
+  @if ($important) { $important: ' !important'; }
+
   line-height: 1.175;
-  font-size: $fs-d1;
+  font-size: $fs-d1#{$important};
 
   @if $colorContrast { opacity: 0.54; }
 }
 
-@mixin type-d2($colorContrast: false) {
+@mixin type-d2($colorContrast: false, $important: false) {
+  @if ($important) { $important: ' !important'; }
+
   line-height: 1.175;
-  font-size: $fs-d2;
+  font-size: $fs-d2#{$important};
 
   @if $colorContrast { opacity: 0.54; }
 }
 
-@mixin type-d3($colorContrast: false) {
+@mixin type-d3($colorContrast: false, $important: false) {
+  @if ($important) { $important: ' !important'; }
+
   line-height: 1.175;
-  font-size: $fs-d3;
+  font-size: $fs-d3#{$important};
 
   @if $colorContrast { opacity: 0.54; }
 }
 
-@mixin type-d4($colorContrast: false) {
+@mixin type-d4($colorContrast: false, $important: false) {
+  @if ($important) { $important: ' !important'; }
+
   line-height: 1.175;
-  font-size: $fs-d4;
+  font-size: $fs-d4#{$important};
 
   @if $colorContrast { opacity: 0.54; }
 }
 
-@mixin type-d5($colorContrast: false) {
+@mixin type-d5($colorContrast: false, $important: false) {
+  @if ($important) { $important: ' !important'; }
+
   line-height: 1.2;
-  font-size: $fs-d5;
+  font-size: $fs-d5#{$important};
 
   @if $colorContrast { opacity: 0.54; }
 }
 
-@mixin type-d6($colorContrast: false) {
+@mixin type-d6($colorContrast: false, $important: false) {
+  @if ($important) { $important: ' !important'; }
+
   line-height: 1.05;
-  font-size: $fs-d6;
+  font-size: $fs-d6#{$important};
   letter-spacing: -0.05rem;
 
   @if $colorContrast { opacity: 0.54; }
 }
 
-@mixin type-d7($colorContrast: false) {
+@mixin type-d7($colorContrast: false, $important: false) {
+  @if ($important) { $important: ' !important'; }
+
   letter-spacing: -0.04rem;
   line-height: 1;
-  font-size: $fs-d7;
+  font-size: $fs-d7#{$important};
   letter-spacing: -0.05rem;
 
   @if $colorContrast { opacity: 0.54; }
 }
 
-@mixin type-lead($colorContrast: false) {
+@mixin type-lead($colorContrast: false, $important: false) {
+  @if ($important) { $important: ' !important'; }
+
   line-height: 1.35;
   font-weight: $type-regular;
-  font-size: $fs-d2;
+  font-size: $fs-d2#{$important};
 
   @if $colorContrast { opacity: 0.75; }
 }
 
-@mixin type-sm($colorContrast: false) {
+@mixin type-sm($colorContrast: false, $important: false) {
+  @if ($important) { $important: ' !important'; }
+
   line-height: 1.35;
-  font-size: $fs-sm;
+  font-size: $fs-sm#{$important};
 
   @if $colorContrast { opacity: 0.54; }
 }
 
-@mixin type-xs($colorContrast: false) {
+@mixin type-xs($colorContrast: false, $important: false) {
+  @if ($important) { $important: ' !important'; }
+
   line-height: 1.3;
-  font-size: $fs-xs;
+  font-size: $fs-xs#{$important};
 
   @if $colorContrast { opacity: 0.54; }
 }
@@ -239,8 +259,8 @@
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      padding-right: $gutter !important;
-      padding-left:  $gutter !important;
+      padding-right: $gutter;
+      padding-left:  $gutter;
     }
   }
 }

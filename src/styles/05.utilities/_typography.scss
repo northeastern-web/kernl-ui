@@ -4,16 +4,16 @@
 
 
 // Sizing
-.fs--xs { @include type_xs(); }
-.fs--sm { @include type_sm(); }
+.fs--xs { @include type_xs(false, true); }
+.fs--sm { @include type_sm(false, true); }
 .fs--root { @include type-root(); }
-.fs--d1 { @include type_d1(); }
-.fs--d2 { @include type_d2(); }
-.fs--d3 { @include type_d3(); }
-.fs--d4 { @include type_d4(); }
-.fs--d5 { @include type_d5(); }
-.fs--d6 { @include type_d6(); }
-.fs--d7 { @include type_d7(); }
+.fs--d1 { @include type_d1(false, true); }
+.fs--d2 { @include type_d2(false, true); }
+.fs--d3 { @include type_d3(false, true); }
+.fs--d4 { @include type_d4(false, true); }
+.fs--d5 { @include type_d5(false, true); }
+.fs--d6 { @include type_d6(false, true); }
+.fs--d7 { @include type_d7(false, true); }
 
 
 // Lead

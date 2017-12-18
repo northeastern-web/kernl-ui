@@ -12,6 +12,7 @@
   border-radius: 2px;
   overflow: hidden;
   position: relative;
+  font-size: 1rem;
 
   &:hover { @include box_shadow($component-shadow-hover); }
 
@@ -76,7 +77,7 @@
   // Body
   .__body {
     padding: 1rem 1rem 3rem;
-    @include type-sm();
+    font-size: 100%;
 
     p {
       font-size: inherit;
@@ -90,16 +91,16 @@
   .__title {
     line-height: 1.25;
     font-weight: 900;
-    font-size: $fs-root;
+    font-size: 120%;
     @include font_smoothing();
   }
 
   .__pretitle {
-    font-size: .8rem;
+    font-size: 110%;
     margin-bottom: 0.2rem;
   }
 
-  .__subtitle {}
+  .__subtitle { font-size: 110%; }
 
   //
   // Icon
@@ -107,7 +108,7 @@
     @extend %icon;
     margin-bottom: .5rem;
 
-    i { font-size: 1.5rem; }
+    i { font-size: 110%; }
 
     svg {
       margin-left: 50%;
@@ -270,13 +271,12 @@
   // Tiles
   &.\--tile {
     min-height: $tile_min_height;
+    @include type-sm();
 
     .__excerpt,
     .__body p,
     .__header,
     .__footer {
-      @include type-sm();
-
       @include mqbp-up(lg) { @include type-xs(); }
     }
 
@@ -286,10 +286,6 @@
         @include mqbp-up(md) { max-height: 130%; }
         @include mqbp-up(lg) { max-height: 106%; }
         @include mqbp-up(xx) { max-height: 130%; }
-    }
-
-    .__title {
-      font-size: 1rem;
     }
   }
 }
