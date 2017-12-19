@@ -583,15 +583,50 @@
 //
 // Colors
 
-@mixin bg_variant($color, $text_color: null) {
+@mixin bg_variant($color, $hover_color, $text_color: null) {
   background-color: $color !important;
   @if ($text_color) {
     color: $text_color;
   }
+
+  &.button,
+  .__link {
+    border-color: transparent;
+    @if ($text_color) {
+      color: $text_color;
+    }
+
+    @include hover_focus_active {
+      background-color: $hover_color !important;
+      border-color: transparent;
+      @if ($text_color) {
+        color: $text_color !important;
+      }
+    }
+  }
 }
 
 @mixin text_variant($color) {
-  color: $color !important;
+  color: $color;
+}
+
+@mixin border_variant($color, $hover_color, $text_color) {
+  border: 1px solid rgba($color, 0.5) !important;
+  color: $color;
+
+  &.button {
+    color: $color;
+    border-color: transparent;
+
+    @include hover_focus_active {
+      background-color: $hover_color !important;
+      border-color: transparent;
+
+      @if ($text_color) {
+        color: $text_color;
+      }
+    }
+  }
 }
 
 

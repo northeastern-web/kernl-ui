@@ -19,19 +19,6 @@
   @include font_smoothing();
   @include transition();
 
-  &,
-  &:active,
-  &.active {
-    &:focus,
-    &.focus {
-      @include tab_focus();
-    }
-  }
-
-  @include hover_focus { text-decoration: none; }
-  &.focus { text-decoration: none; }
-
-  &.disabled,
   &:disabled {
     cursor: $cursor-disabled;
     opacity: 0.65;
@@ -46,7 +33,7 @@
   //
   // Colors
   &.\--dark { @include button_variant(#fff, $component-dark, $component-dark); }
-  &.\--transparent { @include button_variant(#fff, rgba($component-dark, 0.6), rgba($component-dark, 0)); }
+  &.\--transparent { @include button_variant(#fff, rgba($component-dark, 0.6), rgba($component-dark, 0.9)); }
   &.\--transparent.\--light { @include button_variant(#fff, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)); }
 
   //

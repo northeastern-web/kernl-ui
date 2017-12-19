@@ -2,9 +2,13 @@
 // Color Utilities
 //
 
-// @include generate_colors('alert');
-// @include generate_colors('badge');
+// Set default .bg--<color> to blend appropriately
+// with its background instead of a neutral gray.
+// Declared once here, overwritten by $color-text
+// argument in palette generator mixin.
+[class^="bg--"] { color: rgba($black, 0.75); }
+
 @include generate_colors('bg');
-// @include generate_colors('btn');
-// @include generate_colors('card');
+@include generate_colors('btn');
+@include generate_colors('border');
 @include generate_colors('text');

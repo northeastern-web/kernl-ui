@@ -319,23 +319,23 @@
 
 
 // Color generation
-@mixin get_component($component, $color, $color_grade: false, $color_text: null) {
+
+@mixin get_component($component, $color, $color_hover, $color_grade: false, $color_text: null) {
   @if $component == '--outline' { $color_text: $color !important; }
-  @if $component == 'alert' { @include alert_variant($color_text, $color); }
-  @if $component == 'badge' { @include badge_variant($color_text, $color, $color); }
   @if $component == 'btn' { @include button_variant($color_text, $color, $color); }
-  @if $component == 'card' { @include card_variant($color_text, $color); }
-  @if $component == 'bg' { @include bg_variant($color, $color_text); }
+  @if $component == 'bg' { @include bg_variant($color, $color_hover, $color_text); }
+  @if $component == 'border' { @include border_variant($color, $color_hover, $color_text); }
   @if $component == 'text' { @include text_variant($color); }
 }
 
 @mixin generate_colors($component, $palette_collection: $palette) {
   // Loop through each palette collection and then each color set
   @each $palette_label, $palette_colors in $palette_collection {
-    @each $current_color, $current_variant, $current_text_color in $palette_colors {
+    @each $current_color, $current_hover, $current_variant, $current_text in $palette_colors {
 
       $delimiter: '.\--';
-      @if ($component == 'bg' or $component == 'text') {
+
+      @if ($component == 'bg' or $component == 'border' or $component == 'text') {
         $delimiter: '--';
       }
 
@@ -344,12 +344,11 @@
       // if true: append grade to class
       @if ($current_variant == false) {
         .#{$component}#{$delimiter}#{$palette_label} {
-          @include get_component($component, $current_color, false, $current_text_color);
+          @include get_component($component, $current_color, $current_hover, false, $current_text);
         }
-
       } @else {
         .#{$component}#{$delimiter}#{$palette_label}-#{$current_variant} {
-          @include get_component($component, $current_color, $current_variant, $current_text_color);
+          @include get_component($component, $current_color, $current_hover, $current_variant, $current_text);
         }
       }
     }
