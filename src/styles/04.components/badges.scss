@@ -15,7 +15,8 @@
   vertical-align: middle; // req for inline use
   white-space: nowrap;
   z-index: 1;
-  @include badge_variant($type-color, rgba(255, 255, 255, 0.75), transparent);
+  color: $type-color;
+  background-color: rgba($white, 0.75);
   @include font_smoothing();
 
   a {
@@ -25,15 +26,7 @@
 
   &:before { margin-right: .25rem }
 
-  //
-  // Colors
-  &.\--dark { @include badge_variant(#fff, rgba(0, 0, 0, 0.6), transparent); }
-  &.\--transparent { @include badge_variant(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2), transparent); }
-
-  //
-  // Outline
-  &.\--outline { @extend %component-outline; }
-
+  
   //
   // Positioning
   &.\--left {

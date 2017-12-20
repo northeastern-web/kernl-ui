@@ -127,51 +127,6 @@
 
 
 //
-// Alert mixins
-
-// Alert Size
-@mixin alert_size($padding-y, $padding-x) {
-  padding: $padding-y $padding-x;
-}
-
-// Alert Variant
-@mixin alert_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $border: transparent, $add_shadow: false) {
-  color: $color;
-  background-color: $background;
-  border-color: $border;
-
-  @if ($add_shadow == false) {
-    box-shadow: none;
-  }
-
-  &.\--outline {
-    @if $background != rgba(255, 255, 255, 1) {
-      color: $background;
-      border-color: $background;
-    }
-  }
-
-  .__link:hover { background-color: darken($background, 10%); }
-}
-
-
-//
-// Badge mixins
-
-// Badge Variant
-@mixin badge_variant($color, $background, $border) {
-  color: $color;
-  border-color: $border;
-  background-color: $background;
-
-  &.badge--outline {
-    color: $background;
-    background-color: transparent;
-  }
-}
-
-
-//
 // Buttons
 
 // Button sizing

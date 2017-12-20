@@ -3,12 +3,14 @@
 //
 
 .alert {
-  @include alert_variant($type-color, #fff, $component-base, false);
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
+  color: $type-color;
+  background-color: $white;
+  border-color: $gray-700;
   @include transition();
 
   .__column { @extend %component-column; }
@@ -116,31 +118,6 @@
     }
   }
 
-
-  //
-  // Colors
-  &.\--dark {
-    @include alert_variant(#fff, $component-dark, $component-dark);
-
-    .__link,
-    a {
-      color: #fff;
-      border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
-
-      &:hover {
-        color: lighten($type-link, 35%);
-      }
-    }
-  }
-
-  //
-  // Outline
-  &.\--outline {
-    @extend %component-outline;
-    background-color: transparent !important;
-    box-shadow: none;
-  }
-
   //
   // Sizing
   &.\--xs,
@@ -149,7 +126,9 @@
     vertical-align: top; // to prevent extra vertical space on bottom
     width: auto;
 
-    @include mqbp-up(lg) { @include type-xs(); }
+    @include mqbp-up(lg) {
+      @include type-xs();
+    }
 
     .__body { padding: 0.5rem 0.75rem; }
   }
@@ -158,7 +137,7 @@
 
   //
   // Adds a button look to the right
-  &.\--btn {
+  &.\+btn {
     @include mqbp-up(lg) {
       &, .__link { display: flex; }
     }

@@ -428,30 +428,3 @@ $black-alpha: rgba(0, 0, 0, 0.7);
     font-weight: 300;
   }
 }
-
-// Testing for buttons
-/* .button {
-  padding: 0.25rem 1rem;
-  font-size: $fs-xs;
-  background-color: #fff;
-  color: $type-color;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba($type-color, 0.5);
-  transition: border-color 0.15s ease;
-
-  &:hover {
-    color: darken($type-color, 5%);
-    background-color: $gray-100;
-  }
-
-  &.border--white {
-    background-color: transparent;
-
-    &:hover {
-      background-color: rgba($white, 0.1) !important;
-      color: $white;
-    }
-  }
-}
- */

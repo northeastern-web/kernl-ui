@@ -14,6 +14,8 @@
 @include generate_colors('text');
 
 
+// Declared after generator because hover state of
+// .border--<color> already has an !important
 .btn.border--white {
   background-color: transparent;
 

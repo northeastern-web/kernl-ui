@@ -18,7 +18,11 @@
 }
 
 @mixin type-d1($colorContrast: false, $important: false) {
-  @if ($important) { $important: ' !important'; }
+  @if ($important) { 
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
 
   line-height: 1.175;
   font-size: $fs-d1#{$important};
@@ -27,7 +31,11 @@
 }
 
 @mixin type-d2($colorContrast: false, $important: false) {
-  @if ($important) { $important: ' !important'; }
+  @if ($important) { 
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
 
   line-height: 1.175;
   font-size: $fs-d2#{$important};
@@ -36,7 +44,11 @@
 }
 
 @mixin type-d3($colorContrast: false, $important: false) {
-  @if ($important) { $important: ' !important'; }
+  @if ($important) { 
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
 
   line-height: 1.175;
   font-size: $fs-d3#{$important};
@@ -45,7 +57,11 @@
 }
 
 @mixin type-d4($colorContrast: false, $important: false) {
-  @if ($important) { $important: ' !important'; }
+  @if ($important) { 
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
 
   line-height: 1.175;
   font-size: $fs-d4#{$important};
@@ -54,7 +70,11 @@
 }
 
 @mixin type-d5($colorContrast: false, $important: false) {
-  @if ($important) { $important: ' !important'; }
+  @if ($important) { 
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
 
   line-height: 1.2;
   font-size: $fs-d5#{$important};
@@ -63,7 +83,11 @@
 }
 
 @mixin type-d6($colorContrast: false, $important: false) {
-  @if ($important) { $important: ' !important'; }
+  @if ($important) { 
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
 
   line-height: 1.05;
   font-size: $fs-d6#{$important};
@@ -73,7 +97,11 @@
 }
 
 @mixin type-d7($colorContrast: false, $important: false) {
-  @if ($important) { $important: ' !important'; }
+  @if ($important) { 
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
 
   letter-spacing: -0.04rem;
   line-height: 1;
@@ -84,7 +112,11 @@
 }
 
 @mixin type-lead($colorContrast: false, $important: false) {
-  @if ($important) { $important: ' !important'; }
+  @if ($important) { 
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
 
   line-height: 1.35;
   font-weight: $type-regular;
@@ -94,7 +126,11 @@
 }
 
 @mixin type-sm($colorContrast: false, $important: false) {
-  @if ($important) { $important: ' !important'; }
+  @if ($important) { 
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
 
   line-height: 1.35;
   font-size: $fs-sm#{$important};
@@ -103,7 +139,11 @@
 }
 
 @mixin type-xs($colorContrast: false, $important: false) {
-  @if ($important) { $important: ' !important'; }
+  @if ($important) { 
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
 
   line-height: 1.3;
   font-size: $fs-xs#{$important};
@@ -321,8 +361,6 @@
 // Color generation
 
 @mixin get_component($component, $color, $color_hover, $color_grade: false, $color_text: null) {
-  @if $component == '--outline' { $color_text: $color !important; }
-  @if $component == 'btn' { @include button_variant($color_text, $color, $color); }
   @if $component == 'bg' { @include bg_variant($color, $color_hover, $color_text); }
   @if $component == 'border' { @include border_variant($color, $color_hover, $color_text); }
   @if $component == 'text' { @include text_variant($color); }
@@ -333,11 +371,7 @@
   @each $palette_label, $palette_colors in $palette_collection {
     @each $current_color, $current_hover, $current_variant, $current_text in $palette_colors {
 
-      $delimiter: '.\--';
-
-      @if ($component == 'bg' or $component == 'border' or $component == 'text') {
-        $delimiter: '--';
-      }
+      $delimiter: '--';
 
       // checks to see if color has a variant
       // if false: make color the component's base

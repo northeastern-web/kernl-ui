@@ -5,7 +5,7 @@
         <div class="badge__wrapper +bgimg">
           <div
             data-component="badge"
-            class="badge --left<?= $i == 2 ? ' --transparent' : ''; ?><?= $i == 3 ? ' --dark' : ''; ?>">
+            class="badge --left<?= $i == 2 ? ' bg--transparent-light' : ''; ?><?= $i == 3 ? ' bg--transparent-dark' : ''; ?>">
               <a href="#">Badge (Link)</a>
               <i class="__icon icon--video"></i>
           </div>
@@ -17,7 +17,7 @@
         <div class="badge__wrapper +bgimg">
           <div
             data-component="badge"
-            class="badge --center<?= $i == 4 ? ' --transparent' : ''; ?><?= $i == 5 ? ' --dark' : ''; ?>">
+            class="badge --center<?= $i == 4 ? ' bg--transparent-light' : ''; ?><?= $i == 5 ? ' bg--transparent-dark' : ''; ?>">
             Badge Center
           </div>
         </div>
@@ -28,7 +28,7 @@
         <div class="badge__wrapper +bgimg">
           <div
             data-component="badge"
-            class="badge --right --pill<?= $i == 9 ? ' --transparent' : ''; ?><?= $i == 7 ? ' --dark' : ''; ?>">
+            class="badge --right --pill<?= $i == 9 ? ' bg--transparent-light' : ''; ?><?= $i == 7 ? ' bg--transparent-dark' : ''; ?>">
             Badge Right (Pill)
           </div>
         </div>
@@ -39,6 +39,6 @@
 
 <section class="section">
   <div class="row">
-    <div class="col --12@xs">Sometimes we'll want to use an <div class="badge bg--blue-light">Inline Badge</div> here or there.</div>
+    <div class="col --12@xs">Sometimes we'll want to use an <div class="badge bg--red">Inline Badge</div> here or there.</div>
   </div>
 </section>
