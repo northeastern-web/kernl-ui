@@ -430,7 +430,7 @@ $black-alpha: rgba(0, 0, 0, 0.7);
 }
 
 // Testing for buttons
-.button {
+/* .button {
   padding: 0.25rem 1rem;
   font-size: $fs-xs;
   background-color: #fff;
@@ -444,4 +444,14 @@ $black-alpha: rgba(0, 0, 0, 0.7);
     color: darken($type-color, 5%);
     background-color: $gray-100;
   }
+
+  &.border--white {
+    background-color: transparent;
+
+    &:hover {
+      background-color: rgba($white, 0.1) !important;
+      color: $white;
+    }
+  }
 }
+ */

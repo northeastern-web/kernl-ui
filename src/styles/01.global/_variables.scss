@@ -6,22 +6,6 @@
 //
 // Color Palette
 
-// White
-$white:       #fff !default;
-$white-hover: rgba(0, 0, 0, 0.1);
-
-$white-scale: (
-  ($white, $white-hover, false),
-) !default;
-
-// Black
-$black: #000 !default;
-$black-hover: rgba(255, 255, 255, 0.2);
-
-$black-scale: (
-  ($black, $black-hover, false, $white),
-) !default;
-
 // Grays
 $gray: #58595b !default; // marcomm
 $gray-light: #7b7778 !default; // marcomm
@@ -37,6 +21,33 @@ $gray-700: $gray !default;
 $gray-800: #333333 !default;
 $gray-900: #1a1a1a !default;
 
+// White
+$white:       #fff !default;
+$white-hover: $gray-50;
+
+$white-scale: (
+  ($white, $white-hover, false),
+) !default;
+
+// Black
+$black: #000 !default;
+$black-hover: $gray-800;
+
+$black-scale: (
+  ($black, $black-hover, false, $white),
+) !default;
+
+// Transparent
+$transparent-light: rgba($gray-300, 0.6) !default;
+$transparent-light-hover: rgba($gray-300, 0.5) !default;
+$transparent-dark: rgba($gray-900, 0.6) !default;
+$transparent-dark-hover: rgba($gray-900, 0.8) !default;
+
+$transparent-scale: (
+  ($transparent-light, $transparent-light-hover, 'light', $white),
+  ($transparent-dark, $transparent-dark-hover, 'dark', $white)
+) !default;
+
 $gray-scale: (
   ($gray-50, darken($gray-50, 10%), '50'),
   ($gray-100, darken($gray-100, 10%), '100'),
@@ -50,22 +61,6 @@ $gray-scale: (
   ($gray-900, lighten($gray-900, 10%), '900', $white),
   ($gray, lighten($gray, 5%), false, $white),
   ($gray-light, lighten($gray, 5%), 'light', $white)
-) !default;
-
-// Black
-$black: #000 !default;
-$black-hover: rgba(255, 255, 255, 0.2);
-
-$black-scale: (
-  ($black, $black-hover, false, $white),
-) !default;
-
-// White
-$white:       #fff !default;
-$white-hover: rgba(0, 0, 0, 0.1);
-
-$white-scale: (
-  ($white, $white-hover, false),
 ) !default;
 
 // Reds
@@ -177,7 +172,8 @@ $palette: (
   ('teal', $teal-scale),
   ('beige', $beige-scale),
   ('white', $white-scale),
-  ('black', $black-scale)
+  ('black', $black-scale),
+  ('transparent', $transparent-scale)
 ) !default;
 
 

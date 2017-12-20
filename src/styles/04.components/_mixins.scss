@@ -172,47 +172,7 @@
 
 
 //
-// Button mixins
-
-// Button variants
-@mixin button_variant($color, $background, $border) {
-  $active-background: darken($background, 10%);
-  $active-border: darken($border, 12%);
-
-  color: $color;
-  background-color: $background;
-  border-color: $border;
-
-  @include hover_focus_active {
-    color: $color;
-    background-color: $active-background;
-        border-color: $active-border;
-  }
-
-  &.\--outline {
-    color: $background;
-    background-color: transparent;
-    border-color: $background;
-
-    @include hover_focus_active {
-      color: #fff;
-      background-color: $active-background;
-          border-color: $active-border;
-    }
-
-    &.\--white {
-      color: rgba(255, 255, 255, 1);
-      background-color: rgba(255, 255, 255, 0);
-      border-color: rgba(255, 255, 255, 0.5) !important;
-
-      @include hover_focus_active {
-        color: rgba(255, 255, 255, 0.9);
-        background-color: rgba(255, 255, 255, 0.1) !important;
-        border-color: rgba(255, 255, 255, 0.9);
-      }
-    }
-  }
-}
+// Buttons
 
 // Button sizing
 @mixin button_size($padding-t, $padding-y, $padding-b, $font-size, $border-radius) {
@@ -584,12 +544,12 @@
 // Colors
 
 @mixin bg_variant($color, $hover_color, $text_color: null) {
-  background-color: $color !important;
+  background-color: $color;
   @if ($text_color) {
     color: $text_color;
   }
 
-  &.button,
+  &.btn,
   .__link {
     border-color: transparent;
     @if ($text_color) {
@@ -610,17 +570,15 @@
   color: $color;
 }
 
-@mixin border_variant($color, $hover_color, $text_color) {
-  border: 1px solid rgba($color, 0.5) !important;
+@mixin border_variant($color, $hover_color, $text_color: $type-color) {
+  border: 1px solid rgba($color, 0.5);
   color: $color;
 
-  &.button {
+  &.btn {
     color: $color;
-    border-color: transparent;
 
     @include hover_focus_active {
       background-color: $hover_color !important;
-      border-color: transparent;
 
       @if ($text_color) {
         color: $text_color;
