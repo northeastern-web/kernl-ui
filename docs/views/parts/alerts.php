@@ -45,7 +45,7 @@
         </div>
       </div>
 
-      <div class="alert +btn">
+      <div class="alert +btn bg--teal">
         <div class="__body">
           <div class="__icon --thin --lg">
             <i data-feather="alert-octagon"></i>
@@ -55,7 +55,7 @@
           </div>
         </div>
         <footer class="__footer">
-          <a href="#" class="__footer__link">Log In</a>
+          <a href="#" class="__footer__link bg--transparent-dark">Log In</a>
         </footer>
       </div>
 

@@ -3,20 +3,20 @@
 //
 
 .badge {
+  @include badge_variant($type-color, rgba(255, 255, 255, 0.75), transparent);
   padding: 0.4rem 0.6rem 0.45rem;
   display: inline-block;
   font-size: .75rem;
   line-height: 1;
   text-align: center;
   border-radius: 1px;
-  border: 1px solid transparent;
+  border-width: 1px;
+  border-style: solid;
   overflow: hidden;
   text-overflow: ellipsis;
   vertical-align: middle; // req for inline use
   white-space: nowrap;
   z-index: 1;
-  color: $type-color;
-  background-color: rgba($white, 0.75);
   @include font_smoothing();
 
   a {
@@ -26,6 +26,14 @@
 
   &:before { margin-right: .25rem }
 
+  //
+  // Colors
+  &.\--dark { @include badge_variant(#fff, rgba(0, 0, 0, 0.6), transparent); }
+  &.\--transparent { @include badge_variant(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2), transparent); }
+
+  //
+  // Outline
+  &.\--outline { @extend %component-outline; }
   
   //
   // Positioning

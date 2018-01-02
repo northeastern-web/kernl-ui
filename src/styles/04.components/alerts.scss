@@ -3,14 +3,12 @@
 //
 
 .alert {
+  @include alert_variant();
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
-  color: $type-color;
-  background-color: $white;
-  border-color: $gray-700;
   @include transition();
 
   .__column { @extend %component-column; }
@@ -45,7 +43,12 @@
   }
 
   .__footer__link {
-    @extend .btn;
+    @include button_size($btn-padding-t, $btn-padding-y, $btn-padding-b, $btn-type-base, $btn-border-radius);
+    @extend %button;
+    color: $type-color;
+    border-color: rgba($type-color, 0.5);
+    border-width: 1px;
+    border-style: solid;
     margin-bottom: 0 !important;
   }
 
@@ -102,6 +105,7 @@
     font-size: $fs-root;
     font-weight: bold;
   }
+
   .__pretitle {}
   .__subtitle {}
 

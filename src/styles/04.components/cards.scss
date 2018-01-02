@@ -3,6 +3,7 @@
 //
 
 .card {
+  // display: flex;
   @include card_variant();
   @include transition();
   @include box_shadow();
@@ -12,7 +13,7 @@
   border-radius: 2px;
   overflow: hidden;
   position: relative;
-  font-size: 1rem;
+  @include type-sm();
 
   &:hover { @include box_shadow($component-shadow-hover); }
 
@@ -87,18 +88,15 @@
   }
 
   //
-  // Titles with .__body
+  // Titles within .__body
   .__title {
     line-height: 1.25;
     font-weight: 900;
-    font-size: 120%;
+    font-size: 118%;
     @include font_smoothing();
   }
 
-  .__pretitle {
-    font-size: 110%;
-    margin-bottom: 0.2rem;
-  }
+  .__pretitle { margin-bottom: 0.2rem; }
 
   .__subtitle { font-size: 110%; }
 
@@ -121,7 +119,6 @@
   // Header & Footer
   .__header,
   .__footer {
-    // @extend .\--row;
     @include type-sm();
     height: 2.5rem;
     display: flex;
@@ -146,13 +143,13 @@
   .__footer {
     bottom: 0;
     border-top: 1px solid $gray-200;
+    z-index: 11; // appear over gradient
   }
 
   // Link within footer
   .__footer__link {
-    @extend .btn;
-    // @extend .btn.\--dark;
-    @extend .btn.\--block;
+    @extend %button;
+    @extend %block;
     margin-bottom: 0;
     height: 2.5rem;
     border: none;
@@ -164,14 +161,6 @@
   //
   // Dark
   &.\--dark { @include card_variant(#fff, $component-dark); }
-
-  //
-  // Outline card with white bg and dark text
-  &.\--outline {
-    @extend %component-outline;
-    background-color: #fff !important;
-    box-shadow: none;
-  }
 
   //
   // Position card bottom-left
@@ -273,8 +262,6 @@
     min-height: $tile_min_height;
     @include type-sm();
 
-    .__excerpt,
-    .__body p,
     .__header,
     .__footer {
       @include mqbp-up(lg) { @include type-xs(); }
@@ -291,6 +278,12 @@
 }
 
 
+//
+// HEIGHTS
+//
+
+//
+// Set heights at small
 @include mqbp-up(sm) {
   .\--3\@sm, .\--4\@sm, .\--5\@sm, .\--6\@sm {
     .card {
@@ -306,6 +299,8 @@
 }
 
 
+//
+// Set heights at medium
 @include mqbp-up(md) {
   [class^="\\--"][class$="sm"],
   [class^="\\--"][class$="md"],
@@ -315,7 +310,7 @@
     }
   }
 
-  .\--6\@md,
+  /* .\--6\@md,
   .\--7\@md,
   .\--8\@md,
   .\--9\@md,
@@ -326,10 +321,10 @@
   .\--7\@lg,
   .\--9\@lg,
   .\--10\@lg,
-  .\--11\@lg {
-    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
+  .\--11\@lg { */
+    /* .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
       @include card_horizontal($width_graphic: 50%, $width_text: 50%);
-    }
+    } */
 
     .card.\--overlay {
       .__graphic__img {
@@ -343,7 +338,7 @@
         }
       }
     }
-  }
+  /* } */
 
   .card.\--tile,
   .card.\--tile.\--overlay {
@@ -351,6 +346,8 @@
   }
 }
 
+//
+// Set heights at large
 @include mqbp-up(lg) {
   [class^="\\--"][class$="sm"],
   [class^="\\--"][class$="md"],
@@ -360,7 +357,7 @@
     }
   }
 
-  .\--9\@lg,
+  /* .\--9\@lg,
   .\--10\@lg,
   .\--11\@lg {
     .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
@@ -383,7 +380,7 @@
     .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
       @include card_vertical();
     }
-  }
+  } */
 }
 
 @include mqbp-up(xl) {
@@ -396,19 +393,21 @@
     }
   }
 
-  .\--9\@lg,
+  /* .\--9\@lg,
   .\--10\@lg,
   .\--11\@lg {
     @include fill_height();
-  }
+  } */
 
-  .\--4\@sm,
+  /* .\--4\@sm,
   .\--4\@md,
   .\--4\@lg {
     &:not(.\--2\@xl) {
       .card.\--tile { height: 230px !important; }
     }
-  }
+  } */
+
+  .card.\--tile { height: 230px !important; }
 }
 
 @include mqbp-up(xx) {
@@ -417,7 +416,7 @@
     margin-bottom: 40px; // = match xx gutter
   }
 
-  .\--9\@lg,
+  /* .\--9\@lg,
   .\--10\@lg,
   .\--11\@lg {
     .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
@@ -429,7 +428,7 @@
       height: auto !important;
       left: -3%;
     }
-  }
+  } */
 }
 
 

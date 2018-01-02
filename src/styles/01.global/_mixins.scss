@@ -132,7 +132,7 @@
     $important: '';
   }
 
-  line-height: 1.35;
+  line-height: 1.35#{$important};
   font-size: $fs-sm#{$important};
 
   @if $colorContrast { opacity: 0.54; }

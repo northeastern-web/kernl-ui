@@ -127,6 +127,46 @@
 
 
 //
+// Alert mixins
+
+// Alert Variant
+@mixin alert_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $border: transparent, $add_shadow: false) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  @if ($add_shadow == false) {
+    box-shadow: none;
+  }
+
+  &.\--outline {
+    @if $background != rgba(255, 255, 255, 1) {
+      color: $background;
+      border-color: $background;
+    }
+  }
+
+  .__link:hover { background-color: darken($background, 10%); }
+}
+
+
+//
+// Badge mixins
+
+// Badge Variant
+@mixin badge_variant($color, $background, $border) {
+  color: $color;
+  border-color: $border;
+  background-color: $background;
+
+  &.badge--outline {
+    color: $background;
+    background-color: transparent;
+  }
+}
+
+
+//
 // Buttons
 
 // Button sizing
@@ -178,7 +218,7 @@
   .__body,
   .__footer,
   .list-group .__item { border-color: darken($background, 20%); }
-
+/* 
   &:not(.\--overlay):not(.\--bottom) {
     .__link {
       &:after {
@@ -206,10 +246,9 @@
       }
     }
   }
-
+ */
   .__footer {
     background: $background;
-    z-index: 11; // appear over gradient
   }
 
   @if $background != rgba(255, 255, 255, 1) {
@@ -225,14 +264,14 @@
     &:hover { background: rgba(255, 255, 255, 1); }
   }
 
-  &.\--tile {
+  /* &.\--tile {
     .__link {
       &:after {
         @include mqbp-up(md) { height: 2rem !important; }
         @include mqbp-up(xx) { height: 3rem !important; }
       }
     }
-  }
+  } */
 
   .__graphic.\+round {
     margin: 1rem auto 0;
@@ -505,10 +544,11 @@
   }
 
   &.btn,
-  .__link {
+  .__link,
+  .__footer__link {
     border-color: transparent;
     @if ($text_color) {
-      color: $text_color;
+      color: $text_color !important;
     }
 
     @include hover_focus_active {
@@ -529,7 +569,9 @@
   border: 1px solid rgba($color, 0.5);
   color: $color;
 
-  &.btn {
+  &.btn,
+  .__link,
+  .__footer__link {
     color: $color;
 
     @include hover_focus_active {

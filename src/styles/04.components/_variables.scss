@@ -40,7 +40,7 @@ $card_height_md: 400px !default;
 $card_height_lg: 400px !default;
 $card_height_xl: 425px !default;
 $card_height_xx: 450px !default;
-$tile_min_height: 175px !default;
+$tile_min_height: 125px !default;
 
 // List Groups
 $list-group-padding-y:       0.75rem;
@@ -239,6 +239,20 @@ $form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns
   width: 100%;
   text-align: center !important;
   border-radius: 0 !important;
+}
+
+
+%button {
+  border-width: 1px;
+  border-style: solid;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1.3;
 }
 
 %bgimg {
