@@ -401,10 +401,13 @@
             padding-bottom: 0.75rem !important;
             margin-bottom: 0.25rem;
             margin-right: 0 !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            transition: border-bottom 0.2s ease;
 
             &:hover {
               background-color: transparent;
               color: $type-link !important;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.6);
             }
           }
 

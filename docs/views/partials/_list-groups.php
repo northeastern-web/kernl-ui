@@ -59,7 +59,7 @@ function listgroup($classes) {
   </div>
   <div class="row">
     <div class="col --12@xs --4@md offset--1@md">
-      <p class="text-style-block mb--1@xs"><small>Base size; items contain links; icons on left</small></p>
+      <p class="text-style-block mb--1@xs"><small>Base size; items contain links; icons on right</small></p>
       <div class="list-group'  . $classes . ' +icon --right">
         <div class="__item">
           <a href="#"><b>Dolor lorem ipsum </b>: sit amet do blandit porttitor</a>

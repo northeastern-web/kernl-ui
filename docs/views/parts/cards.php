@@ -191,7 +191,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --4@lg">
+    <div class="col --12@xs --4@lg">
       <article class="card --overlay --bottom">
         <a href="" class="__link">
           <div class="__graphic"></div>
@@ -210,11 +210,11 @@ figure out --middle with a heading.
     </div>
 
     <div class="col --12@xs --6@lg">
-      <article class="card">
+      <article class="card --h@sm">
         <a href="#" class="__link">
           <div class="__graphic"></div>
           <div class="__body">
-            <h2 class="__title">Six-Column Jack</h2>
+            <h2 class="__title">Horizontal @ Small</h2>
             <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
           </div>
         </a>
@@ -238,7 +238,7 @@ figure out --middle with a heading.
     </div>
 
     <div class="col --12@xs --5@lg">
-      <article class="card">
+      <article class="card --h@sm">
         <a href="#" class="__link">
           <div class="__graphic"></div>
           <div class="__body">
@@ -266,7 +266,7 @@ figure out --middle with a heading.
     </div>
 
     <div class="col --12@xs --4@lg">
-      <article class="card">
+      <article class="card --h@sm --v@lg">
         <a href="#" class="__link">
           <div class="__graphic"></div>
           <div class="__header">
@@ -283,7 +283,7 @@ figure out --middle with a heading.
     </div>
 
     <div class="col --12@xs --8@lg">
-      <article class="card --blue-dark">
+      <article class="card --h@sm bg--blue-dark">
         <div class="__graphic"></div>
         <div class="__header">
           <div class="__column">

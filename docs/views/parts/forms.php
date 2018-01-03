@@ -9,7 +9,7 @@
         <div class="__group">
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" class="__control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <div class="alert --sm --dark">
+          <div class="alert --sm bg--yellow">
             <div class="__body">
               <div class="__excerpt"><b>Here's an alert</b>: We'll never share your email with anyone else.</div>
             </div>
