@@ -1,4 +1,4 @@
-<header class="section --lg --fixed +bgimg">
+<header class="section --lg +bgimg --bgfixed">
   <div class="row">
     <div class="col --12@xs ta--c">
       <div class="__pretitle">What's your type?</div>
