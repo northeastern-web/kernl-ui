@@ -12,7 +12,7 @@ $spacing: (
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include mqbp-up($breakpoint) {
     @each $selector, $property in $spacing {
-      $size: 10;
+      $size: 15;
       @while $size >= 0 { // loop through sizes
         $value: #{$size}rem;
         @if $selector != o { // if margin or padding
