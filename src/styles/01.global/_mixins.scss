@@ -18,7 +18,7 @@
 }
 
 @mixin type-d1($colorContrast: false, $important: false) {
-  @if ($important) { 
+  @if ($important) {
     $important: ' !important';
   } @else {
     $important: '';
@@ -31,7 +31,7 @@
 }
 
 @mixin type-d2($colorContrast: false, $important: false) {
-  @if ($important) { 
+  @if ($important) {
     $important: ' !important';
   } @else {
     $important: '';
@@ -44,7 +44,7 @@
 }
 
 @mixin type-d3($colorContrast: false, $important: false) {
-  @if ($important) { 
+  @if ($important) {
     $important: ' !important';
   } @else {
     $important: '';
@@ -57,7 +57,7 @@
 }
 
 @mixin type-d4($colorContrast: false, $important: false) {
-  @if ($important) { 
+  @if ($important) {
     $important: ' !important';
   } @else {
     $important: '';
@@ -70,7 +70,7 @@
 }
 
 @mixin type-d5($colorContrast: false, $important: false) {
-  @if ($important) { 
+  @if ($important) {
     $important: ' !important';
   } @else {
     $important: '';
@@ -83,7 +83,7 @@
 }
 
 @mixin type-d6($colorContrast: false, $important: false) {
-  @if ($important) { 
+  @if ($important) {
     $important: ' !important';
   } @else {
     $important: '';
@@ -97,7 +97,7 @@
 }
 
 @mixin type-d7($colorContrast: false, $important: false) {
-  @if ($important) { 
+  @if ($important) {
     $important: ' !important';
   } @else {
     $important: '';
@@ -112,7 +112,7 @@
 }
 
 @mixin type-lead($colorContrast: false, $important: false) {
-  @if ($important) { 
+  @if ($important) {
     $important: ' !important';
   } @else {
     $important: '';
@@ -126,7 +126,7 @@
 }
 
 @mixin type-sm($colorContrast: false, $important: false) {
-  @if ($important) { 
+  @if ($important) {
     $important: ' !important';
   } @else {
     $important: '';
@@ -139,7 +139,7 @@
 }
 
 @mixin type-xs($colorContrast: false, $important: false) {
-  @if ($important) { 
+  @if ($important) {
     $important: ' !important';
   } @else {
     $important: '';
@@ -299,8 +299,8 @@
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      padding-right: $gutter;
-      padding-left:  $gutter;
+      padding-right: $gutter !important;
+      padding-left:  $gutter !important;
     }
   }
 }
