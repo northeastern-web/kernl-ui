@@ -21,6 +21,8 @@ $padding-xl: 10%;
 
   &.\--banner,
   > .__header {
+    margin-bottom: 1.5rem;
+
     .__title {
       margin-bottom: 0.25rem;
       font-weight: $type-regular;
@@ -33,6 +35,7 @@ $padding-xl: 10%;
 
   &.\--banner {
     @include font_smoothing();
+    margin-bottom: 1rem;
     background-color: $gray-50;
 
     .__title { @include type_d6(); }
