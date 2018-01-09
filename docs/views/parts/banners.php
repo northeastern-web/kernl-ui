@@ -41,7 +41,7 @@
     <h2 class="k_section__header">Headers, Fancy Options</h2>
   </header>
 
-  <section class="section --banner --fixed --lg +bgimg mb--1@xs mb--2@lg">
+  <section class="section --banner --bgfixed --lg +bgimg mb--1@xs mb--2@lg">
     <div class="__pretitle">Header Pre Title</div>
     <h1 class="__title">Header: Large, Fixed</h1>
     <div class="__subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
