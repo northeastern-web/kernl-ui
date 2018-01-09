@@ -327,7 +327,7 @@
   <header class="k_section__header">With Vertical Borders</header>
   <div class="row">
     <div class="col --12@xs">
-      <table class="table +border-vertical">
+      <table class="table -border">
         <thead>
           <tr class="th--sm">
             <th width="20%">Dolor Vestibulum</th>
@@ -361,7 +361,7 @@
   <header class="k_section__header">With Alternating Stripes</header>
   <div class="row">
     <div class="col --12@xs">
-      <table class="table +striped">
+      <table class="--striped">
         <thead>
           <tr class="th--sm">
             <th width="20%">Dolor Vestibulum</th>
@@ -433,7 +433,7 @@
           <tr>
             <th>Fusce Condimentum</th>
             <td>Adipiscing dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</td>
-            <td class="+shaded">Shading on this cell (using <code>td.+shaded</code>). Curabitur blandit tempus porttitor.</td>
+            <td class="--shaded">Shading on this cell (using <code>td.--shaded</code>). Curabitur blandit tempus porttitor.</td>
             <td>Justo Ultricies</td>
             <td>Aenean lacinia bibendum nulla sed consectetur.</td>
             <td>Cras mattis consectetur purus sit amet fermentum.</td>
@@ -443,7 +443,7 @@
             <td>Donec ullamcorper nulla non metus auctor fringilla.</td>
             <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
             <td>Adipiscing Condimentum</td>
-            <td class="+shaded">Shading on this cell (using <code>td.+shaded</code>). Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</td>
+            <td class="--shaded">Shading on this cell (using <code>td.--shaded</code>). Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</td>
             <td>Curabitur blandit tempus porttitor.</td>
           </tr>
           <tr>
@@ -454,8 +454,8 @@
             <td>Donec ullamcorper nulla non metus auctor fringilla.</td>
             <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
           </tr>
-          <tr class="+shaded">
-            <th>Shading On Whole Row (using <code>tr.+shaded</code>)</th>
+          <tr class="--shaded">
+            <th>Shading On Whole Row (using <code>tr.--shaded</code>)</th>
             <td>Adipiscing dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</td>
             <td>Shading on this cell. Curabitur blandit tempus porttitor.</td>
             <td>Justo Ultricies</td>
