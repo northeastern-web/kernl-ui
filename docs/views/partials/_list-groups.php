@@ -58,8 +58,8 @@ function listgroup($classes) {
     </div>
   </div>
   <div class="row">
-    <div class="col --12@xs --4@md --offset-1@md">
-      <p class="text-style-block mb--1@xs"><small>Base size; items contain links; icons on left</small></p>
+    <div class="col --12@xs --4@md offset--1@md">
+      <p class="text-style-block mb--1@xs"><small>Base size; items contain links; icons on right</small></p>
       <div class="list-group'  . $classes . ' +icon --right">
         <div class="__item">
           <a href="#"><b>Dolor lorem ipsum </b>: sit amet do blandit porttitor</a>
@@ -87,7 +87,7 @@ function listgroup($classes) {
         </div>
       </div>
     </div>
-    <div class="col --12@xs --5@md --offset-1@md">
+    <div class="col --12@xs --5@md offset--1@xs">
       <p class="text-style-block mb--1@xs"><small>Base size; Items are Links; extra content; indent on hover</small></p>
       <div class="list-group'  . $classes . ' +indent">
         <a href="#" class="__item">

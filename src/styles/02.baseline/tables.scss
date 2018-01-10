@@ -9,13 +9,18 @@ table {
   border-collapse: collapse;
   background-color: #fff;
 
-  &.\+border-vertical {
+  &.\--border {
     td,
     th { border: 1px solid #ddd; }
   }
 
-  .\+shaded,
-  &.\+striped tr:nth-child(even) {
+  &.\--noborder {
+    td,
+    th { border: none; }
+  }
+
+  .\--shaded,
+  &.\--striped tr:nth-child(even) {
     background-color: rgba($type-color, 0.1);
   }
 

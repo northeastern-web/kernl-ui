@@ -63,7 +63,6 @@ a {
   -webkit-text-decoration-skip: objects;
   text-decoration: none;
   color: $type-link;
-  font-weight: 500;
 
   &:hover { color: darken($type-link, 20%); }
   &:focus {}
@@ -79,6 +78,8 @@ a {
 blockquote {
   margin: 0 0 1rem;
   padding: 1rem;
+
+  @include font-smoothing();
 
   @include mqbp-up(md) {
     padding: 2rem;

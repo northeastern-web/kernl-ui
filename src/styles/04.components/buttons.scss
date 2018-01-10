@@ -4,37 +4,24 @@
 
 .btn {
   @include button_size($btn-padding-t, $btn-padding-y, $btn-padding-b, $btn-type-base, $btn-border-radius);
-  @include button_variant($type-color, #fff, rgba($type-color, 0.7));
-  display: inline-block;
+  @extend %button;
+  background-color: #fff;
+  color: $type-color;
+  border-color: rgba($type-color, 0.5);
   border-width: 1px;
   border-style: solid;
-  text-align: center;
   margin-bottom: 3px; // for when (if) multiple inline buttons wrap
-  vertical-align: middle;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-  user-select: none;
-  line-height: 1.3;
   @include font_smoothing();
   @include transition();
 
-  &,
-  &:active,
-  &.active {
-    &:focus,
-    &.focus {
-      @include tab_focus();
-    }
-  }
-
-  @include hover_focus { text-decoration: none; }
-  &.focus { text-decoration: none; }
-
-  &.disabled,
   &:disabled {
     cursor: $cursor-disabled;
     opacity: 0.65;
+  }
+
+  &:hover {
+    color: darken($type-color, 5%);
+    background-color: $gray-100;
   }
 
   //
@@ -44,18 +31,9 @@
   &.\--lg { @include button_size($btn-padding-t*1.5, $btn-padding-y*1.5, $btn-padding-b*1.5, $btn-type-lg, $btn-border-radius); }
 
   //
-  // Colors
-  &.\--dark { @include button_variant(#fff, $component-dark, $component-dark); }
-  &.\--transparent { @include button_variant(#fff, rgba($component-dark, 0.6), rgba($component-dark, 0)); }
-  &.\--transparent.\--light { @include button_variant(#fff, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)); }
-
-  //
-  // Outline
-  &.\--outline { @extend %component-outline; }
-
-  //
   // Full width button
-  &.\--block { @extend %block; 
+  &.\--block {
+    @extend %block; 
     white-space: initial;
   }
 

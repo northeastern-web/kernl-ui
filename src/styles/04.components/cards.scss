@@ -3,6 +3,7 @@
 //
 
 .card {
+  // display: flex;
   @include card_variant();
   @include transition();
   @include box_shadow();
@@ -12,10 +13,9 @@
   border-radius: 2px;
   overflow: hidden;
   position: relative;
+  @include type-sm();
 
   &:hover { @include box_shadow($component-shadow-hover); }
-
-  @include mqbp-up(xx) { margin-bottom: $grid-gutter-width-base + 10; }
 
   .__header {
     .badge {
@@ -60,6 +60,19 @@
       left: 0;
       transition: background 0.2s ease;
     }
+
+    &.\+round {
+      margin: 1rem auto 0;
+      max-width: $card_icon_size * 3 !important;
+      height: $card_icon_size * 3 !important;
+      padding: 0 !important;
+      border-radius: $card_icon_size * 2 !important;
+
+      .__graphic__img {
+        max-width: 200% !important;
+        left: -50% !important;
+      }
+    }
   }
 
   // Image within .__graphic
@@ -76,7 +89,7 @@
   // Body
   .__body {
     padding: 1rem 1rem 3rem;
-    @include type-sm();
+    font-size: 100%;
 
     p {
       font-size: inherit;
@@ -86,20 +99,17 @@
   }
 
   //
-  // Titles with .__body
+  // Titles within .__body
   .__title {
     line-height: 1.25;
     font-weight: 900;
-    font-size: $fs-root;
+    font-size: 118%;
     @include font_smoothing();
   }
 
-  .__pretitle {
-    font-size: .8rem;
-    margin-bottom: 0.2rem;
-  }
+  .__pretitle { margin-bottom: 0.2rem; }
 
-  .__subtitle {}
+  .__subtitle { font-size: 110%; }
 
   //
   // Icon
@@ -107,7 +117,7 @@
     @extend %icon;
     margin-bottom: .5rem;
 
-    i { font-size: 1.5rem; }
+    i { font-size: 175%; }
 
     svg {
       margin-left: 50%;
@@ -120,7 +130,6 @@
   // Header & Footer
   .__header,
   .__footer {
-    // @extend .\--row;
     @include type-sm();
     height: 2.5rem;
     display: flex;
@@ -145,31 +154,19 @@
   .__footer {
     bottom: 0;
     border-top: 1px solid $gray-200;
+    z-index: 11; // appear over gradient
   }
 
   // Link within footer
   .__footer__link {
-    @extend .btn;
-    @extend .btn.\--dark;
-    @extend .btn.\--block;
+    @extend %button;
+    @extend %block;
     margin-bottom: 0;
     height: 2.5rem;
     border: none;
     padding: 0;
     display: flex;
     align-items: center;
-  }
-
-  //
-  // Dark
-  &.\--dark { @include card_variant(#fff, $component-dark); }
-
-  //
-  // Outline card with white bg and dark text
-  &.\--outline {
-    @extend %component-outline;
-    background-color: #fff !important;
-    box-shadow: none;
   }
 
   //
@@ -225,16 +222,11 @@
       left: -10rem;
       right: -10rem;
       margin: auto;
-
-      @include mqbp-up(sm) {
-        max-height: 120%;
-      }
     }
 
     .__body {
       position: absolute;
       top: 0; left: 0; right: 0;
-      // width: auto;
       height: 100%;
     }
 
@@ -269,14 +261,11 @@
   //
   // Tiles
   &.\--tile {
-    min-height: $tile_min_height;
+    min-height: $tile_min_height_xs;
+    @include type-sm();
 
-    .__excerpt,
-    .__body p,
     .__header,
     .__footer {
-      @include type-sm();
-
       @include mqbp-up(lg) { @include type-xs(); }
     }
 
@@ -288,150 +277,110 @@
         @include mqbp-up(xx) { max-height: 130%; }
     }
 
-    .__title {
-      font-size: 1rem;
-    }
-  }
-}
-
-
-@include mqbp-up(sm) {
-  .\--3\@sm, .\--4\@sm, .\--5\@sm, .\--6\@sm {
-    .card {
-      height: $card_height_sm;
-    }
-  }
-
-  .card.\--tile,
-  .card.\--tile.\--overlay {
-    height: 250px;
-    min-height: 0;
-  }
-}
-
-
-@include mqbp-up(md) {
-  [class^="\\--"][class$="sm"],
-  [class^="\\--"][class$="md"],
-  [class^="\\--"][class$="lg"] {
-    .card {
-      height: $card_height_md;
-    }
-  }
-
-  .\--6\@md,
-  .\--7\@md,
-  .\--8\@md,
-  .\--9\@md,
-  .\--10\@md,
-  .\--11\@md,
-  .\--5\@lg,
-  .\--6\@lg,
-  .\--7\@lg,
-  .\--9\@lg,
-  .\--10\@lg,
-  .\--11\@lg {
-    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
-      @include card_horizontal($width_graphic: 50%, $width_text: 50%);
+    &.\--overlay {
+      height: $tile_overlay_height;
+      min-height: 0;
     }
 
-    .card.\--overlay {
+    &:after { height: 2.5rem !important; }
+  }
+
+  //
+  // Set heights at small
+  @include mqbp-up(sm) {
+    height: $card_height_sm;
+
+    &.\--overlay {
       .__graphic__img {
+        max-height: 120%;
+      }
+    }
 
-        @include mqbp-up(md) {
-          max-height: 110%;
-        }
+    &.\--tile,
+    &.\--tile.\--overlay {
+      height: 250px;
+      min-height: 0;
+    }
+  }
 
-        @include mqbp-up(md) {
-          max-height: 150%;
-        }
+
+  //
+  // Set heights at medium
+  @include mqbp-up(md) {
+    height: $card_height_md;
+
+    &.\--overlay {
+      .__graphic__img {
+        max-height: 150%;
+      }
+    }
+
+    &.\--tile,
+    &.\--tile.\--overlay {
+      height: 200px !important;
+    }
+  }
+
+  //
+  // Set heights at large
+  @include mqbp-up(lg) {
+    height: $card_height_lg;
+  }
+
+  @include mqbp-up(xl) {
+    height: $card_height_xl;
+
+    &.\--tile,
+    &.\--tile.\--overlay {
+      .__body { font-size: 90%; }
+    }
+  }
+
+  //
+  // Set heights at extra large
+  @include mqbp-up(xx) {
+    height: $card_height_xx;
+    margin-bottom: 40px; // = match xx gutter
+
+    &.\--overlay {
+      .__graphic__img {
+        max-height: 160%;
       }
     }
   }
-
-  .card.\--tile,
-  .card.\--tile.\--overlay {
-    height: 200px !important;
-  }
 }
 
-@include mqbp-up(lg) {
-  [class^="\\--"][class$="sm"],
-  [class^="\\--"][class$="md"],
-  [class^="\\--"][class$="lg"] {
-    .card {
-      height: $card_height_lg;
+
+.card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
+  @include mqbp-up(sm) {
+    &.\--h\@sm {
+      @include card_horizontal(50%, 50%);
     }
   }
 
-  .\--9\@lg,
-  .\--10\@lg,
-  .\--11\@lg {
-    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
-      @include card_horizontal($width_graphic: 66.6%, $width_text: 33.3%);
+  @include mqbp-up(md) {
+    &.\--h\@md {
+      @include card_horizontal(50%, 50%);
     }
   }
 
-  .\--6\@md,
-  .\--7\@md,
-  .\--6\@lg,
-  .\--7\@lg,
-  .\--8\@lg {
-    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
-      @include card_horizontal($width_graphic: 50%, $width_text: 50%);
+  @include mqbp-up(lg) {
+    &.\--h\@lg {
+      @include card_horizontal(50%, 50%);
     }
-  }
 
-  .\--3\@lg,
-  .\--4\@lg {
-    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
+    &.\--v\@lg {
       @include card_vertical();
     }
   }
-}
 
-@include mqbp-up(xl) {
-  [class^="\\--"][class$="sm"],
-  [class^="\\--"][class$="md"],
-  [class^="\\--"][class$="lg"],
-  [class^="\\--"][class$="xl"] {
-    .card {
-      height: $card_height_xl;
-    }
-  }
-
-  .\--9\@lg,
-  .\--10\@lg,
-  .\--11\@lg {
-    @include fill_height();
-  }
-
-  .\--4\@sm,
-  .\--4\@md,
-  .\--4\@lg {
-    &:not(.\--2\@xl) {
-      .card.\--tile { height: 230px !important; }
-    }
-  }
-}
-
-@include mqbp-up(xx) {
-  .card {
-    height: $card_height_xx;
-    margin-bottom: 40px; // = match xx gutter
-  }
-
-  .\--9\@lg,
-  .\--10\@lg,
-  .\--11\@lg {
-    .card:not(.\--overlay):not(.\--scroll):not(.\--middle) {
-      @include card_horizontal($width_graphic: 56.25%, $width_text: 43.75%);
+  @include mqbp-up(xl) {
+    &.\--h\@xl {
+      @include card_horizontal(50%, 50%);
     }
 
-    .__graphic__img {
-      width: 106%;
-      height: auto !important;
-      left: -3%;
+    &.\--v\@xl {
+      @include card_vertical();
     }
   }
 }
@@ -440,8 +389,6 @@
 //
 // Scrolling within card
 .\--scroll {
-  height: $card_height_sm;
-
   &:after { display: none; } // kill box-shadow
 
   .__body {
@@ -449,6 +396,7 @@
     overflow-y: scroll;
   }
 }
+
 
 //
 // Extend card past fixed height
@@ -477,100 +425,30 @@
   }
 }
 
-
 //
-// Sizing
-.card {
-  @include mqbp-up(md) { height: $card_height_sm; max-height: none; }
-  @include mqbp-up(lg) { height: $card_height_lg; }
-  @include mqbp-up(xl) { height: $card_height_xl; }
-  @include mqbp-up(xx) { height: $card_height_xx; }
-
-  &.\--tile:after { height: 2.5rem!important; }
+// Contains a list group
+.\+list-group {
+  // note: card-contained list-group styles appear in list-groups.scss
+  .__body {
+    padding-top: 0;
+    padding-bottom: 2.25rem;
+  }
 }
 
 //
-// List groups within cards
-.card {
-  .list-group {
-    // position: absolute; // required for full-width with negative margins
-    // margin-bottom: 0;
-    // padding-top: 1rem;
-    background: transparent;
-    margin: -1px -1rem 0;
+// Add a dark shade between the background and .card .__body element
+.\+shade {
+  .__graphic:after,
+  &:hover .__graphic:after {
+    background: none;
   }
 
-  .list-group__item,
-  .list-group > div,
-  .list-group > a,
-  .list-group > li {
-    padding: 0.75rem 1rem;
-    border-right: 0 none;
-    border-left: 0 none;
-
-    &:last-child {
-      margin-bottom: 0;
-      border-right: 0 none;
-      border-left: 0 none;
-      border-bottom: 0 none;
-    }
+  .__body {
+    background: rgba(0, 0, 0, 0.25);
+    transition: background 0.2s ease;
   }
 
-  &.\--overlay {
-    .list-group {
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 70%);
-      color: #fff;
-    }
-
-    .list-group__item,
-    .list-group > div,
-    .list-group > a,
-    .list-group > li {
-      border-top-color: rgba(255, 255, 255, 0.2);
-    }
-  }
-
-  &.\--bottom {
-    .__body {
-      position: absolute !important;
-    }
-
-    .list-group {
-      position: relative;
-      margin-bottom: -1rem;
-    }
-
-    .list-group__item,
-    .list-group > div,
-    .list-group > a,
-    .list-group > li {
-      &:last-child {
-        margin-bottom: 0;
-        border-bottom: 0 none;
-      }
-    }
-  }
-
-  &.\+list-group {
-    .__body {
-      padding-top: 0;
-      padding-bottom: 2.25rem;
-    }
-  }
-
-  &.\+shade {
-    .__graphic:after,
-    &:hover .__graphic:after {
-      background: none;
-    }
-
-    .__body {
-      background: rgba(0, 0, 0, 0.25);
-      transition: background 0.2s ease;
-    }
-
-    &:hover {
-      .__body { background: rgba(0, 0, 0, 0.35); }
-    }
+  &:hover {
+    .__body { background: rgba(0, 0, 0, 0.35); }
   }
 }

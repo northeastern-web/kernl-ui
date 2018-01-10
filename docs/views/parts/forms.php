@@ -1,6 +1,6 @@
 <section class="section k_bg-light">
   <div class="row">
-    <div class="col --12@xs --8@lg --offset-2@lg">
+    <div class="col --12@xs --8@lg offset--2@lg">
       <form action="" method="">
         <div class="__group">
           <label for="exampleText">Text Label</label>
@@ -9,7 +9,7 @@
         <div class="__group">
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" class="__control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <div class="alert --sm --dark">
+          <div class="alert --sm bg--yellow">
             <div class="__body">
               <div class="__excerpt"><b>Here's an alert</b>: We'll never share your email with anyone else.</div>
             </div>
@@ -108,9 +108,9 @@
   </div>
 </section>
 
-<section class="section k_bg-dark">
+<section class="section --md k_bg-dark">
   <div class="row">
-    <div class="col --12@xs --8@lg --offset-2@lg">
+    <div class="col --12@xs --8@lg offset--2@lg">
       <form action="" method="">
         <div class="__group __search --dark +line mb--3@md">
           <input type="text" class="__control" placeholder="Search ( __search +line )">

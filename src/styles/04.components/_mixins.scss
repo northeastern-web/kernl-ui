@@ -129,11 +129,6 @@
 //
 // Alert mixins
 
-// Alert Size
-@mixin alert_size($padding-y, $padding-x) {
-  padding: $padding-y $padding-x;
-}
-
 // Alert Variant
 @mixin alert_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $border: transparent, $add_shadow: false) {
   color: $color;
@@ -172,119 +167,7 @@
 
 
 //
-// Button mixins
-
-// Button variants
-@mixin button_variant($color, $background, $border) {
-  $active-background: darken($background, 10%);
-  $active-border: darken($border, 12%);
-
-  color: $color;
-  background-color: $background;
-  border-color: $border;
-
-  @include hover {
-    color: $color;
-    background-color: $active-background;
-        border-color: $active-border;
-  }
-
-  &:focus,
-  &.focus {
-    color: $color;
-    background-color: $active-background;
-        border-color: $active-border;
-  }
-
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    color: $color;
-    background-color: $active-background;
-        border-color: $active-border;
-    // Remove the gradient for the pressed/active state
-    background-image: none;
-
-    &:hover,
-    &:focus,
-    &.focus {
-      color: $color;
-      background-color: darken($background, 17%);
-          border-color: darken($border, 25%);
-    }
-  }
-
-  &.disabled,
-  &:disabled {
-    &:focus,
-    &.focus {
-      background-color: $background;
-          border-color: $border;
-    }
-    @include hover {
-      background-color: $background;
-          border-color: $border;
-    }
-  }
-
-  &.\--outline {
-    color: $background;
-    background-color: transparent;
-    border-color: $background;
-
-    @include hover {
-      color: #fff;
-      background-color: $background !important;
-          border-color: $background !important;
-    }
-
-    &.\--white {
-      color: rgba(255, 255, 255, 1);
-      background-color: rgba(255, 255, 255, 0);
-      border-color: rgba(255, 255, 255, 0.5) !important;
-
-      @include hover {
-        color: rgba(255, 255, 255, 0.9);
-        background-color: rgba(255, 255, 255, 0.1) !important;
-        border-color: rgba(255, 255, 255, 0.9);
-      }
-    }
-
-    &:focus,
-    &.focus {
-      color: #fff;
-      background-color: $background;
-          border-color: $background;
-    }
-
-    &:active,
-    &.active,
-    .open > &.dropdown-toggle {
-      color: #fff;
-      background-color: $background;
-          border-color: $background;
-
-      &:hover,
-      &:focus,
-      &.focus {
-        color: #fff;
-        background-color: darken($background, 17%);
-            border-color: darken($background, 25%);
-      }
-    }
-
-    &.disabled,
-    &:disabled {
-      &:focus,
-      &.focus {
-        border-color: lighten($background, 20%);
-      }
-      @include hover {
-        border-color: lighten($background, 20%);
-      }
-    }
-  }
-}
+// Buttons
 
 // Button sizing
 @mixin button_size($padding-t, $padding-y, $padding-b, $font-size, $border-radius) {
@@ -327,7 +210,7 @@
 // Card mixins
 
 // Card Variant
-@mixin card_variant($color: $type-color, $background: rgba(255, 255, 255, 1), $is_transparent: 0, $icon-size: 24px) {
+@mixin card_variant($color: $type-color, $background: rgba(255, 255, 255, 1)) {
   color: $color;
   background: $background;
   border-color: $background;
@@ -336,77 +219,11 @@
   .__footer,
   .list-group .__item { border-color: darken($background, 20%); }
 
-  &:not(.\--overlay):not(.\--bottom) {
-    .__link {
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 3rem;
-        background: linear-gradient(to bottom, rgba($background,0) 0%,rgba($background,1) 70%);
-        z-index: 10;
-
-        @include mqbp-up(md) { height: 4rem; }
-        @include mqbp-up(xx) { height: 5rem; }
-      }
-    }
-
-    &.\--outline {
-      @if $background != rgba(255, 255, 255, 1) {
-        color: $background;
-      }
-
-      .__link {
-        &:after { background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 70%); }
-      }
-    }
-  }
-
-  .__footer {
-    background: $background;
-    z-index: 11; // appear over gradient
-  }
-
-  @if $background != rgba(255, 255, 255, 1) {
-    .__body,
-    .__footer,
-    .__item { border-color: rgba(255, 255, 255, .2); }
-
-    &:hover { background: darken($background, 5%); }
-  }
-
-  /* don't change this, or else white cards will darken to light gray on hover */
-  @if $background == rgba(255, 255, 255, 1) {
-    &:hover { background: rgba(255, 255, 255, 1); }
-  }
-
-  &.\--tile {
-    .__link {
-      &:after {
-        @include mqbp-up(md) { height: 2rem !important; }
-        @include mqbp-up(xx) { height: 3rem !important; }
-      }
-    }
-  }
-
-  .__graphic.\+round {
-    margin: 1rem auto 0;
-    max-width: $icon-size * 3 !important;
-    height: $icon-size * 3 !important;
-    padding: 0 !important;
-    border-radius: $icon-size * 2 !important;
-
-    .__graphic__img {
-      max-width: 200% !important;
-      left: -50% !important;
-    }
-  }
+  .__footer { background: $background; }
 }
 
 // set image and text side by side
-@mixin card_horizontal($background: rgba(255, 255, 255, 1), $width_graphic: 100%, $width_text: auto) {
+@mixin card_horizontal($width_graphic: 100%, $width_text: auto) {
   .__graphic {
     width: $width_graphic;
     height: 100%;
@@ -437,6 +254,7 @@
 
   .__graphic + .__header {
     width: $width_graphic;
+    left: $width_graphic;
   }
 
   .__footer {
@@ -481,6 +299,10 @@
     height: auto;
   }
 
+  .__graphic + .__header { left: 0; }
+
+  .__header { top: auto; }
+
   .__header,
   .__footer {
     right: auto;
@@ -514,7 +336,9 @@
   background: $background;
   color: $color;
 
-  .__item, li { border-color: rgba($color, 0.25); }
+  > .__item,
+  > li,
+  > div { border-color: rgba($color, 0.25); }
 
   a {
     display: block;
@@ -531,7 +355,7 @@
 
   > a {
     color: $color;
-    &:hover { color: $link;  }
+    &:hover { color: $link; }
   }
 
   &.\--striped .__item,
@@ -596,37 +420,6 @@
       }
     }
   }
-
-  &.\+icon {
-    > .__item,
-    > li,
-    > div {
-      padding-left: ($font-size * 1.75) !important;
-    }
-  }
-
-  i, svg {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: ($font-size * 1.25);
-    height: ($font-size * 1.25);
-  }
-
-  &.\+icon.\--right {
-    > .__item,
-    > li,
-    > div {
-      padding-right: ($font-size * 1.75) !important;
-      padding-left: 0 !important;
-    }
-
-    i, svg {
-      left: auto;
-      right: 0;
-    }
-  }
 }
 
 
@@ -655,38 +448,56 @@
 //
 // Colors
 
-@mixin bg_variant($color) {
+@mixin bg_variant($color, $hover_color, $text_color: null) {
   background-color: $color !important;
+  @if ($text_color) {
+    color: $text_color;
+  }
+
+  &.btn,
+  .__link,
+  .__footer__link {
+    border-color: transparent;
+    @if ($text_color) {
+      color: $text_color !important;
+    }
+
+    @include hover_focus_active {
+      background-color: $hover_color !important;
+      border-color: transparent;
+      @if ($text_color) {
+        color: $text_color !important;
+      }
+    }
+  }
 }
 
 @mixin text_variant($color) {
-  color: $color !important;
+  color: $color;
+}
+
+@mixin border_variant($color, $hover_color, $text_color: $type-color) {
+  border: 1px solid rgba($color, 0.5);
+  color: $color;
+
+  &.btn,
+  .__link,
+  .__footer__link {
+    color: $color;
+
+    @include hover_focus_active {
+      background-color: $hover_color !important;
+
+      @if ($text_color) {
+        color: $text_color;
+      }
+    }
+  }
 }
 
 
 //
 // Forms
-
-@mixin form-control-validation($color) {
-  // Color the label and help text
-  .form__control--feedback,
-  .form__control--label,
-  .col-form-label,
-  .form-check-label,
-  .custom-control { color: $color; }
-
-  .form__control {
-    border-color: $color;
-
-    &:focus { @include box-shadow(); }
-  }
-
-  .input-group-addon {
-    color: $color;
-    border-color: $color;
-    background-color: lighten($color, 40%);
-  }
-}
 
 @mixin form-control-focus() {
   &:focus {

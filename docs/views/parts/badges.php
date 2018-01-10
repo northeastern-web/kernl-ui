@@ -39,6 +39,6 @@
 
 <section class="section">
   <div class="row">
-    <div class="col --12@xs">Sometimes we'll want to use an <div class="badge bg--yellow-light">Inline Badge</div> here or there.</div>
+    <div class="col --12@xs">Sometimes we'll want to use an <div class="badge bg--red">Inline Badge</div> here or there.</div>
   </div>
 </section>

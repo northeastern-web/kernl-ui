@@ -29,23 +29,23 @@
         </div>
       </div>
 
-      <div class="alert --outline">
+      <div class="alert border--red">
         <div class="__body">
           <div class="__excerpt">
-            <b>Alert Outline, <i>no surrounding href</i></b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Here's an <a href="#">inline link</a>.
+            <b>Alert Border, <i>no surrounding href</i></b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Here's an <a href="#">inline link</a>.
           </div>
         </div>
       </div>
 
-      <div class="alert --dark">
+      <div class="alert bg--black">
         <div class="__body">
           <div class="__excerpt">
-            <b>Alert Dark, <i>no surrounding href</i></b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Here's an <a href="#">inline link</a>.
+            <b>Alert Black, <i>no surrounding href</i></b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Here's an <a href="#">inline link</a>.
           </div>
         </div>
       </div>
 
-      <div class="alert --btn">
+      <div class="alert +btn bg--teal">
         <div class="__body">
           <div class="__icon --thin --lg">
             <i data-feather="alert-octagon"></i>
@@ -55,7 +55,7 @@
           </div>
         </div>
         <footer class="__footer">
-          <a href="#" class="__footer__link">Log In</a>
+          <a href="#" class="__footer__link bg--transparent-dark">Log In</a>
         </footer>
       </div>
 

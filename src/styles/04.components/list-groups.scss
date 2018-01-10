@@ -47,72 +47,147 @@
 
   &.\--dark { @include list_group_variant(#fff, rgba($type-color, 0.5), #fff); }
 
-  &.\--striped {
-    @include list_group_variant($type-color, rgba(0, 0, 0, 0.02), $type-color, rgba(0, 0, 0, 0.05));
-
-    &.\--on-dark {
-      @include list_group_variant(#fff, rgba(255, 255, 255, 0.05), #fff, rgba(255, 255, 255, 0.1));
-    }
-  }
-/*
-  &.\+icon {
-    a,
-    .__link {
-      position: relative;
-      padding-right: 1.5rem;
-
-      &:after {
-        font-family: "feathericons";
-        content: "\E922";
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1rem;
-        line-height: 1;
-        color: rgba(0, 0, 0, 0.5);
-      }
-    }
-
-    &.\--left {
-      a,
-      .__link {
-        padding-left: 1.5rem;
-        padding-right: 0;
-
-        &:after {
-          right: auto;
-          left: 0;
-        }
-      }
-    }
-  }
- */
   //
   // Sizing
   @include mqbp-up(md) {
     &.\--sm { @include list_group-size($list-group-padding-y/1.25, $list-group-padding-x/1.125, $fs-xs) }
   }
 
+  &.\+icon {
+    > .__item,
+    > li,
+    > div {
+      padding-left: 1.5rem !important;
+
+      i, svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+
+    &.\--right {
+      > .__item,
+      > li,
+      > div {
+        padding-right: 1.5rem !important;
+        padding-left: 0 !important;
+
+        i, svg {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &.\--striped {
+    @include list_group_variant($type-color, rgba(0, 0, 0, 0.02), $type-color, rgba(0, 0, 0, 0.05));
+
+    &.\--on-dark {
+      @include list_group_variant(#fff, rgba(255, 255, 255, 0.05), #fff, rgba(255, 255, 255, 0.1));
+    }
+
+    &.\+icon {
+      > .__item,
+      > li,
+      > div {
+        padding-left: 2.25rem !important;
+
+        i, svg {
+          left: 0.5rem;
+        }
+      }
+
+      &.\--right {
+        > .__item,
+        > li,
+        > div {
+          padding-right: 2.25rem !important;
+          padding-left: 1rem !important;
+
+          i, svg {
+            left: auto;
+            right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
   &.\+shadow { @include box_shadow(); }
 }
 
-.card .list-group {
-  > .__item,
-  > li {
-    padding: $list-group-padding-y $list-group-padding-x !important;
 
-    &:first-child { padding-top: $list-group-padding-y !important; }
-    &:last-child { padding-bottom: $list-group-padding-y !important; }
+//
+// List groups within cards
+.card {
+  .list-group {
+    background: transparent;
+    margin: -1px -1rem 0;
+
+    > .__item,
+    > li,
+    > div {
+      padding: $list-group-padding-y $list-group-padding-x !important;
+      border-right: 0 none;
+      border-left: 0 none;
+
+      &:first-child { padding-top: $list-group-padding-y !important; }
+
+      &:last-child {
+        padding-bottom: $list-group-padding-y !important;
+        margin-bottom: 0;
+        border-right: 0 none;
+        border-left: 0 none;
+        border-bottom: 0 none;
+      }
+    }
+
+    &.\--sm {
+      > .__item,
+      > li {
+        padding: $list-group-padding-y/1.25 $list-group-padding-x !important;
+
+        &:first-child { padding-top: $list-group-padding-y/1.25 !important; }
+        &:last-child { padding-bottom: $list-group-padding-y/1.25 !important; }
+      }
+    }
   }
 
-  &.\--sm {
-    > .__item,
-    > li {
-      padding: $list-group-padding-y/1.25 $list-group-padding-x !important;
+  &.\--overlay {
+    .list-group {
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 70%);
+      color: #fff;
 
-      &:first-child { padding-top: $list-group-padding-y/1.25 !important; }
-      &:last-child { padding-bottom: $list-group-padding-y/1.25 !important; }
+      > .__item,
+      > li,
+      > div {
+        border-top-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  &.\--bottom {
+    .__body {
+      position: absolute !important;
+    }
+
+    .list-group {
+      position: relative;
+      margin-bottom: -1rem;
+
+      > .__item,
+      > li,
+      > div {
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: 0 none;
+        }
+      }
     }
   }
 }

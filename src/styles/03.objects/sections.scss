@@ -1,0 +1,89 @@
+//
+// Sections
+//
+
+// Section Spacing
+$padding-default: 1rem;
+$padding-md: 5%;
+$padding-lg: 7.5%;
+$padding-xl: 10%;
+
+
+//
+// Sections
+
+.section {
+  position: relative;
+  padding-top: $padding-default;
+  padding-bottom: $padding-default;
+
+  .section { padding: 0; }
+
+  &.\--banner,
+  > .__header {
+    margin-bottom: 1.5rem;
+
+    .__title {
+      margin-bottom: 0.25rem;
+      font-weight: $type-regular;
+    }
+
+    .__pretitle { margin-bottom: 0.25rem; }
+
+    .__subtitle { @include type-lead(); }
+  }
+
+  &.\--banner {
+    @include font_smoothing();
+    margin-bottom: 1rem;
+    background-color: $gray-50;
+
+    .__title { @include type_d6(); }
+  }
+
+  &.\--md {
+    padding-top: $padding-md;
+    padding-bottom: $padding-md;
+  }
+
+  &.\--lg {
+    padding-top: $padding-lg;
+    padding-bottom: $padding-lg;
+  }
+
+  &.\--xl {
+    padding-top: $padding-xl;
+    padding-bottom: $padding-xl;
+  }
+
+  &.\--top {
+    padding-top: $padding-default * 1.5;
+
+    &.\--lg { padding-bottom: $padding-lg * 1.75; }
+
+    &.\--xl { padding-bottom: $padding-xl * 1.75; }
+  }
+
+  &.\--bottom {
+    padding-bottom: $padding-default * 1.5;
+
+    &.\--lg { padding-top: $padding-lg * 1.75; }
+
+    &.\--xl { padding-top: $padding-xl * 1.75; }
+  }
+
+  &.\--transparent {
+    background-color: transparent;
+    color: $type-color;
+  }
+
+  &.\--white {
+    background-color: white;
+    color: $type-color;
+  }
+
+  &.\+shadow {
+    border-top: 2px solid rgba(#000, 0.1);
+    border-bottom: 1px solid rgba(#000, 0.1);
+  }
+}
