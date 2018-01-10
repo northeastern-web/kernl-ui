@@ -449,7 +449,7 @@
 // Colors
 
 @mixin bg_variant($color, $hover_color, $text_color: null) {
-  background-color: $color;
+  background-color: $color !important;
   @if ($text_color) {
     color: $text_color;
   }
