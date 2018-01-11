@@ -49,6 +49,7 @@
 // Create columns
 @include make-grid-columns();
 
+
 // Remove the negative margin from default .g-row, then the horizontal padding
 // from all immediate children columns (to prevent runaway style inheritance).
 .\--nogutters {
@@ -58,5 +59,45 @@
   > .col {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+//
+//** for 20% :O
+.\--20\@xs {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  max-width: 20%;
+}
+
+@include mqbp-up(sm) {
+  .\--20\@sm {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    max-width: 20%;
+  }
+}
+
+@include mqbp-up(md) {
+  .\--20\@md {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    max-width: 20%;
+  }
+}
+
+@include mqbp-up(lg) {
+  .\--20\@lg {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    max-width: 20%;
+  }
+}
+
+@include mqbp-up(xl) {
+  .\--20\@xl {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    max-width: 20%;
   }
 }
