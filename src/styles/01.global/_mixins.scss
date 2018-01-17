@@ -24,7 +24,7 @@
     $important: '';
   }
 
-  line-height: 1.175;
+  line-height: 1.4;
   font-size: $fs-d1#{$important};
 
   @if $colorContrast { opacity: 0.54; }
@@ -37,7 +37,7 @@
     $important: '';
   }
 
-  line-height: 1.175;
+  line-height: 1.4;
   font-size: $fs-d2#{$important};
 
   @if $colorContrast { opacity: 0.54; }
@@ -50,7 +50,7 @@
     $important: '';
   }
 
-  line-height: 1.175;
+  line-height: 1.4;
   font-size: $fs-d3#{$important};
 
   @if $colorContrast { opacity: 0.54; }
@@ -63,7 +63,7 @@
     $important: '';
   }
 
-  line-height: 1.175;
+  line-height: 1.4;
   font-size: $fs-d4#{$important};
 
   @if $colorContrast { opacity: 0.54; }
@@ -76,7 +76,7 @@
     $important: '';
   }
 
-  line-height: 1.2;
+  line-height: 1.4;
   font-size: $fs-d5#{$important};
 
   @if $colorContrast { opacity: 0.54; }
