@@ -78,9 +78,10 @@
       padding: 0;
       margin: 0;
 
-      &.\--active {
+      &.\--active > .__link {
         font-weight: bold;
-        border-left-color: $gray-600;
+        border-left: 3px solid $gray-400;
+        background: #f7f7f7;
       }
     }
 
@@ -97,7 +98,6 @@
     > .__link:hover {
       background-color: $gray-100;
       border-left-color: transparent;
-      cursor: default;
     }
   }
 
