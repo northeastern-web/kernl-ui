@@ -190,7 +190,7 @@
 
       @each $modifier in (pull, push, order) {
         @for $i from 0 through $columns {
-          .#{$modifier}--#{$i}\@#{$infix} {
+          .\--#{$i}-#{$modifier}\@#{$infix} {
             @include make-col-modifier($modifier, $i, $columns)
           }
         }
@@ -199,7 +199,7 @@
       // `$columns - 1` because offsetting by the width of an entire row isn't possible
       @for $i from 0 through ($columns - 1) {
         @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset--0-xs
-          .offset--#{$i}\@#{$infix} {
+          .\--#{$i}-offset\@#{$infix} {
             @include make-col-modifier(offset, $i, $columns)
           }
         }
