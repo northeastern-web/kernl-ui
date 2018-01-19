@@ -65,7 +65,7 @@ $padding-xl: 10%;
   }
 
   &.\--bottom {
-    padding-bottom: $padding-default * 2 !important;
+    padding-bottom: $padding-default * 2;
 
     // &.\--lg { padding-top: $padding-lg * 2 !important; }
     // &.\--xl { padding-top: $padding-xl * 2 !important; }
