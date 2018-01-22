@@ -49,10 +49,10 @@ const ScrollSpy = (($) => {
   const Selector = {
     DATA_SPY        : '[data-spy="scroll"]',
     ACTIVE          : '.active',
-    NAV_LIST_GROUP  : '.nav, .list-group',
-    NAV_LINKS       : '.nav-link',
-    NAV_ITEMS       : '.nav-item',
-    LIST_ITEMS      : '.list-group-item',
+    NAV_LIST_GROUP  : '.nav, .list-group, .\--sticky .__list',
+    NAV_LINKS       : '.nav-link, .__link',
+    NAV_ITEMS       : '.nav-item, .__item',
+    LIST_ITEMS      : '.list-group-item, .__item',
     DROPDOWN        : '.dropdown',
     DROPDOWN_ITEMS  : '.dropdown-item',
     DROPDOWN_TOGGLE : '.dropdown-toggle'
