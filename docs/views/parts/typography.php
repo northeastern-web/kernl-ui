@@ -327,7 +327,7 @@
   <header class="k_section__header">With Vertical Borders</header>
   <div class="row">
     <div class="col --12@xs">
-      <table class="table -border">
+      <table class="table --border">
         <thead>
           <tr class="th--sm">
             <th width="20%">Dolor Vestibulum</th>

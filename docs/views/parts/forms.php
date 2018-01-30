@@ -1,6 +1,6 @@
 <section class="section k_bg-light">
   <div class="row">
-    <div class="col --12@xs --8@lg offset--2@lg">
+    <div class="col --12@xs --8@lg --2-offset@lg">
       <form action="" method="">
         <div class="__group">
           <label for="exampleText">Text Label</label>
@@ -110,7 +110,7 @@
 
 <section class="section --md k_bg-dark">
   <div class="row">
-    <div class="col --12@xs --8@lg offset--2@lg">
+    <div class="col --12@xs --8@lg --2-offset@lg">
       <form action="" method="">
         <div class="__group __search --dark +line mb--3@md">
           <input type="text" class="__control" placeholder="Search ( __search +line )">
