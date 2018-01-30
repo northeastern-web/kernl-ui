@@ -190,7 +190,7 @@
 
       @each $modifier in (pull, push, order) {
         @for $i from 0 through $columns {
-          .\--#{$i}-#{$modifier}\@#{$infix} {
+          .#{$col-prefix}-#{$i}-#{$modifier}\@#{$infix} {
             @include make-col-modifier($modifier, $i, $columns)
           }
         }
@@ -198,8 +198,8 @@
 
       // `$columns - 1` because offsetting by the width of an entire row isn't possible
       @for $i from 0 through ($columns - 1) {
-        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset--0-xs
-          .\--#{$i}-offset\@#{$infix} {
+        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .--offset-0@xs
+          .#{$col-prefix}-#{$i}-offset\@#{$infix} {
             @include make-col-modifier(offset, $i, $columns)
           }
         }
@@ -323,7 +323,7 @@
 
 // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
 @mixin mqbp-down($name, $breakpoints: $grid-breakpoints) {
-  $max: breakpoint-max($name, $breakpoints);
+  $max: _breakpoint-max($name, $breakpoints);
   @if $max {
     @media (max-width: $max) {
       @content;
