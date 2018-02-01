@@ -379,7 +379,7 @@
 
   &.\+outline { border: 1px solid rgba($color, 0.25); }
 
-  &.\+indent:not(.\--striped) {
+  &.\+indent:not(.\--striped):not(.\+outline):not(.\+shadow):not(.\--on-dark) {
     > .__item,
     > li {
       &:hover { background-color: rgba($color, 0.05); }
@@ -417,6 +417,16 @@
       &:hover {
         padding-left: $padding-y/2 !important;
         padding-right: $padding-y/2 !important;
+      }
+    }
+  }
+
+  &.\+indent.\--striped {
+    > .__item,
+    > li {
+      &:hover {
+        padding-left: $padding-y*2 !important;
+        padding-right: $padding-y*2 !important;
       }
     }
   }

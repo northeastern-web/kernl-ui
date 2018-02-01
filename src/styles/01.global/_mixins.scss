@@ -196,6 +196,14 @@
         }
       }
 
+      // for one-fifth-width columns
+      @for $i from 1 through 5 {
+        .#{$col-prefix}-20\@#{$infix} {
+          flex-basis: 20%;
+          max-width: 20%;
+        }
+      }
+
       // `$columns - 1` because offsetting by the width of an entire row isn't possible
       @for $i from 0 through ($columns - 1) {
         @if not ($infix == "" and $i == 0) { // Avoid emitting useless .--offset-0@xs

@@ -10,6 +10,7 @@
         <li><code>p</code> <i class="fs--xs">padding</i></li>
         <li><code>o</code> <i class="fs--xs">offset</i></li>
       </ul>
+      <hr>
       <ul class="list--inline fs--sm">
         <li><b>Locations</b>:</li>
         <li><code>t</code> <i class="fs--xs">top</i></li>
@@ -20,6 +21,7 @@
         <li><code>y</code> <i class="fs--xs">top &amp; bottom</i></li>
         <li><code>a</code> <i class="fs--xs">all</i></li>
       </ul>
+      <hr>
       <ul class="list--inline mb--0@xs fs--sm">
         <li><b>Sizes</b>:</li>
         <li><code>1</code> through <code>20</code></li>
@@ -30,6 +32,7 @@
         <li><code>3h</code> <i class="fs--xs">3.5 rem</i></li>
         <li><code>12h</code> <i class="fs--xs">12.5 rem</i></li>
       </ul>
+      <hr>
       <ul class="list--inline fs--sm mb--0@xs">
         <li><b>Breakpoints</b>: </li>
         <li><code>xs</code></li>
@@ -41,62 +44,61 @@
       </ul>
     </div>
   </div>
-  <p class="fs--sm"><b>Example</b>: <code>mx--2@md</code> (margin left &amp; right 2rem at the medium breakpoint)</p>
+  <p class="fs--sm"><b>Example a</b>: <code>mx--2@md</code> (margin left &amp; right 2rem at the medium breakpoint)</p>
+  <p class="fs--sm"><b>Example b</b>: <code>mt--14h@lg</code> (margin top 14.5rem at the large breakpoint)</p>
 </section>
 
 <section class="section">
   <header class="k_section__header">Positioning</header>
   <div class="row">
-    <div class="col --12@xs p--y-2@xs">
-      <div class="card --extend mb--1@xs bg--gray-700">
-        <div class="__body pb--1@xs">
-          <p class="text-style-block">Flexbox Vertical Positioning</p>
-          <p>Set vertical positioning on flexbox elements.</p>
-          <ul class="fs--sm">
-            <li><code>+equal</code> <i>makes all children equal height</i></li>
-            <li><code>+middle</code> <i>vertically align to the middle</i></li>
-            <li><code>+bottom</code> <i>vertically align to the bottom</i></li>
-          </ul>
-        </div>
+    <div class="col --12@xs --6@md">
+      <div class="pa--1@xs mb--1@xs mb--2@md border--teal +noshadow">
+        <p class="text-style-block text--blue-dark">Flexbox Vertical Positioning</p>
+        <p>Set vertical positioning on flexbox elements.</p>
+        <ul class="fs--sm">
+          <li><code>+equal</code> <i>sets element to height of heighest sibling</i></li>
+          <li><code>+middle</code> <i>vertically align children to the middle</i></li>
+          <li><code>+bottom</code> <i>vertically align children to the bottom</i></li>
+        </ul>
       </div>
+    </div>
 
-      <div class="card --extend mb--1@xs bg--gray-700">
-        <div class="__body pb--1@xs">
-          <p class="text-style-block">Responsive Floats</p>
-          <p>Set floats by breakpoint.</p>
-          <ul class="fs--sm">
-            <li><code>f--l@md</code> <i>Left: float left at medium breakpoint</i></li>
-            <li><code>f--r@md</code> <i>Right: float right at medium breakpoint</i></li>
-            <li><code>f--n@md</code> <i>None: kill all floats at medium breakpoint</i></li>
-          </ul>
-        </div>
+    <div class="col --12@xs --6@md">
+      <div class="pa--1@xs mb--1@xs mb--2@md border--teal +noshadow">
+        <p class="text-style-block text--blue-dark">Responsive Floats</p>
+        <p>Set floats by breakpoint.</p>
+        <ul class="fs--sm">
+          <li><code>f--l@md</code> <b>Left</b>: <i>float left at medium breakpoint</i></li>
+          <li><code>f--r@md</code> <b>Right</b>: <i>float right at medium breakpoint</i></li>
+          <li><code>f--n@md</code> <b>None</b>: <i>kill all floats at medium breakpoint</i></li>
+        </ul>
       </div>
+    </div>
 
-      <div class="card --extend mb--1@xs bg--gray-700">
-        <div class="__body pb--1@xs">
-          <p class="text-style-block">Responsive Flexbox Ordering</p>
-          <p>Responsively set display order of responsive elements.</p>
-          <ul class="fs--sm">
-            <li>(default order is defined by markup)</li>
-            <li><code>order--1@md</code> <i>overrides element's display order to appear first at the medium breakpoint</i></li>
-            <li><code>order--2@md</code> <i>overrides element's display order to appear second at the medium breakpoint</i></li>
-            <li><i>etc</i></li>
-          </ul>
-        </div>
+    <div class="col --12@xs --6@md">
+      <div class="pa--1@xs mb--1@xs mb--2@md border--teal +noshadow">
+        <p class="text-style-block text--blue-dark">Responsive Flexbox Ordering</p>
+        <p>Responsively set display order of responsive elements.</p>
+        <ul class="fs--sm">
+          <li>(default order is defined by markup)</li>
+          <li><code>order--1@md</code> <i>overrides element's display order to appear first at the medium breakpoint</i></li>
+          <li><code>order--2@md</code> <i>overrides element's display order to appear second at the medium breakpoint</i></li>
+          <li><i>etc</i></li>
+        </ul>
       </div>
+    </div>
 
-      <div class="card --extend mb--1@xs bg--gray-700">
-        <div class="__body pb--1@xs">
-          <p class="text-style-block">Sticky</p>
-          <p>Set an element to be sticky</p>
-          <ul class="fs--sm">
-            <li><code>--sticky</code></li>
-          </ul>
-        </div>
+    <div class="col --12@xs --6@md">
+      <div class="pa--1@xs mb--1@xs mb--2@md border--teal +noshadow">
+        <p class="text-style-block text--blue-dark">Sticky</p>
+        <p>Set an element to be sticky</p>
+        <ul class="fs--sm">
+          <li><code>--sticky</code></li>
+        </ul>
       </div>
-      <p class="fs--sm"><i>See <a href="./?part=grid">Grid</a> page for visual examples.</i></p>
     </div>
   </div>
+  <p class="fs--sm"><i>See <a href="./?part=grid">Grid</a> page for visual examples.</i></p>
 </section>
 <section class="section">
   <header class="k_section__header">Typography</header>

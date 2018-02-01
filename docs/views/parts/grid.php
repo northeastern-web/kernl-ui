@@ -60,6 +60,23 @@
       </div>
     </div>
     <div class="row">
+      <div class="col --12@xs --20@md">
+        <div class="col-content">20%</div>
+      </div>
+      <div class="col --12@xs --20@md">
+        <div class="col-content">20%</div>
+      </div>
+      <div class="col --12@xs --20@md">
+        <div class="col-content">20%</div>
+      </div>
+      <div class="col --12@xs --20@md">
+        <div class="col-content">20%</div>
+      </div>
+      <div class="col --12@xs --20@md">
+        <div class="col-content">20%</div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col --12@xs --3@md">
         <div class="col-content">3</div>
       </div>
@@ -93,10 +110,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col --12@xs --6@md order--1@xs order--2@lg">
+      <div class="col --12@xs --6@md --1-order@xs --2-order@lg">
         <div class="col-content">6a</div>
       </div>
-      <div class="col --12@xs --6@md order--2@xs order--1@lg">
+      <div class="col --12@xs --6@md --2-order@xs --1-order@lg">
         <div class="col-content">6b</div>
       </div>
     </div>
@@ -213,6 +230,23 @@
       </div>
       <div class="col --12@xs --2@md">
         <div class="col-content">2</div>
+      </div>
+    </div>
+    <div class="row --nogutters">
+      <div class="col --12@xs --20@md">
+        <div class="col-content">20%</div>
+      </div>
+      <div class="col --12@xs --20@md">
+        <div class="col-content">20%</div>
+      </div>
+      <div class="col --12@xs --20@md">
+        <div class="col-content">20%</div>
+      </div>
+      <div class="col --12@xs --20@md">
+        <div class="col-content">20%</div>
+      </div>
+      <div class="col --12@xs --20@md">
+        <div class="col-content">20%</div>
       </div>
     </div>
     <div class="row --nogutters">
@@ -433,13 +467,13 @@
           <h3 class="non-col-element text-style-block">Nested Section <small>(with --bg-color option)</small></h3>
           <div class="row">
             <div class="col --12@xs --4@md">
-              <div class="col-content">4</div>
+              <div class="col-content">4<br>----</div>
+            </div>
+            <div class="col --12@xs --4@md">
+              <div class="col-content">4<br>----<br>-------<br>-----</div>
             </div>
             <div class="col --12@xs --4@md">
               <div class="col-content">4<br>----<br>-------</div>
-            </div>
-            <div class="col --12@xs --4@md">
-              <div class="col-content">4</div>
             </div>
           </div>
         </section>
@@ -450,28 +484,28 @@
     </div>
     <div class="row">
       <div class="col --12@xs --9@md">
-        <div class="col-content" style="padding: 0;">
+        <div class="col-content pa--0@xs +equal">
           <section class="section pa--1@xs">
-            <h3 class="non-col-element text-style-block">Nested Section</h3>
+            <h3 class="non-col-element text-style-block">Nested Section <small>(with +equal option)</small></h3>
             <div class="row">
               <div class="col --12@xs --3@md">
-                <div class="col-content">3</div>
+                <div class="col-content +equal">3<br>----</div>
               </div>
               <div class="col --12@xs --3@md">
-                <div class="col-content">3<br>----<br>-------<br>----<br>-------</div>
+                <div class="col-content +equal">3<br>----<br>-------<br>----<br>-------</div>
               </div>
               <div class="col --12@xs --3@md">
-                <div class="col-content">3<br>----<br>-------</div>
+                <div class="col-content +equal">3<br>----<br>-------</div>
               </div>
               <div class="col --12@xs --3@md">
-                <div class="col-content">3</div>
+                <div class="col-content +equal">3<br>----</div>
               </div>
             </div>
           </section>
         </div>
       </div>
       <div class="col --12@xs --3@md">
-        <div class="col-content +equal">3 (.equal-height)</div>
+        <div class="col-content +equal">3 (+equal on element sets height to match heighest element in a row)</div>
       </div>
     </div>
     <div class="row">
