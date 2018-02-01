@@ -52,8 +52,8 @@
   <header class="k_section__header">Positioning</header>
   <div class="row">
     <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md border--teal +noshadow">
-        <p class="text-style-block text--blue-dark">Flexbox Vertical Positioning</p>
+      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+        <p class="text-style-block">Flexbox Vertical Positioning</p>
         <p>Set vertical positioning on flexbox elements.</p>
         <ul class="fs--sm">
           <li><code>+equal</code> <i>sets element to height of heighest sibling</i></li>
@@ -64,8 +64,8 @@
     </div>
 
     <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md border--teal +noshadow">
-        <p class="text-style-block text--blue-dark">Responsive Floats</p>
+      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+        <p class="text-style-block">Responsive Floats</p>
         <p>Set floats by breakpoint.</p>
         <ul class="fs--sm">
           <li><code>f--l@md</code> <b>Left</b>: <i>float left at medium breakpoint</i></li>
@@ -76,8 +76,8 @@
     </div>
 
     <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md border--teal +noshadow">
-        <p class="text-style-block text--blue-dark">Responsive Flexbox Ordering</p>
+      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+        <p class="text-style-block">Responsive Flexbox Ordering</p>
         <p>Responsively set display order of responsive elements.</p>
         <ul class="fs--sm">
           <li>(default order is defined by markup)</li>
@@ -89,8 +89,8 @@
     </div>
 
     <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md border--teal +noshadow">
-        <p class="text-style-block text--blue-dark">Sticky</p>
+      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+        <p class="text-style-block">Sticky</p>
         <p>Set an element to be sticky</p>
         <ul class="fs--sm">
           <li><code>--sticky</code></li>
@@ -103,16 +103,55 @@
 <section class="section">
   <header class="k_section__header">Typography</header>
   <div class="row">
-    <div class="col --12@xs p--y-2@xs">
-      <ul>
-        <li>Font Sizes</li>
-        <li>Font Styles and Weights</li>
-        <li>List Styles</li>
-        <li>Text Alignment</li>
-      </ul>
-      <p class="fs--sm"><i>See <a href="./?part=typography">Typography</a> page for more examples.</i></p>
+    <div class="col --12@xs --6@md">
+      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+        <p class="text-style-block">Font Sizes</p>
+        <p>Override a text element's size with this...</p>
+        <ul class="fs--sm">
+          <li>blah</li>
+          <li>blah</li>
+          <li>blah</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col --12@xs --6@md">
+      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+        <p class="text-style-block">Font Styles and Weights</p>
+        <p>Override a text element's style and/or weight with these...</p>
+        <ul class="fs--sm">
+          <li>blah</li>
+          <li>blah</li>
+          <li>blah</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col --12@xs --6@md">
+      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+        <p class="text-style-block">List Styles</p>
+        <p>Specify a list style with these...</p>
+        <ul class="fs--sm">
+          <li>blah</li>
+          <li>blah</li>
+          <li>blah</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col --12@xs --6@md">
+      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+        <p class="text-style-block">Text Alignment</p>
+        <p>Override a text element's alignment</p>
+        <ul class="fs--sm">
+          <li>blah</li>
+          <li>blah</li>
+          <li>blah</li>
+        </ul>
+      </div>
     </div>
   </div>
+  <p class="fs--sm"><i>See <a href="./?part=typography">Typography</a> page for more examples.</i></p>
 </section>
 <section class="section">
   <header class="k_section__header">Color, Images, Shadows</header>
