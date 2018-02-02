@@ -170,3 +170,81 @@
     </div>
   </div>
 </section>
+
+<!-- Profile Variant -->
+<section class="section">
+  <header class="k_section__header">Profile Variant</header>
+  <div class="alert bg--gray-100 border--gray-700">
+    <div class="__body">
+      <p class="fs--sm">Makes media objects within a row equal height. Padding should be applied in the column's custom classes on the Wordpress backend.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
+      <div class="media --profile">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">Firstname Lastname</h4>
+            <p class="__copy">Short Job Title</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
+      <div class="media --profile">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">Dr. Firstname Lastname</h4>
+            <p class="__copy">Director of Self-Importance, Benevolence and Faux-Philanthopy; Full-Time Adjunct Professor and Research Fellow of Self Interest and Unnecessarily Long Job Titles</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
+      <div class="media --profile">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">Firstname M. Lastname</h4>
+            <p class="__copy">Assistant Professor of Something Requiring a Slightly Longer Title Than Others</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
+      <div class="media --profile">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">Firstname M. Lastname</h4>
+            <p class="__copy">Assistant Professor of Something Requiring a Slightly Longer Title Than Others</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
+      <div class="media --profile">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">Firstname Lastname</h4>
+            <p class="__copy">Short Job Title</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
+      <div class="media --profile">
+        <a class="__link" href="#">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h4 class="__title">Firstname M. Lastname</h4>
+            <p class="__copy">Assistant Professor of Something Requiring a Slightly Longer Title Than Others</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

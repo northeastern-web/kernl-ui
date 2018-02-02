@@ -95,6 +95,15 @@
       margin-left: 1rem;
     }
   }
+
+  /* Profile/Contacts Variant */
+  &.\--profile {
+    height: 100%;
+
+    .__link {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .list-group.\+media {
