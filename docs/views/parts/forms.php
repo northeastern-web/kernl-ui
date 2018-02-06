@@ -46,7 +46,7 @@
         <div class="__group">
           <label for="exampleInputFile">File input</label>
           <input type="file" class="__control __control--file" id="exampleInputFile" aria-describedby="fileHelp">
-          <small id="fileHelp" class="text--muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+          <small id="fileHelp" class="tc--gray-400">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
         </div>
         <fieldset class="__group">
           <legend>Radio buttons</legend>

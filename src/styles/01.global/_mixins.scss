@@ -196,6 +196,14 @@
         }
       }
 
+      // for one-fifth-width columns
+      @for $i from 1 through 5 {
+        .#{$col-prefix}-20\@#{$infix} {
+          flex-basis: 20%;
+          max-width: 20%;
+        }
+      }
+
       // `$columns - 1` because offsetting by the width of an entire row isn't possible
       @for $i from 0 through ($columns - 1) {
         @if not ($infix == "" and $i == 0) { // Avoid emitting useless .--offset-0@xs
@@ -362,8 +370,8 @@
 
 @mixin get_component($component, $color, $color_hover, $color_grade: false, $color_text: null) {
   @if $component == 'bg' { @include bg_variant($color, $color_hover, $color_text); }
-  @if $component == 'border' { @include border_variant($color, $color_hover, $color_text); }
-  @if $component == 'text' { @include text_variant($color); }
+  @if $component == 'bc' { @include border_variant($color, $color_hover, $color_text); }
+  @if $component == 'tc' { @include text_variant($color); }
 }
 
 @mixin generate_colors($component, $palette_collection: $palette) {

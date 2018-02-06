@@ -26,8 +26,8 @@ $k = 0;
 $l = 0;
 ?>
 
-<section class="section">
-  <header class="k_section__header">Color Palette</header>
+<section class="section mb--2@xs mb--3@md">
+  <header class="k_section__header">Palette Generator/Color Combination Tool</header>
   <div class="row">
     <div class="col --12@xs --6@md">
       <nav class="nav --tabbed k_color-nav">
@@ -63,113 +63,114 @@ $l = 0;
       <?php $l++; endforeach; ?>
     </div>
   </div>
+</section>
 
-  <div class="pb--1@xs">
-    <!-- Black and Red -->
-    <div class="row color-cell">
-      <div class="col --12@xs --6@md">
-        <div class="bg--black"><span class="hex-color">#000000</span> Black</div>
-      </div>
-      <div class="col --12@xs --6@md">
-        <div class="bg--red"><span class="hex-color">#cc0000</span> Red</div>
-      </div>
+<section class="section">
+  <header class="k_section__header">Color Palette</header>
+  <!-- Black and Red -->
+  <div class="row color-cell">
+    <div class="col --12@xs --6@md">
+      <div class="bg--black"><span class="hex-color">#000000</span> Black</div>
     </div>
-    <!-- Blue, Teal, Green -->
-    <div class="row color-cell">
-      <div class="col --12@xs --4@md">
-        <div class="bg--blue-dark"><span class="hex-color">#2e4962</span> Dark Blue</div>
-      </div>
-      <div class="col --12@xs --4@md">
-        <div class="bg--teal"><span class="hex-color">#2e9aa9</span> Teal <span class="fw--n">*</span></div>
-      </div>
-      <div class="col --12@xs --4@md">
-        <div class="bg--green"><span class="hex-color">#aebf37</span> Green</div>
-      </div>
+    <div class="col --12@xs --6@md">
+      <div class="bg--red"><span class="hex-color">#cc0000</span> Red</div>
     </div>
-    <!-- Light Blue, Light Teal, Light Green -->
-    <div class="row color-cell">
-      <div class="col --12@xs --4@md">
-        <div class="bg--blue-light"><span class="hex-color">#bbd1ec</span> Light Blue <span class="fw--n">**</span></div>
-      </div>
-      <div class="col --12@xs --4@md">
-        <div class="bg--teal-light"><span class="hex-color">#aed7db</span> Light Teal <span class="fw--n">*</span></div>
-      </div>
-      <div class="col --12@xs --4@md">
-        <div class="bg--green-light"><span class="hex-color">#d5e48e</span> Light Green <span class="fw--n">**</span></div>
-      </div>
-    </div>
-    <!-- Purple, Orange, Yellow  -->
-    <div class="row color-cell">
-      <div class="col --12@xs --4@md">
-        <div class="bg--purple"><span class="hex-color">#824091</span> Purple</div>
-      </div>
-      <div class="col --12@xs --4@md">
-        <div class="bg--orange"><span class="hex-color">#e25734</span> Orange</div>
-      </div>
-      <div class="col --12@xs --4@md">
-        <div class="bg--yellow"><span class="hex-color">#ffc50b</span> Yellow</div>
-      </div>
-    </div>
-    <!-- Grays -->
-    <div class="row color-cell">
-      <div class="col --12@xs --3@md">
-        <div class="bg--gray"><span class="hex-color">#58595b</span> Gray <span class="fw--n">*</span></div>
-      </div>
-      <div class="col --12@xs --3@md">
-        <div class="bg--gray-light"><span class="hex-color">#7b7778</span> Light Gray</div>
-      </div>
-      <div class="col --12@xs --3@md">
-        <div class="bg--beige"><span class="hex-color">#ebe4d4</span> Beige</div>
-      </div>
-      <div class="col --12@xs --3@md">
-        <div class="bg--beige-light"><span class="hex-color">#f5f4f0</span> Light Beige</div>
-      </div>
-    </div>
-    <!-- Neutral Grays -->
-    <div class="row --nogutters color-cell">
-      <div class="col --4@xs --1@lg">
-        <div class="bg--black"><span class="hex-color">#000000</span><br>Black</div>
-      </div>
-      <div class="col --4@xs --1@lg">
-        <div class="bg--gray-900"><span class="hex-color">#1a1a1a</span><br>Gray 900</div>
-      </div>
-      <div class="col --4@xs --1@lg">
-        <div class="bg--gray-800"><span class="hex-color">#333333</span><br>Gray 800</div>
-      </div>
-      <div class="col --4@xs --1@lg">
-        <div class="bg--gray-700"><span class="hex-color">#58595b</span><br>Gray 700</div>
-      </div>
-      <div class="col --4@xs --1@lg">
-        <div class="bg--gray-600"><span class="hex-color">#666666</span><br>Gray 600</div>
-      </div>
-      <div class="col --4@xs --1@lg">
-        <div class="bg--gray-500"><span class="hex-color">#7b7778</span><br>Gray 500</div>
-      </div>
-      <div class="col --4@xs --1@lg">
-        <div class="bg--gray-400"><span class="hex-color">#969696</span><br>Gray 400</div>
-      </div>
-      <div class="col --4@xs --1@lg">
-        <div class="bg--gray-300"><span class="hex-color">#b5b5b5</span><br>Gray 300</div>
-      </div>
-      <div class="col --4@xs --1@lg">
-        <div class="bg--gray-200"><span class="hex-color">#d0d0d0</span><br>Gray 200</div>
-      </div>
-      <div class="col --4@xs --1@lg">
-        <div class="bg--gray-100"><span class="hex-color">#efefef</span><br>Gray 100</div>
-      </div>
-      <div class="col --4@xs --1@lg">
-        <div class="bg--gray-50"><span class="hex-color">#f7f7f7</span><br>Gray 50</div>
-      </div>
-      <div class="col --4@xs --1@lg">
-        <div class="bg--white"><span class="hex-color">#ffffff</span><br>White</div>
-      </div>
-    </div>
-
-    <!-- <div class="row">
-      <div class="col --12@xs">
-        <small>* Created by PODS to augment the 2017 NU brand colors.</small><br>
-        <small>** Very slightly modified by PODS from the 2017 NU brand colors.</small>
-      </div>
-    </div> -->
   </div>
+  <!-- Blue, Teal, Green -->
+  <div class="row color-cell">
+    <div class="col --12@xs --4@md">
+      <div class="bg--blue-dark"><span class="hex-color">#2e4962</span> Dark Blue</div>
+    </div>
+    <div class="col --12@xs --4@md">
+      <div class="bg--teal"><span class="hex-color">#2e9aa9</span> Teal <span class="fw--n">*</span></div>
+    </div>
+    <div class="col --12@xs --4@md">
+      <div class="bg--green"><span class="hex-color">#aebf37</span> Green</div>
+    </div>
+  </div>
+  <!-- Light Blue, Light Teal, Light Green -->
+  <div class="row color-cell">
+    <div class="col --12@xs --4@md">
+      <div class="bg--blue-light"><span class="hex-color">#bbd1ec</span> Light Blue <span class="fw--n">**</span></div>
+    </div>
+    <div class="col --12@xs --4@md">
+      <div class="bg--teal-light"><span class="hex-color">#aed7db</span> Light Teal <span class="fw--n">*</span></div>
+    </div>
+    <div class="col --12@xs --4@md">
+      <div class="bg--green-light"><span class="hex-color">#d5e48e</span> Light Green <span class="fw--n">**</span></div>
+    </div>
+  </div>
+  <!-- Purple, Orange, Yellow  -->
+  <div class="row color-cell">
+    <div class="col --12@xs --4@md">
+      <div class="bg--purple"><span class="hex-color">#824091</span> Purple</div>
+    </div>
+    <div class="col --12@xs --4@md">
+      <div class="bg--orange"><span class="hex-color">#e25734</span> Orange</div>
+    </div>
+    <div class="col --12@xs --4@md">
+      <div class="bg--yellow"><span class="hex-color">#ffc50b</span> Yellow</div>
+    </div>
+  </div>
+  <!-- Grays -->
+  <div class="row color-cell">
+    <div class="col --12@xs --3@md">
+      <div class="bg--gray"><span class="hex-color">#58595b</span> Gray <span class="fw--n">*</span></div>
+    </div>
+    <div class="col --12@xs --3@md">
+      <div class="bg--gray-light"><span class="hex-color">#7b7778</span> Light Gray</div>
+    </div>
+    <div class="col --12@xs --3@md">
+      <div class="bg--beige"><span class="hex-color">#ebe4d4</span> Beige</div>
+    </div>
+    <div class="col --12@xs --3@md">
+      <div class="bg--beige-light"><span class="hex-color">#f5f4f0</span> Light Beige</div>
+    </div>
+  </div>
+  <!-- Neutral Grays -->
+  <div class="row --nogutters color-cell">
+    <div class="col --4@xs --1@lg">
+      <div class="bg--black"><span class="hex-color">#000000</span><br>Black</div>
+    </div>
+    <div class="col --4@xs --1@lg">
+      <div class="bg--gray-900"><span class="hex-color">#1a1a1a</span><br>Gray 900</div>
+    </div>
+    <div class="col --4@xs --1@lg">
+      <div class="bg--gray-800"><span class="hex-color">#333333</span><br>Gray 800</div>
+    </div>
+    <div class="col --4@xs --1@lg">
+      <div class="bg--gray-700"><span class="hex-color">#58595b</span><br>Gray 700</div>
+    </div>
+    <div class="col --4@xs --1@lg">
+      <div class="bg--gray-600"><span class="hex-color">#666666</span><br>Gray 600</div>
+    </div>
+    <div class="col --4@xs --1@lg">
+      <div class="bg--gray-500"><span class="hex-color">#7b7778</span><br>Gray 500</div>
+    </div>
+    <div class="col --4@xs --1@lg">
+      <div class="bg--gray-400"><span class="hex-color">#969696</span><br>Gray 400</div>
+    </div>
+    <div class="col --4@xs --1@lg">
+      <div class="bg--gray-300"><span class="hex-color">#b5b5b5</span><br>Gray 300</div>
+    </div>
+    <div class="col --4@xs --1@lg">
+      <div class="bg--gray-200"><span class="hex-color">#d0d0d0</span><br>Gray 200</div>
+    </div>
+    <div class="col --4@xs --1@lg">
+      <div class="bg--gray-100"><span class="hex-color">#efefef</span><br>Gray 100</div>
+    </div>
+    <div class="col --4@xs --1@lg">
+      <div class="bg--gray-50"><span class="hex-color">#f7f7f7</span><br>Gray 50</div>
+    </div>
+    <div class="col --4@xs --1@lg">
+      <div class="bg--white"><span class="hex-color">#ffffff</span><br>White</div>
+    </div>
+  </div>
+
+  <!-- <div class="row">
+    <div class="col --12@xs">
+      <small>* Created by PODS to augment the 2017 NU brand colors.</small><br>
+      <small>** Very slightly modified by PODS from the 2017 NU brand colors.</small>
+    </div>
+  </div> -->
 </section>

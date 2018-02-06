@@ -19,11 +19,11 @@ function listgroup($classes) {
           <i data-feather="alert-octagon"></i>
           <a href="#"><b>Lorem ipsum dolor</b>: sit amet do blandit tempus porttitor</a></div>
         <div class="__item">
-          <i data-feather="command" class="text--green"></i>
+          <i data-feather="command" class="tc--green"></i>
           <a href="#"><b>Lorem ipsum</b>: dolor sit amet, Cras justo odio, dapibus in, faucibus tempus porttitor consectetur</a>
         </div>
         <div class="__item">
-          <i data-feather="crosshair" class="text--purple"></i>
+          <i data-feather="crosshair" class="tc--purple"></i>
           <a href="#"><b>Maecenas</b>: Cras justo odio, dapibus in, faucibus</a>
         </div>
         <div class="__item">
@@ -31,7 +31,7 @@ function listgroup($classes) {
           <a href="#"><b>Lorem ipsum</b>: dolor sit amet, consectetur mollis interdum</a>
         </div>
         <div class="__item">
-          <i data-feather="life-buoy" class="text--red"></i>
+          <i data-feather="life-buoy" class="tc--red"></i>
           <a href="#"><b>Lorem ipsum dolor</b>: sit amet do eiusmod blandit porttitor</a>
         </div>
       </div>

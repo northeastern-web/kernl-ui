@@ -43,7 +43,7 @@ figure out --middle with a heading.
     </div>
 
     <div class="col --12@xs --6@sm --4@lg --2@xl">
-      <article class="card --tile border--teal +noshadow">
+      <article class="card --tile bc--teal +noshadow">
         <a href="#" class="__link">
           <div class="__body">
             <h2 class="__title">Outlined Tile Card</h2>

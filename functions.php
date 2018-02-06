@@ -7,10 +7,11 @@ function getKernlFiles() {
   $dir = new DirectoryIterator(dirname(__FILE__).'/docs/views/parts');
   $files = [];
   foreach ($dir as $fileinfo) {
-    if (!$fileinfo->isDot()) {
+    if (!$fileinfo->isDot() && $fileinfo->getFilename() != 'cards-old.php') {
       $files[] = preg_replace("/(.+)\.php$/", "$1", $fileinfo->getFilename());
     }
   }
+  asort($files);
   return $files;
 }
 

@@ -2,12 +2,9 @@
 // Positioning trumps
 //
 
-/* Flexbox vertical positioning */
-.\+equal { height: 100%; }
-.\+middle { align-items: center; }
-.\+bottom { align-items: flex-end; }
+//
+// Responsive floats
 
-/* Responsive floats */
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include mqbp-up($breakpoint) {
     .f--l\@#{$breakpoint} {
@@ -24,7 +21,20 @@
   }
 }
 
-.\--sticky {
+
+//
+// Position
+
+.pos--relative { position: relative; }
+.pos--sticky {
   position: sticky;
   top: 1rem;
 }
+
+
+//
+// Flexbox vertical positioning
+
+.\+equal { height: 100%; } // siblings
+.\+middle { align-items: center; } // 
+.\+bottom { align-items: flex-end; }
