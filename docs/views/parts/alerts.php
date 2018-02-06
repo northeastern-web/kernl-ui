@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <div class="alert border--red">
+      <div class="alert bc--red">
         <div class="__body">
           <div class="__excerpt">
             <b>Alert Border, <i>no surrounding href</i></b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Here's an <a href="#">inline link</a>.

@@ -346,35 +346,44 @@ p, li, td, th, dt, dd {
 // Colors 2018
 //
 
-.k_color-nav {
+.k_color-nav.nav.\--tabbed {
+  .__list {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+  }
+
   .__item {
-    margin-right: 0.25rem;
+    margin-right: 1px;
+    flex: 1;
+    height: 2rem;
   }
 
   .__link {
-    border: 0 none !important;
+    background-color: transparent;
     text-indent: -9999px;
-    padding: 0 !important;
+    padding: 0;
     height: 1rem;
-    width: 1rem;
-    border-radius: 1rem;
-    opacity: 0.5;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
     transition:
-      opacity 0.2s ease,
       height 0.2s ease,
-      width 0.2s ease !important;
+      margin-top 0.2s ease,
+      margin-bottom 0.2s ease;
 
     &:hover {
-      opacity: 1.0;
-      height: 1.25rem;
-      width: 1.25rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 2rem;
     }
 
     &.active {
-      opacity: 1.0;
-      height: 1.25rem;
-      width: 1.25rem;
-      border: 0 none !important;
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 2rem;
+      border: 0 none;
     }
   }
 }

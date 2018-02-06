@@ -12,7 +12,7 @@ $spacing: (
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include mqbp-up($breakpoint) {
     @each $selector, $property in $spacing {
-      $size: 15;
+      $size: 20;
 
       @while $size >= 0 { // loop through sizes
 
@@ -20,13 +20,13 @@ $spacing: (
           .#{$selector}a--#{$size}\@#{$breakpoint} { #{$property}:         #{$size}rem !important; }
           .#{$selector}a--#{$size}h\@#{$breakpoint} { #{$property}:        #{($size+.5)}rem !important; }
           .#{$selector}t--#{$size}\@#{$breakpoint} { #{$property}-top:     #{$size}rem !important; }
-          .#{$selector}t--#{$size}h\@#{$breakpoint} { #{$property}-top:        #{($size+.5)}rem !important; }
+          .#{$selector}t--#{$size}h\@#{$breakpoint} { #{$property}-top:    #{($size+.5)}rem !important; }
           .#{$selector}r--#{$size}\@#{$breakpoint} { #{$property}-right:   #{$size}rem !important; }
-          .#{$selector}r--#{$size}h\@#{$breakpoint} { #{$property}-right:        #{($size+.5)}rem !important; }
+          .#{$selector}r--#{$size}h\@#{$breakpoint} { #{$property}-right:  #{($size+.5)}rem !important; }
           .#{$selector}b--#{$size}\@#{$breakpoint} { #{$property}-bottom:  #{$size}rem !important; }
-          .#{$selector}b--#{$size}h\@#{$breakpoint} { #{$property}-bottom:        #{($size+.5)}rem !important; }
+          .#{$selector}b--#{$size}h\@#{$breakpoint} { #{$property}-bottom: #{($size+.5)}rem !important; }
           .#{$selector}l--#{$size}\@#{$breakpoint} { #{$property}-left:    #{$size}rem !important; }
-          .#{$selector}l--#{$size}h\@#{$breakpoint} { #{$property}-left:        #{($size+.5)}rem !important; }
+          .#{$selector}l--#{$size}h\@#{$breakpoint} { #{$property}-left:   #{($size+.5)}rem !important; }
           .#{$selector}x--#{$size}\@#{$breakpoint} {
             #{$property}-right:  #{$size}rem !important;
             #{$property}-left:   #{$size}rem !important;

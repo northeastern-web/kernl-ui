@@ -35,7 +35,10 @@
 
   > div,
   > a,
-  > li { @extend .__item; }
+  > li {
+    @extend .__item;
+    margin-bottom: 0;
+  }
 
   a { transition: all 0.3s ease-out; }
 
