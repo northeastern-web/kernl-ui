@@ -10,7 +10,7 @@
 <section class="section --contain">
   <div class="row">
     <div class="col --12@xs">
-      <p class="fs--lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
+      <p class="fs--lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="bg--beige"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
       <ul class="ls--none fs--sm">
         <li>15px base font-size (<code>xs</code>)</li>
         <li>16px base font-size (<code>sm</code>, <code>md</code>, and <code>lg</code>)</li>
@@ -29,7 +29,7 @@
   <div class="row">
     <div class="col --12@xs">
       <h2>Here is a Heading Two <span class="show-font-size">(<span class="element-font-size"></span> @ 1.88rem)</span></h2>
-      <p class="fs--lead">This is a lead paragraph <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="text--highlight"><span class="html-font-size"></span>-pixel html base</span></p>
+      <p class="fs--lead">This is a lead paragraph <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="bg--beige"><span class="html-font-size"></span>-pixel html base</span></p>
       <p>Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
       <h3>Heading Three and Listy Lists <span class="show-font-size">(<span class="element-font-size"></span> @ 1.53rem)</span></h3>
       <h4>A Heading Four You</h4>
@@ -114,7 +114,7 @@
       <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
       <hr>
       <h4>Definition List</h4>
-      <div class="alert border--blue-dark">
+      <div class="alert bc--blue-dark">
         <div class="__body">
           <p>Works like the grid. Elements <code>dt</code> and <code>dd</code>, without any classes, default to 1/4 and 3/4 widths, respectively, at all breakpoints. Can be overridden individually just by adding grid column classes: <code>--&lt;value&gt;@&lt;breakpoint&gt;</code>.</p>
         </div>
@@ -381,7 +381,7 @@
       </blockquote>
     </div>
     <div class="col --12@xs --4@lg">
-      <blockquote class="bg--blue-dark text--white">
+      <blockquote class="bg--blue-dark tc--white">
         Blockquote says a colored background is nice sometimes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </blockquote>
     </div>

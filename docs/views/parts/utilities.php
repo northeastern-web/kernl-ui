@@ -2,7 +2,7 @@
   <header class="k_section__header">Spacing</header>
   <p>Add spacing to an element with margin (m), padding (p) and offset (o) utilities.</p>
   <p class="fs--sm"><b>Pattern</b>: <code class="mr--0h@xs">&lt;prefix&gt;&lt;location&gt;--&lt;size&gt;@&lt;breakpoint&gt;</code></p>
-  <div class="pa--1@xs mb--1@xs border--gray-800">
+  <div class="pa--1@xs mb--1@xs bc--gray-800">
     <ul class="ls--inline fs--sm mt--0h@xs mb--0h@xs">
       <li><b>Prefixes</b>:</li>
       <li><code>m</code> <i class="fs--xs">margin</i></li>
@@ -50,7 +50,7 @@
   <header class="k_section__header">Positioning</header>
   <div class="row">
     <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+      <div class="pa--1@xs mb--1@xs mb--2@md bc--gray-800">
         <p class="text-style-block">Flexbox Vertical Positioning</p>
         <p>Set vertical positioning on flexbox elements.</p>
         <ul class="fs--sm">
@@ -62,7 +62,7 @@
     </div>
 
     <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+      <div class="pa--1@xs mb--1@xs mb--2@md bc--gray-800">
         <p class="text-style-block">Responsive Floats</p>
         <p>Set floats by breakpoint.</p>
         <ul class="fs--sm">
@@ -74,7 +74,7 @@
     </div>
 
     <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+      <div class="pa--1@xs mb--1@xs mb--2@md bc--gray-800">
         <p class="text-style-block">Responsive Flexbox Ordering</p>
         <p>Responsively set display order of responsive elements.</p>
         <ul class="fs--sm">
@@ -87,7 +87,7 @@
     </div>
 
     <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md border--gray-800">
+      <div class="pa--1@xs mb--1@xs mb--2@md bc--gray-800">
         <p class="text-style-block">Sticky</p>
         <p>Set an element to be sticky</p>
         <ul class="fs--sm">
@@ -102,7 +102,7 @@
   <header class="k_section__header">Typography</header>
   <div class="row">
     <div class="col --12@xs --6@md mb--1@xs mb--2@md">
-      <div class="pa--1@xs mb--1@xs border--gray-800 +equal">
+      <div class="pa--1@xs mb--1@xs bc--gray-800 +equal">
         <p class="text-style-block">Font Sizes</p>
         <p>Override a text element's size with the font-size (fs) utility:</p>
         <ul class="fs--sm">
@@ -115,7 +115,7 @@
     </div>
 
     <div class="col --12@xs --6@md mb--1@xs mb--2@md">
-      <div class="pa--1@xs mb--1@xs border--gray-800 +equal">
+      <div class="pa--1@xs mb--1@xs bc--gray-800 +equal">
         <p class="text-style-block">Font Styles and Weights</p>
         <p>Override a text's font style (fs) and/or weight (fw):</p>
         <ul class="fs--sm">
@@ -126,7 +126,7 @@
     </div>
 
     <div class="col --12@xs --6@md mb--1@xs mb--2@md">
-      <div class="pa--1@xs mb--1@xs border--gray-800 +equal">
+      <div class="pa--1@xs mb--1@xs bc--gray-800 +equal">
         <p class="text-style-block">List Styles</p>
         <p>Specify a list style with these...</p>
         <ul class="fs--sm">
@@ -138,7 +138,7 @@
     </div>
 
     <div class="col --12@xs --6@md mb--1@xs mb--2@md">
-      <div class="pa--1@xs mb--1@xs border--gray-800 +equal">
+      <div class="pa--1@xs mb--1@xs bc--gray-800 +equal">
         <p class="text-style-block">Text Alignment</p>
         <p>Override a text element's alignment</p>
         <ul class="fs--sm">

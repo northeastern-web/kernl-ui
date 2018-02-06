@@ -370,8 +370,8 @@
 
 @mixin get_component($component, $color, $color_hover, $color_grade: false, $color_text: null) {
   @if $component == 'bg' { @include bg_variant($color, $color_hover, $color_text); }
-  @if $component == 'border' { @include border_variant($color, $color_hover, $color_text); }
-  @if $component == 'text' { @include text_variant($color); }
+  @if $component == 'bc' { @include border_variant($color, $color_hover, $color_text); }
+  @if $component == 'tc' { @include text_variant($color); }
 }
 
 @mixin generate_colors($component, $palette_collection: $palette) {

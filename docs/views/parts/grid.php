@@ -381,7 +381,7 @@
       </div>
     </div>
   </section>
-  <section class="section bg--gray-700 text--gray-100">
+  <section class="section bg--gray-700 tc--gray-100">
     <h3 class="non-col-element text-style-block">Section <small>(with --bg-color option)</small></h3>
     <div class="row">
       <div class="col --12@xs --2@md">
@@ -421,7 +421,7 @@
       </div>
     </div>
   </section>
-  <section class="section bg--gray-700 text--gray-100">
+  <section class="section bg--gray-700 tc--gray-100">
     <h3 class="non-col-element text-style-block">Section <small>(with --bg-color option)</small></h3>
     <div class="row">
       <div class="col --12@xs --4@md">
@@ -463,7 +463,7 @@
     </div>
     <div class="row +middle">
       <div class="col --12@xs --8@md">
-        <section class="section bg--gray-700 text--gray-100 pa--1@xs">
+        <section class="section bg--gray-700 tc--gray-100 pa--1@xs">
           <h3 class="non-col-element text-style-block">Nested Section <small>(with --bg-color option)</small></h3>
           <div class="row">
             <div class="col --12@xs --4@md">
@@ -517,9 +517,9 @@
       </div>
     </div>
   </section>
-  <section class="section bg--gray-700 text--gray-100">
+  <section class="section bg--gray-700 tc--gray-100">
     <h3 class="non-col-element text-style-block mb--1@xs">Section <small>(with --bg-color option)</small></h3>
-    <div class="section  bg--gray-800 text--gray-100 pa--1@xs">
+    <div class="section  bg--gray-800 tc--gray-100 pa--1@xs">
       <h3 class="non-col-element text-style-block">Nested Section <small>(with --bg-color option)</small></h3>
       <div class="row">
         <div class="col --12@xs --11@md">

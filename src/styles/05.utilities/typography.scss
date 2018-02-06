@@ -50,7 +50,7 @@
 .tt--u    { text-transform: uppercase !important; }
 .tt--c    { text-transform: capitalize !important; }
 .tt--caps {
-  // font-size: 90%;
+  font-size: 92%;
   text-transform: uppercase;
   letter-spacing: 0.03rem;
 }
@@ -58,8 +58,11 @@
 
 //
 // Tables
-
 .\+th--sm th {
   @include type-xs();
   color: rgba($type-color, 0.65);
 }
+
+//
+// Colors
+@include generate_colors('tc'); // run generator for type colors

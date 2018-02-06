@@ -174,7 +174,7 @@
 <!-- Profile Variant -->
 <section class="section">
   <header class="k_section__header">Profile Variant</header>
-  <div class="alert bg--gray-100 border--gray-700">
+  <div class="alert bg--gray-100 bc--gray-700">
     <div class="__body">
       <p class="fs--sm">Makes media objects within a row equal height. Padding should be applied in the column's custom classes on the Wordpress backend.</p>
     </div>

@@ -56,11 +56,11 @@
     </div>
     <div class="col --12@xs --6@md --3@xl">
       <p class="text-style-block">White Border Buttons</p>
-      <p><a class="btn border--white --xs" data-component="button" href="#">White Border xs</a></p>
-      <p><a class="btn border--white --sm" data-component="button" href="#">White Border sm</a></p>
-      <p><a class="btn border--white --pill" data-component="button" href="#">Pill White Border</a></p>
-      <p><a class="btn border--white --lg" data-component="button" href="#">White Border lg</a></p>
-      <p><a class="btn border--white --lg --block" data-component="button" href="#">Block White Border lg</a></p>
+      <p><a class="btn bc--white --xs" data-component="button" href="#">White Border xs</a></p>
+      <p><a class="btn bc--white --sm" data-component="button" href="#">White Border sm</a></p>
+      <p><a class="btn bc--white --pill" data-component="button" href="#">Pill White Border</a></p>
+      <p><a class="btn bc--white --lg" data-component="button" href="#">White Border lg</a></p>
+      <p><a class="btn bc--white --lg --block" data-component="button" href="#">Block White Border lg</a></p>
     </div>
   </div>
 </section>
@@ -69,19 +69,19 @@
   <div class="row">
     <div class="col --12@xs --3@md">
       <p><a class="btn bg--gray-500" data-component="button" href="#">Gray-500 Button</a></p>
-      <p><a class="btn border--gray-500" data-component="button" href="#">Gray-500 Button Border</a></p>
+      <p><a class="btn bc--gray-500" data-component="button" href="#">Gray-500 Button Border</a></p>
     </div>
     <div class="col --12@xs --3@md">
       <p><a class="btn bg--red" data-component="button" href="#">Red Button</a></p>
-      <p><a class="btn border--red" data-component="button" href="#">Red Button Border</a></p>
+      <p><a class="btn bc--red" data-component="button" href="#">Red Button Border</a></p>
     </div>
     <div class="col --12@xs --3@md">
       <p><a class="btn bg--blue" data-component="button" href="#">Blue Button</a></p>
-      <p><a class="btn border--blue" data-component="button" href="#">Blue Button Border</a></p>
+      <p><a class="btn bc--blue" data-component="button" href="#">Blue Button Border</a></p>
     </div>
     <div class="col --12@xs --3@md">
       <p><a class="btn bg--black" data-component="button" href="#">Black Button</a></p>
-      <p><a class="btn border--black" data-component="button" href="#">Black Button Border</a></p>
+      <p><a class="btn bc--black" data-component="button" href="#">Black Button Border</a></p>
     </div>
   </div>
 </section>
