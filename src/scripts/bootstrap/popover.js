@@ -1,14 +1,16 @@
-import $ from 'jquery'
 import Tooltip from './tooltip'
+
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0): popover.js
+ * Bootstrap (v4.0.0-beta): popover.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-const Popover = (($) => {
+const Popover = (() => {
+
+
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -16,28 +18,26 @@ const Popover = (($) => {
    */
 
   const NAME                = 'popover'
-  const VERSION             = '4.0.0'
+  const VERSION             = '4.0.0-beta'
   const DATA_KEY            = 'bs.popover'
   const EVENT_KEY           = `.${DATA_KEY}`
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
   const CLASS_PREFIX        = 'bs-popover'
   const BSCLS_PREFIX_REGEX  = new RegExp(`(^|\\s)${CLASS_PREFIX}\\S+`, 'g')
 
-  const Default = {
-    ...Tooltip.Default,
+  const Default = $.extend({}, Tooltip.Default, {
     placement : 'right',
     trigger   : 'click',
     content   : '',
-    template  : '<div class="popover" role="tooltip">' +
-                '<div class="arrow"></div>' +
-                '<h3 class="popover-header"></h3>' +
-                '<div class="popover-body"></div></div>'
-  }
+    template  : '<div class="popover" role="tooltip">'
+              + '<div class="arrow"></div>'
+              + '<h3 class="popover-header"></h3>'
+              + '<div class="popover-body"></div></div>'
+  })
 
-  const DefaultType = {
-    ...Tooltip.DefaultType,
+  const DefaultType = $.extend({}, Tooltip.DefaultType, {
     content : '(string|element|function)'
-  }
+  })
 
   const ClassName = {
     FADE : 'fade',
@@ -62,6 +62,7 @@ const Popover = (($) => {
     MOUSELEAVE : `mouseleave${EVENT_KEY}`
   }
 
+
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -69,7 +70,9 @@ const Popover = (($) => {
    */
 
   class Popover extends Tooltip {
-    // Getters
+
+
+    // getters
 
     static get VERSION() {
       return VERSION
@@ -99,7 +102,8 @@ const Popover = (($) => {
       return DefaultType
     }
 
-    // Overrides
+
+    // overrides
 
     isWithContent() {
       return this.getTitle() || this._getContent()
@@ -117,22 +121,20 @@ const Popover = (($) => {
     setContent() {
       const $tip = $(this.getTipElement())
 
-      // We use append for html objects to maintain js events
+      // we use append for html objects to maintain js events
       this.setElementContent($tip.find(Selector.TITLE), this.getTitle())
-      let content = this._getContent()
-      if (typeof content === 'function') {
-        content = content.call(this.element)
-      }
-      this.setElementContent($tip.find(Selector.CONTENT), content)
+      this.setElementContent($tip.find(Selector.CONTENT), this._getContent())
 
       $tip.removeClass(`${ClassName.FADE} ${ClassName.SHOW}`)
     }
 
-    // Private
+    // private
 
     _getContent() {
-      return this.element.getAttribute('data-content') ||
-        this.config.content
+      return this.element.getAttribute('data-content')
+        || (typeof this.config.content === 'function' ?
+              this.config.content.call(this.element) :
+              this.config.content)
     }
 
     _cleanTipClass() {
@@ -143,11 +145,12 @@ const Popover = (($) => {
       }
     }
 
-    // Static
+
+    // static
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        let data = $(this).data(DATA_KEY)
+        let data      = $(this).data(DATA_KEY)
         const _config = typeof config === 'object' ? config : null
 
         if (!data && /destroy|hide/.test(config)) {
@@ -161,7 +164,7 @@ const Popover = (($) => {
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
-            throw new TypeError(`No method named "${config}"`)
+            throw new Error(`No method named "${config}"`)
           }
           data[config]()
         }
@@ -169,20 +172,22 @@ const Popover = (($) => {
     }
   }
 
+
   /**
    * ------------------------------------------------------------------------
    * jQuery
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Popover._jQueryInterface
+  $.fn[NAME]             = Popover._jQueryInterface
   $.fn[NAME].Constructor = Popover
-  $.fn[NAME].noConflict = function () {
+  $.fn[NAME].noConflict  = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Popover._jQueryInterface
   }
 
   return Popover
-})($)
+
+})(jQuery)
 
 export default Popover

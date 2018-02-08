@@ -1,13 +1,13 @@
-import $ from 'jquery'
-
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0): button.js
+ * Bootstrap (v4.0.0-beta): button.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
-const Button = (($) => {
+const Button = (() => {
+
+
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -15,7 +15,7 @@ const Button = (($) => {
    */
 
   const NAME                = 'button'
-  const VERSION             = '4.0.0'
+  const VERSION             = '4.0.0-beta'
   const DATA_KEY            = 'bs.button'
   const EVENT_KEY           = `.${DATA_KEY}`
   const DATA_API_KEY        = '.data-api'
@@ -37,9 +37,10 @@ const Button = (($) => {
 
   const Event = {
     CLICK_DATA_API      : `click${EVENT_KEY}${DATA_API_KEY}`,
-    FOCUS_BLUR_DATA_API : `focus${EVENT_KEY}${DATA_API_KEY} ` +
-                            `blur${EVENT_KEY}${DATA_API_KEY}`
+    FOCUS_BLUR_DATA_API : `focus${EVENT_KEY}${DATA_API_KEY} `
+                        + `blur${EVENT_KEY}${DATA_API_KEY}`
   }
+
 
   /**
    * ------------------------------------------------------------------------
@@ -48,22 +49,25 @@ const Button = (($) => {
    */
 
   class Button {
+
     constructor(element) {
       this._element = element
     }
 
-    // Getters
+
+    // getters
 
     static get VERSION() {
       return VERSION
     }
 
-    // Public
+
+    // public
 
     toggle() {
       let triggerChangeEvent = true
       let addAriaPressed = true
-      const rootElement = $(this._element).closest(
+      const rootElement      = $(this._element).closest(
         Selector.DATA_TOGGLE
       )[0]
 
@@ -75,6 +79,7 @@ const Button = (($) => {
             if (input.checked &&
               $(this._element).hasClass(ClassName.ACTIVE)) {
               triggerChangeEvent = false
+
             } else {
               const activeElement = $(rootElement).find(Selector.ACTIVE)[0]
 
@@ -98,6 +103,7 @@ const Button = (($) => {
           input.focus()
           addAriaPressed = false
         }
+
       }
 
       if (addAriaPressed) {
@@ -115,7 +121,8 @@ const Button = (($) => {
       this._element = null
     }
 
-    // Static
+
+    // static
 
     static _jQueryInterface(config) {
       return this.each(function () {
@@ -131,7 +138,9 @@ const Button = (($) => {
         }
       })
     }
+
   }
+
 
   /**
    * ------------------------------------------------------------------------
@@ -156,20 +165,22 @@ const Button = (($) => {
       $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type))
     })
 
+
   /**
    * ------------------------------------------------------------------------
    * jQuery
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Button._jQueryInterface
+  $.fn[NAME]             = Button._jQueryInterface
   $.fn[NAME].Constructor = Button
-  $.fn[NAME].noConflict = function () {
+  $.fn[NAME].noConflict  = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Button._jQueryInterface
   }
 
   return Button
-})($)
+
+})(jQuery)
 
 export default Button
