@@ -25,7 +25,8 @@
 //
 // Position
 
-.pos--relative { position: relative; }
+.pos--relative { position: relative !important; }
+
 .pos--sticky {
   position: sticky;
   top: 1rem;

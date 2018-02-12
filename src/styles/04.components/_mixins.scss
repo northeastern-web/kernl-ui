@@ -109,8 +109,7 @@
 //
 // Accordion mixins
 
-@mixin accordion_variant($color: $type-color, $trigger: $gray-100, $background: transparent) {
-  color: $color;
+@mixin accordion_variant($color: $type-color, $trigger: rgba(0,0,0,0.05), $background: transparent) {
 
   > .__item > .__title {
     background: $trigger;
@@ -122,7 +121,10 @@
     }
   }
 
-  .__copy { background: $background; }
+  .__copy {
+    color: $color;
+    background: $background;
+  }
 }
 
 

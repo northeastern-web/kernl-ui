@@ -142,7 +142,7 @@
         </div>
       </div>
       <div class="col --12@xs --3@md">
-        <div class="col-content --sticky">
+        <div class="col-content pos--sticky">
           3. Sticky
         </div>
       </div>

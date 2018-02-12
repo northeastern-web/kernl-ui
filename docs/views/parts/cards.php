@@ -37,6 +37,7 @@ figure out --middle with a heading.
           <div class="__body">
             <h2 class="__title">Tile Card</h2>
             <p>Basic card with tile variant. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+            <p>Basic card with tile variant. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
           </div>
         </a>
       </article>
@@ -271,7 +272,7 @@ figure out --middle with a heading.
           <div class="__graphic"></div>
           <div class="__header">
             <div class="__column">
-              Issues at Medium +
+              Lorem Header Ipsum
             </div>
           </div>
           <div class="__body">
@@ -287,7 +288,7 @@ figure out --middle with a heading.
         <div class="__graphic"></div>
         <div class="__header">
           <div class="__column">
-            Issues at Medium +
+            Lorem Header Ipsum
           </div>
         </div>
         <div class="__body">
@@ -304,7 +305,7 @@ figure out --middle with a heading.
           <div class="__graphic"></div>
           <div class="__header">
             <div class="__column">
-              Issues at Medium +
+              Lorem Header Ipsum
             </div>
           </div>
           <div class="__body">
@@ -320,7 +321,7 @@ figure out --middle with a heading.
         <div class="__graphic"></div>
         <div class="__header">
           <div class="__column">
-            Issues at Medium +
+            Lorem Header Ipsum
           </div>
         </div>
         <div class="__body">
@@ -331,16 +332,17 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <!-- Nested Cards -->
 
-    <div class="col --12@xs --20@md">
-      <article class="card --extend">
-        <div class="card --tile --overlay --middle fs--d1 mb--0h@xs">
-          <div class="__graphic"></div>
-          <div class="__body">
-            <h2 class="__title">Card-in-a-Card</h2>
-          </div>
+    <!-- Stacked Cards -->
+
+    <div class="col --12@xs --6@sm --20@lg">
+      <div class="card --tile --overlay --middle brbl--0 brbr--0 fs--d1 mb--0@xs">
+        <div class="__graphic"></div>
+        <div class="__body">
+          <h2 class="__title">Card-in-a-Card</h2>
         </div>
+      </div>
+      <div class="card +scroll +list-group brtl--0 brtr--0">
         <div class="__body py--0@xs">
           <ul class="list-group --sm">
             <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
@@ -351,17 +353,17 @@ figure out --middle with a heading.
             <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
           </ul>
         </div>
-      </article>
+      </div>
     </div>
 
-    <div class="col --12@xs --20@md">
-      <article class="card --extend">
-        <div class="card --tile --overlay --middle fs--d1 mb--0h@xs">
-          <div class="__graphic"></div>
-          <div class="__body">
-            <h2 class="__title">Overlay Tile</h2>
-          </div>
+    <div class="col --12@xs --6@sm --20@lg">
+      <div class="card --tile --overlay --middle brbl--0 brbr--0 fs--d1 mb--0@xs">
+        <div class="__graphic"></div>
+        <div class="__body">
+          <h2 class="__title">Overlay Tile</h2>
         </div>
+      </div>
+      <div class="card +scroll +list-group brtl--0 brtr--0">
         <div class="__body py--0@xs">
           <ul class="list-group --sm">
             <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
@@ -371,17 +373,17 @@ figure out --middle with a heading.
             <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
           </ul>
         </div>
-      </article>
+      </div>
     </div>
 
-    <div class="col --12@xs --20@md">
-      <article class="card --extend">
-        <div class="card --tile --overlay --middle fs--d1 mb--0h@xs">
-          <div class="__graphic"></div>
-          <div class="__body">
-            <h2 class="__title">Another Nested Overlay Tile</h2>
-          </div>
+    <div class="col --12@xs --6@sm --20@lg">
+      <div class="card --tile --overlay --middle brbl--0 brbr--0 fs--d1 mb--0@xs">
+        <div class="__graphic"></div>
+        <div class="__body">
+          <h2 class="__title">Another Nested Overlay Tile</h2>
         </div>
+      </div>
+      <div class="card +scroll +list-group brtl--0 brtr--0">
         <div class="__body py--0@xs">
           <ul class="list-group --sm">
             <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
@@ -389,17 +391,17 @@ figure out --middle with a heading.
             <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
           </ul>
         </div>
-      </article>
+      </div>
     </div>
 
-    <div class="col --12@xs --20@md">
-      <article class="card --extend">
-        <div class="card --tile --overlay --middle fs--d1 mb--0h@xs">
-          <div class="__graphic"></div>
-          <div class="__body">
-            <h2 class="__title">Overlay Tile in Another Card</h2>
-          </div>
+    <div class="col --12@xs --6@sm --20@lg">
+      <div class="card --tile --overlay --middle brbl--0 brbr--0 fs--d1 mb--0@xs">
+        <div class="__graphic"></div>
+        <div class="__body">
+          <h2 class="__title">Overlay Tile in Another Card</h2>
         </div>
+      </div>
+      <div class="card +scroll +list-group brtl--0 brtr--0">
         <div class="__body py--0@xs">
           <ul class="list-group --sm">
             <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
@@ -409,17 +411,17 @@ figure out --middle with a heading.
             <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
           </ul>
         </div>
-      </article>
+      </div>
     </div>
 
-    <div class="col --12@xs --20@md">
-      <article class="card --extend">
-        <div class="card --tile --overlay --middle fs--d1 mb--0h@xs">
-          <div class="__graphic"></div>
-          <div class="__body">
-            <h2 class="__title">Overlay Tile</h2>
-          </div>
+    <div class="col --12@xs --6@sm --20@lg">
+      <div class="card --tile --overlay --middle brbl--0 brbr--0 fs--d1 mb--0@xs">
+        <div class="__graphic"></div>
+        <div class="__body">
+          <h2 class="__title">Overlay Tile</h2>
         </div>
+      </div>
+      <div class="card +scroll +list-group brtl--0 brtr--0">
         <div class="__body py--0@xs">
           <ul class="list-group --sm">
             <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
@@ -429,7 +431,7 @@ figure out --middle with a heading.
             <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
           </ul>
         </div>
-      </article>
+      </div>
     </div>
 
   </div>

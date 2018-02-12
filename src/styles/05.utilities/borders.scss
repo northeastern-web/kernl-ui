@@ -25,17 +25,17 @@
 
 // set border radius by corner
 .bra--1 { border-radius: $border_radius; }
-.brtl--1 { border-radius-top-left: $border_radius; }
-.brtr--1 { border-radius-top-right: $border_radius; }
-.brbl--1 { border-radius-bottom-left: $border_radius; }
-.brbr--1 { border-radius-bottom-right: $border_radius; }
+.brtl--1 { border-top-left-radius: $border_radius; }
+.brtr--1 { border-top-right-radius: $border_radius; }
+.brbl--1 { border-bottom-left-radius: $border_radius; }
+.brbr--1 { border-bottom-right-radius: $border_radius; }
 
 // zero out border radius
 .bra--0 { border-radius: 0 }
-.brtl--0 { border-radius-top-left: 0; }
-.brtr--0 { border-radius-top-right: 0; }
-.brbl--0 { border-radius-bottom-left: 0; }
-.brbr--0 { border-radius-bottom-right: 0; }
+.brtl--0 { border-top-left-radius: 0; }
+.brtr--0 { border-top-right-radius: 0; }
+.brbl--0 { border-bottom-left-radius: 0; }
+.brbr--0 { border-bottom-right-radius: 0; }
 
 // turn an element into a circle
 .br--round { border-radius: 1000px; }
