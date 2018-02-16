@@ -30,6 +30,11 @@
 .fw--700  { font-weight: 700 !important; }
 .fw--900  { font-weight: 900 !important; }
 
+// Font Family
+.ff--sans { font-family: $type-sans !important; }
+.ff--slab { font-family: $type-slab !important; }
+.ff--serif { font-family: $type-serif !important; }
+.ff--mono { font-family: $type-mono !important; }
 
 // Alignment
 .ta--l  { text-align: left !important; }

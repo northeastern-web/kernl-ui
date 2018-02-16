@@ -216,7 +216,7 @@
   }
 }
 
-@mixin make-section($gutters: $grid-gutter-widths) {
+@mixin make-section($gutters: $grid-gutter-widths, $container: "contain") {
   position: relative;
   margin-right: auto;
   margin-left: auto;
@@ -224,7 +224,14 @@
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      padding: $gutter;
+
+      @if ($container == "flush") {
+        padding: $gutter;
+      } @elseif ($container == "contain") {
+        padding: $gutter 10%;
+      } @else {
+        padding: $gutter ($gutter * 2);
+      }
     }
   }
 }
@@ -300,15 +307,24 @@
 // Mega menu
 // give megamenu same spacing as masthead;
 // same as make-row, but with padding and full gutter width
-@mixin make-megamenu($gutters: $grid-gutter-widths) {
+@mixin make-megamenu($gutters: $grid-gutter-widths, $container: "contain") {
   display: flex;
   flex-wrap: wrap;
 
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      padding-right: $gutter !important;
-      padding-left:  $gutter !important;
+
+      @if ($container == "flush") {
+        padding-right: $gutter !important;
+        padding-left:  $gutter !important;
+      } @elseif ($container == "contain") {
+        padding-right: 10% !important;
+        padding-left:  10% !important;
+      } @else {
+        padding-right: $gutter * 2 !important;
+        padding-left:  $gutter * 2 !important;
+      }
     }
   }
 }

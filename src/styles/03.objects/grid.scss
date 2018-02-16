@@ -10,7 +10,7 @@
   @include make-section();
 
   &.\--contain {
-    @include make-section();
+    // @include make-section();
 
     @include mqbp-up(lg) {
       padding-left: 6%;
