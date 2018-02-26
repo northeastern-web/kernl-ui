@@ -35,7 +35,7 @@ const Tab = (() => {
 
   const ClassName = {
     DROPDOWN_MENU : 'dropdown-menu',
-    ACTIVE        : 'active',
+    ACTIVE        : '--active',
     DISABLED      : 'disabled',
     FADE          : 'fade',
     SHOW          : 'show'
@@ -44,11 +44,11 @@ const Tab = (() => {
   const Selector = {
     DROPDOWN              : '.dropdown',
     NAV_LIST_GROUP        : '.nav ul, .list-group', // added " ul" -- rmk, 9/20/17
-    ACTIVE                : '.active',
-    ACTIVE_UL             : '> li > .active',
+    ACTIVE                : '.--active',
+    ACTIVE_UL             : '> li > .--active',
     DATA_TOGGLE           : '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
     DROPDOWN_TOGGLE       : '.dropdown-toggle',
-    DROPDOWN_ACTIVE_CHILD : '> .dropdown-menu .active'
+    DROPDOWN_ACTIVE_CHILD : '> .dropdown-menu .--active'
   }
 
 

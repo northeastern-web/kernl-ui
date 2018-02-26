@@ -17,8 +17,8 @@ mix.js('docs/main.js', 'dist/scripts')
   .options({ processCssUrls: false });
 
 mix.browserSync({
-  proxy: 'https://kernl-ui.dev/',
-  host: 'kernl-ui.dev',
+  proxy: 'https://kernl-ui.test/',
+  host: 'kernl-ui.test',
   open: 'external',
   https: true
 });

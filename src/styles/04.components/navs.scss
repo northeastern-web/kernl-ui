@@ -2,8 +2,63 @@
 // Navs
 //
 
-
 .nav {
+  .__list {
+    @include list_unstyled();
+    display: flex;
+    flex-direction: column;
+  }
+
+  .__link {
+    position: relative;
+    display: block;
+    padding: 1.25rem 0.5rem;
+    line-height: 1.25rem;
+    color: $gray;
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background-color: rgba($gray-200, 0.3);
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .__item {
+    border-bottom: 1px solid $gray-200;
+    margin-bottom: 0;
+    padding-top: 0;
+
+    .__list {
+      padding: 0;
+
+      .__link {
+        padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+        border-bottom: none;
+        font-size: $fs-sm;
+        color: $gray-500;
+      }
+
+      .\--active > .__link {
+        font-weight: 400;
+        color: $gray-900;
+      }
+    }
+  }
+
+
+  .\--active {
+    > .__link {
+      font-weight: 700;
+      color: $gray-900;
+      cursor: default;
+
+      &:hover {
+        background-color: inherit;
+      }
+    }
+  }
+
 
   //
   // On-page/interior nav menus
@@ -16,6 +71,12 @@
       transition: all 0.05s ease-in;
     }
 
+    .__item {
+      .__list { margin-bottom: 0.5rem; }
+
+      .__item { border-bottom: 0 none; }
+    }
+
     @include mqbp-up(md) {
       border-top: 1px solid $gray-200;
 
@@ -25,214 +86,70 @@
       }
 
       &.collapse {
-        display: block;
+        display: flex;
       }
     }
-  }
-
-  .__list { @include list_unstyled(); }
-
-  .__item {
-    margin-bottom: 0;
-    padding-top: 0;
-  }
-
-  .__link {
-    display: block;
-    color: inherit;
-    border-left-width: 3px;
-    border-left-style: solid;
-    border-left-color: transparent;
-    transition: background-color 0.15s ease,
-                border-color 0.15s ease;
-
-    &:hover {
-      background-color: rgba($gray-200, 0.3);
-      border-left-color: $gray-300;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    &:active,
-    &:focus {
-      background-color: inherit;
-      border-left-color: transparent;
-    }
-  }
-
-  .__link {
-    padding: 20px 15px 20px 12px;
-    border-bottom: 1px solid $gray-200;
-    font-weight: 600;
-    line-height: 20px;
-  }
-
-
-  //
-  // Modifiers
-
-  .\+children .__list {
-    margin-top: -0.05rem;
-
-    .__item {
-      padding: 0;
-      margin: 0;
-
-      &.\--active > .__link {
-        font-weight: bold;
-        border-left: 3px solid $gray-400;
-        background: #f7f7f7;
-      }
-    }
-
-    .__link {
-      padding: 0.5rem 0.5rem 0.5rem 0.75rem;
-      border-bottom: none;
-      font-size: $fs-sm;
-      font-weight: 400;
-    }
-  }
-
-  .\--active {
-    > .__link,
-    > .__link:hover {
-      background-color: $gray-100;
-      border-left-color: transparent;
-    }
-  }
-
-  .\--parent {
-    padding-bottom: 15px;
-    border-bottom: 1px solid $gray-200;
-
-    &.\--active { background: $gray-100; }
-
-    > .__link { border-bottom: none; }
   }
 
   //
   // Tabs
 
   &.\--tabbed {
-    .__list {
-      margin-bottom: 0;
-      display: block;
-      visibility: visible;
-      height: auto;
-      @include clearfix();
+    .__list { margin-bottom: 0; }
 
-      .__list { display: none; }
-    }
+    .__link {
+      white-space: nowrap;
 
-    .__item {
-      vertical-align: top;
+      &:hover { background: $gray-100; }
 
-      @include mqbp-up(lg) {
-        // was (md), but after about four items, it would wrap.
-        float: left;
+      &.\--active,
+      &.\--active:hover {
+        color: inherit;
+        background: none !important;
+        font-weight: 700;
+        cursor: default;
       }
     }
 
-    .__link {
-      padding: 1rem;
-      color: $gray-500;
-      border-left: 3px solid transparent;
-      font-weight: 400;
-      white-space: nowrap;
+    @include mqbp-up(lg) {
+      .__list { flex-direction: row; }
 
-      @include mqbp-up(md) {
-        border-left: 0 none;
+      .__link {
+        padding: 1rem 1.5rem;
         border-bottom: 3px solid transparent;
         transition: border-bottom 0.25s ease;
       }
 
-      &:hover { background: $gray-100; }
+      .__item {
+        border-bottom: 0 none;
 
-      &.active,
-      &.active:hover,
-      &.active:active,
-      .\+children .\--active,
-      .\+children .\--active:hover,
-      .\+children .\--active:active {
-        color: inherit;
-        border-left: 3px solid $type-link;
-        background: none;
-        font-weight: 700;
-        cursor: default;
-
-        @include mqbp-up(md) {
+        .\--active,
+        .\--active:hover {
           border-left: 0 none;
-          border-bottom: 3px solid $type-link;
-        }
-
-        +.__list {
-          display: block;
-
-          @include mqbp-up(md) {
-            position: absolute;
-            left: 0;
-            @include clearfix();
-          }
-
-          .__item {
-            @include mqbp-up(md) {
-              float: left;
-            }
-          }
-
-          .__link {
-            color: $type-link;
-            border-left: none;
-            margin-left: 1rem;
-
-            &:hover {
-              background: none;
-              text-decoration: underline;
-            }
-
-            &.active,
-            .\--active,
-            &:active {
-              font-weight: 700;
-              background: none;
-              border-bottom: 0 none;
-
-              &:hover {
-                text-decoration: none;
-                cursor: default;
-              }
-            }
-          }
+          border-bottom: 3px solid $gray;
         }
       }
     }
   }
 
   &.\--bordered {
-    @include mqbp-up(md) {
+    @include mqbp-up(lg) {
       .__list { border-bottom: 1px solid $gray-200; }
 
       .__item { margin-bottom: -2px; }
 
       .__link {
         @include border_top_radius(1px);
-        color: $type-color;
         border: 1px solid transparent;
         border-bottom: 1px solid $gray-200;
-        padding: 1rem 1.5rem;
         font-size: $fs-sm;
         transition: all 0.2s ease;
         margin-bottom: 1px;
 
-        &:hover { background-color: $gray-100; }
+        &:hover { background-color: rgba(0, 0, 0, 0.1); }
 
-        &.active,
-        &.active:hover,
-        &.active:active,
-        &.child--active,
-        &.child--active:hover,
-        &.child--active:active {
-          background-color: #fff;
+        &.\--active,
+        &.\--active:hover {
           border: 1px solid #d0d0d0;
           border-bottom-color: #fff;
         }
@@ -241,10 +158,9 @@
   }
 
   &.\--buttons {
-    .__list {}
-
     .__item {
       margin-bottom: -1px;
+      border-bottom: 0 none;
       &:last-child { margin-bottom: 0; }
 
       @include mqbp-up(lg) {
@@ -257,59 +173,16 @@
     .__link {
       color: $gray-700;
       border: 1px solid $gray-200;
-      padding: 1rem 1rem 1rem 2.5rem;
+      padding: 1rem;
       position: relative;
 
       @include mqbp-up(lg) {
-        padding: 8px 1rem 8px 2.5rem;
-      }
+        padding: 8px 1rem;
 
-      &:hover {
-        background-color: $gray-100;
-        border-color: $gray-300;
-        color: $type-color;
-      }
-
-      &:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 1rem;
-        width: 1rem;
-        height: 1rem;
-        @include border-radius(1rem);
-        border-width: 1px;
-        border-style: solid;
-      }
-
-      &:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 1rem;
-        width: 1rem;
-        height: 1rem;
-        @include border-radius(1rem);
-        border-width: 1px;
-        border-style: solid;
-      }
-
-      // arbitrary class names for colorized identifiers;
-      // we can change this approach if desired!
-      &.\--color-1:before { background-color: rgba($red, 0.5); border-color: rgba($red, 0.6); }
-      &.\--color-2:before { background-color: rgba($green, 0.5); border-color: rgba($green, 0.6); }
-      &.\--color-3:before { background-color: rgba($purple, 0.5); border-color: rgba($purple, 0.6); }
-
-      &.active,
-      &.active:hover,
-      &.active:active,
-      &.child--active,
-      &.child--active:hover,
-      &.child--active:active {
-        background-color: rgba($blue-light, 0.25);
-        border: 1px solid $blue-light;
+        &.\--active,
+        &.\--active:hover {
+          border: 1px solid $gray-400;
+        }
       }
     }
   }
@@ -318,14 +191,16 @@
   // pagination
 
   &.\--pagination {
-    text-align: center;
 
-    .__list { @include list_unstyled(); }
+    .__list {
+      @include list_unstyled();
+      flex-direction: row;
+      justify-content: center;
+    }
 
-    .__item { display: inline-block; }
+    .__item { border-bottom: 0 none; }
 
-    .__link,
-    .__link:active {
+    .__link {
       display: block;
       width: 1.75rem;
       height: 1.75rem;
@@ -339,11 +214,11 @@
       border: 0 none;
       font-weight: initial;
 
-      &:hover { background: $gray-100; }
+      &:hover { background: rgba(0, 0, 0, 0.1); }
 
-      &.active,
-      &.active:hover {
-        background: $type-link;
+      &.\--active,
+      &.\--active:hover {
+        background: $type-color;
         color: #fff;
         cursor: default;
       }
@@ -366,7 +241,7 @@
 }
 
 .hidden {
-  &.active { display: block !important; }
+  &.\--active { display: block !important; }
 }
 
 .nav--open {
@@ -374,7 +249,6 @@
     .__list {
       visibility: visible;
       height: 100%;
-      padding-bottom: 1rem;
     }
   }
 }

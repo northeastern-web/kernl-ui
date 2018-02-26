@@ -8,7 +8,7 @@
     <?php include 'docs/views/_header.php'; ?>
 
     <div class="k_wrap" id="main_content" role="document">
-      <main class="k_main" role="document">
+      <main class="k_main main" role="document">
         <?php include 'docs/views/_index.php'; ?>
       </main>
       <?php include 'docs/views/_nav.php'; ?>

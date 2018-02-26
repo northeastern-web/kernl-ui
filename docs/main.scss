@@ -1,9 +1,15 @@
 @import "../src/styles/main.scss";
 
+html { background-color: #333; }
+
 .chrm {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  max-width: 1700px;
+  background: #fff;
 }
 
 .k_header {
@@ -179,6 +185,25 @@
   background: rgb(80, 80, 80);
 
   .k_section__header { border-bottom-color: rgba(255, 255, 255, 0.3); }
+}
+
+#contSelect {
+  li {
+    margin-top: 2px;
+    margin-bottom: 0;
+  }
+
+  a {
+    &:hover { color: $gray-100; }
+
+    &.\--active,
+    &.\--active:hover,
+    &.\--active:active {
+      font-weight: bold;
+      color: $gray-400;
+      cursor: default;
+    }
+  }
 }
 
 // home
