@@ -12,8 +12,8 @@
   .__link {
     position: relative;
     display: block;
-    padding: 1.25rem 0.5rem;
-    line-height: 1.25rem;
+    padding: 1rem 0.5rem;
+    line-height: 1rem;
     color: $gray;
     transition: background-color 0.15s ease;
 
@@ -33,14 +33,14 @@
       padding: 0;
 
       .__link {
-        padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+        padding: 0.4rem 0.75rem 0.4rem 1.5rem;
         border-bottom: none;
-        font-size: $fs-sm;
+        // font-size: $fs-sm;
         color: $gray-500;
       }
 
       .\--active > .__link {
-        font-weight: 400;
+        font-weight: 700;
         color: $gray-900;
       }
     }
@@ -72,9 +72,13 @@
     }
 
     .__item {
+      font-size: $fs-sm;
       .__list { margin-bottom: 0.5rem; }
 
-      .__item { border-bottom: 0 none; }
+      .__item {
+        border-bottom: 0 none;
+        font-size: ($fs-sm * 0.9);
+      }
     }
 
     @include mqbp-up(md) {
@@ -83,6 +87,29 @@
       .__list {
         visibility: visible;
         height: 100%;
+
+        .__list {
+          .__link {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              display: block;
+              width: 10px;
+              height: 1px;
+              background-color: rgba($gray-900, 0.3);
+              top: 0.9rem;
+              left: 0.5rem;
+            }
+          }
+
+          .\--active .__link {
+            &::before {
+              background-color: rgba($gray-900, 0.8);
+            }
+          }
+        }
       }
 
       &.collapse {

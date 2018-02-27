@@ -118,11 +118,12 @@
     $important: '';
   }
 
-  line-height: 1.35;
-  font-weight: $type-regular;
+  line-height: 1.45;
+  font-weight: $type-light;
   font-size: $fs-d2#{$important};
+  font-family: $type-slab;
 
-  @if $colorContrast { opacity: 0.75; }
+  @if $colorContrast { opacity: 0.85; }
 }
 
 @mixin type-sm($colorContrast: false, $important: false) {
