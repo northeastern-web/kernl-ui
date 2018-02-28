@@ -2,27 +2,6 @@
 // Grid
 //
 
-
-// Sections
-//
-// Set the document margin
-.section,
-.footer {
-  @include make-section();
-}
-
-.flush .section,
-.flush .footer {
-  @include make-section('flush');
-}
-
-.contain .section,
-.contain .footer {
-  @include make-section('contain');
-}
-
-.section .section { @include make-section('flush'); }
-
 // Row
 //
 // Rows (display:flex) contain the columns (flex items).

@@ -2,7 +2,7 @@
   <header class="k_section__header">Footer</header>
 </section>
 
-<footer class="footer" role="contentinfo">
+<footer class="footer section" role="contentinfo">
   <a class="__logo" href="http://www.northeastern.edu" aria-label="Northeastern University logo">Northeastern University</a>
   <div class="__body">
     <ul class="__list">
