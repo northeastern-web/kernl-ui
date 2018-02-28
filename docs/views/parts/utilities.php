@@ -111,6 +111,14 @@
           <li><code>fs--root</code> <i>root size</i></li>
           <li><code>fs--d1</code>&ndash;<code>fs--d7</code> <i>one through seven scale degrees above root</i></li>
         </ul>
+        <p class="text-style-block">Font Families</p>
+        <p>Override a font family style with font-family (ff) utility:</p>
+        <ul class="fs--sm">
+          <li><code>ff--sans</code> <i>sans (default)</i>: <span class="ff--sans fs--d1">Sans serif</span></li>
+          <li><code>ff--slab</code> <i>slab</i>: <span class="ff--slab fs--d1">Slab</span></li>
+          <li><code>ff--serif</code> <i>serif</i>: <span class="ff--serif fs--d1">Serif</span></li>
+          <li><code>ff--mono</code> <i>mono</i>: <span class="ff--mono fs--d1">Monospace</span></li>
+        </ul>
       </div>
     </div>
 
@@ -156,16 +164,80 @@
   </div>
   <p class="fs--sm"><i>See <a href="./?part=typography">Typography</a> page for more examples.</i></p>
 </section>
+
 <section class="section">
   <header class="k_section__header">Color, Images, Shadows</header>
   <div class="row">
-    <div class="col --12@xs p--y-2@xs">
-      <ul>
-        <li>Backgrounds</li>
-        <li>Text Color</li>
-        <li>Borders</li>
-        <li>Shadows</li>
-      </ul>
+    <div class="col --12@xs">
+      <nav class="nav --tabbed --bordered">
+        <ul class="__list" role="tablist">
+          <li class="__item">
+            <a class="__link active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Backgrounds</a>
+          </li>
+          <li class="__item">
+            <a class="__link" data-toggle="tab" href="#tab_2" role="tab" aria-expanded="false">Text Color</a>
+          </li>
+          <li class="__item">
+            <a class="__link" data-toggle="tab" href="#tab_3" role="tab" aria-expanded="false">Borders &amp; Corners</a>
+          </li>
+          <li class="__item +children">
+            <a class="__link" data-toggle="tab" href="#tab_4" role="tab" aria-expanded="false">Shadows</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hidden pt--1@xs active" id="tab_1" role="tabpanel">
+        <div class="row">
+          <div class="col --12@xs --6@md">
+            <h3 class="fs--root text-style-block">Background Image Positions</h3>
+            <table class="table --border fs--sm">
+              <tr>
+                <td><code>bg--lt</code><br><i>left top</i></td>
+                <td class="ta--c"><code>bg--t</code><br><i>center top</i></td>
+                <td class="ta--r"><code>bg--rt</code><br><i>right top</i></td>
+              </tr>
+              <tr>
+                <td><code>bg--l</code><br><i>left center</i></td>
+                <td class="ta--c"><b>default</b>:<br><i>center center</i></td>
+                <td class="ta--r"><code>bg--r</code><br><i>right center</i></td>
+              </tr>
+              <tr>
+                <td><code>bg--lb</code><br><i>left bottom</i></td>
+                <td class="ta--c"><code>bg--b</code><br><i>center bottom</i></td>
+                <td class="ta--r"><code>bg--rb</code><br><i>right bottom</i></td>
+              </tr>
+            </table>       
+          </div>
+          <div class="col --12@xs --5@md">
+            <h3 class="fs--root text-style-block">Background Color</h3>
+            <p>Assign a color to a text element (or child text of an element).</p>
+            <p class="fs--sm"><b>Pattern</b>: <code class="mr--0h@xs">bg--&lt;color&gt;</code></p>
+            <div class="color-cell fs--sm">
+              <div class="bg--blue-dark pa--0h@xs"><code>bg--blue-dark</code>: Dark Blue</div>
+              <div class="bg--yellow pa--0h@xs"><code>bg--yellow</code>: Yellow</div>
+            </div>
+            <h3 class="fs--root text-style-block">Other Background Utilities</h3>
+            <ul class="fs--sm">
+              <li><code>bg--fixed</code>: <i>fixed image background</i></li>
+              <li><code>bg--none</code>: <i>remove background completely</i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="hidden pt--1@xs" id="tab_2" role="tabpanel">
+        <h3 class="fs--root text-style-block">Text Color</h3>
+        <p>Assign a color to a text element (or child text of an element).</p>
+        <p class="fs--sm"><b>Pattern</b>: <code class="mr--0h@xs">tc--&lt;color&gt;</code></p>
+        <ul class="fs--sm">
+          <li><b>Example a</b>: <code>tc--teal</code> <span class="tc--teal tt--caps"><b>Teal Text</b></span></p>
+          <li><b>Example b</b>: <code>tc--red</code> <span class="tc--red tt--caps"><b>Red Text</b></span></p>
+        </ul>
+        <p class="fs--sm"><i>See <a href="./?part=color-palette">Color Palette</a> page for more examples.</i></p>
+      </div>
+      <div class="hidden pt--1@xs" id="tab_3" role="tabpanel">
+        <h3>Borders &amp; Corners</h3>
+      </div>
+      <div class="hidden pt--3@md" id="tab_4" role="tabpanel">
+        <h3>Shadows</h3>
+      </div>
     </div>
-  </div>
 </section>

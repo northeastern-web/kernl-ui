@@ -1,0 +1,32 @@
+kernl(ui) Icon Usage
+
+As element, using data-feather -> svg:
+
+- https://kernl-ui.test:3000/?part=alerts
+
+  <div class="__body">
+    <div class="__icon --thin --lg">
+      <i data-feather="alert-octagon"></i>
+    </div>
+    ...
+  </div>
+
+  position: relative;
+  line-height: 0;
+  XXXX display: inline-block; XXXX * should be flex *
+  XXXX text-align: left; XXXX * should be justify-content: center; and align-items: center;
+
+
+
+/////////////////////////////////////
+
+
+As background, using font with ::after pseudo-element:
+
+- https://kernl-ui.test:3000/?part=accordions
+- https://kernl-ui.test:3000/?part=badges
+
+  <div data-component="badge" class="badge --left">
+    <a href="#">Text</a>
+    <i class="__icon icon--video"></i> *** .__icon in this context is not styled. Might not be necessary
+  </div>

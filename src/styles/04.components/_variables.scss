@@ -151,9 +151,10 @@ $cursor-disabled:                not-allowed !default;
 %button {
   border-width: 1px;
   border-style: solid;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
   overflow: hidden;
   white-space: nowrap;
   cursor: pointer;

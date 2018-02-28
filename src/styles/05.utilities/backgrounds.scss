@@ -20,13 +20,13 @@
 // tweak child typography for parents with bg image
 .\+bgimg {
   @extend %bgimg;
-  text-shadow: 0 0 .5rem rgba(#000, 0.25);
+  text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.25);
   color: #fff;
 
   &:after {
     @extend %component-cover;
     content: "";
-    background: rgba(#000, 0.2);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 0;
   }
 

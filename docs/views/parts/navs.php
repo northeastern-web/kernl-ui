@@ -1,39 +1,42 @@
+
+<header class="section --lg --banner +bgimg">
+  <h2 class="__title">Example Interior/On-Page Nav</h2>
+</header>
 <section class="section">
-  <header class="k_section__header">Interior/On-Page Nav</header>
   <div class="row">
-    <div class="col --12@xs --3@md">
-      <div class="hidden--up@md ta--c mb--1@xs">
+    <div class="col --12@xs --5@md --4@lg --3@xl mb--1@xs">
+      <div class="hidden--up@md ta--c">
         <button class="nav__toggler btn --sm" data-toggle="collapse" data-target="#page_menu"><i class="icon--menu"></i> Page Menu</button>
       </div>
       <nav class="nav --interior collapse" id="page_menu">
         <ul class="__list">
           <li class="__item">
-            <a class="__link" href="#">Page</a>
-          </li>
-          <li class="__item --active">
-            <a class="__link" href="#">Page</a>
+            <a class="__link" href="#">Ipsum Magna Aenean</a>
           </li>
           <li class="__item">
-            <a class="__link" href="#">Page</a>
+            <a class="__link" href="#">Dolor Fermentum Ullamcorper Fringilla</a>
           </li>
-          <li class="__item +children">
-            <a class="__link" href="#">Parent Page</a>
+          <li class="__item --active +children">
+            <a class="__link" href="#">Lorem Aenean Sit Sem</a>
             <ul class="__list">
               <li class="__item">
-                <a class="__link" href="#">Child Tab A</a>
+                <a class="__link" href="#">Cras Lorem</a>
               </li>
               <li class="__item --active">
-                <a class="__link" href="#">Child Tab B</a>
+                <a class="__link" href="#">Ridiculus Purus Ultricies Vehicula Euismod Sit Parturient Pellentesque Magna Sem</a>
               </li>
               <li class="__item">
-                <a class="__link" href="#">Child Tab C</a>
+                <a class="__link" href="#">Tristique Ultricies Ligula Parturient</a>
               </li>
             </ul>
+          </li>
+          <li class="__item">
+            <a class="__link" href="#">Sit Parturient Pellentesque Magna Sem Ridiculus Ultricies Euismod</a>
           </li>
         </ul>
       </nav>
     </div>
-    <div class="col --12@xs --9@md">
+    <div class="col --12@xs --7@md --8@lg --9@xl">
       <h2>Page Content Here</h2>
       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
       <h3>Change the viewport width</h3>
@@ -51,7 +54,7 @@
       <nav class="nav --tabbed">
         <ul class="__list" role="tablist">
           <li class="__item">
-            <a class="__link active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Tab 1</a>
+            <a class="__link --active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Tab 1</a>
           </li>
           <li class="__item">
             <a class="__link" data-toggle="tab" href="#tab_2" role="tab" aria-expanded="false">Tab 2</a>
@@ -59,23 +62,12 @@
           <li class="__item">
             <a class="__link" data-toggle="tab" href="#tab_3" role="tab" aria-expanded="false">Tab 3</a>
           </li>
-          <li class="__item +children">
-            <a class="__link" data-toggle="tab" href="#tab_4" role="tab" aria-expanded="false">Tab 4 Parent</a>
-            <ul class="__list" role="tablist">
-              <li class="__item">
-                <a class="__link" data-toggle="tab" href="#tab_4a" role="tab" aria-expanded="false">Child Tab A</a>
-              </li>
-              <li class="__item">
-                <a class="__link" data-toggle="tab" href="#tab_4b" role="tab" aria-expanded="false">Child Tab B</a>
-              </li>
-              <li class="__item">
-                <a class="__link" data-toggle="tab" href="#tab_4c" role="tab" aria-expanded="false">Child Tab C</a>
-              </li>
-            </ul>
+          <li class="__item">
+            <a class="__link" data-toggle="tab" href="#tab_4" role="tab" aria-expanded="false">Tab 4</a>
           </li>
         </ul>
       </nav>
-      <div class="hidden pt--1@xs active" id="tab_1" role="tabpanel">
+      <div class="hidden pt--1@xs --active" id="tab_1" role="tabpanel">
         <h3>Content 1</h3>
         <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
@@ -87,21 +79,9 @@
         <h3>Content 3</h3>
         <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
       </div>
-      <div class="hidden pt--3@md" id="tab_4" role="tabpanel">
+      <div class="hidden pt--1@xs" id="tab_4" role="tabpanel">
         <h3>Content 4</h3>
         <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-      </div>
-      <div class="hidden pt--3@md" id="tab_4a" role="tabpanel">
-        <h3>Content 4a</h3>
-        <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-      </div>
-      <div class="hidden pt--3@md" id="tab_4b" role="tabpanel">
-        <h3>Content 4b</h3>
-        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod.</p>
-      </div>
-      <div class="hidden pt--3@md" id="tab_4c" role="tabpanel">
-        <h3>Content 4c</h3>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec sed odio dui. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur.</p>
       </div>
     </div>
   </div>
@@ -114,7 +94,7 @@
       <nav class="nav --tabbed --bordered">
         <ul class="__list" role="tablist">
           <li class="__item">
-            <a class="__link active" data-toggle="tab" href="#tab_5" role="tab" aria-expanded="true">Mozzarella Sticks</a>
+            <a class="__link --active" data-toggle="tab" href="#tab_5" role="tab" aria-expanded="true">Mozzarella Sticks</a>
           </li>
           <li class="__item">
             <a class="__link" data-toggle="tab" href="#tab_6" role="tab" aria-expanded="false">Mushroom Pizza Pie</a>
@@ -124,7 +104,7 @@
           </li>
         </ul>
       </nav>
-      <div class="hidden pt--1@xs active" id="tab_5" role="tabpanel">
+      <div class="hidden pt--1@xs --active" id="tab_5" role="tabpanel">
         <h3>Mozzarella Sticks</h3>
         <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
@@ -142,12 +122,13 @@
 
 <section class="section">
   <header class="k_section__header" style="border-bottom: 0 none;">Tabbed Nav: Bordered with Bordered Content</header>
+  <p class="mb--2@xs"><i>Same as above, just wrap the content divs in a wrapper with the class <code>.tabcontent</code>.</i></p>
   <div class="row">
     <div class="col --12@xs">
       <nav class="nav --tabbed --bordered">
         <ul class="__list" role="tablist">
           <li class="__item">
-            <a class="__link active" data-toggle="tab" href="#tab_50" role="tab" aria-expanded="true">Mozzarella Sticks</a>
+            <a class="__link --active" data-toggle="tab" href="#tab_50" role="tab" aria-expanded="true">Mozzarella Sticks</a>
           </li>
           <li class="__item">
             <a class="__link" data-toggle="tab" href="#tab_60" role="tab" aria-expanded="false">Mushroom Pizza Pie</a>
@@ -158,7 +139,7 @@
         </ul>
       </nav>
       <div class="tabcontent">
-        <div class="hidden pt--1@xs active" id="tab_50" role="tabpanel">
+        <div class="hidden pt--1@xs --active" id="tab_50" role="tabpanel">
           <h3>Mozzarella Sticks</h3>
           <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
@@ -175,7 +156,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section k_bg-light">
   <header class="k_section__header">Tabbed Nav: Buttons</header>
   <div class="row">
     <div class="col --12@xs">
@@ -184,13 +165,13 @@
       <nav class="nav --tabbed --buttons">
         <ul class="__list" role="tablist">
           <li class="__item">
-            <a class="__link --color-1" data-toggle="tab" href="#tab_8" role="tab" aria-expanded="true">Undergraduates</a>
+            <a class="__link" data-toggle="tab" href="#tab_8" role="tab" aria-expanded="true">Undergraduates</a>
           </li>
           <li class="__item">
-            <a class="__link --color-2" data-toggle="tab" href="#tab_9" role="tab" aria-expanded="false">Graduate Students</a>
+            <a class="__link" data-toggle="tab" href="#tab_9" role="tab" aria-expanded="false">Graduate Students</a>
           </li>
           <li class="__item">
-            <a class="__link --color-3" data-toggle="tab" href="#tab_10" role="tab" aria-expanded="false">Alumni</a>
+            <a class="__link" data-toggle="tab" href="#tab_10" role="tab" aria-expanded="false">Alumni</a>
           </li>
         </ul>
       </nav>
@@ -210,7 +191,7 @@
   </div>
 </section>
 
-<section class="section k_bg-light">
+<section class="section">
   <header class="k_section__header mb--2@xs">Pagination</header>
   <nav class="nav --pagination" aria-label="Page navigation">
     <ul class="__list">
@@ -222,7 +203,7 @@
       </li>
       <li class="__item"><a class="__link" href="#">1</a></li>
       <li class="__item"><a class="__link" href="#">2</a></li>
-      <li class="__item"><a class="__link active" href="#">3</a></li>
+      <li class="__item"><a class="__link --active" href="#">3</a></li>
       <li class="__item"><a class="__link" href="#">4</a></li>
       <li class="__item"><a class="__link" href="#">5</a></li>
       <li class="__item">

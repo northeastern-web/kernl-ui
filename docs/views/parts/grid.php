@@ -1,4 +1,4 @@
-<div class="k_grid k_bg-light">
+<div class="k_grid k_bg-light main">
   <section class="section">
     <header class="k_section__header">Base Grid</header>
     <div class="row">
@@ -142,7 +142,7 @@
         </div>
       </div>
       <div class="col --12@xs --3@md">
-        <div class="col-content --sticky">
+        <div class="col-content pos--sticky">
           3. Sticky
         </div>
       </div>
@@ -381,6 +381,9 @@
       </div>
     </div>
   </section>
+
+  <hr>
+
   <section class="section bg--gray-700 tc--gray-100">
     <h3 class="non-col-element text-style-block">Section <small>(with --bg-color option)</small></h3>
     <div class="row">
