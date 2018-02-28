@@ -8,8 +8,6 @@
   background-color: #fff;
   color: $type-color;
   border-color: rgba($type-color, 0.5);
-  border-width: 1px;
-  border-style: solid;
   margin-bottom: 3px; // for when (if) multiple inline buttons wrap
   @include font_smoothing();
   @include transition();
@@ -25,12 +23,6 @@
   }
 
   //
-  // Sizing
-  &.\--xs { @include button_size($btn-padding-t/2, $btn-padding-y/2, $btn-padding-b/2, $btn-type-xs, $btn-border-radius); }
-  &.\--sm { @include button_size($btn-padding-t/1.125, $btn-padding-y/1.5, $btn-padding-b/1.125, $btn-type-sm, $btn-border-radius); }
-  &.\--lg { @include button_size($btn-padding-t*1.5, $btn-padding-y*1.5, $btn-padding-b*1.5, $btn-type-lg, $btn-border-radius); }
-
-  //
   // Full width button
   &.\--block {
     @extend %block; 
@@ -42,6 +34,24 @@
   &.\--pill { border-radius: 1000px; }
 
   .__icon { @extend %icon; }
+
+  //
+  // Sizing
+  &.\--xs { @include button_size($btn-padding-t/2, $btn-padding-y/2, $btn-padding-b/2, $btn-type-xs, $btn-border-radius); }
+  &.\--sm { @include button_size($btn-padding-t/1.125, $btn-padding-y/1.5, $btn-padding-b/1.125, $btn-type-sm, $btn-border-radius); }
+  &.\--lg { @include button_size($btn-padding-t*1.5, $btn-padding-y*1.5, $btn-padding-b*1.5, $btn-type-lg, $btn-border-radius); }
+
+  //
+  // Stacked icon
+  &[class^='flex--col'],
+  &[class*=' flex--col'] {
+    text-align: center;
+
+    .__icon {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 //

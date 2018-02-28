@@ -36,30 +36,28 @@
   <div class="__subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
 </section>
 
-<div class="k_bg-light pb--1@xs pb--2@lg">
-  <header class="section --md pb--0@xs">
-    <h2 class="k_section__header">Headers, Fancy Options</h2>
-  </header>
+<header class="section k_bg-light pt--2@xs">
+  <h2 class="k_section__header">Headers, Fancy Options</h2>
+</header>
 
-  <section class="section --banner --bgfixed --lg +bgimg mb--1@xs mb--2@lg">
+<section class="section --banner bg--fixed --lg +bgimg mb--1@xs mb--2@lg">
+  <div class="__pretitle">Header Pre Title</div>
+  <h1 class="__title">Header: Large, Fixed</h1>
+  <div class="__subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
+</section>
+
+<section class="section --banner bg--gray-700 mb--1@xs mb--2@lg">
+  <div class="section --lg +bgimg px--1@xs px--2@md">
     <div class="__pretitle">Header Pre Title</div>
-    <h1 class="__title">Header: Large, Fixed</h1>
-    <div class="__subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
-  </section>
+    <h1 class="__title">Header, Contained: Large</h1>
+    <div class="__subtitle">This section is <i>inside</i> a parent banner section.</div>
+  </div>
+</section>
 
-  <section class="section --banner mb--1@xs mb--2@lg">
-    <div class="section --lg +bgimg px--1@xs px--2@md">
-      <div class="__pretitle">Header Pre Title</div>
-      <h1 class="__title">Header, Contained: Large</h1>
-      <div class="__subtitle">This one is <i>inside</i> the grid.</div>
-    </div>
-  </section>
+<section class="section --banner --transparent +shadow mb--1@xs mb--2@lg">
+  <h1 class="__title">Header: Transparent, Shadow</h1>
+</section>
 
-  <section class="section --banner --transparent +shadow mb--1@xs mb--2@lg">
-    <h1 class="__title">Header: Transparent, Shadow</h1>
-  </section>
-
-  <section class="section --banner --white mb--1@xs mb--2@lg">
-    <h1 class="__title">Header: White</h1>
-  </section>
-</div>
+<section class="section --banner --white mb--1@xs mb--2@lg">
+  <h1 class="__title">Header: White</h1>
+</section>

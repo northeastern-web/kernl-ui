@@ -21,11 +21,27 @@
   }
 }
 
+//
+// Responsive flex-direction
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include mqbp-up($breakpoint) {
+    .flex--col\@#{$breakpoint} {
+      flex-direction: column;
+    }
+
+    .flex--row\@#{$breakpoint} {
+      flex-direction: row;
+    }
+  }
+}
+
 
 //
 // Position
 
-.pos--relative { position: relative; }
+.pos--relative { position: relative !important; }
+
 .pos--sticky {
   position: sticky;
   top: 1rem;

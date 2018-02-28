@@ -109,8 +109,7 @@
 //
 // Accordion mixins
 
-@mixin accordion_variant($color: $type-color, $trigger: $gray-100, $background: transparent) {
-  color: $color;
+@mixin accordion_variant($color: $type-color, $trigger: rgba(0,0,0,0.05), $background: transparent) {
 
   > .__item > .__title {
     background: $trigger;
@@ -122,7 +121,10 @@
     }
   }
 
-  .__copy { background: $background; }
+  .__copy {
+    color: $color;
+    background: $background;
+  }
 }
 
 
@@ -182,6 +184,8 @@
     i, svg {
       height: $font-size * 1.25;
       width: $font-size * 1.25;
+      position: absolute;
+      top: -1px;
     }
 
     &.\--left {
@@ -195,11 +199,13 @@
     &.\--lg {
       height: $font-size * 2;
       width: $font-size * 2;
-      margin: ($font-size / 2) 0;
+      margin-top: $font-size / 2;
+      margin-bottom: $font-size / 2;
 
       i, svg {
         height: $font-size * 2;
         width: $font-size * 2;
+        top: 0;
       }
     }
   }

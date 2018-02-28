@@ -22,7 +22,7 @@
     }
 
     @include mqbp-up(md) {
-      @include make-masthead();
+      margin-right: 1rem !important;
     }
 
     @include mqbp-up(lg) {
@@ -68,7 +68,6 @@
     }
 
     @include mqbp-up(md) {
-      @include make-masthead();
       margin-top: 1.35rem;
     }
 
@@ -82,7 +81,6 @@
 
   .__list {
     @include list_unstyled();
-    @include make-masthead();
     clear: both;
     padding-top: 1rem;
 
@@ -340,7 +338,6 @@
         }
 
         .__submenu {
-          @include make-megamenu();
           padding-top: 0 !important;
           padding-bottom: 0 !important;
           top: 5.85rem;
@@ -546,7 +543,6 @@
         }
       }
 
-      @include make-masthead();
       position: absolute !important;
       top: 1.25rem;
       right: 0;
@@ -590,7 +586,7 @@
     width: auto;
     max-width: none;
     padding: 0;
-    @include make-masthead();
+    margin-left: 1rem;
     visibility: visible;
     background: transparent;
     transition: none;
@@ -598,6 +594,23 @@
     overflow-y: visible;
   }
 }
+
+.masthead {
+  @include make-masthead();
+  &.\--megamenu .\+children .__submenu { @include make-megamenu(); }
+}
+
+.flush .masthead {
+  @include make-masthead('flush');
+  &.\--megamenu .\+children .__submenu { @include make-megamenu('flush'); }
+}
+
+.contain .masthead {
+  @include make-masthead('contain');
+  &.\--megamenu .\+children .__submenu { @include make-megamenu('contain'); }
+}
+
+
 
 @keyframes bump {
   0% { margin-left: 1rem; margin-right: 1rem; }

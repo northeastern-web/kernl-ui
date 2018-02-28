@@ -2,33 +2,6 @@
 // Grid
 //
 
-
-// Sections
-//
-// Set the document margin
-.section {
-  @include make-section();
-
-  &.\--contain {
-    @include make-section();
-
-    @include mqbp-up(lg) {
-      padding-left: 6%;
-      padding-right: 6%;
-    }
-
-    @include mqbp-up(xl) {
-      padding-left: 14%;
-      padding-right: 14%;
-    }
-
-    .section {
-      @include make-section();
-      margin-bottom: 1rem;
-    }
-  }
-}
-
 // Row
 //
 // Rows (display:flex) contain the columns (flex items).

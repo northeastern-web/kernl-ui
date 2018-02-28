@@ -114,7 +114,7 @@
       <p>
         <span class="text-style-block">With Iconography</span><br>
         <small><i>Feather Icons wrapped in a <code>.__icon</code> span.<br>
-        Size and position tweaks with <code>--left</code>, <code>--right</code>, <code>--large</code>, <code>--thin</code>.</i></small>
+        Size and position tweaks with <code>--left</code>, <code>--right</code>, <code>--lg</code>, <code>--thin</code>.</i></small>
       </p>
       <p>
         <a class="btn --xs" data-component="button" href="#">Go Forth
@@ -129,8 +129,9 @@
       </p>
       <p>
         <a class="btn" data-component="button" href="#">
-          <span class="__icon --left"><i data-feather="headphones"></i></span>
-          Hear Me Now
+          <span class="__icon --left --lg --thin"><i data-feather="headphones"></i></span>
+          Hear Me Now and<br>
+          Listen to Me Later
         </a>
       </p>
       <p>
@@ -139,8 +140,11 @@
         </a>
       </p>
       <p>
-        <a class="btn --lg bg--transparent-dark" data-component="button" href="#">
-          <span class="__icon --lg --thin"><i data-feather="cloud-rain"></i></span><br>
+        <small><i>Add <code>.flex--col@&lt;breakpoint&gt;</code> to <code>.btn</code> to stack the icon and text.</i></small>
+      </p>
+      <p>
+        <a class="btn --lg bg--transparent-dark flex--col@xs" data-component="button" href="#">
+          <span class="__icon --lg --thin"><i data-feather="cloud-rain"></i></span>
           Looks Like We're In For<br>
           Some Nasty Weather
         </a>

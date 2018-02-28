@@ -17,8 +17,22 @@ mix.js('docs/main.js', 'dist/scripts')
   .options({ processCssUrls: false });
 
 mix.browserSync({
-  proxy: 'https://kernl-ui.dev/',
-  host: 'kernl-ui.dev',
+  proxy: 'https://kernl-ui.test/',
+  host: 'kernl-ui.test',
   open: 'external',
-  https: true
+  https: true,
+  notify: {
+    styles: {
+      top: 'auto',
+      right: '16px',
+      left: 'auto',
+      bottom: '16px',
+      backgroundColor: '#1a1a1a',
+      border: '1px solid #eee',
+      opacity: '0.75',
+      fontSize: '12px',
+      padding: '8px 20px 6px',
+      borderRadius: '3px'
+    }
+  }
 });

@@ -2,7 +2,17 @@
 // Sections
 //
 
-// Section Spacing
+//
+// Set the document margin
+.section { @include make-section(); }
+
+.flush .section { @include make-section('flush'); }
+
+.contain .section { @include make-section('contain'); }
+
+.section .section { padding: 0; }
+
+// Banner Spacing
 $padding-default: 1rem;
 $padding-md: 5%;
 $padding-lg: 7.5%;
@@ -10,14 +20,12 @@ $padding-xl: 10%;
 
 
 //
-// Sections
+// Banners
 
 .section {
   position: relative;
   padding-top: $padding-default;
   padding-bottom: $padding-default;
-
-  .section { padding: 0; }
 
   &.\--banner,
   > .__header {
@@ -58,17 +66,16 @@ $padding-xl: 10%;
 
   &.\--top {
     padding-top: $padding-default * 1.5;
-
+    // retain lg or xl height when text is on top:
     &.\--lg { padding-bottom: $padding-lg * 1.75; }
-
     &.\--xl { padding-bottom: $padding-xl * 1.75; }
   }
 
   &.\--bottom {
     padding-bottom: $padding-default * 2;
-
-    // &.\--lg { padding-top: $padding-lg * 2 !important; }
-    // &.\--xl { padding-top: $padding-xl * 2 !important; }
+    // retain lg or xl height when text is on bottom:
+    &.\--lg { padding-top: $padding-lg * 2 !important; }
+    &.\--xl { padding-top: $padding-xl * 2 !important; }
   }
 
   &.\--transparent {
