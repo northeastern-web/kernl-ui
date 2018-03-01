@@ -147,14 +147,13 @@ $cursor-disabled:                not-allowed !default;
   border-radius: 0 !important;
 }
 
-
 %button {
   border-width: 1px;
   border-style: solid;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  vertical-align: top;
+  vertical-align: middle;
   overflow: hidden;
   white-space: nowrap;
   cursor: pointer;

@@ -17,7 +17,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
 </section>
 
 <!-- start fixed masthead -->
-<?= masthead(1, '', '--fixed'); ?>
+<?= masthead(1, '', 'bg--fixed'); ?>
 
 
 <!-- Image background overlay masthead -->
@@ -34,7 +34,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
   <header class="k_section__header">Overlay Fixed Background</header>
 </section>
 
-<?= masthead(3, '--overlay', '--fixed'); ?>
+<?= masthead(3, '--overlay', 'bg--fixed'); ?>
 
 
 <!-- masthead with border-bottom nav -->
@@ -45,9 +45,9 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
 <?= masthead(4, '+border', ''); ?>
 
 
-<!-- masthead with border-bottom nav -->
-<section class="section k_bg-light">
-  <header class="k_section__header">Masthead, Mega-Menu</header>
+<!-- masthead with megamenu nav -->
+<!-- <section class="section k_bg-light">
+  <header class="k_section__header">Masthead, Megamenu</header>
 </section>
 
 <header class="masthead --megamenu +chevron +utility">
@@ -244,9 +244,9 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
     </ul>
   </nav>
 
-</header>
+</header> -->
 <!-- end mega-menu masthead -->
-<div class="section --lg +bgimg --middle ta--c">
+<!-- <div class="section --lg +bgimg --middle ta--c">
   <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
-</div>
-      <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_modal-search.php'; ?>
+</div> -->
+      <?php // include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_modal-search.php'; ?>

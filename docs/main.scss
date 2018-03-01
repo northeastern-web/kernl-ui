@@ -226,7 +226,7 @@ html { background-color: #333; }
     padding-bottom: 0;
     font-weight: 200;
     text-shadow: none;
-    @include font_smoothing();
+    @extend %font_smoothing;
   }
 
   .__link {
@@ -338,7 +338,7 @@ html { background-color: #333; }
   font-weight: 500;
   text-transform: uppercase;
   opacity: 0.7;
-  @include font_smoothing();
+  @extend %font_smoothing;
 }
 
 code {

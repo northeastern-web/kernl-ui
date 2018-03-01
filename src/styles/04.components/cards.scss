@@ -104,7 +104,7 @@
     line-height: 1.25;
     font-weight: 900;
     font-size: 118%;
-    @include font_smoothing();
+    @extend %font_smoothing;
   }
 
   .__pretitle { margin-bottom: 0.2rem; }

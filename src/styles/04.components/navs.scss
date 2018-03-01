@@ -4,7 +4,8 @@
 
 .nav {
   .__list {
-    @include list_unstyled();
+    padding-left: 0;
+list-style: none;
     display: flex;
     flex-direction: column;
   }
@@ -218,7 +219,8 @@
   &.\--pagination {
 
     .__list {
-      @include list_unstyled();
+      padding-left: 0;
+      list-style: none;
       flex-direction: row;
       justify-content: center;
     }

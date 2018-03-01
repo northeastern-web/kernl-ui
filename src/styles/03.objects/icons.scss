@@ -45,7 +45,7 @@
 }
 
 [class^="icon--"], [class*=" icon--"] {
-  @include font-smoothing();
+  @extend %font_smoothing;
   font-family: 'feathericons' !important; // prevents issues w/browser extensions changing fonts
   speak: none;
   font-style: normal;

@@ -2,6 +2,6 @@
 // Clearfix Utilities
 //
 
-.\+clearfix { @include clearfix(); }
+.\+clearfix { @extend %clearfix; }
 
 .\+clear { clear: both; }

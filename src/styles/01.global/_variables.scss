@@ -218,6 +218,31 @@ $border-radius-sm: 3px;
 $border-radius-md: 5px;
 $border-radius-lg: 0.5rem;
 
+// List Unstyled
+%list_unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Font Smoothing / Antialiased
+%font_smoothing {
+  @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+// Clearfix
+%clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 
 //
 // Grid
@@ -225,6 +250,13 @@ $border-radius-lg: 0.5rem;
 $col-prefix: '\\-' !default;
 $grid-columns: 12 !default;
 $grid-gutter-width-base: 30px !default;
+$contain-width: 10%;
+
+// Banner Spacing
+$section-padding-y-default: 1rem;
+$section-padding-y-md: 5%;
+$section-padding-y-lg: 7.5%;
+$section-padding-y-xl: 10%;
 
 // Gutter widths
 $grid-gutter-widths: (

@@ -194,7 +194,7 @@ select.__control--lg {
     @extend .__control;
     position: relative;
     padding: 0.5rem;
-    @include clearfix();
+    @extend %clearfix;
 
     .__control,
     &:before {
