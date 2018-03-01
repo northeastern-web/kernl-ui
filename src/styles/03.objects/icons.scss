@@ -12,8 +12,8 @@
   text-align: left;
 
   i, svg {
-    width: 120%;
-    height: 120%;
+    width: 2rem;
+    height: 2rem;
   }
 
   &.\--thin {
@@ -24,8 +24,8 @@
 
   &.\--lg {
     i, svg {
-      width: 180%;
-      height: 180%;
+      width: 3rem;
+      height: 3rem;
     }
   }
 }
