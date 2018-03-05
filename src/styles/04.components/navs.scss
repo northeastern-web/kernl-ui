@@ -5,7 +5,7 @@
 .nav {
   .__list {
     padding-left: 0;
-list-style: none;
+  list-style: none;
     display: flex;
     flex-direction: column;
   }
@@ -131,7 +131,7 @@ list-style: none;
       &.\--active,
       &.\--active:hover {
         color: inherit;
-        background: none !important;
+        background: none;
         font-weight: 700;
         cursor: default;
       }
@@ -185,7 +185,7 @@ list-style: none;
 
   &.\--buttons {
     .__item {
-      margin-bottom: -1px;
+      margin-bottom: 0.5rem;
       border-bottom: 0 none;
       &:last-child { margin-bottom: 0; }
 

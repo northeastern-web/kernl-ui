@@ -3,7 +3,6 @@
 //
 
 .card {
-  // display: flex;
   @include card_variant();
   @include transition();
   @include box_shadow();
@@ -18,18 +17,26 @@
   &:hover { @include box_shadow($component-shadow-hover); }
 
   .__header {
+    justify-content: space-between;
+
     .badge {
       display: inline-flex;
-      top: 0.5rem;
+      top: 0.425rem;
 
       &.\--left { left: 0.5rem; }
       &.\--right { right: 0.5rem; }
+
+      @include mqbp-up(xl) {
+        top: 0.5rem;
+      }
     }
   }
 
   //
   // Columns in header/footer
-  .__column { @extend %component-column; }
+  .__column {
+    @extend %component-column;
+  }
 
   //
   // Link
@@ -72,6 +79,10 @@
         max-width: 200% !important;
         left: -50% !important;
       }
+    }
+
+    +.__header {
+      top: auto;
     }
   }
 
@@ -161,6 +172,7 @@
   .__footer__link {
     @extend %button;
     @extend %block;
+    margin-top: -1px;
     margin-bottom: 0;
     height: 2.5rem;
     border: none;
@@ -365,27 +377,10 @@
       }
     }
   }
-}
 
-
-.card:not(.\--overlay):not(.\--scroll):not(.\--middle):not(.\+list-group) {
   @include mqbp-up(sm) {
     &.\--h\@sm {
       @include card_horizontal(50%, 50%);
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1rem;
-      bottom: 0;
-      background: inherit;
-      opacity: 0.7;
-    }
-
-    &:hover {
-      &::after { opacity: 0.3; }
     }
   }
 
@@ -402,6 +397,11 @@
 
     &.\--v\@lg {
       @include card_vertical();
+
+      .__graphic + .__header {
+        width: 100%;
+        top: auto;
+      }
     }
   }
 
@@ -412,6 +412,30 @@
 
     &.\--v\@xl {
       @include card_vertical();
+
+      .__graphic + .__header {
+        width: 100%;
+        top: auto;
+      }
+    }
+  }
+}
+
+
+.card:not(.\--overlay):not(.\--extend):not(.\--scroll):not(.\--middle):not(.\+list-group) {
+  @include mqbp-up(sm) {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1rem;
+      bottom: 0;
+      background: inherit;
+      opacity: 0.7;
+    }
+
+    &:hover {
+      &::after { opacity: 0; }
     }
   }
 }

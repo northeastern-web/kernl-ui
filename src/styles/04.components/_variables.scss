@@ -110,6 +110,8 @@ $cursor-disabled:                not-allowed !default;
 
 // Component header
 %component-header {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: .25rem;
   padding: 0.5rem 0;
   font-size: .75rem;
@@ -129,14 +131,13 @@ $cursor-disabled:                not-allowed !default;
 
 // Component interior columns
 %component-column {
-  @include make-col(1, 2);
-  flex: 1;
+  flex: 0 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
 
   &:first-child { text-align: left; }
   &:last-child { text-align: right; }
-  &:only-child { @include make-col(2, 2); text-align: left; }
+  &:only-child { text-align: left; }
 }
 
 // Block display
