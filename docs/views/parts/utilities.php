@@ -91,7 +91,7 @@
         <p class="text-style-block">Sticky</p>
         <p>Set an element to be sticky</p>
         <ul class="fs--sm">
-          <li><code>--sticky</code></li>
+          <li><code>pos--sticky</code></li>
         </ul>
       </div>
     </div>
@@ -205,7 +205,7 @@
                 <td class="ta--c"><code>bg--b</code><br><i>center bottom</i></td>
                 <td class="ta--r"><code>bg--rb</code><br><i>right bottom</i></td>
               </tr>
-            </table>       
+            </table>
           </div>
           <div class="col --12@xs --5@md">
             <h3 class="fs--root text-style-block">Background Color</h3>
