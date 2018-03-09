@@ -6,7 +6,10 @@
   <div class="row">
     <div class="col --12@xs --5@md --4@lg --3@xl mb--1@xs">
       <div class="hidden--up@md ta--c">
-        <button class="nav__toggler btn --sm" data-toggle="collapse" data-target="#page_menu"><i class="icon--menu"></i> Page Menu</button>
+        <button class="__toggler btn --sm" data-component="button" data-toggle="collapse" data-target="#page_menu">
+          <span class="__icon --left"><i data-feather="menu"></i></span> 
+          Page Menu
+        </button>
       </div>
       <nav class="nav --interior collapse" id="page_menu">
         <ul class="__list">

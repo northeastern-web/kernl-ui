@@ -4,7 +4,8 @@
 
 .nav {
   .__list {
-    @include list_unstyled();
+    padding-left: 0;
+  list-style: none;
     display: flex;
     flex-direction: column;
   }
@@ -130,7 +131,7 @@
       &.\--active,
       &.\--active:hover {
         color: inherit;
-        background: none !important;
+        background: none;
         font-weight: 700;
         cursor: default;
       }
@@ -184,7 +185,7 @@
 
   &.\--buttons {
     .__item {
-      margin-bottom: -1px;
+      margin-bottom: 0.5rem;
       border-bottom: 0 none;
       &:last-child { margin-bottom: 0; }
 
@@ -218,7 +219,8 @@
   &.\--pagination {
 
     .__list {
-      @include list_unstyled();
+      padding-left: 0;
+      list-style: none;
       flex-direction: row;
       justify-content: center;
     }

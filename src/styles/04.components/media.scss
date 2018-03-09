@@ -17,7 +17,7 @@
     height: 100%;
     overflow: hidden;
     @include box_shadow();
-    @include clearfix();
+    @extend %clearfix;
 
     &:hover,
     &:focus {

@@ -45,7 +45,8 @@ dd {
 
 // Unstyled List
 .ls--none {
-  @include list_unstyled();
+  padding-left: 0;
+list-style: none;
 
   li,
   .__item {
@@ -57,7 +58,8 @@ dd {
 
 // Inline List
 .ls--inline {
-  @include list_unstyled();
+  padding-left: 0;
+list-style: none;
 
   li,
   .__item {

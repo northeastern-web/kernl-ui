@@ -9,7 +9,7 @@
   color: $type-color;
   border-color: rgba($type-color, 0.5);
   margin-bottom: 3px; // for when (if) multiple inline buttons wrap
-  @include font_smoothing();
+  @extend %font_smoothing;
   @include transition();
 
   &:disabled {
@@ -60,7 +60,7 @@
   display: inline-block;
   overflow: hidden;
   @include border_radius(2px);
-  @include clearfix();
+  @extend %clearfix;
 
   .btn {
     border-radius: 0;

@@ -4,78 +4,49 @@
 
 //
 // Set the document margin
-.section { @include make-section(); }
+.section {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: $section-padding-y-default;
+  padding-bottom: $section-padding-y-default;
+  @include make-section();
+}
 
 .flush .section { @include make-section('flush'); }
 
-.contain .section { @include make-section('contain'); }
-
-.section .section { padding: 0; }
-
-// Banner Spacing
-$padding-default: 1rem;
-$padding-md: 5%;
-$padding-lg: 7.5%;
-$padding-xl: 10%;
-
-
-//
-// Banners
+.contain .section { @include make-section('contain', $contain: 10%); }
 
 .section {
-  position: relative;
-  padding-top: $padding-default;
-  padding-bottom: $padding-default;
-
-  &.\--banner,
-  > .__header {
-    margin-bottom: 1.5rem;
-
-    .__title {
-      margin-bottom: 0.25rem;
-      font-weight: $type-regular;
-    }
-
-    .__pretitle { margin-bottom: 0.25rem; }
-
-    .__subtitle { @include type-lead(); }
-  }
-
-  &.\--banner {
-    @include font_smoothing();
-    margin-bottom: 1rem;
-    background-color: $gray-50;
-
-    .__title { @include type_d6(); }
-  }
+  .section { padding: 0; }
 
   &.\--md {
-    padding-top: $padding-md;
-    padding-bottom: $padding-md;
+    padding-top: $section-padding-y-md;
+    padding-bottom: $section-padding-y-md;
   }
 
   &.\--lg {
-    padding-top: $padding-lg;
-    padding-bottom: $padding-lg;
+    padding-top: $section-padding-y-lg;
+    padding-bottom: $section-padding-y-lg;
   }
 
   &.\--xl {
-    padding-top: $padding-xl;
-    padding-bottom: $padding-xl;
+    padding-top: $section-padding-y-xl;
+    padding-bottom: $section-padding-y-xl;
   }
 
   &.\--top {
-    padding-top: $padding-default * 1.5;
+    padding-top: $section-padding-y-default * 1.5;
     // retain lg or xl height when text is on top:
-    &.\--lg { padding-bottom: $padding-lg * 1.75; }
-    &.\--xl { padding-bottom: $padding-xl * 1.75; }
+    &.\--lg { padding-bottom: $section-padding-y-lg * 1.75; }
+    &.\--xl { padding-bottom: $section-padding-y-xl * 1.75; }
   }
 
   &.\--bottom {
-    padding-bottom: $padding-default * 2;
+    padding-bottom: $section-padding-y-default * 2;
     // retain lg or xl height when text is on bottom:
-    &.\--lg { padding-top: $padding-lg * 2 !important; }
-    &.\--xl { padding-top: $padding-xl * 2 !important; }
+    &.\--lg { padding-top: $section-padding-y-lg * 2 !important; }
+    &.\--xl { padding-top: $section-padding-y-xl * 2 !important; }
   }
 
   &.\--transparent {
@@ -92,4 +63,27 @@ $padding-xl: 10%;
     border-top: 2px solid rgba(#000, 0.1);
     border-bottom: 1px solid rgba(#000, 0.1);
   }
+}
+
+
+//
+// Banners
+
+.\--banner {
+  margin-bottom: 1.5rem;
+
+  .__title {
+    margin-bottom: 0.25rem;
+    font-weight: $type-regular;
+  }
+
+  .__pretitle { margin-bottom: 0.25rem; }
+
+  .__subtitle { @include type-lead(); }
+
+  @extend %font_smoothing;
+  margin-bottom: 1rem;
+  background-color: $gray-50;
+
+  .__title { @include type_d6(); }
 }

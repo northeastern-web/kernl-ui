@@ -3,7 +3,8 @@
 //
 
 .list-group {
-  @include list_unstyled();
+  padding-left: 0;
+  list-style: none;
   @include list_group_size();
   @include list_group_variant($type-color);
   position: relative;

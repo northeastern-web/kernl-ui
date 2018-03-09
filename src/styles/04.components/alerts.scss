@@ -83,13 +83,6 @@
     &.\--lg {
       margin: 1rem 0;
 
-      i, svg {
-        width: 100%;
-        height: 100%;
-        max-width: 2rem;
-        max-height: 2rem;
-      }
-
       @include mqbp-up(lg) {
         margin: 0 auto;
       }
