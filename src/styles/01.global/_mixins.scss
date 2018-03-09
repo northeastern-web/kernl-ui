@@ -152,22 +152,6 @@
   @if $colorContrast { opacity: 0.54; }
 }
 
-// List Unstyled
-@mixin list_unstyled() {
-  padding-left: 0;
-  list-style: none;
-}
-
-// Font Smoothing / Antialiased
-@mixin font_smoothing() {
-  @media
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi) {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-}
-
 
 //
 // Grid
@@ -217,24 +201,28 @@
   }
 }
 
-@mixin make-section($container: "default", $gutters: $grid-gutter-widths) {
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
-
+@mixin make-section($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-
       @if ($container == "flush") {
-        padding-right: $gutter;
-        padding-left: $gutter;
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          padding-right: $gutter;
+          padding-left: $gutter;
+        }
       } @elseif ($container == "contain") {
-        padding-right: 10%;
-        padding-left: 10%;
+        @if ($breakpoint == "md") {
+          padding-right: $contain;
+          padding-left: $contain;
+        }
       } @else {
-        padding-right: ($gutter * 2);
-        padding-left: ($gutter * 2);
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          padding-right: ($gutter * 2);
+          padding-left: ($gutter * 2);
+        } @else {
+          padding-right: $gutter;
+          padding-left: $gutter;
+        }
       }
     }
   }
@@ -298,26 +286,40 @@
 }
 
 // Masthead
-@mixin make-masthead($container: "default", $gutters: $grid-gutter-widths) {
+@mixin make-masthead($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-
       @if ($container == "flush") {
-        .__logo { margin-left: $gutter; }
-        .__drawer,
-        .__toggler,
-        .\--utility { margin-right: $gutter; }
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          .__logo { margin-left: $gutter; }
+
+          .__drawer,
+          .__toggler,
+          .\--utility { margin-right: $gutter; }
+        }
       } @elseif ($container == "contain") {
-        .__logo { margin-left: 10%; }
-        .__drawer,
-        .__toggler,
-        .\--utility { margin-right: 10%; }
+        @if ($breakpoint == "md") {
+          .__logo { margin-left: $contain; }
+
+          .__drawer,
+          .__toggler,
+          .\--utility { margin-right: $contain; }
+        }
       } @else {
-        .__logo { margin-left: $gutter*2; }
-        .__drawer,
-        .__toggler,
-        .\--utility { margin-right: $gutter*2; }
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          .__logo { margin-left: ($gutter * 2); }
+
+          .__drawer,
+          .__toggler,
+          .\--utility { margin-right: ($gutter * 2); }
+        } @else {
+          .__logo { margin-left: $gutter; }
+
+          .__drawer,
+          .__toggler,
+          .\--utility { margin-right: $gutter; }
+        }
       }
     }
   }
@@ -326,23 +328,31 @@
 // Mega menu
 // give megamenu same spacing as masthead;
 // same as make-row, but with padding and full gutter width
-@mixin make-megamenu($container: "default", $gutters: $grid-gutter-widths) {
+@mixin make-megamenu($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
   display: flex;
   flex-wrap: wrap;
 
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-
       @if ($container == "flush") {
-        padding-right: $gutter !important;
-        padding-left:  $gutter !important;
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          padding-right: $gutter !important;
+          padding-left:  $gutter !important;
+        }
       } @elseif ($container == "contain") {
-        padding-right: 10% !important;
-        padding-left:  10% !important;
+        @if ($breakpoint == "md") {
+          padding-right: $contain !important;
+          padding-left: $contain !important;
+        }
       } @else {
-        padding-right: $gutter * 2 !important;
-        padding-left:  $gutter * 2 !important;
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          padding-right: $gutter * 2 !important;
+          padding-left:  $gutter * 2 !important;
+        } @else {
+          padding-right: $gutter;
+          padding-left:  $gutter;
+        }
       }
     }
   }
@@ -376,18 +386,6 @@
   }
 }
 
-
-//
-// Miscellaneous
-
-// Clearfix
-@mixin clearfix() {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
 
 
 // Sizing

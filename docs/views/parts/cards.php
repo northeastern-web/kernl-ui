@@ -44,7 +44,7 @@ figure out --middle with a heading.
     </div>
 
     <div class="col --12@xs --6@sm --4@lg --2@xl">
-      <article class="card --tile bc--teal +noshadow">
+      <article class="card --tile bc--teal shadow--none">
         <a href="#" class="__link">
           <div class="__body">
             <h2 class="__title">Outlined Tile Card</h2>
@@ -125,7 +125,7 @@ figure out --middle with a heading.
     </div>
 
     <div class="col --12@xs --6@sm --3@lg">
-      <article class="card --outline">
+      <article class="card bc--gray shadow--none">
         <a href="#" class="__link">
           <div class="__body">
             <h2 class="__title">Goat Cheese on Toast Taleggio Cheeseburger Chalk and Swiss Feta Cheese</h2>
@@ -155,6 +155,9 @@ figure out --middle with a heading.
             <div class="__column">
               Head Cheese
             </div>
+            <div class="__column">
+              Col 2
+            </div>
           </div>
           <div class="__body">
             <h2 class="__title">Cheeseball Covered Title</h2>
@@ -183,11 +186,14 @@ figure out --middle with a heading.
           <div class="__column">
             This Header is Just Super
           </div>
+          <div class="__column">
+            Col 2
+          </div>
         </div>
         <div class="__body">
           <h2 class="__title">Taleggio Cheeseburger Chalk and Swiss Feta Cheese</h2>
           <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
-          <a class="btn --white --outline" href="#">Have a Clickity</a>
+          <a class="btn bc--white" href="#">Have a Clickity</a>
         </div>
       </article>
     </div>
@@ -229,11 +235,14 @@ figure out --middle with a heading.
           <div class="__column">
             This Header is Just Super
           </div>
+          <div class="__column">
+            Col 2
+          </div>
         </div>
         <div class="__body">
           <h2 class="__title">String Cheese Six-Pack</h2>
           <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
-          <a class="btn --white --outline" href="#">Have a Clickity</a>
+          <a class="btn bc--white" href="#">Have a Clickity</a>
         </div>
       </article>
     </div>
@@ -257,11 +266,14 @@ figure out --middle with a heading.
           <div class="__column">
             This Header is Just Super
           </div>
+          <div class="__column">
+            Col 2
+          </div>
         </div>
         <div class="__body">
           <h2 class="__title">Seven Columns at Large</h2>
           <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
-          <a class="btn --white --outline" href="#">Have a Clickity</a>
+          <a class="btn bc--white" href="#">Have a Clickity</a>
         </div>
       </article>
     </div>
@@ -273,6 +285,9 @@ figure out --middle with a heading.
           <div class="__header">
             <div class="__column">
               Lorem Header Ipsum
+            </div>
+            <div class="__column">
+              Col 2
             </div>
           </div>
           <div class="__body">
@@ -290,11 +305,14 @@ figure out --middle with a heading.
           <div class="__column">
             Lorem Header Ipsum
           </div>
+          <div class="__column">
+            Col 2
+          </div>
         </div>
         <div class="__body">
           <h2 class="__title">Eight Columns at Large</h2>
           <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
-          <a class="btn --white --outline" href="#">Have a Clickity</a>
+          <a class="btn bc--white" href="#">Have a Clickity</a>
         </div>
       </article>
     </div>
@@ -306,6 +324,9 @@ figure out --middle with a heading.
           <div class="__header">
             <div class="__column">
               Lorem Header Ipsum
+            </div>
+            <div class="__column">
+              Col 2
             </div>
           </div>
           <div class="__body">
@@ -327,7 +348,7 @@ figure out --middle with a heading.
         <div class="__body">
           <h2 class="__title">Eight Columns at Large</h2>
           <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
-          <a class="btn --white --outline" href="#">Have a Clickity</a>
+          <a class="btn bc--white" href="#">Have a Clickity</a>
         </div>
       </article>
     </div>

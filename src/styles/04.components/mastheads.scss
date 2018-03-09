@@ -3,14 +3,17 @@
 //
 
 .masthead {
+  // display: flex;
   position: relative;
+  // align-items: stretch;
   width: 100%;
+  // flex-shrink: 0;
   padding-top: 0;
   padding-bottom: 0;
   overflow: visible;
   z-index: 1000 !important;
-  @include clearfix();
-  @include font_smoothing();
+  @extend %clearfix;
+  @extend %font_smoothing;
 
   .__logo {
     max-width: 240px;
@@ -80,7 +83,11 @@
   }
 
   .__list {
-    @include list_unstyled();
+    padding-left: 0;
+list-style: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 0;
     clear: both;
     padding-top: 1rem;
 
@@ -383,7 +390,8 @@
           }
 
           ul {
-            @include list_unstyled();
+            padding-left: 0;
+list-style: none;
 
             .__link {
               margin: 0;
@@ -606,8 +614,8 @@
 }
 
 .contain .masthead {
-  @include make-masthead('contain');
-  &.\--megamenu .\+children .__submenu { @include make-megamenu('contain'); }
+  @include make-masthead('contain', $contain: $contain-width);
+  &.\--megamenu .\+children .__submenu { @include make-megamenu('contain', $contain: $contain-width); }
 }
 
 
@@ -624,6 +632,11 @@
     .__drawer {
       visibility: visible;
       transform: translateX(0);
+
+      .hidden--up\@lg {
+        .__logo { margin-left: 1rem; }
+        .__toggler { margin-right: 1rem; }
+      }
 
       .__logo,
       .__toggler,

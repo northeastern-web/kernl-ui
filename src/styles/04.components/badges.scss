@@ -17,7 +17,7 @@
   vertical-align: middle; // req for inline use
   white-space: nowrap;
   z-index: 1;
-  @include font_smoothing();
+  @extend %font_smoothing;
 
   a {
     color: inherit;

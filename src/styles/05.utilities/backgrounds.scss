@@ -31,11 +31,12 @@
   }
 
   > * {
-    @include font_smoothing();
+    @extend %font_smoothing;
     position: relative;
     z-index: 1;
   }
 
+  .btn,
   .card { text-shadow: none; }
 }
 

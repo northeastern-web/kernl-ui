@@ -253,14 +253,14 @@
     height: 100%;
   }
 
-  &:after {
-    height: 0;
-    display: none;
-  }
-
+  &:after,
   .__graphic + .__header {
     width: $width_graphic;
     left: $width_graphic;
+  }
+
+  .__graphic + .__header {
+    top: 0;
   }
 
   .__footer {
@@ -466,13 +466,17 @@
 
 @mixin bg_variant($color, $hover_color, $text_color: null) {
   background-color: $color !important;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
   @if ($text_color) {
     color: $text_color;
   }
 
   &.btn,
-  .__link,
-  .__footer__link {
+  &.__link,
+  &.__footer__link {
     border-color: transparent;
     @if ($text_color) {
       color: $text_color !important;
@@ -498,8 +502,11 @@
 
   &.btn,
   .__link,
-  .__footer__link {
+  &.__footer__link {
     color: $color;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
 
     @include hover_focus_active {
       background-color: $hover_color !important;

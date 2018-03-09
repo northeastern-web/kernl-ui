@@ -2,9 +2,9 @@
 
 <section>
   <nav class="nav --tabbed">
-    <ul class="__list fs--sm nav-fill" role="tablist">
+    <ul class="__list fs--sm nav--fill" role="tablist">
       <li class="__item">
-        <a class="__link active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Base</a>
+        <a class="__link --active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Base</a>
       </li>
       <li class="__item">
         <a class="__link" data-toggle="tab" href="#tab_2" role="tab" aria-expanded="false">Base on Dark</a>
@@ -33,7 +33,7 @@
     </ul>
   </nav>
 
-  <div class="hidden section active" id="tab_1" role="tabpanel">
+  <div class="hidden section --active" id="tab_1" role="tabpanel">
     <header class="k_section__header">Base Style</header>
     <?= listgroup(''); ?>
   </div>

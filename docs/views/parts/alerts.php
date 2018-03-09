@@ -62,6 +62,7 @@
       <div class="alert">
         <header class="__header">
           <div class="__column">Header Text has Words</div>
+          <div class="__column">Col 2</div>
         </header>
         <div class="__body">
           <div class="__title">Welcome to the Jungle</div>

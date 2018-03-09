@@ -34,13 +34,13 @@ $l = 0;
         <ul class="__list" role="tablist">
           <?php foreach($colors as $color) : ?>
             <li class="__item">
-              <a class="__link<?= $i == 0 ? ' active' : ''; ?> bg--<?= $color[0]; ?>" data-toggle="tab" href="#tab_<?= $color[0]; ?>_1" role="tab" aria-expanded="<?= $i == 0 ? 'true' : 'false'; ?>"><?= $color[1]; ?></a>
+              <a class="__link<?= $i == 0 ? ' --active' : ''; ?> bg--<?= $color[0]; ?>" data-toggle="tab" href="#tab_<?= $color[0]; ?>_1" role="tab" aria-expanded="<?= $i == 0 ? 'true' : 'false'; ?>"><?= $color[1]; ?></a>
             </li>
           <?php $i++; endforeach; ?>
         </ul>
         <?php foreach($colors as $color) : ?>
       </nav>
-      <div class="hidden pt--1@xs<?= $j == 0 ? ' active' :  ''; ?>" id="tab_<?= $color[0]; ?>_1" role="tabpanel">
+      <div class="hidden pt--1@xs<?= $j == 0 ? ' --active' :  ''; ?>" id="tab_<?= $color[0]; ?>_1" role="tabpanel">
           <?= colorPalette($color[0], $color[1]); ?>
       </div>
       <?php $j++; endforeach; ?>
@@ -51,13 +51,13 @@ $l = 0;
         <ul class="__list" role="tablist">
           <?php foreach($colors as $color) : ?>
             <li class="__item">
-              <a class="__link<?= $k == 1 ? ' active' : ''; ?> bg--<?= $color[0]; ?>" data-toggle="tab" href="#tab_<?= $color[0]; ?>_2" role="tab" aria-expanded="<?= $k == 1 ? 'true' : 'false'; ?>"><?= $color[1]; ?></a>
+              <a class="__link<?= $k == 1 ? ' --active' : ''; ?> bg--<?= $color[0]; ?>" data-toggle="tab" href="#tab_<?= $color[0]; ?>_2" role="tab" aria-expanded="<?= $k == 1 ? 'true' : 'false'; ?>"><?= $color[1]; ?></a>
             </li>
           <?php $k++; endforeach; ?>
         </ul>
         <?php foreach($colors as $color) : ?>
       </nav>
-      <div class="hidden pt--1@xs<?= $l == 1 ? ' active' :  ''; ?>" id="tab_<?= $color[0]; ?>_2" role="tabpanel">
+      <div class="hidden pt--1@xs<?= $l == 1 ? ' --active' :  ''; ?>" id="tab_<?= $color[0]; ?>_2" role="tabpanel">
           <?= colorPalette($color[0], $color[1]); ?>
       </div>
       <?php $l++; endforeach; ?>
