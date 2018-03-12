@@ -287,3 +287,29 @@
     background: initial;
   }
 }
+
+.\+nav .--tabbed {
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 0;
+
+  .__item {
+    background-color: rgba(255, 255, 255, 0.65);
+    margin-right: 2px;
+  }
+
+  .__link {
+    border-bottom: 0 none !important;
+    color: $type-color;
+    text-shadow: none;
+
+    &:hover {
+      color: $type-color;
+    }
+
+    &.\--active,
+    &.\--active:hover {
+      color: $type-color;
+    }
+  }
+}
