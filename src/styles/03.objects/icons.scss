@@ -11,19 +11,17 @@
   line-height: 0;
   text-align: left;
 
-  i, svg {
+  svg {
     width: 2rem;
     height: 2rem;
   }
 
   &.\--thin {
-    i, svg {
-      stroke-width: 1;
-    }
+    svg { stroke-width: 1; }
   }
 
   &.\--lg {
-    i, svg {
+    svg {
       width: 3rem;
       height: 3rem;
     }

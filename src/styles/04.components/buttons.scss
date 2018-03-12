@@ -33,7 +33,11 @@
   // Shapes
   &.\--pill { border-radius: 1000px; }
 
-  .__icon { @extend %icon; }
+  .__icon {
+    @extend %icon;
+
+    svg { position: absolute; }
+  }
 
   //
   // Sizing
