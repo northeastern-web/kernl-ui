@@ -23,9 +23,18 @@
     border: 1px solid #ccc;
     color: #777;
     text-align: center;
-    line-height: 2.5rem;
+    line-height: 2.75rem;
 
     &:hover { color: $type-link; }
+  }
+
+  .__icon {
+    @extend %icon;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 
   &.share-buttons--stacked {
