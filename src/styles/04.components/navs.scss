@@ -295,13 +295,17 @@
 
   .__item {
     background-color: rgba(255, 255, 255, 0.65);
-    margin-right: 2px;
+    margin-right: 1px;
+    font-size: $fs-sm;
   }
 
   .__link {
     border-bottom: 0 none !important;
+    background-color: rgba(255, 255, 255, 0.5);
     color: $type-color;
+    padding: 0.75rem 1.5rem;
     text-shadow: none;
+    transition: background-color 0.2s ease;
 
     &:hover {
       color: $type-color;
@@ -309,6 +313,7 @@
 
     &.\--active,
     &.\--active:hover {
+      background-color: rgba(255, 255, 255, 1);
       color: $type-color;
     }
   }
