@@ -14,47 +14,49 @@ define( 'SHARE_URL', url_elements() );
       <ul class="share-buttons">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
-            <i class="icon--facebook"></i></a>
+            <span class="__icon --thin"><i data-feather="facebook"></i></span>
+          </a>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('twitter', '<?php echo SHARE_URL; ?>', 520, 442)">
-            <i class="icon--twitter"></i>
+            <span class="__icon --thin"><i data-feather="twitter"></i></span>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
-            <i class="icon--briefcase"></i>
+            <span class="__icon --thin"><i data-feather="briefcase"></i></span>
           </a>
         </li>
         <li>
           <a id="podshare_email" href="javascript:PODShare('email', '<?php echo SHARE_URL; ?>', 100, 100)">
-            <i class="icon--mail"></i>
+            <span class="__icon --thin"><i data-feather="mail"></i></span>
           </a>
         </li>
       </ul>
     </div>
+
     <div class="col --12@xs --6@md p--y-2@xs">
       <header class="k_section__header">Stacked</header>
       <ul class="share-buttons share-buttons--stacked">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
-            <i class="icon--facebook"></i></a>
+            <span class="__icon --thin"><i data-feather="facebook"></i></span>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('twitter', '<?php echo SHARE_URL; ?>', 520, 442)">
-            <i class="icon--twitter"></i>
+            <span class="__icon --thin"><i data-feather="twitter"></i></span>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
-            <i class="icon--briefcase"></i>
+            <span class="__icon --thin"><i data-feather="briefcase"></i></span>
           </a>
         </li>
         <li>
           <a id="podshare_email" href="javascript:PODShare('email', '<?php echo SHARE_URL; ?>', 100, 100)">
-            <i class="icon--mail"></i>
+            <span class="__icon --thin"><i data-feather="mail"></i></span>
           </a>
         </li>
       </ul>

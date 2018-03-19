@@ -43,8 +43,12 @@ function masthead($id, $masthead_classes, $banner_classes) {
           <li class="__item"><a class="__link" href="' . $url .'">Venenatis Pharetra Sit Dolor</a></li>
         </ul>
       </li>
-      <li class="__item">
+      <li class="__item +children">
         <a class="__link" href="' . $url .'">Malesuada Nucleus</a>
+        <ul class="__submenu">
+          <li class="__item"><a class="__link" href="' . $url .'">Quam Vulputate Nibh</a></li>
+          <li class="__item"><a class="__link" href="' . $url .'">Tortor Fusce</a></li>
+        </ul>
       </li>
     </ul>
   </nav>

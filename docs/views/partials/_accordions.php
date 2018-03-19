@@ -14,7 +14,7 @@ function accordion($id, $variant, $section_classes, $acc_class) {
     <div class="row">
       <div class="col --12@xs pb--1@xs">
         <header class="k_section__header">' . $variant . ' Accordion</header>
-        <div id="accordion_' . $id . '" class="l__grid__copy accordion ' . $acc_class . '">
+        <div id="accordion_' . $id . '" class="accordion ' . $acc_class . '">
           <div class="__item">
             <div class="__title"
                  data-toggle="collapse"
