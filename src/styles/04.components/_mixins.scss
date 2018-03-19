@@ -178,14 +178,12 @@
   @include border_radius($border-radius);
 
   .__icon {
-    height: $font-size;
-    width: $font-size;
+    height: round($font-size * 1.25);
+    width: round($font-size * 1.25);
 
-    i, svg {
-      height: $font-size * 1.25;
-      width: $font-size * 1.25;
-      position: absolute;
-      top: -1px;
+    svg {
+      height: round($font-size * 1.25);
+      width: round($font-size * 1.25);
     }
 
     &.\--left {
@@ -202,10 +200,9 @@
       margin-top: $font-size / 2;
       margin-bottom: $font-size / 2;
 
-      i, svg {
+      svg {
         height: $font-size * 2;
         width: $font-size * 2;
-        top: 0;
       }
     }
   }

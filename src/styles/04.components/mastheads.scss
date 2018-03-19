@@ -84,7 +84,7 @@
 
   .__list {
     padding-left: 0;
-list-style: none;
+    list-style: none;
     margin-left: 1rem;
     margin-right: 1rem;
     padding-left: 0;
@@ -198,71 +198,47 @@ list-style: none;
         position: absolute;
         height: auto;
         top: 4.5rem;
-        background: rgba(#f2f2f2, 0.9);
-        padding: 0.5rem !important;
+        right: 0;
+        background: #fff;
+        padding: 0.5rem 0 !important;
+        border: 1px solid $gray-200;
         border-radius: 2px;
-        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
         z-index: 200;
-        min-width: 190%;
-        max-width: 300%;
-        width: auto;
-        left: -45%;
+        width: 13rem;
 
         .__item > a,
         .__link {
-          @include type-sm();
-          padding: 0.5rem;
+          font-size: ($fs-sm * 0.95);
+          line-height: 1.1;
+          padding: 0.625rem 1rem;
           color: inherit;
           text-decoration: none;
           border-radius: 2px;
 
           &:hover,
           &:focus {
-            background: $type-color;
-            color: #fff;
+            background: rgba($gray-200, 0.4);
+            color: inherit;
           }
         }
 
         &:after {
+          transform: rotate(45deg);
+          content: '';
           position: absolute;
-          content: "";
-          border-style: solid;
-          border-width: 0 9px 9px 9px;
-          border-color: transparent transparent rgba(#f2f2f2, 0.9) transparent;
-          -webkit-transform: rotate(360deg);
-          border-style: inset;
-          top: -0.5rem;
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: 300;
+          top: -6px;
+          right: 30px;
+          width: 10px;
+          height: 10px;
+          border-left: 1px solid $gray-200;
+          border-top: 1px solid $gray-200;
+          background: #fff;
         }
       }
 
       &:hover {
         .__submenu {
           display: block;
-        }
-      }
-    }
-
-    &:last-child {
-      @include mqbp-up(lg) {
-        &.__item > a,
-        >.__link::after {
-          content: none !important;
-        }
-
-        &:hover {
-          .__submenu {
-            left: auto;
-            right: 0;
-
-            &:after {
-              left: auto;
-              right: 20%;
-              transform: translateX(-20%);
-            }
-          }
         }
       }
     }
@@ -319,6 +295,13 @@ list-style: none;
         .\--active > .__link,
         .\--active.__item > a { border-bottom-color: rgba($type-color, 0.35); }
       }
+
+      .\+children {
+        .__item > a,
+        .__link {
+          border-bottom: 0 none !important;
+        }
+      }
     }
 
     @include mqbp-up(xl) {
@@ -353,7 +336,9 @@ list-style: none;
           background: $gray-100;
           max-height: 0;
           min-width: 0;
+          width: auto;
           border-radius: 0;
+          border: 0 none;
           box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0);
           overflow: hidden;
           transition: max-height 0.4s ease 0.1s,

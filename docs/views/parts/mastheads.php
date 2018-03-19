@@ -46,7 +46,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
 
 
 <!-- masthead with megamenu nav -->
-<!-- <section class="section k_bg-light">
+<section class="section k_bg-light">
   <header class="k_section__header">Masthead, Megamenu</header>
 </section>
 
@@ -244,9 +244,9 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
     </ul>
   </nav>
 
-</header> -->
+</header>
 <!-- end mega-menu masthead -->
-<!-- <div class="section --lg +bgimg --middle ta--c">
+<div class="section --lg +bgimg --middle ta--c">
   <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
-</div> -->
-      <?php // include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_modal-search.php'; ?>
+</div>
+      <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_modal-search.php'; ?>

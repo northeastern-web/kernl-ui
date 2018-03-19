@@ -172,7 +172,7 @@
       <nav class="nav --tabbed --bordered">
         <ul class="__list" role="tablist">
           <li class="__item">
-            <a class="__link active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Backgrounds</a>
+            <a class="__link --active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Backgrounds</a>
           </li>
           <li class="__item">
             <a class="__link" data-toggle="tab" href="#tab_2" role="tab" aria-expanded="false">Text Color</a>
@@ -185,7 +185,7 @@
           </li>
         </ul>
       </nav>
-      <div class="hidden pt--1@xs active" id="tab_1" role="tabpanel">
+      <div class="hidden pt--1@xs --active" id="tab_1" role="tabpanel">
         <div class="row">
           <div class="col --12@xs --6@md">
             <h3 class="fs--root text-style-block">Background Image Positions</h3>
@@ -235,9 +235,11 @@
       </div>
       <div class="hidden pt--1@xs" id="tab_3" role="tabpanel">
         <h3>Borders &amp; Corners</h3>
+        <p>coming soon...</p>
       </div>
       <div class="hidden pt--3@md" id="tab_4" role="tabpanel">
         <h3>Shadows</h3>
+        <p>coming soon...</p>
       </div>
     </div>
 </section>

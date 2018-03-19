@@ -50,6 +50,27 @@
   </div>
 </section>
 
+<section class="section --banner --md +bgimg mb--1@xs mb--2@lg +nav">
+  <h1 class="__title">Banner with Tabbed Navigation</h1>
+  <div class="__subtitle">Includes Background Image</div>
+  <nav class="nav --tabbed">
+    <ul class="__list" role="tablist">
+      <li class="__item">
+        <a class="__link --active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Tab 1</a>
+      </li>
+      <li class="__item">
+        <a class="__link" data-toggle="tab" href="#tab_2" role="tab" aria-expanded="false">Tab 2</a>
+      </li>
+      <li class="__item">
+        <a class="__link" data-toggle="tab" href="#tab_3" role="tab" aria-expanded="false">Tab 3</a>
+      </li>
+      <li class="__item">
+        <a class="__link" data-toggle="tab" href="#tab_4" role="tab" aria-expanded="false">Tab 4</a>
+      </li>
+    </ul>
+  </nav>
+</section>
+
 <section class="section k_bg-light">
   <header class="k_section__header">Tabbed Nav</header>
   <div class="row">
