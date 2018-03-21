@@ -273,7 +273,7 @@
       .__item a,
       .__link,
       .\--active>.__link,
-      .\--active.__item a {
+      .\--active.__item > a {
         color: #fff;
       }
     }
