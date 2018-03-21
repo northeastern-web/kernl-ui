@@ -2,15 +2,16 @@
 
 /*
  * int $id                id of instance
- * str $masthead_classes  css classes assigned to masthead 
+ * str $masthead_classes  css classes assigned to masthead
  * str $banner_classes    css classes assigned to banner
  */
 
-function masthead($id, $masthead_classes, $banner_classes) {
-  ($masthead_classes == '--overlay') ? $logo = "-white" : $logo = "";
-  $url = "{$_SERVER['REQUEST_URI']}";
+function masthead($id, $masthead_classes, $banner_classes)
+{
+    ($masthead_classes == '--overlay') ? $logo = "-white" : $logo = "";
+    $url = "{$_SERVER['REQUEST_URI']}";
 
-  echo '
+    echo '
 <header class="masthead ' . $masthead_classes . '">
   <a class="__logo" href="' . $url . '">
     <img class="__logo__image" alt="Logo" src="/src/images/logo' . $logo . '.png">
@@ -25,10 +26,10 @@ function masthead($id, $masthead_classes, $banner_classes) {
     </div>
 
     <ul class="__list">
-      <li class="__item --active">
+      <li class="__item">
         <a class="__link" href="' . $url .'">Lorem Ipsum</a>
       </li>
-      <li class="__item +children">
+      <li class="__item +children --active">
         <a class="__link" href="' . $url .'">Bibendum</a>
         <ul class="__submenu">
           <li class="__item"><a class="__link" href="' . $url .'">Quam Vulputate Nibh</a></li>
@@ -57,4 +58,3 @@ function masthead($id, $masthead_classes, $banner_classes) {
   <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>';
 }
-?>
