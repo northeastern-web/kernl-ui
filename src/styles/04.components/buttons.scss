@@ -25,13 +25,13 @@
   //
   // Full width button
   &.\--block {
-    @extend %block; 
+    @extend %block;
     white-space: initial;
   }
 
   //
   // Shapes
-  &.\--pill { border-radius: 1000px; }
+  &.\--pill { border-radius: 1000px !important; }
 
   .__icon {
     @extend %icon;
