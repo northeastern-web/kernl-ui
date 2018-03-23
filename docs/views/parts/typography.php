@@ -378,18 +378,28 @@
     <div class="col --12@xs --4@lg">
       <blockquote>
         Default blockquote says lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        <footer cite="http://www.washingtonpost.com/">
+          <cite>
+            <b>Person Name</b>
+            <br><i>Washington Post</i>
+          </cite>
+        </footer>
       </blockquote>
     </div>
     <div class="col --12@xs --4@lg">
-      <blockquote class="bg--blue-dark tc--white">
-        Blockquote says a colored background is nice sometimes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+      <blockquote class="bg--yellow">
+        <p>Blockquote says a colored background is nice sometimes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       </blockquote>
     </div>
     <div class="col --12@xs --4@lg">
-      <blockquote class="+shadow">
+      <blockquote class="bg--black">
         Shadowy blockquote has class. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-        <cite>Person Name<br>
-        Washington Post</cite>
+        <footer cite="http://www.washingtonpost.com/">
+          <cite>
+            <b>Person Name</b>
+            <br><i>Washington Post</i>
+          </cite>
+        </footer>
       </blockquote>
     </div>
   </div>

@@ -76,22 +76,23 @@ a {
 // Blockquotes
 
 blockquote {
+  @extend %font_smoothing;
+
   margin: 0 0 1rem;
   padding: 1rem;
 
-  @extend %font_smoothing;
+  @include mqbp-up(md) { padding: 2rem; }
 
-  @include mqbp-up(md) {
-    padding: 2rem;
-  }
+  &, p { @include type_lead(); }
 
-  &, p {
-    @include type_lead();
-    margin-bottom: 1rem;
-  }
+  footer { padding-top: .25rem; }
 
+  footer,
   cite {
     display: block;
+    font-family: $type-sans;
+    font-weight: 400;
+    font-style: normal;
     font-size: $fs-root;
     line-height: 1.5;
   }
