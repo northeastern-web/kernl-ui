@@ -172,9 +172,9 @@
 
   <hr>
 
-  <section class="section">
+  <section class="section --nogutters">
     <header class="k_section__header">Grid, No Gutters</header>
-    <div class="row --nogutters">
+    <div class="row">
       <div class="col --12@xs --1@md">
         <div class="col-content">1</div>
       </div>

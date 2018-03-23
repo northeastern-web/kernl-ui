@@ -34,9 +34,8 @@
       padding: 0;
 
       .__link {
-        padding: 0.4rem 0.75rem 0.4rem 1.5rem;
+        padding: 0.75rem 0.75rem 0.75rem 1.5rem; // judicious tap zone
         border-bottom: none;
-        // font-size: $fs-sm;
         color: $gray-500;
       }
 
@@ -58,6 +57,12 @@
         background-color: inherit;
       }
     }
+
+    &.\+children {
+      > .__link {
+        padding-bottom: 0.5rem;
+      }
+    }
   }
 
 
@@ -74,6 +79,7 @@
 
     .__item {
       font-size: $fs-sm;
+
       .__list { margin-bottom: 0.5rem; }
 
       .__item {
@@ -92,6 +98,7 @@
         .__list {
           .__link {
             position: relative;
+            padding: 0.4rem 0.75rem 0.4rem 1.5rem;
 
             &::before {
               content: "";
@@ -289,9 +296,7 @@
 }
 
 .\+nav .--tabbed {
-  margin-top: 1rem;
-  position: absolute;
-  bottom: 0;
+  margin-top: 2rem;
 
   .__item {
     background-color: rgba(255, 255, 255, 0.65);
@@ -316,5 +321,10 @@
       background-color: rgba(255, 255, 255, 1);
       color: $type-color;
     }
+  }
+
+  @include mqbp-up(lg) {
+    position: absolute;
+    bottom: 0;
   }
 }

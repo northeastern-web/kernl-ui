@@ -13,7 +13,7 @@
     <ul class="ls--inline f--r@md tt--caps fs--xs mb--0@xs" id="contSelect">
       <li><a class="tc--gray-500" id="contain" href="#">Contain</a></li>
       <li><a class="tc--gray-500 --active" id="default" href="#">Default</a></li>
-      <li><a class="tc--gray-500" id="flush" href="#">Flush</a></li>
+      <li><a class="tc--gray-500" id="full" href="#">Full</a></li>
     </ul>
 
 </header>

@@ -50,7 +50,7 @@
   </div>
 </section>
 
-<section class="section --banner --md +bgimg mb--1@xs mb--2@lg +nav">
+<section class="section --banner --md +bgimg +nav">
   <h1 class="__title">Banner with Tabbed Navigation</h1>
   <div class="__subtitle">Includes Background Image</div>
   <nav class="nav --tabbed">

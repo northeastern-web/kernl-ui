@@ -156,7 +156,10 @@ html { background-color: #333; }
   }
 }
 
-.k_main { flex: 1; }
+.k_main {
+  flex: 1;
+  position: relative;
+}
 
 .k_footer {
   color: rgba(255, 255, 255, 0.7);
