@@ -10,7 +10,6 @@
   margin-left: auto;
   padding-top: $section-padding-y-default;
   padding-bottom: $section-padding-y-default;
-  overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
   @include make-section();
 }
 
