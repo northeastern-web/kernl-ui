@@ -78,14 +78,20 @@ a {
 blockquote {
   @extend %font_smoothing;
 
+  @include type_lead();
   margin: 0 0 1rem;
   padding: 1rem;
 
   @include mqbp-up(md) { padding: 2rem; }
 
-  &, p { @include type_lead(); }
+  p {
+    margin-bottom: 0;
+    font-family: inherit;
 
-  footer { padding-top: .25rem; }
+    +p { padding-top: .75rem; }
+  }
+
+  footer { padding-top: .3rem; }
 
   footer,
   cite {

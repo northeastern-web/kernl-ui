@@ -388,7 +388,7 @@
     </div>
     <div class="col --12@xs --4@lg">
       <blockquote class="bg--yellow">
-        <p>Blockquote says a colored background is nice sometimes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <p>Blockquote says a colored background is nice sometimes. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       </blockquote>
     </div>
     <div class="col --12@xs --4@lg">
