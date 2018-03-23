@@ -62,12 +62,5 @@
 
 
 //
-// Tables
-.\+th--sm th {
-  @include type-xs();
-  color: rgba($type-color, 0.65);
-}
-
-//
 // Colors
 @include generate_colors('tc'); // run generator for type colors

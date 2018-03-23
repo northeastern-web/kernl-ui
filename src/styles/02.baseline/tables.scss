@@ -48,3 +48,10 @@ caption {
 }
 
 th { text-align: left; }
+
+//
+// small-text table-heading cell option
+.\+th--sm thead th {
+  @include type-xs();
+  color: rgba($type-color, 0.65);
+}

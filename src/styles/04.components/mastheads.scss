@@ -3,11 +3,8 @@
 //
 
 .masthead {
-  // display: flex;
   position: relative;
-  // align-items: stretch;
   width: 100%;
-  // flex-shrink: 0;
   padding-top: 0;
   padding-bottom: 0;
   overflow: visible;
@@ -249,13 +246,13 @@
 
   // position the nav over an image or background
   &.\--overlay {
-    .__logo,
-    .__toggler {
+    > .__logo,
+    > .__toggler {
       position: absolute;
       top: 0;
     }
 
-    .__toggler {
+    > .__toggler {
       color: #fff;
       right: 0;
     }
@@ -376,7 +373,7 @@
 
           ul {
             padding-left: 0;
-list-style: none;
+            list-style: none;
 
             .__link {
               margin: 0;
@@ -511,7 +508,7 @@ list-style: none;
     &.\--megamenu {
       .\+children .__submenu {
         @include mqbp-up(lg) { top: 5.85rem; }
-        @include mqbp-up(xl) { top: 6.375rem; }
+        @include mqbp-up(xl) { top: 6.3625rem; }
         @include mqbp-up(xx) { top: 6.25rem; }
       }
     }
@@ -590,12 +587,18 @@ list-style: none;
 
 .masthead {
   @include make-masthead();
-  &.\--megamenu .\+children .__submenu { @include make-megamenu(); }
+  &.\--megamenu .\+children .__submenu {
+    display: none;
+    flex-wrap: wrap;
+    @include make-megamenu();
+
+    @include mqbp-up(lg) { display: flex; }
+  }
 }
 
-.flush .masthead {
-  @include make-masthead('flush');
-  &.\--megamenu .\+children .__submenu { @include make-megamenu('flush'); }
+.full .masthead {
+  @include make-masthead('full');
+  &.\--megamenu .\+children .__submenu { @include make-megamenu('full'); }
 }
 
 .contain .masthead {

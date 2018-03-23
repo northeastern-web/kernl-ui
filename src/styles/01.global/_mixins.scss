@@ -205,7 +205,7 @@
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      @if ($container == "flush") {
+      @if ($container == "full") {
         @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
           padding-right: $gutter;
           padding-left: $gutter;
@@ -290,7 +290,7 @@
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      @if ($container == "flush") {
+      @if ($container == "full") {
         @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
           .__logo { margin-left: $gutter; }
 
@@ -329,13 +329,10 @@
 // give megamenu same spacing as masthead;
 // same as make-row, but with padding and full gutter width
 @mixin make-megamenu($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
-  display: flex;
-  flex-wrap: wrap;
-
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      @if ($container == "flush") {
+      @if ($container == "full") {
         @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
           padding-right: $gutter !important;
           padding-left:  $gutter !important;

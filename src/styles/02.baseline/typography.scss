@@ -80,20 +80,23 @@ blockquote {
 
   @include type_lead();
   margin: 0 0 1rem;
-  padding: 1rem;
+  padding: 1rem 1.25rem;
 
   @include mqbp-up(md) { padding: 2rem; }
 
   p {
-    margin-bottom: 0;
     font-family: inherit;
 
-    +p { padding-top: .75rem; }
+    &:last-child { margin-bottom: 0; }
   }
 
   a { color: inherit; }
 
-  footer { padding-top: .3rem; }
+  footer {
+    padding-top: 0.5rem;
+
+    @include mqbp-up(md) { padding-top: 0.75rem; }
+  }
 
   footer,
   cite {
@@ -103,6 +106,8 @@ blockquote {
     font-style: normal;
     font-size: $fs-root;
     line-height: 1.5;
+
+    @include mqbp-up(lg) { line-height: 1.625; }
   }
 }
 
@@ -154,15 +159,20 @@ mark {
 
 sub,
 sup {
-  font-size: 75%;
+  font-size: $fs-xs;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
+  margin: 0 2px;
 }
 
 sub { bottom: -0.25em; }
 
-sup { top: -0.5em; }
+sup { top: -0.425em; }
+
+h2, h3 {
+  sup { top: -0.85em; }
+}
 
 hr {
   box-sizing: content-box;
