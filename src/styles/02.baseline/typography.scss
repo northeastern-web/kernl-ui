@@ -90,7 +90,8 @@ blockquote {
     &:last-child { margin-bottom: 0; }
   }
 
-  a { color: inherit; }
+  a,
+  a:hover { color: inherit; }
 
   footer {
     padding-top: 0.5rem;

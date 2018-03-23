@@ -408,7 +408,7 @@
         <footer cite="http://www.washingtonpost.com/">
           <cite>
             <b>Person Name</b>
-            <br><i>Washington Post</i>
+            <br><i><a href="#">Washington Post</a></i>
           </cite>
         </footer>
       </blockquote>
