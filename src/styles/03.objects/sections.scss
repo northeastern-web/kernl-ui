@@ -10,29 +10,45 @@
   margin-left: auto;
   padding-top: $section-padding-y-default;
   padding-bottom: $section-padding-y-default;
+  overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
   @include make-section();
 }
 
-.flush .section { @include make-section('flush'); }
+.full .section { @include make-section('full'); }
 
 .contain .section { @include make-section('contain', $contain: 10%); }
 
 .section {
-  .section { padding: 0; }
+  .section {
+    padding: 0;
+    overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
+  }
 
   &.\--md {
     padding-top: $section-padding-y-md;
     padding-bottom: $section-padding-y-md;
+
+    @include mqbp-up(lg) {
+      &.\+nav { padding-bottom: ($section-padding-y-md * 1.5); }
+    }
   }
 
   &.\--lg {
     padding-top: $section-padding-y-lg;
     padding-bottom: $section-padding-y-lg;
+
+    @include mqbp-up(lg) {
+      &.\+nav { padding-bottom: ($section-padding-y-lg * 1.5); }
+    }
   }
 
   &.\--xl {
     padding-top: $section-padding-y-xl;
     padding-bottom: $section-padding-y-xl;
+
+    @include mqbp-up(lg) {
+      &.\+nav { padding-bottom: ($section-padding-y-xl * 1.5); }
+    }
   }
 
   &.\--top {
@@ -62,6 +78,30 @@
   &.\+shadow {
     border-top: 2px solid rgba(#000, 0.1);
     border-bottom: 1px solid rgba(#000, 0.1);
+  }
+
+  &.\--flush {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+
+/**
+ * No-gutter Grid
+ */
+
+// Remove the negative margin from a section's default .row, then the horizontal padding
+// from all immediate children columns (to prevent runaway style inheritance).
+.\--nogutters {
+  > .row {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 }
 

@@ -55,7 +55,7 @@ $("#contSelect").on('click touch', 'li a', function(e) {
   $('#contSelect .\\--active').removeClass('--active');
   const contID = $(this).closest('li a').prop('id');
   $(this).closest('li a').addClass('--active');
-  const contArray = ['default', 'flush', 'contain'];
+  const contArray = ['default', 'full', 'contain'];
   $.each(contArray, function(i, v) {
      $('body').removeClass(v);
   });
