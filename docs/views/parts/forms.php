@@ -4,11 +4,11 @@
       <form action="" method="">
         <div class="__group">
           <label for="exampleText">Text Label</label>
-          <input type="email" class="__control" id="exampleText" aria-describedby="textHelp" placeholder="Enter some text">
+          <input type="email" id="exampleText" aria-describedby="textHelp" placeholder="Enter some text">
         </div>
         <div class="__group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="__control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
           <div class="alert --sm bg--yellow">
             <div class="__body">
               <div class="__excerpt"><b>Here's an alert</b>: We'll never share your email with anyone else.</div>
@@ -17,11 +17,11 @@
         </div>
         <div class="__group">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="__control" id="exampleInputPassword1" placeholder="Password">
+          <input type="password" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="__group">
           <label for="exampleSelect1">Example select</label>
-          <select class="__control" id="exampleSelect1">
+          <select id="exampleSelect1">
             <option selected="selected" disabled="disabled">Select...</option>
             <option>Small</option>
             <option>Medium</option>
@@ -31,7 +31,7 @@
         </div>
         <div class="__group">
           <label for="exampleSelect2">Example multiple select</label>
-          <select multiple class="__control" id="exampleSelect2">
+          <select multiple id="exampleSelect2">
             <option>Extra Small</option>
             <option>Small</option>
             <option>Medium</option>
@@ -41,7 +41,7 @@
         </div>
         <div class="__group">
           <label for="exampleTextarea">Example textarea</label>
-          <textarea class="__control" id="exampleTextarea" rows="3"></textarea>
+          <textarea id="exampleTextarea" rows="3"></textarea>
         </div>
         <div class="__group">
           <label for="exampleInputFile">File input</label>
@@ -93,12 +93,12 @@
         </div>
 
         <div class="__group __search my--3@md">
-          <input type="text" class="__control" placeholder="Search ( __search )">
+          <input type="text" placeholder="Search ( __search )">
           <button type="submit" class="btn btn--primary">Go</button>
         </div>
 
         <div class="__group __search +line mb--3@md">
-          <input type="text" class="__control" placeholder="Search ( __search +line )">
+          <input type="text" placeholder="Search ( __search +line )">
           <button type="submit" class="btn btn--primary">Go</button>
         </div>
 
@@ -113,7 +113,7 @@
     <div class="col --12@xs --8@lg --2-offset@lg">
       <form action="" method="">
         <div class="__group __search --dark +line mb--3@md">
-          <input type="text" class="__control" placeholder="Search ( __search +line )">
+          <input type="text" placeholder="Search ( __search +line )">
           <button type="submit" class="btn btn--primary">Go</button>
         </div>
       </form>
