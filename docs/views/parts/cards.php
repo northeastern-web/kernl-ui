@@ -71,8 +71,9 @@ figure out --middle with a heading.
         <a href="#" class="__link">
           <div class="__graphic"></div>
           <div class="__body">
-            <div class="__icon"><i class="icon--inbox"></i></div>
+            <i class="__icon icon--inbox"></i>
             <h2 class="__title">Overlay Tile</h2>
+            <p>Using font icon, not SVG</p>
           </div>
         </a>
       </article>
@@ -102,10 +103,8 @@ figure out --middle with a heading.
       <article class="card --tile --teal --middle">
         <a href="#" class="__link">
           <div class="__body">
-            <div class="__icon --thin --lg">
-              <i data-feather="command"></i>
-            </div>
-            <h2 class="__title">With Large, Thin Icon</h2>
+            <i class="__icon --thin --lg" data-feather="command"></i>
+            <h2 class="__title">Large, Thin SVG Icon</h2>
             <p>Sed posuere consectetur est at lobortis.</p>
           </div>
         </a>

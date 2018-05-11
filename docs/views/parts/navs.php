@@ -91,21 +91,23 @@
           </li>
         </ul>
       </nav>
-      <div class="hidden pt--1@xs --active" id="tab_1" role="tabpanel">
-        <h3>Content 1</h3>
-        <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="hidden pt--1@xs" id="tab_2" role="tabpanel">
-        <h3>Content 2</h3>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.</p>
-      </div>
-      <div class="hidden pt--1@xs" id="tab_3" role="tabpanel">
-        <h3>Content 3</h3>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-      </div>
-      <div class="hidden pt--1@xs" id="tab_4" role="tabpanel">
-        <h3>Content 4</h3>
-        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      <div class="nav__content">
+        <div class="hidden pt--1@xs --active" id="tab_1" role="tabpanel">
+          <h3>Content 1</h3>
+          <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="hidden pt--1@xs" id="tab_2" role="tabpanel">
+          <h3>Content 2</h3>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+        <div class="hidden pt--1@xs" id="tab_3" role="tabpanel">
+          <h3>Content 3</h3>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        </div>
+        <div class="hidden pt--1@xs" id="tab_4" role="tabpanel">
+          <h3>Content 4</h3>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -113,6 +115,7 @@
 
 <section class="section">
   <header class="k_section__header" style="border-bottom: 0 none;">Tabbed Nav: Bordered</header>
+  <p class="mb--2@xs"><i>Add <code>--bordered</code> to the <code>nav</code> element to give a line of separation from the sibling content below.</i></p>
   <div class="row">
     <div class="col --12@xs">
       <nav class="nav --tabbed --bordered">
@@ -128,17 +131,19 @@
           </li>
         </ul>
       </nav>
-      <div class="hidden pt--1@xs --active" id="tab_5" role="tabpanel">
-        <h3>Mozzarella Sticks</h3>
-        <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="hidden pt--1@xs" id="tab_6" role="tabpanel">
-        <h3>Mushroom Pizza Pie</h3>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.</p>
-      </div>
-      <div class="hidden pt--1@xs" id="tab_7" role="tabpanel">
-        <h3>Fried Ice Cream</h3>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      <div class="nav__content">
+        <div class="hidden pt--1@xs --active" id="tab_5" role="tabpanel">
+          <h3>Mozzarella Sticks</h3>
+          <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="hidden pt--1@xs" id="tab_6" role="tabpanel">
+          <h3>Mushroom Pizza Pie</h3>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+        <div class="hidden pt--1@xs" id="tab_7" role="tabpanel">
+          <h3>Fried Ice Cream</h3>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -146,7 +151,7 @@
 
 <section class="section">
   <header class="k_section__header" style="border-bottom: 0 none;">Tabbed Nav: Bordered with Bordered Content</header>
-  <p class="mb--2@xs"><i>Same as above, just wrap the content divs in a wrapper with the class <code>.tabcontent</code>.</i></p>
+  <p class="mb--2@xs"><i>Same as above, just add <code>--bordered</code> to both the <code>nav</code> and its sibling content <code>div</code>.</i></p>
   <div class="row">
     <div class="col --12@xs">
       <nav class="nav --tabbed --bordered">
@@ -162,7 +167,7 @@
           </li>
         </ul>
       </nav>
-      <div class="tabcontent">
+      <div class="nav__content --bordered">
         <div class="hidden pt--1@xs --active" id="tab_50" role="tabpanel">
           <h3>Mozzarella Sticks</h3>
           <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -199,17 +204,19 @@
           </li>
         </ul>
       </nav>
-      <div class="hidden pt--1@xs pt--1@xs" id="tab_8" role="tabpanel">
-        <h3>Undergraduate Students</h3>
-        <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="hidden pt--1@xs" id="tab_9" role="tabpanel">
-        <h3>Graduate Students</h3>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.</p>
-      </div>
-      <div class="hidden pt--1@xs" id="tab_10" role="tabpanel">
-        <h3>Alumni</h3>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      <div class="nav__content">
+        <div class="hidden pt--1@xs pt--1@xs" id="tab_8" role="tabpanel">
+          <h3>Undergraduate Students</h3>
+          <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="hidden pt--1@xs" id="tab_9" role="tabpanel">
+          <h3>Graduate Students</h3>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+        <div class="hidden pt--1@xs" id="tab_10" role="tabpanel">
+          <h3>Alumni</h3>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        </div>
       </div>
     </div>
   </div>

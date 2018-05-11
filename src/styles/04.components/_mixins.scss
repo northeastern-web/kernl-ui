@@ -181,29 +181,17 @@
     height: round($font-size * 1.25);
     width: round($font-size * 1.25);
 
-    svg {
-      height: round($font-size * 1.25);
-      width: round($font-size * 1.25);
-    }
-
     &.\--left {
       margin-right: round($font-size / 2);
     }
 
-    &.\--right {
-      margin-left: round($font-size / 2);
-    }
+    &.\--right { margin-left: round($font-size / 2); }
 
     &.\--lg {
       height: $font-size * 2;
       width: $font-size * 2;
       margin-top: $font-size / 2;
       margin-bottom: $font-size / 2;
-
-      svg {
-        height: $font-size * 2;
-        width: $font-size * 2;
-      }
     }
   }
 }
@@ -271,6 +259,28 @@
 
     &:after {
       width: $width_text;
+    }
+  }
+
+  &.\--right {
+    .__graphic {
+      margin-left: $width_graphic;
+    }
+
+    .__body {
+      left: auto;
+      right: $width_graphic;
+    }
+
+    &:after,
+    .__graphic + .__header {
+      left: auto;
+      right: $width_graphic;
+    }
+
+    .__footer {
+      left: 0;
+      right: $width_graphic;
     }
   }
 }

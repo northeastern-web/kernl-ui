@@ -32,8 +32,8 @@
 @import "04.components/navs";
 @import "04.components/sharing";
 
-@import "05.utilities/backgrounds";
-@import "05.utilities/borders";
+@import "05.utilities/borders"; // 1st
+@import "05.utilities/backgrounds"; // 2nd
 @import "05.utilities/clearfix";
 @import "05.utilities/visibility";
 @import "05.utilities/spacing";

@@ -10,21 +10,14 @@
   display: inline-block;
   line-height: 0;
   text-align: left;
+  width: 2rem;
+  height: 2rem;
 
-  svg {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  &.\--thin {
-    svg { stroke-width: 1; }
-  }
+  &.\--thin { stroke-width: 1; }
 
   &.\--lg {
-    svg {
-      width: 3rem;
-      height: 3rem;
-    }
+    width: 2.25rem;
+    height: 2.25rem;
   }
 }
 

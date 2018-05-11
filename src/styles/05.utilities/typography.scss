@@ -61,6 +61,17 @@
 }
 
 
+// Feather Icon Sizes and Weights
+.feather {
+  &.\--thin { stroke-width: 1; }
+
+  &.\--large {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+
 //
 // Colors
 @include generate_colors('tc'); // run generator for type colors

@@ -127,13 +127,8 @@
   .__icon {
     @extend %icon;
     margin-bottom: .5rem;
-
-    i { font-size: 175%; }
-
-    svg {
-      margin-left: 50%;
-      transform: translateX(-50%);
-    }
+    font-size: 225%;
+    text-align: center;
   }
 
 

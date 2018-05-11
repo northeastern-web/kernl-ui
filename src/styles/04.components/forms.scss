@@ -5,7 +5,14 @@
 
 //
 // Textual form controls
-.__control {
+// .__control {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+input[type="range"],
+textarea,
+select {
   display: block;
   width: 100%;
   // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
@@ -55,9 +62,21 @@
   &:disabled {
     cursor: $cursor-disabled;
   }
+
+  &.\--sm {
+    padding: $input-padding-y-sm $input-padding-x-sm;
+    font-size: $fs-sm;
+    @include border-radius($input-border-radius-sm);
+  }
+
+  &.\--lg {
+    padding: $input-padding-y-lg $input-padding-x-lg;
+    font-size: $fs-root;
+    @include border-radius($input-border-radius-lg);
+  }
 }
 
-select.__control {
+select {
   &:not([size]):not([multiple]) {
     $select-border-width: ($border-width * 2);
     height: calc(#{$input-height} + #{$select-border-width});
@@ -72,11 +91,19 @@ select.__control {
     color: $input-color;
     background-color: $input-bg;
   }
+
+  &.\--sm:not([size]):not([multiple]) {
+    height: $input-height-sm;
+  }
+
+  &.\--lg:not([size]):not([multiple]) {
+    height: $input-height-lg;
+  }
 }
 
 // Make file inputs better match text inputs by forcing them to new lines.
-.__control--file,
-.__control--range {
+input[type="file"],
+input[type="range"] {
   display: block;
   padding: 0;
   background: none;
@@ -92,22 +119,22 @@ select.__control {
 
 // For use with horizontal and inline forms, when you need the label text to
 // align with the form controls.
-.col-form-label {
+label {
   padding-top: $input-padding-y;
   padding-bottom: $input-padding-y;
   margin-bottom: 0; // Override the `<label>` default
-}
 
-.col-form-label-lg {
-  padding-top: $input-padding-y-lg;
-  padding-bottom: $input-padding-y-lg;
-  font-size: 1.5rem;
-}
+  &.\--lg {
+    padding-top: $input-padding-y-lg;
+    padding-bottom: $input-padding-y-lg;
+    font-size: 1.5rem;
+  }
 
-.col-form-label-sm {
-  padding-top: $input-padding-y-sm;
-  padding-bottom: $input-padding-y-sm;
-  font-size: $fs-sm;
+  &.\--sm {
+    padding-top: $input-padding-y-sm;
+    padding-bottom: $input-padding-y-sm;
+    font-size: $fs-sm;
+  }
 }
 
 
@@ -116,7 +143,7 @@ select.__control {
 
 // For use with horizontal and inline forms, when you need the legend text to
 // be the same size as regular labels, and to align with the form controls.
-.col-form-legend {
+legend {
   padding-top: $input-padding-y;
   padding-bottom: $input-padding-y;
   margin-bottom: 0;
@@ -129,52 +156,20 @@ select.__control {
 // Apply class to an element to make any string of text align with labels in a
 // horizontal form layout.
 
-.__control--static {
+.\--static {
   padding-top: $input-padding-y;
   padding-bottom: $input-padding-y;
   line-height: $input-line-height;
   border: solid transparent;
   border-width: 1px 0;
 
-  &.__control--sm,
-  &.__control--lg {
+  &.\--sm,
+  &.\--lg {
     padding-right: 0;
     padding-left: 0;
   }
 }
 
-//
-// Form control sizing
-//
-// Build on `.__control` with modifier classes to decrease or increase the
-// height and font-size of form controls.
-//
-// The `.__group-* form-control` variations are sadly duplicated to avoid the
-// issue documented in https://github.com/twbs/bootstrap/issues/15074.
-
-.__control--sm {
-  padding: $input-padding-y-sm $input-padding-x-sm;
-  font-size: $fs-sm;
-  @include border-radius($input-border-radius-sm);
-}
-
-select.__control--sm {
-  &:not([size]):not([multiple]) {
-    height: $input-height-sm;
-  }
-}
-
-.__control--lg {
-  padding: $input-padding-y-lg $input-padding-x-lg;
-  font-size: 1.5rem;
-  @include border-radius($input-border-radius-lg);
-}
-
-select.__control--lg {
-  &:not([size]):not([multiple]) {
-    height: $input-height-lg;
-  }
-}
 
 //
 // Form groups
@@ -191,7 +186,6 @@ select.__control--lg {
   }
 
   &.__search {
-    @extend .__control;
     position: relative;
     padding: 0.5rem;
     @extend %clearfix;
@@ -226,7 +220,6 @@ select.__control--lg {
       padding: 0;
       margin-left: 2rem;
       box-shadow: none !important;
-      @extend .__control--lg;
 
       @include mqbp-up(md) {
         width: 80%;
