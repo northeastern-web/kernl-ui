@@ -9,54 +9,80 @@ define( 'SHARE_URL', url_elements() );
 
 <section class="section">
   <div class="row">
-    <div class="col --12@xs --6@md p--y-2@xs">
+    <div class="col --12@xs --4@md p--y-2@xs">
       <header class="k_section__header">Base</header>
       <ul class="share-buttons">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
-            <span class="__icon --thin"><i data-feather="facebook"></i></span>
+            <i class="__icon feather --thin" data-feather="facebook"></i>
           </a>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('twitter', '<?php echo SHARE_URL; ?>', 520, 442)">
-            <span class="__icon --thin"><i data-feather="twitter"></i></span>
+            <i class="__icon feather --thin" data-feather="twitter"></i>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
-            <span class="__icon --thin"><i data-feather="briefcase"></i></span>
+            <i class="__icon feather --thin" data-feather="briefcase"></i>
           </a>
         </li>
         <li>
           <a id="podshare_email" href="javascript:PODShare('email', '<?php echo SHARE_URL; ?>', 100, 100)">
-            <span class="__icon --thin"><i data-feather="mail"></i></span>
+            <i class="__icon feather --thin" data-feather="mail"></i>
           </a>
         </li>
       </ul>
     </div>
 
-    <div class="col --12@xs --6@md p--y-2@xs">
+    <div class="col --12@xs --4@md p--y-2@xs">
       <header class="k_section__header">Stacked</header>
-      <ul class="share-buttons share-buttons--stacked">
+      <ul class="share-buttons --stacked">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
-            <span class="__icon --thin"><i data-feather="facebook"></i></span>
+            <i class="__icon feather --thin" data-feather="facebook"></i>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('twitter', '<?php echo SHARE_URL; ?>', 520, 442)">
-            <span class="__icon --thin"><i data-feather="twitter"></i></span>
+            <i class="__icon feather --thin" data-feather="twitter"></i>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
-            <span class="__icon --thin"><i data-feather="briefcase"></i></span>
+            <i class="__icon feather --thin" data-feather="briefcase"></i>
           </a>
         </li>
         <li>
           <a id="podshare_email" href="javascript:PODShare('email', '<?php echo SHARE_URL; ?>', 100, 100)">
-            <span class="__icon --thin"><i data-feather="mail"></i></span>
+            <i class="__icon feather --thin" data-feather="mail"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col --12@xs --4@md p--y-2@xs">
+      <header class="k_section__header">Flex/Responsive</header>
+      <ul class="share-buttons --flex">
+        <li>
+          <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
+            <i class="__icon feather --thin" data-feather="facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:PODShare('twitter', '<?php echo SHARE_URL; ?>', 520, 442)">
+            <i class="__icon feather --thin" data-feather="twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
+            <i class="__icon feather --thin" data-feather="briefcase"></i>
+          </a>
+        </li>
+        <li>
+          <a id="podshare_email" href="javascript:PODShare('email', '<?php echo SHARE_URL; ?>', 100, 100)">
+            <i class="__icon feather --thin" data-feather="mail"></i>
           </a>
         </li>
       </ul>
