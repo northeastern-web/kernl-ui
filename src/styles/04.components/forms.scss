@@ -9,20 +9,18 @@
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="search"],
 input[type="file"],
 input[type="range"],
 textarea,
 select {
   display: block;
   width: 100%;
-  // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  // height: $input-height;
   padding: $input-padding-y $input-padding-x;
   font-size: 1rem;
   line-height: $input-line-height;
   color: $input-color;
   background-color: $input-bg;
-  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
   background-image: none;
   background-clip: padding-box;
   border: $input-btn-border-width solid $input-border-color;
@@ -43,20 +41,14 @@ select {
   // Placeholder
   &::placeholder {
     color: $input-color-placeholder;
-    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1;
+    opacity: 1; // for Firefox
   }
 
   // Disabled and read-only inputs
-  //
-  // HTML5 says that controls under a fieldset > legend:first-child won't be
-  // disabled if the fieldset is disabled. Due to implementation difficulty, we
-  // don't honor that edge case; we style them as disabled anyway.
   &:disabled,
   &[readonly] {
     background-color: $input-bg-disabled;
-    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
-    opacity: 1;
+    opacity: 1; // for iOS
   }
 
   &:disabled {
@@ -120,9 +112,11 @@ input[type="range"] {
 // For use with horizontal and inline forms, when you need the label text to
 // align with the form controls.
 label {
+  @include type-sm();
   padding-top: $input-padding-y;
-  padding-bottom: $input-padding-y;
+  padding-bottom: $input-padding-y/2;
   margin-bottom: 0; // Override the `<label>` default
+  color: $gray-500;
 
   &.\--lg {
     padding-top: $input-padding-y-lg;
@@ -151,17 +145,19 @@ legend {
 }
 
 //
-// Static form control text
+// Plain text in readonly inputs
 //
-// Apply class to an element to make any string of text align with labels in a
-// horizontal form layout.
+// If you want to have <input readonly> elements in your form styled as plain text, use the .--plaintext class to remove the default form field styling and preserve the correct margin and padding.
 
-.\--static {
-  padding-top: $input-padding-y;
-  padding-bottom: $input-padding-y;
-  line-height: $input-line-height;
-  border: solid transparent;
+input.\--plaintext {
+  background-color: transparent !important;
+  border-color: transparent;
   border-width: 1px 0;
+  box-shadow: none;
+  padding-right: 0;
+  padding-left: 0;
+
+  &::placeholder { color: inherit; }
 
   &.\--sm,
   &.\--lg {
@@ -179,55 +175,50 @@ legend {
 .__group {
   margin-bottom: $form-group-margin-bottom;
 
-  label {
-    @include type-sm();
-    color: $gray-500;
-    margin-bottom: 0;
-  }
-
-  &.__search {
+  &.\--enclosed {
     position: relative;
-    padding: 0.5rem;
+    padding: $input-padding-y $input-padding-x;
+    background-color: $input-bg;
+    border: $input-btn-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+    @include box-shadow($input-box-shadow);
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
     @extend %clearfix;
 
-    .__control,
-    &:before {
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    input[type="password"] {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-    }
-
-    &:before {
-      font-family: "feathericons";
-      content: "\e97b";
-      left: 0.85rem;
-      color: rgba($type-color, 0.5);
-
-      @include mqbp-up(md) {
-        left: 1rem;
-      }
-
-      @include mqbp-up(lg) {
-        left: 1.25rem;
-      }
-    }
-
-    .__control {
+      width: 65%;
       background: transparent;
       border: 0 none;
-      width: 65%;
-      float: left;
       padding: 0;
-      margin-left: 2rem;
       box-shadow: none !important;
 
-      @include mqbp-up(md) {
-        width: 80%;
-        margin-left: 2.5rem;
+      @include mqbp-up(md) { width: 80%; }
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
       }
 
-      @include mqbp-up(lg) {
-        margin-left: 2.5rem;
+      &:before {
+        font-family: "feathericons";
+        content: "\e97b";
+        left: 0.85rem;
+        color: rgba($type-color, 0.5);
+
+        @include mqbp-up(md) {
+          left: 1rem;
+        }
+
+        @include mqbp-up(lg) {
+          left: 1.25rem;
+        }
       }
     }
 
@@ -244,6 +235,7 @@ legend {
       border: 0 none;
       box-shadow: none;
       border-bottom: 1px solid rgba($type-color, 0.5);
+      border-radius: 0;
 
       &:before {
         left: 0 !important;
@@ -258,141 +250,72 @@ legend {
       border-color: rgba(255, 255, 255, 0.3);
 
       &:before { color: rgba(255, 255, 255, 0.5); }
-      
-      .__control,
-      .btn { color: #fff; }
 
       .btn {
+        color: #fff;
         border-color: rgba(255, 255, 255, 0.5);
 
         &:hover { color: $type-color; }
       }
       
-      &::placeholder { color: #fff; }
+      ::placeholder { color: rgba($white, 0.7); }
     }
   }
-}
 
-.__text {
-  display: block;
-  margin-top: ($spacer * .25);
+  &.\--inline {
+    @include mqbp-up(md) {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+
+      input,
+      select,
+      textarea {
+        display: inline-block;
+        margin-right: $spacer;
+      }
+
+      .btn { margin-bottom: 0; }
+    }
+  }
 }
 
 // 
 // Checkboxes and radios
 // Indent the labels to position radios/checkboxes as hanging controls.
 
-.__check {
+.\--check {
   position: relative;
   display: block;
   margin-bottom: ($spacer * .75);
 
-  // Move up sibling radios or checkboxes for tighter spacing
-  + .__check {
-    margin-top: -.25rem;
+  label {
+    display: block;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0;
+    cursor: pointer;
+    color: $input-color;
   }
 
-  &.disabled {
-    .__check__label {
-      color: $gray-400;
-      cursor: $cursor-disabled;
-    }
-  }
-}
-
-.__check__label {
-  margin-bottom: 0; // Override default `<label>` bottom margin
-  cursor: pointer;
-}
-
-.__check__input {
-  margin-right: 0.25rem;
-
-  &:only-child {
-    position: static;
-  }
-}
-
-// Radios and checkboxes on same line
-.__check--inline {
-  display: inline-block;
-
-  .__check__label { vertical-align: middle; }
-
-  + .__check--inline { margin-left: .75rem; }
-}
-
-.form-inline {
-  // Kick in the inline
-  @include mqbp-up(sm) {
-    label {
-      margin-bottom: 0;
-    }
-
-    .__group {
-      display: inline-block;
-      vertical-align: middle;
-      margin-bottom: 0;
-    }
-
-    .__control {
-      display: inline-block;
-      width: auto;
-      vertical-align: middle;
-    }
-
-    .__control--static {
-      display: inline-block;
-    }
-
-    .input-group {
-      width: auto;
-      display: inline-table;
-      vertical-align: middle;
-
-      .input-group-addon,
-      .input-group-btn,
-      .__control {
-        width: auto;
-      }
-    }
-
-    .input-group > .__control {
-      width: 100%;
-    }
-
-    .__control--label {
-      margin-bottom: 0;
-      vertical-align: middle;
-    }
-
-    .__check {
-      display: inline-block;
-      vertical-align: middle;
-      width: auto;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    .__check__label {
-      padding-left: 0;
-    }
-    .__check__input {
-      position: relative;
-      margin-left: 0;
-    }
-
-    .custom-control {
-      padding-left: 0;
-      vertical-align: middle;
-    }
-    .custom-control-indicator {
+  input {
+    &:only-child {
       position: static;
-      display: inline-block;
-      vertical-align: text-bottom;
+      margin-right: 0.25rem;
     }
+  }
 
-    .has-feedback .__control--feedback {
-      top: 0;
+  .disabled {
+    color: $gray-400;
+    cursor: $cursor-disabled;
+  }
+
+  // Radios and checkboxes on same line
+  &.\--inline {
+    label {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1rem;
     }
   }
 }

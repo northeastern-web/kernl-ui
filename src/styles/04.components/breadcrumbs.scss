@@ -4,12 +4,12 @@
 
 .breadcrumb {
   margin-bottom: 1rem;
-  color: lighten($type-color, 15%);
   @include type-sm();
 
   a {
     padding-right: 1rem;
     position: relative;
+    color: inherit;
 
     &:after {
       content: "\/";

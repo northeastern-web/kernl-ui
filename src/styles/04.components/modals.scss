@@ -2,7 +2,6 @@
 // Modals
 //
 
-
 // Bootstrap utility to kill the scroll on the body
 .modal-open { overflow: hidden; }
 
@@ -14,6 +13,8 @@
   bottom: 0;
   left: 0;
   padding: 1rem;
+  align-items: center;
+  justify-content: center;
   z-index: 4000;
   display: none;
   overflow: hidden;
@@ -34,12 +35,40 @@
   // Shell div to position the modal with bottom padding
   .__dialog {
     position: relative;
+    display: flex;
     width: auto;
-    margin: 3rem auto;
+    margin: 0 auto;
     max-width: 450px;
 
     @include mqbp-up(md) {
       max-width: 760px;
+      margin-top: -4rem;
+    }
+  }
+
+  &.\--sm {
+    .__dialog {
+      @include mqbp-up(md) {
+        max-width: 450px;
+      }
+    }
+  }
+
+  &.\--lg {
+    .__dialog {
+      @include mqbp-up(lg) {
+        max-width: 992px;
+      }
+    }
+  }
+
+  &.\--full {
+    .__dialog {
+      @include mqbp-up(md) {
+        margin-top: 0;
+        max-width: none;
+        height: 100%;
+      }
     }
   }
 
@@ -120,33 +149,32 @@
       right: 2rem;
     }
 
-    .__dialog { max-width: none; }
+    .__dialog {
+      max-width: none;
+      flex: 1;
+    }
 
     .__content {
-      margin: 5% auto;
+      margin: 0 auto;
       background: transparent;
       box-shadow: none;
       color: #fff;
+      width: 100%;
+      max-width: 400px;
 
-      @include mqbp-up(lg) {
+      @include mqbp-up(md) {
         width: 70%;
+        max-width: 600px;
       }
     }
 
-    .__control {
+    input[type="search"] {
       @include type-d1();
-      padding-bottom: 1rem;
-      padding-left: 0;
-      background: transparent;
-      border: 0 none;
-      border-bottom: 2px solid rgba(#fff, 0.5);
-      font-weight: $type-light;
-      color: #fff;
-      outline: none;
-      box-shadow: none;
 
       @include mqbp-up(md) {
         @include type-d4();
+
+        &::placeholder { font-weight: 300; }
       }
     }
   }
@@ -168,12 +196,15 @@
   font-size: 1.5rem;
   font-weight: 400;
   text-shadow: 0 1px 0 #fff;
-  opacity: .5;
+  opacity: .65;
   transition: opacity 0.2s ease;
   z-index: 4001;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     opacity: 1;
+    outline: none;
   }
 }
 

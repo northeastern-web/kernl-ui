@@ -73,6 +73,7 @@
     .__list {
       margin-bottom: 0;
       visibility: hidden;
+      flex-basis: 100%;
       height: 0;
       transition: all 0.05s ease-in;
     }
@@ -121,6 +122,44 @@
       }
 
       &.collapse { display: flex; }
+    }
+
+    .\+children {
+      > .__list { display: none; }
+
+      &:hover {
+        > .__link::after {
+          content: "Expand";
+          position: absolute;
+          top: 50%;
+          right: 0.25rem;
+          transform: translateY(-50%);
+          text-align: right;
+          font-size: 10px;
+          z-index: 8000;
+        }
+      }
+
+      &.\--active {
+        > .__list { display: flex; }
+
+        &:hover {
+          > .__link::after {
+            content: "";
+            display: none;
+          }
+        }
+      }
+    }
+
+    .\+children .\+children .__list {
+      .__link {
+        padding-left: 3rem;
+
+        &::before {
+          left: 1.5rem;
+        }
+      }
     }
   }
 
@@ -321,6 +360,10 @@
       background-color: rgba(255, 255, 255, 1);
       color: $type-color;
     }
+  }
+
+  .\+children .__list {
+    display: none !important;
   }
 
   @include mqbp-up(lg) {
