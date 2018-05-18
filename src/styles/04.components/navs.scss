@@ -153,12 +153,16 @@
       .__link {
         display: inline-flex;
         flex: 1;
+        align-items: center;
         color: inherit;
         font-size: $fs-xs;
         @extend .tt--caps;
+        margin-bottom: 0.25rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
 
         svg {
-          margin-left: 0.25rem;
+          margin-right: 0.5rem;
         }
       }
 
