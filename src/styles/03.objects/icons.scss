@@ -18,6 +18,11 @@
 .feather {
   &.\--thin { stroke-width: 1; }
 
+  &.\--sm {
+    width: 14px;
+    height: 14px;
+  }
+
   &.\--lg {
     width: 2.25rem;
     height: 2.25rem;

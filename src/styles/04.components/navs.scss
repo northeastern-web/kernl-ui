@@ -124,41 +124,25 @@
       &.collapse { display: flex; }
     }
 
-    .\+children {
-      > .__list { display: none; }
-
-      &:hover {
-        > .__link::after {
-          content: "Expand";
-          position: absolute;
-          top: 50%;
-          right: 0.25rem;
-          transform: translateY(-50%);
-          text-align: right;
-          font-size: 10px;
-          z-index: 8000;
-        }
+    .\+children .\+children {
+      > .__list {
+        display: none;
+        padding-left: 3rem;
       }
 
       &.\--active {
         > .__list { display: flex; }
-
-        &:hover {
-          > .__link::after {
-            content: "";
-            display: none;
-          }
-        }
       }
     }
 
-    .\+children .\+children .__list {
-      .__link {
-        padding-left: 3rem;
+    .\--title .__link {
+      display: flex-inline;
+      color: inherit;
+      font-size: $fs-xs;
+      @extend .tt--caps;
 
-        &::before {
-          left: 1.5rem;
-        }
+      svg {
+        margin-left: 0.25rem;
       }
     }
   }
