@@ -42,14 +42,13 @@
 
     @include mqbp-up(md) {
       max-width: 760px;
-      margin-top: -4rem;
     }
   }
 
   &.\--sm {
     .__dialog {
       @include mqbp-up(md) {
-        max-width: 450px;
+        max-width: 400px;
       }
     }
   }
@@ -65,7 +64,6 @@
   &.\--full {
     .__dialog {
       @include mqbp-up(md) {
-        margin-top: 0;
         max-width: none;
         height: 100%;
       }
@@ -79,6 +77,8 @@
     border: 0 none;
     border-radius: 2px;
     outline: 0;
+    max-height: 96vh;
+    overflow: auto;
     @include box_shadow();
   }
 
