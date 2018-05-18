@@ -86,8 +86,9 @@
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+  min-height: 30vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   margin-bottom: 1rem;
   background-color: $gray-50;
   @extend %font_smoothing;
