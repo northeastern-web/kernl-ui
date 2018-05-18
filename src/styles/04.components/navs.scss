@@ -90,7 +90,7 @@
     }
 
     @include mqbp-up(md) {
-      border-top: 1px solid $gray-200;
+      // border-top: 1px solid $gray-200;
 
       .__list {
         visibility: visible;
@@ -124,26 +124,45 @@
       &.collapse { display: flex; }
     }
 
-    .\+children .\+children {
-      > .__list {
-        display: none;
-        padding-left: 3rem;
+    .\+children {
+      margin-bottom: 0.25rem;
+
+      > .__link {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
       }
 
-      &.\--active {
-        > .__list { display: flex; }
+      .\+children {
+        margin-bottom: 0;
+
+        > .__list {
+          display: none;
+          padding-left: 1rem;
+        }
+
+        &.\--active {
+          > .__list { display: flex; }
+        }
       }
     }
 
-    .\--title .__link {
-      display: flex-inline;
-      color: inherit;
-      font-size: $fs-xs;
-      @extend .tt--caps;
+    .\--title {
+      display: flex;
+      flex: 1;
 
-      svg {
-        margin-left: 0.25rem;
+      .__link {
+        display: inline-flex;
+        flex: 1;
+        color: inherit;
+        font-size: $fs-xs;
+        @extend .tt--caps;
+
+        svg {
+          margin-left: 0.25rem;
+        }
       }
+
+      &.\--active { display: none; }
     }
   }
 
