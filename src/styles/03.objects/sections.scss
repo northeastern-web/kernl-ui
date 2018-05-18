@@ -26,42 +26,16 @@
   &.\--md {
     padding-top: $section-padding-y-md;
     padding-bottom: $section-padding-y-md;
-
-    @include mqbp-up(lg) {
-      &.\+nav { padding-bottom: ($section-padding-y-md * 1.5); }
-    }
   }
 
   &.\--lg {
     padding-top: $section-padding-y-lg;
     padding-bottom: $section-padding-y-lg;
-
-    @include mqbp-up(lg) {
-      &.\+nav { padding-bottom: ($section-padding-y-lg * 1.5); }
-    }
   }
 
   &.\--xl {
     padding-top: $section-padding-y-xl;
     padding-bottom: $section-padding-y-xl;
-
-    @include mqbp-up(lg) {
-      &.\+nav { padding-bottom: ($section-padding-y-xl * 1.5); }
-    }
-  }
-
-  &.\--top {
-    padding-top: $section-padding-y-default * 1.5;
-    // retain lg or xl height when text is on top:
-    &.\--lg { padding-bottom: $section-padding-y-lg * 1.75; }
-    &.\--xl { padding-bottom: $section-padding-y-xl * 1.75; }
-  }
-
-  &.\--bottom {
-    padding-bottom: $section-padding-y-default * 2;
-    // retain lg or xl height when text is on bottom:
-    &.\--lg { padding-top: $section-padding-y-lg * 2 !important; }
-    &.\--xl { padding-top: $section-padding-y-xl * 2 !important; }
   }
 
   &.\--transparent {
@@ -110,19 +84,40 @@
 
 .\--banner {
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+  margin-bottom: 1rem;
+  background-color: $gray-50;
+  @extend %font_smoothing;
+
+  .__body { flex: 1; }
+  .__pretitle { margin-bottom: 0.25rem; }
+  .__subtitle { @include type-lead(); }
 
   .__title {
+    @include type_d6();
     margin-bottom: 0.25rem;
     font-weight: $type-regular;
   }
 
-  .__pretitle { margin-bottom: 0.25rem; }
+  &.\--top { align-items: flex-start; }
+  &.\--bottom { align-items: flex-end; }
 
-  .__subtitle { @include type-lead(); }
+  &.\--10 { min-height: 10vh; }
+  &.\--20 { min-height: 20vh; }
+  &.\--30 { min-height: 30vh; }
+  &.\--40 { min-height: 40vh; }
+  &.\--50 { min-height: 50vh; }
+  &.\--60 { min-height: 60vh; }
+  &.\--70 { min-height: 70vh; }
+  &.\--80 { min-height: 80vh; }
+  &.\--90 { min-height: 90vh; }
+  &.\--100 { min-height: 100vh; }
 
-  @extend %font_smoothing;
-  margin-bottom: 1rem;
-  background-color: $gray-50;
-
-  .__title { @include type_d6(); }
+  &.\+nav {
+    padding-top: 3rem !important;
+    padding-bottom: 5rem !important;
+  }
 }

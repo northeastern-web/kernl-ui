@@ -5,7 +5,7 @@
 .nav {
   .__list {
     padding-left: 0;
-  list-style: none;
+    list-style: none;
     display: flex;
     flex-direction: column;
   }
@@ -90,8 +90,6 @@
     }
 
     @include mqbp-up(md) {
-      // border-top: 1px solid $gray-200;
-
       .__list {
         visibility: visible;
         height: 100%;
@@ -144,29 +142,6 @@
           > .__list { display: flex; }
         }
       }
-    }
-
-    .\--title {
-      display: flex;
-      flex: 1;
-
-      .__link {
-        display: inline-flex;
-        flex: 1;
-        align-items: center;
-        color: inherit;
-        font-size: $fs-xs;
-        @extend .tt--caps;
-        margin-bottom: 0.25rem;
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
-
-        svg {
-          margin-right: 0.5rem;
-        }
-      }
-
-      &.\--active { display: none; }
     }
   }
 
@@ -263,6 +238,36 @@
           border: 1px solid $gray-400;
         }
       }
+    }
+  }
+
+
+  //
+  // for parent of on-page navs
+  .\--title {
+    display: flex;
+    flex: 1;
+
+    .__link {
+      display: inline-flex;
+      flex: 1;
+      align-items: center;
+      color: inherit;
+      font-size: $fs-xs;
+      @extend .tt--caps;
+      margin-bottom: 0.25rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+
+    &.\--active {
+      display: none;
+
+      +.__item { border-top: 1px solid $gray-200; }
     }
   }
 
