@@ -93,15 +93,21 @@
   background-color: $gray-50;
   @extend %font_smoothing;
 
-  .__body { flex: 1; }
+  .__body {
+    flex: 1;
+    width: 100%;
+  }
+
   .__pretitle { margin-bottom: 0.25rem; }
-  .__subtitle { @include type-lead(); }
 
   .__title {
     @include type_d6();
     margin-bottom: 0.25rem;
     font-weight: $type-regular;
   }
+
+  .__subtitle { @include type-lead(); }
+
 
   &.\--top { align-items: flex-start; }
   &.\--bottom { align-items: flex-end; }
@@ -117,8 +123,30 @@
   &.\--90 { min-height: 90vh; }
   &.\--100 { min-height: 100vh; }
 
+  @include mqbp-up(lg) {
+    flex-direction: row;
+  }
+
   &.\+nav {
-    padding-top: 3rem !important;
-    padding-bottom: 5rem !important;
+    flex: 0;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 0;
+
+    .__body {
+      flex: 0;
+      margin-bottom: 3rem;
+    }
+
+    .nav {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      align-self: flex-start;
+    }
+
+    @include mqbp-up(md) {
+      justify-content: space-around;
+    }
   }
 }

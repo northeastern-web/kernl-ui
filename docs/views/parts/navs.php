@@ -1,13 +1,15 @@
 
-<header class="section --lg --banner +bgimg">
-  <h2 class="__title">Example Interior/On-Page Nav</h2>
+<header class="section --banner +bgimg">
+  <div class="__body">
+    <h2 class="__title">Example Interior/On-Page Nav</h2>
+  </div>
 </header>
 <section class="section">
   <div class="row">
     <div class="col --12@xs --5@md --4@lg --3@xl mb--1@xs">
       <div class="hidden--up@md ta--c">
         <button class="__toggler btn --sm" data-component="button" data-toggle="collapse" data-target="#page_menu">
-          <span class="__icon --left"><i data-feather="menu"></i></span> 
+          <i class="__icon --left" data-feather="menu"></i>
           Page Menu
         </button>
       </div>
@@ -50,9 +52,11 @@
   </div>
 </section>
 
-<section class="section --banner --md +bgimg +nav">
-  <h1 class="__title">Banner with Tabbed Navigation</h1>
-  <div class="__subtitle">Includes Background Image</div>
+<section class="section --banner --50 +bgimg +nav">
+  <div class="__body">
+    <h1 class="__title">Banner with Tabbed Navigation</h1>
+    <div class="__subtitle">Includes Background Image</div>
+  </div>
   <nav class="nav --tabbed">
     <ul class="__list" role="tablist">
       <li class="__item">

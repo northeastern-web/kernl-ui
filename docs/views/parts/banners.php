@@ -12,22 +12,22 @@
 
 <section class="section --banner --50 +bgimg mb--1@xs mb--2@lg">
   <div class="__body">
-    <h1 class="__title">Medium Section with Image</h1>
+    <h1 class="__title">Banner with Image, 50vh</h1>
     <div class="__subtitle">Includes Background Image</div>
   </div>
 </section>
 
 <section class="section --banner --100 +bgimg mb--1@xs mb--2@lg">
   <div class="__body">
-    <h1 class="__title">Default Section with Image</h1>
+    <h1 class="__title">Banner with Image 100vh</h1>
     <div class="__subtitle">Includes Background Image</div>
   </div>
 </section>
 
-<section class="section --banner --70 +bgimg mb--1@xs mb--2@lg">
+<section class="section --banner --top --70 +bgimg mb--1@xs mb--2@lg">
   <div class="__body">
     <div class="__pretitle">Header Pre Title</div>
-    <h1 class="__title">Header: Large</h1>
+    <h1 class="__title">Header: 70vh, Top Position</h1>
     <div class="__subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
   </div>
 </section>
@@ -35,7 +35,7 @@
 <section class="section --banner --100 +bgimg mb--1@xs mb--2@lg">
   <div class="__body">
     <div class="__pretitle">Header Pre Title</div>
-    <h1 class="__title">Header: Extra Large</h1>
+    <h1 class="__title">Header: 100vh, Default (Middle) Position</h1>
     <div class="__subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
   </div>
 </section>
@@ -43,7 +43,7 @@
 <section class="section --banner --80 --bottom +bgimg mb--1@xs mb--2@lg">
   <div class="__body">
     <div class="__pretitle">Header Pre Title</div>
-    <h1 class="__title">Header: Large, Bottom</h1>
+    <h1 class="__title">Header: Bottom Position, 80vh</h1>
     <div class="__subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
   </div>
 </section>
@@ -55,7 +55,7 @@
 <section class="section --banner bg--fixed --60 +bgimg mb--1@xs mb--2@lg">
   <div class="__body">
     <div class="__pretitle">Header Pre Title</div>
-    <h1 class="__title">Header: Large, Fixed</h1>
+    <h1 class="__title">Header: Large, Fixed, 60vh</h1>
     <div class="__subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
   </div>
 </section>
@@ -64,7 +64,7 @@
   <div class="__body">
     <div class="section --lg +bgimg px--1@xs px--2@md">
       <div class="__pretitle">Header Pre Title</div>
-      <h1 class="__title">Header, Contained: Large</h1>
+      <h1 class="__title">Header, Contained</h1>
       <div class="__subtitle">This section is <i>inside</i> a parent banner section.</div>
     </div>
   </div>

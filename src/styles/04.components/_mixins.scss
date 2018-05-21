@@ -490,7 +490,7 @@
   }
 
   &.btn,
-  &.__link,
+  .__link,
   &.__footer__link {
     border-color: transparent;
     @if ($text_color) {
