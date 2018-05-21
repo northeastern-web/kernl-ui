@@ -61,7 +61,7 @@
     }
   }
 
-  &.\--full {
+  &.\--xl {
     .__dialog {
       @include mqbp-up(md) {
         max-width: none;
@@ -97,11 +97,11 @@
     padding: 1rem 1.25rem;
   }
 
-  .__image__wrapper {
+  .__graphic {
     overflow: hidden;
   }
 
-  .__image {
+  .__graphic__img {
     width: 100%;
     height: auto;
   }
@@ -123,23 +123,45 @@
     }
   }
 
-  &.\--contact {}
+  &.\--grid {
+    .__meta { @include type-sm(); }
 
-  .\--contact__info { @include type-sm(); }
+    .__header {
+      padding-bottom: 0;
+      border-bottom: 0 none;
 
-  .__body.\--contact__bio { @include mqbp-up(md) { padding: 7rem 2.5rem 1rem 1.25rem; } }
+      p:last-child { margin-bottom: 0; }
 
-  .\--contact__name {
-    @include type-d5();
-    font-weight: 900;
+      @include mqbp-up(md) {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .__title {
+      @include type-d5();
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .__subtitle {
+      @include type-lead();
+      font-weight: 400;
+    }
+
+    &.\--sm {
+      .col {
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .__header {
+        position: relative !important;
+      }
+    }
   }
 
-  .\--contact__title {
-    @include type-lead();
-    font-weight: 400;
-  }
-
-  &.\--search {
+  &.\--full {
     background-color: rgba($gray-900, .85);
     color: #fff;
 
@@ -165,16 +187,6 @@
       @include mqbp-up(md) {
         width: 70%;
         max-width: 600px;
-      }
-    }
-
-    input[type="search"] {
-      @include type-d1();
-
-      @include mqbp-up(md) {
-        @include type-d4();
-
-        &::placeholder { font-weight: 300; }
       }
     }
   }
