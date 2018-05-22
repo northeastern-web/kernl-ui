@@ -185,6 +185,10 @@ input.\--plaintext {
     @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
     @extend %clearfix;
 
+    &:focus,
+    &:focus-within,
+    &:active { border-color: $input-border-focus; }
+
     input[type="text"],
     input[type="email"],
     input[type="search"],
@@ -257,7 +261,7 @@ input.\--plaintext {
 
         &:hover { color: $type-color; }
       }
-      
+
       ::placeholder { color: rgba($white, 0.7); }
     }
   }
@@ -280,7 +284,7 @@ input.\--plaintext {
   }
 }
 
-// 
+//
 // Checkboxes and radios
 // Indent the labels to position radios/checkboxes as hanging controls.
 
