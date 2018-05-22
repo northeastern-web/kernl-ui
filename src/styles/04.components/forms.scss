@@ -262,6 +262,7 @@ input.\--plaintext {
         &:hover { color: $type-color; }
       }
 
+      input,
       ::placeholder { color: rgba($white, 0.7); }
     }
   }
