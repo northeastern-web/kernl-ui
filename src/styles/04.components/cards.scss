@@ -312,7 +312,9 @@
   //
   // Set heights at small
   @include mqbp-up(sm) {
-    height: $card_height_sm;
+    &:not(.\--h\@md) {
+      height: $card_height_sm;
+    }
 
     &.\--overlay {
       .__graphic__img {
@@ -377,9 +379,18 @@
     &.\--h\@sm {
       @include card_horizontal(50%, 50%);
     }
+
+    &.\--v\@sm {
+      @include card_vertical();
+      height: auto;
+    }
   }
 
   @include mqbp-up(md) {
+    &.\--v\@sm {
+      @include card_vertical();
+    }
+
     &.\--h\@md {
       @include card_horizontal(50%, 50%);
     }
@@ -500,5 +511,22 @@
 
   &:hover {
     .__body { background: rgba(0, 0, 0, 0.35); }
+  }
+}
+
+.\--flush .card {
+  border-radius: 0;
+
+  @include mqbp-up(md) {
+    .__body {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+  }
+
+  @include mqbp-up(xl) {
+    .__graphic__img { height: 115% !important; }
   }
 }

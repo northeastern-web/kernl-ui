@@ -15,7 +15,7 @@
       </div>
       <nav class="nav --interior collapse" id="page_menu">
         <ul class="__list">
-          <li class="__item">
+          <li class="__item --title">
             <a class="__link" href="#">Ipsum Magna Aenean</a>
           </li>
           <li class="__item">
@@ -59,17 +59,17 @@
   </div>
   <nav class="nav --tabbed">
     <ul class="__list" role="tablist">
-      <li class="__item">
-        <a class="__link --active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Tab 1</a>
+      <li class="__item --title">
+        <a class="__link --active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Tab Number One</a>
       </li>
       <li class="__item">
-        <a class="__link" data-toggle="tab" href="#tab_2" role="tab" aria-expanded="false">Tab 2</a>
+        <a class="__link" data-toggle="tab" href="#tab_2" role="tab" aria-expanded="false">The Second Tab</a>
       </li>
       <li class="__item">
-        <a class="__link" data-toggle="tab" href="#tab_3" role="tab" aria-expanded="false">Tab 3</a>
+        <a class="__link" data-toggle="tab" href="#tab_3" role="tab" aria-expanded="false">Number Three Tab</a>
       </li>
       <li class="__item">
-        <a class="__link" data-toggle="tab" href="#tab_4" role="tab" aria-expanded="false">Tab 4</a>
+        <a class="__link" data-toggle="tab" href="#tab_4" role="tab" aria-expanded="false">And Tab the Fourth</a>
       </li>
     </ul>
   </nav>
