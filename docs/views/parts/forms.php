@@ -125,7 +125,7 @@
         </div>
 
         <p class="fs--sm"><i>Add <code>.--enclosed</code> to the <code>.__group</code> wrapper to make the appearance of a self-contained input and button.</i></p>
-        <div class="__group --enclosed mb--3@md">
+        <div class="__group --enclosed --search mb--3@md">
           <label class="sr--only">Search</label>
           <input type="text" placeholder="Search (.--enclosed)">
           <button type="submit" class="btn btn--primary">Go</button>
@@ -146,7 +146,7 @@
   <div class="row">
     <div class="col --12@xs --8@lg --2-offset@lg">
       <form action="" method="">
-        <div class="__group --enclosed --dark +line mb--3@md">
+        <div class="__group --enclosed --search --dark +line mb--3@md">
           <label class="sr--only">Search</label>
           <input type="text" placeholder="Search (.--enclosed.--dark.+line)">
           <button type="submit" class="btn --primary">Go</button>
