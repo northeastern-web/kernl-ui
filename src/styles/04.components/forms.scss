@@ -324,3 +324,21 @@ input.\--plaintext {
     }
   }
 }
+
+//
+// search variant
+.\--enclosed.\--search {
+  &::before {
+    content: $icon--search;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    font-family: 'feathericons';
+  }
+
+  input[type="search"],
+  input[type="text"] {
+    margin-left: 2rem;
+  }
+}
