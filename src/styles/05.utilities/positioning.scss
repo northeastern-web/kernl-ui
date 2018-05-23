@@ -52,5 +52,7 @@
 // Flexbox vertical positioning
 
 .\+equal { height: 100%; } // siblings
-.\+middle { align-items: center; } // 
-.\+bottom { align-items: flex-end; }
+.\+middle { align-items: center; } // parent to descendant
+.\+bottom { align-items: flex-end; } // parent to descendant
+.\+middle-self { align-self: center; } // child height to auto, then positions to parent
+.\+bottom-self { align-self: flex-end; } // child height to auto, then positions to parent
