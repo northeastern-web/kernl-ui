@@ -121,7 +121,6 @@
   line-height: 1.45;
   font-weight: $type-light;
   font-size: $fs-d2#{$important};
-  font-family: $type-slab;
 
   @if $colorContrast { opacity: 0.85; }
 }

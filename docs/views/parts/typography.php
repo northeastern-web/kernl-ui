@@ -188,6 +188,15 @@
           <li>Notice of hearing will be served at least thirty calendar days prior to the date of the hearing. The faculty member may waive a hearing or may respond to the charges in writing at any time before the hearing. In any case, the faculty member must make a detailed and specific written response to the statement of charges not less than fourteen calendar days before the date of the hearing for the written response to be considered for hearing proceedings.</li>
           <li>If the faculty member does not respond to the notice of hearing and statement of charges, the hearing will go forward with the faculty member’s participation limited to offering oral testimony at the hearing, if he/she chooses to participate at all. If the faculty member denies the charges or asserts that the charges do not support a finding of adequate cause in his/her written submission prior to the hearing, but nonetheless waives a hearing, the hearing will go forward and the faculty member may participate relying on his/her previously submitted written statement and his/her oral testimony at the hearing.</li>
         </ol>
+        <blockquote class="--mark">
+          Default blockquote says lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          <footer cite="http://www.washingtonpost.com/">
+            <cite>
+              <b>Person Name</b>
+              <br><i>Washington Post</i>
+            </cite>
+          </footer>
+        </blockquote>
         <h2>Assistance for Committee of Inquiry and Hearing Committee<sup>[2]</sup></h2>
         <ol>
           <li>In the course of preliminary proceedings and/or formal dismissal proceedings, the Senate Agenda Committee may deem it necessary to seek legal counsel on issues of process, for itself or for the Committee of Inquiry. The Agenda Committee will appoint such counsel. The University administration will provide a reasonable budget to meet the expense of such counsel.</li>
@@ -403,8 +412,8 @@
       </blockquote>
     </div>
     <div class="col --12@xs --4@lg">
-      <blockquote class="bg--white shadow">
-        Shadowy blockquote has class. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+      <blockquote class="bg--white --mark shadow">
+        Shadowy blockquote has a mark. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         <footer cite="http://www.washingtonpost.com/">
           <cite>
             <b>Person Name</b>

@@ -59,7 +59,7 @@
       <p><a class="btn bc--white --xs" data-component="button" href="#">White Border xs</a></p>
       <p><a class="btn bc--white --sm" data-component="button" href="#">White Border sm</a></p>
       <p><a class="btn bc--white --pill" data-component="button" href="#">Pill White Border</a></p>
-      <p><a class="btn bc--white --lg" data-component="button" href="#">White Border lg</a></p>
+      <p><a class="btn bc--yellow bg--none --lg" data-component="button" href="#">White Border lg</a></p>
       <p><a class="btn bc--white --lg --block" data-component="button" href="#">Block White Border lg</a></p>
     </div>
   </div>
@@ -102,7 +102,7 @@
       <hr>
       <p>
         <span class="text-style-block">Button Group</span><br>
-        <small><i>Add <code>.btn_group</code> to a button wrapper or href wrapper.</i></small>
+        <small><i>Add <code>.btn__group</code> to a button wrapper or href wrapper.</i></small>
       </p>
       <p class="btn__group">
         <button class="btn bg--gray-800 --sm" data-component="button">This One</button>
@@ -113,30 +113,38 @@
     <div class="col --12@xs --6@md">
       <p>
         <span class="text-style-block">With Iconography</span><br>
-        <small><i>Feather Icons wrapped in a <code>.__icon</code> span.<br>
-        Size and position tweaks with <code>--left</code>, <code>--right</code>, <code>--lg</code>, <code>--thin</code>.</i></small>
+        <small><i>Add <code>__icon</code> class to Feather Icons.<br>
+        Define size and position with <code>--left</code>, <code>--right</code>, <code>--lg</code>, <code>--thin</code>.</i></small>
       </p>
       <p>
         <a class="btn --xs" data-component="button" href="#">Go Forth
-          <span class="__icon --right"><i data-feather="fast-forward"></i></span>
+          <i class="__icon --right" data-feather="fast-forward"></i>
         </a>
       </p>
       <p>
         <a class="btn --sm" data-component="button" href="#">
-          <span class="__icon --left"><i data-feather="settings"></i></span>
+          <i class="__icon --left" data-feather="settings"></i>
           Make Buttons
         </a>
       </p>
       <p>
         <a class="btn" data-component="button" href="#">
-          <span class="__icon --left --lg --thin"><i data-feather="headphones"></i></span>
+          <i class="__icon --left --lg --thin" data-feather="headphones"></i>
           Hear Me Now and<br>
           Listen to Me Later
         </a>
       </p>
       <p>
+        <a class="btn" data-component="button" href="#">
+          <i class="__icon --left --lg --thin" data-feather="headphones"></i>
+          Hear Me Now and Listen to Me Later<br>
+          Listen to Me Later Hear Me Now and Listen to Me Later. Hear Me Now<br>
+          Listen to Me Later
+        </a>
+      </p>
+      <p>
         <a class="btn --lg" data-component="button" href="#">Now Fly Away
-          <span class="__icon --right"><i data-feather="feather"></i></span>
+          <i class="__icon --right" data-feather="feather"></i>
         </a>
       </p>
       <p>
@@ -144,7 +152,7 @@
       </p>
       <p>
         <a class="btn --lg bg--transparent-dark flex--col@xs" data-component="button" href="#">
-          <span class="__icon --lg --thin"><i data-feather="cloud-rain"></i></span>
+          <i class="__icon --lg --thin" data-feather="cloud-rain"></i>
           Looks Like We're In For<br>
           Some Nasty Weather
         </a>

@@ -39,6 +39,15 @@ $("#kernl .element-font-size").each(function() {
 
 
 /**
+ * Dynamically change demo modal sizes
+ */
+$('.modal-demo').on('click touch', 'a.btn', function() {
+  var modalSize = $(this).attr('data-size');
+  $('.modal').removeClass('--sm').removeClass('--base').removeClass('--lg').removeClass('--full').addClass( '--' + modalSize )
+});
+
+
+/**
  * Toggle 'parts' menu
  * adds class to allow for active state
  */

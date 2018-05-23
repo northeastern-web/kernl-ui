@@ -37,17 +37,17 @@
     <header class="k_section__header">Base Style</header>
     <?= listgroup(''); ?>
   </div>
-  <div class="hidden section k_bg-dark" id="tab_2" role="tabpanel">
+  <div class="hidden section bg--gray-700" id="tab_2" role="tabpanel">
     <header class="k_section__header">Base on Dark</header>
-    <?= listgroup(' --on-dark'); ?>
+    <?= listgroup(' --dark'); ?>
   </div>
   <div class="hidden section" id="tab_3" role="tabpanel">
     <header class="k_section__header">Outline Style</header>
     <?= listgroup(' +outline'); ?>
   </div>
-  <div class="hidden section k_bg-dark" id="tab_4" role="tabpanel">
+  <div class="hidden section bg--gray-700" id="tab_4" role="tabpanel">
     <header class="k_section__header">Outline on Dark</header>
-    <?= listgroup(' --on-dark +outline'); ?>
+    <?= listgroup(' --dark +outline'); ?>
   </div>
   <div class="hidden section" id="tab_5" role="tabpanel">
     <header class="k_section__header">Shadow Style</header>
@@ -57,16 +57,16 @@
     <header class="k_section__header">White on Light</header>
     <?= listgroup(' --white +outline'); ?>
   </div>
-  <div class="hidden section k_bg-dark" id="tab_7" role="tabpanel">
+  <div class="hidden section bg--gray-700" id="tab_7" role="tabpanel">
     <header class="k_section__header">Dark on Dark</header>
-    <?= listgroup(' --on-dark --dark'); ?>
+    <?= listgroup(' --dark'); ?>
   </div>
   <div class="hidden section k_bg-light" id="tab_8" role="tabpanel">
     <header class="k_section__header">Striped on Light</header>
     <?= listgroup(' --striped'); ?>
   </div>
-  <div class="hidden section k_bg-dark" id="tab_9" role="tabpanel">
+  <div class="hidden section bg--gray-700" id="tab_9" role="tabpanel">
     <header class="k_section__header">Striped on Dark</header>
-    <?= listgroup(' --on-dark --striped'); ?>
+    <?= listgroup(' --striped'); ?>
   </div>
 </section>

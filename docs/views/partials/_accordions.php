@@ -12,7 +12,7 @@ function accordion($id, $variant, $section_classes, $acc_class) {
   echo '
   <section class="section' . $section_class . '">
     <div class="row">
-      <div class="col --12@xs pb--1@xs">
+      <div class="col pb--1@xs">
         <header class="k_section__header">' . $variant . ' Accordion</header>
         <div id="accordion_' . $id . '" class="accordion ' . $acc_class . '">
           <div class="__item">

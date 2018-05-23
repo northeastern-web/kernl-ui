@@ -52,4 +52,8 @@
 
 .bg--fixed { background-attachment: fixed; }
 
-.bg--none { background: none !important; }
+.bg--none,
+.btn.bg--none:hover {
+  background: none !important;
+  background-color: transparent !important;
+}

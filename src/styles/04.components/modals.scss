@@ -2,7 +2,6 @@
 // Modals
 //
 
-
 // Bootstrap utility to kill the scroll on the body
 .modal-open { overflow: hidden; }
 
@@ -14,6 +13,8 @@
   bottom: 0;
   left: 0;
   padding: 1rem;
+  align-items: center;
+  justify-content: center;
   z-index: 4000;
   display: none;
   overflow: hidden;
@@ -34,12 +35,38 @@
   // Shell div to position the modal with bottom padding
   .__dialog {
     position: relative;
+    display: flex;
     width: auto;
-    margin: 3rem auto;
+    margin: 0 auto;
     max-width: 450px;
 
     @include mqbp-up(md) {
       max-width: 760px;
+    }
+  }
+
+  &.\--sm {
+    .__dialog {
+      @include mqbp-up(md) {
+        max-width: 400px;
+      }
+    }
+  }
+
+  &.\--lg {
+    .__dialog {
+      @include mqbp-up(lg) {
+        max-width: 992px;
+      }
+    }
+  }
+
+  &.\--xl {
+    .__dialog {
+      @include mqbp-up(md) {
+        max-width: none;
+        height: 100%;
+      }
     }
   }
 
@@ -50,6 +77,8 @@
     border: 0 none;
     border-radius: 2px;
     outline: 0;
+    max-height: 96vh;
+    overflow: auto;
     @include box_shadow();
   }
 
@@ -68,11 +97,11 @@
     padding: 1rem 1.25rem;
   }
 
-  .__image__wrapper {
+  .__graphic {
     overflow: hidden;
   }
 
-  .__image {
+  .__graphic__img {
     width: 100%;
     height: auto;
   }
@@ -94,23 +123,45 @@
     }
   }
 
-  &.\--contact {}
+  &.\--grid {
+    .__meta { @include type-sm(); }
 
-  .\--contact__info { @include type-sm(); }
+    .__header {
+      padding-bottom: 0;
+      border-bottom: 0 none;
 
-  .__body.\--contact__bio { @include mqbp-up(md) { padding: 7rem 2.5rem 1rem 1.25rem; } }
+      p:last-child { margin-bottom: 0; }
 
-  .\--contact__name {
-    @include type-d5();
-    font-weight: 900;
+      @include mqbp-up(md) {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .__title {
+      @include type-d5();
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .__subtitle {
+      @include type-lead();
+      font-weight: 400;
+    }
+
+    &.\--sm {
+      .col {
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .__header {
+        position: relative !important;
+      }
+    }
   }
 
-  .\--contact__title {
-    @include type-lead();
-    font-weight: 400;
-  }
-
-  &.\--search {
+  &.\--full {
     background-color: rgba($gray-900, .85);
     color: #fff;
 
@@ -120,33 +171,22 @@
       right: 2rem;
     }
 
-    .__dialog { max-width: none; }
-
-    .__content {
-      margin: 5% auto;
-      background: transparent;
-      box-shadow: none;
-      color: #fff;
-
-      @include mqbp-up(lg) {
-        width: 70%;
-      }
+    .__dialog {
+      max-width: none;
+      flex: 1;
     }
 
-    .__control {
-      @include type-d1();
-      padding-bottom: 1rem;
-      padding-left: 0;
+    .__content {
+      margin: 0 auto;
       background: transparent;
-      border: 0 none;
-      border-bottom: 2px solid rgba(#fff, 0.5);
-      font-weight: $type-light;
-      color: #fff;
-      outline: none;
       box-shadow: none;
+      color: #fff;
+      width: 100%;
+      max-width: 400px;
 
       @include mqbp-up(md) {
-        @include type-d4();
+        width: 70%;
+        max-width: 600px;
       }
     }
   }
@@ -168,12 +208,15 @@
   font-size: 1.5rem;
   font-weight: 400;
   text-shadow: 0 1px 0 #fff;
-  opacity: .5;
+  opacity: .65;
   transition: opacity 0.2s ease;
   z-index: 4001;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     opacity: 1;
+    outline: none;
   }
 }
 

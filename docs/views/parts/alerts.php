@@ -47,9 +47,7 @@
 
       <div class="alert +btn bg--teal">
         <div class="__body">
-          <div class="__icon --thin --lg">
-            <i data-feather="alert-octagon"></i>
-          </div>
+          <i class="__icon --thin --lg" data-feather="alert-octagon"></i>
           <div class="__excerpt">
             <p><b>Alert with icon and footer button.</b> Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
           </div>

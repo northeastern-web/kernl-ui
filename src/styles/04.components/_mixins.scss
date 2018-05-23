@@ -180,30 +180,26 @@
   .__icon {
     height: round($font-size * 1.25);
     width: round($font-size * 1.25);
-
-    svg {
-      height: round($font-size * 1.25);
-      width: round($font-size * 1.25);
-    }
+    flex: 1 1 round($font-size * 1.25);
 
     &.\--left {
       margin-right: round($font-size / 2);
     }
 
-    &.\--right {
-      margin-left: round($font-size / 2);
+    &.\--right { margin-left: round($font-size / 2); }
+
+    &.\--sm {
+      height: $font-size;
+      width: $font-size;
+      flex: 1 1 $font-size;
     }
 
     &.\--lg {
       height: $font-size * 2;
       width: $font-size * 2;
+      flex: 1 1 round($font-size * 2);
       margin-top: $font-size / 2;
       margin-bottom: $font-size / 2;
-
-      svg {
-        height: $font-size * 2;
-        width: $font-size * 2;
-      }
     }
   }
 }
@@ -273,6 +269,28 @@
       width: $width_text;
     }
   }
+
+  &.\--right {
+    .__graphic {
+      margin-left: $width_graphic;
+    }
+
+    .__body {
+      left: auto;
+      right: $width_graphic;
+    }
+
+    &:after,
+    .__graphic + .__header {
+      left: auto;
+      right: $width_graphic;
+    }
+
+    .__footer {
+      left: 0;
+      right: $width_graphic;
+    }
+  }
 }
 
 // reset card_horizontal back to stacked when necessary;
@@ -335,31 +353,12 @@
 // List Groups
 
 // List Groups variant
-@mixin list_group_variant($color: inherit, $background: transparent, $link: $type-link, $striped: rgba(255, 255, 255, 0.1)) {
+@mixin list_group_variant($color: inherit, $background: transparent, $striped: rgba(255, 255, 255, 0.1)) {
   background: $background;
-  color: $color;
 
   > .__item,
   > li,
   > div { border-color: rgba($color, 0.25); }
-
-  a {
-    display: block;
-    color: $link;
-  }
-
-  > div,
-  > li {
-    a:hover,
-    &:hover a {
-      color: desaturate(darken($link, 7%), 20%);
-    }
-  }
-
-  > a {
-    color: $color;
-    &:hover { color: $link; }
-  }
 
   &.\--striped .__item,
   &.\--striped > li {
@@ -368,21 +367,9 @@
     &:nth-child(odd) { background-color: $striped; }
   }
 
-  &.\--on-dark {
-    > div,
-    > li {
-      a:hover,
-      &:hover a { color: lighten($type-link, 20%) !important; }
-    }
-
-    > a {
-      &:hover { color: lighten($type-link, 20%) !important; }
-    }
-  }
-
   &.\+outline { border: 1px solid rgba($color, 0.25); }
 
-  &.\+indent:not(.\--striped):not(.\+outline):not(.\+shadow):not(.\--on-dark) {
+  &.\+indent:not(.\--striped):not(.\+outline):not(.\+shadow) {
     > .__item,
     > li {
       &:hover { background-color: rgba($color, 0.05); }
@@ -472,7 +459,7 @@
   }
 
   &.btn,
-  &.__link,
+  .__link,
   &.__footer__link {
     border-color: transparent;
     @if ($text_color) {

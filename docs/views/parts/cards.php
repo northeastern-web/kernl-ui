@@ -31,7 +31,7 @@ figure out --middle with a heading.
 <section class="section k_bg-light">
   <div class="row">
 
-    <div class="col --12@xs --6@sm --4@lg --2@xl">
+    <div class="col --6@sm --4@lg --2@xl">
       <article class="card --tile">
         <a href="#" class="__link">
           <div class="__body">
@@ -43,7 +43,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --4@lg --2@xl">
+    <div class="col --6@sm --4@lg --2@xl">
       <article class="card --tile bc--teal shadow--none">
         <a href="#" class="__link">
           <div class="__body">
@@ -54,7 +54,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --4@lg --2@xl">
+    <div class="col --6@sm --4@lg --2@xl">
       <article class="card --tile ta--c">
         <a href="#" class="__link">
           <div class="__graphic +round"></div>
@@ -66,19 +66,20 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --4@lg --2@xl">
+    <div class="col --6@sm --4@lg --2@xl">
       <article class="card --tile --overlay --middle">
         <a href="#" class="__link">
           <div class="__graphic"></div>
           <div class="__body">
-            <div class="__icon"><i class="icon--inbox"></i></div>
+            <i class="__icon icon--inbox"></i>
             <h2 class="__title">Overlay Tile</h2>
+            <p>Using font icon, not SVG</p>
           </div>
         </a>
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --4@lg --2@xl">
+    <div class="col --6@sm --4@lg --2@xl">
       <article class="card --tile">
         <div class="__header">
           <div class="__column">
@@ -98,14 +99,12 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --4@lg --2@xl">
+    <div class="col --6@sm --4@lg --2@xl">
       <article class="card --tile --teal --middle">
         <a href="#" class="__link">
           <div class="__body">
-            <div class="__icon --thin --lg">
-              <i data-feather="command"></i>
-            </div>
-            <h2 class="__title">With Large, Thin Icon</h2>
+            <i class="__icon --thin --lg" data-feather="command"></i>
+            <h2 class="__title">Large, Thin SVG Icon</h2>
             <p>Sed posuere consectetur est at lobortis.</p>
           </div>
         </a>
@@ -114,7 +113,7 @@ figure out --middle with a heading.
 
     <!-- Basic cards -->
 
-    <div class="col --12@xs --6@sm --3@lg">
+    <div class="col --6@sm --3@lg">
       <article class="card">
         <a href="#" class="__link">
           <div class="__body">
@@ -124,7 +123,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --3@lg">
+    <div class="col --6@sm --3@lg">
       <article class="card bc--gray shadow--none">
         <a href="#" class="__link">
           <div class="__body">
@@ -135,7 +134,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --3@lg">
+    <div class="col --6@sm --3@lg">
       <article class="card">
         <a href="" class="__link">
           <div class="badge --right --dark">Badge</div>
@@ -148,7 +147,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --3@lg">
+    <div class="col --6@sm --3@lg">
       <article class="card">
         <a href="#" class="__link">
           <div class="__header">
@@ -167,7 +166,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --4@lg">
+    <div class="col --6@sm --4@lg">
       <article class="card --overlay --bottom +shade">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -179,7 +178,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@sm --4@lg">
+    <div class="col --6@sm --4@lg">
       <article class="card --overlay">
         <div class="__graphic"></div>
         <div class="__header">
@@ -198,7 +197,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --4@lg">
+    <div class="col --4@lg">
       <article class="card --overlay --bottom">
         <a href="" class="__link">
           <div class="__graphic"></div>
@@ -216,7 +215,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@lg">
+    <div class="col --6@lg">
       <article class="card --h@sm">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -228,7 +227,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --6@lg">
+    <div class="col --6@lg">
       <article class="card --overlay">
         <div class="__graphic"></div>
         <div class="__header">
@@ -247,7 +246,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --5@lg">
+    <div class="col --5@lg">
       <article class="card --h@sm">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -259,7 +258,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --7@lg">
+    <div class="col --7@lg">
       <article class="card --overlay">
         <div class="__graphic"></div>
         <div class="__header">
@@ -278,7 +277,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --4@lg">
+    <div class="col --4@lg">
       <article class="card --h@sm --v@lg">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -298,7 +297,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --8@lg">
+    <div class="col --8@lg">
       <article class="card --h@sm bg--blue-dark">
         <div class="__graphic"></div>
         <div class="__header">
@@ -317,7 +316,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --4@lg">
+    <div class="col --4@lg">
       <article class="card --overlay">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -337,7 +336,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --12@xs --8@lg">
+    <div class="col --8@lg">
       <article class="card --overlay">
         <div class="__graphic"></div>
         <div class="__header">
@@ -353,107 +352,37 @@ figure out --middle with a heading.
       </article>
     </div>
 
-
-    <!-- Stacked Cards -->
-
-    <div class="col --12@xs --6@sm --20@lg">
-      <div class="card --tile --overlay --middle brbl--0 brbr--0 fs--d1 mb--0@xs">
-        <div class="__graphic"></div>
-        <div class="__body">
-          <h2 class="__title">Card-in-a-Card</h2>
-        </div>
-      </div>
-      <div class="card +scroll +list-group brtl--0 brtr--0">
-        <div class="__body py--0@xs">
-          <ul class="list-group --sm">
-            <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
-            <li class="__item"><a href="#">Lorem dolor sit amet, consectetur</a></li>
-            <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
-            <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
-            <li class="__item"><a href="#">Lorem dolor sit amet, consectetur</a></li>
-            <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col --12@xs --6@sm --20@lg">
-      <div class="card --tile --overlay --middle brbl--0 brbr--0 fs--d1 mb--0@xs">
-        <div class="__graphic"></div>
-        <div class="__body">
-          <h2 class="__title">Overlay Tile</h2>
-        </div>
-      </div>
-      <div class="card +scroll +list-group brtl--0 brtr--0">
-        <div class="__body py--0@xs">
-          <ul class="list-group --sm">
-            <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
-            <li class="__item"><a href="#">Lorem dolor sit amet, consectetur</a></li>
-            <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
-            <li class="__item"><a href="#">Lorem dolor sit amet, consectetur</a></li>
-            <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col --12@xs --6@sm --20@lg">
-      <div class="card --tile --overlay --middle brbl--0 brbr--0 fs--d1 mb--0@xs">
-        <div class="__graphic"></div>
-        <div class="__body">
-          <h2 class="__title">Another Nested Overlay Tile</h2>
-        </div>
-      </div>
-      <div class="card +scroll +list-group brtl--0 brtr--0">
-        <div class="__body py--0@xs">
-          <ul class="list-group --sm">
-            <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
-            <li class="__item"><a href="#">Lorem dolor sit amet, consectetur</a></li>
-            <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col --12@xs --6@sm --20@lg">
-      <div class="card --tile --overlay --middle brbl--0 brbr--0 fs--d1 mb--0@xs">
-        <div class="__graphic"></div>
-        <div class="__body">
-          <h2 class="__title">Overlay Tile in Another Card</h2>
-        </div>
-      </div>
-      <div class="card +scroll +list-group brtl--0 brtr--0">
-        <div class="__body py--0@xs">
-          <ul class="list-group --sm">
-            <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
-            <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
-            <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
-            <li class="__item"><a href="#">Lorem dolor sit amet, consectetur</a></li>
-            <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col --12@xs --6@sm --20@lg">
-      <div class="card --tile --overlay --middle brbl--0 brbr--0 fs--d1 mb--0@xs">
-        <div class="__graphic"></div>
-        <div class="__body">
-          <h2 class="__title">Overlay Tile</h2>
-        </div>
-      </div>
-      <div class="card +scroll +list-group brtl--0 brtr--0">
-        <div class="__body py--0@xs">
-          <ul class="list-group --sm">
-            <li class="__item"><a href="#">Lorem ipsum dolor sit amet do eiusmod</a></li>
-            <li class="__item"><a href="#">Lorem dolor sit amet, consectetur</a></li>
-            <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
-            <li class="__item"><a href="#">Lorem dolor sit amet, consectetur</a></li>
-            <li class="__item"><a href="#">Maecenas faucibus mollis interdum</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
   </div>
+</section>
+
+<section class="section --flush --nogutters py--0@xs">
+  <article class="card --h@md bg--blue-dark mb--0@xs shadow--none">
+    <div class="__graphic"></div>
+    <div class="__body">
+      <blockquote class="--mark">
+        Default blockquote says lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        <footer cite="http://www.washingtonpost.com/">
+          <cite>
+            <b>Person Name</b>
+            <br><i>Washington Post</i>
+          </cite>
+        </footer>
+      </blockquote>
+    </div>
+  </article>
+
+  <article class="card --h@md bg--blue-dark --right shadow--none">
+    <div class="__graphic"></div>
+    <div class="__body">
+      <blockquote class="--mark">
+        Default blockquote says lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        <footer cite="http://www.washingtonpost.com/">
+          <cite>
+            <b>Person Name</b>
+            <br><i>Washington Post</i>
+          </cite>
+        </footer>
+      </blockquote>
+    </div>
+  </article>
 </section>
