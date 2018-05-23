@@ -51,7 +51,9 @@
 .btn.bc--white {
   background-color: transparent;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     background-color: rgba($white, 0.1) !important;
     color: $white;
   }

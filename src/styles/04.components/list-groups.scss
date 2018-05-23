@@ -41,15 +41,17 @@
     margin-bottom: 0;
   }
 
-  a { transition: all 0.3s ease-out; }
+  a {
+    display: block;
+    color: inherit;
+    transition: all 0.3s ease-out;
+  }
 
   //
   // Modifiers
-  &.\--white { @include list_group_variant($type-color, #fff, $type-link); }
+  &.\--white { @include list_group_variant($type-color, #fff); }
 
-  &.\--on-dark { @include list_group_variant(#fff, transparent, #fff); }
-
-  &.\--dark { @include list_group_variant(#fff, rgba($type-color, 0.5), #fff); }
+  &.\--dark { @include list_group_variant(#fff, rgba($type-color, 0.5)); }
 
   //
   // Sizing
@@ -89,11 +91,7 @@
   }
 
   &.\--striped {
-    @include list_group_variant($type-color, rgba(0, 0, 0, 0.02), $type-color, rgba(0, 0, 0, 0.05));
-
-    &.\--on-dark {
-      @include list_group_variant(#fff, rgba(255, 255, 255, 0.05), #fff, rgba(255, 255, 255, 0.1));
-    }
+    @include list_group_variant($type-color, rgba(0, 0, 0, 0.02));
 
     &.\+icon {
       > .__item,

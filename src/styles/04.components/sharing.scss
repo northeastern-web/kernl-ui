@@ -30,19 +30,27 @@
 
   .__icon {
     @extend %icon;
-
-    svg {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
-  &.share-buttons--stacked {
+  &.\--stacked {
     padding-left: 0;
 
     li {
       float: none;
       margin: 0 0 -1px 0;
+    }
+  }
+
+  &.\--flex {
+    padding-left: 0;
+
+    @include mqbp-up(md) {
+      li {
+        float: none;
+        margin: 0 0 -1px 0;
+      }
     }
   }
 }

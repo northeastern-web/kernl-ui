@@ -2,7 +2,7 @@
 function listgroup($classes) {
   echo '
   <div class="row mb--2@xs">
-    <div class="col --12@xs --3@md">
+    <div class="col --3@md">
       <p class="text-style-block mb--1@xs"><small>Small</small></p>
       <div class="list-group --sm' . $classes . '">
         <div class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</div>
@@ -12,7 +12,7 @@ function listgroup($classes) {
         <div class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</div>
       </div>
     </div>
-    <div class="col --12@xs --4@md">
+    <div class="col --4@md">
       <p class="text-style-block mb--1@xs"><small>Small; items contain links; has icons</small></p>
       <div class="list-group --sm' . $classes . ' +icon">
         <div class="__item">
@@ -36,7 +36,7 @@ function listgroup($classes) {
         </div>
       </div>
     </div>
-    <div class="col --12@xs --5@md">
+    <div class="col --5@md">
       <p class="text-style-block mb--1@xs"><small>Small; Items are Links; extra content</small></p>
       <div class="list-group --sm' . $classes . '">
         <a href="#" class="__item">
@@ -58,7 +58,7 @@ function listgroup($classes) {
     </div>
   </div>
   <div class="row">
-    <div class="col --12@xs --4@md --1-offset@md">
+    <div class="col --4@md --1-offset@md">
       <p class="text-style-block mb--1@xs"><small>Base size; items contain links; icons on right</small></p>
       <div class="list-group'  . $classes . ' +icon --right">
         <div class="__item">
@@ -87,7 +87,7 @@ function listgroup($classes) {
         </div>
       </div>
     </div>
-    <div class="col --12@xs --5@md --1-offset@xs">
+    <div class="col --5@md --1-offset@xs">
       <p class="text-style-block mb--1@xs"><small>Base size; Items are Links; extra content; indent on hover</small></p>
       <div class="list-group'  . $classes . ' +indent">
         <a href="#" class="__item">

@@ -64,7 +64,7 @@ const Modal = (() => {
   }
 
   const Selector = {
-    DIALOG             : '.modal-dialog',
+    DIALOG             : '.__dialog',
     DATA_TOGGLE        : '[data-toggle="modal"]',
     DATA_DISMISS       : '[data-dismiss="modal"]',
     FIXED_CONTENT      : '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
@@ -241,7 +241,7 @@ const Modal = (() => {
         document.body.appendChild(this._element)
       }
 
-      this._element.style.display = 'block'
+      this._element.style.display = 'flex'
       this._element.removeAttribute('aria-hidden')
       this._element.scrollTop = 0
 

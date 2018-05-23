@@ -69,23 +69,15 @@
   // Icon
   .__icon {
     @extend %icon;
-    padding: 1rem 0 1.5rem;
+    margin: 1rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
 
     @include mqbp-up(lg) {
-      padding: 0 0.5rem 0 0;
-      flex: 0 0 10%;
+      margin: 1rem;
+      flex: 0 1 10%;
       max-width: 10%;
-    }
-
-    &.\--lg {
-      margin: 1rem 0;
-
-      @include mqbp-up(lg) {
-        margin: 0 auto;
-      }
     }
   }
 
@@ -111,6 +103,7 @@
 
       @include mqbp-up(lg) {
         display: inline-block;
+        align-self: center;
       }
     }
   }
