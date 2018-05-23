@@ -6,9 +6,9 @@
     <div class="__content">
       <div class="__body">
         <form action="" method="">
-          <div class="__group --enclosed --dark +line">
+          <div class="__group --enclosed --search --dark +line">
             <label for="exampleText" class="sr--only">Search</label>
-            <input type="search" id="modalSearch" aria-describedby="textHelp" placeholder="Search for meaning...">
+            <input class="fs--d3 fw--300" type="search" id="modalSearch" aria-describedby="textHelp" placeholder="Search for meaning...">
             <button type="submit" class="btn">Go</button>
           </div>
           <div class="__group --check --inline">
