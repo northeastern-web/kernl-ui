@@ -78,7 +78,7 @@
     border-radius: 2px;
     outline: 0;
     max-height: 96vh;
-    overflow: auto;
+    overflow-y: scroll;
     @include box_shadow();
   }
 
@@ -102,7 +102,7 @@
   }
 
   .__graphic__img {
-    width: 100%;
+    width: 130%;
     height: auto;
   }
 
@@ -124,17 +124,36 @@
   }
 
   &.\--grid {
-    .__meta { @include type-sm(); }
+    .__content { overflow-x: hidden; }
+
+    .__meta {
+      padding: 1rem;
+      @include type-xs();
+      list-style: none;
+
+      li { margin-bottom: 0; }
+    }
 
     .__header {
-      padding-bottom: 0;
+      padding: 1rem 1rem 0;
       border-bottom: 0 none;
 
       p:last-child { margin-bottom: 0; }
 
       @include mqbp-up(md) {
+        padding: 1rem 0 0;
+        flex: 1;
+        align-items: flex-end;
         position: absolute;
         bottom: 0;
+      }
+    }
+
+    .__body {
+      padding: 1rem;
+
+      @include mqbp-up(md) {
+        padding: 1rem 3rem 1rem 0;
       }
     }
 
@@ -149,6 +168,7 @@
       font-weight: 400;
     }
 
+
     &.\--sm {
       .col {
         flex-basis: 100% !important;
@@ -157,6 +177,20 @@
 
       .__header {
         position: relative !important;
+      }
+
+      @include mqbp-up(md) {
+        .__header,
+        .__body { padding: 1rem; }
+      }
+    }
+
+    &.\--sm,
+    &.\--lg,
+    &.\--xl {
+      .__meta {
+        padding: 1rem;
+        @include type-sm();
       }
     }
   }
@@ -230,9 +264,8 @@
   top: -9999px;
   width: 50px;
   height: 50px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
-
 
 // Bootstrap utility for lights-out behind the modal
 .modal-backdrop {
@@ -242,11 +275,11 @@
   bottom: 0;
   left: 0;
   z-index: 3999;
-  background-color: $gray-800;
-  transition: opacity 0.5s ease;
+  background-color: $black;
+  transition: opacity 0.35s ease;
 
   &.fade { opacity: 0; }
   &.in,
   &.show,
-  &.active { opacity: 0.65; }
+  &.active { opacity: 0.75; }
 }
