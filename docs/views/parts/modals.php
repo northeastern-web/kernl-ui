@@ -79,10 +79,10 @@
 
       <div class="modal --grid fade" id="modal_grid" tabindex="-1" role="dialog" aria-labelledby="modal_grid_label" aria-hidden="true">
         <div class="__dialog" role="document">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="__icon" data-feather="x-circle"></i>
+          </button>
           <div class="__content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <i class="__icon" data-feather="x-circle"></i>
-            </button>
             <div class="row">
               <div class="col --4@md">
                 <div class="__graphic"></div>
@@ -97,15 +97,20 @@
             </div>
             <div class="row">
               <div class="col --4@md">
-                <div class="__body">
-                  <p class="__meta"><a href="#">d.m.davenport@northeastern.edu</a><br>
+                <div class="__meta">
+                  <p><a href="#">d.m.davenport@northeastern.edu</a><br>
                   617.373.5555</p>
+                  <!-- <ul class="ls--none">
+                    <li><a href="#">d.m.davenport@northeastern.edu</a></li>
+                    <li><a href="#">617.373.5555</a></li>
+                  </ul> -->
                 </div>
               </div>
               <div class="col --8@md">
                 <div class="__body">
                   <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                  <p>Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla.</p>
                 </div>
               </div>
             </div>
@@ -121,8 +126,8 @@
   <header class="k_section__header">Full-Screen (Example: Search)</header>
   <div class="row">
     <div class="col">
-      <div class="ta--c py--1@xs py--3@md">
-        <a href="#" data-toggle="modal" data-target="#modal_search">
+      <div class="modal-demo ta--c py--1@xs py--3@md">
+        <a href="#" data-toggle="modal" data-size="full" data-target="#modal_search">
           <i data-feather="search"></i>
         </a>
       </div>
