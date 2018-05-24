@@ -1,4 +1,4 @@
-<div class="modal fade --dark --full" id="modal_search" tabindex="-1" role="dialog" aria-labelledby="modal_search_label" aria-hidden="true">
+<div class="modal fade --dark" id="modal_search" tabindex="-1" role="dialog" aria-labelledby="modal_search_label" aria-hidden="true">
   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
     <i class="__icon --lg --thin" data-feather="x-circle"></i>
   </button>

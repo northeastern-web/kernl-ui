@@ -41,11 +41,17 @@ $("#kernl .element-font-size").each(function() {
 /**
  * Dynamically change demo modal sizes
  */
-$('.modal-demo').on('click touch', 'a.btn', function() {
-  var modalSize = $(this).attr('data-size');
-  $('.modal').removeClass('--sm').removeClass('--base').removeClass('--lg').removeClass('--full').addClass( '--' + modalSize )
+
+$(document).on('keyup', function(e) {
+  if (e.keyCode == 27) {
+    $('.modal').removeClass('--sm --base --lg --xl --full');
+  }
 });
 
+$('.modal-demo').on('click touch', 'a', function() {
+  var modalSize = $(this).attr('data-size');
+  $('.modal').removeClass('--sm --base --lg --xl --full').addClass( '--' + modalSize )
+});
 
 /**
  * Toggle 'parts' menu
