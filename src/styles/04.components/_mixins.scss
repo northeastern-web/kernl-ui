@@ -425,12 +425,15 @@
 
 //
 // Media Objects
-@mixin media-object-size($font-size: $fs-sm, $font-size-title: 1rem, $img-size: 4rem) {
+@mixin media-object-size($font-size: $fs-sm, $font-size-title: 1rem, $img-size: 3rem) {
   .__title { font-size: $font-size-title; }
 
   .__copy { font-size: $font-size; }
 
-  .__graphic { @include size($img-size, $img-size); }
+  .__graphic {
+    flex: 0 0 $img-size;
+    height: $img-size;
+  }
 }
 
 
