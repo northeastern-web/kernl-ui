@@ -208,6 +208,22 @@ $fs-d7:   5.00rem   !default;
 $type-color:  $gray-800 !default;
 $type-link:   $blue !default;
 
+// Letter Spacing
+$letter-spacing-tight: -.05em !default;
+$letter-spacing-1: .1em !default;
+$letter-spacing-2: .25em !default;
+
+// Line Height
+$line-height-solid: 1 !default;
+$line-height-title: 1.25 !default;
+$line-height-copy: 1.5 !default;
+
+// Measure
+$measure: 30em !default;
+$measure-narrow: 20em !default;
+$measure-wide: 34em !default;
+
+
 //
 // Misc
 $spacer: 1rem;

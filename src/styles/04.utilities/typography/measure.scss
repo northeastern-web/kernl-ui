@@ -1,0 +1,9 @@
+// Utility
+// Measure
+//
+// .measure--<weight>
+
+
+.measure        { max-width: $measure; } // 30em
+.measure-wide   { max-width: $measure-wide; } // 20em
+.measure-narrow { max-width: $measure-narrow; } // 34em

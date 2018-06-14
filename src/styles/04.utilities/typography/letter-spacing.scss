@@ -1,0 +1,9 @@
+// Utility
+// Letter Spacing
+//
+// .ls--<weight>
+
+
+.ls--0      { letter-spacing:  $letter-spacing-1; } // .1em
+.ls--tight  { letter-spacing: $letter-spacing-tight; } // -.05em
+.ls--mega   { letter-spacing: $letter-spacing-2; } // .25em

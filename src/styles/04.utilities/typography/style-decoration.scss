@@ -1,0 +1,35 @@
+// Utility
+// Style & Decoration
+//
+// .<property>--<value>
+
+
+// Style
+.fs--italic { font-style: italic; }
+.fs--roman  { font-style: normal; }
+
+// Decoration
+.td--u    { text-decoration: underline; }
+.td--line { text-decoration: line-through; }
+.td--none { text-decoration: none; }
+
+// Transform
+.tt--normal { text-transform: none; }
+.tt--l      { text-transform: lowercase !important; }
+.tt--u      { text-transform: uppercase !important; }
+.tt--c      { text-transform: capitalize !important; }
+.tt--caps {
+  font-size: 92%;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+}
+
+// Smoothing
+.smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.smooth--none {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}

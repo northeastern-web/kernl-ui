@@ -3,62 +3,6 @@
 //
 
 
-// Sizing
-.fs--xs { @include type-xs(false, true); }
-.fs--sm { @include type-sm(false, true); }
-.fs--root { @include type-root(); }
-.fs--d1 { @include type-d1(false, true); }
-.fs--d2 { @include type-d2(false, true); }
-.fs--d3 { @include type-d3(false, true); }
-.fs--d4 { @include type-d4(false, true); }
-.fs--d5 { @include type-d5(false, true); }
-.fs--d6 { @include type-d6(false, true); }
-.fs--d7 { @include type-d7(false, true); }
-
-
-// Lead
-.fs--lead { @include type-lead(1); }
-
-
-// Weight
-.fw--100  { font-weight: 100 !important; }
-.fw--200  { font-weight: 200 !important; }
-.fw--300  { font-weight: 300 !important; }
-.fw--400  { font-weight: 400 !important; }
-.fw--500  { font-weight: 500 !important; }
-.fw--600  { font-weight: 600 !important; }
-.fw--700  { font-weight: 700 !important; }
-.fw--900  { font-weight: 900 !important; }
-
-// Font Family
-.ff--sans { font-family: $type-sans !important; }
-.ff--slab { font-family: $type-slab !important; }
-.ff--serif { font-family: $type-serif !important; }
-.ff--mono { font-family: $type-mono !important; }
-
-// Alignment
-.ta--l  { text-align: left !important; }
-.ta--r  { text-align: right !important; }
-.ta--c  { text-align: center !important; }
-
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include mqbp-up($breakpoint) {
-    .ta--l\@#{$breakpoint}  { text-align: left !important; }
-    .ta--r\@#{$breakpoint}  { text-align: right !important; }
-    .ta--c\@#{$breakpoint}  { text-align: center !important; }
-  }
-}
-
-
-// Text Transformation
-.tt--l    { text-transform: lowercase !important; }
-.tt--u    { text-transform: uppercase !important; }
-.tt--c    { text-transform: capitalize !important; }
-.tt--caps {
-  font-size: 92%;
-  text-transform: uppercase;
-  letter-spacing: 0.03rem;
-}
 
 
 // Feather Icon Sizes and Weights
@@ -96,8 +40,3 @@ blockquote.\--mark {
     }
   }
 }
-
-
-//
-// Colors
-@include generate_colors('tc'); // run generator for type colors
