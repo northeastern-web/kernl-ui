@@ -9,35 +9,33 @@
 @import "02.baseline/forms";
 @import "02.baseline/media";
 
-@import "03.objects/grid";
-@import "03.objects/sections";
-@import "03.objects/accessibility";
-@import "03.objects/icons";
+@import "03.components/_variables";
+@import "03.components/_mixins";
+@import "03.components/accordions";
+@import "03.components/badges";
+@import "03.components/breadcrumbs";
+@import "03.components/buttons";
+@import "03.components/cards";
+@import "03.components/columns";
+@import "03.components/footer";
+@import "03.components/forms";
+@import "03.components/list-groups";
+@import "03.components/loader";
+@import "03.components/mastheads";
+@import "03.components/media";
+@import "03.components/modals";
+@import "03.components/navs";
+@import "03.components/sections";
+@import "03.components/sharing";
 
-@import "04.components/_variables";
-@import "04.components/_mixins";
-@import "04.components/accordions";
-@import "04.components/alerts";
-@import "04.components/badges";
-@import "04.components/breadcrumbs";
-@import "04.components/buttons";
-@import "04.components/cards";
-@import "04.components/footer";
-@import "04.components/forms";
-@import "04.components/list-groups";
-@import "04.components/loader";
-@import "04.components/mastheads";
-@import "04.components/media";
-@import "04.components/modals";
-@import "04.components/navs";
-@import "04.components/sharing";
-
-@import "05.utilities/borders"; // 1st
-@import "05.utilities/backgrounds"; // 2nd
-@import "05.utilities/clearfix";
-@import "05.utilities/visibility";
-@import "05.utilities/spacing";
-@import "05.utilities/positioning";
-@import "05.utilities/typography";
+@import "04.utilities/accessibility";
+@import "04.utilities/borders"; // 1st
+@import "04.utilities/backgrounds"; // 2nd
+@import "04.utilities/clearfix";
+@import "04.utilities/icons";
+@import "04.utilities/positioning";
+@import "04.utilities/spacing";
+@import "04.utilities/typography";
+@import "04.utilities/visibility";
 
 @import "print";
