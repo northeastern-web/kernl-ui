@@ -1,0 +1,17 @@
+// Backgrounds Utility
+// Overlay
+//
+// .bgo--<value>
+
+
+.bgo--none:after  { background: none; }
+
+.bgo--10:after    { background: rgba(0, 0, 0, 0.10); }
+.bgo--20:after    { background: rgba(0, 0, 0, 0.20); }
+.bgo--30:after    { background: rgba(0, 0, 0, 0.30); }
+.bgo--40:after    { background: rgba(0, 0, 0, 0.40); }
+.bgo--50:after    { background: rgba(0, 0, 0, 0.50); }
+.bgo--60:after    { background: rgba(0, 0, 0, 0.60); }
+.bgo--70:after    { background: rgba(0, 0, 0, 0.70); }
+.bgo--80:after    { background: rgba(0, 0, 0, 0.80); }
+.bgo--90:after    { background: rgba(0, 0, 0, 0.90); }

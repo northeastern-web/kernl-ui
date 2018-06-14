@@ -1,0 +1,20 @@
+// Borders Utility
+// Width
+//
+// .bw<loc>--<value>
+
+
+.bw--0,
+.bwa--0 { border-width: 0; }
+.bwt--0 { border-top-width: 0; }
+.bwr--0 { border-right-width: 0; }
+.bwb--0 { border-bottom-width: 0; }
+.bwl--0 { border-left-width: 0; }
+
+// reset to 1px
+.bw--1,
+.bwa--1 { border-width: 1px; }
+.bwt--1 { border-top-width: 1px; }
+.bwr--1 { border-right-width: 1px; }
+.bwb--1 { border-bottom-width: 1px; }
+.bwl--1 { border-left-width: 1px; }

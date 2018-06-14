@@ -1,27 +1,2 @@
 
 
-blockquote.\--mark {
-  padding-top: 3.125rem;
-  position: relative;
-
-  &::before {
-    content: '\201C';
-    font-family: Georgia;
-    font-size: 3.3rem;
-    position: absolute;
-    opacity: 0.8;
-    top: 0.5rem;
-    left: 1.125rem;
-  }
-
-  @include mqbp-up(md) {
-    padding-top: 2rem;
-    padding-left: 4rem;
-
-    &::before {
-      top: 0.85rem;
-      left: 1.325rem;
-      font-size: 4.75rem;
-    }
-  }
-}

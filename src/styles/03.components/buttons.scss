@@ -74,3 +74,16 @@
     &:last-child { margin-right: 0; }
   }
 }
+
+//
+// Misc
+.btn.bc--white {
+  background-color: transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: rgba($white, 0.1) !important;
+    color: $white;
+  }
+}

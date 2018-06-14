@@ -1,9 +1,10 @@
-//
+// Misc Utility
 // Accessibility
 //
+// .skip
 
 
-a.skip {
+.skip {
   position: absolute;
   top: -100px;
   height: 1px;
@@ -17,17 +18,17 @@ a.skip {
   color: #fff;
   text-decoration: none;
   border: 0 none;
-}
 
-a.skip:focus,
-a.skip:active {
-  position: relative;
-  display: block;
-  top: 0;
-  width: 100%;
-  height: auto;
-  padding: 1rem;
-  overflow: visible;
-  z-index: 5000;
-  outline: none;
+  &:focus,
+  &:active {
+    position: relative;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    overflow: visible;
+    z-index: 5000;
+    outline: none;
+  }
 }

@@ -1,0 +1,15 @@
+// Misc Utility
+// Box Shadow
+//
+// .bs--<value>
+
+
+.bs--none { box-shadow: none; }
+
+.bs--1 { box-shadow: $box-shadow-1; }
+.bs--2 { box-shadow: $box-shadow-2; }
+.bs--3 { box-shadow: $box-shadow-3; }
+.bs--4 { box-shadow: $box-shadow-4; }
+.bs--5 { box-shadow: $box-shadow-5; }
+
+.bs--inset { box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.06); }

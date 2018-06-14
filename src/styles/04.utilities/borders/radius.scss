@@ -1,0 +1,22 @@
+// Borders Utility
+// Radius
+//
+// .br<loc>--<value>
+
+
+.br--1,
+.bra--1   { border-radius: $border_radius; }
+.brtl--1  { border-top-left-radius: $border_radius; }
+.brtr--1  { border-top-right-radius: $border_radius; }
+.brbl--1  { border-bottom-left-radius: $border_radius; }
+.brbr--1  { border-bottom-right-radius: $border_radius; }
+
+.br--0,
+.bra--0   { border-radius: 0 }
+.brtl--0  { border-top-left-radius: 0; }
+.brtr--0  { border-top-right-radius: 0; }
+.brbl--0  { border-bottom-left-radius: 0; }
+.brbr--0  { border-bottom-right-radius: 0; }
+
+.br--round,
+.br--circle { border-radius: 9999px; }
