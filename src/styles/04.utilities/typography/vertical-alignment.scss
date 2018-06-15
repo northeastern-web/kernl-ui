@@ -5,15 +5,6 @@
 
 
 .va--base { vertical-align: baseline; }
-.va--mid  { vertical-align: middle; }
-.va--top  { vertical-align: top; }
-.va--btm  { vertical-align: bottom; }
-
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include mqbp-up($breakpoint) {
-    .va--base\@#{$breakpoint} { vertical-align: baseline; }
-    .va--mid\@#{$breakpoint}  { vertical-align: middle; }
-    .va--top\@#{$breakpoint}  { vertical-align: top; }
-    .va--btm\@#{$breakpoint}  { vertical-align: bottom; }
-  }
-}
+.va--m    { vertical-align: middle; }
+.va--t    { vertical-align: top; }
+.va--b    { vertical-align: bottom; }

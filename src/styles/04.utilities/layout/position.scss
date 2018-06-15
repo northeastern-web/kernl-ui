@@ -1,0 +1,42 @@
+// Layout Utility
+// Position
+//
+// .m<side>--<value>
+
+
+.pos--static    { position: static; }
+.pos--fixed     { position: fixed; }
+.pos--absolute  { position: absolute; }
+.pos--relative  { position: relative; }
+.pos--sticky    {
+  position: sticky;
+  top: 1rem;
+}
+
+// Pin positioning
+.pin {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.pin--none {
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+
+.pin--t { top: 0; }
+.pin--r { right: 0; }
+.pin--b { bottom: 0; }
+.pin--l { left: 0; }
+.pin--y {
+  top: 0;
+  bottom: 0;
+}
+.pin--x {
+  right: 0;
+  left: 0;
+}

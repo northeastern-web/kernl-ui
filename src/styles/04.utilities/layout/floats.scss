@@ -2,3 +2,16 @@
 // Floats
 //
 // .fl--<value>
+
+
+.f--none { float: none !important; }
+.f--l { float: left !important; }
+.f--r { float: right !important; }
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include mqbp-up($breakpoint) {
+    .f--none\@#{$breakpoint} { float: none !important; }
+    .f--l\@#{$breakpoint} { float: left !important; }
+    .f--r\@#{$breakpoint} { float: right !important; }
+  }
+}

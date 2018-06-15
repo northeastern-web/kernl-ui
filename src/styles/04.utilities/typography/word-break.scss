@@ -4,14 +4,6 @@
 // .ws--<value>
 
 
-.word-normal  { word-break: normal; }
-.word-wrap    { word-break: break-all; }
-.word-nowrap  { word-break: keep-all; }
-
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include mqbp-up($breakpoint) {
-    .word-normal\@#{$breakpoint}  { word-break: normal; }
-    .word-wrap\@#{$breakpoint}    { word-break: break-all; }
-    .word-nowrap\@#{$breakpoint}  { word-break: keep-all; }
-  }
-}
+.wb--normal  { word-break: normal; }
+.wb--wrap    { word-break: break-all; }
+.wb--nowrap  { word-break: keep-all; }

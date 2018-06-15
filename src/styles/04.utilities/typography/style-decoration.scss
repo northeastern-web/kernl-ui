@@ -25,11 +25,8 @@
 }
 
 // Smoothing
-.smooth {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.smooth--none {
+.fs--smooth { @extend %font_smoothing; }
+.fs--smooth-auto {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }

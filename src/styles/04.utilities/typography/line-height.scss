@@ -4,6 +4,7 @@
 // .lh--<size>
 
 
-.lh--solid { line-height: $line-height-solid; }
-.lh--title { line-height: $line-height-title; }
-.lh--copy { line-height: $line-height-copy; }
+.lh--inherit { line-height: inherit; }
+.lh--tight  { line-height: $line-height-tight; }
+.lh--normal { line-height: $line-height-normal; }
+.lh--loose  { line-height: $line-height-loose; }

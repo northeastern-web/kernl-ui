@@ -1,4 +1,14 @@
 // Layout Utility
 // Overflow
 //
-// .m<side>--<value>
+// .of<side>--<value>
+
+
+.of--auto     { overflow: auto; }
+.of--hidden   { overflow: hidden; }
+.of--visible  { overflow: visible; }
+.of--scroll   { overflow: scroll; }
+.ofx--auto    { overflow-x: auto; }
+.ofy--auto    { overflow-y: auto; }
+.ofx--scroll  { overflow-x: scroll; }
+.ofy--scroll  { overflow-y: scroll; }

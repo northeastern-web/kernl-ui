@@ -7,11 +7,3 @@
 .ws--normal { white-space: normal; }
 .ws--nowrap { white-space: nowrap; }
 .ws--pre    { white-space: pre; }
-
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include mqbp-up($breakpoint) {
-    .ws--normal\@#{$breakpoint} { white-space: normal; }
-    .ws--nowrap\@#{$breakpoint} { white-space: nowrap; }
-    .ws--pre\@#{$breakpoint}    { white-space: pre; }
-  }
-}
