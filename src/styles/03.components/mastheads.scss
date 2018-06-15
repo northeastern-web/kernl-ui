@@ -3,6 +3,9 @@
 //
 
 .masthead {
+  @extend %clearfix;
+  @extend .fs--smooth;
+
   position: relative;
   width: 100%;
   padding-top: 0;
@@ -10,8 +13,6 @@
   overflow: visible;
   z-index: 1000 !important;
   border-bottom: 1px solid rgba(177, 177, 177, 0.2);
-  @extend %clearfix;
-  @extend %font_smoothing;
 
   .__logo {
     max-width: 240px;

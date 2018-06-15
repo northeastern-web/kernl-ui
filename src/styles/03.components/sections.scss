@@ -5,12 +5,13 @@
 //
 // Set the document margin
 .section {
+  @include make-section();
+
   position: relative;
   margin-right: auto;
   margin-left: auto;
   padding-top: $section-padding-y-default;
   padding-bottom: $section-padding-y-default;
-  @include make-section();
 }
 
 .full .section { @include make-section('full'); }
@@ -82,6 +83,8 @@
 // Banners
 
 .\--banner {
+  @extend .fs--smooth;
+
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
@@ -90,7 +93,6 @@
   padding-bottom: 3rem;
   margin-bottom: 1rem;
   background-color: $gray-50;
-  @extend %font_smoothing;
 
   .__body {
     flex: 1;

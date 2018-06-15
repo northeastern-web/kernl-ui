@@ -223,13 +223,14 @@ html { background-color: #333; }
   transition: background 0.2s ease;
 
   .__title {
+    @extend .fs--smooth;
+
     text-transform: capitalize;
     transition: all 0.25s ease;
     color: $type-color;
     padding-bottom: 0;
     font-weight: 200;
     text-shadow: none;
-    @extend %font_smoothing;
   }
 
   .__link {
@@ -337,11 +338,12 @@ html { background-color: #333; }
 .fw--n { font-weight: 400; }
 
 .text-style-block {
+  @extend .fs--smooth;
+
   font-family: 'Changa', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   opacity: 0.7;
-  @extend %font_smoothing;
 }
 
 code {
@@ -443,13 +445,13 @@ $black-alpha: rgba(0, 0, 0, 0.7);
   margin-bottom: 2rem;
 
   > .col > div {
+    @extend .fs--smooth;
+
     height: auto;
     padding: 0.75rem;
     font-size: 0.825rem;
     font-weight: 900;
     line-height: 1.3rem;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 
     @include mqbp-up(sm) {
       font-size: 0.75rem;

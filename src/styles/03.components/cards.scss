@@ -115,7 +115,6 @@
     line-height: 1.25;
     font-weight: 900;
     font-size: 118%;
-    @extend %font_smoothing;
   }
 
   .__pretitle { margin-bottom: 0.2rem; }
@@ -302,7 +301,7 @@
       text-align: center;
       width: 100%;
       color: #fff;
-      
+
       @include mqbp-up(md) {
         top: 25%;
       }
