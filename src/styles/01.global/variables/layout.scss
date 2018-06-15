@@ -1,0 +1,36 @@
+// Variables
+// Layout
+//
+
+
+// Columns
+$col-prefix: '\\-' !default;
+$grid-columns: 12 !default;
+$grid-gutter-width-base: 30px !default;
+$contain-width: 10%;
+
+// Banner Spacing
+$section-padding-y-default: 1rem;
+$section-padding-y-md: 5%;
+$section-padding-y-lg: 7.5%;
+$section-padding-y-xl: 10%;
+
+// Gutter widths
+$grid-gutter-widths: (
+  xs: 1rem,
+  // sm: 1rem,
+  md: $grid-gutter-width-base,
+  // lg: $grid-gutter-width-base,
+  xl: 36px,
+  xx: 40px
+) !default;
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xx: 1600px
+) !default;

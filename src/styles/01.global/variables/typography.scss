@@ -1,0 +1,62 @@
+// Variables
+// Typography
+//
+
+// Families
+$type-sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$type-serif: "Baskerville", Georgia, "Times New Roman", Times, serif !default;
+$type-slab: "Roboto Slab", "Bookman Old Style", Bookman, Georgia, "Times New Roman", Times, serif !default;
+$type-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+// Weight
+$type-light:    300 !default;
+$type-regular:  400 !default;
+$type-bold:     700 !default;
+$type-black:    900 !default;
+
+// Base and Responsive sizing/properties
+$fs-xs:   0.76rem   !default;
+$fs-sm:   0.88rem   !default;
+$fs-root: 1.00rem   !default;
+$fs-d1:   1.24rem   !default;
+$fs-d2:   1.35rem   !default;
+$fs-d3:   1.53rem   !default;
+$fs-d4:   1.88rem   !default;
+$fs-d5:   2.24rem   !default;
+$fs-d6:   3.00rem   !default;
+$fs-d7:   5.00rem   !default;
+
+// color bases
+$type-color:  $gray-800 !default;
+$type-link:   $blue !default;
+
+// Letter Spacing
+$letter-spacing-tight: -.05em !default;
+$letter-spacing-1: .1em !default;
+$letter-spacing-2: .25em !default;
+
+// Line Height
+$line-height-solid: 1 !default;
+$line-height-title: 1.25 !default;
+$line-height-copy: 1.5 !default;
+
+// Measure
+$measure: 30em !default;
+$measure-narrow: 20em !default;
+$measure-wide: 34em !default;
+
+// Font Smoothing / Antialiased
+%font_smoothing {
+  @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+// List Unstyled
+%list_unstyled {
+  padding-left: 0;
+  list-style: none;
+}

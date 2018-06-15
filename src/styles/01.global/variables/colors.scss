@@ -1,0 +1,175 @@
+// Variables
+// Colors
+//
+
+// White
+$white:       #ffffff !default;
+$white-hover: #f7f7f7 !default;
+
+$white-scale: (
+  ($white, $white-hover, false),
+) !default;
+
+// Black
+$black: #000000 !default;
+$black-hover: #333333 !default;
+
+$black-scale: (
+  ($black, $black-hover, false, $white),
+) !default;
+
+
+// Grays
+$gray: #58595b !default; // marcomm
+$gray-light: #7b7778 !default; // marcomm
+
+$gray-50:  #f7f7f7 !default;
+$gray-100: #efefef !default;
+$gray-200: #d0d0d0 !default;
+$gray-300: #b5b5b5 !default;
+$gray-400: #969696 !default;
+$gray-500: $gray-light !default;
+$gray-600: #666666 !default;
+$gray-700: $gray !default;
+$gray-800: #333333 !default;
+$gray-900: #1a1a1a !default;
+
+$gray-scale: (
+  ($gray-50, darken($gray-50, 10%), '50'),
+  ($gray-100, darken($gray-100, 10%), '100'),
+  ($gray-200, darken($gray-200, 10%), '200'),
+  ($gray-300, lighten($gray-300, 10%), '300'),
+  ($gray-400, lighten($gray-400, 10%), '400', $white),
+  ($gray-500, lighten($gray-500, 10%), '500', $white),
+  ($gray-600, lighten($gray-600, 10%), '600', $white),
+  ($gray-700, lighten($gray-700, 10%), '700', $white),
+  ($gray-800, lighten($gray-800, 10%), '800', $white),
+  ($gray-900, lighten($gray-900, 10%), '900', $white),
+  ($gray, lighten($gray, 5%), false, $white),
+  ($gray-light, lighten($gray, 5%), 'light', $white)
+) !default;
+
+
+// Transparent
+$transparent-light: rgba($gray-300, 0.6) !default;
+$transparent-light-hover: rgba($gray-300, 0.5) !default;
+$transparent-dark: rgba($gray-900, 0.6) !default;
+$transparent-dark-hover: rgba($gray-900, 0.8) !default;
+
+$transparent-scale: (
+  ($transparent-light, $transparent-light-hover, 'light', $white),
+  ($transparent-dark, $transparent-dark-hover, 'dark', $white)
+) !default;
+
+// Reds
+$red:         #cc0000 !default;
+$red-lighten: lighten($red, 4%);
+$red-darken:  darken($red, 5%);
+
+$red-scale: (
+  ($red, $red-darken, false, $white),
+) !default;
+
+// Oranges
+$orange:         #e25734 !default; // marcomm; actually dark orange
+$orange-lighten: lighten($orange, 5%); // marcomm; actually dark orange
+$orange-darken:  darken($orange, 5%); // marcomm; actually dark orange
+
+$orange-scale: (
+  ($orange, $orange-darken, false, $white),
+) !default;
+
+// Yellows
+$yellow:         #ffc50b !default;
+$yellow-lighten: lighten($yellow,10%);
+$yellow-darken:  darken($yellow,5%);
+
+$yellow-scale: (
+  ($yellow, $yellow-lighten, false),
+) !default;
+
+// Greens
+$green:         #aebf37 !default;
+$green-lighten: lighten($green, 5%);
+$green-darken:  darken($green, 5%);
+
+$green-light:         #d5e48e !default;
+$green-light-lighten: lighten($green-light, 5%);
+$green-light-darken:  darken($green-light, 5%);
+
+$green-scale: (
+  ($green, $green-darken, false, $white),
+  ($green-light, $green-light-darken, 'light')
+) !default;
+
+// Teals
+$teal:         #2e9aa9 !default;
+$teal-lighten: lighten($teal, 5%);
+$teal-darken:  darken($teal, 5%);
+
+$teal-light:         #aed7db !default;
+$teal-light-lighten: lighten($teal-light, 5%);
+$teal-light-darken:  darken($teal-light, 5%);
+
+$teal-scale: (
+  ($teal, $teal-darken, false, $white),
+  ($teal-light, $teal-light-darken, 'light')
+) !default;
+
+// Blues
+$blue-dark:         #2e4962 !default;
+$blue-dark-lighten: lighten($blue-dark, 10%);
+$blue-dark-darken:  darken($blue-dark, 5%);
+
+$blue:         #2b7be3 !default; // pods blue
+$blue-lighten: lighten($blue, 5%);
+$blue-darken:  darken($blue, 5%);
+
+$blue-light:         #bbd1ec !default; // #aec1da (marcomm) fall/winter 2017
+$blue-light-lighten: lighten($blue-light, 5%);
+$blue-light-darken:  darken($blue-light, 5%);
+
+$blue-scale: (
+  ($blue-dark, $blue-dark-lighten, 'dark', $white),
+  ($blue, $blue-darken, false, $white),
+  ($blue-light, $blue-light-darken, 'light')
+) !default;
+
+// Purples
+$purple:         #824091 !default;
+$purple-lighten: lighten($purple, 5%);
+$purple-darken:  darken($purple, 5%);
+
+$purple-scale: (
+  ($purple, $purple-darken, false, $white),
+) !default;
+
+// Beige
+$beige:         #ebe4d4 !default; // actually marcomm's "cream"
+$beige-lighten: lighten($beige, 5%);
+$beige-darken:  darken($beige, 5%);
+
+$beige-light:         #f5f4f0 !default;
+$beige-light-lighten: lighten($beige-light, 5%);
+$beige-light-darken:  darken($beige-light, 5%);
+
+$beige-scale: (
+  ($beige, $beige-darken, false),
+  ($beige-light, $beige-light-darken, 'light')
+) !default;
+
+// ** Full color palette collection
+$palette: (
+  ('gray', $gray-scale),
+  ('red', $red-scale),
+  ('blue', $blue-scale),
+  ('green', $green-scale),
+  ('purple', $purple-scale),
+  ('yellow', $yellow-scale),
+  ('orange', $orange-scale),
+  ('teal', $teal-scale),
+  ('beige', $beige-scale),
+  ('white', $white-scale),
+  ('black', $black-scale),
+  ('transparent', $transparent-scale)
+) !default;
