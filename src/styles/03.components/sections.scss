@@ -14,7 +14,6 @@
 }
 
 .full .section { @include make-section('full'); }
-
 .contain .section { @include make-section('contain', $contain: 10%); }
 
 .section {

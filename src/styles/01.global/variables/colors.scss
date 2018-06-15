@@ -5,7 +5,6 @@
 // White
 $white:       #ffffff !default;
 $white-hover: #f7f7f7 !default;
-
 $white-scale: (
   ($white, $white-hover, false),
 ) !default;
@@ -13,11 +12,9 @@ $white-scale: (
 // Black
 $black: #000000 !default;
 $black-hover: #333333 !default;
-
 $black-scale: (
   ($black, $black-hover, false, $white),
 ) !default;
-
 
 // Grays
 $gray: #58595b !default; // marcomm
@@ -33,7 +30,6 @@ $gray-600: #666666 !default;
 $gray-700: $gray !default;
 $gray-800: #333333 !default;
 $gray-900: #1a1a1a !default;
-
 $gray-scale: (
   ($gray-50, darken($gray-50, 10%), '50'),
   ($gray-100, darken($gray-100, 10%), '100'),
@@ -55,7 +51,6 @@ $transparent-light: rgba($gray-300, 0.6) !default;
 $transparent-light-hover: rgba($gray-300, 0.5) !default;
 $transparent-dark: rgba($gray-900, 0.6) !default;
 $transparent-dark-hover: rgba($gray-900, 0.8) !default;
-
 $transparent-scale: (
   ($transparent-light, $transparent-light-hover, 'light', $white),
   ($transparent-dark, $transparent-dark-hover, 'dark', $white)
@@ -65,7 +60,6 @@ $transparent-scale: (
 $red:         #cc0000 !default;
 $red-lighten: lighten($red, 4%);
 $red-darken:  darken($red, 5%);
-
 $red-scale: (
   ($red, $red-darken, false, $white),
 ) !default;
@@ -74,7 +68,6 @@ $red-scale: (
 $orange:         #e25734 !default; // marcomm; actually dark orange
 $orange-lighten: lighten($orange, 5%); // marcomm; actually dark orange
 $orange-darken:  darken($orange, 5%); // marcomm; actually dark orange
-
 $orange-scale: (
   ($orange, $orange-darken, false, $white),
 ) !default;
@@ -83,7 +76,6 @@ $orange-scale: (
 $yellow:         #ffc50b !default;
 $yellow-lighten: lighten($yellow,10%);
 $yellow-darken:  darken($yellow,5%);
-
 $yellow-scale: (
   ($yellow, $yellow-lighten, false),
 ) !default;
@@ -96,7 +88,6 @@ $green-darken:  darken($green, 5%);
 $green-light:         #d5e48e !default;
 $green-light-lighten: lighten($green-light, 5%);
 $green-light-darken:  darken($green-light, 5%);
-
 $green-scale: (
   ($green, $green-darken, false, $white),
   ($green-light, $green-light-darken, 'light')
@@ -110,7 +101,6 @@ $teal-darken:  darken($teal, 5%);
 $teal-light:         #aed7db !default;
 $teal-light-lighten: lighten($teal-light, 5%);
 $teal-light-darken:  darken($teal-light, 5%);
-
 $teal-scale: (
   ($teal, $teal-darken, false, $white),
   ($teal-light, $teal-light-darken, 'light')
@@ -128,7 +118,6 @@ $blue-darken:  darken($blue, 5%);
 $blue-light:         #bbd1ec !default; // #aec1da (marcomm) fall/winter 2017
 $blue-light-lighten: lighten($blue-light, 5%);
 $blue-light-darken:  darken($blue-light, 5%);
-
 $blue-scale: (
   ($blue-dark, $blue-dark-lighten, 'dark', $white),
   ($blue, $blue-darken, false, $white),
@@ -139,7 +128,6 @@ $blue-scale: (
 $purple:         #824091 !default;
 $purple-lighten: lighten($purple, 5%);
 $purple-darken:  darken($purple, 5%);
-
 $purple-scale: (
   ($purple, $purple-darken, false, $white),
 ) !default;
@@ -152,7 +140,6 @@ $beige-darken:  darken($beige, 5%);
 $beige-light:         #f5f4f0 !default;
 $beige-light-lighten: lighten($beige-light, 5%);
 $beige-light-darken:  darken($beige-light, 5%);
-
 $beige-scale: (
   ($beige, $beige-darken, false),
   ($beige-light, $beige-light-darken, 'light')
