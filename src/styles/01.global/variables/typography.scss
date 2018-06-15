@@ -43,16 +43,6 @@ $measure: 40em !default;
 $measure-narrow: 20em !default;
 $measure-wide: 50em !default;
 
-// Font Smoothing / Antialiased
-%font_smoothing {
-  @media
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi) {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-}
-
 // List Unstyled
 %list_unstyled {
   padding-left: 0;

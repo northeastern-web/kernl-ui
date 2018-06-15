@@ -3,14 +3,15 @@
 //
 
 .btn {
-  @include button_size($btn-padding-t, $btn-padding-y, $btn-padding-b, $btn-type-base, $btn-border-radius);
   @extend %button;
+  @extend .fs--smooth;
+  @include button_size($btn-padding-t, $btn-padding-y, $btn-padding-b, $btn-type-base, $btn-border-radius);
+  @include transition();
+
   background-color: #fff;
   color: $type-color;
   border-color: rgba($type-color, 0.5);
   margin-bottom: 3px; // for when (if) multiple inline buttons wrap
-  @extend %font_smoothing;
-  @include transition();
 
   &:disabled {
     cursor: $cursor-disabled;

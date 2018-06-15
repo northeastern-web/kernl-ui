@@ -4,12 +4,12 @@
 // .br<loc>--<value>
 
 
-.br--1,
-.bra--1   { border-radius: $border_radius; }
-.brtl--1  { border-top-left-radius: $border_radius; }
-.brtr--1  { border-top-right-radius: $border_radius; }
-.brbl--1  { border-bottom-left-radius: $border_radius; }
-.brbr--1  { border-bottom-right-radius: $border_radius; }
+.br,
+.bra   { border-radius: $border-radius; }
+.brtl  { border-top-left-radius: $border-radius; }
+.brtr  { border-top-right-radius: $border-radius; }
+.brbl  { border-bottom-left-radius: $border-radius; }
+.brbr  { border-bottom-right-radius: $border-radius; }
 
 .br--0,
 .bra--0   { border-radius: 0 }
@@ -18,5 +18,6 @@
 .brbl--0  { border-bottom-left-radius: 0; }
 .brbr--0  { border-bottom-right-radius: 0; }
 
+.br--pill,
 .br--round,
 .br--circle { border-radius: 9999px; }

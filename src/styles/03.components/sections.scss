@@ -110,17 +110,6 @@
   &.\--top { align-items: flex-start; }
   &.\--bottom { align-items: flex-end; }
 
-  &.\--10 { min-height: 10vh; }
-  &.\--20 { min-height: 20vh; }
-  &.\--30 { min-height: 30vh; }
-  &.\--40 { min-height: 40vh; }
-  &.\--50 { min-height: 50vh; }
-  &.\--60 { min-height: 60vh; }
-  &.\--70 { min-height: 70vh; }
-  &.\--80 { min-height: 80vh; }
-  &.\--90 { min-height: 90vh; }
-  &.\--100 { min-height: 100vh; }
-
   @include mqbp-up(lg) {
     flex-direction: row;
   }

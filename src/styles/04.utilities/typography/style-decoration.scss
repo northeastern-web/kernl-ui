@@ -25,7 +25,15 @@
 }
 
 // Smoothing
-.fs--smooth { @extend %font_smoothing; }
+.fs--smooth {
+  @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+}
+
 .fs--smooth-auto {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;

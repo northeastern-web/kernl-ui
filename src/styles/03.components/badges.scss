@@ -3,7 +3,9 @@
 //
 
 .badge {
+  @extend .fs--smooth;
   @include badge_variant($type-color, rgba(255, 255, 255, 0.75), transparent);
+
   padding: 0.4rem 0.6rem 0.45rem;
   display: inline-block;
   font-size: .75rem;
@@ -17,7 +19,6 @@
   vertical-align: middle; // req for inline use
   white-space: nowrap;
   z-index: 1;
-  @extend %font_smoothing;
 
   a {
     color: inherit;
@@ -34,7 +35,7 @@
   //
   // Outline
   &.\--outline { @extend %component-outline; }
-  
+
   //
   // Positioning
   &.\--left {

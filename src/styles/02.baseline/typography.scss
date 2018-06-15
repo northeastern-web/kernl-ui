@@ -76,9 +76,9 @@ a {
 // Blockquotes
 
 blockquote {
-  @extend %font_smoothing;
-
+  @extend .fs--smooth;
   @include type_lead();
+
   margin: 0 0 1rem;
   padding: 1rem 1.25rem;
 
