@@ -1,0 +1,13 @@
+// Global Methods
+// Sizing
+//
+
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
+}

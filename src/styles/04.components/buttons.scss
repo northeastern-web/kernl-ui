@@ -20,6 +20,7 @@
   justify-content: center;
   line-height: 1.3;
   overflow: hidden;
+  transition: $transition;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -36,6 +37,14 @@
 
   // Sizing
   &.\--sm { @include button_size($btn-sm-padding-t, $btn-sm-padding-x, $btn-sm-padding-b, $btn-sm-type); }
+
+  // Block
+  &.\--block {
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: initial;
+  }
 
   // Color extensions
   &.bc--white {

@@ -29,13 +29,13 @@
 //
 // Transitions
 
-@mixin transition($transition...) {
-  @if length($transition) == 0 {
-    transition: $transition-base;
-  } @else {
-    transition: $transition;
-  }
-}
+// @mixin transition($transition...) {
+//   @if length($transition) == 0 {
+//     transition: $transition-base;
+//   } @else {
+//     transition: $transition;
+//   }
+// }
 
 
 //
@@ -172,37 +172,37 @@
 // Buttons
 
 // Button sizing
-@mixin button_size($padding-t, $padding-y, $padding-b, $font-size, $border-radius) {
-  padding: $padding-t $padding-y $padding-b;
-  font-size: $font-size;
-  @include border_radius($border-radius);
+// @mixin button_size($padding-t, $padding-y, $padding-b, $font-size, $border-radius) {
+//   padding: $padding-t $padding-y $padding-b;
+//   font-size: $font-size;
+//   @include border_radius($border-radius);
 
-  .__icon {
-    height: round($font-size * 1.25);
-    width: round($font-size * 1.25);
-    flex: 1 1 round($font-size * 1.25);
+//   .__icon {
+//     height: round($font-size * 1.25);
+//     width: round($font-size * 1.25);
+//     flex: 1 1 round($font-size * 1.25);
 
-    &.\--left {
-      margin-right: round($font-size / 2);
-    }
+//     &.\--left {
+//       margin-right: round($font-size / 2);
+//     }
 
-    &.\--right { margin-left: round($font-size / 2); }
+//     &.\--right { margin-left: round($font-size / 2); }
 
-    &.\--sm {
-      height: $font-size;
-      width: $font-size;
-      flex: 1 1 $font-size;
-    }
+//     &.\--sm {
+//       height: $font-size;
+//       width: $font-size;
+//       flex: 1 1 $font-size;
+//     }
 
-    &.\--lg {
-      height: $font-size * 2;
-      width: $font-size * 2;
-      flex: 1 1 round($font-size * 2);
-      margin-top: $font-size / 2;
-      margin-bottom: $font-size / 2;
-    }
-  }
-}
+//     &.\--lg {
+//       height: $font-size * 2;
+//       width: $font-size * 2;
+//       flex: 1 1 round($font-size * 2);
+//       margin-top: $font-size / 2;
+//       margin-bottom: $font-size / 2;
+//     }
+//   }
+// }
 
 
 //

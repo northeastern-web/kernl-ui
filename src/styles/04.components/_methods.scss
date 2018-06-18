@@ -1,0 +1,79 @@
+// Components
+// Variables
+//
+
+// Buttons
+@mixin button_size($padding-t, $padding-x, $padding-b, $font-size) {
+  padding: $padding-t $padding-x $padding-b;
+  font-size: $font-size;
+}
+
+// Masthead
+@mixin make-masthead($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
+  @each $breakpoint in map-keys($gutters) {
+    @include mqbp-up($breakpoint) {
+      $gutter: map-get($gutters, $breakpoint);
+      @if ($container == "full") {
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          .__logo { margin-left: $gutter; }
+
+          .__drawer,
+          .__toggler,
+          .\--utility { margin-right: $gutter; }
+        }
+      } @elseif ($container == "contain") {
+        @if ($breakpoint == "md") {
+          .__logo { margin-left: $contain; }
+
+          .__drawer,
+          .__toggler,
+          .\--utility { margin-right: $contain; }
+        }
+      } @else {
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          .__logo { margin-left: ($gutter * 2); }
+
+          .__drawer,
+          .__toggler,
+          .\--utility { margin-right: ($gutter * 2); }
+        } @else {
+          .__logo { margin-left: $gutter; }
+
+          .__drawer,
+          .__toggler,
+          .\--utility { margin-right: $gutter; }
+        }
+      }
+    }
+  }
+}
+
+// Mega menu
+// give megamenu same spacing as masthead;
+// same as make-row, but with padding and full gutter width
+@mixin make-megamenu($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
+  @each $breakpoint in map-keys($gutters) {
+    @include mqbp-up($breakpoint) {
+      $gutter: map-get($gutters, $breakpoint);
+      @if ($container == "full") {
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          padding-right: $gutter !important;
+          padding-left:  $gutter !important;
+        }
+      } @elseif ($container == "contain") {
+        @if ($breakpoint == "md") {
+          padding-right: $contain !important;
+          padding-left: $contain !important;
+        }
+      } @else {
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          padding-right: $gutter * 2 !important;
+          padding-left:  $gutter * 2 !important;
+        } @else {
+          padding-right: $gutter;
+          padding-left:  $gutter;
+        }
+      }
+    }
+  }
+}

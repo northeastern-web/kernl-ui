@@ -7,8 +7,12 @@
 @import "01.global/variables/typography";
 
 // Global Methods
-@import "01.global/functions";
-@import "01.global/mixins";
+@import "01.global/methods/colors";
+@import "01.global/methods/layout";
+@import "01.global/methods/media-queries";
+@import "01.global/methods/misc";
+@import "01.global/methods/sizing";
+@import "01.global/methods/typography";
 
 // Baseline
 @import "02.baseline/document";
@@ -39,7 +43,7 @@
 
 // Components
 @import "04.components/_variables";
-@import "04.components/_mixins";
+@import "04.components/_methods";
 @import "04.components/buttons";
 
 // Layout

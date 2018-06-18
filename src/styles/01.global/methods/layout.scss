@@ -1,0 +1,157 @@
+// Global Methods
+// Layout
+//
+
+
+// Name of the next breakpoint, or null for the last breakpoint.
+@function _breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+  $n: index($breakpoint-names, $name);
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+@function _breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+// Maximum breakpoint width. Null for the largest (last) breakpoint.
+@function _breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $next: _breakpoint-next($name, $breakpoints);
+  @return if($next, _breakpoint-min($next, $breakpoints) - 1px, null);
+}
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash infront.
+@function _breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$name}");
+}
+
+
+@mixin make-grid-columns($columns: $grid-columns, $gutters: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
+  // Common properties for all breakpoints
+  %grid-column {
+    @include make-gutters($gutters);
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: _breakpoint-infix($breakpoint, $breakpoints);
+    $i: 0;
+
+    @include mqbp-up($breakpoint, $breakpoints) {
+      @for $i from 1 through $columns {
+        .#{$col-prefix}-#{$i}\@#{$infix} {
+          @include make-col($i, $columns);
+        }
+      }
+
+      @each $modifier in (pull, push, order) {
+        @for $i from 0 through $columns {
+          .#{$col-prefix}-#{$i}-#{$modifier}\@#{$infix} {
+            @include make-col-modifier($modifier, $i, $columns)
+          }
+        }
+      }
+
+      // for one-fifth-width columns
+      @for $i from 1 through 5 {
+        .#{$col-prefix}-20\@#{$infix} {
+          flex-basis: 20%;
+          max-width: 20%;
+        }
+      }
+
+      // `$columns - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 0 through ($columns - 1) {
+        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .--offset-0@xs
+          .#{$col-prefix}-#{$i}-offset\@#{$infix} {
+            @include make-col-modifier(offset, $i, $columns)
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin make-section($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
+  @each $breakpoint in map-keys($gutters) {
+    @include mqbp-up($breakpoint) {
+      $gutter: map-get($gutters, $breakpoint);
+      @if ($container == "full") {
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          padding-right: $gutter;
+          padding-left: $gutter;
+        }
+      } @elseif ($container == "contain") {
+        @if ($breakpoint == "md") {
+          padding-right: $contain;
+          padding-left: $contain;
+        }
+      } @else {
+        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+          padding-right: ($gutter * 2);
+          padding-left: ($gutter * 2);
+        } @else {
+          padding-right: $gutter;
+          padding-left: $gutter;
+        }
+      }
+    }
+  }
+}
+
+@mixin make-gutters($gutters: $grid-gutter-widths) {
+  @each $breakpoint in map-keys($gutters) {
+    @include mqbp-up($breakpoint) {
+      $gutter: map-get($gutters, $breakpoint);
+      padding-right: ($gutter / 2);
+      padding-left:  ($gutter / 2);
+    }
+  }
+}
+
+@mixin make-row($gutters: $grid-gutter-widths) {
+  display: flex;
+  flex-wrap: wrap;
+
+  @each $breakpoint in map-keys($gutters) {
+    @include mqbp-up($breakpoint) {
+      $gutter: map-get($gutters, $breakpoint);
+      margin-right: ($gutter / -2);
+      margin-left:  ($gutter / -2);
+    }
+  }
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+  flex-basis: percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  margin-left: percentage($size / $columns);
+}
+
+@mixin make-col-push($size, $columns: $grid-columns) {
+  left: if($size > 0, percentage($size / $columns), auto);
+}
+
+@mixin make-col-pull($size, $columns: $grid-columns) {
+  right: if($size > 0, percentage($size / $columns), auto);
+}
+
+@mixin make-col-order($size, $columns: $grid-columns) {
+  order: if($size >= 0, $size, auto);
+}
+
+@mixin make-col-modifier($type, $size, $columns) {
+  // Work around the lack of dynamic mixin @include support (https://github.com/sass/sass/issues/626)
+  @if $type == push {
+    @include make-col-push($size, $columns);
+  } @else if $type == pull {
+    @include make-col-pull($size, $columns);
+  } @else if $type == order {
+    @include make-col-order($size, $columns);
+  } @else if $type == offset {
+    @include make-col-offset($size, $columns);
+  }
+}
