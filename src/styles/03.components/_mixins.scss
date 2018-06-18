@@ -356,12 +356,9 @@
 @mixin list_group_variant($color: inherit, $background: transparent, $striped: rgba(255, 255, 255, 0.1)) {
   background: $background;
 
-  > .__item,
-  > li,
-  > div { border-color: rgba($color, 0.25); }
+  > * { border-color: rgba($color, 0.25); }
 
-  &.\--striped .__item,
-  &.\--striped > li {
+  &.\--striped > * {
     border: 0 none;
 
     &:nth-child(odd) { background-color: $striped; }
@@ -370,8 +367,7 @@
   &.\+outline { border: 1px solid rgba($color, 0.25); }
 
   &.\+indent:not(.\--striped):not(.\+outline):not(.\+shadow) {
-    > .__item,
-    > li {
+    > * {
       &:hover { background-color: rgba($color, 0.05); }
     }
   }
@@ -381,8 +377,7 @@
 @mixin list_group_size($padding-y: $list-group-padding-y, $padding-x: $list-group-padding-x, $font-size: $fs-sm) {
   font-size: $font-size;
 
-  > .__item,
-  > li { padding: $padding-y 0 !important; }
+  > * { padding: $padding-y 0 !important; }
 
   &.\+shadow,
   &.\+outline,

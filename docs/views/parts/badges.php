@@ -1,4 +1,4 @@
-<section class="section">
+<div class="section measure mx--auto">
   <div class="row">
     <?php $i = 1; while ($i < 4) : ?>
       <div class="col --12@xs --4@md">
