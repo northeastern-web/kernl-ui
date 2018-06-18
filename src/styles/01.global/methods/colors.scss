@@ -2,6 +2,61 @@
 // Colors
 //
 
+
+@mixin bg_variant($color, $hover_color, $text_color: null) {
+  background-color: $color !important;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  @if ($text_color) {
+    color: $text_color;
+  }
+
+  &.btn,
+  .__link,
+  &.__footer__link {
+    border-color: transparent;
+    @if ($text_color) {
+      color: $text_color !important;
+    }
+
+    @include hover_focus_active {
+      background-color: $hover_color !important;
+      border-color: transparent;
+      @if ($text_color) {
+        color: $text_color !important;
+      }
+    }
+  }
+}
+
+@mixin border_variant($color, $hover_color, $text_color: $type-color) {
+  border: 1px solid rgba($color, 0.5);
+  color: $color;
+
+  &.btn,
+  .__link,
+  &.__footer__link {
+    color: $color;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
+
+    @include hover_focus_active {
+      background-color: $hover_color !important;
+
+      @if ($text_color) {
+        color: $text_color;
+      }
+    }
+  }
+}
+
+@mixin text_variant($color) {
+  color: $color;
+}
+
 @mixin get_component($component, $color, $color_hover, $color_grade: false, $color_text: null) {
   @if $component == 'bg' { @include bg_variant($color, $color_hover, $color_text); }
   @if $component == 'bc' { @include border_variant($color, $color_hover, $color_text); }

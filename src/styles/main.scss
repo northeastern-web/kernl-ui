@@ -22,8 +22,8 @@
 @import "02.baseline/forms";
 @import "02.baseline/media";
 
-@import "03.components/_variables";
-@import "03.components/_mixins";
+// @import "03.components/_variables";
+// @import "03.components/_mixins";
 // @import "03.components/accordions";
 // @import "03.components/badges";
 // @import "03.components/breadcrumbs";
@@ -44,7 +44,8 @@
 // Components
 @import "04.components/_variables";
 @import "04.components/_methods";
-@import "04.components/buttons";
+@import "04.components/badge";
+@import "04.components/button";
 
 // Layout
 @import "04.utilities/layout/displays";

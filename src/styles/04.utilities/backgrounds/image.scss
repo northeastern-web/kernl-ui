@@ -5,14 +5,14 @@
 
 
 .bg--img {
-  @extend %bgimg;
-
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.25);
   color: #fff;
 
   &:after {
-    @extend %component-cover;
-
+    @extend .pin;
     content: "";
     background: rgba(0, 0, 0, 0.7);
     z-index: 0;
@@ -20,7 +20,6 @@
 
   > * {
     @extend .fs--smooth;
-
     position: relative;
     z-index: 1;
   }

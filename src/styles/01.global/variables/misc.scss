@@ -13,6 +13,9 @@ $box-shadow-2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 ) !default;
 $box-shadow-3: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 ) !default;
 $box-shadow-4: 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 ) !default;
 $box-shadow-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 ) !default;
+//ours
+$component-shadow:        0 0 .25rem rgba(0,0,0,.25) !default;
+$component-shadow-hover:  0 0 .4rem rgba(0,0,0,.35) !default;
 
 // Clearfix
 %clearfix {

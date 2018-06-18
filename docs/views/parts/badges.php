@@ -17,7 +17,7 @@
         <div class="badge__wrapper +bgimg">
           <div
             data-component="badge"
-            class="badge --center<?= $i == 4 ? ' --transparent' : ''; ?><?= $i == 5 ? ' --dark' : ''; ?>">
+            class="badge --center<?= $i == 4 ? ' bg--red' : ''; ?><?= $i == 5 ? ' --dark' : ''; ?>">
             Badge Center
           </div>
         </div>

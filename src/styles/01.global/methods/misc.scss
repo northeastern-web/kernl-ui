@@ -2,3 +2,30 @@
 // Misc
 //
 
+
+@mixin hover {
+  &:hover { @content }
+}
+
+@mixin hover_focus {
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin plain_hover_focus {
+  &,
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin hover_focus_active {
+  &:focus,
+  &:active,
+  &:hover {
+    @content
+  }
+}

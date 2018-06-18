@@ -1,0 +1,52 @@
+// Components
+// Badge
+//
+// .badge
+
+.badge {
+  @extend .fs--smooth;
+  background-color: #fff;
+  padding: 0.4rem 0.6rem 0.45rem;
+  display: inline-block;
+  font-size: $fs-xs;
+  line-height: 1;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+  z-index: 1;
+
+  a {
+    color: inherit;
+    &:hover { text-decoration: none; }
+  }
+
+  &:before { margin-right: .25rem }
+
+  // Positioning
+  &.\--left {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.\--pill { left: 0.75rem; }
+  }
+
+  &.\--center {
+    position: absolute;
+    top: 0;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.\--right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+
+    &.\--pill { right: 0.75rem; }
+  }
+}

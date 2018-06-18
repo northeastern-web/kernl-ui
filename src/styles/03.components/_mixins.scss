@@ -21,9 +21,9 @@
 //
 // Shadows
 
-@mixin box_shadow($shadow: $component-shadow) {
-  box-shadow: $shadow;
-}
+// @mixin box_shadow($shadow: $component-shadow) {
+//   box-shadow: $shadow;
+// }
 
 
 //
@@ -41,32 +41,32 @@
 //
 // Hover
 
-@mixin hover {
-  &:hover { @content }
-}
+// @mixin hover {
+//   &:hover { @content }
+// }
 
-@mixin hover_focus {
-  &:focus,
-  &:hover {
-    @content
-  }
-}
+// @mixin hover_focus {
+//   &:focus,
+//   &:hover {
+//     @content
+//   }
+// }
 
-@mixin plain_hover_focus {
-  &,
-  &:focus,
-  &:hover {
-    @content
-  }
-}
+// @mixin plain_hover_focus {
+//   &,
+//   &:focus,
+//   &:hover {
+//     @content
+//   }
+// }
 
-@mixin hover_focus_active {
-  &:focus,
-  &:active,
-  &:hover {
-    @content
-  }
-}
+// @mixin hover_focus_active {
+//   &:focus,
+//   &:active,
+//   &:hover {
+//     @content
+//   }
+// }
 
 
 //
@@ -451,59 +451,59 @@
 //
 // Colors
 
-@mixin bg_variant($color, $hover_color, $text_color: null) {
-  background-color: $color !important;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+// @mixin bg_variant($color, $hover_color, $text_color: null) {
+//   background-color: $color !important;
+//   transition:
+//     background-color 0.2s ease,
+//     color 0.2s ease;
 
-  @if ($text_color) {
-    color: $text_color;
-  }
+//   @if ($text_color) {
+//     color: $text_color;
+//   }
 
-  &.btn,
-  .__link,
-  &.__footer__link {
-    border-color: transparent;
-    @if ($text_color) {
-      color: $text_color !important;
-    }
+//   &.btn,
+//   .__link,
+//   &.__footer__link {
+//     border-color: transparent;
+//     @if ($text_color) {
+//       color: $text_color !important;
+//     }
 
-    @include hover_focus_active {
-      background-color: $hover_color !important;
-      border-color: transparent;
-      @if ($text_color) {
-        color: $text_color !important;
-      }
-    }
-  }
-}
+//     @include hover_focus_active {
+//       background-color: $hover_color !important;
+//       border-color: transparent;
+//       @if ($text_color) {
+//         color: $text_color !important;
+//       }
+//     }
+//   }
+// }
 
-@mixin text_variant($color) {
-  color: $color;
-}
+// @mixin text_variant($color) {
+//   color: $color;
+// }
 
-@mixin border_variant($color, $hover_color, $text_color: $type-color) {
-  border: 1px solid rgba($color, 0.5);
-  color: $color;
+// @mixin border_variant($color, $hover_color, $text_color: $type-color) {
+//   border: 1px solid rgba($color, 0.5);
+//   color: $color;
 
-  &.btn,
-  .__link,
-  &.__footer__link {
-    color: $color;
-    transition:
-      background-color 0.15s ease,
-      color 0.15s ease;
+//   &.btn,
+//   .__link,
+//   &.__footer__link {
+//     color: $color;
+//     transition:
+//       background-color 0.15s ease,
+//       color 0.15s ease;
 
-    @include hover_focus_active {
-      background-color: $hover_color !important;
+//     @include hover_focus_active {
+//       background-color: $hover_color !important;
 
-      @if ($text_color) {
-        color: $text_color;
-      }
-    }
-  }
-}
+//       @if ($text_color) {
+//         color: $text_color;
+//       }
+//     }
+//   }
+// }
 
 
 //
