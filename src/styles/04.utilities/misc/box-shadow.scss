@@ -4,8 +4,8 @@
 // .bs--<value>
 
 
-.bs { box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10); }
-.bs--md { box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08); }
-.bs--lg { box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08); }
-.bs--inset { box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.06); }
+.bs { box-shadow: $box-shadow; }
+.bs--md { box-shadow: $box-shadow-md; }
+.bs--lg { box-shadow: $box-shadow-lg; }
+.bs--inset { box-shadow: $box-shadow-inset }
 .bs--none { box-shadow: none; }
