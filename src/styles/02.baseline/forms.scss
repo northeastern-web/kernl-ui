@@ -59,15 +59,21 @@ legend {
   display: table;
   max-width: 100%;
   padding: 0;
+  font-size: 1rem;
   white-space: normal;
-  margin-bottom: .5rem;
-  font-size: 1.5rem;
   line-height: inherit;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 label {
+  @include type-sm();
   display: inline-block;
   margin-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.25;
+  color: $gray-500;
 }
 
 progress {
@@ -112,3 +118,79 @@ input[type="month"] { -webkit-appearance: listbox; }
 }
 
 output { display: inline-block; }
+
+//
+// Textual form controls
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="file"],
+input[type="range"],
+textarea,
+select {
+  // @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: $gray-600;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid $gray-50;
+  border-radius: 1px;
+  box-shadow: $box-shadow;
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  // Placeholder
+  &::placeholder {
+    color: $gray-400;
+    opacity: 1; // for Firefox
+  }
+
+  // Disabled and read-only inputs
+  &:disabled,
+  &[readonly] {
+    background-color: $gray-200;
+    opacity: 1; // for iOS
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+select {
+  &:not([size]):not([multiple]) {
+    $select-border-width: 2px;
+  }
+
+  &:focus::-ms-value {
+    // Suppress the nested default white text on blue background highlight given to
+    // the selected option text when the (still closed) <select> receives focus
+    // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+    // match the appearance of the native widget.
+    // See https://github.com/twbs/bootstrap/issues/19398.
+    color: $gray-600;
+    background-color: #fff;
+  }
+}
+
+// Make file inputs better match text inputs by forcing them to new lines.
+input[type="file"],
+input[type="range"] {
+  display: block;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border: 0 none;
+  @include type-sm();
+  margin: 3px 0;
+}

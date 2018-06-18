@@ -7,5 +7,6 @@
     <?= listgroup('fs--xs'); ?>
     <?= listgroup('--outline'); ?>
     <?= listgroup('--striped'); ?>
+    <?= listgroup('+icon'); ?>
   </div>
 </section>

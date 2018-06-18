@@ -28,7 +28,7 @@
     &:last-child { border: 0 none; }
   }
 
-  // Link
+  // Link base
   a {
     display: block;
     color: inherit;
@@ -50,13 +50,11 @@
     >* { padding: 0.5rem 0.75rem; }
   }
 
-  &.\+icon {
-    > .__item,
-    > li,
-    > div {
+  &.\--icon {
+    > * {
       padding-left: 1.5rem !important;
 
-      i, svg {
+      .feather {
         position: absolute;
         top: 50%;
         left: 0;
@@ -81,4 +79,3 @@
     }
   }
 }
-

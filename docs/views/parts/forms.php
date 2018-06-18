@@ -1,4 +1,4 @@
-<section class="section --md bg--gray-100">
+<section class="section measure mx--auto">
   <div class="row">
     <div class="col --12@xs --8@lg --2-offset@lg">
       <form action="" method="">

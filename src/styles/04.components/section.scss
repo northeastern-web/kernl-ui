@@ -1,0 +1,88 @@
+// Components
+// Section
+//
+
+
+.section {
+  @include make-section();
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .section {
+    padding: 0;
+    overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
+  }
+}
+
+.full .section { @include make-section('full'); }
+.contain .section { @include make-section('contain', $contain: 10%); }
+
+.section.\--flush {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+// Remove the negative margin from a section's default .row, then the horizontal padding
+// from all immediate children columns (to prevent runaway style inheritance).
+.section.\--nogutters {
+  > .row {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+// Banners
+.section.\--banner {
+  @extend .fs--smooth;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  margin-bottom: 1rem;
+  background-color: $gray-50;
+
+  .__body {
+    flex: 1;
+    width: 100%;
+  }
+
+  .__pretitle { margin-bottom: 0.25rem; }
+
+  .__title {
+    @include type-d5();
+    margin-bottom: 0.25rem;
+    font-weight: $type-light;
+  }
+
+  .__subtitle { @include type-lead(); }
+
+  &.\--top { align-items: flex-start; }
+  &.\--bottom { align-items: flex-end; }
+
+  @include mqbp-up(lg) { flex-direction: row; }
+
+  &.\+nav {
+    flex: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 5rem;
+
+    .__body { flex: 0; }
+
+    &.\--top { justify-content: flex-start; }
+    &.\--bottom { justify-content: flex-end; }
+
+    @include mqbp-up(lg) {
+      padding-bottom: 4.5rem;
+    }
+  }
+}

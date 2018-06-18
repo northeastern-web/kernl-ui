@@ -1,10 +1,11 @@
 
-<header class="section --banner +bgimg">
+<header class="section --banner bg--img">
   <div class="__body">
     <h2 class="__title">Example Interior/On-Page Nav</h2>
   </div>
 </header>
-<section class="section">
+
+<section class="section measure--narrow mx--auto">
   <div class="row">
     <div class="col --12@xs --5@md --4@lg --3@xl mb--1@xs">
       <div class="hidden--up@md ta--c">
