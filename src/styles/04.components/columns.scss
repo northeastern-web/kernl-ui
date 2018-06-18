@@ -5,7 +5,7 @@
 // Row
 //
 // Rows (display:flex) contain the columns (flex items).
-.cols { @include make-row(); }
+.row { @include make-row(); }
 
 // Columns
 //

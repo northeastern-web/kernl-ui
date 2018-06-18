@@ -15,23 +15,43 @@
     <hr>
 
     <section>
-      <div class="cols">
-        <div class="col bg--gray-200">col</div>
+      <div class="row fs--sm mb--1">
+        <div class="col">
+          <div class="pa--1 bg--gray-200">col</div>
+        </div>
       </div>
-      <div class="cols">
-        <div class="col bg--gray-200">col</div>
-        <div class="col bg--gray-200">col</div>
+      <div class="row fs--sm mb--1">
+        <div class="col">
+          <div class="pa--1 bg--gray-200">col</div>
+        </div>
+        <div class="col">
+          <div class="pa--1 bg--gray-200">col</div>
+        </div>
       </div>
-      <div class="cols">
-        <div class="col bg--gray-200">col</div>
-        <div class="col bg--gray-200">col</div>
-        <div class="col bg--gray-200">col</div>
+      <div class="row fs--sm mb--1">
+        <div class="col">
+          <div class="pa--1 bg--gray-200">col</div>
+        </div>
+        <div class="col">
+          <div class="pa--1 bg--gray-200">col</div>
+        </div>
+        <div class="col">
+          <div class="pa--1 bg--gray-200">col</div>
+        </div>
       </div>
-      <div class="cols">
-        <div class="col bg--gray-200">col</div>
-        <div class="col bg--gray-200">col</div>
-        <div class="col bg--gray-200">col</div>
-        <div class="col bg--gray-200">col</div>
+      <div class="row fs--sm mb--1">
+        <div class="col">
+          <div class="pa--1 bg--gray-200">col</div>
+        </div>
+        <div class="col">
+          <div class="pa--1 bg--gray-200">col</div>
+        </div>
+        <div class="col">
+          <div class="pa--1 bg--gray-200">col</div>
+        </div>
+        <div class="col">
+          <div class="pa--1 bg--gray-200">col</div>
+        </div>
       </div>
     </section>
 

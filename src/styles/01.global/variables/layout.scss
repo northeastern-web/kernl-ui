@@ -17,10 +17,7 @@ $section-padding-y-xl: 10%;
 
 // Gutter widths
 $grid-gutter-widths: (
-  xs: 1rem,
-  // sm: 1rem,
   md: $grid-gutter-width-base,
-  // lg: $grid-gutter-width-base,
   xl: 36px,
   xx: 40px
 ) !default;
