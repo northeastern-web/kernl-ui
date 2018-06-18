@@ -361,25 +361,20 @@
     <div class="col --12@xs">
       <header class="k_section__header">Display Sizes</header>
       <small class="text-style-block">Display Size 1:</small>
-      <p class="fs--d1">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.4rem)</span></p>
+      <p class="fs--d1">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem/1.4)</span></p>
       <hr>
       <small class="text-style-block">Display Size 2:</small>
-      <p class="fs--d2">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.4rem)</span></p>
+      <p class="fs--d2">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.53rem/1.4)</span></p>
       <hr>
       <small class="text-style-block">Display Size 3:</small>
-      <p class="fs--d3">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.4rem)</span></p>
+      <p class="fs--d3">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 2.13rem/1.3)</span></p>
       <hr>
       <small class="text-style-block">Display Size 4:</small>
-      <p class="fs--d4">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.4rem)</span></p>
+      <p class="fs--d4">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 3rem/1.1)</span></p>
       <hr>
       <small class="text-style-block">Display Size 5:</small>
-      <p class="fs--d5">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.4rem)</span></p>
+      <p class="fs--d5">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 4.5rem/1.05)</span></p>
       <hr>
-      <small class="text-style-block">Display Size 6:</small>
-      <p class="fs--d6">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.05rem)</span></p>
-      <hr>
-      <small class="text-style-block">Display Size 7:</small>
-      <p class="fs--d7">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span></p>
   </div>
 </section>
 

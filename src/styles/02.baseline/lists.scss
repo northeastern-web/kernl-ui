@@ -41,22 +41,6 @@ dd {
   }
 }
 
-// ol,
-// ul {
-//   .ls--none {
-//     padding-top: 0.125rem;
-//     margin-left: 1.5rem;
-//   }
-
-//   // Default List
-//   // reset a nested list to bullets when parent list is styled
-//   .ls--default {
-//     padding-top: 0.25rem;
-//     list-style: initial;
-//     margin-left: 1.5rem;
-//   }
-// }
-
 dl { @extend .row; }
 
 dt,

@@ -35,7 +35,6 @@ section { display: block; }
 
 //
 // Text-level semantics
-
 a,
 area,
 button,
@@ -43,25 +42,7 @@ button,
 input,
 label,
 select,
-summary,
 textarea { touch-action: manipulation; }
-
-
-//
-// Interactive
-
-details,
-menu { display: block; }
-
-summary { display: list-item; }
-
-
-//
-// Scripting
-
-canvas { display: inline-block; }
-
-template { display: none; }
 
 
 //

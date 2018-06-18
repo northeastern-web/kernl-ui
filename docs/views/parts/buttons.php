@@ -92,7 +92,7 @@
     <div class="col --12@xs --6@md">
       <p>
         <span class="text-style-block">With Iconography</span><br>
-        <small><i>Add <code>__icon</code> class to Feather Icons.<br>
+        <small><i>Add <code>__icon</code> class to Feather Icons.</i><br>
       </p>
       <p>
         <a class="btn --sm" data-component="button" href="#">
