@@ -45,10 +45,9 @@
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 4.4rem;
+  padding-bottom: 4.4rem;
   margin-bottom: 1rem;
-  background-color: $gray-50;
 
   .__body {
     flex: 1;
@@ -85,4 +84,10 @@
       padding-bottom: 4.5rem;
     }
   }
+}
+
+.section.\--hero {
+  @extend .\--banner;
+  padding-top: 10.6rem;
+  padding-bottom: 10.6rem;
 }
