@@ -4,8 +4,8 @@
 // .p<side>--<value>
 
 
-$size: 20;
-@while $size >= 0 {
+$size: 0;
+@while $size <= 9 {
   .pa--#{$size}   { padding: #{$size}rem !important; }
   .pa--#{$size}h  { padding: #{($size+.5)}rem !important; }
   .pt--#{$size}   { padding-top: #{$size}rem !important; }
@@ -64,5 +64,5 @@ $size: 20;
     }
   }
 
-  $size: $size - 1; // decrement size
+  $size: $size + 1; // decrement size
 }

@@ -52,14 +52,6 @@
         }
       }
 
-      // for one-fifth-width columns
-      @for $i from 1 through 5 {
-        .#{$col-prefix}-20\@#{$infix} {
-          flex-basis: 20%;
-          max-width: 20%;
-        }
-      }
-
       // `$columns - 1` because offsetting by the width of an entire row isn't possible
       @for $i from 0 through ($columns - 1) {
         @if not ($infix == "" and $i == 0) { // Avoid emitting useless .--offset-0@xs
@@ -137,18 +129,12 @@
   right: if($size > 0, percentage($size / $columns), auto);
 }
 
-@mixin make-col-order($size, $columns: $grid-columns) {
-  order: if($size >= 0, $size, auto);
-}
-
 @mixin make-col-modifier($type, $size, $columns) {
   // Work around the lack of dynamic mixin @include support (https://github.com/sass/sass/issues/626)
   @if $type == push {
     @include make-col-push($size, $columns);
   } @else if $type == pull {
     @include make-col-pull($size, $columns);
-  } @else if $type == order {
-    @include make-col-order($size, $columns);
   } @else if $type == offset {
     @include make-col-offset($size, $columns);
   }
