@@ -5,20 +5,18 @@
 
 
 .btn {
+  align-items: center;
+  justify-content: center;
   background-color: #fff;
-  border-color: rgba($type-color, 0.5);
+  border-style: solid;
+  border-width: 1px;  border-color: rgba($type-color, 0.5);
   color: $type-color;
-  font-size: $btn-type;
+  display: inline-flex;
+  line-height: 1.3;
+  font-size: $btn-fs;
   margin-bottom: 3px;
   padding: $btn-padding-t $btn-padding-x $btn-padding-b;
-
-  align-items: center;
-  border-style: solid;
-  border-width: 1px;
   cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  line-height: 1.3;
   overflow: hidden;
   transition: $transition;
   user-select: none;
@@ -35,8 +33,27 @@
     opacity: 0.65;
   }
 
+  .feather {
+    margin: 0 ($btn-fs/2) 0 (-$btn-fs/2);
+    height: $btn-fs;
+    width: $btn-fs;
+  }
+
+  &.\--right .feather { margin: 0 0 0 ($btn-fs/2); }
+
   // Sizing
-  &.\--sm { @include button_size($btn-sm-padding-t, $btn-sm-padding-x, $btn-sm-padding-b, $btn-sm-type); }
+  &.\--sm {
+    padding: $btn-sm-padding-t $btn-sm-padding-x $btn-sm-padding-b;
+    font-size: $btn-sm-fs;
+
+    .feather {
+      margin: 0 ($btn-sm-fs/2) 0 0;
+      height: $btn-sm-fs;
+      width: $btn-sm-fs;
+    }
+
+    &.\--right .feather { margin: 0 (-$btn-sm-fs/2.5) 0 ($btn-sm-fs/2); }
+  }
 
   // Block
   &.\--block {
@@ -67,5 +84,19 @@
       margin-left: auto;
       margin-right: auto;
     }
+  }
+}
+
+.btn__group {
+  @extend %clearfix;
+  display: inline-block;
+  overflow: hidden;
+
+  .btn {
+    border-radius: 0;
+    float: left;
+    margin-right: -1px;
+
+    &:last-child { margin-right: 0; }
   }
 }

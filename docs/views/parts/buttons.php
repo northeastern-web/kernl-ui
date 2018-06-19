@@ -92,26 +92,34 @@
     <div class="col --12@xs --6@md">
       <p>
         <span class="text-style-block">With Iconography</span><br>
-        <small><i>Add <code>__icon</code> class to Feather Icons.</i><br>
+        <i>Add <code>.feather</code> element to add Feather Icons. Use <code>.--right</code> to align icon on right.</i><br>
+      </p>
+      <p>
+        <a class="btn" data-component="button" href="#">
+          <i data-feather="settings"></i> Make Buttons
+        </a>
       </p>
       <p>
         <a class="btn --sm" data-component="button" href="#">
-          <i class="__icon --left" data-feather="settings"></i>
-          Make Buttons
+          <i data-feather="settings"></i> Make Buttons
         </a>
       </p>
       <p>
-        <a class="btn" data-component="button" href="#">
-          Hear Me Now and<br>
-          Listen to Me Later
+        <a class="btn --right" data-component="button" href="#">
+          Make Buttons <i data-feather="arrow-right"></i>
         </a>
       </p>
       <p>
-        <a class="btn" data-component="button" href="#">
-          Hear Me Now and Listen to Me Later<br>
-          Listen to Me Later Hear Me Now and Listen to Me Later. Hear Me Now<br>
-          Listen to Me Later
+        <a class="btn --right --sm" data-component="button" href="#">
+          Make Buttons <i data-feather="arrow-right"></i>
         </a>
+      </p>
+      <p>
+      <a class="btn" data-component="button" href="#">
+        <i data-feather="headphones"></i>
+        Hear Me Now and<br>
+        Listen to Me Later
+      </a>
       </p>
     </div>
   </div>
