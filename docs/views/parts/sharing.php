@@ -11,7 +11,7 @@ define( 'SHARE_URL', url_elements() );
   <div class="row">
     <div class="col --12@xs --4@md p--y-2@xs">
       <header class="k_section__header">Base</header>
-      <ul class="share-buttons">
+      <ul class="share">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
             <i class="__icon feather --thin" data-feather="facebook"></i>
@@ -38,7 +38,7 @@ define( 'SHARE_URL', url_elements() );
 
     <div class="col --12@xs --4@md p--y-2@xs">
       <header class="k_section__header">Stacked</header>
-      <ul class="share-buttons --stacked">
+      <ul class="share --stacked">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
             <i class="__icon feather --thin" data-feather="facebook"></i>
@@ -64,7 +64,7 @@ define( 'SHARE_URL', url_elements() );
 
     <div class="col --12@xs --4@md p--y-2@xs">
       <header class="k_section__header">Flex/Responsive</header>
-      <ul class="share-buttons --flex">
+      <ul class="share --flex">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
             <i class="__icon feather --thin" data-feather="facebook"></i>
