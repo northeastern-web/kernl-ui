@@ -1,20 +1,21 @@
 // Components
 // Cards
 //
+// .card
+
 
 .card {
   @include card_variant();
-  @include transition();
-  @include box_shadow();
+  @include type-sm();
   width: 100%;
   height: auto;
-  margin-bottom: $grid-gutter-width-base;
-  border-radius: 2px;
+  margin-bottom: 1rem;
+  box-shadow: $box-shadow;
   overflow: hidden;
   position: relative;
-  @include type-sm();
+  transition: $transition;
 
-  &:hover { @include box_shadow($component-shadow-hover); }
+  &:hover { box-shadow: $box-shadow-md; }
 
   .__header {
     justify-content: space-between;
@@ -164,7 +165,7 @@
 
   // Link within footer
   .__footer__link {
-    @extend %button;
+    @extend .btn;
     @extend %block;
     margin-top: -1px;
     margin-bottom: 0;
