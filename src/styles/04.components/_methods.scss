@@ -5,7 +5,6 @@
 
 // Accordions
 @mixin accordion_variant($color: $type-color, $trigger: rgba(0,0,0,0.05), $background: transparent) {
-
   > .__item > .__title {
     background: $trigger;
 
@@ -20,12 +19,6 @@
     color: $color;
     background: $background;
   }
-}
-
-// Buttons
-@mixin button_size($padding-t, $padding-x, $padding-b, $font-size) {
-  padding: $padding-t $padding-x $padding-b;
-  font-size: $font-size;
 }
 
 // List Groups
@@ -120,5 +113,149 @@
         }
       }
     }
+  }
+}
+
+
+//
+// Card mixins
+
+// Card Variant
+@mixin card_variant($color: $type-color, $background: rgba(255, 255, 255, 1)) {
+  color: $color;
+  background: $background;
+  border-color: $background;
+
+  .__body,
+  .__footer,
+  .list-group .__item { border-color: darken($background, 20%); }
+
+  .__footer { background: $background; }
+}
+
+// set image and text side by side
+@mixin card_horizontal($width_graphic: 100%, $width_text: auto) {
+  .__graphic {
+    width: $width_graphic;
+    height: 100%;
+    padding: 0;
+  }
+
+  .__graphic__img {
+    max-width: none;
+    height: 100%;
+    top: -10rem;
+    bottom: -10rem;
+    left: -10rem;
+    right: -10rem;
+  }
+
+  .__body {
+    position: absolute;
+    width: $width_text;
+    left: $width_graphic;
+    top: 0;
+    height: 100%;
+  }
+
+  &:after,
+  .__graphic + .__header {
+    width: $width_graphic;
+    left: $width_graphic;
+  }
+
+  .__graphic + .__header {
+    top: 0;
+  }
+
+  .__footer {
+    right: 0;
+    left: $width_graphic;
+    width: $width_text;
+  }
+
+  .__link {
+    padding-bottom: 0;
+
+    &:after {
+      width: $width_text;
+    }
+  }
+
+  &.\--right {
+    .__graphic {
+      margin-left: $width_graphic;
+    }
+
+    .__body {
+      left: auto;
+      right: $width_graphic;
+    }
+
+    &:after,
+    .__graphic + .__header {
+      left: auto;
+      right: $width_graphic;
+    }
+
+    .__footer {
+      left: 0;
+      right: $width_graphic;
+    }
+  }
+}
+
+// reset card_horizontal back to stacked when necessary;
+// required for cases like .g-6@md.g-3@lg
+@mixin card_vertical() {
+  .__graphic {
+    width: 100%;
+    height: 0;
+    padding: 56.25% 0 0;
+  }
+
+  .__graphic__img {
+    max-width: 110%;
+    width: auto;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: -5%;
+    right: 0;
+  }
+
+  .__body {
+    position: relative;
+    width: auto;
+    left: auto;
+    top: auto;
+    height: auto;
+  }
+
+  .__graphic + .__header { left: 0; }
+
+  .__header { top: auto; }
+
+  .__header,
+  .__footer {
+    right: auto;
+    left: auto;
+    width: 100%;
+  }
+
+  .__header + .__body { padding-top: 1rem; }
+}
+
+@mixin fill_width() {
+  .__graphic__img {
+    width: 110%;
+    height: auto;
+  }
+}
+
+@mixin fill_height() {
+  .__graphic__img {
+    width: auto;
+    height: 100%;
   }
 }
