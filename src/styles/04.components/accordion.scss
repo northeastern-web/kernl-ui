@@ -6,7 +6,6 @@
 
 .accordion {
   @include accordion_variant();
-  border-radius: 1px;
   border: 1px solid rgba($black, 0.2);
 
   .__item {
@@ -46,26 +45,14 @@
     }
   }
 
-  &.\+space {
+  &.\--spaced {
     border: 0 none;
 
     .__item {
       border: 1px solid rgba($black, 0.2);
       margin-bottom: 1rem;
     }
-
-    &.\+shadow {
-      box-shadow: none !important;
-      background: transparent;
-
-      .__item {
-        border: 0 none;
-        box-shadow: $box-shadow;
-      }
-    }
   }
-
-  &.\+shadow { border: 0 none; }
 
   > .__item > .__title {
     padding: 1rem 3rem 1rem 0.75rem;

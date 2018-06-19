@@ -16,11 +16,8 @@ $bg_param = (isset($_GET['bg']) ? $_GET['bg'] : null);
   <?= accordion(2, 'Dark', $bg_param ? 'bg--' . $bg_param : 'k_bg-dark', '--dark'); ?>
 
   <!-- start spaced accordion -->
-  <?= accordion(3, 'Space on', $bg_param ? 'bg--' . $bg_param : '', '+space'); ?>
+  <?= accordion(3, 'Space on', $bg_param ? 'bg--' . $bg_param : '', '--spaced'); ?>
 
   <!-- start spaced white accordion -->
-  <?= accordion(4, 'White with Space on', $bg_param ? 'bg--' . $bg_param : 'k_bg-light', '--white +space'); ?>
-
-  <!-- start spaced white accordion -->
-  <?= accordion(5, 'White with Space and Shadow on', $bg_param ? 'bg--' . $bg_param : '', '--white +space +shadow'); ?>
+  <?= accordion(4, 'White with Space on', $bg_param ? 'bg--' . $bg_param : 'k_bg-light', '--white --spaced'); ?>
 </div>
