@@ -78,6 +78,11 @@
       </div>
       <nav class="nav --interior collapse" id="page_menu">
         <ul class="__list">
+          <li class="__item --title">
+            <a class="__link" href="#">
+              <i class="__icon --left feather --sm" data-feather="corner-left-up"></i> Parent Page 
+            </a> 
+          </li>
           <li class="__item">
             <a class="__link" href="#">Dolor Fermentum Ullamcorper Fringilla</a>
           </li>
@@ -110,6 +115,11 @@
     </div>
     <nav class="nav --interior collapse" id="page_menu">
       <ul class="__list">
+        <li class="__item --title">
+          <a class="__link" href="#">
+            <i class="__icon --left feather --sm" data-feather="corner-left-up"></i> Parent Page 
+          </a> 
+        </li>
         <li class="__item">
           <a class="__link" href="#">Dolor Fermentum Ullamcorper Fringilla</a>
         </li>

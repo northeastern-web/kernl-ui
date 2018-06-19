@@ -75,13 +75,12 @@
       flex: 0;
 
       .__link {
+        @extend .tt--caps;
         display: inline-flex;
         flex: 1;
         align-items: center;
         color: inherit;
         font-size: $fs-xs;
-        @extend .tt--caps;
-        margin-bottom: 0.25rem;
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;
 
@@ -314,7 +313,7 @@
   &.\--active { display: block !important; }
 }
 
-.nav--open {
+.nav__open {
   .nav.\--interior {
     .__list {
       visibility: visible;
@@ -323,13 +322,6 @@
   }
 }
 
-.__toggler {
-  &:focus,
-  &:active {
-    outline: none;
-    background: initial;
-  }
-}
 
 .\+nav .\--tabbed {
   overflow: auto;
