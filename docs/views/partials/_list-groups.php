@@ -1,7 +1,7 @@
 <?php
 function listgroup($classes)
 {
-    if ($classes == '+icon') {
+    if (preg_match("/icon/", $classes)) {
         return '
       <div class="list-group ' . $classes . '">
         <div class="__item">

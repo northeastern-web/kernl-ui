@@ -37,45 +37,27 @@
 
   // Styles
   &.\--white { @include list_group_variant($type-color, #fff); }
+
   &.\--dark { @include list_group_variant(#fff, rgba($type-color, 0.5)); }
+
   &.\--striped {
     >* {
       padding: 0.5rem 0.75rem;
       &:nth-child(odd) { background-color: $gray-100; }
     }
   }
+
   &.\--outline {
     border: 1px solid $gray-200;
 
     >* { padding: 0.5rem 0.75rem; }
   }
 
-  &.\--icon {
-    > * {
-      padding-left: 1.5rem !important;
-
-      .feather {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        width: 1rem;
-        height: 1rem;
-      }
-    }
-
-    &.\--right {
-      > .__item,
-      > li,
-      > div {
-        padding-right: 1.5rem !important;
-        padding-left: 0 !important;
-
-        i, svg {
-          left: auto;
-          right: 0;
-        }
-      }
-    }
+  .feather {
+    margin: 0 .5rem 0 0;
+    width: 1rem;
+    height: 1rem;
   }
+
+  &.\--right .feather { margin: 0 .5rem 0 0; }
 }
