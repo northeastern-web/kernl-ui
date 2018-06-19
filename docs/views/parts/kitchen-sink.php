@@ -1,7 +1,6 @@
-<section class="section k_bg-light pa--2">
+<section class="section pa--2">
   <header class="k_section__header">Kitchen Sink</header>
   <!-- HTML5 Kitchen sink by @dbox -->
-  <main>
     <section>
       <hgroup>
         <h1>h1 HTML5 Kitchen Sink</h1>
@@ -14,43 +13,43 @@
     </section>
     <hr>
 
-    <section>
-      <div class="row fs--sm mb--1">
+    <section class="ff--mono fs--xs">
+      <div class="row">
         <div class="col">
-          <div class="pa--1 bg--gray-200">col</div>
+          <div class="pa--1 bg--gray-50 bc--teal">col</div>
         </div>
       </div>
-      <div class="row fs--sm mb--1">
-        <div class="col">
-          <div class="pa--1 bg--gray-200">col</div>
+      <div class="row">
+        <div class="col w--25@md">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--25@md</div>
         </div>
-        <div class="col">
-          <div class="pa--1 bg--gray-200">col</div>
-        </div>
-      </div>
-      <div class="row fs--sm mb--1">
-        <div class="col">
-          <div class="pa--1 bg--gray-200">col</div>
-        </div>
-        <div class="col">
-          <div class="pa--1 bg--gray-200">col</div>
-        </div>
-        <div class="col">
-          <div class="pa--1 bg--gray-200">col</div>
+        <div class="col w--75@md">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--75@md</div>
         </div>
       </div>
-      <div class="row fs--sm mb--1">
-        <div class="col">
-          <div class="pa--1 bg--gray-200">col</div>
+      <div class="row">
+        <div class="col w--1/3@sm">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@sm</div>
         </div>
-        <div class="col">
-          <div class="pa--1 bg--gray-200">col</div>
+        <div class="col w--1/3@sm">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@sm</div>
         </div>
-        <div class="col">
-          <div class="pa--1 bg--gray-200">col</div>
+        <div class="col w--1/3@sm">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@sm</div>
         </div>
-        <div class="col">
-          <div class="pa--1 bg--gray-200">col</div>
+      </div>
+      <div class="row">
+        <div class="col w--1/4@lg">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--1/4@lg</div>
+        </div>
+        <div class="col w--1/4@lg">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--1/4@lg</div>
+        </div>
+        <div class="col w--1/4@lg">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--1/4@lg</div>
+        </div>
+        <div class="col w--1/4@lg">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--1/4@lg</div>
         </div>
       </div>
     </section>
@@ -325,7 +324,6 @@
         </p>
       </form>
     </section>
-  </main>
 
   <!-- end kitchen sink -->
 </section>

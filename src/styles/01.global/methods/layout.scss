@@ -105,14 +105,12 @@
       $gutter: map-get($gutters, $breakpoint);
       padding-right: ($gutter / 2);
       padding-left:  ($gutter / 2);
+      margin-bottom: $gutter;
     }
   }
 }
 
 @mixin make-row($gutters: $grid-gutter-widths) {
-  display: flex;
-  flex-wrap: wrap;
-
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
