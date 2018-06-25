@@ -52,13 +52,13 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
 
 <header class="masthead --megamenu +chevron +utility">
   <a class="__logo" href="<?= $url; ?>">
-    <img class="__logo__image" alt="Logo" src="/src/images/logo.png">
+    <img class="__logo__image" alt="Logo" src="/docs/images/logo.png">
   </a>
   <button class="__toggler hidden--up@lg id="toggle_5"><i data-feather="menu"></i></button>
   <nav class="__drawer" id="drawer_5" role="navigation">
     <div class="clearfix hidden--up@lg">
       <a data-ga-click="" class="__logo" href="<?= $url; ?>">
-        <img class="__logo__image" alt="Logo" src="/src/images/logo-white.png">
+        <img class="__logo__image" alt="Logo" src="/docs/images/logo-white.png">
       </a>
       <button class="__toggler menu-is-open"><i data-feather="x"></i></button>
     </div>

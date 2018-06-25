@@ -14,13 +14,13 @@ function masthead($id, $masthead_classes, $banner_classes)
     echo '
 <header class="masthead ' . $masthead_classes . '">
   <a class="__logo" href="' . $url . '">
-    <img class="__logo__image" alt="Logo" src="/src/images/logo' . $logo . '.png">
+    <img class="__logo__image" alt="Logo" src="/docs/images/logo' . $logo . '.png">
   </a>
   <button class="__toggler hidden--up@lg" id="toggle_' . $id . '"><i data-feather="menu"></i></button>
   <nav class="__drawer" id="drawer_' . $id . '" role="navigation">
     <div class="hidden--up@lg">
       <a class="__logo" href="' . $url .'">
-        <img class="__logo__image" alt="Logo" src="/src/images/logo-white.png">
+        <img class="__logo__image" alt="Logo" src="/docs/images/logo-white.png">
       </a>
       <button class="__toggler menu-is-open"><i data-feather="x"></i></button>
     </div>
