@@ -1,7 +1,7 @@
-<section class="section pa--2">
-  <header class="k_section__header">Kitchen Sink</header>
+<section class="section">
+  <header class="k_section__header mx--1">Kitchen Sink</header>
   <!-- HTML5 Kitchen sink by @dbox -->
-    <section>
+    <section class="section pa--1">
       <hgroup>
         <h1>h1 HTML5 Kitchen Sink</h1>
         <h2>h2 Back in my quaint <a href='#'>garden</a></h2>
@@ -13,48 +13,48 @@
     </section>
     <hr>
 
-    <section class="ff--mono fs--xs">
+    <section class="section ff--mono fs--xs">
       <div class="row">
         <div class="col">
           <div class="pa--1 bg--gray-50 bc--teal">col</div>
         </div>
       </div>
       <div class="row">
-        <div class="col w--25@md">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--25@md</div>
+        <div class="col w--25@t">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--25@t</div>
         </div>
-        <div class="col w--75@md">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--75@md</div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col w--1/3@sm">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@sm</div>
-        </div>
-        <div class="col w--1/3@sm">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@sm</div>
-        </div>
-        <div class="col w--1/3@sm">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@sm</div>
+        <div class="col w--75@t">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--75@t</div>
         </div>
       </div>
       <div class="row">
-        <div class="col w--1/4@lg">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--1/4@lg</div>
+        <div class="col w--1/3@d">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@d</div>
         </div>
-        <div class="col w--1/4@lg">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--1/4@lg</div>
+        <div class="col w--1/3@d">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@d</div>
         </div>
-        <div class="col w--1/4@lg">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--1/4@lg</div>
+        <div class="col w--1/3@d">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@d</div>
         </div>
-        <div class="col w--1/4@lg">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--1/4@lg</div>
+      </div>
+      <div class="row">
+        <div class="col w--50@d w--1/4@w">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--50@d w--1/4@w</div>
+        </div>
+        <div class="col w--50@d w--1/4@w">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--50@d w--1/4@w</div>
+        </div>
+        <div class="col w--50@d w--1/4@w">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--50@d w--1/4@w</div>
+        </div>
+        <div class="col w--50@d w--1/4@w">
+          <div class="pa--1 bg--gray-50 bc--teal">col w--50@d w--1/4@w</div>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <header>
         <nav>
           <ul>
@@ -72,7 +72,7 @@
       <footer>This is footer for this section</footer>
     </section>
     <hr>
-    <section>
+    <section class="section">
       <blockquote>
         <p>Blockquote: I quickly explained that many big jobs involve few hazards</p>
       </blockquote>
@@ -84,7 +84,7 @@
       </blockquote>
     </section>
     <hr>
-    <section>
+    <section class="section">
       <table>
         <caption>Tables can have captions now.</caption>
         <tbody>
@@ -117,7 +117,7 @@
       </table>
     </section>
     <hr>
-    <section>
+    <section class="section">
       <dl>
         <dt>Definition List Title</dt>
         <dd>Definition list division.</dd>
@@ -130,7 +130,7 @@
       </dl>
     </section>
     <hr>
-    <section>
+    <section class="section">
       <ul>
         <li>Unordered List item one
           <ul>
@@ -174,13 +174,13 @@
       </ol>
     </section>
     <hr>
-    <section>
+    <section class="section">
       <address>1 Infinite Loop<br>
     Cupertino, CA 95014<br>
     United States</address>
     </section>
     <hr>
-    <section>
+    <section class="section">
       <pre>
   pre {
     display: block;

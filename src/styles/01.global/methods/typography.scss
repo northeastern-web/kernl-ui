@@ -7,9 +7,8 @@
   line-height: 1.5;
   font-size: 15px;
 
-  @include mqbp-up(sm) { font-size: 16px; }
-  @include mqbp-up(xl) { font-size: 17px; }
-  @include mqbp-up(xx) { font-size: 18px; }
+  @include mqbp-up(t) { font-size: 16px; }
+  @include mqbp-up(w) { font-size: 17px; }
 
   @if $colorContrast { opacity: 0.75; }
 }

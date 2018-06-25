@@ -67,7 +67,7 @@ html { background-color: #333; }
   flex: 1;
   flex-direction: column;
 
-  @include mqbp-up(md) {
+  @include mqbp-up(t) {
     flex-direction: row;
   }
 }
@@ -80,7 +80,7 @@ html { background-color: #333; }
 
   .k_logo { display: none; }
 
-  @include mqbp-up(md) {
+  @include mqbp-up(t) {
     position: fixed;
     top: 0;
     left: 0;
@@ -108,21 +108,13 @@ html { background-color: #333; }
     }
   }
 
-  @include mqbp-up(lg) { transform: translateX(-95%); }
+  @include mqbp-up(d) { transform: translateX(-95%); }
 }
 
 .k_nav__list {
-  columns: 2;
+  columns: 3;
 
-  @media (min-width: 420px) {
-    columns: 3;
-  }
-
-  @media (min-width: 630px) {
-    columns: 4;
-  }
-
-  @include mqbp-up(md) {
+  @include mqbp-up(t) {
     columns: initial;
     padding: 0.5rem 0 4rem;
   }
@@ -245,15 +237,15 @@ html { background-color: #333; }
       filter: grayscale(1);
       opacity: 0.2;
 
-      @include mqbp-up(md) {
+      @include mqbp-up(t) {
         width: auto;
         max-width: 300%;
         height: 100%;
       }
 
-      @include mqbp-up(xx) {
+      @include mqbp-up(w) {
         min-width: 100%;
-        max-width: 150%;
+        max-width: 130%;
         height: auto;
       }
     }
@@ -291,10 +283,6 @@ html { background-color: #333; }
 //
 // Grid demonstration styles
 .k_grid {
-  .col {
-    margin-top: ($grid-gutter-width-base / 2);
-    margin-bottom: ($grid-gutter-width-base / 2);
-  }
 
   .col-content {
     overflow: hidden;
@@ -315,11 +303,18 @@ html { background-color: #333; }
   .\--nogutters {
     .col-content {
       border-right: 1px solid #aed8da;
+      border-bottom: 1px solid #aed8da;
     }
 
-    &:last-child {
+    .col:last-child {
       .col-content {
         border-right: 0 none;
+      }
+    }
+
+    .row:last-child {
+      .col-content {
+        border-bottom: 0 none;
       }
     }
   }
@@ -333,6 +328,25 @@ html { background-color: #333; }
 
   h3 { font-size: 1rem; }
   small { font-size: 0.825rem; }
+}
+
+.k_grid-lines {
+  .row {
+    background-size: 100% 100%;
+    background-repeat: none;
+  }
+
+  &.k_4-lines .row {
+    background-image: url(../../docs/images/grid-line-4.png);
+  }
+
+  &.k_6-lines .row {
+    background-image: url(../../docs/images/grid-line-6.png);
+  }
+
+  &.k_10-lines .row {
+    background-image: url(../../docs/images/grid-line-10.png);
+  }
 }
 
 .fw--n { font-weight: 400; }
@@ -453,11 +467,11 @@ $black-alpha: rgba(0, 0, 0, 0.7);
     font-weight: 900;
     line-height: 1.3rem;
 
-    @include mqbp-up(sm) {
+    @include mqbp-up(t) {
       font-size: 0.75rem;
     }
 
-    @include mqbp-up(md) {
+    @include mqbp-up(t) {
       font-size: 0.825rem;
     }
   }

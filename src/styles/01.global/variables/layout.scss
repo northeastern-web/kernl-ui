@@ -19,6 +19,7 @@ $widths: (
   '1\\/3': 33.33333%,
   '2\\/3': 66.66667%,
   '1\\/4': 25%,
+  '1\\/2': 50%,
   '3\\/4': 75%,
   '1\\/6': 16.66667%,
   '5\\/6': 83.33333%,
@@ -28,27 +29,23 @@ $widths: (
 // Columns
 $col-prefix: '\\-' !default;
 $grid-columns: 12 !default;
-$grid-gutter-width-base: 30px !default;
-$contain-width: 10%;
 
-// Banner Spacing
-$section-padding-y-default: 1rem;
-$section-padding-y-md: 5%;
-$section-padding-y-lg: 7.5%;
-$section-padding-y-xl: 10%;
+$grid-gutter-width-base: 1rem !default;
+$grid-gutter-width-t: 30px !default;
+$grid-gutter-width-w: 36px !default;
+
+// padding-l/r for 'body.--contain'
+$contain-width: 10%;
 
 // Gutter widths
 $grid-gutter-widths: (
-  md: 30px,
-  xl: 36px,
-  xx: 40px
+  t: $grid-gutter-width-t,
+  w: $grid-gutter-width-w
 ) !default;
 
 // Breakpoints
 $grid-breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xx: 1600px
+  t: 720px,
+  d: 992px,
+  w: 1280px
 ) !default;

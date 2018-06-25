@@ -28,7 +28,7 @@
     -webkit-transition: all .3s ease 0s;
     transition: all .3s ease 0s;
 
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       width: 30%;
       float: left;
     }
@@ -37,7 +37,7 @@
   }
 
   .__body {
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       width: 70%;
       float: left;
     }

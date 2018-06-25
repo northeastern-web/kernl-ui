@@ -48,7 +48,7 @@
   &.\--flex {
     padding-left: 0;
 
-    @include mqbp-up(md) {
+    @include mqbp-up(t) {
       li {
         float: none;
         margin: 0 0 -1px 0;

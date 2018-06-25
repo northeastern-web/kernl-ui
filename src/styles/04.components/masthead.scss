@@ -20,20 +20,17 @@
     float: left;
     margin: 1.25rem 1rem 1rem;
 
-    @include mqbp-up(sm) {
+    @include mqbp-up(t) {
       max-width: 270px;
-    }
-
-    @include mqbp-up(md) {
       margin-right: 1rem !important;
     }
 
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       max-width: 280px;
       margin-top: 1.5rem;
     }
 
-    @include mqbp-up(xl) {
+    @include mqbp-up(w) {
       max-width: 350px;
     }
   }
@@ -66,15 +63,11 @@
       color: #999;
     }
 
-    @include mqbp-up(sm) {
-      margin-top: 1.25rem;
-    }
-
-    @include mqbp-up(md) {
+    @include mqbp-up(t) {
       margin-top: 1.35rem;
     }
 
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       display: none;
       width: 0;
       height: 0;
@@ -93,7 +86,7 @@
 
     > .__item { display: block; }
 
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       padding-top: 0;
       margin: 0;
 
@@ -132,7 +125,7 @@
       line-height: 1.2;
     }
 
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       padding: 2.125rem 0.75rem;
       font-size: 15px;
       color: #333;
@@ -144,7 +137,7 @@
       &:focus { color: darken($type-color, 15%); }
     }
 
-    @include mqbp-up(xl) {
+    @include mqbp-up(w) {
       padding: 2.25rem 0.75rem;
       font-size: 16px;
     }
@@ -155,7 +148,7 @@
     font-weight: bold;
     color: lighten($type-color, 80%);
 
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       color: $type-color;
       cursor: default;
     }
@@ -175,7 +168,7 @@
       &:after {
         content: "\e970";
 
-        @include mqbp-up(lg) {
+        @include mqbp-up(d) {
           content: none;
         }
       }
@@ -187,13 +180,13 @@
         content: "\e922";
         color: #666;
 
-        @include mqbp-up(lg) {
+        @include mqbp-up(d) {
           content: none;
         }
       }
     }
 
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       .__submenu {
         position: absolute;
         height: auto;
@@ -266,7 +259,7 @@
       padding-bottom: 6rem;
     }
 
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       position: absolute;
       right: 0;
 
@@ -281,7 +274,7 @@
 
   // add a border to the bottom of active nav link
   &.\+border {
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       .__logo { margin-top: 1.6rem; }
 
       .__list:not(.\--utility) {
@@ -304,13 +297,13 @@
       }
     }
 
-    @include mqbp-up(xl) {
+    @include mqbp-up(w) {
       .__logo { margin-top: 1.7rem; }
     }
   }
 
   &.\--megamenu {
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       .__logo { margin-top: 1.625rem; }
 
       .__list,
@@ -458,13 +451,13 @@
       }
     }
 
-    @include mqbp-up(xl) {
+    @include mqbp-up(w) {
       .__logo { margin-top: 1.75rem; }
     }
   }
 
   .\+icon {
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       a {
         padding-bottom: 0 !important;
         color: rgba($type-color, 0.7);
@@ -482,7 +475,7 @@
 
   &.\+utility {
     .__list:not(.\--utility) {
-      @include mqbp-up(lg) {
+      @include mqbp-up(d) {
         margin-top: 3rem;
 
         .__link {
@@ -495,7 +488,7 @@
         }
       }
 
-      @include mqbp-up(xl) {
+      @include mqbp-up(w) {
         margin-top: 3.125rem;
 
         .__link { padding-bottom: 1.35rem; }
@@ -503,15 +496,14 @@
     }
 
     .\+children .__submenu {
-      @include mqbp-up(lg) { top: 2.5rem; }
-      @include mqbp-up(xl) { top: 2.5rem; }
+      @include mqbp-up(d) { top: 2.5rem; }
+      @include mqbp-up(w) { top: 2.5rem; }
     }
 
     &.\--megamenu {
       .\+children .__submenu {
-        @include mqbp-up(lg) { top: 5.85rem; }
-        @include mqbp-up(xl) { top: 6.3625rem; }
-        @include mqbp-up(xx) { top: 6.25rem; }
+        @include mqbp-up(d) { top: 5.85rem; }
+        @include mqbp-up(w) { top: 6.3625rem; }
       }
     }
   }
@@ -523,7 +515,7 @@
       font-size: $fs-root;
     }
 
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       .__item {
         border-right: 1px solid rgba($type-color, 0.3);
 
@@ -546,7 +538,7 @@
       }
     }
 
-    @include mqbp-up(xl) {
+    @include mqbp-up(w) {
       top: 1.5rem;
     }
   }
@@ -572,7 +564,7 @@
 
   .__toggler { margin-top: 1.125rem; }
 
-  @include mqbp-up(lg) {
+  @include mqbp-up(d) {
     position: static;
     float: right;
     width: auto;
@@ -594,7 +586,7 @@
     flex-wrap: wrap;
     @include make-megamenu();
 
-    @include mqbp-up(lg) { display: flex; }
+    @include mqbp-up(d) { display: flex; }
   }
 }
 
@@ -637,5 +629,5 @@
 }
 
 .menu-is-open {
-  @include mqbp-up(lg) { display: none; }
+  @include mqbp-up(d) { display: none; }
 }

@@ -27,7 +27,7 @@
       &.\--left { left: 0.5rem; }
       &.\--right { right: 0.5rem; }
 
-      @include mqbp-up(xl) {
+      @include mqbp-up(w) {
         top: 0.5rem;
       }
     }
@@ -273,15 +273,14 @@
 
     .__header,
     .__footer {
-      @include mqbp-up(lg) { @include type-xs(); }
+      @include mqbp-up(d) { @include type-xs(); }
     }
 
     .__graphic__img {
         max-height: 175%;
-        @include mqbp-up(sm) { max-height: 110%; }
-        @include mqbp-up(md) { max-height: 130%; }
-        @include mqbp-up(lg) { max-height: 106%; }
-        @include mqbp-up(xx) { max-height: 130%; }
+        @include mqbp-up(t) { max-height: 130%; }
+        @include mqbp-up(d) { max-height: 106%; }
+        @include mqbp-up(w) { max-height: 130%; }
     }
 
     &.\--overlay {
@@ -303,36 +302,16 @@
       width: 100%;
       color: #fff;
 
-      @include mqbp-up(md) {
+      @include mqbp-up(t) {
         top: 25%;
       }
-    }
-  }
-
-  //
-  // Set heights at small
-  @include mqbp-up(sm) {
-    &:not(.\--h\@md) {
-      height: $card_height_sm;
-    }
-
-    &.\--overlay {
-      .__graphic__img {
-        max-height: 120%;
-      }
-    }
-
-    &.\--tile,
-    &.\--tile.\--overlay {
-      height: 250px;
-      min-height: 0;
     }
   }
 
 
   //
   // Set heights at medium
-  @include mqbp-up(md) {
+  @include mqbp-up(t) {
     height: $card_height_md;
 
     &.\--overlay {
@@ -349,11 +328,11 @@
 
   //
   // Set heights at large
-  @include mqbp-up(lg) {
+  @include mqbp-up(d) {
     height: $card_height_lg;
   }
 
-  @include mqbp-up(xl) {
+  @include mqbp-up(w) {
     height: $card_height_xl;
 
     &.\--tile,
@@ -362,46 +341,20 @@
     }
   }
 
-  //
-  // Set heights at extra large
-  @include mqbp-up(xx) {
-    height: $card_height_xx;
-    margin-bottom: 40px; // = match xx gutter
+  @include mqbp-up(t) {
+    @include card_vertical();
 
-    &.\--overlay {
-      .__graphic__img {
-        max-height: 160%;
-      }
-    }
-  }
-
-  @include mqbp-up(sm) {
-    &.\--h\@sm {
-      @include card_horizontal(50%, 50%);
-    }
-
-    &.\--v\@sm {
-      @include card_vertical();
-      height: auto;
-    }
-  }
-
-  @include mqbp-up(md) {
-    &.\--v\@sm {
-      @include card_vertical();
-    }
-
-    &.\--h\@md {
+    &.\--h\@t {
       @include card_horizontal(50%, 50%);
     }
   }
 
-  @include mqbp-up(lg) {
-    &.\--h\@lg {
+  @include mqbp-up(d) {
+    &.\--h\@d {
       @include card_horizontal(50%, 50%);
     }
 
-    &.\--v\@lg {
+    &.\--v\@d {
       @include card_vertical();
 
       .__graphic + .__header {
@@ -411,12 +364,12 @@
     }
   }
 
-  @include mqbp-up(xl) {
-    &.\--h\@xl {
+  @include mqbp-up(w) {
+    &.\--h\@w {
       @include card_horizontal(50%, 50%);
     }
 
-    &.\--v\@xl {
+    &.\--v\@w {
       @include card_vertical();
 
       .__graphic + .__header {
@@ -429,7 +382,7 @@
 
 
 .card:not(.\--overlay):not(.\--extend):not(.\--scroll):not(.\--middle):not(.\+list-group) {
-  @include mqbp-up(sm) {
+  @include mqbp-up(t) {
     &::after {
       content: '';
       position: absolute;
@@ -481,7 +434,7 @@
     transform: translateY(-50%);
   }
 
-  @include mqbp-up(sm) {
+  @include mqbp-up(t) {
     min-height: $card_height_sm;
   }
 }
@@ -517,7 +470,7 @@
 .\--flush .card {
   border-radius: 0;
 
-  @include mqbp-up(md) {
+  @include mqbp-up(t) {
     .__body {
       padding: 1rem;
       display: flex;
@@ -526,7 +479,7 @@
     }
   }
 
-  @include mqbp-up(xl) {
+  @include mqbp-up(w) {
     .__graphic__img { height: 115% !important; }
   }
 }

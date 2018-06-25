@@ -30,7 +30,7 @@
       padding: 0;
       box-shadow: none !important;
 
-      @include mqbp-up(md) { width: 80%; }
+      @include mqbp-up(t) { width: 80%; }
 
       &:before {
         position: absolute;
@@ -44,11 +44,11 @@
         left: 0.85rem;
         color: rgba($type-color, 0.5);
 
-        @include mqbp-up(md) {
+        @include mqbp-up(t) {
           left: 1rem;
         }
 
-        @include mqbp-up(lg) {
+        @include mqbp-up(d) {
           left: 1.25rem;
         }
       }
@@ -96,7 +96,7 @@
   }
 
   &.\--inline {
-    @include mqbp-up(md) {
+    @include mqbp-up(t) {
       display: flex;
       flex-flow: row;
       align-items: center;

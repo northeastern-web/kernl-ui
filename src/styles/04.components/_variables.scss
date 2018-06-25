@@ -24,27 +24,6 @@ $tile_min_height_xs: 125px !default;
 $tile_overlay_height: 250px !default;
 $card_icon_size: 1.5rem !default;
 
-// Component header
-%component-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: .25rem;
-  padding: 0.5rem 0;
-  font-size: .75rem;
-}
-
-// Component footer
-%component-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem 1rem;
-  max-width: 100%;
-  text-align: center;
-
-  @include mqbp-up(lg) { padding: 1rem; }
-}
-
 // Component interior columns
 %component-column {
   flex: 0 0 auto;

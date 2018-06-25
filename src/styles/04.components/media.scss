@@ -77,7 +77,7 @@
     .__graphic {
       border-radius: 0;
 
-      @include mqbp-up(md) {
+      @include mqbp-up(t) {
         flex: 0 0 8rem !important;
         height: 5.5rem !important;
       }
@@ -87,7 +87,7 @@
       max-height: 200%; // min for 16:9 portrait images
       max-width: 200%; // min for 3:4 landscape images
 
-      @include mqbp-up(md) {
+      @include mqbp-up(t) {
         max-height: 170%; // min for 16:9 portrait images
         max-width: 160%; // min for 3:4 landscape images
         top: 65%; // prevent head crop on portrait images

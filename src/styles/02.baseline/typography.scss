@@ -82,7 +82,7 @@ blockquote {
   margin: 0 0 1rem;
   padding: 1rem 1.25rem;
 
-  @include mqbp-up(md) { padding: 2rem; }
+  @include mqbp-up(t) { padding: 2rem; }
 
   p {
     font-family: inherit;
@@ -96,7 +96,7 @@ blockquote {
   footer {
     padding-top: 0.5rem;
 
-    @include mqbp-up(md) { padding-top: 0.75rem; }
+    @include mqbp-up(t) { padding-top: 0.75rem; }
   }
 
   footer,
@@ -108,7 +108,7 @@ blockquote {
     font-size: $fs-root;
     line-height: 1.5;
 
-    @include mqbp-up(lg) { line-height: 1.625; }
+    @include mqbp-up(d) { line-height: 1.625; }
   }
 
   &.\--mark {
@@ -125,7 +125,7 @@ blockquote {
       left: 1.125rem;
     }
 
-    @include mqbp-up(md) {
+    @include mqbp-up(t) {
       padding-top: 2rem;
       padding-left: 4rem;
 

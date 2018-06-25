@@ -52,7 +52,7 @@
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       @if ($container == "full") {
-        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+        @if ($breakpoint == "t" or $breakpoint == "d" or $breakpoint == "w") {
           .__logo { margin-left: $gutter; }
 
           .__drawer,
@@ -60,7 +60,7 @@
           .\--utility { margin-right: $gutter; }
         }
       } @elseif ($container == "contain") {
-        @if ($breakpoint == "md") {
+        @if ($breakpoint == "t") {
           .__logo { margin-left: $contain; }
 
           .__drawer,
@@ -68,7 +68,7 @@
           .\--utility { margin-right: $contain; }
         }
       } @else {
-        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+        @if ($breakpoint == "t" or $breakpoint == "d" or $breakpoint == "w") {
           .__logo { margin-left: ($gutter * 2); }
 
           .__drawer,
@@ -94,17 +94,17 @@
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       @if ($container == "full") {
-        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+        @if ($breakpoint == "t" or $breakpoint == "d" or $breakpoint == "w") {
           padding-right: $gutter !important;
           padding-left:  $gutter !important;
         }
       } @elseif ($container == "contain") {
-        @if ($breakpoint == "md") {
+        @if ($breakpoint == "t") {
           padding-right: $contain !important;
           padding-left: $contain !important;
         }
       } @else {
-        @if ($breakpoint == "md" or $breakpoint == "lg" or $breakpoint == "xl" or $breakpoint == "xx") {
+        @if ($breakpoint == "t" or $breakpoint == "d" or $breakpoint == "w") {
           padding-right: $gutter * 2 !important;
           padding-left:  $gutter * 2 !important;
         } @else {
@@ -206,7 +206,7 @@
 }
 
 // reset card_horizontal back to stacked when necessary;
-// required for cases like .g-6@md.g-3@lg
+// required for cases like .g-6@t.g-3@d
 @mixin card_vertical() {
   .__graphic {
     width: 100%;

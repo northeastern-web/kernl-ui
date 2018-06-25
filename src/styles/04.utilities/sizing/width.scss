@@ -7,6 +7,11 @@
 .mw--0    { min-width: 0; }
 .mw--100  { min-width: 100%; }
 
+.w--fit {
+  width: auto;
+  flex: 1;
+}
+
 @each $name, $value in $widths {
   .w--#{$name} { width: $value; }
 }
@@ -15,6 +20,11 @@
   @include mqbp-up($breakpoint) {
     @each $name, $value in $widths {
       .w--#{$name}\@#{$breakpoint} { width: $value; }
+    }
+
+    .w--fit\@#{$breakpoint} {
+      width: auto;
+      flex: 1;
     }
   }
 }

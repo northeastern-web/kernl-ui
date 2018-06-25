@@ -4,21 +4,20 @@
 
 
 .section {
-  @include make-section();
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-
-  .section {
-    padding: 0;
-    overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
-  }
+  padding: 1rem;
+  @include make-section();
 }
 
 .full .section { @include make-section('full'); }
-.contain .section { @include make-section('contain', $contain: 10%); }
+.contain .section { @include make-section('contain', $contain: $contain-width); }
+
+.section .section {
+  padding: 0;
+  overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
+}
 
 .section.\--flush {
   padding-right: 0 !important;
@@ -35,6 +34,7 @@
     > .col {
       padding-right: 0;
       padding-left: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -67,7 +67,7 @@
   &.\--top { align-items: flex-start; }
   &.\--bottom { align-items: flex-end; }
 
-  @include mqbp-up(lg) { flex-direction: row; }
+  @include mqbp-up(d) { flex-direction: row; }
 
   &.\+nav {
     flex: 0;
@@ -80,7 +80,7 @@
     &.\--top { justify-content: flex-start; }
     &.\--bottom { justify-content: flex-end; }
 
-    @include mqbp-up(lg) {
+    @include mqbp-up(d) {
       padding-bottom: 4.5rem;
     }
   }
