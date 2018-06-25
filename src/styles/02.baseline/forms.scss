@@ -139,9 +139,8 @@ select {
   background-color: #fff;
   background-image: none;
   background-clip: padding-box;
-  border: 1px solid $gray-50;
+  border: 1px solid $gray-200;
   border-radius: 1px;
-  box-shadow: $box-shadow;
 
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
