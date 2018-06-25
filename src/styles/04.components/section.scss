@@ -17,6 +17,10 @@
 .section .section {
   padding: 0;
   overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
+
+  .row:last-child {
+    .col { margin-bottom: 0; }
+  }
 }
 
 .section.\--flush {
