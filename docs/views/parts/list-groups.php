@@ -7,7 +7,7 @@
       <?= listgroup(''); ?>
     </div>
     <div class="col w--1/4">
-      <?= listgroup('fs--sm'); ?>
+      <?= listgroup('--indent fs--sm'); ?>
     </div>
     <div class="col w--1/4">
       <?= listgroup('fs--xs +icon'); ?>
