@@ -9,13 +9,10 @@
   @include type-sm();
   width: 100%;
   height: auto;
-  margin-bottom: 1rem;
-  box-shadow: $box-shadow;
   overflow: hidden;
   position: relative;
   transition: $transition;
 
-  &:hover { box-shadow: $box-shadow-md; }
 
   .__header {
     justify-content: space-between;
@@ -310,7 +307,7 @@
 
 
   //
-  // Set heights at medium
+  // Set heights at tablet
   @include mqbp-up(t) {
     height: $card_height_md;
 
@@ -327,11 +324,13 @@
   }
 
   //
-  // Set heights at large
+  // Set heights at desktop
   @include mqbp-up(d) {
     height: $card_height_lg;
   }
 
+  //
+  // Set heights at widescreen
   @include mqbp-up(w) {
     height: $card_height_xl;
 

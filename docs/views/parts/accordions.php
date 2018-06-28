@@ -5,7 +5,7 @@ $bg_param = (isset($_GET['bg']) ? $_GET['bg'] : null);
 
 ?>
 
-<div class="section measure mx--auto">
+<div class="section">
   <!-- start base accordion -->
   <?= accordion(0, 'Base', $bg_param ? 'bg--' . $bg_param : '', ''); ?>
 

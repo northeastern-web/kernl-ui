@@ -3,10 +3,10 @@
 //
 // .badge
 
-
 .badge {
   @extend .fs--smooth;
   background-color: #fff;
+  color: $black;
   padding: 0.4rem 0.6rem 0.45rem;
   display: inline-block;
   font-size: $fs-xs;
@@ -23,16 +23,45 @@
     &:hover { text-decoration: none; }
   }
 
-  .feather {
-    margin: 0 ($fs-xs/2) 0 0;
-    height: $fs-xs;
-    width: $fs-xs;
-    position: relative;
-    top: 2px;
+  &:before { margin-right: .25rem }
+
+  // Positioning
+  &.\--left {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include mqbp-up(d) {
+      top: 0.75rem;
+      left: 0.75rem;
+    }
+
+    &.br--pill { left: 0.75rem; }
   }
 
-  &.\--right .feather { margin: 0 0 0 ($fs-xs/2); }
+  &.\--center {
+    position: absolute;
+    top: 0;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
 
-  // Color extensions
-  &.bc--white { background-color: transparent; }
+    @include mqbp-up(d) {
+      top: 0.75rem;
+    }
+  }
+
+  &.\--right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+
+    @include mqbp-up(d) {
+      top: 0.75rem;
+      right: 0.75rem;
+    }
+
+    &.br--pill { right: 0.75rem; }
+  }
 }

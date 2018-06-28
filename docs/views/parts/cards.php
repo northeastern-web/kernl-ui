@@ -31,7 +31,7 @@ figure out --middle with a heading.
 <section class="section k_bg-light">
   <div class="row">
 
-    <div class="col --6@sm --4@lg --2@xl">
+    <div class="col w--1/3@t w--1/6@d">
       <article class="card --tile">
         <a href="#" class="__link">
           <div class="__body">
@@ -43,7 +43,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@sm --4@lg --2@xl">
+    <div class="col w--1/3@t w--1/6@d">
       <article class="card --tile bc--teal shadow--none">
         <a href="#" class="__link">
           <div class="__body">
@@ -54,7 +54,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@sm --4@lg --2@xl">
+    <div class="col w--1/3@t w--1/6@d">
       <article class="card --tile ta--c">
         <a href="#" class="__link">
           <div class="__graphic +round"></div>
@@ -66,7 +66,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@sm --4@lg --2@xl">
+    <div class="col w--1/3@t w--1/6@d">
       <article class="card --tile --overlay --middle">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -79,7 +79,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@sm --4@lg --2@xl">
+    <div class="col w--1/3@t w--1/6@d">
       <article class="card --tile">
         <div class="__header">
           <div class="__column">
@@ -99,7 +99,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@sm --4@lg --2@xl">
+    <div class="col w--1/3@t w--1/6@d">
       <article class="card --tile --teal --middle">
         <a href="#" class="__link">
           <div class="__body">
@@ -113,7 +113,7 @@ figure out --middle with a heading.
 
     <!-- Basic cards -->
 
-    <div class="col --6@sm --3@lg">
+    <div class="col w--1/2@t w--1/4@d">
       <article class="card">
         <a href="#" class="__link">
           <div class="__body">
@@ -123,7 +123,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@sm --3@lg">
+    <div class="col w--1/2@t w--1/4@d">
       <article class="card bc--gray shadow--none">
         <a href="#" class="__link">
           <div class="__body">
@@ -134,7 +134,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@sm --3@lg">
+    <div class="col w--1/2@t w--1/4@d">
       <article class="card">
         <a href="" class="__link">
           <div class="badge --right --dark">Badge</div>
@@ -147,7 +147,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@sm --3@lg">
+    <div class="col w--1/2@t w--1/4@d">
       <article class="card">
         <a href="#" class="__link">
           <div class="__header">
@@ -166,7 +166,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@sm --4@lg">
+    <div class="col w--1/2@t w--1/3@d">
       <article class="card --overlay --bottom +shade">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -178,7 +178,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@sm --4@lg">
+    <div class="col w--1/2@t w--1/3@d">
       <article class="card --overlay">
         <div class="__graphic"></div>
         <div class="__header">
@@ -197,7 +197,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --4@lg">
+    <div class="col w--1/3@d">
       <article class="card --overlay --bottom">
         <a href="" class="__link">
           <div class="__graphic"></div>
@@ -215,7 +215,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@lg">
+    <div class="col w--1/2@d">
       <article class="card --h@sm">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -227,7 +227,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --6@lg">
+    <div class="col w--1/2@d">
       <article class="card --overlay">
         <div class="__graphic"></div>
         <div class="__header">
@@ -246,19 +246,19 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --5@lg">
+    <div class="col w--30@d">
       <article class="card --h@sm">
         <a href="#" class="__link">
           <div class="__graphic"></div>
           <div class="__body">
-            <h2 class="__title">Five Columns at Large</h2>
+            <h2 class="__title">30% at Desktop</h2>
             <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
           </div>
         </a>
       </article>
     </div>
 
-    <div class="col --7@lg">
+    <div class="col w--70@d">
       <article class="card --overlay">
         <div class="__graphic"></div>
         <div class="__header">
@@ -270,14 +270,14 @@ figure out --middle with a heading.
           </div>
         </div>
         <div class="__body">
-          <h2 class="__title">Seven Columns at Large</h2>
+          <h2 class="__title">70% at Desktop</h2>
           <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
           <a class="btn bc--white" href="#">Have a Clickity</a>
         </div>
       </article>
     </div>
 
-    <div class="col --4@lg">
+    <div class="col w--1/3@d">
       <article class="card --h@sm --v@lg">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -297,8 +297,8 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --8@lg">
-      <article class="card --h@sm bg--blue-dark">
+    <div class="col w--2/3@d">
+      <article class="card --h@t bg--blue-dark">
         <div class="__graphic"></div>
         <div class="__header">
           <div class="__column">
@@ -316,7 +316,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --4@lg">
+    <div class="col w--1/3@d">
       <article class="card --overlay">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -336,7 +336,7 @@ figure out --middle with a heading.
       </article>
     </div>
 
-    <div class="col --8@lg">
+    <div class="col w--2/3@d">
       <article class="card --overlay">
         <div class="__graphic"></div>
         <div class="__header">
@@ -355,8 +355,8 @@ figure out --middle with a heading.
   </div>
 </section>
 
-<section class="section --flush --nogutters py--0@xs">
-  <article class="card --h@md bg--blue-dark mb--0@xs shadow--none">
+<section class="section --flush --nogutters py--0">
+  <article class="card --h@t bg--blue-dark mb--0 shadow--none">
     <div class="__graphic"></div>
     <div class="__body">
       <blockquote class="--mark">
@@ -371,7 +371,7 @@ figure out --middle with a heading.
     </div>
   </article>
 
-  <article class="card --h@md bg--blue-dark --right shadow--none">
+  <article class="card --h@t bg--blue-dark --right shadow--none">
     <div class="__graphic"></div>
     <div class="__body">
       <blockquote class="--mark">
