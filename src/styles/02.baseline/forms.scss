@@ -68,12 +68,13 @@ legend {
 }
 
 label {
-  @include type-sm();
   display: inline-block;
   margin-bottom: .5rem;
   padding-top: 0.5rem;
-  padding-bottom: 0.25;
   color: $gray-500;
+  line-height: 1.2;
+
+  &:hover { cursor: pointer; }
 }
 
 progress {
@@ -90,8 +91,10 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
   padding: 0;
+  margin: 0.15rem 0.25rem 0 0;
+  box-sizing: border-box;
+  vertical-align: top;
 
   &:disabled { cursor: not-allowed; }
 }
