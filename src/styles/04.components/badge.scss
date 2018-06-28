@@ -3,6 +3,7 @@
 //
 // .badge
 
+
 .badge {
   @extend .fs--smooth;
   background-color: #fff;
@@ -22,31 +23,16 @@
     &:hover { text-decoration: none; }
   }
 
-  &:before { margin-right: .25rem }
-
-  // Positioning
-  &.\--left {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    &.\--pill { left: 0.75rem; }
+  .feather {
+    margin: 0 ($fs-xs/2) 0 0;
+    height: $fs-xs;
+    width: $fs-xs;
+    position: relative;
+    top: 2px;
   }
 
-  &.\--center {
-    position: absolute;
-    top: 0;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  &.\--right .feather { margin: 0 0 0 ($fs-xs/2); }
 
-  &.\--right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: auto;
-
-    &.\--pill { right: 0.75rem; }
-  }
+  // Color extensions
+  &.bc--white { background-color: transparent; }
 }
