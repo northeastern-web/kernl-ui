@@ -4,13 +4,13 @@ function colorPalette($color, $colorName) {
   <div class="row">
     <div class="col">
       <div class="k_color bg--' . $color . ' py--2">
-        <h3>' . $colorName . ' Background</h3>
+        <h4>' . $colorName . ' Background</h4>
         <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
         <a class="btn --sm br--pill" href="#">More</a> <a class="btn --sm br--pill" href="#">Less</a>
       </div>
-      <div class="alert --sm bg--' . $color . '">
-        <a class="__link" href="#">
-          <div class="__body">Component <b>Hover State</b> Demo</div>
+      <div class="bg--' . $color . '">
+        <a class="__link d--block pa--1" href="#">
+          Component <b>Hover State</b> Demo
         </a>
       </div>
     </div>
@@ -29,5 +29,5 @@ function colorPalette($color, $colorName) {
       </div>
     </div>
   </div>
-    ';
-  }
+  ';
+}

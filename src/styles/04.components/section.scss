@@ -11,8 +11,11 @@
   @include make-section();
 }
 
-.full .section { @include make-section('full'); }
-.contain .section { @include make-section('contain', $contain: $contain-width); }
+.full .section,
+.full .masthead { @include make-section('full'); }
+
+.contain .section,
+.contain .masthead { @include make-section('contain', $contain: $contain-width); }
 
 .section .section {
   padding: 0;

@@ -70,8 +70,8 @@
       $gutter: map-get($gutters, $breakpoint);
       @if ($container == "full") {
         @if ($breakpoint == "t" or $breakpoint == "d" or $breakpoint == "w") {
-          padding-right: $gutter;
-          padding-left: $gutter;
+          padding-right: $gutter/2;
+          padding-left: $gutter/2;
         }
       } @elseif ($container == "contain") {
         @if ($breakpoint == "t") {

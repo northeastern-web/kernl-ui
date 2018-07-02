@@ -8,9 +8,7 @@
         <div class="col-content">(default)</div>
       </div>
     </div>
-  </section>
-  <section class="section k_grid-lines k_10-lines">
-    <div class="row pt--2">
+    <div class="row">
       <div class="col w--20@t w--10@d">
         <div class="col-content">w--20@t w--10@d</div>
       </div>
@@ -59,9 +57,7 @@
         <div class="col-content">w--20@t</div>
       </div>
     </div>
-  </section>
-  <section class="section k_grid-lines k_6-lines">
-    <div class="row pt--2">
+    <div class="row">
       <div class="col w--1/6">
         <div class="col-content">w--1/6</div>
       </div>
@@ -89,9 +85,7 @@
         <div class="col-content">w--2/3</div>
       </div>
     </div>
-  </section>
-  <section class="section k_grid-lines k_4-lines">
-    <div class="row pt--2">
+    <div class="row">
       <div class="col w--1/4">
         <div class="col-content">w--1/4</div>
       </div>
@@ -121,8 +115,6 @@
         <div class="col-content">w--1/4</div>
       </div>
     </div>
-  </section>
-  <section class="section">
     <div class="row">
       <div class="col w--auto">
         <div class="col-content">w--auto (no specific width set; width defined by content)</div>
@@ -273,80 +265,67 @@
   <section class="section">
     <header class="k_section__header">Grid, Banners, Nesting, Fancy Options and Tweaks</header>
   </section>
-  <section class="section">
+  <section class="section ">
     <h3 class="non-col-element text-style-block">Section <small>(with --bg-color option)</small></h3>
-    <div class="row +middle">
+    <div class="row">
       <div class="col w--2/3@t">
-        <section class="section bg--gray-700 tc--gray-100 pa--1">
+        <section class="section bg--gray-700 tc--gray-100 pa--1 pa--1h@t">
           <h3 class="non-col-element text-style-block">Nested Section <small>(with --bg-color option)</small></h3>
           <div class="row">
             <div class="col w--1/3@t">
-              <div class="col-content">4<br>----</div>
+              <div class="col-content">1/3<br>----</div>
             </div>
             <div class="col w--1/3@t">
-              <div class="col-content">4<br>----<br>-------<br>-----</div>
+              <div class="col-content">1/3<br>----<br>-------<br>-----</div>
             </div>
             <div class="col w--1/3@t">
-              <div class="col-content">4<br>----<br>-------</div>
+              <div class="col-content">1/3<br>----<br>-------</div>
             </div>
           </div>
         </section>
       </div>
       <div class="col w--1/3@t">
-        <div class="col-content">4 (+middle on row)</div>
+        <div class="col-content">1/3 (+middle on row)</div>
       </div>
     </div>
     <div class="row">
-      <div class="col --9@md">
-        <div class="col-content pa--0@xs +equal">
-          <section class="section pa--1@xs">
-            <h3 class="non-col-element text-style-block">Nested Section <small>(with +equal option)</small></h3>
+      <div class="col w--3/4@t">
+        <div class="col-content pa--0 h--100">
+          <section class="section pa--1 pa--1h@t">
+            <h3 class="non-col-element text-style-block">Nested Section <small>(with h--100 option)</small></h3>
             <div class="row">
-              <div class="col --3@md">
-                <div class="col-content +equal">3<br>----</div>
+              <div class="col w--1/4@t">
+                <div class="col-content h--100">1/4<br>----</div>
               </div>
-              <div class="col --3@md">
-                <div class="col-content +equal">3<br>----<br>-------<br>----<br>-------</div>
+              <div class="col w--1/4@t">
+                <div class="col-content h--100">1/4<br>----<br>-------<br>----<br>-------</div>
               </div>
-              <div class="col --3@md">
-                <div class="col-content +equal">3<br>----<br>-------</div>
+              <div class="col w--1/4@t">
+                <div class="col-content h--100">1/4<br>----<br>-------</div>
               </div>
-              <div class="col --3@md">
-                <div class="col-content +equal">3<br>----</div>
+              <div class="col w--1/4@t">
+                <div class="col-content h--100">1/4<br>----</div>
               </div>
             </div>
           </section>
         </div>
       </div>
-      <div class="col --3@md">
-        <div class="col-content +equal">3 (+equal on element sets height to match heighest element in a row)</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col --10@md">
-        <div class="col-content">10</div>
-      </div>
-      <div class="col --2@md">
-        <div class="col-content">2</div>
+      <div class="col w--1/4@t">
+        <div class="col-content h--100">3 (+equal on element sets height to match heighest element in a row)</div>
       </div>
     </div>
   </section>
   <section class="section bg--gray-700 tc--gray-100">
-    <h3 class="non-col-element text-style-block mb--1@xs">Section <small>(with --bg-color option)</small></h3>
-    <div class="section  bg--gray-800 tc--gray-100 pa--1@xs">
+    <h3 class="non-col-element text-style-block mb--1">Section <small>(with --bg-color option)</small></h3>
+    <div class="section bg--gray-800 tc--gray-100 pa--1 pa--1h@t">
       <h3 class="non-col-element text-style-block">Nested Section <small>(with --bg-color option)</small></h3>
       <div class="row">
-        <div class="col --11@md">
-          <div class="col-content">11</div>
+        <div class="col w--5/6@t">
+          <div class="col-content">5/6@t</div>
         </div>
-        <div class="col --1@md">
-          <div class="col-content">1</div>
+        <div class="col w--1/6@t">
+          <div class="col-content">1/6@t</div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="col-content">12</div>
       </div>
     </div>
   </section>

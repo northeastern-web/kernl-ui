@@ -16,7 +16,7 @@
   <section class="section pt--2 k_bg-light --full">
     <div class="row">
       <?php foreach (getKernlFiles() as $file) : ?>
-        <div class="col w--1/3@t w--1/4@w">
+        <div class="col w--1/3@t w--1/4@d w--20@w">
           <div class="card --overlay --middle --sg-home">
             <a class="__link" href="/?part=<?= $file; ?>">
               <div class="__graphic"></div>

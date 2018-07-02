@@ -8,7 +8,7 @@
 
 function masthead($id, $masthead_classes, $banner_classes)
 {
-    ($masthead_classes == '--overlay') ? $logo = "-white" : $logo = "";
+    ($masthead_classes == '--overlay' || $masthead_classes == 'bg--black') ? $logo = "-white" : $logo = "";
     $url = "{$_SERVER['REQUEST_URI']}";
 
     echo '
@@ -16,9 +16,9 @@ function masthead($id, $masthead_classes, $banner_classes)
   <a class="__logo" href="' . $url . '">
     <img class="__logo__image" alt="Logo" src="/docs/images/logo' . $logo . '.png">
   </a>
-  <button class="__toggler hidden--up@lg" id="toggle_' . $id . '"><i data-feather="menu"></i></button>
+  <button class="__toggler hidden--up@d" id="toggle_' . $id . '"><i data-feather="menu"></i></button>
   <nav class="__drawer" id="drawer_' . $id . '" role="navigation">
-    <div class="hidden--up@lg">
+    <div class="w--100 d--flex justify--between hidden--up@d">
       <a class="__logo" href="' . $url .'">
         <img class="__logo__image" alt="Logo" src="/docs/images/logo-white.png">
       </a>
@@ -54,7 +54,7 @@ function masthead($id, $masthead_classes, $banner_classes)
     </ul>
   </nav>
 </header>
-<div class="section --lg --middle +bgimg ta--c ' . $banner_classes . '">
+<div class="section banner --hero bg--img ta--c justify--center ' . $banner_classes . '">
   <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>';
 }

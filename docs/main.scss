@@ -283,7 +283,6 @@ html { background-color: #333; }
 //
 // Grid demonstration styles
 .k_grid {
-
   .col-content {
     overflow: hidden;
     background: #309aa8;
@@ -334,18 +333,6 @@ html { background-color: #333; }
   .row {
     background-size: 100% 100%;
     background-repeat: none;
-  }
-
-  &.k_4-lines .row {
-    background-image: url(../../docs/images/grid-line-4.png);
-  }
-
-  &.k_6-lines .row {
-    background-image: url(../../docs/images/grid-line-6.png);
-  }
-
-  &.k_10-lines .row {
-    background-image: url(../../docs/images/grid-line-10.png);
   }
 }
 
@@ -475,7 +462,7 @@ $black-alpha: rgba(0, 0, 0, 0.7);
   }
 
   .hex-color {
-    font-family: "Roboto Mono", "Consolas", "Monaco", "Courier New", monospace;
+    font-family: "Source Code Pro", monospace;
     font-weight: 300;
   }
 }

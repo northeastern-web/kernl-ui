@@ -47,7 +47,7 @@
 }
 
 // Masthead
-@mixin make-masthead($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
+/* @mixin make-masthead($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
@@ -84,12 +84,12 @@
       }
     }
   }
-}
+} */
 
 // Mega menu
 // give megamenu same spacing as masthead;
 // same as make-row, but with padding and full gutter width
-@mixin make-megamenu($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
+/* @mixin make-megamenu($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
@@ -114,7 +114,7 @@
       }
     }
   }
-}
+} */
 
 
 //

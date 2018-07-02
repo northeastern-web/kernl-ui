@@ -13,7 +13,14 @@
 }
 
 @each $name, $value in $widths {
-  .w--#{$name} { width: $value; }
+  @if($name == 'auto') {
+    .w--auto {
+      width: auto;
+      max-width: 100%;
+    }
+  } @else {
+    .w--#{$name} { width: $value; }
+  }
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {

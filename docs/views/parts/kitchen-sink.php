@@ -1,7 +1,9 @@
-<section class="section">
-  <header class="k_section__header mx--1">Kitchen Sink</header>
+<div class="main">
+  <header class="k_section__header">
+    <div class="section pb--0">Kitchen Sink</div>
+  </header>
   <!-- HTML5 Kitchen sink by @dbox -->
-    <section class="section pa--1">
+    <section class="section">
       <hgroup>
         <h1>h1 HTML5 Kitchen Sink</h1>
         <h2>h2 Back in my quaint <a href='#'>garden</a></h2>
@@ -11,6 +13,7 @@
         <h6>h6 Pack my box with five dozen liquor jugs.</h6>
       </hgroup>
     </section>
+
     <hr>
 
     <section class="section ff--mono fs--xs">
@@ -196,14 +199,15 @@
 
     </section>
     <hr />
-
+<section class="section">
     <figure>
       <img src="https://www.fillmurray.com/505/314">
       <figcaption>Fig1. A picture of Bill Murray from <a href="https://www.fillmurray.com/">fillmurray.com</a></figcaption>
     </figure>
+  </section>
 
     <hr>
-    <section>
+    <section class="section">
 
       <form>
         <p>
@@ -326,4 +330,4 @@
     </section>
 
   <!-- end kitchen sink -->
-</section>
+</div>

@@ -125,14 +125,14 @@
       <form action="" method="">
         <h4 class="fw--700 fs--d2">Enclosures</h4>
         <p class="fs--sm"><i>Add <code>.--enclosed</code> to the <code>.frm__group</code> wrapper to make the appearance of a self-contained input and button.</i></p>
-        <div class="frm__enclosed --search mb--3@md">
+        <div class="frm__enclosed --search mb--3@t">
           <label class="sr--only">Search</label>
           <input type="text" placeholder="Search (.--enclosed)">
           <button type="submit" class="btn btn--primary">Go</button>
         </div>
 
         <p class="fs--sm"><i>Add <code>.--line</code> to the <code>.frm__group.--enclosed</code> wrapper to remove the background and outline and add a simple border along the bottom.</i></p>
-        <div class="frm__enclosed --line mb--3@md">
+        <div class="frm__enclosed --line mb--3@t">
           <label class="sr--only">Search</label>
           <input type="text" placeholder="Search (.--enclosed.--line)">
           <button type="submit" class="btn --primary">Go</button>
@@ -146,7 +146,7 @@
   <div class="row">
     <div class="col --12@xs --8@lg --2-offset@lg">
       <form action="" method="">
-        <div class="frm__enclosed --search --dark --line mb--3@md">
+        <div class="frm__enclosed --search --dark --line mb--3@t">
           <label class="sr--only">Search</label>
           <input type="text" placeholder="Search (.--enclosed.--dark.--line)">
           <button type="submit" class="btn --primary">Go</button>
