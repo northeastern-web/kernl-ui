@@ -5,7 +5,10 @@
 
 
 .bw--0,
-.bwa--0 { border-width: 0; }
+.bwa--0 {
+  border-width: 0;
+  td, th { border-width: 0 0 1px; }
+}
 .bwt--0 { border-top-width: 0; }
 .bwr--0 { border-right-width: 0; }
 .bwb--0 { border-bottom-width: 0; }

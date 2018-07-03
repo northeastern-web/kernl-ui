@@ -424,7 +424,7 @@
   <header class="k_section__header">Basic Table</header>
   <div class="row">
     <div class="col --12@xs">
-      <table class="table +th--sm">
+      <table class="">
         <thead>
           <tr>
             <th width="20%">Dolor Vestibulum</th>
@@ -434,17 +434,17 @@
         </thead>
         <tbody>
           <tr>
-            <th>Ultricies Justo</th>
+            <td>Ultricies Justo</td>
             <td>Aenean lacinia bibendum nulla sed consectetur.</td>
             <td>Cras mattis consectetur purus sit amet fermentum.</td>
           </tr>
           <tr>
-            <th>Lorem Nullam</th>
+            <td>Lorem Nullam</td>
             <td>Donec ullamcorper nulla non metus auctor fringilla.</td>
             <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
           </tr>
           <tr>
-            <th>Adipiscing Condimentum</th>
+            <td>Adipiscing Condimentum</td>
             <td>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</td>
             <td>Curabitur blandit tempus porttitor.</td>
           </tr>
@@ -455,10 +455,10 @@
 </section>
 
 <section class="section">
-  <header class="k_section__header">With Vertical Borders</header>
+  <header class="k_section__header">With No Borders</header>
   <div class="row">
     <div class="col --12@xs">
-      <table class="table --border">
+      <table class="bw--0">
         <thead>
           <tr>
             <th width="20%">Dolor Vestibulum</th>
