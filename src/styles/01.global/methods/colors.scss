@@ -33,15 +33,11 @@
 
 @mixin border_variant($color, $hover_color, $text_color: $type-color) {
   border: 1px solid rgba($color, 0.5);
-  color: $color;
 
   &.btn,
   .__link,
   &.__footer__link {
     color: $color;
-    transition:
-      background-color 0.15s ease,
-      color 0.15s ease;
 
     @include hover_focus_active {
       background-color: $hover_color !important;
