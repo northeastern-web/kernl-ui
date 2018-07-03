@@ -2,5 +2,96 @@
 // Modals
 //
 
+.modal {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 400;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-.modal {}
+  &.\--active {
+    display: flex;
+  }
+
+  .__content {
+    position: relative;
+    display: flex;
+    width: auto;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 450px;
+    max-height: 96vh;
+    overflow-y: scroll;
+    z-index: 50;
+    flex-direction: column;
+    flex: 0 1 auto;
+
+    @include mqbp-up(t) {
+      max-width: 760px;
+    }
+  }
+
+  &.\--sm {
+    .__content {
+      @include mqbp-up(t) {
+        max-width: 400px;
+      }
+    }
+  }
+
+  &.\--lg {
+    .__content {
+      @include mqbp-up(d) {
+        max-width: 992px;
+      }
+    }
+  }
+
+  &.\--xl {
+    .__content {
+      @include mqbp-up(t) {
+        max-width: 96%;
+        height: 100%;
+      }
+    }
+  }
+
+  .__screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .__close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    background: 0 none;
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .85;
+    transition: opacity 0.2s ease;
+    z-index: 60;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+      outline: none;
+    }
+  }
+}
