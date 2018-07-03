@@ -84,8 +84,8 @@
       <form action="" method="">
         <fieldset>
           <legend class="fw--700 fs--d2">Radio Buttons and Checkboxes</legend>
-            <p class="fs--sm"><i>Wrap these elements in <code>.frm__check</code>.</i></p>
-            <div class="frm__check bg--gray-50 bc--gray-200 pa--1 mb--1">
+            <p class="fs--sm"><i>Wrap these elements in <code>.form__check</code>.</i></p>
+            <div class="form__check bg--gray-50 bc--gray-200 pa--1 mb--1">
               <label>
                 <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
                 Option one is this and that&mdash;be sure to include why it's great
@@ -104,8 +104,8 @@
               </label>
             </div>
 
-            <p class="fs--sm"><i>Wrap in <code>.frm__check.--inline</code> to the chain to get them on the same line.</i></p>
-            <div class="frm__check --inline bg--gray-50 bc--gray-200 pa--1">
+            <p class="fs--sm"><i>Wrap in <code>.form__check.--inline</code> to the chain to get them on the same line.</i></p>
+            <div class="form__check --inline bg--gray-50 bc--gray-200 pa--1">
               <label>
                 <input type="checkbox"> Check me out
               </label>
@@ -124,15 +124,15 @@
     <div class="col --12@xs --8@lg --2-offset@lg">
       <form action="" method="">
         <h4 class="fw--700 fs--d2">Enclosures</h4>
-        <p class="fs--sm"><i>Add <code>.--enclosed</code> to the <code>.frm__group</code> wrapper to make the appearance of a self-contained input and button.</i></p>
-        <div class="frm__enclosed --search mb--3@t">
+        <p class="fs--sm"><i>Add the <code>.form__enclosed</code> wrapper to make the appearance of a self-contained input and button.</i></p>
+        <div class="form__enclosed --search mb--3@t">
           <label class="sr--only">Search</label>
           <input type="text" placeholder="Search (.--enclosed)">
           <button type="submit" class="btn btn--primary">Go</button>
         </div>
 
-        <p class="fs--sm"><i>Add <code>.--line</code> to the <code>.frm__group.--enclosed</code> wrapper to remove the background and outline and add a simple border along the bottom.</i></p>
-        <div class="frm__enclosed --line mb--3@t">
+        <p class="fs--sm"><i>Add <code>.--line</code> to the <code>.form__enclosed</code> wrapper to remove the background and outline and add a simple border along the bottom.</i></p>
+        <div class="form__enclosed --line mb--3@t">
           <label class="sr--only">Search</label>
           <input type="text" placeholder="Search (.--enclosed.--line)">
           <button type="submit" class="btn --primary">Go</button>
@@ -146,10 +146,10 @@
   <div class="row">
     <div class="col --12@xs --8@lg --2-offset@lg">
       <form action="" method="">
-        <div class="frm__enclosed --search --dark --line mb--3@t">
+        <div class="form__enclosed --search --dark --line mb--3@t">
           <label class="sr--only">Search</label>
-          <input type="text" placeholder="Search (.--enclosed.--dark.--line)">
-          <button type="submit" class="btn --primary">Go</button>
+          <input type="text" placeholder="Search">
+          <button type="submit" class="btn">Go</button>
         </div>
       </form>
     </div>
