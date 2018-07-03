@@ -22,7 +22,10 @@
 .bwl--1 { border-left-width: 1px; }
 
 .bw--2,
-.bwa--2 { border-width: 2px; }
+.bwa--2 {
+  border-width: 2px;
+  td, th { border-width: 2px; }
+}
 .bwt--2 { border-top-width: 2px; }
 .bwr--2 { border-right-width: 2px; }
 .bwb--2 { border-bottom-width: 2px; }

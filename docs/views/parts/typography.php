@@ -18,7 +18,7 @@
         <li>18px base font-size (<code>xx</code>)</li>
       </ul>
       <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-      <section class="section +bgimg mb--1@xs pa--1@xs pa--1h@xl">
+      <section class="section +bgimg mb--1@xs pa--2">
         <p class="mb--0@xs"><b>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> in a nested banner.</b> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       </section>
       <p class="fs--sm">This a little note set at <code>fs--sm</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.88rem)</span>.</p>
@@ -147,7 +147,7 @@
 <section class="section bg--gray-800">
   <div class="row">
     <div class="col --12@xs --10@md --1-offset@md --8@lg --2-offset@lg">
-      <section class="section pa--1@xs pa--2@md mb--2@md bg--white tc--gray-800 shadow">
+      <section class="section pa--2 mb--2@d bg--white tc--gray-800 shadow">
         <!-- sample of dense text -->
         <h2>Tenure and Tenure-Track Faculty</h2>
         <p>Dismissal of a Tenure-Track Faculty whose term appointment has not expired or a Tenured faculty member is the most severe sanction which the University may impose. An administrative officer who intends to request that dismissal proceedings begin should do so only when there is clear evidence to show adequate cause (see Section I.A.2) for dismissal. Except in an unusually serious or sudden case of gross personal misconduct (including sexual harassment), gross neglect of duty, or unfitness in one’s professional capacity, a request for dismissal proceedings should come forth only after a history of prior formal disciplinary action has been established.</p>
