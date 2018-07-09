@@ -6,6 +6,7 @@ import './components/mastheads'
 import './components/loader'
 import './components/modal'
 import './components/navs'
+import './components/reveal'
 import './components/sharing'
 
 // Feather icons
