@@ -13,9 +13,7 @@
     color: $text_color;
   }
 
-  &.btn,
-  .__link,
-  &.__footer__link {
+  &.btn {
     border-color: transparent;
     @if ($text_color) {
       color: $text_color !important;
@@ -34,9 +32,7 @@
 @mixin border_variant($color, $hover_color, $text_color: $type-color) {
   border: 1px solid rgba($color, 0.5);
 
-  &.btn,
-  .__link,
-  &.__footer__link {
+  &.btn {
     color: $color;
 
     @include hover_focus_active {
