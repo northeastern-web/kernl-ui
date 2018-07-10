@@ -265,7 +265,7 @@
   <section class="section">
     <header class="k_section__header">Grid, Banners, Nesting, Fancy Options and Tweaks</header>
   </section>
-  <section class="section ">
+  <section class="section bg--gray-100">
     <h3 class="non-col-element text-style-block">Section <small>(with --bg-color option)</small></h3>
     <div class="row">
       <div class="col w--2/3@t">
@@ -284,8 +284,8 @@
           </div>
         </section>
       </div>
-      <div class="col w--1/3@t">
-        <div class="col-content">1/3 (+middle on row)</div>
+      <div class="col w--1/3@t align-self--center">
+        <div class="col-content">1/3 (align-self--center)</div>
       </div>
     </div>
     <div class="row">
@@ -311,7 +311,7 @@
         </div>
       </div>
       <div class="col w--1/4@t">
-        <div class="col-content h--100">3 (+equal on element sets height to match heighest element in a row)</div>
+        <div class="col-content h--100">1/4 (h--100 on element sets height to match heighest element in a row)</div>
       </div>
     </div>
   </section>

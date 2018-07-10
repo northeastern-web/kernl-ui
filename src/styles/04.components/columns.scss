@@ -16,15 +16,11 @@
 // Columns
 //
 // Common styles for small and large grid columns
-
 .col {
-  @extend %grid-column;
+  @include make-gutters();
   display: block;
   flex: none;
   width: 100%;
   padding: 0 0.5rem;
   margin-bottom: 1rem;
 }
-
-// Create columns
-@include make-grid-columns();

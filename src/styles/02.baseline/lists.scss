@@ -45,7 +45,3 @@ dl { @extend .row; }
 
 dt,
 dd { @extend .col; }
-
-dt { @include make-col(1,4); }
-
-dd { @include make-col(3,4); }

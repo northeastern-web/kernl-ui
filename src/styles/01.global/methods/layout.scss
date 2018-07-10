@@ -26,44 +26,6 @@
   @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$name}");
 }
 
-
-@mixin make-grid-columns($columns: $grid-columns, $gutters: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
-  // Common properties for all breakpoints
-  %grid-column {
-    @include make-gutters($gutters);
-  }
-
-  @each $breakpoint in map-keys($breakpoints) {
-    $infix: _breakpoint-infix($breakpoint, $breakpoints);
-    $i: 0;
-
-    @include mqbp-up($breakpoint, $breakpoints) {
-      @for $i from 1 through $columns {
-        .#{$col-prefix}-#{$i}\@#{$infix} {
-          @include make-col($i, $columns);
-        }
-      }
-
-      @each $modifier in (pull, push, order) {
-        @for $i from 0 through $columns {
-          .#{$col-prefix}-#{$i}-#{$modifier}\@#{$infix} {
-            @include make-col-modifier($modifier, $i, $columns)
-          }
-        }
-      }
-
-      // `$columns - 1` because offsetting by the width of an entire row isn't possible
-      @for $i from 0 through ($columns - 1) {
-        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .--offset-0@xs
-          .#{$col-prefix}-#{$i}-offset\@#{$infix} {
-            @include make-col-modifier(offset, $i, $columns)
-          }
-        }
-      }
-    }
-  }
-}
-
 @mixin make-section($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
@@ -109,33 +71,5 @@
       margin-right: ($gutter / -2);
       margin-left:  ($gutter / -2);
     }
-  }
-}
-
-@mixin make-col($size, $columns: $grid-columns) {
-  flex-basis: percentage($size / $columns);
-  max-width: percentage($size / $columns);
-}
-
-@mixin make-col-offset($size, $columns: $grid-columns) {
-  margin-left: percentage($size / $columns);
-}
-
-@mixin make-col-push($size, $columns: $grid-columns) {
-  left: if($size > 0, percentage($size / $columns), auto);
-}
-
-@mixin make-col-pull($size, $columns: $grid-columns) {
-  right: if($size > 0, percentage($size / $columns), auto);
-}
-
-@mixin make-col-modifier($type, $size, $columns) {
-  // Work around the lack of dynamic mixin @include support (https://github.com/sass/sass/issues/626)
-  @if $type == push {
-    @include make-col-push($size, $columns);
-  } @else if $type == pull {
-    @include make-col-pull($size, $columns);
-  } @else if $type == offset {
-    @include make-col-offset($size, $columns);
   }
 }
