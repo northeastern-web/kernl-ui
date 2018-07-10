@@ -3,7 +3,118 @@
 //
 // .card
 
+.card {
+  @include type-sm();
+  width: 100%;
+  height: 100%;
+  background: $white;
+  position: relative;
+  overflow: hidden;
 
+  .__link {
+    color: inherit;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  //
+  // Body
+  .__body {
+    @include component-padding();
+    font-size: 100%;
+    flex: 1 0 auto;
+
+    p {
+      font-size: inherit;
+      line-height: inherit;
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  //
+  // Titles within .__body
+  .__title {
+    line-height: 1.25;
+    font-weight: 900;
+    font-size: 118%;
+  }
+
+  .__pretitle { margin-bottom: 0.2rem; }
+
+  .__subtitle { font-size: 110%; }
+
+  //
+  // Graphics
+  .__graphic {
+    @extend .ar;
+    @extend .\--16x9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .__graphic__img {
+    @extend .ar--object;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  //
+  // Modifiers
+
+  // Horizontal Orientation
+  &.\--h {
+    .__link { flex-direction: row; }
+
+    .__graphic,
+    .__body { width: 50%; }
+/* 
+    @include mqbp_down(t) {
+      .__graphic {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden
+      }
+
+      .__graphic__img {
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    } 
+*/
+  }
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include mqbp-up($breakpoint) {
+      &.\--h\@#{$breakpoint} {
+        .__link { flex-direction: row; }
+
+        .__graphic,
+        .__body { width: 50%; }
+      }
+    }
+  }
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include mqbp-up($breakpoint) {
+      &.\--v\@#{$breakpoint} {
+        .__link { flex-direction: column; }
+
+        .__graphic,
+        .__body { width: 100%; }
+      }
+    }
+  }
+}
+
+/* 
 .card {
   @include card_variant();
   @include type-sm();
@@ -94,30 +205,6 @@
   }
 
 
-  //
-  // Body
-  .__body {
-    padding: 1rem 1rem 3rem;
-    font-size: 100%;
-
-    p {
-      font-size: inherit;
-      line-height: inherit;
-      &:last-child { margin-bottom: 0; }
-    }
-  }
-
-  //
-  // Titles within .__body
-  .__title {
-    line-height: 1.25;
-    font-weight: 900;
-    font-size: 118%;
-  }
-
-  .__pretitle { margin-bottom: 0.2rem; }
-
-  .__subtitle { font-size: 110%; }
 
   //
   // Icon
@@ -482,3 +569,4 @@
     .__graphic__img { height: 115% !important; }
   }
 }
+ */

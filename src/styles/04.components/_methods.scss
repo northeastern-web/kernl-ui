@@ -2,6 +2,31 @@
 // Variables
 //
 
+// set component padding to complement grid gutter spacing
+@mixin component-padding($y-multiple: 1, $x-multiple: 1, $margin-bottom: 1, $gutters: $grid-gutter-widths) {
+  padding: 1rem;
+  @each $breakpoint in map-keys($gutters) {
+    @include mqbp-up($breakpoint) {
+      $gutter: map-get($gutters, $breakpoint);
+
+      @if ($y-multiple == $x-multiple) {
+        padding: ($gutter * $y-multiple);
+      } @else {
+        padding: ($gutter * $y-multiple) ($gutter * $x-multiple);
+      }
+    }
+  }
+}
+
+// set component margin-bottom to complement grid gutter spacing
+@mixin component-margin($margin-bottom: 1, $gutters: $grid-gutter-widths) {
+  @each $breakpoint in map-keys($gutters) {
+    @include mqbp-up($breakpoint) {
+      $gutter: map-get($gutters, $breakpoint);
+      margin-bottom: ($gutter * $margin-bottom);
+    }
+  }
+}
 
 // Accordions
 @mixin accordion_variant($color: $type-color, $trigger: rgba(0,0,0,0.05), $background: transparent) {
@@ -121,7 +146,7 @@
 // Card mixins
 
 // Card Variant
-@mixin card_variant($color: $type-color, $background: rgba(255, 255, 255, 1)) {
+/* @mixin card_variant($color: $type-color, $background: rgba(255, 255, 255, 1)) {
   color: $color;
   background: $background;
   border-color: $background;
@@ -131,7 +156,7 @@
   .list-group .__item { border-color: darken($background, 20%); }
 
   .__footer { background: $background; }
-}
+} */
 
 // set image and text side by side
 @mixin card_horizontal($width_graphic: 100%, $width_text: auto) {

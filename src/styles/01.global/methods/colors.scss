@@ -5,15 +5,13 @@
 
 @mixin bg_variant($color, $hover_color, $text_color: null) {
   background-color: $color !important;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
 
   @if ($text_color) {
     color: $text_color;
   }
 
-  &.btn {
+  &.btn,
+  &.card .__link {
     border-color: transparent;
     @if ($text_color) {
       color: $text_color !important;
@@ -32,7 +30,8 @@
 @mixin border_variant($color, $hover_color, $text_color: $type-color) {
   border: 1px solid rgba($color, 0.5);
 
-  &.btn {
+  &.btn,
+  &.card .__link {
     color: $color;
 
     @include hover_focus_active {
@@ -51,7 +50,7 @@
 
 @mixin get_component($component, $color, $color_hover, $color_grade: false, $color_text: null) {
   @if $component == 'bg' { @include bg_variant($color, $color_hover, $color_text); }
-  @if $component == 'bc' { @include border_variant($color, $color_hover, $color_text); }
+  @if $component == 'bc' { @include border_variant($color, $color_hover); }
   @if $component == 'tc' { @include text_variant($color); }
 }
 

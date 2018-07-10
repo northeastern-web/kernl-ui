@@ -27,7 +27,7 @@
   @include mqbp-up($breakpoint) {
     @each $name, $value in $widths {
       .w--#{$name}\@#{$breakpoint} { width: $value; }
-      .ow--#{$name}\@#{$breakpoint} { margin-left: $value; } //offset
+      .ow--#{$name}\@#{$breakpoint} { margin-left: $value; } // offset
     }
 
     .w--fit\@#{$breakpoint} {
