@@ -11,16 +11,12 @@ table {
   border-width: 1px;
   border-style: solid;
   border-color: $gray-200;
+  display: block;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 
   &.\--striped tr:nth-child(even) {
     background-color: $gray-100;
-  }
-
-  &.\--responsive {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }
 
