@@ -6,15 +6,11 @@ $colors = [
   ['orange','Orange'],
   ['yellow','Yellow'],
   ['green','Green'],
-  ['green-light','Light Green'],
   ['teal','Teal'],
-  ['teal-light','Light Teal'],
   ['blue-dark','Dark Blue'],
   ['blue','Blue'],
-  ['blue-light','Light Blue'],
   ['purple','Purple'],
   ['beige','Beige'],
-  ['beige-light','Light Beige'],
   ['white','White']
 ];
 
@@ -88,18 +84,6 @@ $l = 0;
       <div class="bg--green"><span class="hex-color">#aebf37</span> Green</div>
     </div>
   </div>
-  <!-- Light Blue, Light Teal, Light Green -->
-  <div class="row color-cell">
-    <div class="col w--1/3@t">
-      <div class="bg--blue-light"><span class="hex-color">#bbd1ec</span> Light Blue <span class="fw--n">**</span></div>
-    </div>
-    <div class="col w--1/3@t">
-      <div class="bg--teal-light"><span class="hex-color">#aed7db</span> Light Teal <span class="fw--n">*</span></div>
-    </div>
-    <div class="col w--1/3@t">
-      <div class="bg--green-light"><span class="hex-color">#d5e48e</span> Light Green <span class="fw--n">**</span></div>
-    </div>
-  </div>
   <!-- Purple, Orange, Yellow  -->
   <div class="row color-cell">
     <div class="col w--1/3@t">
@@ -114,17 +98,11 @@ $l = 0;
   </div>
   <!-- Grays -->
   <div class="row color-cell">
-    <div class="col w--1/4@t">
-      <div class="bg--gray"><span class="hex-color">#58595b</span> Gray <span class="fw--n">*</span></div>
+    <div class="col w--1/2@t">
+      <div class="bg--gray"><span class="hex-color">#979797</span> Gray <span class="fw--n">*</span></div>
     </div>
-    <div class="col w--1/4@t">
-      <div class="bg--gray-light"><span class="hex-color">#7b7778</span> Light Gray</div>
-    </div>
-    <div class="col w--1/4@t">
-      <div class="bg--beige"><span class="hex-color">#ebe4d4</span> Beige</div>
-    </div>
-    <div class="col w--1/4@t">
-      <div class="bg--beige-light"><span class="hex-color">#f5f4f0</span> Light Beige</div>
+    <div class="col w--1/2@t">
+      <div class="bg--beige"><span class="hex-color">#ece6d5</span> Beige</div>
     </div>
   </div>
   <!-- Neutral Grays -->
@@ -148,7 +126,7 @@ $l = 0;
       <div class="bg--gray-500"><span class="hex-color">#777777</span><br>Gray 500</div>
     </div>
     <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-400"><span class="hex-color">#969696</span><br>Gray 400</div>
+      <div class="bg--gray-400"><span class="hex-color">#979797</span><br>Gray 400</div>
     </div>
     <div class="col w--1/3 w--10@d">
       <div class="bg--gray-300"><span class="hex-color">#b5b5b5</span><br>Gray 300</div>

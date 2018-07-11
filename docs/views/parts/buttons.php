@@ -1,70 +1,75 @@
 <section class="section ta--c">
   <header class="k_section__header ta--l">Buttons on White</header>
   <div class="row">
-    <div class="col w--1/3@t">
+    <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">Base Buttons</p>
-      <p><a class="btn --sm br--pill" data-component="button" href="#">Button Pill sm</a></p>
+      <p><a class="btn --sm" data-component="button" href="#">Base Small</a></p>
       <p><a class="btn" data-component="button" href="#">Base Button</a></p>
     </div>
-    <div class="col w--1/3@t">
-      <p class="text-style-block">(Semi) Transparent</p>
-      <p><a class="btn bg--black-alpha --sm" data-component="button" href="#">Transparent sm</a></p>
-      <p><a class="btn bg--black-alpha br--pill" data-component="button" href="#">Pill Transparent</a></p>
+    <div class="col w--1/2@t w--1/4@d">
+      <p class="text-style-block">White Buttons (on white)</p>
+      <p><a class="btn bg--white --sm" data-component="button" href="#">White Small</a></p>
+      <p><a class="btn bg--white" data-component="button" href="#">White Button</a></p>
     </div>
-    <div class="col w--1/3@t">
-      <p class="text-style-block">Dark Buttons</p>
-      <p><a class="btn bg--black --sm" data-component="button" href="#">Dark sm</a></p>
-      <p><a class="btn bg--black br--pill" data-component="button" href="#">Pill Dark</a></p>
+    <div class="col w--1/2@t w--1/4@d">
+      <p class="text-style-block">Black Buttons</p>
+      <p><a class="btn bg--black --sm" data-component="button" href="#">Black Small</a></p>
+      <p><a class="btn bg--black" data-component="button" href="#">Black Pill</a></p>
+    </div>
+    <div class="col w--1/2@t w--1/4@d">
+      <p class="text-style-block">Black Alpha Buttons</p>
+      <p><a class="btn bg--black-alpha br--pill --sm" data-component="button" href="#">Black Alpha Pill Small</a></p>
+      <p><a class="btn bg--black-alpha br--pill" data-component="button" href="#">Black Alpha Pill</a></p>
     </div>
   </div>
 </section>
-<section class="section ta--c k_bg-dark">
+<section class="section ta--c bg--blue-dark">
   <header class="k_section__header ta--l">Buttons on Dark</header>
   <div class="row">
     <div class="col w--1/2@t w--1/4@d">
-      <p class="text-style-block">Base Buttons</p>
-      <p><a class="btn --sm br--pill bg--white" data-component="button" href="#">Button Pill sm</a></p>
-      <p><a class="btn" data-component="button" href="#">Base Button</a></p>
-    </div>
-    <div class="col w--1/2@t w--1/4@d">
-      <p class="text-style-block">(Semi) Transparent</p>
-      <p><a class="btn bg--black-alpha --sm" data-component="button" href="#">Transparent sm</a></p>
-      <p><a class="btn bg--black-alpha br--pill" data-component="button" href="#">Pill Transparent</a></p>
-    </div>
-    <div class="col w--1/2@t w--1/4@d">
-      <p class="text-style-block">(Semi) Transparent Light</p>
-      <p><a class="btn bg--white-alpha --sm" data-component="button" href="#">Transparent Light sm</a></p>
-      <p><a class="btn bg--white-alpha br--pill" data-component="button" href="#">Pill Transparent Light</a></p>
+      <p class="text-style-block">White Bkgd Buttons</p>
+      <p><a class="btn --sm br--pill bg--white" data-component="button" href="#">White Button Small</a></p>
+      <p><a class="btn bg--white" data-component="button" href="#">White Button</a></p>
     </div>
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">White Border Buttons</p>
-      <p><a class="btn bc--white --sm" data-component="button" href="#">White Border sm</a></p>
-      <p><a class="btn bc--white br--pill" data-component="button" href="#">Pill White Border</a></p>
+      <p><a class="btn bc--white --sm" data-component="button" href="#">White Border Small</a></p>
+      <p><a class="btn bc--white" data-component="button" href="#">White Border</a></p>
+    </div>
+    <div class="col w--1/2@t w--1/4@d">
+      <p class="text-style-block">(Semi) Transparent</p>
+      <p><a class="btn bg--black-alpha --sm" data-component="button" href="#">White Alpha Small</a></p>
+      <p><a class="btn bg--black-alpha" data-component="button" href="#">White Alpha Small</a></p>
+    </div>
+    <div class="col w--1/2@t w--1/4@d">
+      <p class="text-style-block">(Semi) Transparent Light</p>
+      <p><a class="btn bg--white-alpha br--pill --sm" data-component="button" href="#">White Alpha Pill Small</a></p>
+      <p><a class="btn bg--white-alpha br--pill" data-component="button" href="#">White Alpha Pill</a></p>
     </div>
   </div>
 </section>
-<section class="section ta--c">
+<section class="section bg--gray-100 ta--c --nogutters">
   <header class="k_section__header ta--l">Buttons in Color</header>
   <div class="row">
-    <div class="col w--1/4@t">
+    <div class="col w--1/4@t pt--2 pb--1">
       <p><a class="btn bg--gray-500" data-component="button" href="#">Gray-500 Button</a></p>
       <p><a class="btn bc--gray-500" data-component="button" href="#">Gray-500 Button Border</a></p>
     </div>
-    <div class="col w--1/4@t">
+    <div class="col w--1/4@t pt--2 pb--1">
       <p><a class="btn bg--red" data-component="button" href="#">Red Button</a></p>
       <p><a class="btn bc--red" data-component="button" href="#">Red Button Border</a></p>
     </div>
-    <div class="col w--1/4@t">
+    <div class="col w--1/4@t pt--2 pb--1 bg--black">
       <p><a class="btn bg--yellow" data-component="button" href="#">Yellow Button</a></p>
       <p><a class="btn bc--yellow" data-component="button" href="#">Yellow Button Border</a></p>
     </div>
-    <div class="col w--1/4@t">
-      <p><a class="btn bg--black" data-component="button" href="#">Black Button</a></p>
-      <p><a class="btn bc--black" data-component="button" href="#">Black Button Border</a></p>
+    <div class="col w--1/4@t pt--2 pb--1 bg--black">
+      <p><a class="btn bg--beige" data-component="button" href="#">Beige Button</a></p>
+      <p><a class="btn bc--beige" data-component="button" href="#">Beige Button Border</a></p>
     </div>
   </div>
 </section>
-<section class="section k_bg-light">
+<section class="section">
   <header class="k_section__header">Button Goodies</header>
   <div class="row">
     <div class="col w--1/2@t">
@@ -116,7 +121,7 @@
       </p>
       <p>
       <a class="btn" data-component="button" href="#">
-        <i data-feather="headphones"></i>
+        <i class="--lg --thin" data-feather="headphones"></i>
         Hear Me Now and<br>
         Listen to Me Later
       </a>
