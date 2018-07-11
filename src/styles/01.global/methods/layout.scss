@@ -3,7 +3,7 @@
 //
 
 
-@mixin make-section($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
+@mixin make-section($container: "default", $gutters: $gutters, $contain: $contain-width) {
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
@@ -30,7 +30,7 @@
   }
 }
 
-@mixin make-gutters($gutters: $grid-gutter-widths) {
+@mixin make-gutters($gutters: $gutters) {
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
@@ -41,7 +41,7 @@
   }
 }
 
-@mixin make-row($gutters: $grid-gutter-widths) {
+@mixin make-row($gutters: $gutters) {
   margin-right: -0.5rem;
   margin-left: -0.5rem;
 

@@ -30,21 +30,21 @@ $widths: (
 // Columns
 $col-prefix: '\\-' !default;
 
-$grid-gutter-width-base: 1rem !default;
-$grid-gutter-width-t: 30px !default;
-$grid-gutter-width-w: 36px !default;
-
 // padding-l/r for 'body.--contain'
-$contain-width: 10%;
+$contain-width: 10% !default;
 
 // Gutter widths
-$grid-gutter-widths: (
-  t: $grid-gutter-width-t,
-  w: $grid-gutter-width-w
+$gutter-base: 1rem !default;
+$gutter-t: 30px !default;
+$gutter-w: 36px !default;
+
+$gutters: (
+  t: $gutter-t,
+  w: $gutter-w
 ) !default;
 
 // Breakpoints
-$grid-breakpoints: (
+$breakpoints: (
   t: 720px,
   d: 992px,
   w: 1280px

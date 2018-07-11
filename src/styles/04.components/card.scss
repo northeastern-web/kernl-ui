@@ -72,7 +72,7 @@
 
     .__graphic,
     .__body { width: 50%; }
-/* 
+/*
     @include mqbp_down(t) {
       .__graphic {
           display: flex;
@@ -87,11 +87,11 @@
         min-height: 100%;
         object-fit: cover;
       }
-    } 
+    }
 */
   }
 
-  @each $breakpoint in map-keys($grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
     @include mqbp-up($breakpoint) {
       &.\--h\@#{$breakpoint} {
         .__link { flex-direction: row; }
@@ -102,7 +102,7 @@
     }
   }
 
-  @each $breakpoint in map-keys($grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
     @include mqbp-up($breakpoint) {
       &.\--v\@#{$breakpoint} {
         .__link { flex-direction: column; }
@@ -114,7 +114,7 @@
   }
 }
 
-/* 
+/*
 .card {
   @include card_variant();
   @include type-sm();

@@ -33,7 +33,7 @@ $size: 0;
     padding-bottom: #{($size+.5)}rem !important;
   }
 
-  @each $breakpoint in map-keys($grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
     @include mqbp-up($breakpoint) {
       .pa--#{$size}\@#{$breakpoint}   { padding: #{$size}rem !important; }
       .pa--#{$size}h\@#{$breakpoint}  { padding: #{($size+.5)}rem !important; }
