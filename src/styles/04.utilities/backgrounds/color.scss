@@ -10,9 +10,3 @@
   background: none !important;
   background-color: transparent !important;
 }
-
-// Set default .bg--<color> to blend appropriately
-// with its background instead of a neutral gray.
-// Declared once here, overwritten by $color-text
-// argument in palette generator mixin.
-[class^="bg--"] { color: rgba($black, 0.75); }

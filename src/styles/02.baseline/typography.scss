@@ -64,9 +64,6 @@ a {
   text-decoration: none;
   color: $type-link;
 
-  &:hover { color: darken($type-link, 20%); }
-  &:focus {}
-
   &:active,
   &:hover { outline-width: 0; }
 }

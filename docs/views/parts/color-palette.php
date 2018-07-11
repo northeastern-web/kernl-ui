@@ -32,13 +32,13 @@ $l = 0;
     <div class="col w--1/2@t">
       <nav class="nav --tabbed k_color-nav">
         <ul class="__list" role="tablist">
-          <?php foreach($colors as $color) : ?>
+          <?php foreach ($colors as $color) : ?>
             <li class="__item">
               <a class="__link<?= $i == 0 ? ' --active' : ''; ?> bg--<?= $color[0]; ?>" data-toggle="tab" href="#tab_<?= $color[0]; ?>_1" role="tab" aria-expanded="<?= $i == 0 ? 'true' : 'false'; ?>"><?= $color[1]; ?></a>
             </li>
           <?php $i++; endforeach; ?>
         </ul>
-        <?php foreach($colors as $color) : ?>
+        <?php foreach ($colors as $color) : ?>
       </nav>
       <div class="hidden pt--1<?= $j == 0 ? ' --active' :  ''; ?>" id="tab_<?= $color[0]; ?>_1" role="tabpanel">
           <?= colorPalette($color[0], $color[1]); ?>
@@ -49,13 +49,13 @@ $l = 0;
     <div class="col w--1/2@t">
       <nav class="nav --tabbed k_color-nav">
         <ul class="__list" role="tablist">
-          <?php foreach($colors as $color) : ?>
+          <?php foreach ($colors as $color) : ?>
             <li class="__item">
               <a class="__link<?= $k == 1 ? ' --active' : ''; ?> bg--<?= $color[0]; ?>" data-toggle="tab" href="#tab_<?= $color[0]; ?>_2" role="tab" aria-expanded="<?= $k == 1 ? 'true' : 'false'; ?>"><?= $color[1]; ?></a>
             </li>
           <?php $k++; endforeach; ?>
         </ul>
-        <?php foreach($colors as $color) : ?>
+        <?php foreach ($colors as $color) : ?>
       </nav>
       <div class="hidden pt--1<?= $l == 1 ? ' --active' :  ''; ?>" id="tab_<?= $color[0]; ?>_2" role="tabpanel">
           <?= colorPalette($color[0], $color[1]); ?>
@@ -145,7 +145,7 @@ $l = 0;
       <div class="bg--gray-600"><span class="hex-color">#666666</span><br>Gray 600</div>
     </div>
     <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-500"><span class="hex-color">#7b7778</span><br>Gray 500</div>
+      <div class="bg--gray-500"><span class="hex-color">#777777</span><br>Gray 500</div>
     </div>
     <div class="col w--1/3 w--10@d">
       <div class="bg--gray-400"><span class="hex-color">#969696</span><br>Gray 400</div>

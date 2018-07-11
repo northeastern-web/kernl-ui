@@ -24,8 +24,9 @@ $fs-d4:   3rem      !default;
 $fs-d5:   4.5rem    !default;
 
 // color bases
-$type-color:  $gray-800 !default;
-$type-link:   $red !default;
+$type-color:        $gray-800 !default;
+$type-color-alpha:  rgba($black, 0.85) !default;
+$type-link:         $red !default;
 
 // Letter Spacing
 $letter-spacing-tight: -.05em !default;

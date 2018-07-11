@@ -360,7 +360,7 @@ code {
 p, li, td, th, dt, dd {
   code {
     line-height: 1;
-    background-color: rgba($green-light, 0.25);
+    background-color: rgba($yellow, 0.25);
   }
 }
 
@@ -392,7 +392,7 @@ p, li, td, th, dt, dd {
   }
 
   .__link {
-    background-color: transparent;
+    // background-color: transparent;
     text-indent: -9999px;
     padding: 0;
     height: 1rem;

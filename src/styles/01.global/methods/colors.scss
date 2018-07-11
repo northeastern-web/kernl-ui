@@ -3,42 +3,45 @@
 //
 
 
-@mixin bg_variant($color, $hover_color, $text_color: null) {
-  background-color: $color !important;
+@mixin bg_variant($color, $color_light, $color_dark, $text) {
+  background-color: $color;
 
-  @if ($text_color) {
-    color: $text_color;
+  @if ($text == 'light') {
+    color: #fff;
+  } @else {
+    color: $type-color-alpha;
   }
 
   &.btn,
-  &.card .__link {
+  &.badge {
     border-color: transparent;
-    @if ($text_color) {
-      color: $text_color !important;
-    }
 
     @include hover_focus_active {
-      background-color: $hover_color !important;
       border-color: transparent;
-      @if ($text_color) {
-        color: $text_color !important;
+
+      @if ($text == 'dark') {
+        background-color: $color_dark;
+      } @else {
+        background-color: $color_light;
       }
     }
   }
 }
 
-@mixin border_variant($color, $hover_color, $text_color: $type-color) {
+@mixin border_variant($color, $color_light, $color_dark, $text) {
   border: 1px solid rgba($color, 0.5);
 
   &.btn,
-  &.card .__link {
+  &.badge {
     color: $color;
 
     @include hover_focus_active {
-      background-color: $hover_color !important;
+      background-color: $color;
 
-      @if ($text_color) {
-        color: $text_color;
+      @if ($text == 'light') {
+        color: #fff;
+      } @else {
+        color: $type-color-alpha;
       }
     }
   }
@@ -48,31 +51,17 @@
   color: $color;
 }
 
-@mixin get_component($component, $color, $color_hover, $color_grade: false, $color_text: null) {
-  @if $component == 'bg' { @include bg_variant($color, $color_hover, $color_text); }
-  @if $component == 'bc' { @include border_variant($color, $color_hover); }
+@mixin get_component($component, $color, $color_light, $color_dark, $text) {
+  @if $component == 'bg' { @include bg_variant($color, $color_light, $color_dark, $text); }
+  @if $component == 'bc' { @include border_variant($color, $color_light, $color_dark, $text); }
   @if $component == 'tc' { @include text_variant($color); }
 }
 
-@mixin generate_colors($component, $palette_collection: $palette) {
+@mixin generate_colors($component, $palette: $palette) {
   // Loop through each palette collection and then each color set
-  @each $palette_label, $palette_colors in $palette_collection {
-    @each $current_color, $current_hover, $current_variant, $current_text in $palette_colors {
-
-      $delimiter: '--';
-
-      // checks to see if color has a variant
-      // if false: make color the component's base
-      // if true: append grade to class
-      @if ($current_variant == false) {
-        .#{$component}#{$delimiter}#{$palette_label} {
-          @include get_component($component, $current_color, $current_hover, false, $current_text);
-        }
-      } @else {
-        .#{$component}#{$delimiter}#{$palette_label}-#{$current_variant} {
-          @include get_component($component, $current_color, $current_hover, $current_variant, $current_text);
-        }
-      }
+  @each $label, $color, $color_light, $color_dark, $text in $palette {
+    .#{$component}--#{$label} {
+      @include get_component($component, $color, $color_light, $color_dark, $text);
     }
   }
 }

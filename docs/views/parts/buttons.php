@@ -8,8 +8,8 @@
     </div>
     <div class="col w--1/3@t">
       <p class="text-style-block">(Semi) Transparent</p>
-      <p><a class="btn bg--transparent-dark --sm" data-component="button" href="#">Transparent sm</a></p>
-      <p><a class="btn bg--transparent-dark br--pill" data-component="button" href="#">Pill Transparent</a></p>
+      <p><a class="btn bg--black-alpha --sm" data-component="button" href="#">Transparent sm</a></p>
+      <p><a class="btn bg--black-alpha br--pill" data-component="button" href="#">Pill Transparent</a></p>
     </div>
     <div class="col w--1/3@t">
       <p class="text-style-block">Dark Buttons</p>
@@ -23,18 +23,18 @@
   <div class="row">
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">Base Buttons</p>
-      <p><a class="btn --sm br--pill" data-component="button" href="#">Button Pill sm</a></p>
+      <p><a class="btn --sm br--pill bg--white" data-component="button" href="#">Button Pill sm</a></p>
       <p><a class="btn" data-component="button" href="#">Base Button</a></p>
     </div>
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">(Semi) Transparent</p>
-      <p><a class="btn bg--transparent-dark --sm" data-component="button" href="#">Transparent sm</a></p>
-      <p><a class="btn bg--transparent-dark br--pill" data-component="button" href="#">Pill Transparent</a></p>
+      <p><a class="btn bg--black-alpha --sm" data-component="button" href="#">Transparent sm</a></p>
+      <p><a class="btn bg--black-alpha br--pill" data-component="button" href="#">Pill Transparent</a></p>
     </div>
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">(Semi) Transparent Light</p>
-      <p><a class="btn bg--transparent-light --sm" data-component="button" href="#">Transparent Light sm</a></p>
-      <p><a class="btn bg--transparent-light br--pill" data-component="button" href="#">Pill Transparent Light</a></p>
+      <p><a class="btn bg--white-alpha --sm" data-component="button" href="#">Transparent Light sm</a></p>
+      <p><a class="btn bg--white-alpha br--pill" data-component="button" href="#">Pill Transparent Light</a></p>
     </div>
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">White Border Buttons</p>
@@ -55,8 +55,8 @@
       <p><a class="btn bc--red" data-component="button" href="#">Red Button Border</a></p>
     </div>
     <div class="col w--1/4@t">
-      <p><a class="btn bg--blue" data-component="button" href="#">Blue Button</a></p>
-      <p><a class="btn bc--blue" data-component="button" href="#">Blue Button Border</a></p>
+      <p><a class="btn bg--yellow" data-component="button" href="#">Yellow Button</a></p>
+      <p><a class="btn bc--yellow" data-component="button" href="#">Yellow Button Border</a></p>
     </div>
     <div class="col w--1/4@t">
       <p><a class="btn bg--black" data-component="button" href="#">Black Button</a></p>
