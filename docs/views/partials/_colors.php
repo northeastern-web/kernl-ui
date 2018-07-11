@@ -1,6 +1,7 @@
 <?php
-function colorPalette($color, $colorName) {
-  echo '
+function colorPalette($color, $colorName)
+{
+    echo '
   <div class="row">
     <div class="col">
       <div class="k_color bg--' . $color . ' py--2">
@@ -8,11 +9,15 @@ function colorPalette($color, $colorName) {
         <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
         <a class="btn --sm br--pill" href="#">More</a> <a class="btn --sm br--pill" href="#">Less</a>
       </div>
+
+      <!--
       <div class="bg--' . $color . '">
         <a class="__link d--block pa--1" href="#">
           Component <b>Hover State</b> Demo
         </a>
       </div>
+      -->
+
     </div>
     <div class="col w--1/2@t">
       <div class="k_color tc--' . $color . ' pa--0">
