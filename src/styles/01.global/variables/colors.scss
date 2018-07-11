@@ -45,17 +45,6 @@ $gray-scale: (
   ($gray-light, lighten($gray, 5%), 'light', $white)
 ) !default;
 
-
-// Transparent
-$transparent-light: rgba($gray-300, 0.6) !default;
-$transparent-light-hover: rgba($gray-300, 0.5) !default;
-$transparent-dark: rgba($gray-900, 0.6) !default;
-$transparent-dark-hover: rgba($gray-900, 0.8) !default;
-$transparent-scale: (
-  ($transparent-light, $transparent-light-hover, 'light', $white),
-  ($transparent-dark, $transparent-dark-hover, 'dark', $white)
-) !default;
-
 // Reds
 $red:         #cc0000 !default;
 $red-lighten: lighten($red, 4%);
@@ -143,6 +132,16 @@ $beige-light-darken:  darken($beige-light, 5%);
 $beige-scale: (
   ($beige, $beige-darken, false),
   ($beige-light, $beige-light-darken, 'light')
+) !default;
+
+// Transparent
+$transparent-light: rgba($gray-300, 0.6) !default;
+$transparent-light-hover: rgba($gray-300, 0.5) !default;
+$transparent-dark: rgba($gray-900, 0.6) !default;
+$transparent-dark-hover: rgba($gray-900, 0.8) !default;
+$transparent-scale: (
+  ($transparent-light, $transparent-light-hover, 'light', $white),
+  ($transparent-dark, $transparent-dark-hover, 'dark', $white)
 ) !default;
 
 // ** Full color palette collection

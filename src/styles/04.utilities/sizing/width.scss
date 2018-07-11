@@ -12,6 +12,7 @@
   flex: 1;
 }
 
+// Basic width values
 @each $name, $value in $widths {
   @if($name == 'auto') {
     .w--auto {
@@ -23,6 +24,7 @@
   }
 }
 
+// Width values with breakpoint options
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include mqbp-up($breakpoint) {
     @each $name, $value in $widths {
