@@ -2,9 +2,35 @@
 // Media Queries
 //
 
-// Media of at least the minimum breakpoint width
+
+//
+// Breakpoint helper functions
+
+// Name of the next breakpoint, or null for the last breakpoint.
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+  $n: index($breakpoint-names, $name);
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+// Maximum breakpoint width. Null for the largest (last) breakpoint.
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $next: breakpoint-next($name, $breakpoints);
+  @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
+}
+
+
+//
+// Media Query mixins
+
+// Breakpoint and up
 @mixin mqbp-up($name, $breakpoints: $grid-breakpoints) {
-  $min: _breakpoint-min($name, $breakpoints);
+  $min: breakpoint-min($name, $breakpoints);
   @if $min {
     @media (min-width: $min) {
       @content;
@@ -14,9 +40,9 @@
   }
 }
 
-// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Breakpoint and down
 @mixin mqbp-down($name, $breakpoints: $grid-breakpoints) {
-  $max: _breakpoint-max($name, $breakpoints);
+  $max: breakpoint-max($name, $breakpoints);
   @if $max {
     @media (max-width: $max) {
       @content;

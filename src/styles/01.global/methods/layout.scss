@@ -3,29 +3,6 @@
 //
 
 
-// Name of the next breakpoint, or null for the last breakpoint.
-@function _breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
-  $n: index($breakpoint-names, $name);
-  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
-}
-
-// Minimum breakpoint width. Null for the smallest (first) breakpoint.
-@function _breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-  $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
-}
-
-// Maximum breakpoint width. Null for the largest (last) breakpoint.
-@function _breakpoint-max($name, $breakpoints: $grid-breakpoints) {
-  $next: _breakpoint-next($name, $breakpoints);
-  @return if($next, _breakpoint-min($next, $breakpoints) - 1px, null);
-}
-
-// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash infront.
-@function _breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$name}");
-}
-
 @mixin make-section($container: "default", $gutters: $grid-gutter-widths, $contain: $contain-width) {
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
@@ -65,6 +42,9 @@
 }
 
 @mixin make-row($gutters: $grid-gutter-widths) {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
