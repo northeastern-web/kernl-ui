@@ -1,0 +1,21 @@
+// Components
+// Column
+//
+// .col
+
+
+.col {
+  @include make-gutters();
+  display: block;
+  flex: none;
+  width: 100%;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+
+// Rows contain columns
+.row {
+  @include make-row();
+  display: flex;
+  flex-wrap: wrap;
+}
