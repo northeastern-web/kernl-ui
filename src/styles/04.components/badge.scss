@@ -3,17 +3,20 @@
 //
 // .badge
 
+
 .badge {
   @extend .fs--smooth;
-  background-color: #fff;
-  color: $black;
   padding: 0.4rem 0.6rem 0.45rem;
   display: inline-block;
+  color: $type-color;
   font-size: $fs-xs;
   line-height: 1;
   overflow: hidden;
   text-align: center;
   text-overflow: ellipsis;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba($type-color, 0.5);
   vertical-align: middle;
   white-space: nowrap;
   z-index: 1;
@@ -23,45 +26,13 @@
     &:hover { text-decoration: none; }
   }
 
-  &:before { margin-right: .25rem }
-
-  // Positioning
-  &.\--left {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    @include mqbp-up(d) {
-      top: 0.75rem;
-      left: 0.75rem;
-    }
-
-    &.br--pill { left: 0.75rem; }
+  .feather {
+    margin: 0 ($fs-xs/2) 0 0;
+    height: $fs-xs;
+    width: $fs-xs;
+    position: relative;
+    top: 2px;
   }
 
-  &.\--center {
-    position: absolute;
-    top: 0;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-
-    @include mqbp-up(d) {
-      top: 0.75rem;
-    }
-  }
-
-  &.\--right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: auto;
-
-    @include mqbp-up(d) {
-      top: 0.75rem;
-      right: 0.75rem;
-    }
-
-    &.br--pill { right: 0.75rem; }
-  }
+  &.\--right .feather { margin: 0 0 0 ($fs-xs/2); }
 }
