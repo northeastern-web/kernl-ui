@@ -51,17 +51,13 @@
   color: $color;
 }
 
-@mixin get_component($component, $color, $color_light, $color_dark, $text) {
-  @if $component == 'bg' { @include bg_variant($color, $color_light, $color_dark, $text); }
-  @if $component == 'bc' { @include border_variant($color, $color_light, $color_dark, $text); }
-  @if $component == 'tc' { @include text_variant($color); }
-}
-
-@mixin generate_colors($component, $palette: $palette) {
-  // Loop through each palette collection and then each color set
+@mixin make_colors($component) {
+  // Loop through color palette
   @each $label, $color, $color_light, $color_dark, $text in $palette {
     .#{$component}--#{$label} {
-      @include get_component($component, $color, $color_light, $color_dark, $text);
+      @if $component == 'bg' { @include bg_variant($color, $color_light, $color_dark, $text); }
+      @if $component == 'bc' { @include border_variant($color, $color_light, $color_dark, $text); }
+      @if $component == 'tc' { @include text_variant($color); }
     }
   }
 }

@@ -4,7 +4,7 @@
 // .bg--<color>
 
 
-@include generate_colors('bg');
+@include make_colors('bg');
 
 .bg--none {
   background: none !important;
