@@ -25,10 +25,16 @@ $('#kernl .bg--img').each(function() {
 });
 
 $('#kernl .__graphic').each(function() {
-  const ratioImages = Math.floor(Math.random() * ratio_images.length);
-  const selectedRatioImg = ratio_images.splice(ratioImages,1); // no repeated images
-  $(this).append(`<img class='__graphic__img' src='${ratio_path}${selectedRatioImg}' alt=''>`);
+  const randomImages = Math.floor(Math.random() * images.length);
+  const selectedImg = images.splice(randomImages,1); // no repeated images
+  $(this).append(`<img class='__graphic__img' src='${path}${selectedImg}' alt=''>`);
 });
+
+// $('#kernl .part--cards .__graphic').each(function() {
+//   const ratioImages = Math.floor(Math.random() * ratio_images.length);
+//   const selectedRatioImg = ratio_images.splice(ratioImages,1); // no repeated images
+//   $(this).append(`<img class='__graphic__img' src='${ratio_path}${selectedRatioImg}' alt=''>`);
+// });
 
 
 /* Dynamically display responsive font sizes on typography page.

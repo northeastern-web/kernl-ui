@@ -21,9 +21,9 @@
   //
   // Body
   .__body {
-    @include component-padding();
+    @include card-padding();
     font-size: 100%;
-    flex: 1 0 auto;
+    flex: 1;
 
     p {
       font-size: inherit;
@@ -33,16 +33,25 @@
   }
 
   //
-  // Titles within .__body
+  // Titles (within .__body)
   .__title {
     line-height: 1.25;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 118%;
+    transition: color 0.2s ease;
   }
 
   .__pretitle { margin-bottom: 0.2rem; }
-
   .__subtitle { font-size: 110%; }
+
+  //
+  // Card Footer
+  .__footer {
+    @extend .justify-self--end;
+    @include card-padding();
+    padding-top: 0 !important;
+    font-size: 87.5%;
+  }
 
   //
   // Graphics
@@ -52,43 +61,99 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     overflow: hidden;
+    background-color: $gray-400;
   }
 
   .__graphic__img {
-    @extend .ar--object;
+    @extend .pin;
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    .__graphic__img {
+      transform: scale(1.04);
+    }
   }
 
   //
   // Modifiers
 
-  // Horizontal Orientation
+  // Tile variant
+  &.\--tile {
+    @include type-xs();
+    .__body { padding: 1rem; }
+  }
+
+  // Overlay variant
+  &.\--overlay {
+    color: #fff;
+    min-height: $tile_overlay_height;
+
+    .__graphic {
+      min-height: 100%;
+      padding: 0;
+      min-width: 100%;
+
+      &::after {
+        @extend .pin;
+        content: '';
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    .__body {
+      @extend .pos--absolute;
+      overflow-y: hidden;
+      max-height: 95%;
+    }
+  }
+
+  // Middle text variant
+  &.--middle {
+    .__link {
+      @extend .flex--middle;
+    }
+  }
+
+  // Bottom text variant
+  &.--bottom {
+    .__link {
+      @extend .justify--end;
+    }
+  }
+
+  &.\--overlay,
+  &.\--middle,
+  &.\--bottom {
+    .__body { flex: 0; }
+  }
+
+  //
+  // Orientation overrides
   &.\--h {
     .__link { flex-direction: row; }
 
     .__graphic,
     .__body { width: 50%; }
-/*
-    @include mqbp_down(t) {
-      .__graphic {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden
-      }
 
-      .__graphic__img {
-        flex-shrink: 0;
-        min-width: 100%;
-        min-height: 100%;
-        object-fit: cover;
-      }
+    .__footer {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
     }
-*/
+
+    &.--right {
+      .__graphic { order: 1; }
+      .__footer { left: auto; }
+    }
   }
 
   @each $breakpoint in map-keys($breakpoints) {
@@ -98,6 +163,17 @@
 
         .__graphic,
         .__body { width: 50%; }
+
+        .__footer {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+        }
+
+        &.--right {
+          .__graphic { order: 1; }
+          .__footer { left: auto; }
+        }
       }
     }
   }
@@ -109,12 +185,22 @@
 
         .__graphic,
         .__body { width: 100%; }
+
+        .__footer {
+          position: relative;
+          bottom: auto;
+          left: auto;
+        }
+
+        &.--right {
+          .__graphic { order: 0; }
+        }
       }
     }
   }
 }
 
-/*
+/* 
 .card {
   @include card_variant();
   @include type-sm();

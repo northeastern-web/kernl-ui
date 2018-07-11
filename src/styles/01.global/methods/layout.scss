@@ -4,13 +4,14 @@
 
 
 @mixin make-section($container: "default", $gutters: $gutters, $contain: $contain-width) {
+  padding: 1rem;
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       @if ($container == "full") {
         @if ($breakpoint == "t" or $breakpoint == "d" or $breakpoint == "w") {
-          padding-right: $gutter/2;
-          padding-left: $gutter/2;
+          padding-right: $gutter;
+          padding-left: $gutter;
         }
       } @elseif ($container == "contain") {
         @if ($breakpoint == "t") {

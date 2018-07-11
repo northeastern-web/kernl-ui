@@ -16,6 +16,8 @@
 // Pin positioning
 .pin {
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   right: 0;
   bottom: 0;
@@ -23,6 +25,8 @@
 }
 
 .pin--none {
+  width: auto;
+  height: auto;
   top: auto;
   right: auto;
   bottom: auto;

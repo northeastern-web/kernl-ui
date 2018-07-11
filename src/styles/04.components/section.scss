@@ -7,7 +7,6 @@
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  padding: 1rem;
   @include make-section();
 }
 
@@ -27,8 +26,8 @@
 }
 
 .section.\--flush {
-  padding-right: 0 !important;
-  padding-left: 0 !important;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 // Remove the negative margin from a section's default .row, then the horizontal padding
