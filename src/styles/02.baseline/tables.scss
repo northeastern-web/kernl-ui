@@ -8,9 +8,6 @@ table {
   margin-bottom: 1rem;
   border-collapse: collapse;
   border-spacing: 0;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $gray-200;
   display: block;
   overflow-x: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -26,7 +23,7 @@ td, th {
   padding: .75rem;
   border-width: 1px;
   border-style: solid;
-  border-color: inherit;
+  border-color: $gray-200;
   vertical-align: top;
   line-height: 1.4;
 }
@@ -34,7 +31,9 @@ td, th {
 th { text-align: left; }
 
 caption {
-  color: $gray-300;
+  color: $gray-400;
   text-align: left;
   caption-side: bottom;
+  font-size: $fs-sm;
+  margin-top: 0.25rem;
 }

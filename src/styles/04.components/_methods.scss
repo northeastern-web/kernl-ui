@@ -19,11 +19,25 @@
 }
 
 // set component margin-bottom to complement grid gutter spacing
-@mixin component-margin($margin-bottom: 1, $gutters: $gutters) {
+@mixin margin-bottom-gutter($margin-bottom: 1, $gutters: $gutters) {
   @each $breakpoint in map-keys($gutters) {
+    margin-bottom: (1rem * $margin-bottom);
+
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       margin-bottom: ($gutter * $margin-bottom);
+    }
+  }
+}
+
+// set component padding-bottom to complement grid gutter spacing
+@mixin padding-bottom-gutter($padding-bottom: 1, $gutters: $gutters) {
+  padding-bottom: (1rem * $padding-bottom);
+
+  @each $breakpoint in map-keys($gutters) {
+    @include mqbp-up($breakpoint) {
+      $gutter: map-get($gutters, $breakpoint);
+      padding-bottom: ($gutter * $padding-bottom);
     }
   }
 }

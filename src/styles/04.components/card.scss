@@ -57,7 +57,7 @@
   // Graphics
   .__graphic {
     @extend .ar;
-    @extend .\--16x9;
+    padding-top: 56.25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,15 +144,52 @@
     .__graphic,
     .__body { width: 50%; }
 
+    .__graphic {
+      padding-top: (56.25% / 2); // 16x9 default. Override with aspect ratio utility.
+    }
+
     .__footer {
       position: absolute;
       bottom: 0;
       left: 50%;
+      width: 50%;
     }
 
     &.--right {
       .__graphic { order: 1; }
       .__footer { left: auto; }
+    }
+
+    .__graphic {
+      @each $ar-name, $ar-value in $aspect-ratios {
+        &.\--#{$ar-name} { padding-top: ($ar-value / 2); }
+      }
+
+      @each $breakpoint in map-keys($breakpoints) {
+        @include mqbp-up($breakpoint) {
+          @each $ar-name, $ar-value in $aspect-ratios {
+            &.\--#{$ar-name}\@#{$breakpoint} { padding-top: ($ar-value / 2); }
+          }
+        }
+      }
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+      &.\--v\@#{$breakpoint} {
+        .__graphic {
+          @each $ar-name, $ar-value in $aspect-ratios {
+            &.\--#{$ar-name} { padding-top: ($ar-value / 2); }
+
+            @include mqbp-up($breakpoint) {
+              &.\--#{$ar-name} { padding-top: $ar-value; }
+
+              @each $breakpoint in map-keys($breakpoints) {
+                &.\--#{$ar-name}\@#{$breakpoint} { padding-top: $ar-value; }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -164,10 +201,15 @@
         .__graphic,
         .__body { width: 50%; }
 
+        .__graphic {
+          padding-top: (56.25% / 2);
+        }
+
         .__footer {
           position: absolute;
           bottom: 0;
           left: 50%;
+          width: 50%;
         }
 
         &.--right {
@@ -176,9 +218,8 @@
         }
       }
     }
-  }
 
-  @each $breakpoint in map-keys($breakpoints) {
+    // horizontal shared with vertical override
     @include mqbp-up($breakpoint) {
       &.\--v\@#{$breakpoint} {
         .__link { flex-direction: column; }
@@ -186,10 +227,15 @@
         .__graphic,
         .__body { width: 100%; }
 
+        .__graphic {
+          padding-top: 56.25%;
+        }
+
         .__footer {
           position: relative;
           bottom: auto;
           left: auto;
+          width: auto;
         }
 
         &.--right {
@@ -198,7 +244,41 @@
       }
     }
   }
+
+  &.\--h {
+    .__body {
+      @include padding-bottom-gutter(3);
+
+      @include mqbp-up(t) {
+        @include padding-bottom-gutter(2.5);
+      }
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+      @include mqbp-up($breakpoint) {
+        &.\--v\@#{$breakpoint} {
+          .__body { @include padding-bottom-gutter(); }
+        }
+      }
+    }
+  }
+
+  // TODO
+  @each $breakpoint in map-keys($breakpoints) {
+    &[class="^--h"] {
+      .__body { @include padding-bottom-gutter(2.5); }
+
+      &[class="^--v"] {
+        .__body {
+          @include padding-bottom-gutter();
+          background-color: magenta; // for testing
+        }
+      }
+    }
+  }
 }
+
+
 
 /* 
 .card {

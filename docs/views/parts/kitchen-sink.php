@@ -19,40 +19,40 @@
     <section class="section ff--mono fs--xs">
       <div class="row">
         <div class="col">
-          <div class="pa--1 bg--gray-50 bc--teal">col</div>
+          <div class="pa--1 bg--gray-50 bc--gray-500">col</div>
         </div>
       </div>
       <div class="row">
         <div class="col w--25@t">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--25@t</div>
+          <div class="pa--1 bg--gray-50 bc--gray-500">col w--25@t</div>
         </div>
         <div class="col w--75@t">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--75@t</div>
+          <div class="pa--1 bg--gray-50 bc--gray-500">col w--75@t</div>
         </div>
       </div>
       <div class="row">
         <div class="col w--1/3@d">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@d</div>
+          <div class="pa--1 bg--gray-50 bc--gray-500">col w--1/3@d</div>
         </div>
         <div class="col w--1/3@d">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@d</div>
+          <div class="pa--1 bg--gray-50 bc--gray-500">col w--1/3@d</div>
         </div>
         <div class="col w--1/3@d">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--1/3@d</div>
+          <div class="pa--1 bg--gray-50 bc--gray-500">col w--1/3@d</div>
         </div>
       </div>
       <div class="row">
         <div class="col w--50@d w--1/4@w">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--50@d w--1/4@w</div>
+          <div class="pa--1 bg--gray-50 bc--gray-500">col w--50@d w--1/4@w</div>
         </div>
         <div class="col w--50@d w--1/4@w">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--50@d w--1/4@w</div>
+          <div class="pa--1 bg--gray-50 bc--gray-500">col w--50@d w--1/4@w</div>
         </div>
         <div class="col w--50@d w--1/4@w">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--50@d w--1/4@w</div>
+          <div class="pa--1 bg--gray-50 bc--gray-500">col w--50@d w--1/4@w</div>
         </div>
         <div class="col w--50@d w--1/4@w">
-          <div class="pa--1 bg--gray-50 bc--teal">col w--50@d w--1/4@w</div>
+          <div class="pa--1 bg--gray-50 bc--gray-500">col w--50@d w--1/4@w</div>
         </div>
       </div>
     </section>
