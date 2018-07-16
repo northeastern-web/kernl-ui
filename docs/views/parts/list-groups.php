@@ -53,3 +53,12 @@
     </div>
   </div>
 </section>
+
+<section class="section">
+  <header class="k_section__header">Excerpt</header>
+  <div class="row">
+    <div class="col w--3/4">
+      <?= listgroup('', 'excerpt'); ?>
+    </div>
+  </div>
+</section>
