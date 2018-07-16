@@ -33,6 +33,8 @@
     display: block;
     color: inherit;
     transition: all 0.3s ease-out;
+
+    &:hover { background-color: $gray-50; }
   }
 
   // Styles
