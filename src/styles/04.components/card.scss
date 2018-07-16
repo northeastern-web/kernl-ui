@@ -245,6 +245,8 @@
     }
   }
 
+  //
+  // prevent + footer collision in horizontal orientations
   &.\--h {
     .__body {
       @include padding-bottom-gutter(3);
@@ -255,23 +257,29 @@
     }
 
     @each $breakpoint in map-keys($breakpoints) {
-      @include mqbp-up($breakpoint) {
-        &.\--v\@#{$breakpoint} {
+      &.\--v\@#{$breakpoint} {
+        @include mqbp-up($breakpoint) {
           .__body { @include padding-bottom-gutter(); }
         }
       }
     }
   }
 
-  // TODO
   @each $breakpoint in map-keys($breakpoints) {
-    &[class="^--h"] {
-      .__body { @include padding-bottom-gutter(2.5); }
+    @include mqbp-up($breakpoint) {
+      &.\--h\@#{$breakpoint} {
+        .__body {
+          @include padding-bottom-gutter(2.5);
+        }
+      }
+    }
 
-      &[class="^--v"] {
+    // don't adjust anything above this line!
+
+    @include mqbp-up($breakpoint) {
+      &.\--v\@#{$breakpoint} {
         .__body {
           @include padding-bottom-gutter();
-          background-color: magenta; // for testing
         }
       }
     }

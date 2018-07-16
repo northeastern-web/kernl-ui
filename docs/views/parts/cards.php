@@ -42,13 +42,13 @@
             <p>This example has an excerpt of 93 characters. Etiam porta sem malesuada magna mollis euismod.</p>
           </div>
           <div class="__footer">
-            ^ Get rid of extra bottom padding
+            Footer Text
           </div>
         </a>
       </article>
     </div>
     <div class="col w--1/3@d">
-      <article class="card --h@t --right --v@d">
+      <article class="card --h@t --v@d --right">
         <a href="#" class="__link">
           <div class="__graphic"></div>
           <div class="__body">
@@ -56,7 +56,7 @@
             <p>This example has an excerpt of only 50 characters.</p>
           </div>
           <div class="__footer">
-            ^ Get rid of extra bottom padding
+            Footer Text
           </div>
         </a>
       </article>
@@ -70,7 +70,7 @@
             <p>This example has an excerpt of 208 characters. Etiam porta sem malesuada magna mollis euismod. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
           </div>
           <div class="__footer">
-            ^ Get rid of extra bottom padding
+            Footer Text
           </div>
         </a>
       </article>
