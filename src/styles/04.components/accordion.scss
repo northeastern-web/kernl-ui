@@ -62,13 +62,14 @@
     &:after {
       position: absolute;
       font-family: "feathericons";
-      content: "\e95c";
+      content: "\e970"; // plus
       font-weight: normal;
       top: 1rem;
       right: 1.5rem;
     }
 
-    &.collapsed { &:after { content: "\e970"; } }
+    &.\--active,
+    &.default { &:after { content: "\e95c"; } } // minus
   }
 
   .__copy {
@@ -76,25 +77,18 @@
     font-size: $fs-sm;
     background: #fff;
   }
+
+  .__content {
+    display: none;
+    position: relative;
+  }
+
+  .default + .__content { display: block; }
+
+  .__title { border-top: 0 none; }
+
+  .__item .\--active { background-color: $red !important; }
 }
-
-.__content {
-  display: none;
-  position: relative;
-
-  &.show { display: block; }
-}
-
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  transition-timing-function: ease;
-  transition-duration: .35s;
-  transition-property: height;
-}
-
-.collapsed .__title { border-top: 0 none; }
 
 .accordion .card {
   &:first-child .__title { border-top: 0 none; }

@@ -7,9 +7,12 @@
 $('[data-toggle="reveal"]').on('click touch', function() {
     let group = $(this).attr('data-group');
     let target = $(this).attr('data-target');
-    $(target).addClass('--active');
+
+    $(this).toggleClass('--active');
     $(this).next().slideToggle(600);
 
+    $(group + ' .__title').not($(this)).removeClass('--active','default');
     $(group + ' .__content').not($(target)).removeClass('--active').slideUp(600);
+
   }
 );

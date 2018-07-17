@@ -148,10 +148,6 @@
     .__graphic,
     .__body { width: 50%; }
 
-    .__graphic {
-      padding-top: (56.25% / 2); // 16x9 default. Override with aspect ratio utility.
-    }
-
     .__footer {
       position: absolute;
       bottom: 0;
@@ -165,6 +161,8 @@
     }
 
     .__graphic {
+      padding-top: (56.25% / 2); // 16x9 default. Override with aspect ratio utility.
+
       @each $ar-name, $ar-value in $aspect-ratios {
         &.\--#{$ar-name} { padding-top: ($ar-value / 2); }
       }
@@ -198,8 +196,8 @@
   }
 
   @each $breakpoint in map-keys($breakpoints) {
-    @include mqbp-up($breakpoint) {
-      &.\--h\@#{$breakpoint} {
+    &.\--h\@#{$breakpoint} {
+      @include mqbp-up($breakpoint) {
         .__link { flex-direction: row; }
 
         .__graphic,
@@ -224,8 +222,8 @@
     }
 
     // horizontal shared with vertical override
-    @include mqbp-up($breakpoint) {
-      &.\--v\@#{$breakpoint} {
+    &.\--v\@#{$breakpoint} {
+      @include mqbp-up($breakpoint) {
         .__link { flex-direction: column; }
 
         .__graphic,
