@@ -4,8 +4,12 @@
 // .bs--<value>
 
 
-.bs { box-shadow: $box-shadow; }
-.bs--md { box-shadow: $box-shadow-md; }
-.bs--lg { box-shadow: $box-shadow-lg; }
+.bs {
+  box-shadow: $box-shadow;
+
+  &.btn:hover { box-shadow: $box-shadow-hover; }
+}
+
 .bs--inset { box-shadow: $box-shadow-inset }
+
 .bs--none { box-shadow: none; }

@@ -4,11 +4,11 @@
 
 
 .media {
-  box-shadow: $box-shadow;
-  transition: box-shadow 0.25s ease;
+  box-shadow: $box-shadow-inset;
+  transition: box-shadow $transition;
   margin-bottom: 1rem;
 
-  &:hover { box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2); }
+  &:hover { box-shadow: $box-shadow-inset-hover; }
 
   .__link {
     display: flex;

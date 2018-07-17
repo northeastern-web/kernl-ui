@@ -1,4 +1,4 @@
-<section class="section bg--gray-100 pt--2">
+<section class="section pt--2">
   <div class="row">
     <!-- basic cards -->
     <div class="col w--1/3@t">
@@ -31,7 +31,7 @@
         </a>
       </article>
     </div>
-    
+
     <!-- image example -->
     <div class="col w--1/3@d">
       <article class="card --h@t --v@d">
@@ -118,9 +118,9 @@
         </a>
       </article>
     </div>
-    
+
     <!-- image overlay example -->
-    
+
     <div class="col w--1/3@d">
       <article class="card --overlay">
         <a href="#" class="__link">
@@ -154,9 +154,9 @@
         </a>
       </article>
     </div>
-    
+
     <!-- tile option -->
-    
+
     <div class="col w--1/2 w--1/3@t w--1/6@d">
       <article class="card --tile">
         <a href="#" class="__link">
