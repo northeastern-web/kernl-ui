@@ -58,7 +58,7 @@
   <header class="k_section__header">Excerpt</header>
   <div class="row">
     <div class="col w--3/4">
-      <?= listgroup('', 'excerpt'); ?>
+      <?= listgroup('--indent', 'excerpt'); ?>
     </div>
   </div>
 </section>

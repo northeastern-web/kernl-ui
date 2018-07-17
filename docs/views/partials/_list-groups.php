@@ -30,7 +30,7 @@ function listgroup($classes, $option = false)
 
     if ($option == 'excerpt') {
         return '
-        <div class="list-group +indent">
+        <div class="list-group --indent">
             <a class="__item" href="/article/schedule-of-classes/">
                 <h6 class="mb--0">Schedule of Classes</h6>
                 <div class="__excerpt tc--gray-600 fs--xs pr--1@xs"> A listing of available class sections by term.</div>
