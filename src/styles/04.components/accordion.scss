@@ -86,8 +86,6 @@
   .default + .__content { display: block; }
 
   .__title { border-top: 0 none; }
-
-  .__item .\--active { background-color: $red !important; }
 }
 
 .accordion .card {

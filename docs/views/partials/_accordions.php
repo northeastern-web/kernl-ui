@@ -16,7 +16,7 @@ function accordion($id, $variant, $section_classes, $acc_class) {
         <header class="k_section__header">' . $variant . ' Accordion</header>
         <div id="accordion_' . $id . '" class="accordion ' . $acc_class . '">
           <div class="__item">
-            <div class="__title default"
+            <div class="__title default --active"
                  data-toggle="reveal"
                  data-group="#accordion_' . $id . '"
                  data-target="#toggle_' . $id . 'a"

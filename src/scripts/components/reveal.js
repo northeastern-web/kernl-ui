@@ -11,8 +11,8 @@ $('[data-toggle="reveal"]').on('click touch', function() {
     $(this).toggleClass('--active');
     $(this).next().slideToggle(600);
 
-    $(group + ' .__title').not($(this)).removeClass('--active','default');
-    $(group + ' .__content').not($(target)).removeClass('--active').slideUp(600);
+    $(group + ' .__title').not($(this)).removeClass('--active');
+    $(group + ' .__content').not($(target)).slideUp(600);
 
   }
 );
