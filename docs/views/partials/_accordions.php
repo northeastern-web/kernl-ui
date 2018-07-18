@@ -20,18 +20,18 @@ function accordion($id, $variant, $section_classes, $acc_class) {
                  data-toggle="reveal"
                  data-group="#accordion_' . $id . '"
                  data-target="#toggle_' . $id . 'a"
-                 aria-expanded="false">
+                 aria-expanded="true">
               Play me some accordion!
             </div>
             <div class="__content" id="toggle_' . $id . 'a">
               <div class="__copy">
-                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+                <p>To show an open panel by default, chain the classes <code>default --active</code> to <code>__title</code>. Omit them to load accordions with all panels closed.</p>
                 <p>Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
               </div>
             </div>
           </div>
           <div class="__item">
-            <div class="__title collapsed"
+            <div class="__title"
                  data-toggle="reveal"
                  data-group="#accordion_' . $id . '"
                  data-target="#toggle_' . $id . 'b"
@@ -47,7 +47,7 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             </div>
           </div>
           <div class="__item">
-            <div class="__title collapsed"
+            <div class="__title"
                  data-toggle="reveal"
                  data-group="#accordion_' . $id . '"
                  data-target="#toggle_' . $id . 'c"

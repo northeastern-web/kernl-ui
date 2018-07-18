@@ -22,8 +22,9 @@
     > .__item > .__title {
       font-weight: 700;
       color: $type-color;
+      transition: color $transition;
 
-      &:not(.collapsed) {
+      &.\--active {
         color: rgba($type-color, 0.5);
       }
     }
@@ -68,8 +69,7 @@
       right: 1.5rem;
     }
 
-    &.\--active,
-    &.default { &:after { content: "\e95c"; } } // minus
+    &.\--active { &:after { content: "\e95c"; } } // minus
   }
 
   .__copy {
