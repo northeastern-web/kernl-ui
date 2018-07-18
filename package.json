@@ -32,6 +32,7 @@
   "dependencies": {
     "bstyles": "^0.3.1",
     "feather-icons": "^4.7.3",
+    "formstone": "^1.4.8",
     "jquery": "^3.0.0",
     "popper.js": "^1.14.0"
   }

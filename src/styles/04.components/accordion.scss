@@ -78,12 +78,12 @@
     background: #fff;
   }
 
-  .__content {
+  [data-target] {
     display: none;
     position: relative;
-  }
 
-  .default + .__content { display: block; }
+    &.\--visible { display: block; }
+  }
 
   .__title { border-top: 0 none; }
 }

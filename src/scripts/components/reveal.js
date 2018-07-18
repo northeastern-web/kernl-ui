@@ -4,13 +4,15 @@
  * Inspiration: http://uniondesign.ca/simple-accordion-without-jquery-ui/
  */
 
-$('[data-toggle="reveal"]').on('click touch', function() {
+$('[data-toggle]').on('click touch', function() {
   let group = $(this).attr('data-group');
-  let target = $(this).attr('data-target');
+  let target = $(this).attr('data-toggle');
 
   $(this).toggleClass('--active');
-  $(this).next().slideToggle(600);
+  $(target).slideToggle(600);
+  // $(target).toggleClass('--visible');
 
-  $(group + ' .__title').not($(this)).removeClass('--active');
-  $(group + ' .__content').not($(target)).slideUp(600);
+  $(group + ' [data-toggle]').not($(this)).removeClass('--active');
+  $(group + ' [data-target]').not($(target)).slideUp(600);
+  // $(group + ' [data-target]').not($(target)).removeClass('--visible');
 });

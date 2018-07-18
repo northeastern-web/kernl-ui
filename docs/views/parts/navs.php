@@ -8,14 +8,13 @@
 <section class="section">
   <div class="row">
     <div class="col w--1/2@t w--1/4@d">
-      <button class="hidden--up@t btn --sm" 
-              data-toggle="reveal" 
-              data-group="nav_example_a" 
-              data-target="#page_menu_0">
-        <i class="__icon --left" data-feather="align-left"></i>
-        Page Menu
-      </button>
-      <nav class="nav --interior __content" id="page_menu_0">
+      <div class="ta--c">
+        <button class="hidden--up@t btn --sm" data-toggle="#page_menu_0">
+          <i class="__icon --left" data-feather="align-left"></i>
+          Page Menu
+        </button>
+      </div>
+      <nav class="nav --interior" id="page_menu_0">
         <ul class="__list">
           <li class="__item --active">
             <a class="__link" href="#">Dolor Fermentum Ullamcorper Fringilla</a>
@@ -36,14 +35,13 @@
       </nav>
     </div>
     <div class="col w--1/2@t w--1/4@d">
-      <button class="hidden--up@t btn --sm" 
-              data-toggle="reveal" 
-              data-group="nav_example_b" 
-              data-target="#page_menu_1">
-        <i class="__icon --left" data-feather="align-left"></i>
-        Page Menu
-      </button>
-      <nav class="nav --interior __content" id="page_menu_1">
+      <div class="ta--c">
+        <button class="hidden--up@t btn --sm" data-toggle="#page_menu_1">
+          <i class="__icon --left" data-feather="align-left"></i>
+          Page Menu
+        </button>
+      </div>
+      <nav class="nav --interior" id="page_menu_1">
         <ul class="__list">
           <li class="__item">
             <a class="__link" href="#">Dolor Fermentum Ullamcorper Fringilla</a>
@@ -72,14 +70,13 @@
       </nav>
     </div>
     <div class="col w--1/2@t w--1/4@d">
-      <button class="hidden--up@t btn --sm" 
-              data-toggle="reveal" 
-              data-group="nav_example_c" 
-              data-target="#page_menu_2">
-        <i class="__icon --left" data-feather="align-left"></i>
-        Page Menu
-      </button>
-      <nav class="nav --interior __content" id="page_menu_2">
+      <div class="ta--c">
+        <button class="hidden--up@t btn --sm" data-toggle="#page_menu_2">
+          <i class="__icon --left" data-feather="align-left"></i>
+          Page Menu
+        </button>
+      </div>
+      <nav class="nav --interior" id="page_menu_2">
         <ul class="__list">
           <li class="__item --title">
             <a class="__link" href="#">
@@ -110,14 +107,13 @@
       </nav>
     </div>
   <div class="col w--1/2@t w--1/4@d">
-    <button class="hidden--up@t btn --sm" 
-            data-toggle="reveal" 
-            data-group="nav_example_d" 
-            data-target="#page_menu_3">
-      <i class="__icon --left" data-feather="align-left"></i>
-      Page Menu
-    </button>
-    <nav class="nav --interior __content" id="page_menu_3">
+    <div class="ta--c">
+      <button class="hidden--up@t btn --sm" data-toggle="#page_menu_3">
+        <i class="__icon --left" data-feather="align-left"></i>
+        Page Menu
+      </button>
+    </div>
+    <nav class="nav --interior" id="page_menu_3">
       <ul class="__list">
         <li class="__item --title">
           <a class="__link" href="#">
