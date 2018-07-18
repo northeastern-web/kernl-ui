@@ -30,7 +30,10 @@ ul ol {
   margin-bottom: 0;
 }
 
-dt { font-weight: 700; }
+dt {
+  font-weight: 700;
+  margin-bottom: 0 !important;
+}
 
 dd {
   margin-bottom: .5rem;

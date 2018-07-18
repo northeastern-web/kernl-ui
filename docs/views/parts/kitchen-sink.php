@@ -80,10 +80,11 @@
         <p>Blockquote: I quickly explained that many big jobs involve few hazards</p>
       </blockquote>
       <blockquote>
-        <p>This is a mult-line blockquote with a cite reference. People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick
+        This is a mult-line blockquote with a cite reference. People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick
           carefully. I’m actually as proud of the things we haven’tdone as the things I have done. Innovation is saying no to 1,000 things.
-          <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite>
-        </p>
+          <footer>
+            <cite><b>Steve Jobs</b> – Apple Worldwide Developers’ Conference, 1997</cite>
+          </footer>
       </blockquote>
     </section>
     <hr>
@@ -317,8 +318,8 @@
 
         <fieldset>
           <legend>I am also legend</legend>
-          <input type="checkbox"> Check me out
-          <input type="checkbox"> Or check me out
+          <label><input type="checkbox"> Check me out</label><br>
+          <label><input type="checkbox"> Or check me out</label>
         </fieldset>
         <p>
           <button type="button" name="button">Button</button>

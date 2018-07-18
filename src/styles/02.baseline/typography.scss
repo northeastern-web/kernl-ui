@@ -207,3 +207,16 @@ hr {
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
+
+
+//
+// For font on pseudo-elements
+// * https://icomoon.io/app/#/select/library
+@font-face {
+  font-family: 'feathericons';
+  src:  url('../fonts/feathericons.eot?kn6kqz');
+  src:  url('../fonts/feathericons.eot?kn6kqz#iefix') format('embedded-opentype'),
+    url('../fonts/feathericons.ttf?kn6kqz') format('truetype'),
+    url('../fonts/feathericons.woff?kn6kqz') format('woff'),
+    url('../fonts/feathericons.svg?kn6kqz#feathericons') format('svg');
+}
