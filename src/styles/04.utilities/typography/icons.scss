@@ -3,17 +3,6 @@
 //
 // .icon--<icon>
 
-//
-// For SVG inline
-%icon {
-  position: relative;
-  display: inline-block;
-  line-height: 0;
-  text-align: left;
-  width: 2rem;
-  height: 2rem;
-}
-
 
 .feather {
   &.\--thin { stroke-width: 1; }

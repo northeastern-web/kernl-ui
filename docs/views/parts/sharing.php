@@ -9,34 +9,34 @@ define( 'SHARE_URL', url_elements() );
 
 <section class="section">
   <div class="row">
-    <div class="col --12@xs --4@md p--y-2@xs">
+    <div class="col w--1/3@t p--y-2">
       <header class="k_section__header">Base</header>
       <ul class="share">
         <li>
           <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
-            <i class="__icon feather --thin" data-feather="facebook"></i>
+            <i class="--thin" data-feather="facebook"></i>
           </a>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('twitter', '<?php echo SHARE_URL; ?>', 520, 442)">
-            <i class="__icon feather --thin" data-feather="twitter"></i>
+            <i class="--thin" data-feather="twitter"></i>
           </a>
         </li>
         <li>
           <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
-            <i class="__icon feather --thin" data-feather="briefcase"></i>
+            <i class="--thin" data-feather="linkedin"></i>
           </a>
         </li>
         <li>
           <a id="podshare_email" href="javascript:PODShare('email', '<?php echo SHARE_URL; ?>', 100, 100)">
-            <i class="__icon feather --thin" data-feather="mail"></i>
+            <i class="--thin" data-feather="mail"></i>
           </a>
         </li>
       </ul>
     </div>
 
-    <div class="col --12@xs --4@md p--y-2@xs">
+    <div class="col w--1/3@t p--y-2">
       <header class="k_section__header">Stacked</header>
       <ul class="share --stacked">
         <li>
@@ -51,7 +51,7 @@ define( 'SHARE_URL', url_elements() );
         </li>
         <li>
           <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
-            <i class="__icon feather --thin" data-feather="briefcase"></i>
+            <i class="__icon feather --thin" data-feather="linkedin"></i>
           </a>
         </li>
         <li>
@@ -62,7 +62,7 @@ define( 'SHARE_URL', url_elements() );
       </ul>
     </div>
 
-    <div class="col --12@xs --4@md p--y-2@xs">
+    <div class="col w--1/3@t p--y-2">
       <header class="k_section__header">Flex/Responsive</header>
       <ul class="share --flex">
         <li>
@@ -77,7 +77,7 @@ define( 'SHARE_URL', url_elements() );
         </li>
         <li>
           <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
-            <i class="__icon feather --thin" data-feather="briefcase"></i>
+            <i class="__icon feather --thin" data-feather="linkedin"></i>
           </a>
         </li>
         <li>

@@ -42,3 +42,15 @@ $card_icon_size: 1.5rem !default;
   text-align: center !important;
   border-radius: 0 !important;
 }
+
+
+//
+// For SVG inline
+%icon {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  text-align: left;
+  width: 2rem;
+  height: 2rem;
+}
