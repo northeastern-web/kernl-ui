@@ -1,7 +1,16 @@
 // Bootstrap v4
-import './bootstrap/index'
+// import './bootstrap/index'
+
+
+// Formstone
+import 'formstone';
+import 'formstone/src/js/analytics';
+import 'formstone/src/js/cookie';
+import 'formstone/src/js/swap';
 
 // Kernl(UI) items
+import './components/accordion'
+
 import './components/mastheads'
 import './components/loader'
 import './components/modal'
