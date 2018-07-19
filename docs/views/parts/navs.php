@@ -6,6 +6,10 @@
 </header>
 
 <section class="section">
+
+  <h2 class="btn swap" data-swap-target=".swap_target" data-swap-options="{'maxWidth':'500px'}">Handle</h2>
+  <div class="swap_target bc--gray pa--1 mb--2">Content</div>
+
   <div class="row">
     <div class="col w--1/2@t w--1/4@d">
       <div class="ta--c">
@@ -160,7 +164,7 @@
   </div>
 </section>
 
-<!--
+<!-- 
 <section class="section --banner --50 +bgimg +nav">
   <div class="__body">
     <h1 class="__title">Banner with Tabbed Navigation</h1>
@@ -182,8 +186,8 @@
       </li>
     </ul>
   </nav>
-</section>
--->
+</section> -->
+
 
 <section class="section">
   <header class="k_section__header">Tabbed Nav</header>
@@ -192,40 +196,40 @@
       <nav class="nav --tabbed">
         <ul class="__list" role="tablist">
           <li class="__item">
-            <a class="__link --active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Tab 1</a>
+            <a class="__link --active" data-toggle="#tab_1" href="#" role="tab" aria-expanded="true">Tab 1</a>
           </li>
           <li class="__item">
-            <a class="__link" data-toggle="tab" href="#tab_2" role="tab" aria-expanded="false">Tab 2</a>
+            <a class="__link" data-toggle="#tab_2" href="#" role="tab" aria-expanded="false">Tab 2</a>
           </li>
           <li class="__item">
-            <a class="__link" data-toggle="tab" href="#tab_3" role="tab" aria-expanded="false">Tab 3</a>
+            <a class="__link" data-toggle="#tab_3" href="#" role="tab" aria-expanded="false">Tab 3</a>
           </li>
           <li class="__item">
-            <a class="__link" data-toggle="tab" href="#tab_4" role="tab" aria-expanded="false">Tab 4</a>
+            <a class="__link" data-toggle="#tab_4" href="#" role="tab" aria-expanded="false">Tab 4</a>
           </li>
         </ul>
       </nav>
 
-      <!--
+      
       <div class="nav__content">
-        <div class="hidden pt--1@xs --active" id="tab_1" role="tabpanel">
+        <div class="hidden pt--1@xs --active" id="tab_1" role="tabpanel" data-target>
           <h3>Content 1</h3>
           <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-        <div class="hidden pt--1@xs" id="tab_2" role="tabpanel">
+        <div class="hidden pt--1@xs" id="tab_2" role="tabpanel" data-target>
           <h3>Content 2</h3>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.</p>
         </div>
-        <div class="hidden pt--1@xs" id="tab_3" role="tabpanel">
+        <div class="hidden pt--1@xs" id="tab_3" role="tabpanel" data-target>
           <h3>Content 3</h3>
           <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
         </div>
-        <div class="hidden pt--1@xs" id="tab_4" role="tabpanel">
+        <div class="hidden pt--1@xs" id="tab_4" role="tabpanel" data-target>
           <h3>Content 4</h3>
           <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
         </div>
       </div>
-      -->
+      
     </div>
   </div>
 </section>

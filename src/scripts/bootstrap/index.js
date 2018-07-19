@@ -6,9 +6,9 @@
 // import Modal from './modal'
 // import Popover from './popover'
 // import Scrollspy from './scrollspy'
-import Tab from './tab'
+// import Tab from './tab'
 // import Tooltip from './tooltip'
-import Util from './util'
+// import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
@@ -34,16 +34,16 @@ import Util from './util'
   }
 })($)
 
-export {
-  Util,
-  Alert,
-  Button,
-  Carousel,
-  Collapse,
-  Dropdown,
-  Modal,
-  Popover,
-  Scrollspy,
-  Tab,
-  Tooltip
-}
+// export {
+//   Util,
+//   Alert,
+//   Button,
+//   Carousel,
+//   Collapse,
+//   Dropdown,
+//   Modal,
+//   Popover,
+//   Scrollspy,
+//   Tab,
+//   Tooltip
+// }

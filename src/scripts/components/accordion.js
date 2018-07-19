@@ -1,12 +1,14 @@
 import $ from 'jquery';
 
-let $acc = $(".acc");
+let $acc = $('.accordion [data-swap-target]');
 
 $acc
   .swap()
   .on('activate.swap', function() {
-    console.log('activate');
+    $(this).addClass('--active')
+    $($(this).attr('data-swap-target')).slideDown(600)
   })
   .on('deactivate.swap', function() {
-    console.log('deactivate');
+    $(this).removeClass('--active')
+    $($(this).attr('data-swap-target')).slideUp(600)
   });

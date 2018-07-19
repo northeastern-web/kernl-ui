@@ -78,11 +78,11 @@
     background: #fff;
   }
 
-  [data-target] {
+  [data-reveal] {
     display: none;
     position: relative;
 
-    &.\--visible { display: block; }
+    // &[data-swap-active="true"].\--visible { display: block; }
   }
 
   .__title { border-top: 0 none; }
