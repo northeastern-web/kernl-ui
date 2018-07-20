@@ -1,3 +1,7 @@
+//
+// Accordions
+//
+
 import $ from 'jquery';
 
 let $acc = $('.accordion [data-swap-target]');

@@ -1,10 +1,8 @@
-// Bootstrap v4
-
 // Formstone
-import 'formstone';
-import 'formstone/src/js/analytics';
-import 'formstone/src/js/cookie';
-import 'formstone/src/js/swap';
+import Core from 'formstone/dist/js/core';
+import 'formstone/dist/js/analytics';
+import 'formstone/dist/js/cookie';
+import 'formstone/dist/js/swap';
 
 // Kernl(UI) items
 import './components/accordion'
