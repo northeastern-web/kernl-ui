@@ -24,7 +24,7 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             </div>
             <div class="__content" id="toggle_' . $id . 'a" data-swap-active="true">
               <div class="__copy">
-                <p>To show an open panel by default, include the class <code>--visible</code> with <code>__content</code>. Omit <code>--visible</code> to load the accordion with all panels closed.</p>
+                <p>To show an open panel by default, include the class <code>--visible</code> with <code>__title</code>. Omit <code>--visible</code> to load the accordion with all panels closed.</p>
                 <p>Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
               </div>
             </div>

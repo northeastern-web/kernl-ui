@@ -7,13 +7,10 @@
 
 <section class="section">
 
-  <h2 class="btn swap" data-swap-target=".swap_target" data-swap-options="{'maxWidth':'500px'}">Handle</h2>
-  <div class="swap_target bc--gray pa--1 mb--2">Content</div>
-
   <div class="row">
     <div class="col w--1/2@t w--1/4@d">
-      <div class="ta--c">
-        <button class="hidden--up@t btn --sm" data-toggle="#page_menu_0">
+      <div class="hidden--up@t ta--c">
+        <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_0">
           <i class="__icon --left" data-feather="align-left"></i>
           Page Menu
         </button>
@@ -39,8 +36,8 @@
       </nav>
     </div>
     <div class="col w--1/2@t w--1/4@d">
-      <div class="ta--c">
-        <button class="hidden--up@t btn --sm" data-toggle="#page_menu_1">
+      <div class="hidden--up@t ta--c">
+        <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_1">
           <i class="__icon --left" data-feather="align-left"></i>
           Page Menu
         </button>
@@ -74,8 +71,8 @@
       </nav>
     </div>
     <div class="col w--1/2@t w--1/4@d">
-      <div class="ta--c">
-        <button class="hidden--up@t btn --sm" data-toggle="#page_menu_2">
+      <div class="hidden--up@t ta--c">
+        <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_2">
           <i class="__icon --left" data-feather="align-left"></i>
           Page Menu
         </button>
@@ -111,8 +108,8 @@
       </nav>
     </div>
   <div class="col w--1/2@t w--1/4@d">
-    <div class="ta--c">
-      <button class="hidden--up@t btn --sm" data-toggle="#page_menu_3">
+    <div class="hidden--up@t ta--c">
+      <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_3">
         <i class="__icon --left" data-feather="align-left"></i>
         Page Menu
       </button>

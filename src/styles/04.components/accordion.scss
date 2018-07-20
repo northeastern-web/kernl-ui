@@ -72,6 +72,8 @@
     &.\--active { &:after { content: "\e95c"; } } // minus
   }
 
+  .__title { border-top: 0 none; }
+
   .__copy {
     padding: 1rem 3rem 1rem 0.75rem;
     font-size: $fs-sm;
@@ -86,8 +88,6 @@
   .\--visible + .__content {
     display: block;
   }
-
-  .__title { border-top: 0 none; }
 }
 
 .accordion .card {
