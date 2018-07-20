@@ -12,3 +12,10 @@ $('[data-dismiss="modal"]').on('click touch', function() {
   $(this).parents('.modal').removeClass('--active');
   $('body').removeClass('of--hidden');
 });
+
+$(document).on('keyup', function(e) {
+  if (e.keyCode == 27) {
+    $('.modal').removeClass('--active');
+    $('body').removeClass('of--hidden');
+  }
+});

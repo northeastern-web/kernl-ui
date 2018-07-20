@@ -24,7 +24,7 @@
     display: flex;
     width: auto;
     padding: 2rem;
-    margin: 0 auto;
+    margin: 4rem auto 2rem;
     max-width: 450px;
     max-height: 96vh;
     overflow-y: scroll;
@@ -56,8 +56,12 @@
   &.\--xl {
     .__content {
       @include mqbp-up(t) {
-        max-width: 96%;
+        max-width: 86%;
         height: 100%;
+      }
+
+      @include mqbp-up(d) {
+        max-width: 92%;
       }
     }
   }
@@ -68,7 +72,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.85);
   }
 
   .__close {
@@ -80,12 +84,16 @@
     cursor: pointer;
     background: 0 none;
     border: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
     text-shadow: 0 1px 0 #fff;
     opacity: .85;
     transition: opacity 0.2s ease;
     z-index: 60;
+
+    .feather {
+      stroke-width: 3;
+    }
 
     &:hover,
     &:focus,
