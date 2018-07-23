@@ -20,9 +20,9 @@
         <i data-feather="video"></i>
         Inline Badge
       </div>
-      <div class="badge bg--purple br--pill --right">
+      <div class="badge bg--purple br--pill">
         Inline Badge
-        <i data-feather="settings"></i>
+        <i data-feather="settings" class="--right"></i>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@
         <div class="badge__wrapper bg--img">
           <div
             data-component="badge"
-            class="badge --left<?= $i == 2 ? ' bg--red' : ''; ?><?= $i == 3 ? ' bg--black' : ''; ?>">
+            class="badge --left<?= $i == 1 ? ' bg--white-alpha' : ''; ?><?= $i == 2 ? ' bg--red' : ''; ?><?= $i == 3 ? ' bg--black' : ''; ?>">
               <a href="#">Badge (Link)</a>
               <i class="__icon icon--video"></i>
           </div>
@@ -44,7 +44,7 @@
         <div class="badge__wrapper bg--img">
           <div
             data-component="badge"
-            class="badge --center<?= $i == 4 ? ' bg--red' : ''; ?><?= $i == 5 ? ' bg--black' : ''; ?>">
+            class="badge --center<?= $i == 4 ? ' bg--white-alpha' : ''; ?><?= $i == 5 ? ' bg--red' : ''; ?><?= $i == 6 ? ' bg--black' : ''; ?>">
             Badge Center
           </div>
         </div>
@@ -55,7 +55,7 @@
         <div class="badge__wrapper bg--img">
           <div
             data-component="badge"
-            class="badge --right br--pill<?= $i == 9 ? ' bg--red' : ''; ?><?= $i == 7 ? ' bg--black' : ''; ?>">
+            class="badge --right br--pill mt--0h mr--0h<?= $i == 8 ? ' bg--white-alpha' : ''; ?><?= $i == 9 ? ' bg--red' : ''; ?><?= $i == 7 ? ' bg--black' : ''; ?>">
             Badge Right (Pill)
           </div>
         </div>
