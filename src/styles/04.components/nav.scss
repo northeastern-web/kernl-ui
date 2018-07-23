@@ -97,7 +97,9 @@
   }
 }
 
-// Interior
+// --
+// Nav Options
+
 .nav.\--interior {
   display: none;
 
@@ -171,7 +173,6 @@
   }
 }
 
-// Tabs
 .nav.\--tabbed {
   .__list { margin-bottom: 0; }
 
@@ -264,7 +265,6 @@
   }
 }
 
-// pagination
 .nav.\--pagination {
   .__list {
     padding-left: 0;
@@ -300,16 +300,21 @@
   }
 }
 
-.nav__content.\--bordered {
-  padding: 1rem 1.5rem;
-  border: 1px solid $gray-200;
-  border-top: 0 none;
+// --
+// Nav Wrappers
+
+.nav__content {
+  .hidden.\--active { display: block !important; }
+
+  .\--bordered {
+    padding: 1rem 1.5rem;
+    border: 1px solid $gray-200;
+    border-top: 0 none;
+  }
 }
 
-.nav__content .hidden {
-  &.\--active { display: block !important; }
-}
-
+// --
+// Banner option
 
 .\+nav .\--tabbed {
   overflow: auto;
