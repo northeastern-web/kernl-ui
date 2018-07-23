@@ -70,17 +70,10 @@
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
-    transform: scale(1);
-    transform-origin: center;
-    transition: transform 0.2s ease;
   }
 
   &:hover {
     box-shadow: $box-shadow-inset-hover;
-
-    .__graphic__img {
-      transform: scale(1.04);
-    }
   }
 
   // --
@@ -278,6 +271,63 @@
       &.\--v\@#{$breakpoint} {
         .__body {
           @include padding-bottom-gutter();
+        }
+      }
+    }
+  }
+
+  &.\--zoom {
+    .__graphic__img {
+      transform: scale(1);
+      transform-origin: center;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      .__graphic__img {
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  &.\--transparent {
+    box-shadow: none;
+
+    .__body { padding-top: 1rem; }
+
+    .__body,
+    .__footer {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    &.\--h {
+      .__body {
+        @include card-padding();
+        padding-top: 0;
+      }
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+      @include mqbp-up($breakpoint) {
+        &.\--h\@#{$breakpoint} {
+          .__body { padding-top: 0; }
+        }
+      }
+
+      // don't adjust anything above this line!
+
+      @include mqbp-up($breakpoint) {
+        &.\--v\@#{$breakpoint} {
+          @include mqbp-up($breakpoint) {
+            .__body { padding-top: 1rem; }
+
+            .__body,
+            .__footer {
+              padding-right: 0;
+              padding-left: 0;
+            }
+          }
         }
       }
     }
