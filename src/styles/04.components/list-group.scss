@@ -8,6 +8,7 @@
   position: relative;
   margin-bottom: 1rem;
 
+  // style the immediate first child regardless of item
   >* {
     display: block;
     position: relative;
@@ -26,7 +27,6 @@
     &:last-child { border: 0 none; }
   }
 
-  // Link base
   a {
     display: block;
     color: inherit;
@@ -35,7 +35,6 @@
     &:hover { background-color: $gray-50; }
   }
 
-  // Styles
   &.\--white { @include list_group_variant($type-color, #fff); }
 
   &.\--dark { @include list_group_variant(#fff, rgba($type-color, 0.5)); }
@@ -53,15 +52,24 @@
     >* { padding: 0.5rem 0.75rem; }
   }
 
+  // --
   // Icons
-  .feather {
+
+  // nested icon (defaults assume icon to the left)
+  .feather,
+  .icon {
     margin: 0 .5rem 0 0;
     width: 1rem;
     height: 1rem;
   }
+
+  // adjust margin for positioning icon on the right
   &.\--right .feather { margin: 0 .5rem 0 0; }
 
+  // --
   // Interaction
+
+  // adds a slide in effect on hover
   &.\--indent {
     > * {
       transition: all 0.3s ease-out;
