@@ -3,18 +3,19 @@
 
 
 .masthead {
+  @extend .fs--smooth;
+  @include make-section();
   display: flex;
   flex-wrap: wrap;
   position: relative;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 1rem;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
   overflow: visible;
   z-index: 1000 !important;
   border-bottom: 1px solid rgba(177, 177, 177, 0.2);
-  @include make-section();
-  @extend .fs--smooth;
 
   .__logo {
     max-width: 240px;
@@ -230,22 +231,9 @@
 
   // position the nav over an image or background
   &.\--overlay {
-    > .__logo,
-    > .__toggler {
-      position: absolute;
-      top: 0;
-    }
+    position: absolute;
 
-    > .__toggler {
-      color: #fff;
-      right: 0;
-    }
-
-    // Adjust banner accordingly
-    ~ main .\--banner {
-      padding-top: 12rem;
-      padding-bottom: 6rem;
-    }
+    > .__toggler { color: #fff; }
 
     @include mqbp-up(d) {
       position: absolute;
@@ -263,8 +251,6 @@
   // add a border to the bottom of active nav link
   &.\+border {
     @include mqbp-up(d) {
-      .__logo { margin-top: 1.6rem; }
-
       .__list:not(.\--utility) {
         .__link,
         .__item > a {
@@ -284,16 +270,10 @@
         }
       }
     }
-
-    @include mqbp-up(w) {
-      .__logo { margin-top: 1.7rem; }
-    }
   }
 
   &.\--megamenu {
     @include mqbp-up(d) {
-      .__logo { margin-top: 1.625rem; }
-
       .__list,
       .__item { position: static; }
 
@@ -309,6 +289,9 @@
         }
 
         .__submenu {
+          @include make-row();
+          display: flex;
+          flex-wrap: wrap;
           padding-top: 0 !important;
           padding-bottom: 0 !important;
           top: 5.85rem;
@@ -336,7 +319,6 @@
           }
 
           > li {
-            padding: 1rem 1.5rem 1rem 0;
             margin-top: 1rem;
             margin-bottom: 1rem;
           }
@@ -437,10 +419,6 @@
           }
         }
       }
-    }
-
-    @include mqbp-up(w) {
-      .__logo { margin-top: 1.75rem; }
     }
   }
 
@@ -571,7 +549,6 @@
   &.\--megamenu .\+children .__submenu {
     display: none;
     flex-wrap: wrap;
-    // @include make-megamenu();
 
     @include mqbp-up(d) { display: flex; }
   }
@@ -595,16 +572,6 @@
     }
   }
 }
-/*
-.full .masthead {
-  @include make-masthead('full');
-  &.\--megamenu .\+children .__submenu { @include make-megamenu('full'); }
-}
-
-.contain .masthead {
-  @include make-masthead('contain', $contain: $contain-width);
-  &.\--megamenu .\+children .__submenu { @include make-megamenu('contain', $contain: $contain-width); }
-} */
 
 
 @keyframes bump {
