@@ -15,10 +15,7 @@
   bottom: 0;
   left: 0;
 
-  &.\--active {
-    display: flex;
-  }
-
+  // centered content within modal
   .__content {
     position: relative;
     display: flex;
@@ -35,6 +32,48 @@
       max-width: 760px;
     }
   }
+
+  // dark screen as modal backdrop
+  .__screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($black, 0.85);
+  }
+
+  // close button in top right corner of browser window
+  .__close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    background: 0 none;
+    border: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .85;
+    transition: opacity 0.2s ease;
+    z-index: 60;
+
+    .feather { stroke-width: 3; }
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+      outline: none;
+    }
+  }
+
+  // --
+  // Modifiers
+
+  &.\--active { display: flex; }
 
   &.\--sm {
     .__content {
@@ -62,43 +101,6 @@
       @include mqbp-up(d) {
         max-width: 92%;
       }
-    }
-  }
-
-  .__screen {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.85);
-  }
-
-  .__close {
-    position: absolute;
-    top: 0.25rem;
-    right: 0.5rem;
-    padding: 0.5rem;
-    color: #fff;
-    cursor: pointer;
-    background: 0 none;
-    border: 0;
-    font-size: 2rem;
-    font-weight: 400;
-    text-shadow: 0 1px 0 #fff;
-    opacity: .85;
-    transition: opacity 0.2s ease;
-    z-index: 60;
-
-    .feather {
-      stroke-width: 3;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      opacity: 1;
-      outline: none;
     }
   }
 }
