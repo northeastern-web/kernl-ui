@@ -1,6 +1,5 @@
 // Global Methods
 // Colors
-//
 
 
 @mixin bg_variant($color, $color_light, $color_dark, $text) {
@@ -51,8 +50,8 @@
   color: $color;
 }
 
+// Mixin to loop through color palette creating color variants
 @mixin make_colors($component) {
-  // Loop through color palette
   @each $label, $color, $color_light, $color_dark, $text in $palette {
     .#{$component}--#{$label} {
       @if $component == 'bg' { @include bg_variant($color, $color_light, $color_dark, $text); }

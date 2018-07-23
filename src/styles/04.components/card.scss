@@ -19,8 +19,9 @@
     flex-direction: column;
   }
 
-  //
-  // Body
+  // --
+  // Block level
+
   .__body {
     @include card-padding();
     font-size: 100%;
@@ -33,8 +34,6 @@
     }
   }
 
-  //
-  // Titles (within .__body)
   .__title {
     line-height: 1.25;
     font-weight: 700;
@@ -43,10 +42,9 @@
   }
 
   .__pretitle { margin-bottom: 0.2rem; }
+
   .__subtitle { font-size: 110%; }
 
-  //
-  // Card Footer
   .__footer {
     @extend .justify-self--end;
     @include card-padding();
@@ -54,8 +52,6 @@
     font-size: 87.5%;
   }
 
-  //
-  // Graphics
   .__graphic {
     @extend .ar;
     padding-top: 56.25%;
@@ -67,6 +63,7 @@
     background-color: $gray-400;
   }
 
+  // pins the <img>
   .__graphic__img {
     @extend .pin;
     flex-shrink: 0;
@@ -86,16 +83,16 @@
     }
   }
 
-  //
+  // --
   // Modifiers
 
-  // Tile variant
+  // Smaller variant of .card
   &.\--tile {
     @include type-xs();
     .__body { padding: 1rem; }
   }
 
-  // Overlay variant
+  // Overlay's block level items to card
   &.\--overlay {
     color: #fff;
     min-height: $tile_overlay_height;

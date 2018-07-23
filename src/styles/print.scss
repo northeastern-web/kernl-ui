@@ -1,3 +1,7 @@
+// Styles
+// Print
+
+
 @media print {
   @page {
     size: letter portrait;
@@ -122,7 +126,7 @@
     flex-basis: 94%;
     max-width: 94%;
   }
-  
+
   nav,
   .wp-prev-next,
   .__toggler,
