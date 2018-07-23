@@ -33,16 +33,23 @@
 
   &:focus { outline: none; }
 
-  .feather {
+  // --
+  // Icons
+
+  // nested icon (defaults assume icon to the left)
+  .feather,
+  .icon {
     margin: 0 ($btn-fs/2) 0 (-$btn-fs/2);
     height: $btn-fs;
     width: $btn-fs;
   }
 
+  // adjust margin for positioning icon on the right
   &.\--right .feather { margin: 0 0 0 ($btn-fs/2); }
 
-  //
+  // --
   // Sizing
+
   &.\--sm {
     padding: $btn-sm-padding-t $btn-sm-padding-x $btn-sm-padding-b;
     font-size: $btn-sm-fs;
@@ -56,7 +63,10 @@
     &.\--right .feather { margin: 0 (-$btn-sm-fs/2.5) 0 ($btn-sm-fs/2); }
   }
 
-  // Block
+  // --
+  // Modifiers
+
+  // extends button to fill area of container
   &.\--block {
     display: block;
     width: 100%;
@@ -76,6 +86,10 @@
   }
 }
 
+// --
+// Wrappers
+
+// groups a set of buttons to appear flush together
 .btn__group {
   display: flex;
   flex-flow: row nowrap;
