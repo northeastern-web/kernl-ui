@@ -1,16 +1,17 @@
 // Components
 // Footer
+//
+// legacy Northeastern footer
 
 
 .footer {
+  @extend %clearfix;
   padding-top: 2rem;
   padding-bottom: 4rem;
   background: $black;
   color: #eee;
   font-size: $fs-sm;
   line-height: 1.7;
-
-  @extend %clearfix;
 
   a { color: inherit; }
 
