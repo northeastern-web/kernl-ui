@@ -6,13 +6,46 @@
   @include accordion_variant();
   border: 1px solid rgba($black, 0.2);
 
-  .__item {
-    border-top: 1px solid rgba($black, 0.2);
+  > .__item {
     padding-top: 0;
     margin-bottom: 0;
+    border-top: 1px solid rgba($black, 0.2);
 
     &:first-child { border-top: 0 none; }
+
+    > .__title {
+      padding: 1rem 3rem 1rem 0.75rem;
+      cursor: pointer;
+      position: relative;
+
+      &:after {
+        content: "\e970"; // plus icon
+        font-family: "feathericons";
+        font-weight: normal;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+      }
+
+      &.\--active {
+        &:after { content: "\e95c"; } // minus icon
+      }
+    }
   }
+
+  .__content {
+    display: none;
+    position: relative;
+  }
+
+  .__copy {
+    padding: 1rem 3rem 1rem 0.75rem;
+    font-size: $fs-sm;
+    background: #fff;
+  }
+
+  // --
+  // Modifiers
 
   &.\--white {
     @include accordion_variant($type-color, #fff, #fff);
@@ -53,41 +86,12 @@
     }
   }
 
-  > .__item > .__title {
-    padding: 1rem 3rem 1rem 0.75rem;
-    cursor: pointer;
-    position: relative;
-
-    &:after {
-      position: absolute;
-      font-family: "feathericons";
-      content: "\e970"; // plus
-      font-weight: normal;
-      top: 1rem;
-      right: 1.5rem;
-    }
-
-    &.\--active { &:after { content: "\e95c"; } } // minus
-  }
-
-  .__title { border-top: 0 none; }
-
-  .__copy {
-    padding: 1rem 3rem 1rem 0.75rem;
-    font-size: $fs-sm;
-    background: #fff;
-  }
-
-  .__content {
-    display: none;
-    position: relative;
-  }
-
   .\--visible + .__content {
     display: block;
   }
 }
 
+// card contained within an accordion
 .accordion .card {
   &:first-child .__title { border-top: 0 none; }
 }

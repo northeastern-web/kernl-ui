@@ -42,7 +42,9 @@
   }
 }
 
-// Accordions
+// --
+// Component Color Variants
+
 @mixin accordion_variant($color: $type-color, $trigger: rgba(0,0,0,0.05), $background: transparent) {
   > .__item > .__title {
     background: $trigger;
@@ -60,7 +62,6 @@
   }
 }
 
-// List Groups
 @mixin list_group_variant($color: inherit, $background: transparent, $striped: rgba(255, 255, 255, 0.1)) {
   background: $background;
 
