@@ -1,9 +1,8 @@
 // Components
 // Form
-//
-// Custom form units (mainly wrappers)
 
 
+// Wrapper for enclosed inputs
 .form__enclosed {
   @extend %clearfix;
   position: relative;
@@ -89,6 +88,7 @@
   }
 }
 
+// wrapper for checkboxes
 .form__check {
   label { display: block; }
 

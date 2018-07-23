@@ -1,6 +1,8 @@
-/*
- * Modal show/hide
- */
+// Components
+// Modal
+
+
+import $ from 'jquery';
 
 $('[data-toggle="modal"]').on('click touch', function() {
   let target = $(this).attr('data-target');

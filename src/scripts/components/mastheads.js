@@ -1,6 +1,8 @@
-/**
- * Mastheads
- */
+// Components
+// Masthead
+
+
+import $ from 'jquery';
 
 /* Reveal mobile navigation */
 $('.masthead .__toggler').on('click touch', () => {

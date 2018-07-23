@@ -1,6 +1,5 @@
 // Components
 // Masthead
-//
 
 
 .masthead {
@@ -596,7 +595,7 @@
     }
   }
 }
-/* 
+/*
 .full .masthead {
   @include make-masthead('full');
   &.\--megamenu .\+children .__submenu { @include make-megamenu('full'); }

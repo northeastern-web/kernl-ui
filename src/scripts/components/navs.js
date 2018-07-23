@@ -1,10 +1,9 @@
-//
-// Navs
-//
+// Components
+// Nav
+
 
 import $ from 'jquery';
 
-//
 // On-screen nav toggle for small screens
 let $navToggle = $('[data-toggle="nav"][data-swap-target]')
 
