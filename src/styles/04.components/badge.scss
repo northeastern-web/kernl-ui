@@ -20,10 +20,16 @@
 
   a {
     color: inherit;
+
     &:hover { text-decoration: none; }
   }
 
-  .feather {
+  // --
+  // Icons
+
+  // nested icon (defaults assume icon to the left)
+  .feather,
+  .icon {
     margin: 0 ($fs-xs/2) 0 0;
     height: $fs-xs;
     width: $fs-xs;
@@ -31,5 +37,6 @@
     top: 2px;
   }
 
+  // adjust margin for positioning icon on the right
   &.\--right .feather { margin: 0 0 0 ($fs-xs/2); }
 }
