@@ -2,6 +2,7 @@
 // Column
 
 
+// baseline column component (extend using width utility)
 .col {
   @include make-gutters();
   display: block;
@@ -11,7 +12,7 @@
   margin-bottom: 1rem;
 }
 
-// Rows contain columns
+// wrapper for .col items
 .row {
   @include make-row();
   display: flex;
