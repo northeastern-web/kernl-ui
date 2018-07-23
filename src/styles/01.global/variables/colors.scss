@@ -2,11 +2,11 @@
 // Colors
 
 
-$white:         #ffffff !default; // *Marketing
+$white:         #ffffff !default; // Marketing
 $white-alpha:   rgba($white, 0.3) !default;
-$black:         #000000 !default; // *Marketing
+$black:         #000000 !default; // Marketing
 $black-alpha:   rgba($black, 0.4) !default;
-$gray:          #979797 !default; // *Marketing
+$gray:          #979797 !default; // Marketing
 $gray-50:       #f7f7f7 !default;
 $gray-100:      #efefef !default;
 $gray-200:      #d0d0d0 !default;
@@ -17,9 +17,9 @@ $gray-600:      #666666 !default;
 $gray-700:      #58595b !default;
 $gray-800:      #333333 !default;
 $gray-900:      #1a1a1a !default;
-$red:           #cc0000 !default; // *Marketing
-$red-dark:      #930000 !default; // *Marketing
-$red-light:     #da3426 !default; // *Marketing
+$red:           #cc0000 !default; // Marketing
+$red-dark:      #930000 !default; // Marketing
+$red-light:     #da3426 !default; // Marketing
 $orange:        #e25734 !default;
 $yellow:        #ffc50b !default;
 $green:         #aebf37 !default;
@@ -27,9 +27,11 @@ $teal:          #2e9aa9 !default;
 $blue:          #2b7be3 !default;
 $blue-dark:     #2e4962 !default;
 $purple:        #824091 !default;
-$beige:         #ece6d5 !default; // *Marketing
+$beige:         #ece6d5 !default; // Marketing
 
-// ** Full color palette collection
+// --
+// Color palette collection
+
 // ('label', $color, $light, $dark, $text);
 $palette: (
   ('white', $white, rgba($white, 0.8), $gray-100, 'dark'),
