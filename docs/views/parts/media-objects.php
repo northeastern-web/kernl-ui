@@ -1,7 +1,7 @@
-<section class="section measure mx--auto">
+<section class="section">
   <header class="k_section__header">Base</header>
   <div class="row">
-    <div class="col --12@xs --6@lg">
+    <div class="col w--50@t">
       <p class="text-style-block">Default: thumb on the left</p>
       <div class="media --xs">
         <a class="__link" href="#">
@@ -40,7 +40,7 @@
         </a>
       </div>
     </div>
-    <div class="col --12@xs --6@lg">
+    <div class="col w--50@t">
       <p class="text-style-block">Variation: thumb on the right</p>
       <div class="media --xs --right">
         <a class="__link" href="#">
@@ -83,12 +83,12 @@
 </section>
 
 <!-- media object list -->
-<section class="section measure mx--auto">
+<section class="section">
   <header class="k_section__header">Media Object List</header>
   <div class="row">
-    <div class="col --12@xs --6@lg">
+    <div class="col w--50@t">
       <p class="text-style-block">Default: circular thumb</p>
-      <ul class="list-group +media">
+      <ul class="list-group --media">
         <li class="media">
           <a class="__link" href="#">
             <figure class="__graphic"></figure>
@@ -127,9 +127,9 @@
         </li>
       </ul>
     </div>
-    <div class="col --12@xs --6@lg">
+    <div class="col w--50@t">
       <p class="text-style-block">Variation: rectangular thumb</p>
-      <ul class="list-group +media --rect">
+      <ul class="list-group --media --rect">
         <li class="media">
           <a class="__link" href="#">
             <figure class="__graphic"></figure>
@@ -171,51 +171,15 @@
   </div>
 </section>
 
-<!-- media object list -->
-<section class="section bg--gray-100 pb--2@xs section measure mx--auto">
-  <header class="k_section__header">Media Object Row (lg+)</header>
-    <ul class="list-group +media --rect --row">
-      <li class="media">
-        <a class="__link" href="#">
-          <figure class="__graphic"></figure>
-          <div class="__body">
-            <div class="__title">This: media object list item.</div>
-          <p class="__copy">Donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </li>
-      <li class="media">
-        <a class="__link" href="#">
-          <figure class="__graphic"></figure>
-          <div class="__body">
-            <div class="__title">Another media object list item.</div>
-            <p class="__copy">Praesent commodo cursus magna, vel scelerisque.</p>
-          </div>
-        </a>
-      </li>
-      <li class="media">
-        <a class="__link" href="#">
-          <figure class="__graphic"></figure>
-          <div class="__body">
-            <div class="__title">Three shall be the number thou shalt count.</div>
-            <p class="__copy">Four shalt thou not count, nor either count thou two.</p>
-          </div>
-        </a>
-      </li>
-    </ul>
-</section>
-
 <!-- Equal-height Variant -->
-<section class="section measure mx--auto">
+<section class="section">
   <header class="k_section__header">Equal-height Variant</header>
-  <div class="alert bg--gray-100 bc--gray-700">
-    <div class="__body">
-      <p class="fs--sm">Add <code>--equal</code> class to <code>media</code> element. Makes media objects within a row equal height. <b>Note</b>: Padding should be applied in the column's custom classes on the Wordpress backend.</p>
-    </div>
+  <div class="bg--beige pa--1 mb--1 br--pill fs--xs">
+    Add <code>h--100</code> class to <code>media</code> element. Makes media objects within a row equal height. <b>Note</b>: Padding should be applied in the column's custom classes on the Wordpress backend.
   </div>
   <div class="row">
-    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
-      <div class="media --equal">
+    <div class="col w--50@t w--1/3@d">
+      <div class="media h--100">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">
@@ -225,8 +189,8 @@
         </a>
       </div>
     </div>
-    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
-      <div class="media --equal">
+    <div class="col w--50@t w--1/3@d">
+      <div class="media h--100">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">
@@ -236,8 +200,8 @@
         </a>
       </div>
     </div>
-    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
-      <div class="media --equal">
+    <div class="col w--50@t w--1/3@d">
+      <div class="media h--100">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">
@@ -247,8 +211,8 @@
         </a>
       </div>
     </div>
-    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
-      <div class="media --equal">
+    <div class="col w--50@t w--1/3@d">
+      <div class="media h--100">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">
@@ -258,8 +222,8 @@
         </a>
       </div>
     </div>
-    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
-      <div class="media --equal">
+    <div class="col w--50@t w--1/3@d">
+      <div class="media h--100">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">
@@ -269,8 +233,8 @@
         </a>
       </div>
     </div>
-    <div class="col --12@xs --6@md --4@lg pb--1@xs pb--2@md">
-      <div class="media --equal">
+    <div class="col w--50@t w--1/3@d">
+      <div class="media h--100">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">

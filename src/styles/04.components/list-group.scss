@@ -35,6 +35,10 @@
     &:hover { background-color: $gray-50; }
   }
 
+
+  // --
+  // Modifiers
+
   &.\--white { @include list_group_variant($type-color, #fff); }
 
   &.\--dark { @include list_group_variant(#fff, rgba($type-color, 0.5)); }
@@ -50,6 +54,35 @@
     border: 1px solid $gray-200;
 
     >* { padding: 0.5rem 0.75rem; }
+  }
+
+  // removes style of default media objects within list-group
+  &.\--media {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .media {
+      margin: 0;
+      border-bottom: 1px solid $gray-200;
+      padding: 0 !important;
+      box-shadow: none;
+
+      &:last-child { border-bottom: 0 none; }
+
+      &:hover {
+        .__body {
+          opacity: 0.7;
+          transition: opacity 0.2s ease;
+        }
+      }
+    }
+
+    .__link {
+      padding: 1rem 0.5rem;
+
+      &:hover { box-shadow: none; }
+    }
   }
 
   // --

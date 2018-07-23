@@ -49,9 +49,7 @@
   .__body {
     flex: 1;
 
-    p:last-child {
-      margin-bottom: 0;
-    }
+    p:last-child { margin-bottom: 0; }
   }
 
   .__title {
@@ -62,16 +60,20 @@
 
   .__copy { font-size: $fs-sm; }
 
-  // Positioning
-  &.\--left {}
+  // --
+  // Modifiers
+
+  // position __graphic to right (default assumes left)
   &.\--right {
     .__body { order: 1; }
+
     .__graphic {
       order: 2;
       margin: 0 0 0 1rem;
     }
   }
 
+  // alter __graphic into a rectangle
   &.\--rect {
     .__graphic {
       border-radius: 0;
