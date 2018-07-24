@@ -14,7 +14,7 @@ $colors = [
   ['white','White']
 ];
 
-include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_colors.php';
+include 'docs/views/partials/_colors.php';
 
 $i = 0;
 $j = 0;

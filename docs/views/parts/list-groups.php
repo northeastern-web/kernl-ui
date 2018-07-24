@@ -1,4 +1,4 @@
-<?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_list-groups.php'; ?>
+<?php include 'docs/views/partials/_list-groups.php'; ?>
 
 <section class="section">
   <header class="k_section__header">Base Style</header>

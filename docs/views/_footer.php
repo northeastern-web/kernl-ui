@@ -4,4 +4,4 @@
 </footer>
 
 <script src="//code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-<script src="/dist/scripts/main.js"></script>
+<script src="<?= $url; ?>/dist/scripts/main.js"></script>

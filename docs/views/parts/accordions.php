@@ -1,5 +1,5 @@
 <?php
-include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_accordions.php';
+include 'docs/views/partials/_accordions.php';
 // $id, $variant, $section_class, $acc_class
 $bg_param = (isset($_GET['bg']) ? $_GET['bg'] : null);
 ?>
