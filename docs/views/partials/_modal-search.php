@@ -14,7 +14,7 @@
           <button type="submit" class="btn">Go</button>
         </div>
         <div class="__group --check --inline">
-          <label class="__check__label">
+          <label class="__check__label mr--1">
             <input type="radio" name="opt">
             Check me out
           </label>
@@ -26,4 +26,7 @@
       </form>
     </div>
   </div>
+  <button type="button" class="__close" data-dismiss="modal" aria-label="Close">
+    <i data-feather="x"></i>
+  </button>
 </div>

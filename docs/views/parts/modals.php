@@ -85,29 +85,19 @@
            aria-labelledby="modal_base_label"
            aria-hidden="true">
         <div class="__screen" data-dismiss="modal"></div>
-        <div class="__content bg--white">
+        <div class="__content bg--white pa--0">
           
           <div class="row">
-            <div class="col w--1/3@t">
-              <div class="__graphic"></div>
-            </div>
-            <div class="col w--2/3@t">
-              <div class="__header">
+            <div class="col w--2/3@t ow--1/6@t">
+              <div class="__graphic --1x1 w--1/3@d f--r@d"></div>
+              <div class="__body">
                 <h3 class="__title">David Mary Davenport</h3>
                 <p class="__subtitle">Curabitur Blandit Tempus Porttitor<br>
                 Egestas Eget Quam, Venenatis</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col w--1/3@t">
-              <div class="__meta">
-                <p><a href="#">d.m.davenport@northeastern.edu</a><br>
-                617.373.5555</p>
-              </div>
-            </div>
-            <div class="col w--2/3@t">
-              <div class="__body">
+                <div class="__meta">
+                  <p><a href="#">d.m.davenport@northeastern.edu</a><br>
+                  617.373.5555</p>
+                </div>
                 <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                 <p>Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla.</p>

@@ -23,15 +23,15 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
   +h2, +h3, +h4, +h5, +h6 { padding-top: 0.25rem; }
 }
 
-h1 { @include type_d5(); }
+h1 { @include type_d4(); }
 
-h2 { @include type_d4(); }
+h2 { @include type_d3(); }
 
-h3 { @include type_d3(); }
+h3 { @include type_d2(); }
 
-h4 { @include type_d2(); }
+h4 { @include type_d1(); }
 
-h5 { @include type_d1(); }
+h5 { @include type_root(); }
 
 h6 {
   font-size: $fs-root;

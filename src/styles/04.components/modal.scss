@@ -15,12 +15,15 @@
   bottom: 0;
   left: 0;
 
+  // --
+  // Block level
+
   // centered content within modal
   .__content {
     position: relative;
     display: flex;
     padding: 2rem;
-    margin: 4rem auto 2rem;
+    margin: 4rem auto 5rem;
     max-width: 450px;
     max-height: 96vh;
     overflow-y: scroll;
@@ -31,6 +34,25 @@
     @include mqbp-up(t) {
       max-width: 760px;
     }
+  }
+
+  .__body {
+    @include card-padding();
+    font-size: 100%;
+    flex: 1;
+  }
+
+  // requires width and aspect ratio utility on this element 
+  .__graphic {
+  }
+
+  // pins the <img>
+  .__graphic__img {
+    @extend .pin;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
   }
 
   // dark screen as modal backdrop

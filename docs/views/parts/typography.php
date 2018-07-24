@@ -1,15 +1,15 @@
-<header class="section --lg +bgimg --bgfixed mb--1@xs">
+<header class="section --lg +bgimg --bgfixed mb--1">
   <div class="row">
-    <div class="col --12@xs ta--c">
+    <div class="col ta--c">
       <div class="__pretitle">What's your type?</div>
-      <h1 class="__title fs--d7 fw--300 mb--1@xs">Typography Styles</h1>
+      <h1 class="__title fs--d7 fw--300 mb--1">Typography Styles</h1>
       <div class="__subtitle fs--lead">This is a page of base typography styles for kernl(ui).</div>
     </div>
   </div>
 </header>
 <section class="section">
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <p class="fs--lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="bg--beige"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
       <ul class="ls--none fs--sm">
         <li>15px base font-size (<code>xs</code>)</li>
@@ -18,8 +18,8 @@
         <li>18px base font-size (<code>xx</code>)</li>
       </ul>
       <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-      <section class="section +bgimg mb--1@xs pa--2">
-        <p class="mb--0@xs"><b>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> in a nested banner.</b> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+      <section class="section +bgimg mb--1 pa--2">
+        <p class="mb--0"><b>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> in a nested banner.</b> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       </section>
       <p class="fs--sm">This a little note set at <code>fs--sm</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.88rem)</span>.</p>
     </div>
@@ -27,7 +27,7 @@
 </section>
 <section class="section k_bg-light">
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <h2>Here is a Heading Two <span class="show-font-size">(<span class="element-font-size"></span> @ 1.88rem)</span></h2>
       <p class="fs--lead">This is a lead paragraph <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="bg--beige"><span class="html-font-size"></span>-pixel html base</span></p>
       <p>Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
@@ -139,14 +139,14 @@
     </div>
   </div>
 </section>
-<header class="section ta--c --md bg--gray-800">
-  <div class="__pretitle mb--0h@xs"><i>Now for something completely different:</i></div>
-  <h2 class="__title fs--d6 mb--0h@xs fw--300">A Sample of Real-World Text</h2>
+<header class="section ta--c pt--3 bg--gray-800">
+  <div class="__pretitle mb--0h"><i>Now for something completely different:</i></div>
+  <h2 class="__title fs--d4 mb--0h fw--300">A Sample of Real-World Text</h2>
   <div class="__subtitle fs--lead">The text below comes from Northeastern's Faculty Handbook website</div>
 </header>
 <section class="section bg--gray-800">
   <div class="row">
-    <div class="col --12@xs --10@md --1-offset@md --8@lg --2-offset@lg">
+    <div class="col w--2/3@t ow--1/6@t">
       <section class="section pa--2 mb--2@d bg--white tc--gray-800 shadow">
         <!-- sample of dense text -->
         <h2>Tenure and Tenure-Track Faculty</h2>
@@ -247,7 +247,7 @@
           <li>The Faculty Grievance Procedure shall not apply to this Dismissal Procedure or any final action taken pursuant to it.</li>
         </ol>
         <h2>Suspension of the Faculty Member during Proceedings</h2>
-        <p><span style="font-weight: 400;">The University may institute suspension of the faculty member during the proceedings only if immediate harm to the faculty member or to others is threatened by continuing his/her employment responsibilities. Unless legal considerations forbid, any such suspension shall be with pay.</span></p>
+        <p>The University may institute suspension of the faculty member during the proceedings only if immediate harm to the faculty member or to others is threatened by continuing his/her employment responsibilities. Unless legal considerations forbid, any such suspension shall be with pay.</p>
         <h2>Publicity</h2>
         <p>Except for such simple announcements as may be required, covering the time of the hearing and similar matters, public statements about the case by the faculty member, administrative officers, Hearing Committee members, or legal counsel shall be avoided so far as possible until the proceedings have been completed. Announcement of the final decision shall be made by the President. If the final decision differs from the Hearing Committee’s recommendation, the announcement shall include a statement of that recommendation.</p>
         <hr>
@@ -261,11 +261,11 @@
 
 <section class="section">
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <header class="k_section__header">Breadcrumbs</header>
-      <dl class="row pb--1@xs">
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Default</small></dt>
-        <dd class="col --12@xs --9@md">
+      <dl class="row pb--1">
+        <dt class="col w--1/4@t"><small class="text-style-block">Default</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -273,8 +273,8 @@
           </nav>
         </dd>
 
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Default, Small</small></dt>
-        <dd class="col --12@xs --9@md">
+        <dt class="col w--1/4@t"><small class="text-style-block">Default, Small</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb --sm">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -283,9 +283,9 @@
         </dd>
       </dl>
 
-      <dl class="row pb--1@xs">
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Dot</small></dt>
-        <dd class="col --12@xs --9@md">
+      <dl class="row pb--1">
+        <dt class="col w--1/4@t"><small class="text-style-block">Dot</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb +dot">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -293,8 +293,8 @@
           </nav>
         </dd>
 
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Dot, Small</small></dt>
-        <dd class="col --12@xs --9@md">
+        <dt class="col w--1/4@t"><small class="text-style-block">Dot, Small</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb --sm +dot">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -303,9 +303,9 @@
         </dd>
       </dl>
 
-      <dl class="row pb--1@xs">
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Chevron</small></dt>
-        <dd class="col --12@xs --9@md">
+      <dl class="row pb--1">
+        <dt class="col w--1/4@t"><small class="text-style-block">Chevron</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb +icon +chevron">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -313,8 +313,8 @@
           </nav>
         </dd>
 
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Chevron, Small</small></dt>
-        <dd class="col --12@xs --9@md">
+        <dt class="col w--1/4@t"><small class="text-style-block">Chevron, Small</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb --sm +icon +chevron">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -323,9 +323,9 @@
         </dd>
       </dl>
 
-      <dl class="row pb--1@xs">
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Arrow</small></dt>
-        <dd class="col --12@xs --9@md">
+      <dl class="row pb--1">
+        <dt class="col w--1/4@t"><small class="text-style-block">Arrow</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb +icon +arrow">
             <a href="#">Home</a>
             <a class="--active" href="#">Search</a>
@@ -339,8 +339,8 @@
       </dl>
 
       <dl class="row">
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Arrow, Small</small></dt>
-        <dd class="col --12@xs --9@md">
+        <dt class="col w--1/4@t"><small class="text-style-block">Arrow, Small</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb --sm +icon +arrow">
             <a href="#">Home</a>
             <a class="--active" href="#">Search</a>
@@ -358,7 +358,7 @@
 
 <section class="section k_bg-light">
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <header class="k_section__header">Display Sizes</header>
       <small class="text-style-block">Display Size 1:</small>
       <p class="fs--d1">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem/1.4)</span></p>
@@ -379,7 +379,7 @@
 </section>
 
 <section class="section">
-  <header class="section py--1@xs">
+  <header class="section py--1">
     <div class="__pretitle">Section Header: Default</div>
     <h2 class="__title">Here's a Default Section Title</h2>
     <div class="__subtitle">Subtitlio Defaultus Ridiculum Inceptos Bibendum Amet Mollis Dapibus</div>
@@ -390,7 +390,7 @@
 <section class="section k_bg-light">
   <header class="k_section__header">Blockquotes</header>
   <div class="row">
-    <div class="col --12@xs --4@lg">
+    <div class="col w--1/3@d">
       <blockquote>
         Default blockquote says lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         <footer cite="http://www.washingtonpost.com/">
@@ -401,12 +401,12 @@
         </footer>
       </blockquote>
     </div>
-    <div class="col --12@xs --4@lg">
+    <div class="col w--1/3@d">
       <blockquote class="bg--yellow">
         <p>Blockquote says a colored background is nice sometimes. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       </blockquote>
     </div>
-    <div class="col --12@xs --4@lg">
+    <div class="col w--1/3@d">
       <blockquote class="bg--white --mark shadow">
         Shadowy blockquote has a mark. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         <footer cite="http://www.washingtonpost.com/">
@@ -423,7 +423,7 @@
 <section class="section">
   <header class="k_section__header">Basic Table</header>
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <table class="">
         <thead>
           <tr>
@@ -457,7 +457,7 @@
 <section class="section">
   <header class="k_section__header">With No Borders</header>
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <table class="bw--0">
         <thead>
           <tr>
@@ -491,7 +491,7 @@
 <section class="section">
   <header class="k_section__header">With Alternating Stripes</header>
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <table class="--striped +th--sm">
         <thead>
           <tr>
@@ -537,12 +537,12 @@
   </div>
 </section>
 
-<section class="section pb--0@xs">
-  <header class="k_section__header">Responsive Table (horizontal scroll &lt;@md)</header>
+<section class="section pb--0">
+  <header class="k_section__header">Responsive Table (horizontal scroll &lt;@t)</header>
 </section>
-<section class="section px--0@xs pt--0@xs">
+<section class="section px--0 pt--0">
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <table class="table --responsive +th--sm">
         <thead>
           <tr>
