@@ -3,23 +3,23 @@
   <div class="row">
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">Base Buttons</p>
-      <p><a class="btn --sm" data-component="button" href="#">Base Small</a></p>
-      <p><a class="btn" data-component="button" href="#">Base Button</a></p>
+      <p><a class="btn --sm" href="#">Base Small</a></p>
+      <p><a class="btn" href="#">Base Button</a></p>
     </div>
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">White Buttons (on white)</p>
-      <p><a class="btn bg--white --sm" data-component="button" href="#">White Small</a></p>
-      <p><a class="btn bg--white" data-component="button" href="#">White Button</a></p>
+      <p><a class="btn bg--white --sm" href="#">White Small</a></p>
+      <p><a class="btn bg--white" href="#">White Button</a></p>
     </div>
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">Black Buttons</p>
-      <p><a class="btn bg--black --sm" data-component="button" href="#">Black Small</a></p>
-      <p><a class="btn bg--black" data-component="button" href="#">Black Pill</a></p>
+      <p><a class="btn bg--black --sm" href="#">Black Small</a></p>
+      <p><a class="btn bg--black" href="#">Black Pill</a></p>
     </div>
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">Black Alpha Buttons</p>
-      <p><a class="btn bg--black-alpha br--pill --sm" data-component="button" href="#">Black Alpha Pill Small</a></p>
-      <p><a class="btn bg--black-alpha br--pill" data-component="button" href="#">Black Alpha Pill</a></p>
+      <p><a class="btn bg--black-alpha br--pill --sm" href="#">Black Alpha Pill Small</a></p>
+      <p><a class="btn bg--black-alpha br--pill" href="#">Black Alpha Pill</a></p>
     </div>
   </div>
 </section>
@@ -28,23 +28,23 @@
   <div class="row">
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">White Bkgd Buttons</p>
-      <p><a class="btn --sm br--pill bg--white" data-component="button" href="#">White Button Small</a></p>
-      <p><a class="btn bg--white" data-component="button" href="#">White Button</a></p>
+      <p><a class="btn --sm br--pill bg--white" href="#">White Button Small</a></p>
+      <p><a class="btn bg--white" href="#">White Button</a></p>
     </div>
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">White Border Buttons</p>
-      <p><a class="btn bc--white --sm" data-component="button" href="#">White Border Small</a></p>
-      <p><a class="btn bc--white" data-component="button" href="#">White Border</a></p>
+      <p><a class="btn bc--white --sm" href="#">White Border Small</a></p>
+      <p><a class="btn bc--white" href="#">White Border</a></p>
     </div>
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">(Semi) Transparent</p>
-      <p><a class="btn bg--black-alpha --sm" data-component="button" href="#">White Alpha Small</a></p>
-      <p><a class="btn bg--black-alpha" data-component="button" href="#">White Alpha Small</a></p>
+      <p><a class="btn bg--black-alpha --sm" href="#">White Alpha Small</a></p>
+      <p><a class="btn bg--black-alpha" href="#">White Alpha Small</a></p>
     </div>
     <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">(Semi) Transparent Light</p>
-      <p><a class="btn bg--white-alpha br--pill --sm" data-component="button" href="#">White Alpha Pill Small</a></p>
-      <p><a class="btn bg--white-alpha br--pill" data-component="button" href="#">White Alpha Pill</a></p>
+      <p><a class="btn bg--white-alpha br--pill --sm" href="#">White Alpha Pill Small</a></p>
+      <p><a class="btn bg--white-alpha br--pill" href="#">White Alpha Pill</a></p>
     </div>
   </div>
 </section>
@@ -52,20 +52,20 @@
   <header class="k_section__header ta--l">Buttons in Color</header>
   <div class="row">
     <div class="col w--1/4@t pt--2 pb--1">
-      <p><a class="btn bg--gray-500" data-component="button" href="#">Gray-500 Button</a></p>
-      <p><a class="btn bc--gray-500" data-component="button" href="#">Gray-500 Button Border</a></p>
+      <p><a class="btn bg--gray-500" href="#">Gray-500 Button</a></p>
+      <p><a class="btn bc--gray-500" href="#">Gray-500 Button Border</a></p>
     </div>
     <div class="col w--1/4@t pt--2 pb--1">
-      <p><a class="btn bg--red" data-component="button" href="#">Red Button</a></p>
-      <p><a class="btn bc--red" data-component="button" href="#">Red Button Border</a></p>
+      <p><a class="btn bg--red" href="#">Red Button</a></p>
+      <p><a class="btn bc--red" href="#">Red Button Border</a></p>
     </div>
     <div class="col w--1/4@t pt--2 pb--1 bg--black">
-      <p><a class="btn bg--yellow" data-component="button" href="#">Yellow Button</a></p>
-      <p><a class="btn bc--yellow" data-component="button" href="#">Yellow Button Border</a></p>
+      <p><a class="btn bg--yellow" href="#">Yellow Button</a></p>
+      <p><a class="btn bc--yellow" href="#">Yellow Button Border</a></p>
     </div>
     <div class="col w--1/4@t pt--2 pb--1 bg--black">
-      <p><a class="btn bg--beige" data-component="button" href="#">Beige Button</a></p>
-      <p><a class="btn bc--beige" data-component="button" href="#">Beige Button Border</a></p>
+      <p><a class="btn bg--beige" href="#">Beige Button</a></p>
+      <p><a class="btn bc--beige" href="#">Beige Button Border</a></p>
     </div>
   </div>
 </section>
@@ -78,10 +78,10 @@
         <small><i>Default behavior. Just keep them in the same element.</i></small>
       </p>
       <p>
-        <a class="btn --sm --transparent" data-component="button" href="#">Here a Button</a>
-        <a class="btn --sm" data-component="button" href="#">There a Button</a>
-        <a class="btn --sm" data-component="button" href="#">Everywhere a Button</a>
-        <a class="btn --sm" data-component="button" href="#">Button</a>
+        <a class="btn --sm --transparent" href="#">Here a Button</a>
+        <a class="btn --sm" href="#">There a Button</a>
+        <a class="btn --sm" href="#">Everywhere a Button</a>
+        <a class="btn --sm" href="#">Button</a>
       </p>
       <hr>
       <p>
@@ -89,9 +89,9 @@
         <small><i>Add <code>.btn__group</code> to a button wrapper or href wrapper.</i></small>
       </p>
       <p class="btn__group">
-        <button class="btn bg--gray-800 --sm" data-component="button">This One</button>
-        <button class="btn --sm" data-component="button">That One</button>
-        <button class="btn --sm" data-component="button" disabled="disabled">Not This One</button>
+        <button class="btn bg--gray-800 --sm">This One</button>
+        <button class="btn --sm">That One</button>
+        <button class="btn --sm" disabled="disabled">Not This One</button>
       </p>
     </div>
     <div class="col w--1/2@t">
@@ -100,27 +100,27 @@
         <i>Add <code>.feather</code> element to add Feather Icons. Use <code>.--right</code> to align icon on right.</i><br>
       </p>
       <p>
-        <a class="btn" data-component="button" href="#">
+        <a class="btn" href="#">
           <i data-feather="settings"></i> Make Buttons
         </a>
       </p>
       <p>
-        <a class="btn --sm" data-component="button" href="#">
+        <a class="btn --sm" href="#">
           <i data-feather="settings"></i> Make Buttons
         </a>
       </p>
       <p>
-        <a class="btn --right" data-component="button" href="#">
+        <a class="btn --right" href="#">
           Make Buttons <i data-feather="arrow-right"></i>
         </a>
       </p>
       <p>
-        <a class="btn --right --sm" data-component="button" href="#">
+        <a class="btn --right --sm" href="#">
           Make Buttons <i data-feather="arrow-right"></i>
         </a>
       </p>
       <p>
-      <a class="btn" data-component="button" href="#">
+      <a class="btn" href="#">
         <i class="--lg --thin" data-feather="headphones"></i>
         Hear Me Now and<br>
         Listen to Me Later

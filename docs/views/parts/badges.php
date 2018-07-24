@@ -31,7 +31,6 @@
       <div class="col w--1/3@t">
         <div class="badge__wrapper bg--img">
           <div
-            data-component="badge"
             class="badge pos--absolute pin--c<?= $i == 1 ? ' bg--white-alpha' : ''; ?><?= $i == 2 ? ' bg--red' : ''; ?><?= $i == 3 ? ' bg--black' : ''; ?>">
               <a href="#">Badge (Link)</a>
               <i class="__icon icon--video"></i>
@@ -43,7 +42,6 @@
       <div class="col w--1/3@t">
         <div class="badge__wrapper bg--img">
           <div
-            data-component="badge"
             class="badge pos--absolute pin--xc <?= $i == 4 ? ' bg--white-alpha' : ''; ?><?= $i == 5 ? ' bg--red' : ''; ?><?= $i == 6 ? ' bg--black' : ''; ?>">
             Badge Center
           </div>
@@ -54,7 +52,6 @@
       <div class="col w--1/3@t">
         <div class="badge__wrapper bg--img">
           <div
-            data-component="badge"
             class="badge pos--absolute pin--t pin--r br--pill mt--0h mr--0h<?= $i == 8 ? ' bg--white-alpha' : ''; ?><?= $i == 9 ? ' bg--red' : ''; ?><?= $i == 7 ? ' bg--black' : ''; ?>">
             Badge Right (Pill)
           </div>
