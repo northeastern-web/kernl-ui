@@ -16,6 +16,7 @@
   border-color: rgba($type-color, 0.5);
   vertical-align: middle;
   white-space: nowrap;
+  position: relative;
   z-index: 1;
 
   a {
@@ -37,27 +38,6 @@
     top: 2px;
   }
 
-  // Positioning
-  &.\--left {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  &.\--center {
-    position: absolute;
-    top: 0;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  &.\--right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: auto;
-  }
-
-  .feather.\--right { margin: 0 0 0 ($fs-xs/2); }
+  // adjust margin for positioning icon on the right
+  &.\--right .feather { margin: 0 0 0 ($fs-xs/2); }
 }

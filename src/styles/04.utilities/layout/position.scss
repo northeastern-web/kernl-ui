@@ -1,7 +1,7 @@
 // Layout Utility
 // Position
 //
-// .m<side>--<value>
+// .pos--<value>
 
 
 .pos--static    { position: static; }
@@ -13,7 +13,9 @@
   top: 1rem;
 }
 
+// --
 // Pin positioning
+
 .pin {
   position: absolute;
   width: 100%;
@@ -37,11 +39,34 @@
 .pin--r { right: 0; }
 .pin--b { bottom: 0; }
 .pin--l { left: 0; }
+
+// center an item within container
+.pin--c {
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pin--x {
+  right: 0;
+  left: 0;
+}
+
+.pin--xc {
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .pin--y {
   top: 0;
   bottom: 0;
 }
-.pin--x {
-  right: 0;
-  left: 0;
+
+.pin--yc {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
