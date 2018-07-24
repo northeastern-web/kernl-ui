@@ -18,7 +18,7 @@
       <?php foreach (getKernlFiles() as $file) : ?>
         <div class="col w--1/3@t w--1/4@d w--20@w">
           <div class="card --overlay --middle --sg-home">
-            <a class="__link" href="/?part=<?= $file; ?>">
+            <a class="__link" href="<?= $url; ?>/?part=<?= $file; ?>">
               <div class="__graphic"></div>
               <div class="__body">
                 <h4 class="__title"><?= $file; ?></h4>
