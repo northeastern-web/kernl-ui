@@ -1,7 +1,4 @@
-<?php
-$url = "{$_SERVER['REQUEST_URI']}";
-include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
-?>
+<?php include 'docs/views/partials/_masthead-ul.php'; ?>
 
 <section class="section k_bg-light">
   <header class="k_section__header">Masthead</header>
@@ -52,13 +49,13 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
 
 <header class="masthead --megamenu +chevron +utility">
   <a class="__logo" href="<?= $url; ?>">
-    <img class="__logo__image" alt="Logo" src="/docs/images/logo.png">
+    <img class="__logo__image" alt="Logo" src="<?= $url; ?>/docs/images/logo.png">
   </a>
   <button class="__toggler hidden--up@d id="toggle_5"><i data-feather="menu"></i></button>
   <nav class="__drawer" id="drawer_5" role="navigation">
     <div class="w--100 d--flex justify--between hidden--up@d">
       <a data-ga-click="" class="__logo" href="<?= $url; ?>">
-        <img class="__logo__image" alt="Logo" src="/docs/images/logo-white.png">
+        <img class="__logo__image" alt="Logo" src="<?= $url; ?>/docs/images/logo-white.png">
       </a>
       <button class="__toggler menu-is-open"><i data-feather="x"></i></button>
     </div>
@@ -249,4 +246,4 @@ include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_masthead-ul.php';
 <div class="section bg--img --hero ta--c justify--center">
   <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
 </div>
-      <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_modal-search.php'; ?>
+      <?php include 'docs/views/partials/_modal-search.php'; ?>
