@@ -8,19 +8,26 @@
 
 function masthead($id, $masthead_classes, $banner_classes)
 {
-    ($masthead_classes == '--overlay' || $masthead_classes == 'bg--black') ? $logo = "-white" : $logo = "";
-    $url = "{$_SERVER['REQUEST_URI']}";
+    $url = '';
+
+    if ($_SERVER['HTTP_HOST'] == 'kernl-ui.test') {
+        $url = 'https://'. $_SERVER['HTTP_HOST'];
+    } else {
+        $url = 'http://nuweb28dev.neu.edu/kernl-ui';
+    }
+
+  ($masthead_classes == '--overlay' || $masthead_classes == 'bg--black') ? $logo = "-white" : $logo = "";
 
     echo '
 <header class="masthead ' . $masthead_classes . '">
   <a class="__logo" href="' . $url . '">
-    <img class="__logo__image" alt="Logo" src="/docs/images/logo' . $logo . '.png">
+    <img class="__logo__image" alt="Logo" src="'. $url .'/docs/images/logo' . $logo . '.png">
   </a>
   <button class="__toggler hidden--up@d" id="toggle_' . $id . '"><i data-feather="menu"></i></button>
   <nav class="__drawer" id="drawer_' . $id . '" role="navigation">
     <div class="w--100 d--flex justify--between hidden--up@d">
       <a class="__logo" href="' . $url .'">
-        <img class="__logo__image" alt="Logo" src="/docs/images/logo-white.png">
+        <img class="__logo__image" alt="Logo" src="'. $url .'/docs/images/logo-white.png">
       </a>
       <button class="__toggler menu-is-open"><i data-feather="x"></i></button>
     </div>
