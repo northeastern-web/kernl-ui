@@ -1,9 +1,7 @@
 // Components
 // Loader
 
-
 import $ from 'jquery';
-
 
 $('[data-load]').on('click touch', e => {
   e.preventDefault();
