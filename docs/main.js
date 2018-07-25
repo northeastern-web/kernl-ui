@@ -34,11 +34,11 @@ $('#kernl .__graphic').each(function() {
 /* Dynamically display responsive font sizes on typography page.
  * // * * Requires page reload after viewport resize. * * // *
  */
-const htmlFontSize = $("html").css("fontSize");
-$("#kernl .html-font-size").text(parseInt(htmlFontSize));
+const htmlFontSize = $('html').css('fontSize');
+$('#kernl .html-font-size').text(parseInt(htmlFontSize));
 
-$("#kernl .element-font-size").each(function() {
-  let elemFontSize = $(this).css("fontSize");
+$('#kernl .element-font-size').each(function() {
+  let elemFontSize = $(this).css('fontSize');
   elemFontSize = Math.round(parseFloat(elemFontSize));
   $(this).text(`${elemFontSize}px`);
 });
@@ -87,11 +87,12 @@ $("#contSelect").on('click touch', 'li a', function(e) {
 /**
  * For 'loader' demonstration;
  */
-$('[data-load]').on('click touch', e => {
+$('[data-load]').on('click touch', function() {
   $('.k_loader_example').text((index, text) => text.replace("Load Something", "Wait for it..."));
-  $('.loader').delay(5000).queue(function() {
+  $('.spinner').delay(5000).queue(function() {
     $(this).addClass('loaded').dequeue();
-    $('.loaded').removeClass('loader').addClass('__graphic').parent('.card').queue(function(){
+    $('.loaded').removeClass('spinner');
+    $('.k_loader-placeholder').addClass('__graphic --16x9').queue(function(){
       $(this).append(`<img class="__graphic__img" src="${path}truck.jpg" alt="">`);
     });
   });
