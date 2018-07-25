@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col w--1/3@t">
       <header class="k_section__header">Base</header>
-      <?php 
+      <?php
         /**
          * data-size attribute used only for docs/demo.
          * do not use in development or production.
@@ -86,7 +86,7 @@
            aria-hidden="true">
         <div class="__screen" data-dismiss="modal"></div>
         <div class="__content bg--white pa--0">
-          
+
           <div class="row">
             <div class="col w--2/3@t ow--1/6@t">
               <div class="__graphic --1x1 w--1/3@d f--r@d"></div>
@@ -123,7 +123,7 @@
           <i data-feather="search"></i>
         </a>
       </div>
-      <?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_modal-search.php'; ?>
+      <?php include 'docs/views/partials/_modal-search.php'; ?>
     </div>
   </div>
 </section>
