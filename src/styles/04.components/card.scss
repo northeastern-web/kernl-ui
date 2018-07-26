@@ -85,6 +85,38 @@
     .__body { padding: 1rem; }
   }
 
+  // Profile variant of .card
+  &.\--profile {
+    box-shadow: none;
+
+    .__body {
+      padding: 1rem 0 1rem;
+
+      p { font-size: $fs-xs; }
+    }
+
+    .__title { margin-bottom: 0.25rem; }
+
+    .__subtitle {
+      font-size: $fs-xs;
+      margin-bottom: 0.5rem;
+      color: $gray-500;
+      font-style: italic;
+    }
+
+    .__footer {
+      padding: 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    &:hover {
+      .__footer {
+        border-bottom: 2px solid $red;
+        transition: border-bottom $transition;
+      }
+    }
+  }
+
   // Overlay's block level items to card
   &.\--overlay {
     color: #fff;
@@ -290,7 +322,7 @@
     }
   }
 
-  &.\--transparent {
+  &.\--flush {
     box-shadow: none;
 
     .__body { padding-top: 1rem; }
