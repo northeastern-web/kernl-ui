@@ -114,7 +114,7 @@
             <p>This example has an excerpt of 208 characters. Etiam porta sem malesuada magna mollis euismod. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
           </div>
           <div class="__footer">
-            Footer Text
+            <p>Footer Text</p>
           </div>
         </a>
       </article>
@@ -137,77 +137,77 @@
     <!-- Profile -->
 
     <div class="col w--1/2 w--1/3@t w--20@d">
-      <article class="card --transparent">
+      <article class="card --profile">
         <a href="#" class="__link">
           <div class="__graphic --1x1"></div>
           <div class="__body py--1">
-            <h2 class="__title mb--0h">Kay Rooney</h2>
-            <p class="tc--gray"><i>School of HummaJamma BoobaDooda, University of Edinburgh</i></p>
+            <h2 class="__title">Kay Rooney</h2>
+            <div class="__subtitle">School of HummaJamma BoobaDooda, University of Edinburgh</div>
             <p>General Educational Development (GED) Examiner</p>
           </div>
-          <div class="__footer px--0">
-            <span class="bc--red bw--0 bwb--2">View Profile</span>
-         </div>
+          <div class="__footer">
+            View Profile
+          </div>
         </a>
       </article>
     </div>
     <div class="col w--1/2 w--1/3@t w--20@d">
-      <article class="card --transparent">
+      <article class="card --profile">
         <a href="#" class="__link">
           <div class="__graphic --1x1"></div>
           <div class="__body py--1">
-            <h2 class="__title mb--0h">Cooper O'Neill</h2>
-            <p class="tc--gray"><i>School of HummaJamma BoobaDooda, Boston College</i></p>
+            <h2 class="__title">Cooper O'Neill</h2>
+            <div class="__subtitle">School of HummaJamma BoobaDooda, Boston College</div>
             <p>Individualized Education Plan (IEP) Aide</p>
           </div>
-          <div class="__footer px--0">
-            <span class="bc--red bw--0 bwb--2">View Profile</span>
-         </div>
+          <div class="__footer">
+            View Profile
+          </div>
         </a>
       </article>
     </div>
     <div class="col w--1/2 w--1/3@t w--20@d">
-      <article class="card --transparent">
+      <article class="card --profile">
         <a href="#" class="__link">
           <div class="__graphic --1x1"></div>
           <div class="__body py--1">
-            <h2 class="__title mb--0h">Lillie Squires (Lil)</h2>
-            <p class="tc--gray"><i>School of HummaJamma BoobaDooda, MIT</i></p>
+            <h2 class="__title">Lillie Squires (Lil)</h2>
+            <div class="__subtitle">School of HummaJamma BoobaDooda, MIT</div>
             <p>Assistant Professor, Communication Studies and Faculty Affiliate, Women’s, Gender, &amp; Sexuality Studies Program and Department of Cultures, Societies, &amp; Global Studies</p>
           </div>
-          <div class="__footer px--0">
-            <span class="bc--red bw--0 bwb--2">View Profile</span>
-          </div>
+          <div class="__footer">
+            View Profile
+           </div>
         </a>
       </article>
     </div>
     <div class="col w--1/2 w--1/3@t w--20@d">
-      <article class="card --transparent">
+      <article class="card --profile">
         <a href="#" class="__link">
           <div class="__graphic --1x1"></div>
           <div class="__body py--1">
-            <h2 class="__title mb--0h">Millie Harper</h2>
-            <p class="tc--gray"><i>School of HummaJamma BoobaDooda, Northeastern University</i></p>
+            <h2 class="__title">Millie Harper</h2>
+            <div class="__subtitle">School of HummaJamma BoobaDooda, Northeastern University</div>
             <p>Scholastic Aptitude Test (SAT) Grader</p>
           </div>
-          <div class="__footer px--0">
-            <span class="bc--red bw--0 bwb--2">View Profile</span>
-         </div>
+          <div class="__footer">
+            View Profile
+          </div>
         </a>
       </article>
     </div>
     <div class="col w--1/2 w--1/3@t w--20@d">
-      <article class="card --transparent">
+      <article class="card --profile">
         <a href="#" class="__link">
           <div class="__graphic --1x1"></div>
           <div class="__body py--1">
-            <h2 class="__title mb--0h">Elizabeth Stuart (Liza)</h2>
-            <p class="tc--gray"><i>College of Computer and Information Science, Northeastern University</i></p>
+            <h2 class="__title">Elizabeth Stuart (Liza)</h2>
+            <div class="__subtitle">College of Computer and Information Science, Northeastern University</div>
             <p>Associate Dean of Academic Affairs, Diversity and Inclusion and Dean's Professor of Civic Sustainability, College of Social Sciences and Humanities</p>
           </div>
-          <div class="__footer px--0">
-            <span class="bc--red bw--0 bwb--2">View Profile</span>
-          </div>
+          <div class="__footer">
+            View Profile
+           </div>
         </a>
       </article>
     </div>
