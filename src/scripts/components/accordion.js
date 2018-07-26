@@ -4,6 +4,7 @@
 
 import $ from 'jquery';
 
+let speed = 500;
 let $accordion = $('.accordion [data-swap-target]');
 
 // Initialize Formstone swap()
@@ -13,21 +14,21 @@ $accordion.swap();
 $accordion.on('click touch', function() {
   let isVisible = $(this).closest('.accordion').find('.--visible')
   if(isVisible){
-    $($(isVisible).attr('data-swap-target')).slideUp(600)
+    $($(isVisible).attr('data-swap-target')).slideUp(speed)
     setTimeout(function() {
       $(isVisible).removeClass('--visible').removeClass('--active')
-    }, 600)
+    }, speed)
   }
 });
 
 // Activate event
 $accordion.on('activate.swap', function() {
   $(this).addClass('--active')
-  $($(this).attr('data-swap-target')).slideDown(600)
+  $($(this).attr('data-swap-target')).slideDown(speed)
 });
 
 // Deactivate event
 $accordion.on('deactivate.swap', function() {
   $(this).removeClass('--active')
-  $($(this).attr('data-swap-target')).slideUp(600)
+  $($(this).attr('data-swap-target')).slideUp(speed)
 });
