@@ -1,8 +1,8 @@
 // Formstone
-import Core from 'formstone/dist/js/core';
-import 'formstone/dist/js/analytics';
-import 'formstone/dist/js/cookie';
-import 'formstone/dist/js/swap';
+import 'formstone/src/js/core';
+import 'formstone/src/js/analytics';
+import 'formstone/src/js/cookie';
+import 'formstone/src/js/swap';
 
 // Kernl(UI) items
 import './components/accordion';
