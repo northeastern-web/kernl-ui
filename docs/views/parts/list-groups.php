@@ -1,5 +1,10 @@
 <?php include 'docs/views/partials/_list-groups.php'; ?>
 
+<!--
+To use an icon in a list group item, be explicit 
+about its position by using --left or --right,
+and drop the desired icon into the item.
+-->
 <section class="section">
   <header class="k_section__header">Base Style</header>
   <div class="row">
@@ -10,7 +15,7 @@
       <?= listgroup('--indent fs--sm'); ?>
     </div>
     <div class="col w--1/4">
-      <?= listgroup('fs--xs +icon'); ?>
+      <?= listgroup('fs--xs --left'); ?>
     </div>
     <div class="col w--1/4">
       <?= listgroup('fs--d1'); ?>
@@ -22,10 +27,10 @@
     <header class="k_section__header">Outline Style</header>
     <div class="row">
       <div class="col w--1/4">
-        <?= listgroup('--outline +icon'); ?>
+        <?= listgroup('--outline --left'); ?>
       </div>
       <div class="col w--1/4">
-        <?= listgroup('--outline +icon fs--sm'); ?>
+        <?= listgroup('--outline --right fs--sm'); ?>
       </div>
       <div class="col w--1/4">
         <?= listgroup('--outline fs--xs'); ?>
@@ -43,7 +48,7 @@
       <?= listgroup('--striped '); ?>
     </div>
     <div class="col w--1/4">
-      <?= listgroup('--striped +icon fs--sm'); ?>
+      <?= listgroup('--striped --left fs--sm'); ?>
     </div>
     <div class="col w--1/4">
       <?= listgroup('--striped fs--xs'); ?>

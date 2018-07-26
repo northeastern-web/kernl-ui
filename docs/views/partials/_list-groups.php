@@ -1,27 +1,27 @@
 <?php
 function listgroup($classes, $option = false)
 {
-    if (preg_match("/icon/", $classes)) {
+    if (preg_match("/left/", $classes) || preg_match("/right/", $classes)) {
         return '
       <div class="list-group ' . $classes . '">
         <div class="__item">
-          <i data-feather="alert-octagon"></i>
+          <i data-feather="arrow-right"></i>
           <b>Lorem ipsum dolor</b>: sit amet do eiusmod
         </div>
         <div class="__item">
-          <i data-feather="alert-octagon"></i>
+          <i data-feather="arrow-right"></i>
           <b>Lorem ipsum</b>: dolor sit amet, consectetur faucibus mollis interdum
         </div>
         <a href="#" class="__item">
-          <i data-feather="alert-octagon"></i>
+          <i data-feather="arrow-right"></i>
           <b>Maecenas</b>: faucibus mollis interdum
         </a>
         <a href="#" class="__item">
-          <i data-feather="alert-octagon"></i>
+          <i data-feather="arrow-right"></i>
           <b>Lorem ipsum</b>: dolor sit amet, consectetur
         </a>
         <div class="__item">
-          <i data-feather="alert-octagon"></i>
+          <i data-feather="arrow-right"></i>
           <b>Lorem ipsum dolor</b>: sit amet do eiusmod
         </div>
       </div>

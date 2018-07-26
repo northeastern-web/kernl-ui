@@ -9,7 +9,7 @@
   margin-bottom: 1rem;
 
   // style the immediate first child regardless of item
-  >* {
+  > * {
     display: block;
     position: relative;
     border-bottom-width: 1px;
@@ -88,16 +88,25 @@
   // --
   // Icons
 
-  // nested icon (defaults assume icon to the left)
+  // nested icon
   .feather,
   .icon {
-    margin: 0 .5rem 0 0;
     width: 1rem;
     height: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  // adjust margin for positioning icon on the right
-  &.\--right .feather { margin: 0 .5rem 0 0; }
+  &.\--left {
+    > * { padding-left: 2.25rem; }
+    .feather { left: 0.5rem; }
+  }
+
+  &.\--right {
+    > * { padding-right: 2.25rem; }
+    .feather { right: 0.5rem; }
+  }
 
   // --
   // Interaction
