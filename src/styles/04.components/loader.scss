@@ -1,6 +1,7 @@
 // Components
 // Loader
 
+
 .load,
 .loaded { display: none; }
 
@@ -12,13 +13,7 @@
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(0.85);
-  }
-  100% {
-    transform: rotate(359deg) scale(1);
-  }
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(0.85); }
+  100% { transform: rotate(359deg) scale(1); }
 }
