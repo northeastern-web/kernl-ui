@@ -289,7 +289,6 @@
         }
 
         .__submenu {
-          @include make-row();
           display: flex;
           flex-wrap: wrap;
           padding-top: 0 !important;
@@ -300,7 +299,7 @@
           background: $gray-100;
           max-height: 0;
           min-width: 0;
-          width: auto;
+          width: 100%;
           border-radius: 0;
           border: 0 none;
           box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0);
@@ -319,8 +318,9 @@
           }
 
           > li {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-bottom: 0;
           }
 
           .__item > a,
@@ -482,6 +482,10 @@
     }
 
     @include mqbp-up(d) {
+      @include make-section();
+      padding-top: 0;
+      padding-left: 0;
+
       .__item {
         border-right: 1px solid rgba($type-color, 0.3);
 
