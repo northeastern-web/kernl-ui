@@ -42,7 +42,8 @@
             <p>This example has an excerpt of 93 characters. Etiam porta sem malesuada magna mollis euismod.</p>
           </div>
           <div class="__footer">
-            Footer Text
+            <div class="__column">Footer Text</div>
+            <div class="__column"><i data-feather="arrow-right" class="--sm"></i></div>
           </div>
         </a>
       </article>
@@ -52,11 +53,12 @@
         <a href="#" class="__link">
           <div class="__graphic --16x9"></div>
           <div class="__body">
-            <h2 class="__title">Image On Right</h2>
+            <h2 class="__title">Image On Right Below Desktop</h2>
             <p>This example has an excerpt of only 50 characters.</p>
           </div>
           <div class="__footer">
-            Footer Text
+            <div class="__column">Footer Text</div>
+            <div class="__column"><i data-feather="arrow-right" class="--sm"></i></div>
           </div>
         </a>
       </article>
@@ -70,14 +72,15 @@
             <p>This example has an excerpt of 208 characters. Etiam porta sem malesuada magna mollis euismod. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
           </div>
           <div class="__footer">
-            Footer Text
+            <div class="__column">Footer Text</div>
+            <div class="__column"><i data-feather="arrow-right" class="--sm"></i></div>
           </div>
         </a>
       </article>
     </div>
 
     <!-- mixed ratios and orientations at multiple breakpoints -->
-    <div class="col w--1/4@t">
+    <div class="col w--1/2@t w--1/4@d">
       <article class="card">
         <a href="#" class="__link">
           <div class="__graphic --1x1 --16x9@w"></div>
@@ -86,26 +89,28 @@
             <p>This example has an excerpt of 93 characters. Etiam porta sem malesuada magna mollis euismod.</p>
           </div>
           <div class="__footer">
-            Footer Text
+            <div class="__column">Footer Text</div>
+            <div class="__column"><i data-feather="arrow-right" class="--sm"></i></div>
           </div>
         </a>
       </article>
     </div>
-    <div class="col w--1/4@t">
+    <div class="col w--1/2@t w--1/4@d">
       <article class="card --h --right --v@t">
         <a href="#" class="__link">
           <div class="__graphic --16x9 --1x1@t --16x9@w"></div>
           <div class="__body">
-            <h2 class="__title">Image On Right</h2>
+            <h2 class="__title">Image On Right Below Tablet</h2>
             <p>This example has an excerpt of only 50 characters.</p>
           </div>
           <div class="__footer">
-            Footer Text
+            <div class="__column">Footer Text</div>
+            <div class="__column"><i data-feather="arrow-right" class="--sm"></i></div>
           </div>
         </a>
       </article>
     </div>
-    <div class="col w--1/4@t">
+    <div class="col w--1/2@t w--1/4@d">
       <article class="card">
         <a href="#" class="__link">
           <div class="__graphic --16x9 --1x1@d --16x9@w"></div>
@@ -114,12 +119,13 @@
             <p>This example has an excerpt of 208 characters. Etiam porta sem malesuada magna mollis euismod. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
           </div>
           <div class="__footer">
-            <p>Footer Text</p>
+            <div class="__column">Footer Text</div>
+            <div class="__column"><i data-feather="arrow-right" class="--sm"></i></div>
           </div>
         </a>
       </article>
     </div>
-    <div class="col w--1/4@t">
+    <div class="col w--1/2@t w--1/4@d">
       <article class="card">
         <a href="#" class="__link">
           <div class="__graphic --16x9 --1x1@d --16x9@w"></div>
@@ -128,7 +134,8 @@
             <p>This example has an excerpt of 93 characters. Etiam porta sem malesuada magna mollis euismod.</p>
           </div>
           <div class="__footer">
-            Footer Text
+            <div class="__column">Footer Text</div>
+            <div class="__column"><i data-feather="arrow-right" class="--sm"></i></div>
           </div>
         </a>
       </article>
@@ -146,7 +153,7 @@
             <p>General Educational Development (GED) Examiner</p>
           </div>
           <div class="__footer">
-            View Profile
+            <div class="__column"><i data-feather="more-vertical" class="--sm"></i>View Profile</div>
           </div>
         </a>
       </article>
@@ -161,7 +168,7 @@
             <p>Individualized Education Plan (IEP) Aide</p>
           </div>
           <div class="__footer">
-            View Profile
+            <div class="__column"><i data-feather="more-vertical" class="--sm"></i>View Profile</div>
           </div>
         </a>
       </article>
@@ -176,7 +183,7 @@
             <p>Assistant Professor, Communication Studies and Faculty Affiliate, Women’s, Gender, &amp; Sexuality Studies Program and Department of Cultures, Societies, &amp; Global Studies</p>
           </div>
           <div class="__footer">
-            View Profile
+            <div class="__column"><i data-feather="more-vertical" class="--sm"></i>View Profile</div>
            </div>
         </a>
       </article>
@@ -191,7 +198,7 @@
             <p>Scholastic Aptitude Test (SAT) Grader</p>
           </div>
           <div class="__footer">
-            View Profile
+            <div class="__column"><i data-feather="more-vertical" class="--sm"></i>View Profile</div>
           </div>
         </a>
       </article>
@@ -206,7 +213,7 @@
             <p>Associate Dean of Academic Affairs, Diversity and Inclusion and Dean's Professor of Civic Sustainability, College of Social Sciences and Humanities</p>
           </div>
           <div class="__footer">
-            View Profile
+            <div class="__column"><i data-feather="more-vertical" class="--sm"></i>View Profile</div>
            </div>
         </a>
       </article>

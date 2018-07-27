@@ -45,13 +45,6 @@
 
   .__subtitle { font-size: 110%; }
 
-  .__footer {
-    @extend .justify-self--end;
-    @include card-padding();
-    padding-top: 0 !important;
-    font-size: 87.5%;
-  }
-
   .__graphic {
     @extend .ar;
     // padding-top: 56.25%;
@@ -74,6 +67,21 @@
 
   &:hover {
     box-shadow: $box-shadow-inset-hover;
+  }
+
+  .__footer {
+    @extend .justify--between;
+    @include card-padding();
+    display: flex;
+    padding-top: 0 !important;
+    font-size: 87.5%;
+  }
+
+  // Columns in header/footer
+  .__column {
+    @extend %component-column;
+    padding: 0;
+    align-self: center;
   }
 
   // --
@@ -106,13 +114,18 @@
 
     .__footer {
       padding: 0;
-      border-bottom: 2px solid transparent;
+
+      .__column:first-child {
+        display: inline-flex;
+        width: auto;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom $transition;
+      }
     }
 
     &:hover {
-      .__footer {
+      .__footer .__column:first-child {
         border-bottom: 2px solid $red;
-        transition: border-bottom $transition;
       }
     }
   }
@@ -120,7 +133,7 @@
   // Overlay's block level items to card
   &.\--overlay {
     color: #fff;
-    min-height: $tile_overlay_height;
+    height: $tile_overlay_height;
 
     .__graphic {
       min-height: 100%;
@@ -182,8 +195,6 @@
     }
 
     .__graphic {
-      padding-top: (56.25% / 2); // 16x9 default. Override with aspect ratio utility.
-
       @each $ar-name, $ar-value in $aspect-ratios {
         &.\--#{$ar-name} { padding-top: ($ar-value / 2); }
       }
@@ -204,10 +215,10 @@
             &.\--#{$ar-name} { padding-top: ($ar-value / 2); }
 
             @include mqbp-up($breakpoint) {
-              &.\--#{$ar-name} { padding-top: $ar-value; }
+              &.\--#{$ar-name} { padding-top: $ar-value !important; }
 
               @each $breakpoint in map-keys($breakpoints) {
-                &.\--#{$ar-name}\@#{$breakpoint} { padding-top: $ar-value; }
+                &.\--#{$ar-name}\@#{$breakpoint} { padding-top: $ar-value !important; }
               }
             }
           }
