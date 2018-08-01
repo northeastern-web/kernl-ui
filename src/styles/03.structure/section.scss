@@ -68,11 +68,11 @@
   align-items: center;
   padding-top: 4.4rem;
   padding-bottom: 4.4rem;
-  margin-bottom: 1rem;
 
   > .__header {
     flex: 1;
     width: 100%;
+    margin-bottom: 0;
 
     .__title {
       @include type-d5();
