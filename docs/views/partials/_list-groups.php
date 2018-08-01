@@ -3,28 +3,28 @@ function listgroup($classes, $option = false)
 {
     if (preg_match("/left/", $classes) || preg_match("/right/", $classes)) {
         return '
-      <div class="list-group ' . $classes . '">
-        <div class="__item">
-          <i data-feather="arrow-right"></i>
-          <b>Lorem ipsum dolor</b>: sit amet do eiusmod
-        </div>
-        <div class="__item">
-          <i data-feather="arrow-right"></i>
-          <b>Lorem ipsum</b>: dolor sit amet, consectetur faucibus mollis interdum
-        </div>
-        <a href="#" class="__item">
-          <i data-feather="arrow-right"></i>
-          <b>Maecenas</b>: faucibus mollis interdum
-        </a>
-        <a href="#" class="__item">
-          <i data-feather="arrow-right"></i>
-          <b>Lorem ipsum</b>: dolor sit amet, consectetur
-        </a>
-        <div class="__item">
-          <i data-feather="arrow-right"></i>
-          <b>Lorem ipsum dolor</b>: sit amet do eiusmod
-        </div>
-      </div>
+      <ul class="list-group ' . $classes . '">
+        <li class="__item">
+          <a href="#"><i data-feather="arrow-right"></i>
+          <b>Lorem ipsum dolor</b>: sit amet do eiusmod</a>
+        </li>
+        <li class="__item">
+          <a href="#"><i data-feather="arrow-right"></i>
+          <b>Lorem ipsum</b>: dolor sit amet, consectetur faucibus mollis interdum</a>
+        </li>
+        <li class="__item">
+          <a href="#"><i data-feather="arrow-right"></i>
+          <b>Maecenas</b>: faucibus mollis interdum</a>
+        </li>
+        <li class="__item">
+          <a href="#"><i data-feather="arrow-right"></i>
+          <b>Lorem ipsum</b>: dolor sit amet, consectetur</a>
+        </li>
+        <li class="__item">
+          <a href="#"><i data-feather="arrow-right"></i>
+          <b>Lorem ipsum dolor</b>: sit amet do eiusmod</a>
+        </li>
+      </ul>
       ';
     }
 

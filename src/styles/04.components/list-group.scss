@@ -27,9 +27,9 @@
     &:last-child { border: 0 none; }
   }
 
-  .__link {
+  a {
     display: block;
-    color: inherit;
+    color: $type-color;
     transition: all 0.3s ease-out;
 
     &:hover { background-color: $gray-50; }
