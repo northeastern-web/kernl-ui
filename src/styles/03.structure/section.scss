@@ -78,11 +78,13 @@
       @include type-d5();
       margin-bottom: 0.25rem;
     }
-  }
 
-  sup,
-  sub {
-    font-weight: 400;
+    sup,
+    sub {
+      font-weight: 400;
+    }
+
+    sup { top: -3.5rem; }
   }
 
   &.\--top { align-items: flex-start; }
