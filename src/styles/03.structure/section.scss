@@ -7,6 +7,23 @@
   margin-right: auto;
   margin-left: auto;
   @include make-section();
+
+  > .__header {
+    flex: 1;
+    margin-bottom: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    .__title {
+      font-weight: $type-light;
+      margin-bottom: 0.125rem;
+      line-height: 1.2;
+      text-indent: -4px;
+    }
+
+    .__pretitle { margin-bottom: 0.25rem; }
+    .__subtitle { @include type-lead(); }
+  }
 }
 
 .full .section,
@@ -54,20 +71,20 @@
   padding-bottom: 4.4rem;
   margin-bottom: 1rem;
 
-  .__body {
+  > .__header {
     flex: 1;
     width: 100%;
+
+    .__title {
+      @include type-d5();
+      margin-bottom: 0.25rem;
+    }
   }
 
-  .__pretitle { margin-bottom: 0.25rem; }
-
-  .__title {
-    @include type-d5();
-    margin-bottom: 0.25rem;
-    font-weight: $type-light;
+  sup,
+  sub {
+    font-weight: 400;
   }
-
-  .__subtitle { @include type-lead(); }
 
   &.\--top { align-items: flex-start; }
   &.\--bottom { align-items: flex-end; }

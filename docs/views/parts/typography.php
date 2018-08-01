@@ -139,6 +139,25 @@
     </div>
   </div>
 </section>
+
+<header class="section bg--white">
+  <div class="__header">
+    <div class="__pretitle">Dapibus Justo Fermentum Euismod Tortor</div>
+    <h1 class="__title">Default Section Header</h1>
+    <div class="__subtitle">Nulla vitae elit libero, a pharetra augue.</div>
+  </div>
+  <p>Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+</header>
+
+<header class="section bg--black ta--c flex--middle">
+  <div class="__header measure">
+    <div class="__pretitle">Fermentum Euismod</div>
+    <h1 class="__title">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</h1>
+    <div class="__subtitle">Augue</div>
+  </div>
+  <p>Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+</header>
+
 <header class="section ta--c pt--3 bg--gray-800">
   <div class="__pretitle mb--0h"><i>Now for something completely different:</i></div>
   <h2 class="__title fs--d4 mb--0h fw--300">A Sample of Real-World Text</h2>
