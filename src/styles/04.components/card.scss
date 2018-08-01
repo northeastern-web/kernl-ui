@@ -375,6 +375,10 @@
       }
     }
   }
+
+  .\--sm { height: $card-height-sm; }
+  .\--md { height: $card-height-md; }
+  .\--lg { height: $card-height-lg; }
 }
 
 
