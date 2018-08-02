@@ -58,6 +58,11 @@ function masthead($id, $masthead_classes, $banner_classes)
           <li class="__item"><a class="__link" href="' . $url .'">Tortor Fusce</a></li>
         </ul>
       </li>
+      <li class="__item +icon">
+        <a class="__link" href="#" data-toggle="modal" data-target="#modal_search" aria-label="Modal Search">
+          <i data-feather="search"></i>
+        </a>
+      </li>
     </ul>
   </nav>
 </header>

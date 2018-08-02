@@ -428,15 +428,18 @@
         padding-bottom: 0 !important;
         color: rgba($type-color, 0.7);
 
-        i, svg {
+        svg {
+          margin-top: 0.25rem;
           width: 20px;
           height: 20px;
-          margin-top: 1px;
         }
       }
     }
 
-    &:last-child a { padding-right: 0; }
+    &:last-child a { 
+      padding-right: 0;
+      padding-bottom: 0.75rem;
+    }
   }
 
   &.\+utility {
