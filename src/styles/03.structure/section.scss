@@ -3,10 +3,13 @@
 
 
 .section {
+  @include make-section();
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  @include make-section();
+
+  // --
+  // Header specific cascade
 
   > .__header {
     flex: 1;
@@ -33,6 +36,7 @@
     .__title + .__subtitle { padding-top: 0.125rem; }
   }
 
+  // adds max-width via .section to nested .__header
   &.\--measure {
     .__header { @extend .measure; }
   }
@@ -95,6 +99,9 @@
   align-items: center;
   padding-top: 4.4rem;
   padding-bottom: 4.4rem;
+  background: $black;
+  color: $white;
+  border-bottom: 1px solid rgba(177, 177, 177, 0.2);
 
   > .__header {
     flex: 1;
