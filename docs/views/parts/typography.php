@@ -1,10 +1,8 @@
-<header class="section --lg +bgimg --bgfixed mb--1">
-  <div class="row">
-    <div class="col ta--c">
-      <div class="__pretitle">What's your type?</div>
-      <h1 class="__title fs--d7 fw--300 mb--1">Typography Styles</h1>
-      <div class="__subtitle fs--lead">This is a page of base typography styles for kernl(ui).</div>
-    </div>
+<header class="section --hero bg--img">
+  <div class="__header">
+    <div class="__pretitle">What's your type?</div>
+    <h1 class="__title">Typography Styles</h1>
+    <div class="__subtitle">This is a page of base typography styles for kernl(ui).</div>
   </div>
 </header>
 <section class="section">
