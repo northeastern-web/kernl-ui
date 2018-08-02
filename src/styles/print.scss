@@ -12,6 +12,8 @@
     font-family: $type-sans;
     font-size: 10pt;
     line-height: 1.5;
+    overflow: visible;
+    page-break-inside: avoid;
   }
 
   *,
