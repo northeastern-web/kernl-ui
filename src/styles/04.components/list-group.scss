@@ -32,8 +32,10 @@
     color: $type-color;
     transition: all 0.3s ease-out;
 
-    &:hover { background-color: $gray-50; }
+    &.__item:hover { background-color: $gray-50; }
   }
+
+  .__item > a:hover { color: lighten($type-color, 20%); }
 
 
   // --

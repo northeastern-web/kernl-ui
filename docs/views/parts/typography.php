@@ -114,10 +114,8 @@
       <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
       <hr>
       <h4>Definition List</h4>
-      <div class="alert bc--blue-dark">
-        <div class="__body">
-          <p>Works like the grid. Elements <code>dt</code> and <code>dd</code>, without any classes, default to 1/4 and 3/4 widths, respectively, at all breakpoints. Can be overridden individually just by adding grid column classes: <code>--&lt;value&gt;@&lt;breakpoint&gt;</code>.</p>
-        </div>
+      <div class="bg--beige fs--sm px--2 py--1 mb--1">
+        <p class="mb--0">Works like the grid. Elements <code>dt</code> and <code>dd</code>, without any classes, default to 1/4 and 3/4 widths, respectively, at all breakpoints. Can be overridden individually just by adding grid column classes: <code>--&lt;value&gt;@&lt;breakpoint&gt;</code>.</p>
       </div>
       <dl>
         <dt>Single room</dt>
@@ -149,11 +147,11 @@
   <p>Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 </header>
 
-<header class="section bg--black ta--c flex--middle">
-  <div class="__header measure">
+<header class="section bg--black --measure-wide --center">
+  <div class="__header">
     <div class="__pretitle">Fermentum Euismod</div>
     <h1 class="__title">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</h1>
-    <div class="__subtitle">Augue</div>
+    <div class="__subtitle">Augue donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.</div>
   </div>
   <p>Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 </header>
@@ -166,7 +164,7 @@
 <section class="section bg--gray-800">
   <div class="row">
     <div class="col w--2/3@t ow--1/6@t">
-      <section class="section pa--2 mb--2@d bg--white tc--gray-800 shadow">
+      <section class="section pa--2 mb--2@d bg--white tc--gray-800">
         <!-- sample of dense text -->
         <h2>Tenure and Tenure-Track Faculty</h2>
         <p>Dismissal of a Tenure-Track Faculty whose term appointment has not expired or a Tenured faculty member is the most severe sanction which the University may impose. An administrative officer who intends to request that dismissal proceedings begin should do so only when there is clear evidence to show adequate cause (see Section I.A.2) for dismissal. Except in an unusually serious or sudden case of gross personal misconduct (including sexual harassment), gross neglect of duty, or unfitness in one’s professional capacity, a request for dismissal proceedings should come forth only after a history of prior formal disciplinary action has been established.</p>
@@ -559,9 +557,7 @@
 <section class="section pb--0">
   <header class="k_section__header">Responsive Table (horizontal scroll &lt;@t)</header>
 </section>
-<section class="section px--0 pt--0">
-  <div class="row">
-    <div class="col">
+<section class="section">
       <table class="table --responsive +th--sm">
         <thead>
           <tr>
@@ -616,6 +612,4 @@
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
 </section>
