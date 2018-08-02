@@ -1,6 +1,6 @@
 
 <header class="section --banner bg--img">
-  <div class="__body">
+  <div class="__header">
     <h2 class="__title">Example Interior/On-Page Nav</h2>
   </div>
 </header>
@@ -11,7 +11,7 @@
     <div class="col w--1/2@t w--1/4@d">
       <div class="hidden--up@t ta--c">
         <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_0">
-          <i class="__icon --left" data-feather="align-left"></i>
+          <i data-feather="align-left"></i>
           Page Menu
         </button>
       </div>
@@ -38,7 +38,7 @@
     <div class="col w--1/2@t w--1/4@d">
       <div class="hidden--up@t ta--c">
         <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_1">
-          <i class="__icon --left" data-feather="align-left"></i>
+          <i data-feather="align-left"></i>
           Page Menu
         </button>
       </div>
@@ -73,7 +73,7 @@
     <div class="col w--1/2@t w--1/4@d">
       <div class="hidden--up@t ta--c">
         <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_2">
-          <i class="__icon --left" data-feather="align-left"></i>
+          <i data-feather="align-left"></i>
           Page Menu
         </button>
       </div>
@@ -81,7 +81,7 @@
         <ul class="__list">
           <li class="__item --title">
             <a class="__link" href="#">
-              <i class="__icon --left feather --sm" data-feather="corner-left-up"></i> Parent Page 
+              <i data-feather="corner-left-up"></i> Parent Page 
             </a> 
           </li>
           <li class="__item">
@@ -110,7 +110,7 @@
   <div class="col w--1/2@t w--1/4@d">
     <div class="hidden--up@t ta--c">
       <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_3">
-        <i class="__icon --left" data-feather="align-left"></i>
+        <i data-feather="align-left"></i>
         Page Menu
       </button>
     </div>
@@ -118,7 +118,7 @@
       <ul class="__list">
         <li class="__item --title">
           <a class="__link" href="#">
-            <i class="__icon --left feather --sm" data-feather="corner-left-up"></i> Parent Page 
+            <i data-feather="corner-left-up"></i> Parent Page With Wrapping Text for Length
           </a> 
         </li>
         <li class="__item">
