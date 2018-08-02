@@ -16,8 +16,8 @@
   </div>
 </section>
 
-<section class="section --hero bg--img flex--middle">
-  <div class="__header measure">
+<section class="section --hero bg--img">
+  <div class="__header">
     <h1 class="__title">Hero</h1>
     <div class="__subtitle">Includes Background Image</div>
     <p>.flex--middle on section, __body has defined width</p>

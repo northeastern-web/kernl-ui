@@ -23,10 +23,10 @@
 
       @include mqbp-up(t) {
         @include type-d4();
+        text-indent: -3px;
       }
 
       @include mqbp-up(d) {
-        @include type-d5();
         text-indent: -4px;
       }
     }
@@ -153,6 +153,8 @@
 
 .section.\--hero {
   @extend .\--banner;
+  @extend .\--measure-wide;
+  @extend .\--center;
   padding-top: 10.6rem;
   padding-bottom: 10.6rem;
 }
