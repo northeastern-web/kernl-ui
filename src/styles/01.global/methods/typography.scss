@@ -87,7 +87,11 @@
 
   line-height: 1.45;
   font-weight: $type-light;
-  font-size: $fs-d2#{$important};
+  font-size: $fs-d1#{$important};
+
+  @include mqbp-up(t) {
+    font-size: $fs-d2#{$important};
+  }
 
   @if $colorContrast { opacity: 0.85; }
 }
