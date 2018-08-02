@@ -8,9 +8,41 @@
   margin-right: auto;
   margin-left: auto;
 
-  // --
-  // Header specific cascade
+  // Remove spacing when nesting sections
+  .section {
+    padding: 0;
+    overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
 
+    .row:last-child {
+      .col { margin-bottom: 0; }
+    }
+  }
+
+  // Remove padding-x for flush sections
+  .section.\--flush {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  // Remove the negative margin from a section's default .row, then the horizontal padding
+  // from all immediate children columns (to prevent runaway style inheritance).
+  .section.\--nogutters {
+    > .row {
+      margin-right: 0;
+      margin-left: 0;
+
+      > .col {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // --
+  // Header specific cascades
+
+  // default section header styling
   > .__header {
     flex: 1;
     margin-bottom: 2rem;
@@ -49,6 +81,7 @@
     .__header { @extend .measure--wide; }
   }
 
+  // centers .__header container and text
   &.\--center {
     .__header {
       @extend .mx--auto;
@@ -57,42 +90,22 @@
   }
 }
 
+// --
+// Document container options
+
+// container is full width
 .full .section,
 .full .masthead { @include make-section('full'); }
 
+// container is 2x default document margin
 .contain .section,
 .contain .masthead { @include make-section('contain', $contain: $contain-width); }
 
-.section .section {
-  padding: 0;
-  overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
+// --
+// Special .section options
 
-  .row:last-child {
-    .col { margin-bottom: 0; }
-  }
-}
-
-.section.\--flush {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-// Remove the negative margin from a section's default .row, then the horizontal padding
-// from all immediate children columns (to prevent runaway style inheritance).
-.section.\--nogutters {
-  > .row {
-    margin-right: 0;
-    margin-left: 0;
-
-    > .col {
-      padding-right: 0;
-      padding-left: 0;
-      margin-bottom: 0;
-    }
-  }
-}
-
-// Banners
+// Page banner default styling
+// .banner used exclusively for sections immediately opening and page/article
 .section.\--banner {
   @extend .fs--smooth;
   display: flex;
@@ -122,9 +135,7 @@
     }
 
     sup,
-    sub {
-      font-weight: 400;
-    }
+    sub { font-weight: 400; }
 
     sup { top: -2.5rem; }
   }
@@ -151,6 +162,8 @@
   }
 }
 
+// Hero default styling (HT Marketing)
+// designed to center and add a max width for generic use cases
 .section.\--hero {
   @extend .\--banner;
   @extend .\--measure-wide;
