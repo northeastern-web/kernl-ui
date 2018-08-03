@@ -236,7 +236,6 @@
     > .__toggler { color: #fff; }
 
     @include mqbp-up(d) {
-      position: absolute;
       right: 0;
 
       .__item a,
@@ -429,9 +428,9 @@
         color: rgba($type-color, 0.7);
 
         svg {
-          margin-top: 0.25rem;
-          width: 20px;
-          height: 20px;
+          margin-bottom: -2px;
+          width: 18px;
+          height: 18px;
         }
       }
     }
@@ -610,4 +609,14 @@
 
 .menu-is-open {
   @include mqbp-up(d) { display: none; }
+}
+
+.\--overlay + .\--hero {
+  .__header {
+    margin-top: 2rem;
+
+    @include mqbp-up(d) {
+      margin-top: 3rem;
+    }
+  }
 }

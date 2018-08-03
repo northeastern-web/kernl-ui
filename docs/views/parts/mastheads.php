@@ -243,7 +243,9 @@
 
 </header>
 <!-- end mega-menu masthead -->
-<div class="section bg--img --hero ta--c justify--center">
-  <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
+<div class="section bg--img --hero --center">
+  <div class="__header">
+    <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
+  </div>
 </div>
       <?php include 'docs/views/partials/_modal-search.php'; ?>
