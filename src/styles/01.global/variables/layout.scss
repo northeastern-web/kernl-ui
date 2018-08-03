@@ -48,3 +48,13 @@ $breakpoints: (
   d: 992px,
   w: 1280px
 ) !default;
+
+// z-index
+$z-behind:  -1 !default;
+$z-0:       0 !default;
+$z-1:       1000 !default;
+$z-2:       2000 !default;
+$z-3:       3000 !default;
+$z-4:       4000 !default;
+$z-5:       5000 !default;
+$z-max:     9999 !default;

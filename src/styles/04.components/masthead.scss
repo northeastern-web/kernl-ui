@@ -14,7 +14,7 @@
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   overflow: visible;
-  z-index: 1000 !important;
+  z-index: $z-1;
   border-bottom: 1px solid rgba(177, 177, 177, 0.2);
 
   .__logo {
@@ -288,7 +288,7 @@
             border-bottom-size: 3px;
             border-bottom-style: solid;
             border-bottom-color: transparent;
-            transition: border-bottom $transition;
+            transition: border-bottom $transition
           }
 
           &:hover {
@@ -510,7 +510,8 @@
     @include mqbp-up(d) {
       @include make-section();
       padding-top: 0;
-      padding-left: 0;
+      padding-left: 0 !important;
+      padding-bottom: 0;
 
       .__item {
         border-right: 1px solid rgba($type-color, 0.3);

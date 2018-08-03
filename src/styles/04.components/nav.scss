@@ -124,7 +124,7 @@
   }
 
   @include mqbp-up(t) {
-    display: flex;
+    display: flex !important;
 
     .__list {
       .__list {
