@@ -180,7 +180,7 @@
       .__submenu {
         position: absolute;
         height: auto;
-        top: 5.3rem;
+        top: 5.4rem;
         right: 0;
         background: #fff;
         padding: 0.5rem 0 !important;
@@ -247,19 +247,63 @@
     }
   }
 
+  .\+icon {
+    a {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      @include mqbp-up(d) {
+        padding-bottom: 0 !important;
+        color: rgba($type-color, 0.7);
+
+        svg {
+          margin-bottom: -2px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    &:last-child a { 
+      padding-right: 0;
+      padding-bottom: 0.75rem;
+    }
+  }
+
   // add a border to the bottom of active nav link
   &.\+border {
     @include mqbp-up(d) {
       .__list:not(.\--utility) {
-        .__link,
-        .__item > a {
-          border-bottom: 3px solid transparent;
+        .__item:not(.\+icon) > .__link,
+        .__item:not(.\+icon) > a {
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            border-bottom-size: 3px;
+            border-bottom-style: solid;
+            border-bottom-color: transparent;
+            transition: border-bottom $transition;
+          }
 
-          &:hover { border-bottom-color: rgba($type-color, 0.5); }
+          &:hover {
+            &::after {
+              border-bottom-color: rgba($red, 0.75);
+            }
+          }
         }
 
         .\--active > .__link,
-        .\--active.__item > a { border-bottom-color: rgba($type-color, 0.35); }
+        .\--active.__item > a {
+          &::after {
+            border-bottom-color: $red;
+          }
+        }
       }
 
       .\+children {
@@ -418,26 +462,6 @@
           }
         }
       }
-    }
-  }
-
-  .\+icon {
-    @include mqbp-up(d) {
-      a {
-        padding-bottom: 0 !important;
-        color: rgba($type-color, 0.7);
-
-        svg {
-          margin-bottom: -2px;
-          width: 18px;
-          height: 18px;
-        }
-      }
-    }
-
-    &:last-child a { 
-      padding-right: 0;
-      padding-bottom: 0.75rem;
     }
   }
 
