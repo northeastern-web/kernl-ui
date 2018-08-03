@@ -15,8 +15,8 @@
         <li>17px base font-size (<code>xl</code>)</li>
         <li>18px base font-size (<code>xx</code>)</li>
       </ul>
-      <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-      <section class="section +bgimg mb--1 pa--2">
+      <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. <a href="#" script="preventDefault()">Pellentesque ornare sem lacinia</a> quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+      <section class="section bg--img mb--1 pa--2">
         <p class="mb--0"><b>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> in a nested banner.</b> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       </section>
       <p class="fs--sm">This a little note set at <code>fs--sm</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.88rem)</span>.</p>
@@ -63,7 +63,7 @@
       <h4>Unstyled List Style</h4>
       <ul class="ls--none">
         <li>4 loaves whole wheat bread</li>
-        <li>1 lb. SweetLeaf Farms unsalted butter</li>
+        <li>1 lb. <a href="#" script="preventDefault()">SweetLeaf Farms</a> unsalted butter</li>
         <li>1 bag unrefined sugar</li>
         <li>2 boxes graham crackers, crumbled</li>
         <li>1 bag butterscotch hard candies. <i>Now, this line item may require some explanation, at least for text-wrap demonstration: Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</i>
@@ -80,10 +80,10 @@
 
       <h4>Inline Lists</h4>
       <ul class="ls--inline">
-        <li><a href="#">item one</a></li>
-        <li><a href="#">item two</a></li>
-        <li><a href="#">item three</a></li>
-        <li><a href="#">item four</a></li>
+        <li><a href="#" script="preventDefault()">item one</a></li>
+        <li><a href="#" script="preventDefault()">item two</a></li>
+        <li><a href="#" script="preventDefault()">item three</a></li>
+        <li><a href="#" script="preventDefault()">item four</a></li>
       </ul>
       <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
@@ -167,7 +167,7 @@
         <h2>Tenure and Tenure-Track Faculty</h2>
         <p>Dismissal of a Tenure-Track Faculty whose term appointment has not expired or a Tenured faculty member is the most severe sanction which the University may impose. An administrative officer who intends to request that dismissal proceedings begin should do so only when there is clear evidence to show adequate cause (see Section I.A.2) for dismissal. Except in an unusually serious or sudden case of gross personal misconduct (including sexual harassment), gross neglect of duty, or unfitness in one’s professional capacity, a request for dismissal proceedings should come forth only after a history of prior formal disciplinary action has been established.</p>
         <h2>Preliminary Proceedings Concerning Cause for Dismissal of a Faculty Member</h2>
-        <p>When reason arises to consider dismissal of a faculty member, the Provost (or a representative specifically designated by the Provost) should discuss the matter with him/her in personal conference and provide him/her with a copy of this Dismissal Proceedings procedure module of the Faculty Handbook. The matter may be terminated by mutual consent at that point, a corrective disciplinary sanction may be imposed (with the faculty member retaining his/her rights under the Faculty Grievance Procedure), or a request to commence dismissal proceedings may be made by the President to the Faculty Senate Agenda Committee.</p>
+        <p>When reason arises to consider dismissal of a faculty member, the Provost (or a representative specifically designated by the Provost) should discuss the matter with him/her in personal conference and provide him/her with a copy of this Dismissal Proceedings procedure module of the Faculty Handbook. The matter may be <a href="#" script="preventDefault()">terminated by mutual consent</a> at that point, a corrective disciplinary sanction may be imposed (with the faculty member retaining his/her rights under the Faculty Grievance Procedure), or a request to commence dismissal proceedings may be made by the President to the Faculty Senate Agenda Committee.</p>
         <p>In the request the President shall state, in general terms, the grounds for dismissal of the faculty member and shall state that a bill of particulars has been prepared which will be delivered to a Committee of Inquiry when it commences its investigation.</p>
         <ol>
           <li>At the same time that the request for dismissal proceedings is sent to the Senate Agenda Committee a copy of that request shall be delivered to the faculty member.</li>
@@ -188,7 +188,7 @@
           </li>
           <li>At the same time that the bill of particulars is sent to the Committee of Inquiry a copy shall be delivered to the faculty member.</li>
         </ol>
-        <p>When the Senate Agenda Committee has received the President’s request, it shall appoint a Committee of Inquiry consisting of five faculty members not part of the department or equivalent academic unit to which the person under investigation belongs<sup>1</sup>.</p>
+        <p>When the <a href="#" script="preventDefault()">Senate Agenda Committee</a> has received the President’s request, it shall appoint a Committee of Inquiry consisting of five faculty members not part of the department or equivalent academic unit to which the person under investigation belongs<sup>1</sup>.</p>
         <ol>
           <li>The function of the Committee of Inquiry shall be to conduct an informal inquiry into the situation specified in the bill of particulars and to determine whether, in its view, there is sufficient evidence to demonstrate probable cause for dismissal.</li>
           <li>It is the burden of the University to present the specific charges against the faculty member. The Committee of Inquiry will reach its findings solely on the basis of the charges brought, and will not formulate charges which have not already been specified in the bill of particulars.</li>
