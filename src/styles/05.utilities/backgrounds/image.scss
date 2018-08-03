@@ -15,12 +15,13 @@
     @extend .pin;
     content: "";
     background: rgba(0, 0, 0, 0.55206);
-    z-index: 0;
+    z-index: $z-0;
   }
 
   > * {
     @extend .fs--smooth;
     z-index: 1;
+    position: relative;
   }
 
   .btn,
