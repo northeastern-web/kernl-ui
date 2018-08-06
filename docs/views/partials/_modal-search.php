@@ -8,7 +8,7 @@
   <div class="__content w--100@d">
     <div class="__body">
       <form action="" method="">
-        <div class="form__enclosed --search --search --dark --line">
+        <div class="form__enclosed --search --dark --line">
           <label for="exampleText" class="sr--only">Search</label>
           <input class="fs--d3 fw--300" type="search" id="modalSearch" aria-describedby="textHelp" placeholder="Search for meaning...">
           <button type="submit" class="btn">Go</button>
