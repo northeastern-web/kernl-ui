@@ -15,7 +15,6 @@
   padding-bottom: 0 !important;
   overflow: visible;
   z-index: $z-1;
-  border-bottom: 1px solid rgba(177, 177, 177, 0.2);
 
   .__logo {
     max-width: 240px;
@@ -133,6 +132,16 @@
     }
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid rgba(177, 177, 177, 0.2);
+  }
+
   .__item.\--active > a,
   .\--active > .__link {
     font-weight: bold;
@@ -180,7 +189,7 @@
       .__submenu {
         position: absolute;
         height: auto;
-        top: 5.4rem;
+        top: 5.3rem;
         right: 0;
         background: #fff;
         padding: 0.5rem 0 !important;
@@ -494,8 +503,8 @@
 
     &.\--megamenu {
       .\+children .__submenu {
-        @include mqbp-up(d) { top: 5.85rem; }
-        @include mqbp-up(w) { top: 6.3625rem; }
+        @include mqbp-up(d) { top: 5.825rem; }
+        @include mqbp-up(w) { top: 6.2rem; }
       }
     }
   }
@@ -585,7 +594,9 @@
   }
 
   &.bg--black {
-    border-bottom: 1px solid $gray-400;
+    &::after {
+      border-bottom-color: $gray-400;
+    }
 
     @include mqbp-up(d) {
       .__link {
