@@ -36,7 +36,7 @@
     <div class="col w--1/3@d">
       <article class="card --h@t --v@d">
         <a href="#" class="__link">
-          <div class="__graphic --16x9"></div>
+          <div class="__graphic ar--16x9"></div>
           <div class="__body">
             <h2 class="__title">Card With Image and Footer</h2>
             <p>This example has an excerpt of 93 characters. Etiam porta sem malesuada magna mollis euismod.</p>
@@ -51,7 +51,7 @@
     <div class="col w--1/3@d">
       <article class="card --h@t --v@d --right">
         <a href="#" class="__link">
-          <div class="__graphic --16x9"></div>
+          <div class="__graphic ar--16x9"></div>
           <div class="__body">
             <h2 class="__title">Image On Right Below Desktop</h2>
             <p>This example has an excerpt of only 50 characters.</p>
@@ -66,7 +66,7 @@
     <div class="col w--1/3@d">
       <article class="card --h@t --v@d">
         <a href="#" class="__link">
-          <div class="__graphic --16x9"></div>
+          <div class="__graphic ar--16x9"></div>
           <div class="__body">
             <h2 class="__title">This Card Has an Image and an Exceptionally Lengthy Title</h2>
             <p>This example has an excerpt of 208 characters. Etiam porta sem malesuada magna mollis euismod. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -83,7 +83,7 @@
     <div class="col w--1/2@t w--1/4@d">
       <article class="card">
         <a href="#" class="__link">
-          <div class="__graphic --1x1 --16x9@w"></div>
+          <div class="__graphic ar--1x1 ar--16x9@w"></div>
           <div class="__body">
             <h2 class="__title">Card With Image and Footer</h2>
             <p>This example has an excerpt of 93 characters. Etiam porta sem malesuada magna mollis euismod.</p>
@@ -98,7 +98,7 @@
     <div class="col w--1/2@t w--1/4@d">
       <article class="card --h --right --v@t">
         <a href="#" class="__link">
-          <div class="__graphic --16x9 --1x1@t --16x9@w"></div>
+          <div class="__graphic ar--16x9 ar--1x1@t ar--16x9@w"></div>
           <div class="__body">
             <h2 class="__title">Image On Right Below Tablet</h2>
             <p>This example has an excerpt of only 50 characters.</p>
@@ -113,7 +113,7 @@
     <div class="col w--1/2@t w--1/4@d">
       <article class="card">
         <a href="#" class="__link">
-          <div class="__graphic --16x9 --1x1@d --16x9@w"></div>
+          <div class="__graphic ar--16x9 ar--1x1@d ar--16x9@w"></div>
           <div class="__body">
             <h2 class="__title">This Card Has an Image and an Exceptionally Lengthy Title</h2>
             <p>This example has an excerpt of 208 characters. Etiam porta sem malesuada magna mollis euismod. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -128,7 +128,7 @@
     <div class="col w--1/2@t w--1/4@d">
       <article class="card">
         <a href="#" class="__link">
-          <div class="__graphic --16x9 --1x1@d --16x9@w"></div>
+          <div class="__graphic ar--16x9 ar--1x1@d ar--16x9@w"></div>
           <div class="__body">
             <h2 class="__title">This Card Has an Image and an Exceptionally Lengthy Title</h2>
             <p>This example has an excerpt of 93 characters. Etiam porta sem malesuada magna mollis euismod.</p>
@@ -146,7 +146,7 @@
     <div class="col w--1/2 w--1/3@t w--20@d">
       <article class="card --profile">
         <a href="#" class="__link">
-          <div class="__graphic --1x1"></div>
+          <div class="__graphic ar--1x1"></div>
           <div class="__body py--1">
             <h2 class="__title">Kay Rooney</h2>
             <div class="__subtitle">School of HummaJamma BoobaDooda, University of Edinburgh</div>
@@ -161,7 +161,7 @@
     <div class="col w--1/2 w--1/3@t w--20@d">
       <article class="card --profile">
         <a href="#" class="__link">
-          <div class="__graphic --1x1"></div>
+          <div class="__graphic ar--1x1"></div>
           <div class="__body py--1">
             <h2 class="__title">Cooper O'Neill</h2>
             <div class="__subtitle">School of HummaJamma BoobaDooda, Boston College</div>
@@ -176,7 +176,7 @@
     <div class="col w--1/2 w--1/3@t w--20@d">
       <article class="card --profile">
         <a href="#" class="__link">
-          <div class="__graphic --1x1"></div>
+          <div class="__graphic ar--1x1"></div>
           <div class="__body py--1">
             <h2 class="__title">Lillie Squires (Lil)</h2>
             <div class="__subtitle">School of HummaJamma BoobaDooda, MIT</div>
@@ -191,7 +191,7 @@
     <div class="col w--1/2 w--1/3@t w--20@d">
       <article class="card --profile">
         <a href="#" class="__link">
-          <div class="__graphic --1x1"></div>
+          <div class="__graphic ar--1x1"></div>
           <div class="__body py--1">
             <h2 class="__title">Millie Harper</h2>
             <div class="__subtitle">School of HummaJamma BoobaDooda, Northeastern University</div>
@@ -206,7 +206,7 @@
     <div class="col w--1/2 w--1/3@t w--20@d">
       <article class="card --profile">
         <a href="#" class="__link">
-          <div class="__graphic --1x1"></div>
+          <div class="__graphic ar--1x1"></div>
           <div class="__body py--1">
             <h2 class="__title">Elizabeth Stuart (Liza)</h2>
             <div class="__subtitle">College of Computer and Information Science, Northeastern University</div>

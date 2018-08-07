@@ -10,14 +10,14 @@
 }
 
 @each $ar-name, $ar-value in $aspect-ratios {
-  &.\--#{$ar-name} { padding-top: $ar-value; }
+  &.ar--#{$ar-name} { padding-top: $ar-value; }
 }
 
 // Aspect Ratios with breakpoint options
 @each $breakpoint in map-keys($breakpoints) {
   @include mqbp-up($breakpoint) {
     @each $ar-name, $ar-value in $aspect-ratios {
-      &.\--#{$ar-name}\@#{$breakpoint} { padding-top: $ar-value; }
+      &.ar--#{$ar-name}\@#{$breakpoint} { padding-top: $ar-value; }
     }
   }
 }
