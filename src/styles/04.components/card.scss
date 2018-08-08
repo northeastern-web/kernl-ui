@@ -149,6 +149,7 @@
 
     .__header {
       @extend .pos--absolute;
+      @extend .pin--t;
     }
 
     .__body {
@@ -157,8 +158,10 @@
       max-height: 95%;
     }
 
-    .__header + .__body {
-      margin-top: 1.5rem;
+    &:not(.\--middle):not(.\--bottom) {
+      .__header + .__body {
+        margin-top: 1.5rem;
+      }
     }
   }
 

@@ -225,6 +225,11 @@
       <article class="card --overlay">
         <a href="#" class="__link">
           <div class="__graphic"></div>
+          <header class="__header">
+            <div class="__column">
+              <div class="badge bg--white-alpha">Badge</div>
+            </div>
+          </header>
           <div class="__body">
             <h2 class="__title">Default Overlay Card</h2>
             <p>This example has an excerpt of 208 characters. Etiam porta sem malesuada magna mollis euismod. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -236,6 +241,11 @@
       <article class="card --overlay --middle">
         <a href="#" class="__link">
           <div class="__graphic"></div>
+          <header class="__header">
+            <div class="__column">
+              <div class="badge bg--white-alpha">Badge</div>
+            </div>
+          </header>
           <div class="__body">
             <h2 class="__title">Overlay Middle</h2>
             <p>This example has an excerpt of only 50 characters.</p>
