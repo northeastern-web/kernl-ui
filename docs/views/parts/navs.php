@@ -162,7 +162,7 @@
 </section>
 
 <section class="section --banner bg--img +nav">
-  <div class="__body">
+  <div class="__header">
     <h1 class="__title">Banner with Tabbed Navigation</h1>
     <div class="__subtitle">Includes Background Image</div>
   </div>

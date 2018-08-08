@@ -44,15 +44,32 @@
 
   // requires width and aspect ratio utility on this element 
   .__graphic {
+    @extend .ar;
+/* 
+    @include mqbp-up(d) {
+      height: auto;
+      padding-top: 0;
+    } */
   }
 
   // pins the <img>
   .__graphic__img {
-    @extend .pin;
+    @extend .ar--object;
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
+
+    /* @include mqbp-up(d) {
+      position: relative !important;
+      width: auto !important;
+      height: auto !important;
+      top: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      left: auto !important;
+      transform: none !important;
+    } */
   }
 
   // dark screen as modal backdrop

@@ -322,7 +322,7 @@
 .\+nav .\--tabbed {
   overflow: auto;
   position: absolute;
-  bottom: 0;
+  bottom: -1px; // because of border-bottom on bottom
   left: 0;
   right: 0;
   align-self: flex-start;

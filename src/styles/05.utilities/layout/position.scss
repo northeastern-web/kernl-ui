@@ -4,12 +4,12 @@
 // .pos--<value>
 
 
-.pos--static    { position: static; }
-.pos--fixed     { position: fixed; }
-.pos--absolute  { position: absolute; }
-.pos--relative  { position: relative; }
+.pos--static    { position: static !important; }
+.pos--fixed     { position: fixed !important; }
+.pos--absolute  { position: absolute !important; }
+.pos--relative  { position: relative !important; }
 .pos--sticky    {
-  position: sticky;
+  position: sticky !important;
   top: 1rem;
 }
 
