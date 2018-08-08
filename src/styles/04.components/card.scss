@@ -58,7 +58,7 @@
 
   // pins the <img>
   .__graphic__img {
-    @extend .ar--object;
+    @extend .pin;
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
