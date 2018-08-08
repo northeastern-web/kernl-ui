@@ -147,10 +147,18 @@
       }
     }
 
+    .__header {
+      @extend .pos--absolute;
+    }
+
     .__body {
       @extend .pos--absolute;
       overflow-y: hidden;
       max-height: 95%;
+    }
+
+    .__header + .__body {
+      margin-top: 1.5rem;
     }
   }
 
