@@ -166,6 +166,7 @@
   @extend .\--banner;
   @extend .\--measure-wide;
   @extend .\--center;
+  @extend .flex--col;
   padding-top: 10.6rem;
   padding-bottom: 10.6rem;
   border-bottom: 0 none;
