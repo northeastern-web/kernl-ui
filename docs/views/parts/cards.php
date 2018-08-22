@@ -50,6 +50,11 @@
       <article class="card --h@t --v@d --right">
         <a href="#" class="__link">
           <div class="__graphic ar--16x9"></div>
+          <header class="__header">
+            <div class="__column">
+              <div class="badge bg--white-alpha">Badge</div>
+            </div>
+          </header>
           <div class="__body">
             <h2 class="__title">Image On Right Below Desktop</h2>
             <p>This example has an excerpt of only 50 characters.</p>

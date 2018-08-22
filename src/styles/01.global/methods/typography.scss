@@ -23,6 +23,8 @@
   font-size: $fs-d1#{$important};
 
   @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -0.5rem; }
 }
 
 @mixin type-d2($colorContrast: false, $important: false) {
@@ -36,6 +38,8 @@
   font-size: $fs-d2#{$important};
 
   @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -0.85rem; }
 }
 
 @mixin type-d3($colorContrast: false, $important: false) {
@@ -49,6 +53,8 @@
   font-size: $fs-d3#{$important};
 
   @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -1rem; }
 }
 
 @mixin type-d4($colorContrast: false, $important: false) {
@@ -62,6 +68,8 @@
   font-size: $fs-d4#{$important};
 
   @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -1.5rem; }
 }
 
 @mixin type-d5($colorContrast: false, $important: false) {
@@ -76,6 +84,8 @@
   letter-spacing: -0.05rem;
 
   @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -2.25rem; }
 }
 
 @mixin type-lead($colorContrast: false, $important: false) {

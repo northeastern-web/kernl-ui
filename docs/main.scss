@@ -67,7 +67,7 @@ html { background-color: #333; }
   flex: 1;
   flex-direction: column;
 
-  @include mqbp-up(t) {
+  @include mqbp-up(d) {
     flex-direction: row;
   }
 }

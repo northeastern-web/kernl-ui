@@ -69,6 +69,11 @@
     object-fit: cover;
   }
 
+  .__header {
+    @extend .pos--absolute;
+    @extend .pin--t;
+  }
+
   .__footer {
     @extend .justify--between;
     @include card-padding();
@@ -147,11 +152,6 @@
         content: '';
         background-color: rgba(0, 0, 0, 0.7);
       }
-    }
-
-    .__header {
-      @extend .pos--absolute;
-      @extend .pin--t;
     }
 
     .__body {
