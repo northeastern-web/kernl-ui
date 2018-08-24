@@ -10,7 +10,7 @@ img {
 
 img,
 embed,
-iframe,
+iframe:not(.wufoo-form-container),
 object,
 audio,
 video {
