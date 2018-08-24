@@ -172,14 +172,14 @@
 </section>
 
 <!-- Equal-height Variant -->
-<section class="section">
+<section class="section col--stretch">
   <header class="k_section__header">Equal-height Variant</header>
   <div class="bg--beige pa--1 mb--1 br--pill fs--xs">
-    Add <code>h--100</code> class to <code>media</code> element. Makes media objects within a row equal height. <b>Note</b>: Padding should be applied in the column's custom classes on the Wordpress backend.
+    Add <code>col--stretch</code> class to parent <code>section</code>. Makes media objects parent columns within a row equal height. <b>Note</b>: Padding should be applied in the column's custom classes on the Wordpress backend.
   </div>
   <div class="row">
     <div class="col w--50@t w--1/3@d">
-      <div class="media h--100">
+      <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">
@@ -190,7 +190,7 @@
       </div>
     </div>
     <div class="col w--50@t w--1/3@d">
-      <div class="media h--100">
+      <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">
@@ -201,7 +201,7 @@
       </div>
     </div>
     <div class="col w--50@t w--1/3@d">
-      <div class="media h--100">
+      <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">
@@ -212,7 +212,7 @@
       </div>
     </div>
     <div class="col w--50@t w--1/3@d">
-      <div class="media h--100">
+      <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">
@@ -223,7 +223,7 @@
       </div>
     </div>
     <div class="col w--50@t w--1/3@d">
-      <div class="media h--100">
+      <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">
@@ -234,7 +234,7 @@
       </div>
     </div>
     <div class="col w--50@t w--1/3@d">
-      <div class="media h--100">
+      <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
           <div class="__body">

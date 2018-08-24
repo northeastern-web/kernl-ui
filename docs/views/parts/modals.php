@@ -89,7 +89,9 @@
 
           <div class="row">
             <div class="col w--2/3@t ow--1/6@t">
-              <div class="__graphic ar--1x1 w--1/3@d f--r@d"></div>
+              <div class="w--1/3@d f--r@d pt--2h@d ml--1@d mb--1@d ta--c">
+                <img src="docs/images/random/337869.jpg" alt="image">
+              </div>
               <div class="__body">
                 <h3 class="__title">David Mary Davenport</h3>
                 <p class="__subtitle">Curabitur Blandit Tempus Porttitor<br>

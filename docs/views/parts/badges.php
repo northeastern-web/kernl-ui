@@ -1,11 +1,13 @@
 <div class="section">
   <div class="row">
     <div class="col w--1/2">
-      <a href="#" class="badge">Inline Badge</a>
-      <a href="#" class="badge bc--black">Inline Badge</a>
-      <a href="#" class="badge bg--red">Inline Badge</a>
-      <a href="#" class="badge bc--blue">Inline Badge</a>
-      <a href="#" class="badge bg--purple br--pill">Inline Badge</a>
+      <p>
+        <a href="#" class="badge">Inline Badge</a>
+        <a href="#" class="badge bc--black">Inline Badge</a>
+        <a href="#" class="badge bg--red">Inline Badge</a>
+        <a href="#" class="badge bc--blue">Inline Badge</a>
+        <a href="#" class="badge bg--purple br--pill">Inline Badge</a>
+      </p>
     </div>
     <div class="col w--1/2">
       <div class="badge bc--black">

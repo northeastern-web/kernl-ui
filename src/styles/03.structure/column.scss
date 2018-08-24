@@ -5,11 +5,11 @@
 // baseline column component (extend using width utility)
 .col {
   @include make-gutters();
-  display: block;
   flex: none;
+  align-items: flex-start;
+  flex-flow: column nowrap;
   width: 100%;
   padding: 0 0.5rem;
-  margin-bottom: 1rem;
 }
 
 // wrapper for .col items

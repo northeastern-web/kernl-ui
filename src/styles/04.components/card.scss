@@ -3,9 +3,9 @@
 
 
 .card {
+  @include margin-bottom-gutter();
   @include type-sm();
   width: 100%;
-  height: 100%;
   background: $white;
   position: relative;
   overflow: visible;
