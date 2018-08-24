@@ -184,17 +184,17 @@ sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
-  margin: 0 2px;
+  margin: 0 1px;
 }
 
 sub { bottom: -0.25em; }
 
 sup { top: -0.425em; }
-
+/* 
 h2, h3 {
   sup { top: -0.85em; }
 }
-
+ */
 hr {
   box-sizing: content-box;
   height: 0;

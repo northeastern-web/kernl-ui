@@ -13,12 +13,10 @@
     </div>
     <div class="col w--1/3@t">
       <article class="card">
-        <a href="#" class="__link">
-          <div class="__body">
-            <h2 class="__title">Short Title</h2>
-            <p>This example has an excerpt of only 50 characters.</p>
-          </div>
-        </a>
+        <div class="__body">
+          <h2 class="__title">Short Title, No Wrapping Link</h2>
+          <p>This example has an excerpt of only 50 characters.</p>
+        </div>
       </article>
     </div>
     <div class="col w--1/3@t">
@@ -52,6 +50,11 @@
       <article class="card --h@t --v@d --right">
         <a href="#" class="__link">
           <div class="__graphic ar--16x9"></div>
+          <header class="__header">
+            <div class="__column">
+              <div class="badge bg--white-alpha">Badge</div>
+            </div>
+          </header>
           <div class="__body">
             <h2 class="__title">Image On Right Below Desktop</h2>
             <p>This example has an excerpt of only 50 characters.</p>
@@ -65,17 +68,15 @@
     </div>
     <div class="col w--1/3@d">
       <article class="card --h@t --v@d">
-        <a href="#" class="__link">
-          <div class="__graphic ar--16x9"></div>
-          <div class="__body">
-            <h2 class="__title">This Card Has an Image and an Exceptionally Lengthy Title</h2>
-            <p>This example has an excerpt of 208 characters. Etiam porta sem malesuada magna mollis euismod. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          </div>
-          <div class="__footer">
-            <div class="__column">Footer Text</div>
-            <div class="__column"><i data-feather="arrow-right" class="--sm"></i></div>
-          </div>
-        </a>
+        <div class="__graphic ar--16x9"></div>
+        <div class="__body">
+          <h2 class="__title">This Card Has an Image and an Exceptionally Lengthy Title and No Wrapping Link</h2>
+          <p>This example has an excerpt of 208 characters. Etiam porta sem malesuada magna mollis euismod. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+        <div class="__footer">
+          <div class="__column">Footer Text</div>
+          <div class="__column"><i data-feather="arrow-right" class="--sm"></i></div>
+        </div>
       </article>
     </div>
 
@@ -239,18 +240,16 @@
     </div>
     <div class="col w--1/3@d">
       <article class="card --overlay --middle">
-        <a href="#" class="__link">
-          <div class="__graphic"></div>
-          <header class="__header">
-            <div class="__column">
-              <div class="badge bg--white-alpha">Badge</div>
-            </div>
-          </header>
-          <div class="__body">
-            <h2 class="__title">Overlay Middle</h2>
-            <p>This example has an excerpt of only 50 characters.</p>
+        <div class="__graphic"></div>
+        <header class="__header">
+          <div class="__column">
+            <div class="badge bg--white-alpha">Badge</div>
           </div>
-        </a>
+        </header>
+        <div class="__body">
+          <h2 class="__title">Overlay Middle, No Wrapping Link</h2>
+          <p>This example has an excerpt of only 50 characters.</p>
+        </div>
       </article>
     </div>
     <div class="col w--1/3@d">

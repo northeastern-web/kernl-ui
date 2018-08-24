@@ -23,6 +23,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
 }
 
 article,

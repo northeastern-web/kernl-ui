@@ -113,14 +113,14 @@
       <hr>
       <h4>Definition List</h4>
       <div class="bg--beige fs--sm px--2 py--1 mb--1">
-        <p class="mb--0">Works like the grid. Elements <code>dt</code> and <code>dd</code>, without any classes, default to 1/4 and 3/4 widths, respectively, at all breakpoints. Can be overridden individually just by adding grid column classes: <code>--&lt;value&gt;@&lt;breakpoint&gt;</code>.</p>
+        <p class="mb--0">Works like the grid. Element <code>dl</code> extends <code>.row</code>. Elements <code>dt</code> and <code>dd</code> extend <code>.col</code> and stack by default, but can be overridden individually just by adding grid column classes: <code>w--&lt;value&gt;@&lt;breakpoint&gt;</code>.</p>
       </div>
       <dl>
-        <dt>Single room</dt>
-        <dd>$199/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
+        <dt class="w--1/4@t w--20@w">Single room</dt>
+        <dd class="w--3/4@t w--80@w">$199/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
 
-        <dt>Double room</dt>
-        <dd>$239/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
+        <dt class="w--1/4@t w--20@w">Double room</dt>
+        <dd class="w--3/4@t w--80@w">$239/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
       </dl>
       <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
       <hr>
@@ -376,19 +376,19 @@
     <div class="col">
       <header class="k_section__header">Display Sizes</header>
       <small class="text-style-block">Display Size 1:</small>
-      <p class="fs--d1">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem/1.4)</span></p>
+      <p class="fs--d1">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem/1.4)</span></p>
       <hr>
       <small class="text-style-block">Display Size 2:</small>
-      <p class="fs--d2">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.53rem/1.4)</span></p>
+      <p class="fs--d2">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.53rem/1.4)</span></p>
       <hr>
       <small class="text-style-block">Display Size 3:</small>
-      <p class="fs--d3">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 2.13rem/1.3)</span></p>
+      <p class="fs--d3">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 2.13rem/1.3)</span></p>
       <hr>
       <small class="text-style-block">Display Size 4:</small>
-      <p class="fs--d4">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 3rem/1.1)</span></p>
+      <p class="fs--d4">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 3rem/1.1)</span></p>
       <hr>
       <small class="text-style-block">Display Size 5:</small>
-      <p class="fs--d5">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 4.5rem/1.05)</span></p>
+      <p class="fs--d5">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 4.5rem/1.05)</span></p>
       <hr>
   </div>
 </section>

@@ -13,7 +13,7 @@ function masthead($id, $masthead_classes, $banner_classes)
     if ($_SERVER['HTTP_HOST'] == 'kernl-ui.test') {
         $url = 'https://'. $_SERVER['HTTP_HOST'];
     } else {
-        $url = 'http://nuweb28dev.neu.edu/kernl-ui';
+        $url = 'https://nuweb28dev.neu.edu/kernl-ui';
     }
 
   ($masthead_classes == '--overlay' || $masthead_classes == 'bg--black') ? $logo = "-white" : $logo = "";
