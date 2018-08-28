@@ -88,13 +88,13 @@
       text-align: center;
     }
   }
+}
 
-  &.col--stretch {
-    .col {
-      @extend .d--flex;
-      @extend .items--stretch;
-      flex-flow: row nowrap;
-    }
+.col--stretch {
+  .col {
+    @extend .d--flex;
+    @extend .items--stretch;
+    flex-flow: row nowrap;
   }
 }
 
