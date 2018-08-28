@@ -89,8 +89,8 @@
 
           <div class="row">
             <div class="col w--2/3@t ow--1/6@t">
-              <div class="w--1/3@d f--r@d pt--2h@d ml--1@d mb--1@d ta--c">
-                <img src="docs/images/random/337869.jpg" alt="image">
+              <div class="w--1/3@d f--r@d pt--2h ml--1@d mb--1@d ta--c">
+                <img class="w--80 w--60@t w--100@d" src="docs/images/random/337869.jpg" alt="image">
               </div>
               <div class="__body">
                 <h3 class="__title">David Mary Davenport</h3>
