@@ -3,6 +3,8 @@
 
 
 .card {
+  @extend .flex--col;
+  @extend .d--flex;
   @include margin-bottom-gutter();
   @include type-sm();
   width: 100%;
@@ -12,10 +14,10 @@
   box-shadow: $box-shadow-inset;
 
   .__link {
+    @extend .flex--col;
+    @extend .d--flex;
     color: inherit;
-    display: flex;
     height: 100%;
-    flex-direction: column;
     transition: box-shadow $transition;
 
     &:hover {
@@ -75,9 +77,9 @@
   }
 
   .__footer {
+    @extend .d--flex;
     @extend .justify--between;
     @include card-padding();
-    display: flex;
     padding-top: 0 !important;
     font-size: 87.5%;
   }
@@ -169,6 +171,8 @@
 
   // Middle text variant
   &.\--middle {
+    @extend .flex--middle;
+
     .__link {
       @extend .flex--middle;
     }
@@ -188,6 +192,8 @@
 
   // Bottom text variant
   &.\--bottom {
+    @extend .justify--end;
+
     .__link {
       @extend .justify--end;
     }
@@ -206,7 +212,14 @@
     .__body { flex: 0; }
   }
 
-  //
+  // --
+  // Size variants
+  &.\--sm { height: $card-height-sm; }
+  &.\--md { height: $card-height-md; }
+  &.\--lg { height: $card-height-lg; }
+  &.\--xl { height: $card-height-xl; }
+
+  // --
   // Orientation overrides
   &.\--h {
     .__link { flex-direction: row; }
