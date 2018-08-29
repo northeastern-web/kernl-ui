@@ -29,7 +29,7 @@
 
   a {
     display: block;
-    color: $type-color;
+    color: inherit; // $type-color;
     transition: all 0.3s ease-out;
 
     &.__item:hover { background-color: $gray-50; }
