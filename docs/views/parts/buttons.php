@@ -54,18 +54,22 @@
     <div class="col w--1/4@t pt--2 pb--1">
       <p><a class="btn bg--gray-500" href="#">Gray-500 Button</a></p>
       <p><a class="btn bc--gray-500" href="#">Gray-500 Button Border</a></p>
+      <p class="mt--2"><a class="btn --m" href="#">Marketing Variant</a></p>
     </div>
     <div class="col w--1/4@t pt--2 pb--1">
       <p><a class="btn bg--red" href="#">Red Button</a></p>
       <p><a class="btn bc--red" href="#">Red Button Border</a></p>
+      <p class="mt--2"><a class="btn --m tt--caps" href="#"><i data-feather="arrow-right"></i> Marketing Variant</a></p>
     </div>
     <div class="col w--1/4@t pt--2 pb--1 bg--black">
       <p><a class="btn bg--yellow" href="#">Yellow Button</a></p>
       <p><a class="btn bc--yellow" href="#">Yellow Button Border</a></p>
+      <p class="mt--2"><a class="btn --m" href="#">Marketing Variant</a></p>
     </div>
     <div class="col w--1/4@t pt--2 pb--1 bg--black">
       <p><a class="btn bg--beige" href="#">Beige Button</a></p>
       <p><a class="btn bc--beige" href="#">Beige Button Border</a></p>
+      <p class="mt--2"><a class="btn --m tt--caps --right" href="#">Marketing Variant <i data-feather="arrow-right"></i></a></p>
     </div>
   </div>
 </section>
