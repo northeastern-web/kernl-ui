@@ -21,6 +21,7 @@
     }
   } @else {
     .w--#{$name} { width: $value; }
+    .ow--#{$name} { margin-left: $value; } // offset
   }
 }
 

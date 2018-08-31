@@ -178,6 +178,11 @@
     }
 
     &.\--overlay {
+      .__link {
+        @extend .d--block;
+        width: 100%;
+      }
+
       .__header {
         @extend .pin--xc;
       }
@@ -199,6 +204,8 @@
     }
 
     &.\--overlay {
+      .__link { width: 100%; }
+
       .__body {
         @extend .pin--b;
         @extend .w--100;
