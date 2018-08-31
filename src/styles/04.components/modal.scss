@@ -24,6 +24,7 @@
     display: flex;
     padding: 2rem;
     margin: 4rem auto 5rem;
+    width: 90%;
     max-width: 450px;
     max-height: 96vh;
     overflow-y: scroll;
@@ -32,6 +33,7 @@
     flex: 0 1 auto;
 
     @include mqbp-up(t) {
+      width: 80%;
       max-width: 760px;
     }
 

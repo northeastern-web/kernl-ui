@@ -85,12 +85,12 @@
            aria-labelledby="modal_base_label"
            aria-hidden="true">
         <div class="__screen" data-dismiss="modal"></div>
-        <div class="__content bg--white pa--0">
+        <div class="__content bg--white pa--0 section --nogutters">
 
           <div class="row">
-            <div class="col w--2/3@t ow--1/6@t">
-              <div class="w--1/3@d f--r@d pt--2h ml--1@d mb--1@d ta--c">
-                <img class="w--80 w--60@t w--100@d" src="docs/images/random/337869.jpg" alt="image">
+            <div class="col mx--auto w--2/3@t">
+              <div class="w--1/3@d f--r@d pt--2h@t ml--1@d mb--1@d ta--c">
+                <img class="w--100 w--90@t w--100@d" src="docs/images/random/337869.jpg" alt="image">
               </div>
               <div class="__body">
                 <h3 class="__title">David Mary Davenport</h3>
