@@ -1,0 +1,26 @@
+// Variables
+// Misc
+
+
+// Borders
+$border-width: 1px !default;
+$border-radius: 2px !default;
+
+// Box Shadow
+$box-shadow: 0 0 4px rgba($black, 0.2) !default;
+$box-shadow-hover: 0 0 6px rgba($black, 0.3) !default;
+$box-shadow-inset: inset 0 0 1px rgba($black, 0.5), 0 0 0 rgba($black, 0) !default;
+$box-shadow-inset-hover: inset 0 0 1px rgba($black, 0.4), 0 3px 20px rgba($black, 0.1) !default;
+
+
+// Clearfix
+%clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Transition
+$transition: 0.2s ease !default;

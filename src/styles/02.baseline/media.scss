@@ -1,22 +1,28 @@
-//
+// Baseline
 // Media
-//
 
 
-//
 // Images
-
 img {
   border-style: none;
   vertical-align: middle;
 }
 
+img,
+embed,
+iframe:not(.wufoo-form-container),
+iframe:not(.ar--object),
+object,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
 svg:not(:root) { overflow: hidden; }
 
 
-//
 // Grouping
-
 figcaption,
 figure,
 main { display: block; }
@@ -24,8 +30,8 @@ main { display: block; }
 figure { margin: 0 0 1rem; }
 
 
-//
 // Embedded content
+iframe { border: 0; }
 
 audio,
 video { display: inline-block; }

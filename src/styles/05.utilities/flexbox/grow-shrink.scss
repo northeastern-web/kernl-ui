@@ -1,0 +1,14 @@
+// Flexbox Utility
+// Grow & Shrink
+//
+// .flex--<value>
+
+
+.flex--initial    { flex: initial; }
+.flex--1          { flex: 1; }
+.flex--auto       { flex: auto; }
+.flex--none       { flex: none; }
+.flex--grow       { flex-grow: 1; }
+.flex--shrink     { flex-shrink: 1; }
+.flex--no-grow    { flex-grow: 0; }
+.flex--no-shrink  { flex-shrink: 0; }

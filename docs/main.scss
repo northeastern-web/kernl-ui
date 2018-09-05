@@ -67,7 +67,7 @@ html { background-color: #333; }
   flex: 1;
   flex-direction: column;
 
-  @include mqbp-up(md) {
+  @include mqbp-up(d) {
     flex-direction: row;
   }
 }
@@ -80,7 +80,7 @@ html { background-color: #333; }
 
   .k_logo { display: none; }
 
-  @include mqbp-up(md) {
+  @include mqbp-up(t) {
     position: fixed;
     top: 0;
     left: 0;
@@ -97,7 +97,7 @@ html { background-color: #333; }
       transform: translateX(0);
       background: rgba(229, 229, 229, 0.99);
       border-right: 0 none;
-      @include box-shadow();
+      box-shadow: $box-shadow;
 
       .k_logo {
         display: block;
@@ -108,21 +108,13 @@ html { background-color: #333; }
     }
   }
 
-  @include mqbp-up(lg) { transform: translateX(-95%); }
+  @include mqbp-up(d) { transform: translateX(-95%); }
 }
 
 .k_nav__list {
-  columns: 2;
+  columns: 3;
 
-  @media (min-width: 420px) {
-    columns: 3;
-  }
-
-  @media (min-width: 630px) {
-    columns: 4;
-  }
-
-  @include mqbp-up(md) {
+  @include mqbp-up(t) {
     columns: initial;
     padding: 0.5rem 0 4rem;
   }
@@ -223,13 +215,14 @@ html { background-color: #333; }
   transition: background 0.2s ease;
 
   .__title {
+    @extend .fs--smooth;
+
     text-transform: capitalize;
     transition: all 0.25s ease;
-    color: $type-color;
+    color: $white;
     padding-bottom: 0;
     font-weight: 200;
     text-shadow: none;
-    @extend %font_smoothing;
   }
 
   .__link {
@@ -244,15 +237,15 @@ html { background-color: #333; }
       filter: grayscale(1);
       opacity: 0.2;
 
-      @include mqbp-up(md) {
+      @include mqbp-up(t) {
         width: auto;
         max-width: 300%;
         height: 100%;
       }
 
-      @include mqbp-up(xx) {
+      @include mqbp-up(w) {
         min-width: 100%;
-        max-width: 150%;
+        max-width: 130%;
         height: auto;
       }
     }
@@ -277,31 +270,30 @@ html { background-color: #333; }
 
 // badge presentation
 .badge__wrapper {
+  @include margin-bottom-gutter();
   position: relative;
   width: 100%;
-  height: 150px;
+  height: 200px;
   box-shadow: 0 1px 0.25rem 0 rgba(0,0,0,0.25);
-  margin: 1rem auto;
   background-size: cover;
   background-position: 50% 50%;
+  text-shadow: none !important;
 }
 
 
 //
 // Grid demonstration styles
 .k_grid {
-  .col {
-    margin-top: ($grid-gutter-width-base / 2);
-    margin-bottom: ($grid-gutter-width-base / 2);
-  }
+  > .section { padding-top: 0; }
 
   .col-content {
     overflow: hidden;
     background: #309aa8;
+    width: 100%;
     color: rgba(255, 255, 255, 0.6);
     padding: 8px;
     font-size: 0.75rem;
-    font-family: "Changa", sans-serif;
+    font-family: "Source Code Pro", monospace;
   }
 
   .section .col-content .section {
@@ -314,11 +306,18 @@ html { background-color: #333; }
   .\--nogutters {
     .col-content {
       border-right: 1px solid #aed8da;
+      border-bottom: 1px solid #aed8da;
     }
 
-    &:last-child {
+    .col:last-child {
       .col-content {
         border-right: 0 none;
+      }
+    }
+
+    .row:last-child {
+      .col-content {
+        border-bottom: 0 none;
       }
     }
   }
@@ -334,14 +333,22 @@ html { background-color: #333; }
   small { font-size: 0.825rem; }
 }
 
+.k_grid-lines {
+  .row {
+    background-size: 100% 100%;
+    background-repeat: none;
+  }
+}
+
 .fw--n { font-weight: 400; }
 
 .text-style-block {
+  @extend .fs--smooth;
+
   font-family: 'Changa', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   opacity: 0.7;
-  @extend %font_smoothing;
 }
 
 code {
@@ -357,15 +364,7 @@ code {
 p, li, td, th, dt, dd {
   code {
     line-height: 1;
-    background-color: rgba($green-light, 0.25);
-  }
-}
-
-.\--banner {
-  h1 { text-indent: -3px; }
-
-  .\--banner {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba($yellow, 0.25);
   }
 }
 
@@ -389,7 +388,7 @@ p, li, td, th, dt, dd {
   }
 
   .__link {
-    background-color: transparent;
+    // background-color: transparent;
     text-indent: -9999px;
     padding: 0;
     height: 1rem;
@@ -440,28 +439,27 @@ p, li, td, th, dt, dd {
 $black-alpha: rgba(0, 0, 0, 0.7);
 
 .color-cell {
-  margin-bottom: 2rem;
-
   > .col > div {
+    @include margin-bottom-gutter();
+    @extend .fs--smooth;
+
     height: auto;
     padding: 0.75rem;
     font-size: 0.825rem;
     font-weight: 900;
     line-height: 1.3rem;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 
-    @include mqbp-up(sm) {
+    @include mqbp-up(t) {
       font-size: 0.75rem;
     }
 
-    @include mqbp-up(md) {
+    @include mqbp-up(t) {
       font-size: 0.825rem;
     }
   }
 
   .hex-color {
-    font-family: "Roboto Mono", "Consolas", "Monaco", "Courier New", monospace;
+    font-family: "Source Code Pro", monospace;
     font-weight: 300;
   }
 }

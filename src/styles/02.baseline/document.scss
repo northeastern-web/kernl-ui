@@ -1,10 +1,8 @@
-//
+// Baseline
 // Document
-// * Reset + Normalize + Baseline elements/typography definitions in one.
-
-
 //
-// Document Level
+// Reset + Normalize + Baseline elements/typography definitions in one.
+
 
 html {
   height: 100%;
@@ -25,6 +23,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
 }
 
 article,
@@ -37,7 +36,6 @@ section { display: block; }
 
 //
 // Text-level semantics
-
 a,
 area,
 button,
@@ -45,28 +43,9 @@ button,
 input,
 label,
 select,
-summary,
 textarea { touch-action: manipulation; }
 
 
 //
-// Interactive
-
-details,
-menu { display: block; }
-
-summary { display: list-item; }
-
-
-//
-// Scripting
-
-canvas { display: inline-block; }
-
-template { display: none; }
-
-
-//
 // Hidden
-
 [hidden] { display: none !important; }

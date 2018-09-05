@@ -1,0 +1,110 @@
+// Structure
+// Form
+
+
+// Wrapper for enclosed inputs
+.form__enclosed {
+  @extend %clearfix;
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  background-color: #fff;
+  border: 1px solid rgba(#000, 0.15);
+
+  &:focus,
+  &:focus-within,
+  &:active { border-color: $gray; }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="search"],
+  input[type="number"],
+  input[type="password"] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65%;
+    background: transparent;
+    border: 0 none;
+    padding: 0;
+    box-shadow: none !important;
+
+    &:focus { outline: none; }
+
+    @include mqbp-up(t) { width: 80%; }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: "feathericons";
+      content: "\e97b";
+      left: 0.85rem;
+      color: rgba($type-color, 0.5);
+
+      @include mqbp-up(t) { left: 1rem; }
+
+      @include mqbp-up(d) { left: 1.25rem; }
+    }
+  }
+
+  .btn {
+    padding: 0.5rem;
+    float: right;
+    margin-bottom: 0;
+  }
+
+  &.\--line {
+    background: transparent;
+    padding-right: 0;
+    padding-left: 0;
+    border: 0 none;
+    box-shadow: none;
+    border-bottom: 1px solid rgba($type-color, 0.5);
+    border-radius: 0;
+
+    &:before {
+      left: 0 !important;
+    }
+
+    .btn:not(:hover) {
+      background: transparent;
+    }
+  }
+
+  &.\--dark {
+    border-color: rgba(255, 255, 255, 0.3);
+
+    &:before { color: rgba(255, 255, 255, 0.5); }
+
+    .btn {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.5);
+
+      &:hover { color: $type-color; }
+    }
+
+    input,
+    ::placeholder { color: rgba($white, 0.7); }
+  }
+}
+
+// wrapper for checkboxes
+.form__check {
+  label { display: block; }
+
+  &.\--inline {
+    @include mqbp-up(t) {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+
+      label { margin-right: 1rem; }
+
+      input,
+      select,
+      textarea { display: inline-block; }
+
+      .btn { margin-bottom: 0; }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+// Components
+// Badge
+
+
+.badge {
+  @extend .fs--smooth;
+  padding: 0.4rem 0.6rem 0.45rem;
+  display: inline-block;
+  color: $type-color;
+  font-size: $fs-xs;
+  line-height: 1;
+  overflow: hidden;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba($type-color, 0.5);
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+
+  a {
+    color: inherit;
+
+    &:hover { text-decoration: none; }
+  }
+
+  // --
+  // Icons
+
+  // nested icon (defaults assume icon to the left)
+  .feather,
+  .icon {
+    margin: 0 ($fs-xs/2) 0 0;
+    height: $fs-xs;
+    width: $fs-xs;
+    position: relative;
+    top: 2px;
+  }
+
+  // adjust margin for positioning icon on the right
+  &.\--right .feather { margin: 0 0 0 ($fs-xs/2); }
+}

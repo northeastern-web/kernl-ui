@@ -1,0 +1,49 @@
+// Structure
+// Icon
+
+
+.feather,
+.icon {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+
+  &.\--thin { stroke-width: 1; }
+
+  &.\--sm {
+    width: 14px;
+    height: 14px;
+  }
+
+  &.\--lg {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  // various names to make the same thing
+  &.br--round,
+  &.br--pill,
+  &.br--circle {
+    padding: 8px;
+    overflow: visible;
+    width: 2.25rem;
+    height: 2.25rem;
+
+    &.\--sm {
+      padding: 6px;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    &.\--lg {
+      padding: 12px;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}

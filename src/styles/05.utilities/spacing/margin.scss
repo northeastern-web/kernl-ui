@@ -1,0 +1,73 @@
+// Spacing Utility
+// Margin
+//
+// .m<side>--<value>
+
+
+.mx--auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+$size: 9;
+@while $size >= 0 {
+  .ma--#{$size}   { margin: #{$size}rem !important; }
+  .ma--#{$size}h  { margin: #{($size+.5)}rem !important; }
+  .mt--#{$size}   { margin-top: #{$size}rem !important; }
+  .mt--#{$size}h  { margin-top: #{($size+.5)}rem !important; }
+  .mr--#{$size}   { margin-right: #{$size}rem !important; }
+  .mr--#{$size}h  { margin-right: #{($size+.5)}rem !important; }
+  .mb--#{$size}   { margin-bottom: #{$size}rem !important; }
+  .mb--#{$size}h  { margin-bottom: #{($size+.5)}rem !important; }
+  .ml--#{$size}   { margin-left: #{$size}rem !important; }
+  .ml--#{$size}h  { margin-left: #{($size+.5)}rem !important; }
+  .mx--#{$size} {
+    margin-right:  #{$size}rem !important;
+    margin-left:   #{$size}rem !important;
+  }
+  .mx--#{$size}h {
+    margin-right:  #{($size+.5)}rem !important;
+    margin-left:   #{($size+.5)}rem !important;
+  }
+  .my--#{$size} {
+    margin-top:    #{$size}rem !important;
+    margin-bottom: #{$size}rem !important;
+  }
+  .my--#{$size}h {
+    margin-top:    #{($size+.5)}rem !important;
+    margin-bottom: #{($size+.5)}rem !important;
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include mqbp-up($breakpoint) {
+      .ma--#{$size}\@#{$breakpoint}   { margin: #{$size}rem !important; }
+      .ma--#{$size}h\@#{$breakpoint}  { margin: #{($size+.5)}rem !important; }
+      .mt--#{$size}\@#{$breakpoint}   { margin-top: #{$size}rem !important; }
+      .mt--#{$size}h\@#{$breakpoint}  { margin-top: #{($size+.5)}rem !important; }
+      .mr--#{$size}\@#{$breakpoint}   { margin-right: #{$size}rem !important; }
+      .mr--#{$size}h\@#{$breakpoint}  { margin-right: #{($size+.5)}rem !important; }
+      .mb--#{$size}\@#{$breakpoint}   { margin-bottom: #{$size}rem !important; }
+      .mb--#{$size}h\@#{$breakpoint}  { margin-bottom: #{($size+.5)}rem !important; }
+      .ml--#{$size}\@#{$breakpoint}   { margin-left: #{$size}rem !important; }
+      .ml--#{$size}h\@#{$breakpoint}  { margin-left: #{($size+.5)}rem !important; }
+      .mx--#{$size}\@#{$breakpoint} {
+        margin-right:  #{$size}rem !important;
+        margin-left:   #{$size}rem !important;
+      }
+      .mx--#{$size}h\@#{$breakpoint} {
+        margin-right:  #{($size+.5)}rem !important;
+        margin-left:   #{($size+.5)}rem !important;
+      }
+      .my--#{$size}\@#{$breakpoint} {
+        margin-top:    #{$size}rem !important;
+        margin-bottom: #{$size}rem !important;
+      }
+      .my--#{$size}h\@#{$breakpoint} {
+        margin-top:    #{($size+.5)}rem !important;
+        margin-bottom: #{($size+.5)}rem !important;
+      }
+    }
+  }
+
+  $size: $size - 1; // decrement size
+}

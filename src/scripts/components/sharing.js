@@ -1,6 +1,5 @@
-/**
- * Sharing
- */
+// Components
+// Sharing
 
 
 /**

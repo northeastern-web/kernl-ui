@@ -1,103 +1,91 @@
 <section class="section ta--c">
   <header class="k_section__header ta--l">Buttons on White</header>
   <div class="row">
-    <div class="col --12@xs --4@md">
+    <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">Base Buttons</p>
-      <p><a class="btn --xs" data-component="button" href="#">Button xs</a></p>
-      <p><a class="btn --sm --pill" data-component="button" href="#">Button Pill sm</a></p>
-      <p><a class="btn" data-component="button" href="#">Base Button</a></p>
-      <p><a class="btn --lg" data-component="button" href="#">Button lg</a></p>
-      <p><a class="btn --block --lg" data-component="button" href="#">Button block lg</a></p>
+      <p><a class="btn --sm" href="#">Base Small</a></p>
+      <p><a class="btn" href="#">Base Button</a></p>
     </div>
-    <div class="col --12@xs --4@md">
-      <p class="text-style-block">(Semi) Transparent</p>
-      <p><a class="btn bg--transparent-dark --xs" data-component="button" href="#">Transparent xs</a></p>
-      <p><a class="btn bg--transparent-dark --sm" data-component="button" href="#">Transparent sm</a></p>
-      <p><a class="btn bg--transparent-dark --pill" data-component="button" href="#">Pill Transparent</a></p>
-      <p><a class="btn bg--transparent-dark --lg" data-component="button" href="#">Transparent lg</a></p>
-      <p><a class="btn bg--transparent-dark --lg --block" data-component="button" href="#">Block Transparent lg</a></p>
+    <div class="col w--1/2@t w--1/4@d">
+      <p class="text-style-block">White Buttons (on white)</p>
+      <p><a class="btn bg--white --sm" href="#">White Small</a></p>
+      <p><a class="btn bg--white" href="#">White Button</a></p>
     </div>
-    <div class="col --12@xs --4@md">
-      <p class="text-style-block">Dark Buttons</p>
-      <p><a class="btn bg--black --xs" data-component="button" href="#">Dark xs</a></p>
-      <p><a class="btn bg--black --sm" data-component="button" href="#">Dark sm</a></p>
-      <p><a class="btn bg--black --pill" data-component="button" href="#">Pill Dark</a></p>
-      <p><a class="btn bg--black --lg" data-component="button" href="#">Dark lg</a></p>
-      <p><a class="btn bg--black --lg --block" data-component="button" href="#">Block Dark lg</a></p>
+    <div class="col w--1/2@t w--1/4@d">
+      <p class="text-style-block">Black Buttons</p>
+      <p><a class="btn bg--black --sm" href="#">Black Small</a></p>
+      <p><a class="btn bg--black" href="#">Black Pill</a></p>
+    </div>
+    <div class="col w--1/2@t w--1/4@d">
+      <p class="text-style-block">Black Alpha Buttons</p>
+      <p><a class="btn bg--black-alpha br--pill --sm" href="#">Black Alpha Pill Small</a></p>
+      <p><a class="btn bg--black-alpha br--pill" href="#">Black Alpha Pill</a></p>
     </div>
   </div>
 </section>
-<section class="section ta--c k_bg-dark">
+<section class="section ta--c bg--blue-dark">
   <header class="k_section__header ta--l">Buttons on Dark</header>
   <div class="row">
-    <div class="col --12@xs --6@md --3@xl">
-      <p class="text-style-block">Base Buttons</p>
-      <p><a class="btn --xs" data-component="button" href="#">Button xs</a></p>
-      <p><a class="btn --sm --pill" data-component="button" href="#">Button Pill sm</a></p>
-      <p><a class="btn" data-component="button" href="#">Base Button</a></p>
-      <p><a class="btn --lg" data-component="button" href="#">Button lg</a></p>
-      <p><a class="btn --lg --block" data-component="button" href="#">Button block lg</a></p>
+    <div class="col w--1/2@t w--1/4@d">
+      <p class="text-style-block">White Bkgd Buttons</p>
+      <p><a class="btn --sm br--pill bg--white" href="#">White Button Small</a></p>
+      <p><a class="btn bg--white" href="#">White Button</a></p>
     </div>
-    <div class="col --12@xs --6@md --3@xl">
-      <p class="text-style-block">(Semi) Transparent</p>
-      <p><a class="btn bg--transparent-dark --xs" data-component="button" href="#">Transparent xs</a></p>
-      <p><a class="btn bg--transparent-dark --sm" data-component="button" href="#">Transparent sm</a></p>
-      <p><a class="btn bg--transparent-dark --pill" data-component="button" href="#">Pill Transparent</a></p>
-      <p><a class="btn bg--transparent-dark --lg" data-component="button" href="#">Transparent lg</a></p>
-      <p><a class="btn bg--transparent-dark --lg --block" data-component="button" href="#">Block Transparent lg</a></p>
-    </div>
-    <div class="col --12@xs --6@md --3@xl">
-      <p class="text-style-block">(Semi) Transparent Light</p>
-      <p><a class="btn bg--transparent-light --xs" data-component="button" href="#">Transparent Light xs</a></p>
-      <p><a class="btn bg--transparent-light --sm" data-component="button" href="#">Transparent Light sm</a></p>
-      <p><a class="btn bg--transparent-light --pill" data-component="button" href="#">Pill Transparent Light</a></p>
-      <p><a class="btn bg--transparent-light --lg" data-component="button" href="#">Transparent Light lg</a></p>
-      <p><a class="btn bg--transparent-light --lg --block" data-component="button" href="#">Block Transparent Light lg</a></p>
-    </div>
-    <div class="col --12@xs --6@md --3@xl">
+    <div class="col w--1/2@t w--1/4@d">
       <p class="text-style-block">White Border Buttons</p>
-      <p><a class="btn bc--white --xs" data-component="button" href="#">White Border xs</a></p>
-      <p><a class="btn bc--white --sm" data-component="button" href="#">White Border sm</a></p>
-      <p><a class="btn bc--white --pill" data-component="button" href="#">Pill White Border</a></p>
-      <p><a class="btn bc--yellow bg--none --lg" data-component="button" href="#">White Border lg</a></p>
-      <p><a class="btn bc--white --lg --block" data-component="button" href="#">Block White Border lg</a></p>
+      <p><a class="btn bc--white --sm" href="#">White Border Small</a></p>
+      <p><a class="btn bc--white" href="#">White Border</a></p>
+    </div>
+    <div class="col w--1/2@t w--1/4@d">
+      <p class="text-style-block">(Semi) Transparent</p>
+      <p><a class="btn bg--black-alpha --sm" href="#">White Alpha Small</a></p>
+      <p><a class="btn bg--black-alpha" href="#">White Alpha Small</a></p>
+    </div>
+    <div class="col w--1/2@t w--1/4@d">
+      <p class="text-style-block">(Semi) Transparent Light</p>
+      <p><a class="btn bg--white-alpha br--pill --sm" href="#">White Alpha Pill Small</a></p>
+      <p><a class="btn bg--white-alpha br--pill" href="#">White Alpha Pill</a></p>
     </div>
   </div>
 </section>
-<section class="section ta--c">
+<section class="section bg--gray-100 ta--c --nogutters">
   <header class="k_section__header ta--l">Buttons in Color</header>
   <div class="row">
-    <div class="col --12@xs --3@md">
-      <p><a class="btn bg--gray-500" data-component="button" href="#">Gray-500 Button</a></p>
-      <p><a class="btn bc--gray-500" data-component="button" href="#">Gray-500 Button Border</a></p>
+    <div class="col w--1/4@t pt--2 pb--1">
+      <p><a class="btn bg--gray-500" href="#">Gray-500 Button</a></p>
+      <p><a class="btn bc--gray-500" href="#">Gray-500 Button Border</a></p>
+      <p class="mt--2"><a class="btn --m" href="#">Marketing Variant</a></p>
     </div>
-    <div class="col --12@xs --3@md">
-      <p><a class="btn bg--red" data-component="button" href="#">Red Button</a></p>
-      <p><a class="btn bc--red" data-component="button" href="#">Red Button Border</a></p>
+    <div class="col w--1/4@t pt--2 pb--1">
+      <p><a class="btn bg--red" href="#">Red Button</a></p>
+      <p><a class="btn bc--red" href="#">Red Button Border</a></p>
+      <p class="mt--2"><a class="btn --m tt--caps" href="#"><i data-feather="arrow-right"></i> Marketing Variant</a></p>
     </div>
-    <div class="col --12@xs --3@md">
-      <p><a class="btn bg--blue" data-component="button" href="#">Blue Button</a></p>
-      <p><a class="btn bc--blue" data-component="button" href="#">Blue Button Border</a></p>
+    <div class="col w--1/4@t pt--2 pb--1 bg--black">
+      <p><a class="btn bg--yellow" href="#">Yellow Button</a></p>
+      <p><a class="btn bc--yellow" href="#">Yellow Button Border</a></p>
+      <p class="mt--2"><a class="btn --m" href="#">Marketing Variant</a></p>
     </div>
-    <div class="col --12@xs --3@md">
-      <p><a class="btn bg--black" data-component="button" href="#">Black Button</a></p>
-      <p><a class="btn bc--black" data-component="button" href="#">Black Button Border</a></p>
+    <div class="col w--1/4@t pt--2 pb--1 bg--black">
+      <p><a class="btn bg--beige" href="#">Beige Button</a></p>
+      <p><a class="btn bc--beige" href="#">Beige Button Border</a></p>
+      <p class="mt--2"><a class="btn --m tt--caps --right" href="#">Marketing Variant <i data-feather="arrow-right"></i></a></p>
     </div>
   </div>
 </section>
-<section class="section k_bg-light">
+<section class="section">
   <header class="k_section__header">Button Goodies</header>
   <div class="row">
-    <div class="col --12@xs --6@md">
+    <div class="col w--1/2@t">
       <p>
         <span class="text-style-block">Inline Buttons</span><br>
         <small><i>Default behavior. Just keep them in the same element.</i></small>
       </p>
       <p>
-        <a class="btn --sm --transparent" data-component="button" href="#">Here a Button</a>
-        <a class="btn --sm" data-component="button" href="#">There a Button</a>
-        <a class="btn --sm" data-component="button" href="#">Everywhere a Button</a>
-        <a class="btn --sm" data-component="button" href="#">Button</a>
+        <a class="btn --sm --transparent" href="#">Here a Button</a>
+        <a class="btn --sm" href="#">There a Button</a>
+        <a class="btn --sm" href="#">Everywhere a Button</a>
+        <a class="btn --sm" href="#">Button</a>
       </p>
       <hr>
       <p>
@@ -105,57 +93,42 @@
         <small><i>Add <code>.btn__group</code> to a button wrapper or href wrapper.</i></small>
       </p>
       <p class="btn__group">
-        <button class="btn bg--gray-800 --sm" data-component="button">This One</button>
-        <button class="btn --sm" data-component="button">That One</button>
-        <button class="btn --sm" data-component="button" disabled="disabled">Not This One</button>
+        <button class="btn bg--gray-800 --sm">This One</button>
+        <button class="btn --sm">That One</button>
+        <button class="btn --sm" disabled="disabled">Not This One</button>
       </p>
     </div>
-    <div class="col --12@xs --6@md">
+    <div class="col w--1/2@t">
       <p>
         <span class="text-style-block">With Iconography</span><br>
-        <small><i>Add <code>__icon</code> class to Feather Icons.<br>
-        Define size and position with <code>--left</code>, <code>--right</code>, <code>--lg</code>, <code>--thin</code>.</i></small>
+        <i>Add <code>.feather</code> element to add Feather Icons. Use <code>.--right</code> to align icon on right.</i><br>
       </p>
       <p>
-        <a class="btn --xs" data-component="button" href="#">Go Forth
-          <i class="__icon --right" data-feather="fast-forward"></i>
+        <a class="btn" href="#">
+          <i data-feather="settings"></i> Make Buttons
         </a>
       </p>
       <p>
-        <a class="btn --sm" data-component="button" href="#">
-          <i class="__icon --left" data-feather="settings"></i>
-          Make Buttons
+        <a class="btn --sm" href="#">
+          <i data-feather="settings"></i> Make Buttons
         </a>
       </p>
       <p>
-        <a class="btn" data-component="button" href="#">
-          <i class="__icon --left --lg --thin" data-feather="headphones"></i>
-          Hear Me Now and<br>
-          Listen to Me Later
+        <a class="btn --right" href="#">
+          Make Buttons <i data-feather="arrow-right"></i>
         </a>
       </p>
       <p>
-        <a class="btn" data-component="button" href="#">
-          <i class="__icon --left --lg --thin" data-feather="headphones"></i>
-          Hear Me Now and Listen to Me Later<br>
-          Listen to Me Later Hear Me Now and Listen to Me Later. Hear Me Now<br>
-          Listen to Me Later
+        <a class="btn --right --sm" href="#">
+          Make Buttons <i data-feather="arrow-right"></i>
         </a>
       </p>
       <p>
-        <a class="btn --lg" data-component="button" href="#">Now Fly Away
-          <i class="__icon --right" data-feather="feather"></i>
-        </a>
-      </p>
-      <p>
-        <small><i>Add <code>.flex--col@&lt;breakpoint&gt;</code> to <code>.btn</code> to stack the icon and text.</i></small>
-      </p>
-      <p>
-        <a class="btn --lg bg--transparent-dark flex--col@xs" data-component="button" href="#">
-          <i class="__icon --lg --thin" data-feather="cloud-rain"></i>
-          Looks Like We're In For<br>
-          Some Nasty Weather
-        </a>
+      <a class="btn" href="#">
+        <i class="--lg --thin" data-feather="headphones"></i>
+        Hear Me Now and<br>
+        Listen to Me Later
+      </a>
       </p>
     </div>
   </div>

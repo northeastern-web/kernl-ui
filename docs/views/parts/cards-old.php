@@ -1,338 +1,388 @@
-<section class="section">
+<!--
+card
+__link
+__graphic
+__graphic__img
+__header
+__column
+__body
+__icon
+__title
+list-group
+__footer
+__column
+__footer__link
+--overlay
+--outline
+--middle
+--bottom
+--dark
+--tile
++list-group
++badge
++scroll
++icon
++round
+
+figure out --middle with a heading.
+
+-->
+
+<section class="section k_bg-light">
   <div class="row">
-    <div class="col --12@xs --4@md">
-      <article class="card --dark">
-        <header class="__header">
-          <div class="__column">
-            <div class="badge --left --dark">Header Badge</div>
-          </div>
-        </header>
-        <div class="__body">
-          <div class="__icon">
-            <i class="icon--share"></i>
-          </div>
-          <div class="__excerpt">
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-          </div>
-        </div>
-      </article>
-    </div>
 
-    <div class="col --12@xs --4@md">
-      <article class="card">
-        <header class="__header">
-          <div class="__column">
-            <div class="badge --left">Badger</div>
-          </div>
-        </header>
-        <div class="__graphic"></div>
-        <div class="__body">
-          <h2 class="__title">The Amazing Title</h2>
-          <div class="__excerpt">
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-          </div>
-        </div>
-        <footer class="__footer">
-          <a href="#" class="__footer__link">
-            <div class="__column">Footing</div>
-          </a>
-        </footer>
-      </article>
-    </div>
-
-    <div class="col --12@xs --4@md">
-      <article class="card --overlay --middle">
-        <header class="__header">
-          <div class="__column">YoYoYo</div>
-        </header>
-        <div class="__graphic"></div>
-        <div class="__body">
-          <h2 class="__title">The Overlayed Card</h2>
-          <div class="__excerpt">
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="col --12@xs --3@md">
-      <article class="card --dark --outline --middle">
-        <div class="__body">
-          <h2 class="__title">Very Outlined Title</h2>
-          <div class="__excerpt">
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="col --12@xs --3@md">
-      <article class="card --scroll">
-        <header class="__header">
-          <div class="__column">
-            <div class="ta--c">The Scrolling Card</div>
-          </div>
-        </header>
-        <div class="__body">
-          <div class="__excerpt">
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="col --12@xs --3@md">
-      <article class="card --overlay --bottom">
-        <div class="__graphic"></div>
-        <div class="__body">
-          <div class="__pretitle">Secondary</div>
-          <h2 class="__title">Card on the bottom</h2>
-          <div class="__excerpt">
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="col --12@xs --3@md">
-      <article class="card --dark --middle">
-        <div class="__body">
-          <div class="__icon">
-            <i class="icon--life-buoy"></i>
-          </div>
-          <h2 class="__title">Card with Icon</h2>
-          <div class="__excerpt">
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section  class="section">
-  <div class="row">
-    <div class="col --12@xs --9@md">
-      <article class="card">
-        <a href="#" class="__link">
-          <header class="__header">
-            <div class="__column">
-              <div class="badge --left">News</div>
-            </div>
-          </header>
-          <div class="__graphic"></div>
-          <section class="__body">
-            <h2 class="__title">Hello world!</h2>
-            <div class="__excerpt">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius.</div>
-          </section>
-          <footer class="__footer">
-            <div class="__column">by <b>pods</b>
-            </div>
-            <div class="__column">&raquo;</div>
-          </footer>
-        </a>
-      </article>
-    </div>
-
-    <div class="col --12@xs --3@md">
-      <article class="card +list-group">
-        <header class="__header">
-          <div class="__column">Events</div>
-        </header>
-        <div class="__body">
-          <div class="__excerpt">
-            <ul class="list-group --sm">
-              <li class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</li>
-              <li class="__item"><b>Lorem ipsum</b>: dolor sit amet, consectetur</li>
-              <li class="__item"><b>Maecenas</b>: faucibus mollis interdum</li>
-              <li class="__item"><b>Lorem ipsum</b>: dolor sit amet, consectetur</li>
-              <li class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</li>
-            </ul>
-          </div>
-        </div>
-        <footer class="__footer">
-          <a href="#" class="__footer__link">
-            <div class="__column">Go Now</div>
-          </a>
-        </footer>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="row">
-    <div class="col --12@xs --3@md">
-      <article class="card --dark">
-        <header class="__header">
-          <div class="__column">
-            <div class="ta--c">Heading</div>
-          </div>
-        </header>
-        <div class="__body">
-          <div class="__excerpt">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="col --12@xs --3@md">
-      <article class="card --scroll +list-group">
-        <header class="__header">
-          <div class="__column">
-            <div>Calendar</div>
-          </div>
-        </header>
-        <div class="__body">
-          <div class="__excerpt">
-            <ul class="list-group">
-              <li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-              <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-              <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-              <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-              <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-              <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-            </ul>
-          </div>
-        </div>
-        <footer class="__footer">
-          <a href="#" class="__footer__link">
-            <div class="__column">Read More</div>
-          </a>
-        </footer>
-      </article>
-    </div>
-
-    <div class="col --12@xs --3@md">
-      <article class="card --middle">
-        <header class="__header">
-          <div class="__column">
-            <div class="ta--c">Heading</div>
-          </div>
-        </header>
-        <div class="__body">
-          <h2 class="__title">Maecenas faucibus</h2>
-          <div class="__excerpt">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="col --12@xs --3@md">
-      <article class="card --overlay --bottom">
-        <a href="#" class="__link">
-          <div class="__graphic"></div>
-          <div class="__body">
-            <h2 class="__title">The Overlayed Card</h2>
-            <div class="__excerpt">
-              <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-              <ul class="list-group">
-                <li>Vivamus sagittis lacus vel augue.</li>
-                <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-                <li>Fusce dapibus, tellus ac cursus commodo.</li>
-              </ul>
-            </div>
-          </div>
-        </a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="row">
-    <div class="col --12@xs --3@sm --2@lg">
+    <div class="col w--1/3@t w--1/6@d">
       <article class="card --tile">
         <a href="#" class="__link">
           <div class="__body">
-            <h2 class="__title">The Tile</h2>
-            <div class="__excerpt">
-              <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            </div>
+            <h2 class="__title">Tile Card</h2>
+            <p>Basic card with tile variant. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+            <p>Basic card with tile variant. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
           </div>
         </a>
       </article>
     </div>
 
-    <div class="col --12@xs --3@sm --2@lg">
-      <article class="card --tile ">
+    <div class="col w--1/3@t w--1/6@d">
+      <article class="card --tile bc--teal shadow--none">
+        <a href="#" class="__link">
+          <div class="__body">
+            <h2 class="__title">Outlined Tile Card</h2>
+            <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--1/3@t w--1/6@d">
+      <article class="card --tile ta--c">
+        <a href="#" class="__link">
+          <div class="__graphic +round"></div>
+          <div class="__body">
+            <h2 class="__title">Little Round Thumb</h2>
+            <p>Cheesy grin gouda with some swiss and a dry red.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--1/3@t w--1/6@d">
+      <article class="card --tile --overlay --middle">
         <a href="#" class="__link">
           <div class="__graphic"></div>
           <div class="__body">
-            <h2 class="__title">The Overlayed Tile</h2>
-            <div class="__excerpt">
-              <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            </div>
+            <i class="__icon icon--inbox"></i>
+            <h2 class="__title">Overlay Tile</h2>
+            <p>Using font icon, not SVG</p>
           </div>
         </a>
       </article>
     </div>
 
-    <div class="col --12@xs --3@sm --2@lg">
-      <article class="card --tile --overlay --bottom">
-        <a href="#" class="__link">
-          <header class="__header">
-            <div class="__column">Tile</div>
-          </header>
-          <div class="__graphic"></div>
-          <div class="__body">
-            <h2 class="__title">The Overlayed Tile</h2>
-            <div class="__excerpt">
-              <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            </div>
+    <div class="col w--1/3@t w--1/6@d">
+      <article class="card --tile">
+        <div class="__header">
+          <div class="__column">
+            Heading Out
+            <div class="badge --right --dark">Badge</div>
           </div>
-        </a>
-      </article>
-    </div>
-
-    <div class="col --12@xs --3@sm --2@lg">
-      <article class="card --tile --dark">
-        <a href="#" class="__link">
-          <div class="__body">
-            <h2 class="__title">The Overlayed Tile</h2>
-            <div class="__excerpt">
-              <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            </div>
-          </div>
-          <footer class="__footer">
-            <div class="__column">Learn More</div>
-          </footer>
-        </a>
-      </article>
-    </div>
-
-    <div class="col --12@xs --3@sm --2@lg">
-      <article class="card --tile --dark --outline">
-        <a href="#" class="__link">
-          <div class="__body">
-            <h2 class="__title">The Overlayed Tile</h2>
-            <div class="__excerpt">
-              <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-            </div>
-          </div>
-        </a>
-      </article>
-    </div>
-
-    <div class="col --12@xs --3@sm --2@lg">
-      <article class="card --dark --tile">
+        </div>
         <div class="__body">
-          <div class="__icon">
-            <i class="icon--share"></i>
+          <h2 class="__title">No Tile Like the Present</h2>
+          <p>How much can we really cram into just this tiny tile?</p>
+        </div>
+        <footer class="__footer">
+          <a href="#" class="__footer__link bg--teal">
+            <div class="__column">Clique Moi</div>
+          </a>
+        </footer>
+      </article>
+    </div>
+
+    <div class="col w--1/3@t w--1/6@d">
+      <article class="card --tile --teal --middle">
+        <a href="#" class="__link">
+          <div class="__body">
+            <i class="__icon --thin --lg" data-feather="command"></i>
+            <h2 class="__title">Large, Thin SVG Icon</h2>
+            <p>Sed posuere consectetur est at lobortis.</p>
           </div>
-          <div class="__excerpt">
-            <p>Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+        </a>
+      </article>
+    </div>
+
+    <!-- Basic cards -->
+
+    <div class="col w--1/2@t w--1/4@d">
+      <article class="card">
+        <a href="#" class="__link">
+          <div class="__body">
+            <p>Basic card with no frills. Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
           </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--1/2@t w--1/4@d">
+      <article class="card bc--gray shadow--none">
+        <a href="#" class="__link">
+          <div class="__body">
+            <h2 class="__title">Goat Cheese on Toast Taleggio Cheeseburger Chalk and Swiss Feta Cheese</h2>
+            <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--1/2@t w--1/4@d">
+      <article class="card">
+        <a href="" class="__link">
+          <div class="badge --right --dark">Badge</div>
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h2 class="__title">Fromage Airedale Halloumi</h2>
+            <p>Sausage roll manky muck about Essex; collywobbles bossy-britches absobloodylootely, gallivanting around their crumpets.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--1/2@t w--1/4@d">
+      <article class="card">
+        <a href="#" class="__link">
+          <div class="__header">
+            <div class="__column">
+              Head Cheese
+            </div>
+            <div class="__column">
+              Col 2
+            </div>
+          </div>
+          <div class="__body">
+            <h2 class="__title">Cheeseball Covered Title</h2>
+            <p>Croque monsieur stilton cauliflower cheese dolcelatte ricotta cheese slices rubber cheese caerphilly.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--1/2@t w--1/3@d">
+      <article class="card --overlay --bottom +shade">
+        <a href="#" class="__link">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h2 class="__title">Fromage Airedale Halloumi</h2>
+            <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--1/2@t w--1/3@d">
+      <article class="card --overlay">
+        <div class="__graphic"></div>
+        <div class="__header">
+          <div class="__column">
+            This Header is Just Super
+          </div>
+          <div class="__column">
+            Col 2
+          </div>
+        </div>
+        <div class="__body">
+          <h2 class="__title">Taleggio Cheeseburger Chalk and Swiss Feta Cheese</h2>
+          <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
+          <a class="btn bc--white" href="#">Have a Clickity</a>
         </div>
       </article>
     </div>
+
+    <div class="col w--1/3@d">
+      <article class="card --overlay --bottom">
+        <a href="" class="__link">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <div class="__pretitle">The World is My Pre-Title</div>
+            <h2 class="__title">Fromage Airedale Halloumi</h2>
+            <p>Some dignified shambles have the fuzz pigeons in Trafalgar Square.</p>
+            <ul class="list-group">
+              <li class="__item">Lorem ipsum dolor sit amet do eiusmod</li>
+              <li class="__item">Lorem dolor sit amet, consectetur</li>
+              <li class="__item">Maecenas faucibus mollis interdum</li>
+            </ul>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--1/2@d">
+      <article class="card --h@sm">
+        <a href="#" class="__link">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h2 class="__title">Horizontal @ Small</h2>
+            <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--1/2@d">
+      <article class="card --overlay">
+        <div class="__graphic"></div>
+        <div class="__header">
+          <div class="__column">
+            This Header is Just Super
+          </div>
+          <div class="__column">
+            Col 2
+          </div>
+        </div>
+        <div class="__body">
+          <h2 class="__title">String Cheese Six-Pack</h2>
+          <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
+          <a class="btn bc--white" href="#">Have a Clickity</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="col w--30@d">
+      <article class="card --h@sm">
+        <a href="#" class="__link">
+          <div class="__graphic"></div>
+          <div class="__body">
+            <h2 class="__title">30% at Desktop</h2>
+            <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--70@d">
+      <article class="card --overlay">
+        <div class="__graphic"></div>
+        <div class="__header">
+          <div class="__column">
+            This Header is Just Super
+          </div>
+          <div class="__column">
+            Col 2
+          </div>
+        </div>
+        <div class="__body">
+          <h2 class="__title">70% at Desktop</h2>
+          <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
+          <a class="btn bc--white" href="#">Have a Clickity</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="col w--1/3@d">
+      <article class="card --h@sm --v@lg">
+        <a href="#" class="__link">
+          <div class="__graphic"></div>
+          <div class="__header">
+            <div class="__column">
+              Lorem Header Ipsum
+            </div>
+            <div class="__column">
+              Col 2
+            </div>
+          </div>
+          <div class="__body">
+            <h2 class="__title">Four Columns at Large</h2>
+            <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--2/3@d">
+      <article class="card --h@t bg--blue-dark">
+        <div class="__graphic"></div>
+        <div class="__header">
+          <div class="__column">
+            Lorem Header Ipsum
+          </div>
+          <div class="__column">
+            Col 2
+          </div>
+        </div>
+        <div class="__body">
+          <h2 class="__title">Eight Columns at Large</h2>
+          <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
+          <a class="btn bc--white" href="#">Have a Clickity</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="col w--1/3@d">
+      <article class="card --overlay">
+        <a href="#" class="__link">
+          <div class="__graphic"></div>
+          <div class="__header">
+            <div class="__column">
+              Lorem Header Ipsum
+            </div>
+            <div class="__column">
+              Col 2
+            </div>
+          </div>
+          <div class="__body">
+            <h2 class="__title">Four Columns at Large</h2>
+            <p>Fromage airedale halloumi. Cheeseburger port-salut cheesy grin gouda monterey jack cheese and wine swiss squirty cheese.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="col w--2/3@d">
+      <article class="card --overlay">
+        <div class="__graphic"></div>
+        <div class="__header">
+          <div class="__column">
+            Lorem Header Ipsum
+          </div>
+        </div>
+        <div class="__body">
+          <h2 class="__title">Eight Columns at Large</h2>
+          <p>Manchego stinking bishop fromage say cheese stinking bishop emmental the big cheese cheesy grin.</p>
+          <a class="btn bc--white" href="#">Have a Clickity</a>
+        </div>
+      </article>
+    </div>
+
   </div>
+</section>
+
+<section class="section --flush --nogutters py--0">
+  <article class="card --h@t bg--blue-dark mb--0 shadow--none">
+    <div class="__graphic"></div>
+    <div class="__body">
+      <blockquote class="--mark">
+        Default blockquote says lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        <footer cite="http://www.washingtonpost.com/">
+          <cite>
+            <b>Person Name</b>
+            <br><i>Washington Post</i>
+          </cite>
+        </footer>
+      </blockquote>
+    </div>
+  </article>
+
+  <article class="card --h@t bg--blue-dark --right shadow--none">
+    <div class="__graphic"></div>
+    <div class="__body">
+      <blockquote class="--mark">
+        Default blockquote says lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        <footer cite="http://www.washingtonpost.com/">
+          <cite>
+            <b>Person Name</b>
+            <br><i>Washington Post</i>
+          </cite>
+        </footer>
+      </blockquote>
+    </div>
+  </article>
 </section>

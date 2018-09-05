@@ -1,72 +1,69 @@
-<?php include $_SERVER["DOCUMENT_ROOT"] . '/docs/views/partials/_list-groups.php'; ?>
+<?php include 'docs/views/partials/_list-groups.php'; ?>
 
-<section>
-  <nav class="nav --tabbed">
-    <ul class="__list fs--sm nav--fill" role="tablist">
-      <li class="__item">
-        <a class="__link --active" data-toggle="tab" href="#tab_1" role="tab" aria-expanded="true">Base</a>
-      </li>
-      <li class="__item">
-        <a class="__link" data-toggle="tab" href="#tab_2" role="tab" aria-expanded="false">Base on Dark</a>
-      </li>
-      <li class="__item">
-        <a class="__link" data-toggle="tab" href="#tab_3" role="tab" aria-expanded="false">Outline</a>
-      </li>
-      <li class="__item">
-        <a class="__link" data-toggle="tab" href="#tab_4" role="tab" aria-expanded="false">Outline on Dark</a>
-      </li>
-      <li class="__item">
-        <a class="__link" data-toggle="tab" href="#tab_5" role="tab" aria-expanded="false">Shadow</a>
-      </li>
-      <li class="__item">
-        <a class="__link" data-toggle="tab" href="#tab_6" role="tab" aria-expanded="true">White on Light</a>
-      </li>
-      <li class="__item">
-        <a class="__link" data-toggle="tab" href="#tab_7" role="tab" aria-expanded="true">Dark on Dark</a>
-      </li>
-      <li class="__item">
-        <a class="__link" data-toggle="tab" href="#tab_8" role="tab" aria-expanded="false">Striped on Light</a>
-      </li>
-      <li class="__item">
-        <a class="__link" data-toggle="tab" href="#tab_9" role="tab" aria-expanded="false">Striped on Dark</a>
-      </li>
-    </ul>
-  </nav>
+<!--
+To use an icon in a list group item, be explicit 
+about its position by using --left or --right,
+and drop the desired icon into the item.
+-->
+<section class="section">
+  <header class="k_section__header">Base Style</header>
+  <div class="row">
+    <div class="col w--1/4">
+      <?= listgroup(''); ?>
+    </div>
+    <div class="col w--1/4">
+      <?= listgroup('--indent fs--sm'); ?>
+    </div>
+    <div class="col w--1/4">
+      <?= listgroup('fs--xs --left'); ?>
+    </div>
+    <div class="col w--1/4">
+      <?= listgroup('fs--d1'); ?>
+    </div>
+  </div>
+</section>
 
-  <div class="hidden section --active" id="tab_1" role="tabpanel">
-    <header class="k_section__header">Base Style</header>
-    <?= listgroup(''); ?>
-  </div>
-  <div class="hidden section bg--gray-700" id="tab_2" role="tabpanel">
-    <header class="k_section__header">Base on Dark</header>
-    <?= listgroup(' --dark'); ?>
-  </div>
-  <div class="hidden section" id="tab_3" role="tabpanel">
+<section class="section">
     <header class="k_section__header">Outline Style</header>
-    <?= listgroup(' +outline'); ?>
+    <div class="row">
+      <div class="col w--1/4">
+        <?= listgroup('--outline --left'); ?>
+      </div>
+      <div class="col w--1/4">
+        <?= listgroup('--outline --right fs--sm'); ?>
+      </div>
+      <div class="col w--1/4">
+        <?= listgroup('--outline fs--xs'); ?>
+      </div>
+      <div class="col w--1/4">
+        <?= listgroup('--outline fs--d1'); ?>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <header class="k_section__header">Striped Style</header>
+  <div class="row">
+    <div class="col w--1/4">
+      <?= listgroup('--striped '); ?>
+    </div>
+    <div class="col w--1/4">
+      <?= listgroup('--striped --left fs--sm'); ?>
+    </div>
+    <div class="col w--1/4">
+      <?= listgroup('--striped fs--xs'); ?>
+    </div>
+    <div class="col w--1/4">
+      <?= listgroup('--striped fs--d1'); ?>
+    </div>
   </div>
-  <div class="hidden section bg--gray-700" id="tab_4" role="tabpanel">
-    <header class="k_section__header">Outline on Dark</header>
-    <?= listgroup(' --dark +outline'); ?>
-  </div>
-  <div class="hidden section" id="tab_5" role="tabpanel">
-    <header class="k_section__header">Shadow Style</header>
-    <?= listgroup(' +shadow'); ?>
-  </div>
-  <div class="hidden section k_bg-light" id="tab_6" role="tabpanel">
-    <header class="k_section__header">White on Light</header>
-    <?= listgroup(' --white +outline'); ?>
-  </div>
-  <div class="hidden section bg--gray-700" id="tab_7" role="tabpanel">
-    <header class="k_section__header">Dark on Dark</header>
-    <?= listgroup(' --dark'); ?>
-  </div>
-  <div class="hidden section k_bg-light" id="tab_8" role="tabpanel">
-    <header class="k_section__header">Striped on Light</header>
-    <?= listgroup(' --striped'); ?>
-  </div>
-  <div class="hidden section bg--gray-700" id="tab_9" role="tabpanel">
-    <header class="k_section__header">Striped on Dark</header>
-    <?= listgroup(' --striped'); ?>
+</section>
+
+<section class="section">
+  <header class="k_section__header">Excerpt</header>
+  <div class="row">
+    <div class="col w--3/4">
+      <?= listgroup('--indent', 'excerpt'); ?>
+    </div>
   </div>
 </section>

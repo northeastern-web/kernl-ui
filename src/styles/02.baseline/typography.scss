@@ -1,6 +1,5 @@
-//
+// Baseline
 // Typography
-//
 
 
 html {
@@ -12,9 +11,7 @@ html {
 }
 
 
-//
 // Headings
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5rem;
   padding: 0;
@@ -26,15 +23,15 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
   +h2, +h3, +h4, +h5, +h6 { padding-top: 0.25rem; }
 }
 
-h1 { @include type_d5(); }
+h1 { @include type_d4(); }
 
-h2 { @include type_d4(); }
+h2 { @include type_d3(); }
 
-h3 { @include type_d3(); }
+h3 { @include type_d2(); }
 
-h4 { @include type_d2(); }
+h4 { @include type_d1(); }
 
-h5 { @include type_d1(); }
+h5 { @include type_root(); }
 
 h6 {
   font-size: $fs-root;
@@ -64,9 +61,6 @@ a {
   text-decoration: none;
   color: $type-link;
 
-  &:hover { color: darken($type-link, 20%); }
-  &:focus {}
-
   &:active,
   &:hover { outline-width: 0; }
 }
@@ -76,13 +70,13 @@ a {
 // Blockquotes
 
 blockquote {
-  @extend %font_smoothing;
-
+  @extend .fs--smooth;
   @include type_lead();
+
   margin: 0 0 1rem;
   padding: 1rem 1.25rem;
 
-  @include mqbp-up(md) { padding: 2rem; }
+  @include mqbp-up(t) { padding: 2rem; }
 
   p {
     font-family: inherit;
@@ -96,7 +90,7 @@ blockquote {
   footer {
     padding-top: 0.5rem;
 
-    @include mqbp-up(md) { padding-top: 0.75rem; }
+    @include mqbp-up(t) { padding-top: 0.75rem; }
   }
 
   footer,
@@ -108,7 +102,33 @@ blockquote {
     font-size: $fs-root;
     line-height: 1.5;
 
-    @include mqbp-up(lg) { line-height: 1.625; }
+    @include mqbp-up(d) { line-height: 1.625; }
+  }
+
+  &.\--mark {
+    padding-top: 3.125rem;
+    position: relative;
+
+    &::before {
+      content: '\201C';
+      font-family: Georgia;
+      font-size: 3.3rem;
+      position: absolute;
+      opacity: 0.8;
+      top: 0.5rem;
+      left: 1.125rem;
+    }
+
+    @include mqbp-up(t) {
+      padding-top: 2rem;
+      padding-left: 4rem;
+
+      &::before {
+        top: 0.85rem;
+        left: 1.325rem;
+        font-size: 4.75rem;
+      }
+    }
   }
 }
 
@@ -164,17 +184,17 @@ sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
-  margin: 0 2px;
+  margin: 0 1px;
 }
 
 sub { bottom: -0.25em; }
 
 sup { top: -0.425em; }
-
+/* 
 h2, h3 {
   sup { top: -0.85em; }
 }
-
+ */
 hr {
   box-sizing: content-box;
   height: 0;
@@ -183,4 +203,17 @@ hr {
   margin: 0 0 1.75rem;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+
+//
+// For font on pseudo-elements
+// * https://icomoon.io/app/#/select/library
+@font-face {
+  font-family: 'feathericons';
+  src:  url('../fonts/feathericons.eot?kn6kqz');
+  src:  url('../fonts/feathericons.eot?kn6kqz#iefix') format('embedded-opentype'),
+    url('../fonts/feathericons.ttf?kn6kqz') format('truetype'),
+    url('../fonts/feathericons.woff?kn6kqz') format('woff'),
+    url('../fonts/feathericons.svg?kn6kqz#feathericons') format('svg');
 }

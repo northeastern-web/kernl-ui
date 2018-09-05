@@ -1,112 +1,67 @@
 <?php
-function listgroup($classes) {
-  echo '
-  <div class="row mb--2@xs">
-    <div class="col --3@md">
-      <p class="text-style-block mb--1@xs"><small>Small</small></p>
-      <div class="list-group --sm' . $classes . '">
-        <div class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</div>
-        <div class="__item"><b>Lorem ipsum</b>: dolor sit amet, consectetur faucibus mollis interdum</div>
-        <div class="__item"><b>Maecenas</b>: faucibus mollis interdum</div>
-        <div class="__item"><b>Lorem ipsum</b>: dolor sit amet, consectetur</div>
-        <div class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</div>
-      </div>
+function listgroup($classes, $option = false)
+{
+    if (preg_match("/left/", $classes) || preg_match("/right/", $classes)) {
+        return '
+      <ul class="list-group ' . $classes . '">
+        <li class="__item">
+          <a href="#"><i data-feather="arrow-right"></i>
+          <b>Lorem ipsum dolor</b>: sit amet do eiusmod</a>
+        </li>
+        <li class="__item">
+          <a href="#"><i data-feather="arrow-right"></i>
+          <b>Lorem ipsum</b>: dolor sit amet, consectetur faucibus mollis interdum</a>
+        </li>
+        <li class="__item">
+          <a href="#"><i data-feather="arrow-right"></i>
+          <b>Maecenas</b>: faucibus mollis interdum</a>
+        </li>
+        <li class="__item">
+          <a href="#"><i data-feather="arrow-right"></i>
+          <b>Lorem ipsum</b>: dolor sit amet, consectetur</a>
+        </li>
+        <li class="__item">
+          <a href="#"><i data-feather="arrow-right"></i>
+          <b>Lorem ipsum dolor</b>: sit amet do eiusmod</a>
+        </li>
+      </ul>
+      ';
+    }
+
+    if ($option == 'excerpt') {
+        return '
+        <div class="list-group --indent">
+            <a class="__item" href="/article/schedule-of-classes/">
+                <h6 class="mb--0">Schedule of Classes</h6>
+                <div class="__excerpt tc--gray-600 fs--xs pr--1@xs"> A listing of available class sections by term.</div>
+            </a>
+            <a class="__item" href="/article/semester-class-sequence-schedules/">
+                <h6 class="mb--0">Semester Class Sequence Schedules</h6>
+                <div class="__excerpt tc--gray-600 fs--xs pr--1@xs"> Diagrams and conflict tables of semester class sequences</div>
+            </a>
+            <a class="__item" href="/article/course-class-offerings/">
+                <h6 class="mb--0">Course and Class Offerings</h6>
+                <div class="__excerpt tc--gray-600 fs--xs pr--1@xs"> Distinction between course and class offerings.</div>
+            </a>
+            <a class="__item" href="/article/no-charge-music-ensemble-courses/">
+                <h6 class="mb--0">No-Charge Music Ensemble Courses</h6>
+                <div class="__excerpt tc--gray-600 fs--xs pr--1@xs"> Music ensemble courses available for undergraduate students to take without added charge.</div>
+            </a>
+            <a class="__item" href="/article/college-of-professional-studies-undergraduate-semester-conversion/">
+                <h6 class="mb--0">College of Professional Studies—Undergraduate Semester Conversion</h6>
+                <div class="__excerpt tc--gray-600 fs--xs pr--1@xs"> Effective fall 2016, the undergraduate programs in the College of Professional Studies are offered on a semester basis. </div>
+            </a>
+        </div>
+        ';
+    }
+
+    return '
+    <div class="list-group ' . $classes . '">
+      <div class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</div>
+      <div class="__item"><b>Lorem ipsum</b>: dolor sit amet, consectetur faucibus mollis interdum</div>
+      <a href="#" class="__item"><b>Maecenas</b>: faucibus mollis interdum</a>
+      <a href="#" class="__item"><b>Lorem ipsum</b>: dolor sit amet, consectetur</a>
+      <div class="__item"><b>Lorem ipsum dolor</b>: sit amet do eiusmod</div>
     </div>
-    <div class="col --4@md">
-      <p class="text-style-block mb--1@xs"><small>Small; items contain links; has icons</small></p>
-      <div class="list-group --sm' . $classes . ' +icon">
-        <div class="__item">
-          <i data-feather="alert-octagon"></i>
-          <a href="#"><b>Lorem ipsum dolor</b>: sit amet do blandit tempus porttitor</a></div>
-        <div class="__item">
-          <i data-feather="command" class="tc--green"></i>
-          <a href="#"><b>Lorem ipsum</b>: dolor sit amet, Cras justo odio, dapibus in, faucibus tempus porttitor consectetur</a>
-        </div>
-        <div class="__item">
-          <i data-feather="crosshair" class="tc--purple"></i>
-          <a href="#"><b>Maecenas</b>: Cras justo odio, dapibus in, faucibus</a>
-        </div>
-        <div class="__item">
-          <i data-feather="chevron-right"></i>
-          <a href="#"><b>Lorem ipsum</b>: dolor sit amet, consectetur mollis interdum</a>
-        </div>
-        <div class="__item">
-          <i data-feather="life-buoy" class="tc--red"></i>
-          <a href="#"><b>Lorem ipsum dolor</b>: sit amet do eiusmod blandit porttitor</a>
-        </div>
-      </div>
-    </div>
-    <div class="col --5@md">
-      <p class="text-style-block mb--1@xs"><small>Small; Items are Links; extra content</small></p>
-      <div class="list-group --sm' . $classes . '">
-        <a href="#" class="__item">
-          <b>Lorem ipsum dolor sit amet</b><br>
-          Lorem ipsum dolor sit amet do eiusmod consectetur adipiscing elit.<br>
-          November 12, ' . date("Y") . ', 3:00 p.m.
-        </a>
-        <a href="#" class="__item">
-          <b>Maecenas consectetur adipiscing</b><br>
-          Maecenas consectetur adipiscing elit faucibus mollis interdum.<br>
-          November 17, ' . date("Y") . ', 4:00 p.m.
-        </a>
-        <a href="#" class="__item">
-          <b>Lorem ipsum</b><br>
-          Lorem ipsum faucibus mollis interdumdolor sit amet, consectetur.<br>
-          November 18, ' . date("Y") . ', 1:00 a.m.
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col --4@md --1-offset@md">
-      <p class="text-style-block mb--1@xs"><small>Base size; items contain links; icons on right</small></p>
-      <div class="list-group'  . $classes . ' +icon --right">
-        <div class="__item">
-          <a href="#"><b>Dolor lorem ipsum </b>: sit amet do blandit porttitor</a>
-          <i data-feather="alert-octagon"></i>
-        </div>
-        <div class="__item">
-          <a href="#"><b>Lorem ipsum</b>: dolor sit amet, tempus consectetur</a>
-          <i data-feather="alert-octagon"></i>
-        </div>
-        <div class="__item">
-          <a href="#"><b>Maecenas</b>: Cras justo odio, dapibus ac in, faucibus</a>
-          <i data-feather="alert-octagon"></i>
-        </div>
-        <div class="__item">
-          <a href="#"><b>Faucibus mollis</b>: Maecenas interdum</a>
-          <i data-feather="alert-octagon"></i>
-        </div>
-        <div class="__item">
-          <a href="#"><b>Ipsum Maecenas</b>: dolor sit amet, consectetur</a>
-          <i data-feather="alert-octagon"></i>
-        </div>
-        <div class="__item">
-          <a href="#"><b>Tempus porttitor</b>: dolor sit amet, consectetur</a>
-          <i data-feather="alert-octagon"></i>
-        </div>
-      </div>
-    </div>
-    <div class="col --5@md --1-offset@xs">
-      <p class="text-style-block mb--1@xs"><small>Base size; Items are Links; extra content; indent on hover</small></p>
-      <div class="list-group'  . $classes . ' +indent">
-        <a href="#" class="__item">
-          <b>Lorem ipsum dolor sit amet</b><br>
-          Lorem ipsum dolor sit amet do eiusmod consectetur adipiscing elit.<br>
-          November 12, ' . date("Y") . ', 3:00 p.m.
-        </a>
-        <a href="#" class="__item">
-          <b>Maecenas consectetur adipiscing</b><br>
-          Maecenas consectetur adipiscing elit faucibus mollis interdum.<br>
-          November 17, ' . date("Y") . ', 4:00 p.m.
-        </a>
-        <a href="#" class="__item">
-          <b>Lorem ipsum</b><br>
-          Lorem ipsumfaucibus mollis interdumdolor sit amet, consectetur.<br>
-          November 18, ' . date("Y") . ', 1:00 a.m.
-        </a>
-      </div>
-    </div>
-  </div>';
+    ';
 }
-?>
