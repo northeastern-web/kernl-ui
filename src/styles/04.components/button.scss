@@ -16,7 +16,7 @@
   padding: $btn-padding-t $btn-padding-x $btn-padding-b;
   cursor: pointer;
   overflow: hidden;
-  transition: $transition;
+  transition: all $transition;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -85,16 +85,17 @@
     }
   }
 
+  // Marketing button
   &.\--m {
     @extend .fw--700;
     padding: $btn-padding-t 0 0.25rem;
     border: 0 none;
     color: inherit;
     border-bottom: 2px solid transparent;
-    transition: border-bottom-color $transition;
+    border-bottom-color: $red;
 
     &:hover {
-      border-bottom-color: $red;
+      border-bottom-color: rgba($gray, 0.7);
       background: none;
     }
   }
