@@ -1,0 +1,151 @@
+// Components
+// Modal
+
+
+.modal {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  z-index: $z-max;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  // --
+  // Block level
+
+  // centered content within modal
+  .__content {
+    position: relative;
+    display: flex;
+    padding: 2rem;
+    margin: 4rem auto 5rem;
+    width: 90%;
+    max-width: 450px;
+    max-height: 96vh;
+    overflow-y: scroll;
+    z-index: 50;
+    flex-direction: column;
+    flex: 0 1 auto;
+
+    @include mqbp-up(t) {
+      width: 80%;
+      max-width: 760px;
+    }
+
+    @include mqbp-up(w) {
+      max-width: 900px;
+    }
+  }
+
+  .__body {
+    @include card-padding();
+    font-size: 100%;
+    flex: 1;
+  }
+
+  // requires width and aspect ratio utility on this element 
+  .__graphic {
+    @extend .ar;
+/* 
+    @include mqbp-up(d) {
+      height: auto;
+      padding-top: 0;
+    } */
+  }
+
+  // pins the <img>
+  .__graphic__img {
+    @extend .ar--object;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+
+    /* @include mqbp-up(d) {
+      position: relative !important;
+      width: auto !important;
+      height: auto !important;
+      top: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      left: auto !important;
+      transform: none !important;
+    } */
+  }
+
+  // dark screen as modal backdrop
+  .__screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($black, 0.85);
+  }
+
+  // close button in top right corner of browser window
+  .__close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    background: 0 none;
+    border: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .85;
+    transition: opacity 0.2s ease;
+    // z-index: $;
+
+    .feather { stroke-width: 3; }
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+      outline: none;
+    }
+  }
+
+  // --
+  // Modifiers
+
+  &.\--active { display: flex; }
+
+  &.\--sm {
+    .__content {
+      @include mqbp-up(t) {
+        max-width: 400px;
+      }
+    }
+  }
+
+  &.\--lg {
+    .__content {
+      @include mqbp-up(d) {
+        max-width: 992px;
+      }
+    }
+  }
+
+  &.\--xl {
+    .__content {
+      @include mqbp-up(t) {
+        max-width: 86%;
+        height: 100%;
+      }
+
+      @include mqbp-up(d) {
+        max-width: 92%;
+      }
+    }
+  }
+}

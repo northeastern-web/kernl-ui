@@ -1,15 +1,13 @@
-<header class="section --lg +bgimg --bgfixed mb--1@xs">
-  <div class="row">
-    <div class="col --12@xs ta--c">
-      <div class="__pretitle">What's your type?</div>
-      <h1 class="__title fs--d7 fw--300 mb--1@xs">Typography Styles</h1>
-      <div class="__subtitle fs--lead">This is a page of base typography styles for kernl(ui).</div>
-    </div>
+<header class="section --hero bg--img">
+  <div class="__header">
+    <div class="__pretitle">What's your type?</div>
+    <h1 class="__title">Typography Styles</h1>
+    <div class="__subtitle">This is a page of base typography styles for kernl(ui).</div>
   </div>
 </header>
 <section class="section">
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <p class="fs--lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="bg--beige"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
       <ul class="ls--none fs--sm">
         <li>15px base font-size (<code>xs</code>)</li>
@@ -17,9 +15,9 @@
         <li>17px base font-size (<code>xl</code>)</li>
         <li>18px base font-size (<code>xx</code>)</li>
       </ul>
-      <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-      <section class="section +bgimg mb--1@xs pa--1@xs pa--1h@xl">
-        <p class="mb--0@xs"><b>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> in a nested banner.</b> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+      <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. <a href="#" script="preventDefault()">Pellentesque ornare sem lacinia</a> quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+      <section class="section bg--img mb--1 pa--2">
+        <p class="mb--0"><b>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> in a nested banner.</b> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       </section>
       <p class="fs--sm">This a little note set at <code>fs--sm</code> <span class="show-font-size">(<span class="element-font-size"></span> @ 0.88rem)</span>.</p>
     </div>
@@ -27,7 +25,7 @@
 </section>
 <section class="section k_bg-light">
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <h2>Here is a Heading Two <span class="show-font-size">(<span class="element-font-size"></span> @ 1.88rem)</span></h2>
       <p class="fs--lead">This is a lead paragraph <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="bg--beige"><span class="html-font-size"></span>-pixel html base</span></p>
       <p>Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
@@ -65,7 +63,7 @@
       <h4>Unstyled List Style</h4>
       <ul class="ls--none">
         <li>4 loaves whole wheat bread</li>
-        <li>1 lb. SweetLeaf Farms unsalted butter</li>
+        <li>1 lb. <a href="#" script="preventDefault()">SweetLeaf Farms</a> unsalted butter</li>
         <li>1 bag unrefined sugar</li>
         <li>2 boxes graham crackers, crumbled</li>
         <li>1 bag butterscotch hard candies. <i>Now, this line item may require some explanation, at least for text-wrap demonstration: Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</i>
@@ -82,10 +80,10 @@
 
       <h4>Inline Lists</h4>
       <ul class="ls--inline">
-        <li><a href="#">item one</a></li>
-        <li><a href="#">item two</a></li>
-        <li><a href="#">item three</a></li>
-        <li><a href="#">item four</a></li>
+        <li><a href="#" script="preventDefault()">item one</a></li>
+        <li><a href="#" script="preventDefault()">item two</a></li>
+        <li><a href="#" script="preventDefault()">item three</a></li>
+        <li><a href="#" script="preventDefault()">item four</a></li>
       </ul>
       <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
@@ -114,17 +112,15 @@
       <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
       <hr>
       <h4>Definition List</h4>
-      <div class="alert bc--blue-dark">
-        <div class="__body">
-          <p>Works like the grid. Elements <code>dt</code> and <code>dd</code>, without any classes, default to 1/4 and 3/4 widths, respectively, at all breakpoints. Can be overridden individually just by adding grid column classes: <code>--&lt;value&gt;@&lt;breakpoint&gt;</code>.</p>
-        </div>
+      <div class="bg--beige fs--sm px--2 py--1 mb--1">
+        <p class="mb--0">Works like the grid. Element <code>dl</code> extends <code>.row</code>. Elements <code>dt</code> and <code>dd</code> extend <code>.col</code> and stack by default, but can be overridden individually just by adding grid column classes: <code>w--&lt;value&gt;@&lt;breakpoint&gt;</code>.</p>
       </div>
       <dl>
-        <dt>Single room</dt>
-        <dd>$199/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
+        <dt class="w--1/4@t w--20@w">Single room</dt>
+        <dd class="w--3/4@t w--80@w">$199/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
 
-        <dt>Double room</dt>
-        <dd>$239/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
+        <dt class="w--1/4@t w--20@w">Double room</dt>
+        <dd class="w--3/4@t w--80@w">$239/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
       </dl>
       <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
       <hr>
@@ -139,20 +135,39 @@
     </div>
   </div>
 </section>
-<header class="section ta--c --md bg--gray-800">
-  <div class="__pretitle mb--0h@xs"><i>Now for something completely different:</i></div>
-  <h2 class="__title fs--d6 mb--0h@xs fw--300">A Sample of Real-World Text</h2>
+
+<header class="section bg--white">
+  <div class="__header">
+    <div class="__pretitle">Dapibus Justo Fermentum Euismod Tortor</div>
+    <h1 class="__title">Default Section Header</h1>
+    <div class="__subtitle">Nulla vitae elit libero, a pharetra augue.</div>
+  </div>
+  <p>Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+</header>
+
+<header class="section bg--black --measure-wide --center">
+  <div class="__header">
+    <div class="__pretitle">Fermentum Euismod</div>
+    <h1 class="__title">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</h1>
+    <div class="__subtitle">Augue donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.</div>
+  </div>
+  <p>Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+</header>
+
+<header class="section ta--c pt--3 bg--gray-800">
+  <div class="__pretitle mb--0h"><i>Now for something completely different:</i></div>
+  <h2 class="__title fs--d4 mb--0h fw--300">A Sample of Real-World Text</h2>
   <div class="__subtitle fs--lead">The text below comes from Northeastern's Faculty Handbook website</div>
 </header>
 <section class="section bg--gray-800">
   <div class="row">
-    <div class="col --12@xs --10@md --1-offset@md --8@lg --2-offset@lg">
-      <section class="section pa--1@xs pa--2@md mb--2@md bg--white tc--gray-800 shadow">
+    <div class="col w--2/3@t ow--1/6@t">
+      <section class="section pa--2 mb--2@d bg--white tc--gray-800">
         <!-- sample of dense text -->
         <h2>Tenure and Tenure-Track Faculty</h2>
         <p>Dismissal of a Tenure-Track Faculty whose term appointment has not expired or a Tenured faculty member is the most severe sanction which the University may impose. An administrative officer who intends to request that dismissal proceedings begin should do so only when there is clear evidence to show adequate cause (see Section I.A.2) for dismissal. Except in an unusually serious or sudden case of gross personal misconduct (including sexual harassment), gross neglect of duty, or unfitness in one’s professional capacity, a request for dismissal proceedings should come forth only after a history of prior formal disciplinary action has been established.</p>
         <h2>Preliminary Proceedings Concerning Cause for Dismissal of a Faculty Member</h2>
-        <p>When reason arises to consider dismissal of a faculty member, the Provost (or a representative specifically designated by the Provost) should discuss the matter with him/her in personal conference and provide him/her with a copy of this Dismissal Proceedings procedure module of the Faculty Handbook. The matter may be terminated by mutual consent at that point, a corrective disciplinary sanction may be imposed (with the faculty member retaining his/her rights under the Faculty Grievance Procedure), or a request to commence dismissal proceedings may be made by the President to the Faculty Senate Agenda Committee.</p>
+        <p>When reason arises to consider dismissal of a faculty member, the Provost (or a representative specifically designated by the Provost) should discuss the matter with him/her in personal conference and provide him/her with a copy of this Dismissal Proceedings procedure module of the Faculty Handbook. The matter may be <a href="#" script="preventDefault()">terminated by mutual consent</a> at that point, a corrective disciplinary sanction may be imposed (with the faculty member retaining his/her rights under the Faculty Grievance Procedure), or a request to commence dismissal proceedings may be made by the President to the Faculty Senate Agenda Committee.</p>
         <p>In the request the President shall state, in general terms, the grounds for dismissal of the faculty member and shall state that a bill of particulars has been prepared which will be delivered to a Committee of Inquiry when it commences its investigation.</p>
         <ol>
           <li>At the same time that the request for dismissal proceedings is sent to the Senate Agenda Committee a copy of that request shall be delivered to the faculty member.</li>
@@ -173,7 +188,7 @@
           </li>
           <li>At the same time that the bill of particulars is sent to the Committee of Inquiry a copy shall be delivered to the faculty member.</li>
         </ol>
-        <p>When the Senate Agenda Committee has received the President’s request, it shall appoint a Committee of Inquiry consisting of five faculty members not part of the department or equivalent academic unit to which the person under investigation belongs<sup>1</sup>.</p>
+        <p>When the <a href="#" script="preventDefault()">Senate Agenda Committee</a> has received the President’s request, it shall appoint a Committee of Inquiry consisting of five faculty members not part of the department or equivalent academic unit to which the person under investigation belongs<sup>1</sup>.</p>
         <ol>
           <li>The function of the Committee of Inquiry shall be to conduct an informal inquiry into the situation specified in the bill of particulars and to determine whether, in its view, there is sufficient evidence to demonstrate probable cause for dismissal.</li>
           <li>It is the burden of the University to present the specific charges against the faculty member. The Committee of Inquiry will reach its findings solely on the basis of the charges brought, and will not formulate charges which have not already been specified in the bill of particulars.</li>
@@ -247,7 +262,7 @@
           <li>The Faculty Grievance Procedure shall not apply to this Dismissal Procedure or any final action taken pursuant to it.</li>
         </ol>
         <h2>Suspension of the Faculty Member during Proceedings</h2>
-        <p><span style="font-weight: 400;">The University may institute suspension of the faculty member during the proceedings only if immediate harm to the faculty member or to others is threatened by continuing his/her employment responsibilities. Unless legal considerations forbid, any such suspension shall be with pay.</span></p>
+        <p>The University may institute suspension of the faculty member during the proceedings only if immediate harm to the faculty member or to others is threatened by continuing his/her employment responsibilities. Unless legal considerations forbid, any such suspension shall be with pay.</p>
         <h2>Publicity</h2>
         <p>Except for such simple announcements as may be required, covering the time of the hearing and similar matters, public statements about the case by the faculty member, administrative officers, Hearing Committee members, or legal counsel shall be avoided so far as possible until the proceedings have been completed. Announcement of the final decision shall be made by the President. If the final decision differs from the Hearing Committee’s recommendation, the announcement shall include a statement of that recommendation.</p>
         <hr>
@@ -261,11 +276,11 @@
 
 <section class="section">
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <header class="k_section__header">Breadcrumbs</header>
-      <dl class="row pb--1@xs">
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Default</small></dt>
-        <dd class="col --12@xs --9@md">
+      <dl class="row pb--1">
+        <dt class="col w--1/4@t"><small class="text-style-block">Default</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -273,8 +288,8 @@
           </nav>
         </dd>
 
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Default, Small</small></dt>
-        <dd class="col --12@xs --9@md">
+        <dt class="col w--1/4@t"><small class="text-style-block">Default, Small</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb --sm">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -283,9 +298,9 @@
         </dd>
       </dl>
 
-      <dl class="row pb--1@xs">
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Dot</small></dt>
-        <dd class="col --12@xs --9@md">
+      <dl class="row pb--1">
+        <dt class="col w--1/4@t"><small class="text-style-block">Dot</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb +dot">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -293,8 +308,8 @@
           </nav>
         </dd>
 
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Dot, Small</small></dt>
-        <dd class="col --12@xs --9@md">
+        <dt class="col w--1/4@t"><small class="text-style-block">Dot, Small</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb --sm +dot">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -303,9 +318,9 @@
         </dd>
       </dl>
 
-      <dl class="row pb--1@xs">
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Chevron</small></dt>
-        <dd class="col --12@xs --9@md">
+      <dl class="row pb--1">
+        <dt class="col w--1/4@t"><small class="text-style-block">Chevron</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb +icon +chevron">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -313,8 +328,8 @@
           </nav>
         </dd>
 
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Chevron, Small</small></dt>
-        <dd class="col --12@xs --9@md">
+        <dt class="col w--1/4@t"><small class="text-style-block">Chevron, Small</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb --sm +icon +chevron">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -323,9 +338,9 @@
         </dd>
       </dl>
 
-      <dl class="row pb--1@xs">
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Arrow</small></dt>
-        <dd class="col --12@xs --9@md">
+      <dl class="row pb--1">
+        <dt class="col w--1/4@t"><small class="text-style-block">Arrow</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb +icon +arrow">
             <a href="#">Home</a>
             <a class="--active" href="#">Search</a>
@@ -339,8 +354,8 @@
       </dl>
 
       <dl class="row">
-        <dt class="col --12@xs --3@md"><small class="text-style-block">Arrow, Small</small></dt>
-        <dd class="col --12@xs --9@md">
+        <dt class="col w--1/4@t"><small class="text-style-block">Arrow, Small</small></dt>
+        <dd class="col w--3/4@t">
           <nav class="breadcrumb --sm +icon +arrow">
             <a href="#">Home</a>
             <a class="--active" href="#">Search</a>
@@ -358,33 +373,28 @@
 
 <section class="section k_bg-light">
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <header class="k_section__header">Display Sizes</header>
       <small class="text-style-block">Display Size 1:</small>
-      <p class="fs--d1">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.4rem)</span></p>
+      <p class="fs--d1">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.24rem/1.4)</span></p>
       <hr>
       <small class="text-style-block">Display Size 2:</small>
-      <p class="fs--d2">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.4rem)</span></p>
+      <p class="fs--d2">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.53rem/1.4)</span></p>
       <hr>
       <small class="text-style-block">Display Size 3:</small>
-      <p class="fs--d3">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.4rem)</span></p>
+      <p class="fs--d3">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 2.13rem/1.3)</span></p>
       <hr>
       <small class="text-style-block">Display Size 4:</small>
-      <p class="fs--d4">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.4rem)</span></p>
+      <p class="fs--d4">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 3rem/1.1)</span></p>
       <hr>
       <small class="text-style-block">Display Size 5:</small>
-      <p class="fs--d5">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.4rem)</span></p>
+      <p class="fs--d5">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 4.5rem/1.05)</span></p>
       <hr>
-      <small class="text-style-block">Display Size 6:</small>
-      <p class="fs--d6">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1.05rem)</span></p>
-      <hr>
-      <small class="text-style-block">Display Size 7:</small>
-      <p class="fs--d7">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span></p>
   </div>
 </section>
 
 <section class="section">
-  <header class="section py--1@xs">
+  <header class="section py--1">
     <div class="__pretitle">Section Header: Default</div>
     <h2 class="__title">Here's a Default Section Title</h2>
     <div class="__subtitle">Subtitlio Defaultus Ridiculum Inceptos Bibendum Amet Mollis Dapibus</div>
@@ -395,7 +405,7 @@
 <section class="section k_bg-light">
   <header class="k_section__header">Blockquotes</header>
   <div class="row">
-    <div class="col --12@xs --4@lg">
+    <div class="col w--1/3@d">
       <blockquote>
         Default blockquote says lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         <footer cite="http://www.washingtonpost.com/">
@@ -406,12 +416,12 @@
         </footer>
       </blockquote>
     </div>
-    <div class="col --12@xs --4@lg">
+    <div class="col w--1/3@d">
       <blockquote class="bg--yellow">
         <p>Blockquote says a colored background is nice sometimes. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       </blockquote>
     </div>
-    <div class="col --12@xs --4@lg">
+    <div class="col w--1/3@d">
       <blockquote class="bg--white --mark shadow">
         Shadowy blockquote has a mark. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         <footer cite="http://www.washingtonpost.com/">
@@ -428,8 +438,8 @@
 <section class="section">
   <header class="k_section__header">Basic Table</header>
   <div class="row">
-    <div class="col --12@xs">
-      <table class="table +th--sm">
+    <div class="col">
+      <table class="">
         <thead>
           <tr>
             <th width="20%">Dolor Vestibulum</th>
@@ -439,17 +449,17 @@
         </thead>
         <tbody>
           <tr>
-            <th>Ultricies Justo</th>
+            <td>Ultricies Justo</td>
             <td>Aenean lacinia bibendum nulla sed consectetur.</td>
             <td>Cras mattis consectetur purus sit amet fermentum.</td>
           </tr>
           <tr>
-            <th>Lorem Nullam</th>
+            <td>Lorem Nullam</td>
             <td>Donec ullamcorper nulla non metus auctor fringilla.</td>
             <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
           </tr>
           <tr>
-            <th>Adipiscing Condimentum</th>
+            <td>Adipiscing Condimentum</td>
             <td>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</td>
             <td>Curabitur blandit tempus porttitor.</td>
           </tr>
@@ -460,10 +470,10 @@
 </section>
 
 <section class="section">
-  <header class="k_section__header">With Vertical Borders</header>
+  <header class="k_section__header">With No Borders</header>
   <div class="row">
-    <div class="col --12@xs">
-      <table class="table --border">
+    <div class="col">
+      <table class="bw--0">
         <thead>
           <tr>
             <th width="20%">Dolor Vestibulum</th>
@@ -496,7 +506,7 @@
 <section class="section">
   <header class="k_section__header">With Alternating Stripes</header>
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col">
       <table class="--striped +th--sm">
         <thead>
           <tr>
@@ -542,12 +552,10 @@
   </div>
 </section>
 
-<section class="section pb--0@xs">
-  <header class="k_section__header">Responsive Table (horizontal scroll &lt;@md)</header>
+<section class="section pb--0">
+  <header class="k_section__header">Responsive Table (horizontal scroll &lt;@t)</header>
 </section>
-<section class="section px--0@xs pt--0@xs">
-  <div class="row">
-    <div class="col --12@xs">
+<section class="section">
       <table class="table --responsive +th--sm">
         <thead>
           <tr>
@@ -602,6 +610,4 @@
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
 </section>

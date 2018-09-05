@@ -1,0 +1,15 @@
+// Misc Utility
+// Box Shadow
+//
+// .bs--<value>
+
+
+.bs {
+  box-shadow: $box-shadow;
+
+  &.btn:hover { box-shadow: $box-shadow-hover; }
+}
+
+.bs--inset { box-shadow: $box-shadow-inset }
+
+.bs--none { box-shadow: none !important; }

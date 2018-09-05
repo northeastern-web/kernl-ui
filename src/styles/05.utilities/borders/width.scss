@@ -1,0 +1,46 @@
+// Borders Utility
+// Width
+//
+// .bw<loc>--<value>
+
+
+.bw--0,
+.bwa--0 {
+  border-width: 0;
+  td, th { border-width: 0 0 1px; }
+}
+.bwt--0 { border-top-width: 0; }
+.bwr--0 { border-right-width: 0; }
+.bwb--0 { border-bottom-width: 0; }
+.bwl--0 { border-left-width: 0; }
+
+.bw--1,
+.bwa--1 { border-width: 1px; }
+.bwt--1 { border-top-width: 1px; }
+.bwr--1 { border-right-width: 1px; }
+.bwb--1 { border-bottom-width: 1px; }
+.bwl--1 { border-left-width: 1px; }
+
+.bw--2,
+.bwa--2 {
+  border-width: 2px;
+  td, th { border-width: 2px; }
+}
+.bwt--2 { border-top-width: 2px; }
+.bwr--2 { border-right-width: 2px; }
+.bwb--2 { border-bottom-width: 2px; }
+.bwl--2 { border-left-width: 2px; }
+
+.bw--3,
+.bwa--3 { border-width: 3px; }
+.bwt--3 { border-top-width: 3px; }
+.bwr--3 { border-right-width: 3px; }
+.bwb--3 { border-bottom-width: 3px; }
+.bwl--3 { border-left-width: 3px; }
+
+.bw--4,
+.bwa--4 { border-width: 4px; }
+.bwt--4 { border-top-width: 4px; }
+.bwr--4 { border-right-width: 4px; }
+.bwb--4 { border-bottom-width: 4px; }
+.bwl--4 { border-left-width: 4px; }

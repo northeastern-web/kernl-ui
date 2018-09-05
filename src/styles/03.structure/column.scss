@@ -1,0 +1,20 @@
+// Structure
+// Column
+
+
+// baseline column component (extend using width utility)
+.col {
+  @include make-gutters();
+  flex: none;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+// wrapper for .col items
+.row {
+  @include make-row();
+  display: flex;
+  flex-wrap: wrap;
+}

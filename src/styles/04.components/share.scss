@@ -1,0 +1,48 @@
+// Components
+// Sharing
+
+
+.share {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    margin: 0 -1px 0 0;
+    font-size: 1.25rem;
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #ccc;
+    color: #777;
+    text-align: center;
+    line-height: 2.85rem;
+
+    &:hover { color: $type-link; }
+  }
+
+  .feather {
+    @extend %icon;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &.\--stacked,
+  &.\--flex {
+    flex-flow: column nowrap;
+
+    li { margin: 0 0 -1px 0; }
+  }
+
+  &.\--flex {
+    @include mqbp-up(t) {
+      flex-flow: row wrap;
+
+      li { margin: 0 -1px 0 0; }
+    }
+  }
+}

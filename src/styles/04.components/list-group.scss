@@ -1,0 +1,130 @@
+// Components
+// List Group
+
+
+.list-group {
+  padding-left: 0;
+  list-style: none;
+  position: relative;
+  margin-bottom: 1rem;
+
+  // style the immediate first child regardless of item
+  > * {
+    display: block;
+    position: relative;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $gray-200;
+    color: inherit;
+    float: none !important;
+    margin-bottom: 0;
+    padding: 0.75rem 0;
+
+    &:link:hover,
+    &:link:active,
+    &:link:focus { text-decoration: none; }
+
+    &:last-child { border: 0 none; }
+  }
+
+  a {
+    display: block;
+    color: inherit; // $type-color;
+    transition: all 0.3s ease-out;
+
+    &.__item:hover { background-color: $gray-50; }
+  }
+
+  .__item > a:hover { color: lighten($type-color, 20%); }
+
+
+  // --
+  // Modifiers
+
+  &.\--white { @include list_group_variant($type-color, #fff); }
+
+  &.\--dark { @include list_group_variant(#fff, rgba($type-color, 0.5)); }
+
+  &.\--striped {
+    >* {
+      padding: 0.5rem 0.75rem;
+      &:nth-child(odd) { background-color: $gray-100; }
+    }
+  }
+
+  &.\--outline {
+    border: 1px solid $gray-200;
+
+    >* { padding: 0.5rem 0.75rem; }
+  }
+
+  // removes style of default media objects within list-group
+  &.\--media {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .media {
+      margin: 0;
+      border-bottom: 1px solid $gray-200;
+      padding: 0 !important;
+      box-shadow: none;
+
+      &:last-child { border-bottom: 0 none; }
+
+      &:hover {
+        .__body {
+          opacity: 0.7;
+          transition: opacity 0.2s ease;
+        }
+      }
+    }
+
+    .__link {
+      padding: 1rem 0.5rem;
+
+      &:hover { box-shadow: none; }
+    }
+  }
+
+  // --
+  // Icons
+
+  // nested icon
+  .feather,
+  .icon {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.\--left {
+    > * { padding-left: 2.25rem; }
+    .feather { left: 0.5rem; }
+  }
+
+  &.\--right {
+    > * { padding-right: 2.25rem; }
+    .feather { right: 0.5rem; }
+  }
+
+  // --
+  // Interaction
+
+  // adds a slide in effect on hover
+  &.\--indent {
+    > * {
+      transition: all 0.3s ease-out;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:hover {
+        padding-left: 0.4rem !important;
+        padding-right: 0.4rem !important;
+      }
+    }
+  }
+}

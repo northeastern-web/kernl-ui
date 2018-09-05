@@ -1,0 +1,134 @@
+// Global Methods
+// Typography
+
+
+@mixin type-root($colorContrast: false) {
+  line-height: 1.5;
+  font-size: 15px;
+
+  @include mqbp-up(t) { font-size: 16px; }
+  @include mqbp-up(w) { font-size: 17px; }
+
+  @if $colorContrast { opacity: 0.75; }
+}
+
+@mixin type-d1($colorContrast: false, $important: false) {
+  @if ($important) {
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
+
+  line-height: 1.4;
+  font-size: $fs-d1#{$important};
+
+  @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -0.5rem; }
+}
+
+@mixin type-d2($colorContrast: false, $important: false) {
+  @if ($important) {
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
+
+  line-height: 1.4;
+  font-size: $fs-d2#{$important};
+
+  @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -0.85rem; }
+}
+
+@mixin type-d3($colorContrast: false, $important: false) {
+  @if ($important) {
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
+
+  line-height: 1.3;
+  font-size: $fs-d3#{$important};
+
+  @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -1rem; }
+}
+
+@mixin type-d4($colorContrast: false, $important: false) {
+  @if ($important) {
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
+
+  line-height: 1.1;
+  font-size: $fs-d4#{$important};
+
+  @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -1.5rem; }
+}
+
+@mixin type-d5($colorContrast: false, $important: false) {
+  @if ($important) {
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
+
+  line-height: 1.05;
+  font-size: $fs-d5#{$important};
+  letter-spacing: -0.05rem;
+
+  @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -2.25rem; }
+}
+
+@mixin type-lead($colorContrast: false, $important: false) {
+  @if ($important) {
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
+
+  line-height: 1.45;
+  font-weight: $type-light;
+  font-size: $fs-d1#{$important};
+
+  @include mqbp-up(t) {
+    font-size: $fs-d2#{$important};
+  }
+
+  @if $colorContrast { opacity: 0.85; }
+}
+
+@mixin type-sm($colorContrast: false, $important: false) {
+  @if ($important) {
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
+
+  line-height: 1.35#{$important};
+  font-size: $fs-sm#{$important};
+
+  @if $colorContrast { opacity: 0.85; }
+}
+
+@mixin type-xs($colorContrast: false, $important: false) {
+  @if ($important) {
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
+
+  line-height: 1.3;
+  font-size: $fs-xs#{$important};
+
+  @if $colorContrast { opacity: 0.85; }
+}
+

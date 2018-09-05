@@ -1,0 +1,41 @@
+// Sizing Utility
+// Width
+//
+// .w--<value>
+
+
+.mw--0    { min-width: 0; }
+.mw--100  { min-width: 100%; }
+
+.w--fit {
+  width: auto;
+  flex: 1;
+}
+
+// Basic width values
+@each $name, $value in $widths {
+  @if($name == 'auto') {
+    .w--auto {
+      width: auto;
+      max-width: 100%;
+    }
+  } @else {
+    .w--#{$name} { width: $value; }
+    .ow--#{$name} { margin-left: $value; } // offset
+  }
+}
+
+// Width values with breakpoint options
+@each $breakpoint in map-keys($breakpoints) {
+  @include mqbp-up($breakpoint) {
+    @each $name, $value in $widths {
+      .w--#{$name}\@#{$breakpoint} { width: $value; }
+      .ow--#{$name}\@#{$breakpoint} { margin-left: $value; } // offset
+    }
+
+    .w--fit\@#{$breakpoint} {
+      width: auto;
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// Backgrounds Utility
+// Image
+//
+// .bg--<img>
+
+
+.bg--img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.25);
+  color: #fff;
+
+  &:after {
+    @extend .pin;
+    content: "";
+    background: rgba(0, 0, 0, 0.55206);
+    z-index: $z-0;
+  }
+
+  > * {
+    @extend .fs--smooth;
+    z-index: 1;
+    position: relative;
+  }
+
+  .btn,
+  .card { text-shadow: none; }
+
+  a { color: inherit; }
+}

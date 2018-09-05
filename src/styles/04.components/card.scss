@@ -1,0 +1,893 @@
+// Components
+// Card
+
+
+.card {
+  @extend .flex--col;
+  @extend .d--flex;
+  @include margin-bottom-gutter();
+  @include type-sm();
+  width: 100%;
+  background: $white;
+  position: relative;
+  overflow: visible;
+  box-shadow: $box-shadow-inset;
+
+  .__link {
+    @extend .flex--col;
+    @extend .d--flex;
+    color: inherit;
+    height: 100%;
+    transition: box-shadow $transition;
+
+    &:hover {
+      box-shadow: $box-shadow-inset-hover;
+    }
+  }
+
+  // --
+  // Block level
+
+  .__body {
+    @include card-padding();
+    font-size: 100%;
+    flex: 1;
+
+    p {
+      font-size: inherit;
+      line-height: inherit;
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  .__title {
+    line-height: 1.25;
+    font-weight: 700;
+    font-size: 118%;
+    transition: color 0.2s ease;
+  }
+
+  .__pretitle { margin-bottom: 0.2rem; }
+
+  .__subtitle { font-size: 110%; }
+
+  .__graphic {
+    @extend .ar;
+    // padding-top: 56.25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    background-color: $gray-400;
+  }
+
+  // pins the <img>
+  .__graphic__img {
+    @extend .pin;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  .__header {
+    @extend .pos--absolute;
+    @extend .pin--t;
+  }
+
+  .__footer {
+    @extend .d--flex;
+    @extend .justify--between;
+    @include card-padding();
+    padding-top: 0 !important;
+    font-size: 87.5%;
+  }
+
+  // Columns in header/footer
+  .__column {
+    @extend %component-column;
+    padding: 0;
+    align-self: center;
+  }
+
+  // --
+  // Modifiers
+
+  // Smaller variant of .card
+  &.\--tile {
+    @include type-xs();
+    .__body { padding: 1rem; }
+  }
+
+  // Profile variant of .card
+  &.\--profile {
+    box-shadow: none;
+
+    .__body {
+      padding: 1rem 0 1rem;
+
+      p { font-size: $fs-xs; }
+    }
+
+    .__title { margin-bottom: 0.25rem; }
+
+    .__subtitle {
+      font-size: $fs-xs;
+      margin-bottom: 0.5rem;
+      color: $gray-500;
+      font-style: italic;
+    }
+
+    .__footer {
+      padding: 0;
+
+      .__column:first-child {
+        display: inline-flex;
+        width: auto;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom $transition;
+      }
+    }
+
+    &:hover {
+      .__link { box-shadow: none; }
+
+      .__footer .__column:first-child {
+        border-bottom: 2px solid $red;
+      }
+    }
+  }
+
+  // Overlay's block level items to card
+  &.\--overlay {
+    color: #fff;
+    height: $tile_overlay_height;
+
+    .__graphic {
+      min-height: 100%;
+      padding: 0;
+      min-width: 100%;
+
+      &::after {
+        @extend .pin;
+        content: '';
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    .__body {
+      @extend .pos--absolute;
+      overflow-y: hidden;
+      max-height: 95%;
+    }
+
+    &:not(.\--middle):not(.\--bottom) {
+      .__header + .__body {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  // Middle text variant
+  &.\--middle {
+    @extend .flex--middle;
+
+    .__link {
+      @extend .flex--middle;
+    }
+
+    &.\--overlay {
+      .__link {
+        @extend .d--block;
+        width: 100%;
+      }
+
+      .__header {
+        @extend .pin--xc;
+      }
+
+      .__body {
+        @extend .pin--c;
+        @extend .ta--c;
+        @extend .w--100;
+      }
+    }
+  }
+
+  // Bottom text variant
+  &.\--bottom {
+    @extend .justify--end;
+
+    .__link {
+      @extend .justify--end;
+    }
+
+    &.\--overlay {
+      .__link { width: 100%; }
+
+      .__body {
+        @extend .pin--b;
+        @extend .w--100;
+      }
+    }
+  }
+
+  &.\--overlay,
+  &.\--middle,
+  &.\--bottom {
+    .__body { flex: 0; }
+  }
+
+  // --
+  // Size variants
+  &.\--sm { height: $card-height-sm; }
+  &.\--md { height: $card-height-md; }
+  &.\--lg { height: $card-height-lg; }
+  &.\--xl { height: $card-height-xl; }
+
+  // --
+  // Orientation overrides
+  &.\--h {
+    .__link { flex-direction: row; }
+
+    .__graphic,
+    .__body { width: 50%; }
+
+    .__footer {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 50%;
+    }
+
+    &.--right {
+      .__graphic { order: 1; }
+      .__footer { left: auto; }
+    }
+
+    .__graphic {
+      @each $ar-name, $ar-value in $aspect-ratios {
+        &.ar--#{$ar-name} { padding-top: ($ar-value / 2); }
+      }
+
+      @each $breakpoint in map-keys($breakpoints) {
+        @include mqbp-up($breakpoint) {
+          @each $ar-name, $ar-value in $aspect-ratios {
+            &.ar--#{$ar-name}\@#{$breakpoint} { padding-top: ($ar-value / 2); }
+          }
+        }
+      }
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+      &.\--v\@#{$breakpoint} {
+        .__graphic {
+          @each $ar-name, $ar-value in $aspect-ratios {
+            &.ar--#{$ar-name} { padding-top: ($ar-value / 2); }
+
+            @include mqbp-up($breakpoint) {
+              &.ar--#{$ar-name} { padding-top: $ar-value !important; }
+
+              @each $breakpoint in map-keys($breakpoints) {
+                &.ar--#{$ar-name}\@#{$breakpoint} { padding-top: $ar-value !important; }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    &.\--h\@#{$breakpoint} {
+      @include mqbp-up($breakpoint) {
+        .__link { flex-direction: row; }
+
+        .__graphic,
+        .__body { width: 50%; }
+
+        .__graphic {
+          padding-top: (56.25% / 2);
+        }
+
+        .__footer {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 50%;
+        }
+
+        &.--right {
+          .__graphic { order: 1; }
+          .__footer { left: auto; }
+        }
+      }
+    }
+
+    // horizontal shared with vertical override
+    &.\--v\@#{$breakpoint} {
+      @include mqbp-up($breakpoint) {
+        .__link { flex-direction: column; }
+
+        .__graphic,
+        .__body { width: 100%; }
+
+        .__graphic {
+          padding-top: 56.25%;
+        }
+
+        .__footer {
+          position: relative;
+          bottom: auto;
+          left: auto;
+          width: auto;
+        }
+
+        &.--right {
+          .__graphic { order: 0; }
+        }
+      }
+    }
+  }
+
+  //
+  // prevent + footer collision in horizontal orientations
+  &.\--h {
+    .__body {
+      @include padding-bottom-gutter(3);
+
+      @include mqbp-up(t) {
+        @include padding-bottom-gutter(2.5);
+      }
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+      &.\--v\@#{$breakpoint} {
+        @include mqbp-up($breakpoint) {
+          .__body { @include padding-bottom-gutter(); }
+        }
+      }
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include mqbp-up($breakpoint) {
+      &.\--h\@#{$breakpoint} {
+        .__body {
+          @include padding-bottom-gutter(2.5);
+        }
+      }
+    }
+
+    // don't adjust anything above this line!
+
+    @include mqbp-up($breakpoint) {
+      &.\--v\@#{$breakpoint} {
+        .__body {
+          @include padding-bottom-gutter();
+        }
+      }
+    }
+  }
+
+  &.\--zoom {
+    .__graphic__img {
+      transform: scale(1);
+      transform-origin: center;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      .__graphic__img {
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  &.\--flush {
+    box-shadow: none;
+
+    .__body { padding-top: 1rem; }
+
+    .__body,
+    .__footer {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    &.\--h {
+      .__body {
+        @include card-padding();
+        padding-top: 0;
+      }
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+      @include mqbp-up($breakpoint) {
+        &.\--h\@#{$breakpoint} {
+          .__body { padding-top: 0; }
+        }
+      }
+
+      // don't adjust anything above this line!
+
+      @include mqbp-up($breakpoint) {
+        &.\--v\@#{$breakpoint} {
+          @include mqbp-up($breakpoint) {
+            .__body { padding-top: 1rem; }
+
+            .__body,
+            .__footer {
+              padding-right: 0;
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .\--sm { height: $card-height-sm; }
+  .\--md { height: $card-height-md; }
+  .\--lg { height: $card-height-lg; }
+}
+
+
+
+/*
+.card {
+  @include card_variant();
+  @include type-sm();
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  transition: $transition;
+
+
+  .__header {
+    justify-content: space-between;
+
+    .badge {
+      display: inline-flex;
+      top: 0.425rem;
+
+      &.\--left { left: 0.5rem; }
+      &.\--right { right: 0.5rem; }
+
+      @include mqbp-up(w) {
+        top: 0.5rem;
+      }
+    }
+  }
+
+  //
+  // Columns in header/footer
+  .__column {
+    @extend %component-column;
+  }
+
+  //
+  // Link
+  .__link {
+    height: 100%;
+    display: block;
+
+    &, &:hover { color: inherit; }
+  }
+
+
+  //
+  // Graphic
+  .__graphic {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    padding-top: 56.25%;
+
+    &:after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: background 0.2s ease;
+    }
+
+    &.\+round {
+      margin: 1rem auto 0;
+      max-width: $card_icon_size * 3 !important;
+      height: $card_icon_size * 3 !important;
+      padding: 0 !important;
+      border-radius: $card_icon_size * 2 !important;
+
+      .__graphic__img {
+        max-width: 200% !important;
+        left: -50% !important;
+      }
+    }
+
+    +.__header {
+      top: auto;
+    }
+  }
+
+  // Image within .__graphic
+  .__graphic__img {
+    max-width: 110%;
+    width: auto; height: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: -5%;
+  }
+
+
+
+  //
+  // Icon
+  .__icon {
+    @extend %icon;
+    margin-bottom: .5rem;
+    font-size: 225%;
+    text-align: center;
+  }
+
+
+  //
+  // Header & Footer
+  .__header,
+  .__footer {
+    @include type-sm();
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    left: 0;
+    z-index: 15;
+  }
+
+  .__header {
+    top: 0;
+
+    +.__body {
+      margin-top: 2.5rem;
+      border-top: 1px solid $gray-200;
+    }
+  }
+
+  .__footer {
+    bottom: 0;
+    border-top: 1px solid $gray-200;
+    z-index: 11; // appear over gradient
+  }
+
+  // Link within footer
+  .__footer__link {
+    @extend .btn;
+    @extend %block;
+    margin-top: -1px;
+    margin-bottom: 0;
+    height: 2.5rem;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  //
+  // Position card bottom-left
+  &.\--bottom {
+    min-height: $card_height_xs;
+
+    .__body {
+      padding-bottom: 1rem;
+      border: none;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .__icon { text-align: left; }
+  }
+
+  //
+  // Overlay
+  &.\--overlay {
+    color: #fff;
+    min-height: $card_height_sm;
+
+    .__link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .__graphic {
+      height: 100%;
+      width: 100%;
+      max-width: initial;
+      position: absolute;
+      top: 0; left: 0;
+      padding: 0;
+
+      &:after {
+        background: rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    .__graphic__img {
+      max-width: none;
+      max-height: 110%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: -10rem;
+      bottom: -10rem;
+      left: -10rem;
+      right: -10rem;
+      margin: auto;
+    }
+
+    .__body {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 100%;
+    }
+
+    &.\--middle {
+      .__body {
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        border-top: 0 none;
+      }
+    }
+
+    &.\--bottom {
+      .__body {
+        height: auto; width: auto;
+        padding-bottom: 1rem;
+        top: initial;
+      }
+    }
+
+    &:not(.\--middle) {
+      .__header ~ .__body { margin-top: 2.5rem; }
+    }
+
+    &:hover {
+      .__graphic {
+        &:after { background: rgba(0, 0, 0, 0.35); }
+      }
+    }
+  }
+
+  //
+  // Tiles
+  &.\--tile {
+    min-height: $tile_min_height_xs;
+    @include type-sm();
+
+    .__header,
+    .__footer {
+      @include mqbp-up(d) { @include type-xs(); }
+    }
+
+    .__graphic__img {
+        max-height: 175%;
+        @include mqbp-up(t) { max-height: 130%; }
+        @include mqbp-up(d) { max-height: 106%; }
+        @include mqbp-up(w) { max-height: 130%; }
+    }
+
+    &.\--overlay {
+      height: $tile_overlay_height;
+      min-height: 0;
+    }
+  }
+
+  &.\+overlay_title {
+    .__body { padding-top: 0; }
+
+    .__title {
+      position: absolute;
+      top: 0%;
+      left: 0;
+      margin-top: 30%;
+      transform: translateY(-50%);
+      text-align: center;
+      width: 100%;
+      color: #fff;
+
+      @include mqbp-up(t) {
+        top: 25%;
+      }
+    }
+  }
+
+
+  //
+  // Set heights at tablet
+  @include mqbp-up(t) {
+    height: $card_height_md;
+
+    &.\--overlay {
+      .__graphic__img {
+        max-height: 150%;
+      }
+    }
+
+    &.\--tile,
+    &.\--tile.\--overlay {
+      height: 200px !important;
+    }
+  }
+
+  //
+  // Set heights at desktop
+  @include mqbp-up(d) {
+    height: $card_height_lg;
+  }
+
+  //
+  // Set heights at widescreen
+  @include mqbp-up(w) {
+    height: $card_height_xl;
+
+    &.\--tile,
+    &.\--tile.\--overlay {
+      .__body { font-size: 90%; }
+    }
+  }
+
+  @include mqbp-up(t) {
+    @include card_vertical();
+
+    &.\--h\@t {
+      @include card_horizontal(50%, 50%);
+    }
+  }
+
+  @include mqbp-up(d) {
+    &.\--h\@d {
+      @include card_horizontal(50%, 50%);
+    }
+
+    &.\--v\@d {
+      @include card_vertical();
+
+      .__graphic + .__header {
+        width: 100%;
+        top: auto;
+      }
+    }
+  }
+
+  @include mqbp-up(w) {
+    &.\--h\@w {
+      @include card_horizontal(50%, 50%);
+    }
+
+    &.\--v\@w {
+      @include card_vertical();
+
+      .__graphic + .__header {
+        width: 100%;
+        top: auto;
+      }
+    }
+  }
+}
+
+
+.card:not(.\--overlay):not(.\--extend):not(.\--scroll):not(.\--middle):not(.\+list-group) {
+  @include mqbp-up(t) {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1rem;
+      bottom: 0;
+      background: inherit;
+      opacity: 0.7;
+    }
+
+    &:hover {
+      &::after { opacity: 0; }
+    }
+  }
+}
+
+
+//
+// Scrolling within card
+.\--scroll {
+  &:after { display: none; } // kill box-shadow
+
+  .__body {
+    height: 90%;
+    overflow-y: scroll;
+  }
+}
+
+
+//
+// Extend card past fixed height
+.\--extend { height: auto !important; }
+
+
+//
+// Middle
+.\--middle {
+  text-align: center;
+  min-height: $card_height_xs;
+
+  .__body {
+    margin-top: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include mqbp-up(t) {
+    min-height: $card_height_sm;
+  }
+}
+
+//
+// Contains a list group
+.\+list-group {
+  // note: card-contained list-group styles appear in list-groups.scss
+  .__body {
+    padding-top: 0;
+    padding-bottom: 2.25rem;
+  }
+}
+
+//
+// Add a dark shade between the background and .card .__body element
+.\+shade {
+  .__graphic:after,
+  &:hover .__graphic:after {
+    background: none;
+  }
+
+  .__body {
+    background: rgba(0, 0, 0, 0.25);
+    transition: background 0.2s ease;
+  }
+
+  &:hover {
+    .__body { background: rgba(0, 0, 0, 0.35); }
+  }
+}
+
+.\--flush .card {
+  border-radius: 0;
+
+  @include mqbp-up(t) {
+    .__body {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+  }
+
+  @include mqbp-up(w) {
+    .__graphic__img { height: 115% !important; }
+  }
+}
+ */

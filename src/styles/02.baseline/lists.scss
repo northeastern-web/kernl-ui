@@ -1,6 +1,5 @@
-//
+// Baseline
 // Lists
-//
 
 
 ol,
@@ -13,8 +12,7 @@ dl {
 ol,
 ul { padding-left: 1.25rem; }
 
-li,
-.__item {
+li {
   padding-top: 0.125rem;
   margin-bottom: 0.5rem;
 
@@ -31,7 +29,10 @@ ul ol {
   margin-bottom: 0;
 }
 
-dt { font-weight: 700; }
+dt {
+  font-weight: 700;
+  margin-bottom: 0 !important;
+}
 
 dd {
   margin-bottom: .5rem;
@@ -42,56 +43,7 @@ dd {
   }
 }
 
-
-// Unstyled List
-.ls--none {
-  padding-left: 0;
-list-style: none;
-
-  li,
-  .__item {
-    padding-top: .25rem;
-    margin-bottom: .25rem;
-  }
-}
-
-
-// Inline List
-.ls--inline {
-  padding-left: 0;
-list-style: none;
-
-  li,
-  .__item {
-    display: inline-block;
-
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
-  }
-}
-
-ol,
-ul {
-  .ls--none {
-    padding-top: 0.125rem;
-    margin-left: 1.5rem;
-  }
-
-  // Default List
-  // reset a nested list to bullets when parent list is styled
-  .ls--default {
-    padding-top: 0.25rem;
-    list-style: initial;
-    margin-left: 1.5rem;
-  }
-}
-
 dl { @extend .row; }
 
 dt,
 dd { @extend .col; }
-
-dt { @include make-col(1,4); }
-
-dd { @include make-col(3,4); }

@@ -1,0 +1,35 @@
+// Misc Utility
+// Aspect Ratios
+//
+// .ar--<something>
+
+
+.ar {
+  height: 0;
+  position: relative;
+}
+
+@each $ar-name, $ar-value in $aspect-ratios {
+  &.ar--#{$ar-name} { padding-top: $ar-value; }
+}
+
+// Aspect Ratios with breakpoint options
+@each $breakpoint in map-keys($breakpoints) {
+  @include mqbp-up($breakpoint) {
+    @each $ar-name, $ar-value in $aspect-ratios {
+      &.ar--#{$ar-name}\@#{$breakpoint} { padding-top: $ar-value; }
+    }
+  }
+}
+
+.ar--object {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}

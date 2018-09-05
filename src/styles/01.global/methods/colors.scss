@@ -1,0 +1,62 @@
+// Global Methods
+// Colors
+
+
+@mixin bg_variant($color, $color_light, $color_dark, $text) {
+  background-color: $color;
+
+  @if ($text == 'light') {
+    color: #fff;
+  } @else {
+    color: $type-color-alpha;
+  }
+
+  &.btn,
+  &.badge {
+    border-color: transparent;
+
+    @include hover_focus_active {
+      border-color: transparent;
+
+      @if ($text == 'dark') {
+        background-color: $color_dark;
+      } @else {
+        background-color: $color_light;
+      }
+    }
+  }
+}
+
+@mixin border_variant($color, $color_light, $color_dark, $text) {
+  border: 1px solid rgba($color, 0.5);
+
+  &.btn,
+  &.badge {
+    color: $color;
+
+    @include hover_focus_active {
+      background-color: $color;
+
+      @if ($text == 'light') {
+        color: #fff;
+      } @else {
+        color: $type-color-alpha;
+      }
+    }
+  }
+}
+
+@mixin text_variant($color) {
+  color: $color;
+}
+
+// Mixin to loop through color palette creating color variants
+@mixin make_colors($component) {
+  @each $label, $color, $color_light, $color_dark, $text in $palette {
+    .#{$component}--#{$label} {
+      @if $component == 'bg' { @include bg_variant($color, $color_light, $color_dark, $text); }
+      @if $component == 'bc' { @include border_variant($color, $color_light, $color_dark, $text); }
+      @if $component == 'tc' { @include text_variant($color); }
+    }
+  }
+}

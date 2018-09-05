@@ -1,0 +1,63 @@
+// Global Variables
+// Colors
+
+
+$white:         #ffffff !default; // Marketing
+$white-alpha:   rgba($white, 0.3) !default;
+$black:         #000000 !default; // Marketing
+$black-alpha:   rgba($black, 0.4) !default;
+$gray:          #979797 !default; // Marketing
+$gray-50:       #f7f7f7 !default;
+$gray-100:      #efefef !default;
+$gray-200:      #d0d0d0 !default;
+$gray-300:      #b5b5b5 !default;
+$gray-400:      #979797 !default;
+$gray-500:      #777777 !default;
+$gray-600:      #666666 !default;
+$gray-700:      #58595b !default;
+$gray-800:      #333333 !default;
+$gray-900:      #1a1a1a !default;
+$red:           #cc0000 !default; // Marketing
+$red-dark:      #930000 !default; // Marketing
+$red-light:     #da3426 !default; // Marketing
+$orange:        #e25734 !default;
+$yellow:        #ffc50b !default;
+$green:         #aebf37 !default;
+$teal:          #2e9aa9 !default;
+$blue:          #2b7be3 !default;
+$blue-dark:     #2e4962 !default;
+$purple:        #824091 !default;
+$beige:         #ece6d5 !default; // Marketing
+
+// --
+// Color palette collection
+
+// ('label', $color, $light, $dark, $text);
+$palette: (
+  ('white', $white, rgba($white, 0.8), $gray-100, 'dark'),
+  ('white-alpha', $white-alpha, rgba($white, 0.2), rgba($white, 0.5), 'light'),
+  ('black', $black, #333333, #000, 'light'),
+  ('black-alpha', $black-alpha, rgba($black, 0.5), rgba($black, 0.5), 'light'),
+  ('gray', $gray, lighten($gray, 10%), darken($gray, 10%), 'light'),
+  ('gray-50', $gray-50, lighten($gray-50, 10%), darken($gray-50, 10%), 'dark'),
+  ('gray-100', $gray-100, lighten($gray-100, 10%), darken($gray-100, 10%), 'dark'),
+  ('gray-200', $gray-200, lighten($gray-200, 10%), darken($gray-200, 10%), 'dark'),
+  ('gray-300', $gray-300, lighten($gray-300, 10%), darken($gray-300, 10%), 'dark'),
+  ('gray-400', $gray-400, lighten($gray-400, 10%), darken($gray-400, 10%), 'dark'),
+  ('gray-500', $gray-500, lighten($gray-500, 10%), darken($gray-500, 10%), 'light'),
+  ('gray-600', $gray-600, lighten($gray-600, 10%), darken($gray-600, 10%), 'light'),
+  ('gray-700', $gray-700, lighten($gray-700, 10%), darken($gray-700, 10%), 'light'),
+  ('gray-800', $gray-800, lighten($gray-800, 10%), darken($gray-800, 10%), 'light'),
+  ('gray-900', $gray-900, lighten($gray-900, 10%), darken($gray-900, 10%), 'light'),
+  ('red', $red, lighten($red, 4%), darken($red, 5%), 'light'),
+  ('red-dark', $red-dark, lighten($red-dark, 4%), darken($red-dark, 5%), 'light'),
+  ('red-light', $red-light, lighten($red-light, 4%), darken($red-light, 5%), 'dark'),
+  ('orange', $orange, lighten($orange, 5%), darken($orange, 5%), 'light'),
+  ('yellow', $yellow, lighten($yellow, 10%), darken($yellow, 5%), 'dark'),
+  ('green', $green, lighten($green, 5%), darken($green, 5%), 'light'),
+  ('teal', $teal, lighten($teal, 5%), darken($teal, 5%), 'light'),
+  ('blue', $blue, lighten($blue, 5%), darken($blue, 5%), 'light'),
+  ('blue-dark', $blue-dark, darken($blue-dark, 5%), darken($blue-dark, 10%), 'light'),
+  ('purple', $purple, lighten($purple, 5%), darken($purple, 5%), 'light'),
+  ('beige', $beige, lighten($beige, 5%), darken($beige, 5%), 'dark')
+) !default;

@@ -8,19 +8,26 @@
 
 function masthead($id, $masthead_classes, $banner_classes)
 {
-    ($masthead_classes == '--overlay') ? $logo = "-white" : $logo = "";
-    $url = "{$_SERVER['REQUEST_URI']}";
+    $url = '';
+
+    if ($_SERVER['HTTP_HOST'] == 'kernl-ui.test') {
+        $url = 'https://'. $_SERVER['HTTP_HOST'];
+    } else {
+        $url = 'https://nuweb28dev.neu.edu/kernl-ui';
+    }
+
+  ($masthead_classes == '--overlay' || $masthead_classes == 'bg--black') ? $logo = "-white" : $logo = "";
 
     echo '
 <header class="masthead ' . $masthead_classes . '">
   <a class="__logo" href="' . $url . '">
-    <img class="__logo__image" alt="Logo" src="/src/images/logo' . $logo . '.png">
+    <img class="__logo__image" alt="Logo" src="'. $url .'/docs/images/logo' . $logo . '.png">
   </a>
-  <button class="__toggler hidden--up@lg" id="toggle_' . $id . '"><i data-feather="menu"></i></button>
+  <button class="__toggler hidden--up@d" id="toggle_' . $id . '"><i data-feather="menu"></i></button>
   <nav class="__drawer" id="drawer_' . $id . '" role="navigation">
-    <div class="hidden--up@lg">
+    <div class="w--100 d--flex justify--between hidden--up@d">
       <a class="__logo" href="' . $url .'">
-        <img class="__logo__image" alt="Logo" src="/src/images/logo-white.png">
+        <img class="__logo__image" alt="Logo" src="'. $url .'/docs/images/logo-white.png">
       </a>
       <button class="__toggler menu-is-open"><i data-feather="x"></i></button>
     </div>
@@ -51,10 +58,17 @@ function masthead($id, $masthead_classes, $banner_classes)
           <li class="__item"><a class="__link" href="' . $url .'">Tortor Fusce</a></li>
         </ul>
       </li>
+      <li class="__item +icon">
+        <a class="__link" href="#" data-toggle="modal" data-target="#modal_search" aria-label="Modal Search">
+          <i data-feather="search"></i>
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
-<div class="section --lg --middle +bgimg ta--c ' . $banner_classes . '">
-  <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
+<div class="section bg--img --hero --center ' . $banner_classes . '">
+  <div class="__header">
+    <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
+  </div>
 </div>';
 }

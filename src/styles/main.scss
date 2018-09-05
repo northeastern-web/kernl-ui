@@ -1,7 +1,24 @@
-@import "01.global/variables";
-@import "01.global/functions";
-@import "01.global/mixins";
+// Styles
+// Main imports
 
+
+// Global Variables
+@import "01.global/variables/colors";
+@import "01.global/variables/icons";
+@import "01.global/variables/layout";
+@import "01.global/variables/misc";
+@import "01.global/variables/sizing";
+@import "01.global/variables/typography";
+
+// Global Methods
+@import "01.global/methods/colors";
+@import "01.global/methods/layout";
+@import "01.global/methods/media-queries";
+@import "01.global/methods/misc";
+@import "01.global/methods/sizing";
+@import "01.global/methods/typography";
+
+// Baseline
 @import "02.baseline/document";
 @import "02.baseline/typography";
 @import "02.baseline/lists";
@@ -9,35 +26,99 @@
 @import "02.baseline/forms";
 @import "02.baseline/media";
 
-@import "03.objects/grid";
-@import "03.objects/sections";
-@import "03.objects/accessibility";
-@import "03.objects/icons";
+// Structure
+@import "03.structure/column";
+@import "03.structure/footer";
+@import "03.structure/form";
+@import "03.structure/section";
 
+// Components
 @import "04.components/_variables";
-@import "04.components/_mixins";
-@import "04.components/accordions";
-@import "04.components/alerts";
-@import "04.components/badges";
-@import "04.components/breadcrumbs";
-@import "04.components/buttons";
-@import "04.components/cards";
-@import "04.components/footer";
-@import "04.components/forms";
-@import "04.components/list-groups";
+@import "04.components/_methods";
+@import "04.components/accordion";
+@import "04.components/badge";
+@import "04.components/breadcrumb";
+@import "04.components/button";
+@import "04.components/card";
+@import "04.components/icon";
+@import "04.components/list-group";
 @import "04.components/loader";
-@import "04.components/mastheads";
+@import "04.components/masthead";
 @import "04.components/media";
-@import "04.components/modals";
-@import "04.components/navs";
-@import "04.components/sharing";
+@import "04.components/modal";
+@import "04.components/nav";
+@import "04.components/share";
 
-@import "05.utilities/borders"; // 1st
-@import "05.utilities/backgrounds"; // 2nd
-@import "05.utilities/clearfix";
-@import "05.utilities/visibility";
-@import "05.utilities/spacing";
-@import "05.utilities/positioning";
-@import "05.utilities/typography";
+// Layout
+@import "05.utilities/layout/displays";
+@import "05.utilities/layout/floats";
+@import "05.utilities/layout/overflow";
+@import "05.utilities/layout/position";
+@import "05.utilities/layout/visibility";
+@import "05.utilities/layout/z-index";
 
+// Typography
+@import "05.utilities/typography/color";
+@import "05.utilities/typography/font-family";
+@import "05.utilities/typography/font-size";
+@import "05.utilities/typography/font-weight";
+@import "05.utilities/typography/letter-spacing";
+@import "05.utilities/typography/line-height";
+@import "05.utilities/typography/lists";
+@import "05.utilities/typography/measure";
+@import "05.utilities/typography/style-decoration";
+@import "05.utilities/typography/text-alignment";
+@import "05.utilities/typography/text-shadow";
+@import "05.utilities/typography/vertical-alignment";
+@import "05.utilities/typography/whitespace-wrapping";
+@import "05.utilities/typography/word-break";
+
+// Backgrounds
+@import "05.utilities/backgrounds/attachment";
+@import "05.utilities/backgrounds/color";
+@import "05.utilities/backgrounds/image";
+@import "05.utilities/backgrounds/overlay";
+@import "05.utilities/backgrounds/position";
+@import "05.utilities/backgrounds/repeat";
+@import "05.utilities/backgrounds/size";
+
+// Borders
+@import "05.utilities/borders/color";
+@import "05.utilities/borders/radius";
+@import "05.utilities/borders/style";
+@import "05.utilities/borders/width";
+
+// Flexbox
+@import "05.utilities/flexbox/alignment";
+@import "05.utilities/flexbox/direction";
+@import "05.utilities/flexbox/grow-shrink";
+@import "05.utilities/flexbox/order";
+@import "05.utilities/flexbox/wrapping";
+
+// Spacing
+@import "05.utilities/spacing/margin";
+@import "05.utilities/spacing/offset";
+@import "05.utilities/spacing/padding";
+
+// Sizing
+@import "05.utilities/sizing/height";
+@import "05.utilities/sizing/width";
+
+// Interactivity
+@import "05.utilities/interactivity/cursor";
+@import "05.utilities/interactivity/pointer";
+@import "05.utilities/interactivity/resize";
+@import "05.utilities/interactivity/user-select";
+
+// Misc
+@import "05.utilities/misc/accessibility";
+@import "05.utilities/misc/appearance";
+@import "05.utilities/misc/aspect-ratios";
+@import "05.utilities/misc/box-shadow";
+@import "05.utilities/misc/clears";
+@import "05.utilities/misc/opacity";
+@import "05.utilities/misc/rotations";
+@import "05.utilities/misc/svg";
+
+// Print overrides
 @import "print";
