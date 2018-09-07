@@ -92,7 +92,7 @@ $('[data-load]').on('click touch', function() {
   $('.spinner').delay(5000).queue(function() {
     $(this).addClass('loaded').dequeue();
     $('.loaded').removeClass('spinner');
-    $('.k_loader-placeholder').addClass('__graphic --16x9').queue(function(){
+    $('.k_loader-placeholder').addClass('__graphic ar--16x9').queue(function(){
       $(this).append(`<img class="__graphic__img" src="${path}truck.jpg" alt="">`);
     });
   });
