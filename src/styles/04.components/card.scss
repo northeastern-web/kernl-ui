@@ -17,7 +17,6 @@
     @extend .flex--col;
     @extend .d--flex;
     color: inherit;
-    height: 100%;
     transition: box-shadow $transition;
 
     &:hover {
@@ -165,6 +164,7 @@
     &:not(.\--middle):not(.\--bottom) {
       .__header + .__body {
         margin-top: 1.5rem;
+        top: 0;
       }
     }
   }
@@ -175,6 +175,7 @@
 
     .__link {
       @extend .flex--middle;
+      height: 100%;
     }
 
     &.\--overlay {
@@ -201,6 +202,7 @@
 
     .__link {
       @extend .justify--end;
+      height: 100%;
     }
 
     &.\--overlay {
@@ -216,6 +218,7 @@
   &.\--overlay,
   &.\--middle,
   &.\--bottom {
+    .__link { height: 100%; }
     .__body { flex: 0; }
   }
 
@@ -287,9 +290,7 @@
         .__graphic,
         .__body { width: 50%; }
 
-        .__graphic {
-          padding-top: (56.25% / 2);
-        }
+        .__graphic { padding-top: (56.25% / 2); }
 
         .__footer {
           position: absolute;
@@ -313,9 +314,7 @@
         .__graphic,
         .__body { width: 100%; }
 
-        .__graphic {
-          padding-top: 56.25%;
-        }
+        .__graphic { padding-top: 56.25%; }
 
         .__footer {
           position: relative;
