@@ -521,6 +521,7 @@
       padding-top: 0;
       padding-left: 0 !important;
       padding-bottom: 0;
+      z-index: $z-max;
 
       .__item {
         border-right: 1px solid rgba($type-color, 0.3);
