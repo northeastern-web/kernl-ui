@@ -16,6 +16,7 @@
   .__link {
     @extend .flex--col;
     @extend .d--flex;
+    width: 100%;
     min-height: 100%;
     color: inherit;
     transition: box-shadow $transition;
@@ -53,10 +54,6 @@
 
   .__graphic {
     position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     overflow: hidden;
     background-color: $gray-400;
@@ -242,6 +239,8 @@
   // --
   // Orientation overrides
   &.\--h {
+    flex-direction: row;
+
     .__link { flex-direction: row; }
 
     .__graphic,
@@ -314,7 +313,10 @@
 
   @each $breakpoint in map-keys($breakpoints) {
     &.\--h\@#{$breakpoint} {
+
       @include mqbp-up($breakpoint) {
+        flex-direction: row;
+
         .__link { flex-direction: row; }
 
         .__graphic,
@@ -342,7 +344,10 @@
 
     // horizontal shared with vertical override
     &.\--v\@#{$breakpoint} {
+
       @include mqbp-up($breakpoint) {
+        flex-direction: column;
+
         .__link { flex-direction: column; }
 
         .__graphic,
