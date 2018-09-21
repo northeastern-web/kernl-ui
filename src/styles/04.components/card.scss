@@ -148,6 +148,7 @@
 
   // Overlay's block level items to card
   &.\--overlay {
+    background-color: $gray-400;
     color: #fff;
     height: $tile_overlay_height;
 
@@ -469,10 +470,6 @@
       }
     }
   }
-
-  .\--sm { height: $card-height-sm; }
-  .\--md { height: $card-height-md; }
-  .\--lg { height: $card-height-lg; }
 }
 
 /* Polyfill for Edge */
