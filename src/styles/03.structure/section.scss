@@ -95,7 +95,7 @@
 
   // centers .__header container and text
   &.\--center {
-    .__header {
+    > .__header {
       @extend .mx--auto;
       text-align: center;
     }
