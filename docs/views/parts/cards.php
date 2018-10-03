@@ -13,7 +13,10 @@
     </div>
     <div class="col w--1/3@t">
       <article class="card">
-        <div class="__body">
+        <div class="__header pa--1">
+          <div class="__column">Card Header</div>
+        </div>
+        <div class="__body mt--1">
           <h2 class="__title">Short Title, No Wrapping Link</h2>
           <p>This example has an excerpt of only 50 characters.</p>
         </div>

@@ -81,6 +81,7 @@
   .__header {
     @extend .pos--absolute;
     @extend .pin--t;
+    width: 100%;
   }
 
   .__footer {
