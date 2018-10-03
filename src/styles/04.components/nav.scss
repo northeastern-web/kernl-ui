@@ -276,7 +276,11 @@
     justify-content: center;
   }
 
-  .__item { border-bottom: 0 none; }
+  .__item {
+    border-bottom: 0 none;
+    margin-right: 1px;
+    margin-left: 1px;
+  }
 
   .__link {
     display: block;
@@ -299,6 +303,19 @@
       background: $type-color;
       color: #fff;
       cursor: default;
+    }
+
+    .feather {
+      margin-top: 1px;
+      stroke-width: 1;
+
+      @include mqbp-up(t) {
+        margin-top: 2px;
+      }
+
+      @include mqbp-up(w) {
+        margin-top: 3px;
+      }
     }
   }
 }

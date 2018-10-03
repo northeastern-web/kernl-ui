@@ -312,7 +312,7 @@
     <ul class="__list">
       <li class="__item">
         <a class="__link" href="#" aria-label="Previous">
-          <i aria-hidden="true" class="icon--arrow-left"></i>
+          <i data-feather="chevron-left"></i>
           <span class="sr--only">Previous</span>
         </a>
       </li>
@@ -323,7 +323,7 @@
       <li class="__item"><a class="__link" href="#">5</a></li>
       <li class="__item">
         <a class="__link" href="#" aria-label="Next">
-          <i aria-hidden="true" class="icon--arrow-right"></i>
+          <i data-feather="chevron-right"></i>
           <span class="sr--only">Next</span>
         </a>
       </li>
