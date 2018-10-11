@@ -648,12 +648,10 @@
   @include mqbp-up(d) { display: none; }
 }
 
-.\--overlay {
-  + .\--hero,
-  + .\--banner,
-  + main > .\--hero,
-  + main > .\--banner {
-    .__header {
+.\--overlay + main {
+  > .\--hero,
+  > .\--banner {
+    > .__header {
       margin-top: 3rem;
 
       @include mqbp-up(d) {
