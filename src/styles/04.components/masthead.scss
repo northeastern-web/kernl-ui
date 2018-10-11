@@ -139,7 +139,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    border-bottom: 1px solid rgba(177, 177, 177, 0.2);
+    border-bottom: 1px solid rgba(177, 177, 177, 0.3);
   }
 
   .__item.\--active > a,
@@ -648,12 +648,17 @@
   @include mqbp-up(d) { display: none; }
 }
 
-.\--overlay + .\--hero {
-  .__header {
-    margin-top: 2rem;
-
-    @include mqbp-up(d) {
+.\--overlay {
+  + .\--hero,
+  + .\--banner,
+  + main > .\--hero,
+  + main > .\--banner {
+    .__header {
       margin-top: 3rem;
+
+      @include mqbp-up(d) {
+        margin-top: 4rem;
+      }
     }
   }
 }
