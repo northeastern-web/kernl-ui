@@ -650,14 +650,13 @@
 
 .\--overlay + main {
   > .\--hero,
-  > .\--banner,
-  .article > .\--hero,
-  .article > .\--banner {
+  > .\--banner {
     > .__header {
-    margin-top: 3rem;
+      margin-top: 3rem;
 
-    @include mqbp-up(d) {
-      margin-top: 4rem;
+      @include mqbp-up(d) {
+        margin-top: 4rem;
+      }
     }
   }
 }
