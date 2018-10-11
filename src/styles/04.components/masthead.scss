@@ -650,7 +650,8 @@
 
 .\--overlay + main {
   > .\--hero,
-  > .\--banner {
+  > .\--banner,
+  > .article > .\--banner {
     > .__header {
       margin-top: 3rem;
 
