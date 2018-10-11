@@ -266,6 +266,19 @@ html { background-color: #333; }
   }
 }
 
+// docs structure syntax is different than real-world kernl(wp) html
+.\--overlay {
+  + .\--hero,
+  + .\--banner {
+    > .__header {
+      margin-top: 3rem;
+
+      @include mqbp-up(d) {
+        margin-top: 4rem;
+      }
+    }
+  }
+}
 
 
 // badge presentation
