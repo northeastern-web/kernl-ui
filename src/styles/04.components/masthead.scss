@@ -648,17 +648,16 @@
   @include mqbp-up(d) { display: none; }
 }
 
-.\--overlay {
-  + .\--hero,
-  + .\--banner,
-  + main > .\--hero,
-  + main > .\--banner {
-    .__header {
-      margin-top: 3rem;
+.\--overlay + main {
+  > .\--hero,
+  > .\--banner,
+  .article > .\--hero,
+  .article > .\--banner {
+    > .__header {
+    margin-top: 3rem;
 
-      @include mqbp-up(d) {
-        margin-top: 4rem;
-      }
+    @include mqbp-up(d) {
+      margin-top: 4rem;
     }
   }
 }
