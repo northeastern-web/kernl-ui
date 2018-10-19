@@ -77,7 +77,8 @@
 
     .__pretitle { margin-bottom: 0.25rem; }
     .__subtitle { @include type-lead(); }
-    .__title + .__subtitle { padding-top: 0.125rem; }
+    .__title + .__subtitle { padding-top: 1.125rem; }
+    .__pretitle + .__title + .__subtitle { padding-top: 0.125rem; }
   }
 
   // adds max-width via .section to nested .__header
