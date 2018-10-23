@@ -127,4 +127,14 @@
       }
     }
   }
+
+  .__meta {
+    @extend .d--block;
+
+    @extend .fs--xs;
+
+    @extend .tc--gray;
+
+    margin-top: 2px;
+  }
 }

@@ -42,10 +42,12 @@ function listgroup($classes, $option = false)
             <a class="__item" href="/article/course-class-offerings/">
                 <h6 class="mb--0">Course and Class Offerings</h6>
                 <div class="__excerpt tc--gray-600 fs--xs pr--1@xs"> Distinction between course and class offerings.</div>
+                <div class="__meta">Some Meta Information</div>
             </a>
             <a class="__item" href="/article/no-charge-music-ensemble-courses/">
                 <h6 class="mb--0">No-Charge Music Ensemble Courses</h6>
                 <div class="__excerpt tc--gray-600 fs--xs pr--1@xs"> Music ensemble courses available for undergraduate students to take without added charge.</div>
+                <div class="__meta">So Meta</div>
             </a>
             <a class="__item" href="/article/college-of-professional-studies-undergraduate-semester-conversion/">
                 <h6 class="mb--0">College of Professional Studies—Undergraduate Semester Conversion</h6>
