@@ -11,7 +11,7 @@
 
     @include mqbp-up(t) {
       visibility: visible;
-      background: transparent;
+      background-color: transparent;
       height: auto;
     }
   }
@@ -183,13 +183,16 @@
     white-space: nowrap;
     color: $gray;
 
-    &:hover { background: $gray-100; }
+    &:hover { background-color: $gray-100; }
 
     &.\--active,
     &.\--active:hover {
       color: inherit;
-      background: none;
       cursor: default;
+    }
+
+    &.\--active:hover {
+      background-color: inherit;
     }
   }
 
@@ -296,11 +299,11 @@
     border: 0 none;
     font-weight: initial;
 
-    &:hover { background: rgba(0, 0, 0, 0.1); }
+    &:hover { background-color: rgba(0, 0, 0, 0.1); }
 
     &.\--active,
     &.\--active:hover {
-      background: $type-color;
+      background-color: $type-color;
       color: #fff;
       cursor: default;
     }

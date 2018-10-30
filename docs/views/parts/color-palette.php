@@ -3,12 +3,14 @@
 $colors = [
   ['black','Black'],
   ['red','Red'],
+  ['gold','Gold'],
   ['orange','Orange'],
   ['yellow','Yellow'],
   ['green','Green'],
   ['teal','Teal'],
-  ['blue-dark','Dark Blue'],
+  ['blue-light','Light Blue'],
   ['blue','Blue'],
+  ['blue-dark','Dark Blue'],
   ['purple','Purple'],
   ['beige','Beige'],
   ['white','White']
@@ -21,6 +23,110 @@ $j = 0;
 $k = 0;
 $l = 0;
 ?>
+
+
+<section class="section">
+  <header class="k_section__header">Color Palette</header>
+
+  <h3 class="fs--sm tt--caps fw--300">Primary Palette</h3>
+  <p class="fs--sm">Black, white, red, and gold are our primary colors.</p>
+  <div class="row color-cell">
+    <div class="col w--1/4@t">
+      <div class="bg--black">Black<br><span class="hex-color">#000000</span></div>
+    </div>
+    <div class="col w--1/4@t">
+      <div class="bg--white bc--gray-200">White<br><span class="hex-color">#ffffff</span></div>
+    </div>
+    <div class="col w--1/4@t">
+      <div class="bg--red">Red<br><span class="hex-color">#d41b2c</span></div>
+    </div>
+    <div class="col w--1/4@t">
+      <div class="bg--gold">Gold<br><span class="hex-color">#a4804a</span></div>
+    </div>
+  </div>
+
+  <h3 class="fs--root tt--caps fw--300">Secondary Palette</h3>
+  <p class="fs--sm">Secondary colors range from neutral to vibrant. Use them to create different moods.</p>
+  <div class="row color-cell">
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--beige">Beige<br><span class="hex-color">#e5d4ab</span></div>
+    </div>
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--gray-cool">Cool Gray<br><span class="hex-color">#99a3b0</span></div>
+    </div>
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--gray-warm-light">Light Warm Gray<br><span class="hex-color">#cfc7bf</span></div>
+    </div>
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--gray-warm">Warm Gray<br><span class="hex-color">#a19994</span></div>
+    </div>
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--blue-dark">Dark Blue<br><span class="hex-color">#385775</span></div>
+    </div>
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--blue">Blue<br><span class="hex-color">#006eb5</span></div>
+    </div>
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--blue-light">Light Blue<br><span class="hex-color">#52cfe5</span></div>
+    </div>
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--teal">Teal<br><span class="hex-color">#00cfb5</span></div>
+    </div>
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--green">Green<br><span class="hex-color">#badb00</span></div>
+    </div>
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--yellow">Yellow<br><span class="hex-color">#ffbf3d</span></div>
+    </div>
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--orange">Orange<br><span class="hex-color">#ff854f</span></div>
+    </div>
+    <div class="col w--1/3@t w--1/6@w">
+      <div class="bg--purple">Purple<br><span class="hex-color">#824091</span></div>
+    </div>
+  </div>
+
+  <h3 class="fs--root tt--caps fw--300">Neutral Grays</h3>
+  <div class="row color-cell">
+    <div class="col w--20@t w--10@w col--stretch">
+      <div class="bg--gray-50">Gray 50<br><span class="hex-color">#f7f7f7</span></div>
+    </div>
+    <div class="col w--20@t w--10@w col--stretch">
+      <div class="bg--gray-100">Gray 100<br><span class="hex-color">#efefef</span></div>
+    </div>
+    <div class="col w--20@t w--10@w col--stretch">
+      <div class="bg--gray-200">Gray 200<br><span class="hex-color">#d0d0d0</span></div>
+    </div>
+    <div class="col w--20@t w--10@w col--stretch">
+      <div class="bg--gray-300">Gray 300<br><span class="hex-color">#b5b5b5</span></div>
+    </div>
+    <div class="col w--20@t w--10@w col--stretch">
+      <div class="bg--gray-400">Gray, Gray 400<br><span class="hex-color">#979797</span></div>
+    </div>
+    <div class="col w--20@t w--10@w col--stretch">
+      <div class="bg--gray-500">Gray 500<br><span class="hex-color">#777777</span></div>
+    </div>
+    <div class="col w--20@t w--10@w col--stretch">
+      <div class="bg--gray-600">Gray 600<br><span class="hex-color">#666666</span></div>
+    </div>
+    <div class="col w--20@t w--10@w col--stretch">
+      <div class="bg--gray-700">Gray 700<br><span class="hex-color">#5c5c5c</span></div>
+    </div>
+    <div class="col w--20@t w--10@w col--stretch">
+      <div class="bg--gray-800">Gray 800<br><span class="hex-color">#333333</span></div>
+    </div>
+    <div class="col w--20@t w--10@w col--stretch">
+      <div class="bg--gray-900">Gray 900<br><span class="hex-color">#1a1a1a</span></div>
+    </div>
+  </div>
+
+  <!-- <div class="row">
+    <div class="col --12@xs">
+      <small>* Created by PODS to augment the 2017 NU brand colors.</small><br>
+      <small>** Very slightly modified by PODS from the 2017 NU brand colors.</small>
+    </div>
+  </div> -->
+</section>
 
 <section class="section mb--2 mb--3@t">
   <header class="k_section__header">Palette Generator/Color Combination Tool</header>
@@ -63,96 +169,4 @@ $l = 0;
       </div>
     </div>
   </div>
-</section>
-
-<section class="section">
-  <header class="k_section__header">Color Palette</header>
-  <!-- Black and Red -->
-  <div class="row color-cell">
-    <div class="col w--1/2@t">
-      <div class="bg--black"><span class="hex-color">#000000</span> Black</div>
-    </div>
-    <div class="col w--1/2@t">
-      <div class="bg--red"><span class="hex-color">#cc0000</span> Red</div>
-    </div>
-  </div>
-  <!-- Blue, Teal, Green -->
-  <div class="row color-cell">
-    <div class="col w--1/3@t">
-      <div class="bg--blue-dark"><span class="hex-color">#2e4962</span> Dark Blue</div>
-    </div>
-    <div class="col w--1/3@t">
-      <div class="bg--teal"><span class="hex-color">#2e9aa9</span> Teal <span class="fw--n">*</span></div>
-    </div>
-    <div class="col w--1/3@t">
-      <div class="bg--green"><span class="hex-color">#aebf37</span> Green</div>
-    </div>
-  </div>
-  <!-- Purple, Orange, Yellow  -->
-  <div class="row color-cell">
-    <div class="col w--1/3@t">
-      <div class="bg--purple"><span class="hex-color">#824091</span> Purple</div>
-    </div>
-    <div class="col w--1/3@t">
-      <div class="bg--orange"><span class="hex-color">#e25734</span> Orange</div>
-    </div>
-    <div class="col w--1/3@t">
-      <div class="bg--yellow"><span class="hex-color">#ffc50b</span> Yellow</div>
-    </div>
-  </div>
-  <!-- Grays -->
-  <div class="row color-cell">
-    <div class="col w--1/2@t">
-      <div class="bg--gray"><span class="hex-color">#979797</span> Gray <span class="fw--n">*</span></div>
-    </div>
-    <div class="col w--1/2@t">
-      <div class="bg--beige"><span class="hex-color">#ece6d5</span> Beige</div>
-    </div>
-  </div>
-  <!-- Neutral Grays -->
-  <div class="row --nogutters color-cell">
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--black"><span class="hex-color">#000000</span><br>Black</div>
-    </div>
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-900"><span class="hex-color">#1a1a1a</span><br>Gray 900</div>
-    </div>
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-800"><span class="hex-color">#333333</span><br>Gray 800</div>
-    </div>
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-700"><span class="hex-color">#58595b</span><br>Gray 700</div>
-    </div>
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-600"><span class="hex-color">#666666</span><br>Gray 600</div>
-    </div>
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-500"><span class="hex-color">#777777</span><br>Gray 500</div>
-    </div>
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-400"><span class="hex-color">#979797</span><br>Gray 400</div>
-    </div>
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-300"><span class="hex-color">#b5b5b5</span><br>Gray 300</div>
-    </div>
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-200"><span class="hex-color">#d0d0d0</span><br>Gray 200</div>
-    </div>
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-100"><span class="hex-color">#efefef</span><br>Gray 100</div>
-    </div>
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--gray-50"><span class="hex-color">#f7f7f7</span><br>Gray 50</div>
-    </div>
-    <div class="col w--1/3 w--10@d">
-      <div class="bg--white"><span class="hex-color">#ffffff</span><br>White</div>
-    </div>
-  </div>
-
-  <!-- <div class="row">
-    <div class="col --12@xs">
-      <small>* Created by PODS to augment the 2017 NU brand colors.</small><br>
-      <small>** Very slightly modified by PODS from the 2017 NU brand colors.</small>
-    </div>
-  </div> -->
 </section>

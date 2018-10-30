@@ -68,9 +68,10 @@ legend {
 
 label {
   display: inline-block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.25rem;
   padding-top: 0.5rem;
   color: $gray-500;
+  font-size: $fs-sm;
   line-height: 1.2;
 
   &:hover { cursor: pointer; }
@@ -175,6 +176,11 @@ select {
   &:disabled {
     cursor: not-allowed;
   }
+
+  &:focus {
+    outline-color: $gray;
+    outline-width: 3px;
+  }
 }
 
 select {
@@ -203,4 +209,114 @@ input[type="range"] {
   border: 0 none;
   @include type-sm();
   margin: 3px 0;
+}
+
+// DELETE ME =>
+.wufoo {
+  .info {
+    h2 + div { padding-bottom: 2rem; }
+  }
+
+  > ul {
+    @extend .ls--none;
+  }
+
+  input {
+    margin-bottom: 1rem;
+
+    &.text { @extend input[type="text"]; }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="file"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="range"],
+  textarea,
+  select {
+    display: inline-block;
+    width: auto;
+    max-width: 80%;
+  }
+
+  .medium,
+  .full {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    input[type="file"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="range"],
+    textarea,
+    select {
+      width: 100%;
+    }
+  }
+
+  li.section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .focused {
+    background-color: $gray-50;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .col { padding: 0; }
+
+  .radio,
+  .checkbox {
+    margin-top: 0.35rem;
+
+    + .choice {
+      padding-top: 0;
+      margin-right: 2rem;
+    }
+  }
+
+  .desc {
+    display: block;
+
+    ~ span,
+    ~ div span {
+      display: inline-block;
+
+      > .field {
+        display: block;
+        margin-bottom: 0;
+
+        + label {
+          padding-top: 0.125rem;
+          font-size: $fs-xs;
+        }
+      }
+    }
+  }
+
+  .file { margin-bottom: 1rem !important; }
+
+  .submit {
+    @extend .btn;
+  }
 }
