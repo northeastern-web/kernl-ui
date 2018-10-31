@@ -479,7 +479,7 @@
       @include mqbp-up(d) {
         margin-top: 3rem;
 
-        .__link {
+        > .__item > .__link {
           padding-top: 0.25rem;
           padding-bottom: 1rem;
 
@@ -492,13 +492,13 @@
       @include mqbp-up(w) {
         margin-top: 3.125rem;
 
-        .__link { padding-bottom: 1.35rem; }
+        > .__item > .__link { padding-bottom: 1.35rem; }
       }
     }
 
     .\+children .__submenu {
       @include mqbp-up(d) { top: 2.5rem; }
-      @include mqbp-up(w) { top: 2.5rem; }
+      @include mqbp-up(w) { top: 2.825rem; }
     }
 
     &.\--megamenu {
@@ -604,13 +604,25 @@
         color: rgba(255, 255, 255, 0.8) !important;
 
         &:hover {
-          color: rgba(255, 255, 255, 1);
+          color: rgba(255, 255, 255, 1) !important;
           background-color: transparent !important;
         }
       }
 
       .__submenu {
-        .__link { color: $black !important; }
+        background-color: $black;
+        border-color: $black;
+
+        .__link {
+          color: $gray-100 !important;
+
+          &:hover {
+            color: $white !important;
+            background-color: $gray-800 !important;
+          }
+        }
+
+        &::after { background: $black; }
       }
     }
   }
