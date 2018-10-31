@@ -55,7 +55,7 @@
           <div class="__graphic ar--16x9"></div>
           <header class="__header">
             <div class="__column">
-              <div class="badge bg--white-alpha">Badge</div>
+              <div class="badge">Badge</div>
             </div>
           </header>
           <div class="__body">
@@ -231,7 +231,7 @@
           <div class="__graphic"></div>
           <header class="__header">
             <div class="__column">
-              <div class="badge bg--white-alpha">Badge</div>
+              <div class="badge">Badge</div>
             </div>
           </header>
           <div class="__body">
@@ -246,7 +246,7 @@
         <div class="__graphic"></div>
         <header class="__header">
           <div class="__column">
-            <div class="badge bg--white-alpha">Badge</div>
+            <div class="badge">Badge</div>
           </div>
         </header>
         <div class="__body">

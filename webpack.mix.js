@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix.js('docs/main.js', 'dist/scripts')
   .sass('docs/main.scss', 'dist/styles')
+  .sass('docs/wufoo.scss', 'dist/styles')
   .copy('src/fonts/*', 'dist/fonts')
   .options({ processCssUrls: false });
 

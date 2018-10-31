@@ -68,9 +68,10 @@ legend {
 
 label {
   display: inline-block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.25rem;
   padding-top: 0.5rem;
   color: $gray-500;
+  font-size: $fs-sm;
   line-height: 1.2;
 
   &:hover { cursor: pointer; }
@@ -174,6 +175,11 @@ select {
 
   &:disabled {
     cursor: not-allowed;
+  }
+
+  &:focus {
+    outline-color: $gray;
+    outline-width: 3px;
   }
 }
 
