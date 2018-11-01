@@ -12,6 +12,8 @@ $box-shadow-hover: 0 0 6px rgba($black, 0.3) !default;
 $box-shadow-inset: inset 0 0 1px rgba($black, 0.5), 0 0 0 rgba($black, 0) !default;
 $box-shadow-inset-hover: inset 0 0 1px rgba($black, 0.4), 0 3px 20px rgba($black, 0.1) !default;
 
+// Pseudo element border divider
+$afterline-width: 100px;
 
 // Clearfix
 %clearfix {
