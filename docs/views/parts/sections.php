@@ -24,7 +24,7 @@
   </div>
 </section>
 
-<section class="section --banner vh--100 bg--img">
+<section class="section --banner vh--100 bg--img --bal">
   <div class="__header">
     <div class="__pretitle"><a href="#">Header Pre Title</a></div>
     <h1 class="__title">Header: 100vh, Default (Middle) Position</h1>

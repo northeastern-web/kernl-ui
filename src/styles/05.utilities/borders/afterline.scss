@@ -1,0 +1,28 @@
+// Borders Utility
+// After-Line
+//
+// .bal
+
+
+.bal {
+  position: relative;
+  margin-bottom: 1.875rem !important;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: $afterline-width;
+    bottom: -1rem;
+    left: 0;
+    border-bottom: 2px solid $red;
+  }
+}
+
+.\--center {
+  .bal {
+    &::after {
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+}

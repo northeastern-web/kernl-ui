@@ -94,11 +94,25 @@
     .__header { @extend .measure--wide; }
   }
 
+  // adds max-width via .section to nested .__header
+  &.\--bal {
+    .__title { @extend .bal !optional; }
+  }
+
   // centers .__header container and text
   &.\--center {
     > .__header {
       @extend .mx--auto;
       text-align: center;
+    }
+
+    &.\--bal {
+      .__title {
+        &::after {
+          right: 0;
+          margin: 0 auto;
+        }
+      }
     }
   }
 }
