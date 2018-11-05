@@ -3,7 +3,7 @@
 
 
 @mixin bg_variant($color, $color_light, $color_dark, $text) {
-  background-color: $color !important;
+  background-color: $color;
 
   @if ($text == 'light') {
     color: #fff;
