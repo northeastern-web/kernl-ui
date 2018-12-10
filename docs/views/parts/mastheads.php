@@ -47,9 +47,9 @@
   <header class="k_section__header">Masthead, Megamenu</header>
 </section>
 
-<header class="masthead --megamenu +chevron +utility">
+<header class="masthead --megamenu +chevron +utility bg--black">
   <a class="__logo" href="<?= $url; ?>">
-    <img class="__logo__image" alt="Logo" src="<?= $url; ?>/docs/images/logo.png">
+    <img class="__logo__image" alt="Logo" src="<?= $url; ?>/docs/images/logo-white.png">
   </a>
   <button class="__toggler hidden--up@d id="toggle_5"><i data-feather="menu"></i></button>
   <nav class="__drawer" id="drawer_5" role="navigation">
