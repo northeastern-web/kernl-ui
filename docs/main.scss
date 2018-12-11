@@ -72,6 +72,14 @@ html { background-color: #333; }
   }
 }
 
+.part--carousel {
+  .k_wrap {
+    @include mqbp-up(d) {
+      flex-direction: column !important;
+    }
+  }
+}
+
 .k_nav {
   flex: 0 0 auto;
   order: -1;
