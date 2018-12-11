@@ -226,7 +226,8 @@
         }
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         .__submenu {
           display: block;
         }
