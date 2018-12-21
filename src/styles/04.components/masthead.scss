@@ -57,10 +57,6 @@
       color: #999;
     }
 
-    @include mqbp-up(t) {
-      // margin-top: 1.35rem;
-    }
-
     @include mqbp-up(d) {
       display: none;
       width: 0;
@@ -336,7 +332,6 @@
           &:focus:not(:hover) {
             background-color: transparent !important;
             color: $type-color !important;
-            outline: none;
           }
         }
 
@@ -431,7 +426,8 @@
           }
         }
 
-        &:hover {
+        &:hover,
+        &:focus-within {
           > a,
           > .__link {
             border-bottom-color: rgba($type-color, 0.25);
@@ -476,20 +472,33 @@
     }
 
     &.bg--black {
-      .\+children .__submenu {
-        background-color: $black;
-
-        &::before {
-          border-top-color: $gray-600;
+      .\+children {
+        > .__link {
+          &:focus { color: $white !important; }
         }
 
-        .__link.\--heading {
-          border-bottom: 1px solid rgba($white, 0.1);
+        .__submenu {
+          background-color: $black;
 
-          &:hover {
-            background-color: transparent !important;
-            color: $red !important;
-            border-bottom: 1px solid rgba($white, 0.5);
+          &::before {
+            border-top-color: $gray-600;
+          }
+
+          .__link {
+            &:hover,
+            &:focus {
+              background-color: transparent !important;
+              color: $red !important;
+            }
+
+            &.\--heading {
+              border-bottom: 1px solid rgba($white, 0.1);
+
+              &:hover,
+              &:focus {
+                border-bottom: 1px solid rgba($white, 0.5);
+              }
+            }
           }
         }
       }
@@ -504,8 +513,6 @@
         > .__item > .__link {
           padding-top: 0.25rem;
           padding-bottom: 1rem;
-
-          &:focus { outline: none; }
 
           &:after { top: 0.45rem; }
         }
