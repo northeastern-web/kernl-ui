@@ -426,8 +426,7 @@
           }
         }
 
-        &:hover,
-        &:focus-within {
+        &:hover {
           > a,
           > .__link {
             border-bottom-color: rgba($type-color, 0.25);
@@ -720,5 +719,37 @@
     }
 
     .\--utility { right: 4rem; }
+  }
+}
+
+// restated for focus-within seperately from hover,
+// as IE and Edge will completely ignore the
+// definitions if grouped together :\
+@include mqbp-up(d) {
+  .masthead.\--megamenu .\+children {
+    &:focus-within {
+      > a,
+      > .__link {
+        border-bottom-color: rgba($type-color, 0.25);
+
+        &:after { color: $gray-400; }
+      }
+
+      .__submenu {
+        max-height: 20rem;
+        z-index: 300;
+        box-shadow: 0px 2px 1px 0 rgba($black, 0.1);
+        transition: max-height 0.4s ease 0.1s,
+                    box-shadow $transition
+                    color $transition 0.3s;
+
+        &:before { width: 100%; }
+
+        > .\--feature {
+          background: rgba($gray-400, .15);
+          transition: background 0.3s ease 0.1s;
+        }
+      }
+    }
   }
 }
