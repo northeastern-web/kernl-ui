@@ -390,6 +390,12 @@
       <small class="text-style-block">Display Size 5:</small>
       <p class="fs--d5">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 4.5rem/1.05)</span></p>
       <hr>
+      <small class="text-style-block">Display Size 6:</small>
+      <p class="fs--d6">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 4.5rem/1.05)</span></p>
+      <hr>
+      <small class="text-style-block">Display Size 7:</small>
+      <p class="fs--d7">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 4.5rem/1.05)</span></p>
+      <hr>
   </div>
 </section>
 
