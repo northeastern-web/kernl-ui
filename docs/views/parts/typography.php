@@ -155,9 +155,11 @@
 </header>
 
 <header class="section ta--c pt--3 bg--gray-800">
-  <div class="__pretitle mb--0h"><i>Now for something completely different:</i></div>
-  <h2 class="__title fs--d4 mb--0h fw--300">A Sample of Real-World Text</h2>
-  <div class="__subtitle fs--lead">The text below comes from Northeastern's Faculty Handbook website</div>
+  <div class="__header">
+    <div class="__pretitle mb--0h"><i>Now for something completely different:</i></div>
+    <h2 class="__title fs--d4 mb--0h fw--300">A Sample of Real-World Text</h2>
+    <div class="__subtitle fs--lead">The text below comes from Northeastern's Faculty Handbook website</div>
+  </div>
 </header>
 <section class="section bg--gray-800">
   <div class="row">
@@ -228,12 +230,15 @@
           <li>During the proceedings the faculty member is entitled to counsel and an academic advisor of his/her choice. The administration’s case may be offered by an administrator designated by the President and/or by designated counsel<sup>[5]</sup>.</li>
         </ol>
         <h3>Hearing Proceedings</h3>
+        <h4>Guilty as chargerd, Sir</h4>
         <ol>
           <li>Initial Hearing Session: The initial session of the hearing will take place on the date established by the Agenda Committee in the notice of hearing. A postponement may be granted only at the will of the Hearing Committee. This session will bring together the parties, the Hearing Committee and the master, to place in the record the statement of charges and to deal with preliminary procedural matters. &nbsp;The session will be convened by the Chair of the Hearing Committee. After having been introduced to the parties, the master will then preside. &nbsp;Upon adjournment of the initial session, the formal hearing before the Committee will normally resume only after the master has completed the findings of fact.</li>
           <li>Fact Finding: To facilitate the progress of the formal hearing, the Hearing Committee will designate the master to be its agent in determining the facts of the case. The master will hold evidentiary sessions in which the administration and the faculty member will present the evidence in the case, including testimony and cross-examination of witnesses. A verbatim transcript will be taken.</li>
           <li>Hearing Committee members will not be required to attend these sessions.When the presentation of evidence is concluded, the master will make the findings of fact. These findings shall be presented to the Hearing Committee, in writing. The University and the faculty member may present specific written exceptions to the findings of fact if they believe that a finding is not reasonably based on evidence in the record. &nbsp;The transcript of the presentation of evidence will be made available to the Hearing Committee.</li>
         </ol>
-        <h3>Procedures</h3>
+        <h4>Procedures</h4>
+        <h5>Step 1</h5>
+        <h6>Part A</h6>
         <ol>
           <li>The Hearing Committee and the master will not be bound by strict legal rules of evidence, and may admit any evidence which has a tendency to prove any fact of consequence to a determination of the issues to be decided relative to the rules, regulations, policies, and/or norms of professional conduct alleged to have been violated.<br>
           Unless special circumstances warrant, it should not be necessary to follow formal rules of court procedure. The Hearing Committee, in consultation with the master, will make rulings with regard to granting adjournment or termination of the hearing.</li>
@@ -243,7 +248,7 @@
           <li>In the hearing on the bill of particulars, the testimony may include that of experts including qualified faculty members from this or other colleges or universities.</li>
           <li>A verbatim transcript of the fact-finding sessions and of the hearing will be taken. Once the transcript has been received from the stenographer, a copy will be made available to the faculty member at his/her request.</li>
         </ol>
-        <h3>Formal Hearing</h3>
+        <h4>Formal Hearing</h4>
         <ol>
           <li>When the formal hearing resumes, the Hearing Committee will receive the master’s findings and any exceptions thereto, and will hear oral argument by both sides.</li>
           <li>If circumstances warrant, the Hearing Committee may request documentary evidence or the appearance of witnesses other than those presented by the faculty member or the administration. The Hearing Committee or the master (at its request) may reexamine witnesses heard during the fact- finding.</li>
@@ -390,15 +395,26 @@
       <small class="text-style-block">Display Size 5:</small>
       <p class="fs--d5">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 4.5rem/1.05)</span></p>
       <hr>
+      <small class="text-style-block">Display Size 6:</small>
+      <p class="fs--d6">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 4.5rem/1.05)</span></p>
+      <hr>
+      <small class="text-style-block">Display Size 7:</small>
+      <p class="fs--d7">Donec sed odio dui. Nullam quis risus eget urna mollis<sup>1</sup> ornare vel eu leo. <span class="show-font-size">(<span class="element-font-size"></span> @ 4.5rem/1.05)</span></p>
+      <hr>
   </div>
 </section>
 
 <section class="section">
-  <header class="section py--1">
-    <div class="__pretitle">Section Header: Default</div>
-    <h2 class="__title">Here's a Default Section Title</h2>
-    <div class="__subtitle">Subtitlio Defaultus Ridiculum Inceptos Bibendum Amet Mollis Dapibus</div>
+  <header class="section">
+    <div class="__header">
+      <h2 class="__title">Here's a Default Section Title</h2>
+      <div class="__subtitle">Subtitlio Defaultus Ridiculum Inceptos Bibendum Amet Mollis Dapibus</div>
+    </div>
   </header>
+  <h2>Maecenas faucibus</h2>
+  <p>And some text to follow maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
+  <h2>Maecenas faucibus</h2>
+  <p>And some text to follow maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
   <p>And some text to follow maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
 </section>
 
