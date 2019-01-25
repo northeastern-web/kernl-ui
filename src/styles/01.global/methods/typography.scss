@@ -88,6 +88,37 @@
   sup { top: -2.25rem; }
 }
 
+@mixin type-d6($colorContrast: false, $important: false) {
+  @if ($important) {
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
+
+  line-height: 1.1;
+  font-size: $fs-d6#{$important};
+
+  @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -1.5rem; }
+}
+
+@mixin type-d7($colorContrast: false, $important: false) {
+  @if ($important) {
+    $important: ' !important';
+  } @else {
+    $important: '';
+  }
+
+  line-height: 1.05;
+  font-size: $fs-d7#{$important};
+  letter-spacing: -0.05rem;
+
+  @if $colorContrast { opacity: 0.75; }
+
+  sup { top: -2.25rem; }
+}
+
 @mixin type-lead($colorContrast: false, $important: false) {
   @if ($important) {
     $important: ' !important';
