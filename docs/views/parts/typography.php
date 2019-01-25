@@ -155,9 +155,11 @@
 </header>
 
 <header class="section ta--c pt--3 bg--gray-800">
-  <div class="__pretitle mb--0h"><i>Now for something completely different:</i></div>
-  <h2 class="__title fs--d4 mb--0h fw--300">A Sample of Real-World Text</h2>
-  <div class="__subtitle fs--lead">The text below comes from Northeastern's Faculty Handbook website</div>
+  <div class="__header">
+    <div class="__pretitle mb--0h"><i>Now for something completely different:</i></div>
+    <h2 class="__title fs--d4 mb--0h fw--300">A Sample of Real-World Text</h2>
+    <div class="__subtitle fs--lead">The text below comes from Northeastern's Faculty Handbook website</div>
+  </div>
 </header>
 <section class="section bg--gray-800">
   <div class="row">
@@ -403,11 +405,16 @@
 </section>
 
 <section class="section">
-  <header class="section py--1">
-    <div class="__pretitle">Section Header: Default</div>
-    <h2 class="__title">Here's a Default Section Title</h2>
-    <div class="__subtitle">Subtitlio Defaultus Ridiculum Inceptos Bibendum Amet Mollis Dapibus</div>
+  <header class="section">
+    <div class="__header">
+      <h2 class="__title">Here's a Default Section Title</h2>
+      <div class="__subtitle">Subtitlio Defaultus Ridiculum Inceptos Bibendum Amet Mollis Dapibus</div>
+    </div>
   </header>
+  <h2>Maecenas faucibus</h2>
+  <p>And some text to follow maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
+  <h2>Maecenas faucibus</h2>
+  <p>And some text to follow maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
   <p>And some text to follow maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.</p>
 </section>
 
