@@ -29,6 +29,8 @@
     }
   }
 
+  + h2 { padding-top: 1rem; }
+
   // Remove padding-x for flush sections
   &.\--flush {
     padding-right: 0;
@@ -61,12 +63,14 @@
 
     .__title {
       @include type-d3();
-      font-weight: $type-light;
+      padding-top: 0;
       margin-bottom: 0.125rem;
+      font-weight: $type-light;
       line-height: 1.2;
 
       @include mqbp-up(t) {
         @include type-d4();
+        line-height: 1.2;
         text-indent: -3px;
       }
 
@@ -75,10 +79,14 @@
       }
     }
 
-    .__pretitle { margin-bottom: 0.25rem; }
+    .__pretitle {
+      margin-bottom: 0.25rem;
+      font-weight: $type-light;
+    }
     .__subtitle { @include type-lead(); }
-    .__title + .__subtitle { padding-top: 1.125rem; }
-    .__pretitle + .__title + .__subtitle { padding-top: 0.125rem; }
+    .__title + .__subtitle { padding-top: 0.75rem; }
+    .__pretitle + .__title { padding-top: 0.5rem; }
+    .__pretitle + .__title + .__subtitle { padding-top: 0.5rem; }
   }
 
   // adds max-width via .section to nested .__header
