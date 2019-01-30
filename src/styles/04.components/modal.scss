@@ -18,6 +18,11 @@
   // --
   // Block level
 
+  .__title {
+    @include type_d3();
+    padding-top: 1rem;
+  }
+
   // centered content within modal
   .__content {
     position: relative;
