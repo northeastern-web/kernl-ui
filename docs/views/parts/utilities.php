@@ -1,16 +1,16 @@
 <section class="section">
   <header class="k_section__header">Spacing</header>
   <p>Add spacing to an element with margin (m), padding (p) and offset (o) utilities.</p>
-  <p class="fs--sm"><b>Pattern</b>: <code class="mr--0h@xs">&lt;prefix&gt;&lt;location&gt;--&lt;size&gt;@&lt;breakpoint&gt;</code></p>
-  <div class="pa--1@xs mb--1@xs bc--gray-800">
-    <ul class="ls--inline fs--sm mt--0h@xs mb--0h@xs">
+  <p class="fs--sm"><b>Pattern</b>: <code class="mr--0h">&lt;prefix&gt;&lt;location&gt;--&lt;size&gt;@&lt;breakpoint&gt;</code></p>
+  <div class="pa--1 mb--1 bc--gray-800">
+    <ul class="ls--inline fs--sm mt--0h mb--0h">
       <li><b>Prefixes</b>:</li>
       <li><code>m</code> <i class="fs--xs">margin</i></li>
       <li><code>p</code> <i class="fs--xs">padding</i></li>
       <li><code>o</code> <i class="fs--xs">offset</i></li>
     </ul>
     <hr>
-    <ul class="ls--inline fs--sm mb--0h@xs">
+    <ul class="ls--inline fs--sm mb--0h">
       <li><b>Locations</b>:</li>
       <li><code>t</code> <i class="fs--xs">top</i></li>
       <li><code>r</code> <i class="fs--xs">right</i></li>
@@ -21,18 +21,18 @@
       <li><code>a</code> <i class="fs--xs">all</i></li>
     </ul>
     <hr>
-    <ul class="ls--inline mb--0@xs fs--sm">
+    <ul class="ls--inline mb--0 fs--sm">
       <li><b>Sizes</b>:</li>
       <li><code>1</code> through <code>20</code></li>
     </ul>
-    <ul class="ls--inline fs--sm ml--4@xs mb--0h@xs">
+    <ul class="ls--inline fs--sm ml--4 mb--0h">
       <li>Add <code>h</code> for half values. <i>Examples</i>:</li>
       <li><code>0h</code> <i class="fs--xs">0.5 rem</i></li>
       <li><code>3h</code> <i class="fs--xs">3.5 rem</i></li>
       <li><code>12h</code> <i class="fs--xs">12.5 rem</i></li>
     </ul>
     <hr>
-    <ul class="ls--inline fs--sm mb--0h@xs">
+    <ul class="ls--inline fs--sm mb--0h">
       <li><b>Breakpoints</b>: </li>
       <li><code>xs</code></li>
       <li><code>sm</code></li>
@@ -49,8 +49,8 @@
 <section class="section">
   <header class="k_section__header">Positioning</header>
   <div class="row">
-    <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md bc--gray-800">
+    <div class="col --12 --6@md">
+      <div class="pa--1 mb--1 mb--2@md bc--gray-800">
         <p class="text-style-block">Flexbox Vertical Positioning</p>
         <p>Set vertical positioning on flexbox elements.</p>
         <ul class="fs--sm">
@@ -61,8 +61,8 @@
       </div>
     </div>
 
-    <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md bc--gray-800">
+    <div class="col --12 --6@md">
+      <div class="pa--1 mb--1 mb--2@md bc--gray-800">
         <p class="text-style-block">Responsive Floats</p>
         <p>Set floats by breakpoint.</p>
         <ul class="fs--sm">
@@ -73,8 +73,8 @@
       </div>
     </div>
 
-    <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md bc--gray-800">
+    <div class="col --12 --6@md">
+      <div class="pa--1 mb--1 mb--2@md bc--gray-800">
         <p class="text-style-block">Responsive Flexbox Ordering</p>
         <p>Responsively set display order of responsive elements.</p>
         <ul class="fs--sm">
@@ -86,8 +86,8 @@
       </div>
     </div>
 
-    <div class="col --12@xs --6@md">
-      <div class="pa--1@xs mb--1@xs mb--2@md bc--gray-800">
+    <div class="col --12 --6@md">
+      <div class="pa--1 mb--1 mb--2@md bc--gray-800">
         <p class="text-style-block">Sticky</p>
         <p>Set an element to be sticky</p>
         <ul class="fs--sm">
@@ -101,8 +101,8 @@
 <section class="section">
   <header class="k_section__header">Typography</header>
   <div class="row">
-    <div class="col --12@xs --6@md mb--1@xs mb--2@md">
-      <div class="pa--1@xs mb--1@xs bc--gray-800 +equal">
+    <div class="col --12 --6@md mb--1 mb--2@md">
+      <div class="pa--1 mb--1 bc--gray-800 +equal">
         <p class="text-style-block">Font Sizes</p>
         <p>Override a text element's size with the font-size (fs) utility:</p>
         <ul class="fs--sm">
@@ -122,8 +122,8 @@
       </div>
     </div>
 
-    <div class="col --12@xs --6@md mb--1@xs mb--2@md">
-      <div class="pa--1@xs mb--1@xs bc--gray-800 +equal">
+    <div class="col --12 --6@md mb--1 mb--2@md">
+      <div class="pa--1 mb--1 bc--gray-800 +equal">
         <p class="text-style-block">Font Styles and Weights</p>
         <p>Override a text's font style (fs) and/or weight (fw):</p>
         <ul class="fs--sm">
@@ -133,8 +133,8 @@
       </div>
     </div>
 
-    <div class="col --12@xs --6@md mb--1@xs mb--2@md">
-      <div class="pa--1@xs mb--1@xs bc--gray-800 +equal">
+    <div class="col --12 --6@md mb--1 mb--2@md">
+      <div class="pa--1 mb--1 bc--gray-800 +equal">
         <p class="text-style-block">List Styles</p>
         <p>Specify a list style with these...</p>
         <ul class="fs--sm">
@@ -145,8 +145,8 @@
       </div>
     </div>
 
-    <div class="col --12@xs --6@md mb--1@xs mb--2@md">
-      <div class="pa--1@xs mb--1@xs bc--gray-800 +equal">
+    <div class="col --12 --6@md mb--1 mb--2@md">
+      <div class="pa--1 mb--1 bc--gray-800 +equal">
         <p class="text-style-block">Text Alignment</p>
         <p>Override a text element's alignment</p>
         <ul class="fs--sm">
@@ -168,7 +168,7 @@
 <section class="section">
   <header class="k_section__header">Color, Images, Shadows</header>
   <div class="row">
-    <div class="col --12@xs">
+    <div class="col --12">
       <nav class="nav --tabbed --bordered">
         <ul class="__list" role="tablist">
           <li class="__item">
@@ -185,9 +185,9 @@
           </li>
         </ul>
       </nav>
-      <div class="hidden pt--1@xs --active" id="tab_1" role="tabpanel">
+      <div class="hidden pt--1 --active" id="tab_1" role="tabpanel">
         <div class="row">
-          <div class="col --12@xs --6@md">
+          <div class="col --12 --6@md">
             <h3 class="fs--root text-style-block">Background Image Positions</h3>
             <table class="table --border fs--sm">
               <tr>
@@ -207,13 +207,13 @@
               </tr>
             </table>
           </div>
-          <div class="col --12@xs --5@md">
+          <div class="col --12 --5@md">
             <h3 class="fs--root text-style-block">Background Color</h3>
             <p>Assign a color to a text element (or child text of an element).</p>
-            <p class="fs--sm"><b>Pattern</b>: <code class="mr--0h@xs">bg--&lt;color&gt;</code></p>
+            <p class="fs--sm"><b>Pattern</b>: <code class="mr--0h">bg--&lt;color&gt;</code></p>
             <div class="color-cell fs--sm">
-              <div class="bg--blue-dark pa--0h@xs"><code>bg--blue-dark</code>: Dark Blue</div>
-              <div class="bg--yellow pa--0h@xs"><code>bg--yellow</code>: Yellow</div>
+              <div class="bg--blue-dark pa--0h"><code>bg--blue-dark</code>: Dark Blue</div>
+              <div class="bg--yellow pa--0h"><code>bg--yellow</code>: Yellow</div>
             </div>
             <h3 class="fs--root text-style-block">Other Background Utilities</h3>
             <ul class="fs--sm">
@@ -223,17 +223,17 @@
           </div>
         </div>
       </div>
-      <div class="hidden pt--1@xs" id="tab_2" role="tabpanel">
+      <div class="hidden pt--1" id="tab_2" role="tabpanel">
         <h3 class="fs--root text-style-block">Text Color</h3>
         <p>Assign a color to a text element (or child text of an element).</p>
-        <p class="fs--sm"><b>Pattern</b>: <code class="mr--0h@xs">tc--&lt;color&gt;</code></p>
+        <p class="fs--sm"><b>Pattern</b>: <code class="mr--0h">tc--&lt;color&gt;</code></p>
         <ul class="fs--sm">
           <li><b>Example a</b>: <code>tc--teal</code> <span class="tc--teal tt--caps"><b>Teal Text</b></span></p>
           <li><b>Example b</b>: <code>tc--red</code> <span class="tc--red tt--caps"><b>Red Text</b></span></p>
         </ul>
         <p class="fs--sm"><i>See <a href="./?part=color-palette">Color Palette</a> page for more examples.</i></p>
       </div>
-      <div class="hidden pt--1@xs" id="tab_3" role="tabpanel">
+      <div class="hidden pt--1" id="tab_3" role="tabpanel">
         <h3>Borders &amp; Corners</h3>
         <p>coming soon...</p>
       </div>

@@ -4,18 +4,6 @@
   <h2 class="k_section__header">Sections &amp; Headers</h2>
 </header>
 
-<header class="section">
-  <div class="__header">
-    <h1 class="__title">Default Section Header</h1>
-  </div>
-</header>
-
-<section class="section --banner">
-  <div class="__header">
-    <h1 class="__title">Default Banner</h1>
-  </div>
-</section>
-
 <section class="section --hero bg--img">
   <div class="__header">
     <h1 class="__title">Hero</h1>
