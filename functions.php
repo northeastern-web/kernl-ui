@@ -4,7 +4,7 @@ $url = '';
 if ($_SERVER['HTTP_HOST'] == 'kernl-ui.test') {
     $url = 'https://'. $_SERVER['HTTP_HOST'];
 } else {
-    $url = 'https://nuweb28dev.neu.edu/kernl-ui';
+    $url = 'https://assets.provost.northeastern.edu/kernl-ui';
 }
 
 /**
