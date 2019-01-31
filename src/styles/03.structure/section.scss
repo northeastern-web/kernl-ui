@@ -152,15 +152,15 @@
     margin-bottom: 0;
 
     .__title {
-      @include type-d3();
+      @include type-d4();
       margin-bottom: 0.25rem;
 
       @include mqbp-up(t) {
-        @include type-d4();
+        @include type-d5();
       }
 
       @include mqbp-up(d) {
-        @include type-d5();
+        @include type-d7();
       }
     }
 

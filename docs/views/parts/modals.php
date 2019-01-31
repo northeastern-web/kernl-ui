@@ -93,7 +93,7 @@
                 <img class="w--100 w--90@t w--100@d" src="docs/images/random/337869.jpg" alt="image">
               </div>
               <div class="__body">
-                <h3 class="__title">David Mary Davenport</h3>
+                <h2 class="__title">David Mary Davenport</h2>
                 <p class="__subtitle">Curabitur Blandit Tempus Porttitor<br>
                 Egestas Eget Quam, Venenatis</p>
                 <div class="__meta">

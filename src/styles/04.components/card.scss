@@ -42,6 +42,8 @@
   }
 
   .__title {
+    padding: 0;
+    margin: 0 0 0.5rem;
     line-height: 1.25;
     font-weight: 700;
     font-size: 118%;
@@ -324,7 +326,7 @@
         .__graphic,
         .__body { width: 50%; }
 
-        .__graphic { 
+        .__graphic {
           &::after {
             padding-top: (56.25% / 2);
           }
