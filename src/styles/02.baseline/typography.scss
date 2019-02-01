@@ -26,10 +26,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 h1 { @include type_d4(); }
 
 h2 {
-  @extend .measure;
   @include type_d3();
   padding-top: 2rem;
   margin-bottom: 1.75rem;
+  max-width: $measure;
   font-weight: $type-light;
 }
 
