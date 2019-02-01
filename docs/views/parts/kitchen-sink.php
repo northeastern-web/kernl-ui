@@ -336,7 +336,7 @@ pre {
   <section class="section bg--black">
     <h3 class="ta--c mb--1">Video Embed Example</h3>
     <div class="w--60@d mx--auto">
-      <div class="ar ar--16x9">
+      <div class="ar--16x9">
         <iframe class="w--100 ar--object" src="https://www.youtube.com/embed/JHFXG3r_0B8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>

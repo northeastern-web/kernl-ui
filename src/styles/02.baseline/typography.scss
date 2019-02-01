@@ -33,6 +33,13 @@ h2 {
   font-weight: $type-light;
 }
 
+// remove extra padding-top after blocks
+div, section, header {
+  > h2 {
+    padding-top: 0;
+  }
+}
+
 h3 {
   @include type_d2();
   padding-top: 0.25rem;
