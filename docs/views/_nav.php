@@ -1,6 +1,6 @@
 <?php if ($part) : ?>
 
-<nav class="k_nav" onclick="void(0)">
+<nav class="k_nav" onclick="void(0)" tabindex="0">
   <a class="k_logo" href="/">
     <b>kernl</b>(ui)
   </a>

@@ -87,8 +87,7 @@ a {
   text-decoration: none;
   color: $type-link;
 
-  &:active,
-  &:hover { outline-width: 0; }
+  &:active { outline-width: 0; }
 }
 
 
