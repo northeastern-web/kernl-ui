@@ -17,6 +17,9 @@
       padding: 1rem 3rem 1rem 0.75rem;
       cursor: pointer;
       position: relative;
+      width: 100%;
+      text-align: left;
+      border: 0 none;
 
       &:after {
         content: "\e970"; // plus icon
@@ -26,6 +29,8 @@
         top: 1rem;
         right: 1.5rem;
       }
+
+      &:active { outline: none; }
 
       &.\--active {
         &:after { content: "\e95c"; } // minus icon

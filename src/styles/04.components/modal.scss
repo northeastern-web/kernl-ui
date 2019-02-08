@@ -76,7 +76,7 @@
     font-size: 2rem;
     font-weight: 400;
     text-shadow: 0 1px 0 #fff;
-    opacity: .85;
+    opacity: 0.85;
     transition: opacity 0.2s ease;
     // z-index: $;
 
@@ -86,7 +86,6 @@
     &:focus,
     &:active {
       opacity: 1;
-      outline: none;
     }
   }
 

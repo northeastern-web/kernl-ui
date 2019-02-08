@@ -101,6 +101,7 @@ html { background-color: #333; }
     overflow-y: scroll;
 
     &:hover,
+    &:focus,
     &.k_nav__active {
       transform: translateX(0);
       background: rgba(229, 229, 229, 0.99);
@@ -117,6 +118,25 @@ html { background-color: #333; }
   }
 
   @include mqbp-up(d) { transform: translateX(-95%); }
+}
+
+
+.k_nav {
+  @include mqbp-up(t) {
+    &:focus-within {
+      transform: translateX(0);
+      background: rgba(229, 229, 229, 0.99);
+      border-right: 0 none;
+      box-shadow: $box-shadow;
+
+      .k_logo {
+        display: block;
+        padding: 0.75rem 0 0.85rem 1.25rem;
+        color: rgba(255, 255, 255, 0.3);
+        background: rgba(0, 0, 0, 0.85);
+      }
+    }
+  }
 }
 
 .k_nav__list {
