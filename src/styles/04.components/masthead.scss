@@ -466,7 +466,7 @@
             z-index: 300;
             box-shadow: 0px 2px 1px 0 rgba($black, 0.1);
             transition: max-height 0.4s ease 0.1s,
-                        box-shadow $transition
+                        box-shadow $transition,
                         color $transition 0.3s;
 
             &:before { width: 100%; }
@@ -481,16 +481,19 @@
 
       &.\+chevron {
         .\+children {
+          margin-right: 0.5rem !important;
+          margin-left: 0.5rem;
+
           > .__link {
-            padding-left: 0.5rem;
-            padding-right: 1.75rem;
+            padding-left: 0;
+            padding-right: 1.125rem;
 
             &:after {
               content: "\e920" !important;
               color: $gray-200;
               font-size: 1rem;
               top: 2.375rem;
-              right: 0.5rem;
+              right: 0;
             }
           }
         }
@@ -760,24 +763,53 @@
 }
 
 // restated for focus-within seperately from hover,
-// as IE and Edge will completely ignore the
+// as IE and Edge will completely ignore all
 // definitions if grouped together :\
 @include mqbp-up(d) {
+  .masthead .\+children {
+    &:focus-within {
+      .__submenu {
+        height: auto;
+        background-color: $white;
+        overflow: visible;
+        max-height: 20rem;
+        width: 13rem;
+        opacity: 1;
+        padding: 1rem !important;
+
+        .__item { margin: 0 0.75rem; }
+      }
+    }
+  }
+
+  .masthead.bg--black .\+children {
+    &:focus-within {
+      .__submenu {
+        background-color: $black;
+        border-color: $gray-400;
+
+        &::after {
+          background-color: $black;
+          border-color: $gray-300;
+        }
+      }
+    }
+  }
+
   .masthead.\--megamenu .\+children {
     &:focus-within {
-      > a,
-      > .__link {
-        border-bottom-color: rgba($type-color, 0.25);
-
-        &:after { color: $gray-400; }
-      }
-
       .__submenu {
+        height: auto;
+        background-color: $white;
+        overflow: visible;
         max-height: 20rem;
         z-index: 300;
+        width: auto;
+        opacity: 1;
+        padding: 1rem !important;
         box-shadow: 0px 2px 1px 0 rgba($black, 0.1);
         transition: max-height 0.4s ease 0.1s,
-                    box-shadow $transition
+                    box-shadow $transition,
                     color $transition 0.3s;
 
         &:before { width: 100%; }
@@ -786,6 +818,15 @@
           background-color: rgba($gray-400, .15);
           transition: background 0.3s ease 0.1s;
         }
+      }
+
+      .__item { margin: 0; }
+
+      > a,
+      > .__link {
+        border-bottom-color: rgba($type-color, 0.25);
+
+        &:after { color: $gray-400; }
       }
     }
   }
