@@ -237,7 +237,8 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus,
+      > a:focus + {
         .__submenu {
           height: auto;
           background-color: $white;

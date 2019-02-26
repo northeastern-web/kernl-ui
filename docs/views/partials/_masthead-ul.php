@@ -37,25 +37,25 @@ function masthead($id, $masthead_classes, $banner_classes)
         <a class="__link" href="' . $url .'">Lorem Ipsum</a>
       </li>
       <li class="__item +children --active">
-        <a class="__link" href="' . $url .'">Bibendum</a>
+        <a class="__link" href="' . $url .'" aria-haspopup="true" aria-expanded="false">Bibendum</a>
         <ul class="__submenu">
-          <li class="__item"><a class="__link" href="' . $url .'">Quam Vulputate Nibh</a></li>
-          <li class="__item"><a class="__link" href="' . $url .'">Tortor Fusce</a></li>
+          <li class="__item"><a class="__link" href="' . $url .'" tabindex="-1">Quam Vulputate Nibh</a></li>
+          <li class="__item"><a class="__link" href="' . $url .'" tabindex="-1">Tortor Fusce</a></li>
         </ul>
       </li>
       <li class="__item +children">
-        <a class="__link" href="' . $url .'">Pudgi Homunculi</a>
+        <a class="__link" href="' . $url .'" aria-haspopup="true" aria-expanded="false">Pudgi Homunculi</a>
         <ul class="__submenu">
-          <li class="__item"><a class="__link" href="' . $url .'">Malesuada Bibendum</a></li>
-          <li class="__item"><a class="__link" href="' . $url .'">Bibendum Mattis Dapibus</a></li>
-          <li class="__item"><a class="__link" href="' . $url .'">Venenatis Pharetra Sit Dolor</a></li>
+          <li class="__item"><a class="__link" href="' . $url .'" tabindex="-1">Malesuada Bibendum</a></li>
+          <li class="__item"><a class="__link" href="' . $url .'" tabindex="-1">Bibendum Mattis Dapibus</a></li>
+          <li class="__item"><a class="__link" href="' . $url .'" tabindex="-1">Venenatis Pharetra Sit Dolor</a></li>
         </ul>
       </li>
       <li class="__item +children">
-        <a class="__link" href="' . $url .'">Malesuada Nucleus</a>
+        <a class="__link" href="' . $url .'" aria-haspopup="true" aria-expanded="false">Malesuada Nucleus</a>
         <ul class="__submenu">
-          <li class="__item"><a class="__link" href="' . $url .'">Quam Vulputate Nibh</a></li>
-          <li class="__item"><a class="__link" href="' . $url .'">Tortor Fusce</a></li>
+          <li class="__item"><a class="__link" href="' . $url .'" tabindex="-1">Quam Vulputate Nibh</a></li>
+          <li class="__item"><a class="__link" href="' . $url .'" tabindex="-1">Tortor Fusce</a></li>
         </ul>
       </li>
       <li class="__item +icon">
