@@ -104,7 +104,7 @@ $l = 0;
       <div class="bg--gray-400">Gray, Gray 400<br><span class="hex-color">#979797</span></div>
     </div>
     <div class="col w--20@t w--10@w col--stretch">
-      <div class="bg--gray-500">Gray 500<br><span class="hex-color">#777777</span></div>
+      <div class="bg--gray-500">Gray 500<br><span class="hex-color">#767676</span></div>
     </div>
     <div class="col w--20@t w--10@w col--stretch">
       <div class="bg--gray-600">Gray 600<br><span class="hex-color">#666666</span></div>
