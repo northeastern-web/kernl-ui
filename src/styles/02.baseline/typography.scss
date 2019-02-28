@@ -35,7 +35,8 @@ h2 {
 
 // remove extra padding-top after blocks
 div, section, header {
-  + h2 {
+  + h2,
+  > h2:first-child {
     padding-top: 0;
   }
 }
