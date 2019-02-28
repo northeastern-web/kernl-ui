@@ -177,6 +177,8 @@
 }
 
 .nav.\--tabbed {
+  border-bottom: 1px solid $gray-200;
+
   .__list { margin-bottom: 0; }
 
   .__link {
@@ -219,6 +221,8 @@
 
 .nav.\--bordered {
   @include mqbp-up(d) {
+    border-bottom: 0 none;
+
     .__list { border-bottom: 1px solid $gray-200; }
 
     .__item { margin-bottom: -2px; }
@@ -243,6 +247,8 @@
 }
 
 .nav.\--buttons {
+  border-bottom: 0 none;
+
   .__item {
     margin-bottom: 0.5rem;
     border-bottom: 0 none;

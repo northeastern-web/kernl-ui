@@ -29,8 +29,6 @@
     }
   }
 
-  + h2 { padding-top: 1rem; }
-
   // Remove padding-x for flush sections
   &.\--flush {
     padding-right: 0;
@@ -66,7 +64,8 @@
       padding-top: 0;
       margin-bottom: 0.125rem;
       font-weight: $type-light;
-      line-height: 1.2;
+      line-height: 1.15;
+      max-width: none;
 
       @include mqbp-up(t) {
         @include type-d4();
@@ -180,7 +179,10 @@
     padding-bottom: 5rem;
     align-items: initial;
 
-    .__header { flex: 0; }
+    .__header {
+      flex: 0;
+      margin-top: 0;
+    }
 
     &.\--top { justify-content: flex-start; }
     &.\--bottom { justify-content: flex-end; }
