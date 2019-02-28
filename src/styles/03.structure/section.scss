@@ -182,7 +182,10 @@
     padding-bottom: 5rem;
     align-items: initial;
 
-    .__header { flex: 0; }
+    .__header {
+      flex: 0;
+      margin-top: 0;
+    }
 
     &.\--top { justify-content: flex-start; }
     &.\--bottom { justify-content: flex-end; }
