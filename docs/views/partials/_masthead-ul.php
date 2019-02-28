@@ -37,14 +37,14 @@ function masthead($id, $masthead_classes, $banner_classes)
         <a class="__link" href="' . $url .'">Lorem Ipsum</a>
       </li>
       <li class="__item +children --active">
-        <a class="__link" href="' . $url .'">Bibendum</a>
+        <a class="__link" href="' . $url .'" aria-haspopup="true" aria-expanded="false">Bibendum</a>
         <ul class="__submenu">
           <li class="__item"><a class="__link" href="' . $url .'">Quam Vulputate Nibh</a></li>
           <li class="__item"><a class="__link" href="' . $url .'">Tortor Fusce</a></li>
         </ul>
       </li>
       <li class="__item +children">
-        <a class="__link" href="' . $url .'">Pudgi Homunculi</a>
+        <a class="__link" href="' . $url .'" aria-haspopup="true" aria-expanded="false">Pudgi Homunculi</a>
         <ul class="__submenu">
           <li class="__item"><a class="__link" href="' . $url .'">Malesuada Bibendum</a></li>
           <li class="__item"><a class="__link" href="' . $url .'">Bibendum Mattis Dapibus</a></li>
@@ -52,7 +52,7 @@ function masthead($id, $masthead_classes, $banner_classes)
         </ul>
       </li>
       <li class="__item +children">
-        <a class="__link" href="' . $url .'">Malesuada Nucleus</a>
+        <a class="__link" href="' . $url .'" aria-haspopup="true" aria-expanded="false">Malesuada Nucleus</a>
         <ul class="__submenu">
           <li class="__item"><a class="__link" href="' . $url .'">Quam Vulputate Nibh</a></li>
           <li class="__item"><a class="__link" href="' . $url .'">Tortor Fusce</a></li>
@@ -66,9 +66,11 @@ function masthead($id, $masthead_classes, $banner_classes)
     </ul>
   </nav>
 </header>
-<div class="section bg--img --hero --center ' . $banner_classes . '">
-  <div class="__header">
-    <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
+<main id="main_content">
+  <div class="section bg--img --hero --center ' . $banner_classes . '">
+    <div class="__header">
+      <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
+    </div>
   </div>
-</div>';
+</main>';
 }

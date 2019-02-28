@@ -36,7 +36,3 @@ $('.\\+children > a')
   $parent.addClass('submenu-open')
   $submenu.show(350)
 });
-
-$('#modal_search').on('shown.bs.modal', function() {
-  $('#modalSearch').focus()
-});
