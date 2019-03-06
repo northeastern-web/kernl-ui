@@ -19,6 +19,7 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             <div class="__title --active --visible" 
               data-swap-target="#toggle_' . $id . 'a" 
               data-swap-group="accordion_' . $id . '" 
+              tabindex="0" 
               aria-expanded="false">
                 Play me some accordion!
             </div>
@@ -33,6 +34,7 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             <div class="__title" 
               data-swap-target="#toggle_' . $id . 'b" 
               data-swap-group="accordion_' . $id . '" 
+              tabindex="0" 
               aria-expanded="false">
                 Do you want to play some polka?
             </div>
@@ -48,6 +50,7 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             <div class="__title" 
               data-swap-target="#toggle_' . $id . 'c" 
               data-swap-group="accordion_' . $id . '" 
+              tabindex="0" 
               aria-expanded="false">
                 Roll out the barrel!
             </div>
