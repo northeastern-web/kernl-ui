@@ -11,7 +11,8 @@ let $accordion = $('.accordion [data-swap-target]');
 $accordion.swap();
 
 // Trigger click/touch
-$accordion.on('click touch', function() {
+$accordion.on('click touch', function(e) {
+  console.log(e);
   let isVisible = $(this).closest('.accordion').find('.--visible')
   if(isVisible){
     $($(isVisible).attr('data-swap-target')).slideUp(speed)
@@ -21,14 +22,14 @@ $accordion.on('click touch', function() {
   }
 });
 
-// Activate event
-$accordion.on('activate.swap', function() {
-  $(this).addClass('--active')
-  $($(this).attr('data-swap-target')).slideDown(speed)
-});
-
 // Deactivate event
 $accordion.on('deactivate.swap', function() {
   $(this).removeClass('--active')
   $($(this).attr('data-swap-target')).slideUp(speed)
+});
+
+// Activate event
+$accordion.on('activate.swap', function() {
+  $(this).addClass('--active')
+  $($(this).attr('data-swap-target')).slideDown(speed)
 });
