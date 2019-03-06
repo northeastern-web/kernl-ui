@@ -12,7 +12,7 @@
           padding-right: $gutter;
           padding-left: $gutter;
         }
-      } @elseif ($container == "contain") {
+      } @else if ($container == "contain") {
         @if ($breakpoint == "t") {
           padding-right: $contain;
           padding-left: $contain;
