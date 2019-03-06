@@ -4,7 +4,7 @@
 import $ from 'jquery';
 
 let speed = 500;
-let $accordion = $('.accordion [data-swap-target]');
+let $accordion = $('.accordion .__title');
 
 // Initialize Formstone swap()
 $accordion.swap();
