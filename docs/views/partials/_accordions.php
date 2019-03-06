@@ -16,16 +16,6 @@ function accordion($id, $variant, $section_classes, $acc_class) {
         <header class="k_section__header">' . $variant . ' Accordion</header>
         <div class="accordion ' . $acc_class . '">
           <div class="__item">
-<<<<<<< Updated upstream
-            <div class="__title --active --visible" 
-              data-swap-target="#toggle_' . $id . 'a" 
-              data-swap-group="accordion_' . $id . '" 
-              tabindex="0" 
-              aria-expanded="false">
-                Play me some accordion!
-            </div>
-            <div class="__content" id="toggle_' . $id . 'a" data-swap-active="true">
-=======
             <div class="__title"
               data-swap-target="#toggle_' . $id . 'a"
               data-swap-group="accordion_' . $id . '"
@@ -33,7 +23,6 @@ function accordion($id, $variant, $section_classes, $acc_class) {
                 Play me some accordion!
             </div>
             <div class="__content" id="toggle_' . $id . 'a" data-swap-active="false">
->>>>>>> Stashed changes
               <div class="__copy">
                 <p>To show an open panel by default, include the class <code>--visible</code> with <code>__title</code>. Omit <code>--visible</code> to load the accordion with all panels closed.</p>
                 <p>Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
@@ -41,16 +30,9 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             </div>
           </div>
           <div class="__item">
-<<<<<<< Updated upstream
-            <div class="__title" 
-              data-swap-target="#toggle_' . $id . 'b" 
-              data-swap-group="accordion_' . $id . '" 
-              tabindex="0" 
-=======
             <div class="__title"
               data-swap-target="#toggle_' . $id . 'b"
               data-swap-group="accordion_' . $id . '"
->>>>>>> Stashed changes
               aria-expanded="false">
                 Do you want to play some polka?
             </div>
@@ -63,16 +45,9 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             </div>
           </div>
           <div class="__item">
-<<<<<<< Updated upstream
-            <div class="__title" 
-              data-swap-target="#toggle_' . $id . 'c" 
-              data-swap-group="accordion_' . $id . '" 
-              tabindex="0" 
-=======
             <div class="__title"
               data-swap-target="#toggle_' . $id . 'c"
               data-swap-group="accordion_' . $id . '"
->>>>>>> Stashed changes
               aria-expanded="false">
                 Roll out the barrel!
             </div>
