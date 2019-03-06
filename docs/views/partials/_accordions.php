@@ -16,12 +16,13 @@ function accordion($id, $variant, $section_classes, $acc_class) {
         <header class="k_section__header">' . $variant . ' Accordion</header>
         <div class="accordion ' . $acc_class . '">
           <div class="__item">
-            <button class="__title"
+            <div class="__title"
               data-swap-target="#toggle_' . $id . 'a"
               data-swap-group="accordion_' . $id . '"
+              tabindex="0"
               aria-expanded="false">
                 Play me some accordion!
-            </button>
+            </div>
             <div class="__content" id="toggle_' . $id . 'a" data-swap-active="false">
               <div class="__copy">
                 <p>To show an open panel by default, include the class <code>--visible</code> with <code>__title</code>. Omit <code>--visible</code> to load the accordion with all panels closed.</p>
@@ -30,12 +31,13 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             </div>
           </div>
           <div class="__item">
-            <button class="__title"
+            <div class="__title"
               data-swap-target="#toggle_' . $id . 'b"
               data-swap-group="accordion_' . $id . '"
+              tabindex="0"
               aria-expanded="false">
                 Do you want to play some polka?
-            </button>
+            </div>
             <div class="__content" id="toggle_' . $id . 'b">
               <div class="__copy">
                 <h3>With a Heading Now</h3>
@@ -45,12 +47,13 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             </div>
           </div>
           <div class="__item">
-            <button class="__title"
+            <div class="__title"
               data-swap-target="#toggle_' . $id . 'c"
               data-swap-group="accordion_' . $id . '"
+              tabindex="0"
               aria-expanded="false">
                 Roll out the barrel!
-            </button>
+            </div>
             <div class="__content" id="toggle_' . $id . 'c">
               <div class="__copy">
                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
