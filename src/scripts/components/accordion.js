@@ -1,29 +1,30 @@
 // Components
 // Accordion
 
+import $ from 'jquery';
 
-import $ from 'jquery'
-
-let speed = 500
-let $accordion = $('.accordion [data-swap-target].__title')
+let speed = 500;
+let $accordion = $('.accordion [data-swap-target].__title');
 
 // Initialize Formstone swap()
-$accordion.swap()
+$accordion.swap();
 
 // Activate event
 $accordion.on('activate.swap', function() {
-  let $this = $(this)
-  let id = $(this).attr('data-swap-target')
+  console.log('activate');
+  let $this = $(this);
+  let id = $(this).attr('data-swap-target');
 
-  $this.addClass('--active')
-  $(id).slideDown(speed)
+  $this.addClass('--active');
+  $(id).slideDown(speed);
 });
 
 // Deactivate event
 $accordion.on('deactivate.swap', function() {
-  let $this = $(this)
-  let id = $(this).attr('data-swap-target')
+  console.log('deactivate');
+  let $this = $(this);
+  let id = $(this).attr('data-swap-target');
 
   $this.removeClass('--active')
-  $(id).slideUp(speed)
+  $(id).slideUp(speed);
 });
