@@ -19,7 +19,6 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             <div class="__title"
               data-swap-target="#toggle_' . $id . 'a"
               data-swap-group="accordion_' . $id . '"
-              tabindex="0"
               aria-expanded="false">
                 Play me some accordion!
             </div>
