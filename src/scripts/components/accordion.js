@@ -27,9 +27,3 @@ $accordion.on('deactivate.swap', function() {
   $this.removeClass('--active')
   $(id).slideUp(speed)
 });
-
-// Activate event
-$accordion.on('activate.swap', function() {
-  $(this).addClass('--active')
-  $($(this).attr('data-swap-target')).slideDown(speed)
-});
