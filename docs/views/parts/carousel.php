@@ -1,32 +1,15 @@
 <section class="section">
   <header class="k_section__header">Carousel</header>
-
-      <div class="carousel">
-        <div class="card bg--blue-dark ta--c fs--lead">
-          <div class="__body">
-            1
-          </div>
-        </div>
-        <div class="card bg--blue-dark ta--c fs--lead">
-          <div class="__body">
-            2
-          </div>
-        </div>
-        <div class="card bg--blue-dark ta--c fs--lead">
-          <div class="__body">
-            3
-          </div>
-        </div>
-        <div class="card bg--blue-dark ta--c fs--lead">
-          <div class="__body">
-            4
-          </div>
-        </div>
-        <div class="card bg--blue-dark ta--c fs--lead">
-          <div class="__body">
-            5
-          </div>
-        </div>
+  <div class="row">
+    <div class="col w--1/2@d">
+      <div class="carousel"
+      data-carousel-options='{"controls":"false"}'>
+        <div class="bg--blue pa--5">1</div>
+        <div class="bg--blue pa--5">2</div>
+        <div class="bg--blue pa--5">3</div>
+        <div class="bg--blue pa--5">4</div>
+        <div class="bg--blue pa--5">5</div>
       </div>
-
+    </div>
+  </div>
 </section>
