@@ -15,6 +15,7 @@ mix.js('docs/main.js', 'dist/scripts')
   .sass('docs/main.scss', 'dist/styles')
   .sass('docs/wufoo.scss', 'dist/styles')
   .copy('src/fonts/*', 'dist/fonts')
+  .copy('src/images/*', 'dist/images')
   .options({ processCssUrls: false });
 
 mix.browserSync({
