@@ -103,7 +103,7 @@
 
   // adds max-width via .section to nested .__header
   &.\--bal {
-    .__title { @extend .bal !optional; }
+    .__header .__title { @extend .bal !optional; }
   }
 
   // centers .__header container and text
