@@ -9,7 +9,7 @@
   margin-right: auto;
 }
 
-$size: 9;
+$size: 20;
 @while $size >= 0 {
   .ma--#{$size}   { margin: #{$size}rem !important; }
   .ma--#{$size}h  { margin: #{($size+.5)}rem !important; }
