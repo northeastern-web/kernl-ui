@@ -1,210 +1,37 @@
 // Components
 // Carousel
 
+@import '~formstone/dist/css/carousel.css';
 
-.fs-carousel {}
-
-.fs-carousel.fs-carousel-enabled {
-  width: 100%;
-  position: relative;
+.fs-carousel-pagination {
+  text-align: center;
+  padding: 0.25rem 0;
 }
 
-.fs-carousel.fs-carousel-enabled:after {
-  clear: both;
-  content: '';
-  display: table;
-}
+.fs-carousel-page {
+  @extend .br--round;
 
-.fs-carousel,
-.fs-carousel:after,
-.fs-carousel:before,
-.fs-carousel *,
-.fs-carousel *:after,
-.fs-carousel *:before {
-  box-sizing: border-box;
-  transition: none;
-  user-select: none !important;
-}
-
-.fs-carousel-enabled.fs-carousel-contained,
-.fs-carousel-enabled.fs-carousel-contained .fs-carousel-viewport,
-.fs-carousel-enabled.fs-carousel-contained .fs-carousel-wrapper,
-.fs-carousel-enabled.fs-carousel-contained .fs-carousel-container {
-  overflow: hidden;
-}
-
-.fs-carousel-enabled .fs-carousel-viewport {
-  position: relative;
-}
-
-.fs-carousel-enabled .fs-carousel-viewport:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-.fs-carousel-enabled .fs-carousel-wrapper {
-  position: relative;
-}
-
-.fs-carousel-enabled .fs-carousel-wrapper:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-.fs-carousel-enabled .fs-carousel-container {
-  position: relative;
-}
-
-.fs-carousel-enabled .fs-carousel-canister {
-  position: relative;
-  backface-visibility: hidden;
-  display: flex;
-  margin: 0;
-  overflow: hidden;
-  transition: transform 0.5s ease;
-  transform: translate3d(0, 0, 0);
-}
-
-.fs-carousel-enabled.fs-carousel-auto_height .fs-carousel-canister {
-  align-items: flex-start;
-  transition: height 0.5s ease, transform 0.5s ease;
-}
-
-.fs-carousel-enabled .fs-carousel-item {
-  min-height: 1px;
-  display: block;
-}
-
-.fs-carousel-enabled .fs-carousel-item img {
-  -webkit-user-drag: none;
-  user-select: none;
-}
-
-.fs-carousel-single .fs-carousel-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.fs-carousel-single .fs-carousel-item.fs-carousel-visible {
-  position: relative;
-  z-index: 2;
-}
-
-.fs-carousel-controls {
-  display: none;
-}
-
-.fs-carousel-enabled .fs-carousel-controls {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-
-  // pods
-  position: absolute;
-  height: 75%;
-  top: 0;
-  right: 0;
-  left: auto;
-  text-align: right;
-  padding: 0.25rem 0.5rem;
-  // end pods
-}
-
-.fs-carousel-enabled .fs-carousel-controls.fs-carousel-visible,
-.fs-carousel-controls_custom.fs-carousel-visible {
-  display: block;
-}
-
-.fs-carousel-enabled .fs-carousel-control {
-  border: none;
-  cursor: pointer;
-  padding: 0;
-
-  // pods
-  width: 20px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  margin-top: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  background-color: transparent;
-  border-radius: 100%;
-  display: block;
-  margin: auto;
+  margin: 0 3px;
+  width: 0.75rem;
+  height: 0.75rem;
   overflow: hidden;
   text-indent: 200%;
   white-space: nowrap;
-  transition:
-    opacity .15s ease,
-    visibility .15s ease;
+  line-height: 0;
+  background: $gray-300;
 
-  &::before {
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: '';
-    margin: auto;
-  }
-
-  &.fs-carousel-control_previous {
-    right: auto;
-    left: 10px;
-
-    &::before {
-      border-top: 7px solid transparent;
-      border-bottom: 7px solid transparent;
-      border-right: 10.5px solid #263238;
-      border-left: none;
-      margin-left: 10px;
-      margin-right: auto;
-    }
-  }
-
-  &.fs-carousel-control_next {
-    right: -10px;
-    left: auto;
-
-    &::before {
-      border-top: 7px solid transparent;
-      border-bottom: 7px solid transparent;
-      border-left: 10.5px solid #263238;
-      border-right: none;
-      margin-right: 10px;
-      margin-left: auto;
-    }
-  }
-
-  // end pods
+  &.fs-carousel-active { background: $black; }
 }
 
-.fs-carousel-pagination {
-  display: none;
+.fs-carousel-controls {
+  @extend .pin;
 }
 
-.fs-carousel-enabled .fs-carousel-pagination {
-  width: 100%;
+.fs-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.fs-carousel-enabled .fs-carousel-pagination.fs-carousel-visible {
-  display: block;
-}
-
-.fs-carousel-enabled .fs-carousel-page {
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-}
-
-.fs-carousel-enabled.fs-carousel-rtl {
-  direction: rtl;
-}
+.fs-carousel-control_previous { left: 0; }
+.fs-carousel-control_next { right: 0; }

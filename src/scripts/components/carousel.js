@@ -5,5 +5,6 @@ import $ from 'jquery';
 
 // Initialize Formstone carousel()
 $('.carousel').carousel({
-  theme: ''
+  theme: '',
+  controls: false
 });
