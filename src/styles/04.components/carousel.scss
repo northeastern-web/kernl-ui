@@ -3,6 +3,11 @@
 
 @import '~formstone/dist/css/carousel.css';
 
+.fs-carousel-contained,
+.fs-carousel-viewport { overflow: visible !important; }
+
+.fs-carousel-wrapper { overflow: hidden; }
+
 .fs-carousel-pagination {
   text-align: center;
   padding: 0.25rem 0;
@@ -29,9 +34,29 @@
 
 .fs-carousel-control {
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  bottom: -1.75rem;
+  text-indent: -9999px;
+  font-size: 1.25rem;
+
+  &:before {
+    font-family: "feathericons";
+    font-weight: normal;
+    text-indent: 0;
+    position: absolute;
+  }
 }
 
-.fs-carousel-control_previous { left: 0; }
-.fs-carousel-control_next { right: 0; }
+.fs-carousel-control_previous {
+  left: 0;
+  &:before {
+    left: 0;
+    content: "\e921";
+  }
+}
+.fs-carousel-control_next {
+  right: 0;
+  &:before {
+    right: 0;
+    content: "\e922";
+  }
+}
