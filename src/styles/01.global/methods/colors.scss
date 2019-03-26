@@ -35,6 +35,7 @@
   &.btn,
   &.badge {
     color: $color;
+    border-color: rgba($color, 0.5);
 
     @include hover_focus_active {
       background-color: $color;
