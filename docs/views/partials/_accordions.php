@@ -7,21 +7,21 @@
  * str $acc_classes    css classes assigned to accordion
  */
 
-function accordion($id, $variant, $section_classes, $acc_class) {
-  $section_class = ' ' . $section_classes;
-  echo '
+function accordion($id, $variant, $section_classes, $acc_class)
+{
+    $section_class = ' ' . $section_classes;
+    echo '
   <section class="section' . $section_class . '">
     <div class="row">
       <div class="col pb--1">
         <header class="k_section__header">' . $variant . ' Accordion</header>
         <div class="accordion ' . $acc_class . '">
           <div class="__item">
-            <div class="__title"
+            <a class="__title" href="#"
               data-swap-target="#toggle_' . $id . 'a"
-              data-swap-group="accordion_' . $id . '"
-              aria-expanded="false">
+              data-swap-group="accordion_' . $id . '">
                 Play me some accordion!
-            </div>
+            </a>
             <div class="__content" id="toggle_' . $id . 'a" data-swap-active="false">
               <div class="__copy">
                 <p>To show an open panel by default, include the class <code>--visible</code> with <code>__title</code>. Omit <code>--visible</code> to load the accordion with all panels closed.</p>
@@ -30,12 +30,11 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             </div>
           </div>
           <div class="__item">
-            <div class="__title"
+            <a class="__title" href="#"
               data-swap-target="#toggle_' . $id . 'b"
-              data-swap-group="accordion_' . $id . '"
-              aria-expanded="false">
+              data-swap-group="accordion_' . $id . '">
                 Do you want to play some polka?
-            </div>
+            </a>
             <div class="__content" id="toggle_' . $id . 'b">
               <div class="__copy">
                 <h3>With a Heading Now</h3>
@@ -45,12 +44,11 @@ function accordion($id, $variant, $section_classes, $acc_class) {
             </div>
           </div>
           <div class="__item">
-            <div class="__title"
+            <a class="__title" href="#"
               data-swap-target="#toggle_' . $id . 'c"
-              data-swap-group="accordion_' . $id . '"
-              aria-expanded="false">
+              data-swap-group="accordion_' . $id . '">
                 Roll out the barrel!
-            </div>
+            </a>
             <div class="__content" id="toggle_' . $id . 'c">
               <div class="__copy">
                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
@@ -63,4 +61,3 @@ function accordion($id, $variant, $section_classes, $acc_class) {
     </div>
   </section>';
 }
-?>

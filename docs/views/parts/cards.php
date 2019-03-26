@@ -1,4 +1,4 @@
-<section class="section pt--2 col--stretch">
+<section class="section --bal pt--2 col--stretch">
   <div class="row">
     <!-- basic cards -->
     <div class="col w--1/3@t">
