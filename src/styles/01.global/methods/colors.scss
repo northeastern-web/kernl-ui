@@ -28,11 +28,14 @@
 }
 
 @mixin border_variant($color, $color_light, $color_dark, $text) {
-  border: 1px solid rgba($color, 0.5);
+  border-color: $color;
+  border-style: solid;
+  border-width: 1px;
 
   &.btn,
   &.badge {
     color: $color;
+    border-color: rgba($color, 0.5);
 
     @include hover_focus_active {
       background-color: $color;

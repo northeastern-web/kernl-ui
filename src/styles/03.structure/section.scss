@@ -101,9 +101,9 @@
     .__header { @extend .measure--wide; }
   }
 
-  // adds max-width via .section to nested .__header
+  // adds line after title on via a section
   &.\--bal {
-    .__title { @extend .bal !optional; }
+    .__header .__title { @extend .bal !optional; }
   }
 
   // centers .__header container and text
