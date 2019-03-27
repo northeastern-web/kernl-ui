@@ -7,14 +7,19 @@
 import 'formstone/src/js/core';
 import 'formstone/src/js/analytics';
 import 'formstone/src/js/carousel';
+import 'formstone/src/js/checkpoint';
 import 'formstone/src/js/cookie';
 import 'formstone/src/js/swap';
 import 'formstone/src/js/mediaquery';
 import 'formstone/src/js/touch';
 
+// gumshoejs
+import 'gumshoejs';
+
 // import Kernl(UI) items
 import './components/accordion';
 import './components/carousel';
+import './components/checkpoint';
 import './components/icon';
 import './components/loader';
 import './components/masthead';
