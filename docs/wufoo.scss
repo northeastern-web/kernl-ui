@@ -218,7 +218,7 @@
   input {
     margin-bottom: 1rem;
 
-    &.text { @extend input[type="text"]; }
+    &.text { @extend input, [type="text"]; }
   }
 
   input[type="text"],
