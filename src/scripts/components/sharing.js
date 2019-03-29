@@ -1,7 +1,6 @@
 // Components
 // Sharing
 
-
 /**
  * PODShare method
  * @param {string} service   name of service

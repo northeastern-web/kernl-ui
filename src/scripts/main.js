@@ -2,6 +2,7 @@
 //
 // main entry importing dependencies
 
+import 'jquery';
 
 // import Formstone
 import 'formstone/src/js/core';
