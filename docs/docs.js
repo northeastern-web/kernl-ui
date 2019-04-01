@@ -1,5 +1,5 @@
 import '../src/scripts/main.js'
-
+import $ from 'jquery'
 //
 //
 // for kernl(ui) documentation ui only

@@ -11,11 +11,14 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('docs/main.js', 'dist/scripts')
-  .sass('docs/main.scss', 'dist/styles')
-  .sass('docs/wufoo.scss', 'dist/styles')
+mix.js('src/scripts/main.js', 'dist/scripts')
+  .sass('src/styles/main.scss', 'dist/styles')
+  .sass('src/styles/wufoo.scss', 'dist/styles')
   .copy('src/fonts/*', 'dist/fonts')
   .copy('src/images/*', 'dist/images')
+  .js('docs/docs.js', 'docs/dist/scripts')
+  .sass('docs/docs.scss', 'docs/dist/styles')
+  .copy('src/fonts/*', 'docs/dist/fonts')
   .options({ processCssUrls: false });
 
 mix.browserSync({

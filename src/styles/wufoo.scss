@@ -5,97 +5,97 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i');
 
 // Global Variables
-@import "../src/styles/01.global/variables/colors";
-@import "../src/styles/01.global/variables/layout";
-@import "../src/styles/01.global/variables/misc";
-@import "../src/styles/01.global/variables/sizing";
-@import "../src/styles/01.global/variables/typography";
+@import "01.global/variables/colors";
+@import "01.global/variables/layout";
+@import "01.global/variables/misc";
+@import "01.global/variables/sizing";
+@import "01.global/variables/typography";
 
 // Global Methods
-@import "../src/styles/01.global/methods/colors";
-@import "../src/styles/01.global/methods/layout";
-@import "../src/styles/01.global/methods/media-queries";
-@import "../src/styles/01.global/methods/misc";
-@import "../src/styles/01.global/methods/sizing";
-@import "../src/styles/01.global/methods/typography";
+@import "01.global/methods/colors";
+@import "01.global/methods/layout";
+@import "01.global/methods/media-queries";
+@import "01.global/methods/misc";
+@import "01.global/methods/sizing";
+@import "01.global/methods/typography";
 
 // Baseline
-@import "../src/styles/02.baseline/document";
-@import "../src/styles/02.baseline/typography";
-@import "../src/styles/02.baseline/lists";
-@import "../src/styles/02.baseline/tables";
-@import "../src/styles/02.baseline/forms";
-@import "../src/styles/02.baseline/media";
+@import "02.baseline/document";
+@import "02.baseline/typography";
+@import "02.baseline/lists";
+@import "02.baseline/tables";
+@import "02.baseline/forms";
+@import "02.baseline/media";
 
 // Structure
-@import "../src/styles/03.structure/column";
-@import "../src/styles/03.structure/form";
-@import "../src/styles/03.structure/section";
+@import "03.structure/column";
+@import "03.structure/form";
+@import "03.structure/section";
 
 // Components
-@import "../src/styles/04.components/_variables";
-@import "../src/styles/04.components/_methods";
-@import "../src/styles/04.components/button";
+@import "04.components/_variables";
+@import "04.components/_methods";
+@import "04.components/button";
 
 // Layout
-@import "../src/styles/05.utilities/layout/columns";
-@import "../src/styles/05.utilities/layout/displays";
-@import "../src/styles/05.utilities/layout/position";
-@import "../src/styles/05.utilities/layout/visibility";
+@import "05.utilities/layout/columns";
+@import "05.utilities/layout/displays";
+@import "05.utilities/layout/position";
+@import "05.utilities/layout/visibility";
 
 // Typography
-@import "../src/styles/05.utilities/typography/color";
-@import "../src/styles/05.utilities/typography/font-family";
-@import "../src/styles/05.utilities/typography/font-size";
-@import "../src/styles/05.utilities/typography/font-weight";
-@import "../src/styles/05.utilities/typography/letter-spacing";
-@import "../src/styles/05.utilities/typography/line-height";
-@import "../src/styles/05.utilities/typography/lists";
-@import "../src/styles/05.utilities/typography/measure";
-@import "../src/styles/05.utilities/typography/style-decoration";
-@import "../src/styles/05.utilities/typography/text-alignment";
-@import "../src/styles/05.utilities/typography/text-shadow";
-@import "../src/styles/05.utilities/typography/vertical-alignment";
-@import "../src/styles/05.utilities/typography/whitespace-wrapping";
-@import "../src/styles/05.utilities/typography/word-break";
+@import "05.utilities/typography/color";
+@import "05.utilities/typography/font-family";
+@import "05.utilities/typography/font-size";
+@import "05.utilities/typography/font-weight";
+@import "05.utilities/typography/letter-spacing";
+@import "05.utilities/typography/line-height";
+@import "05.utilities/typography/lists";
+@import "05.utilities/typography/measure";
+@import "05.utilities/typography/style-decoration";
+@import "05.utilities/typography/text-alignment";
+@import "05.utilities/typography/text-shadow";
+@import "05.utilities/typography/vertical-alignment";
+@import "05.utilities/typography/whitespace-wrapping";
+@import "05.utilities/typography/word-break";
 
 // Backgrounds
-@import "../src/styles/05.utilities/backgrounds/color";
-@import "../src/styles/05.utilities/backgrounds/size";
+@import "05.utilities/backgrounds/color";
+@import "05.utilities/backgrounds/size";
 
 // Borders
-@import "../src/styles/05.utilities/borders/color";
-@import "../src/styles/05.utilities/borders/radius";
-@import "../src/styles/05.utilities/borders/style";
-@import "../src/styles/05.utilities/borders/width";
+@import "05.utilities/borders/color";
+@import "05.utilities/borders/radius";
+@import "05.utilities/borders/style";
+@import "05.utilities/borders/width";
 
 // Flexbox
-@import "../src/styles/05.utilities/flexbox/alignment";
-@import "../src/styles/05.utilities/flexbox/direction";
-@import "../src/styles/05.utilities/flexbox/grow-shrink";
-@import "../src/styles/05.utilities/flexbox/order";
-@import "../src/styles/05.utilities/flexbox/wrapping";
+@import "05.utilities/flexbox/alignment";
+@import "05.utilities/flexbox/direction";
+@import "05.utilities/flexbox/grow-shrink";
+@import "05.utilities/flexbox/order";
+@import "05.utilities/flexbox/wrapping";
 
 // Spacing
-@import "../src/styles/05.utilities/spacing/margin";
-@import "../src/styles/05.utilities/spacing/offset";
-@import "../src/styles/05.utilities/spacing/padding";
+@import "05.utilities/spacing/margin";
+@import "05.utilities/spacing/offset";
+@import "05.utilities/spacing/padding";
 
 // Sizing
-@import "../src/styles/05.utilities/sizing/height";
-@import "../src/styles/05.utilities/sizing/width";
+@import "05.utilities/sizing/height";
+@import "05.utilities/sizing/width";
 
 // Interactivity
-@import "../src/styles/05.utilities/interactivity/cursor";
-@import "../src/styles/05.utilities/interactivity/pointer";
-@import "../src/styles/05.utilities/interactivity/resize";
-@import "../src/styles/05.utilities/interactivity/user-select";
+@import "05.utilities/interactivity/cursor";
+@import "05.utilities/interactivity/pointer";
+@import "05.utilities/interactivity/resize";
+@import "05.utilities/interactivity/user-select";
 
 // Misc
-@import "../src/styles/05.utilities/misc/accessibility";
-@import "../src/styles/05.utilities/misc/appearance";
-@import "../src/styles/05.utilities/misc/box-shadow";
-@import "../src/styles/05.utilities/misc/clears";
+@import "05.utilities/misc/accessibility";
+@import "05.utilities/misc/appearance";
+@import "05.utilities/misc/box-shadow";
+@import "05.utilities/misc/clears";
 
 .wufoo {
   * { font-family: $type-sans; }
