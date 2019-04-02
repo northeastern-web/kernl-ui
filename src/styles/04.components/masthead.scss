@@ -110,7 +110,7 @@
     }
 
     &:after {
-      font-family: "feathericons";
+      font-family: "feathericons", sans-serif;
       content: "\e922";
       position: absolute;
       right: 0;
@@ -301,6 +301,29 @@
     }
   }
 
+  &.\+chevron {
+    @include mqbp-up(d) {
+      .\+children {
+        margin: 0 !important;
+
+        > .__link {
+          padding-left: 0.5rem;
+          padding-right: 1.75rem;
+
+          &:before { // 'before' because 'after' competes with other modifiers
+            content: "\e920" !important;
+            position: absolute;
+            font-family: "feathericons", sans-serif;
+            color: $gray-200;
+            font-size: 1rem;
+            top: 13px;
+            right: 6px;
+          }
+        }
+      }
+    }
+  }
+
   // add a border to the bottom of active nav link
   &.\+border {
     @include mqbp-up(d) {
@@ -349,9 +372,11 @@
       .__list,
       .__item { position: static; }
 
-      .__item { margin: 0; }
+      .__item { margin: 0 0.75rem; }
 
       .\+children {
+        .__item { margin: 0; }
+
         > .__link { border-bottom: 4px solid transparent; }
 
         .__link {
@@ -365,7 +390,7 @@
           display: flex;
           flex-wrap: wrap;
           padding: 0 3rem !important;
-          top: 5.85rem;
+          top: 4rem;
           left: 0;
           right: 0;
           background-color: $gray-100;
@@ -480,56 +505,36 @@
         }
       }
 
-      &.\+chevron {
+      &.bg--black {
         .\+children {
-          margin-right: 0.5rem !important;
-          margin-left: 0.5rem;
-
           > .__link {
-            padding-left: 0;
-            padding-right: 1.125rem;
-
-            &:after {
-              content: "\e920" !important;
-              color: $gray-200;
-              font-size: 1rem;
-              top: 2.375rem;
-              right: 0;
-            }
-          }
-        }
-      }
-    }
-
-    &.bg--black {
-      .\+children {
-        > .__link {
-          &:focus { color: $white !important; }
-        }
-
-        .__submenu {
-          background-color: $black !important;
-
-          &::before {
-            border-top-color: $gray-600;
+            &:focus { color: $white !important; }
           }
 
-          .__link {
-            border-bottom: 1px solid transparent;
+          .__submenu {
+            background-color: $black !important;
 
-            &:hover,
-            &:focus {
-              border-bottom-color: rgba($white, 0.325);
-              background-color: transparent !important;
-              color: $red !important;
+            &::before {
+              border-top-color: $gray-600;
             }
 
-            &.\--heading {
-              border-bottom: 1px solid rgba($white, 0.1);
+            .__link {
+              border-bottom: 1px solid transparent;
 
               &:hover,
               &:focus {
-                border-bottom: 1px solid rgba($white, 0.5);
+                border-bottom-color: rgba($white, 0.325);
+                background-color: transparent !important;
+                color: $red !important;
+              }
+
+              &.\--heading {
+                border-bottom: 1px solid rgba($white, 0.1);
+
+                &:hover,
+                &:focus {
+                  border-bottom: 1px solid rgba($white, 0.5);
+                }
               }
             }
           }
@@ -547,7 +552,7 @@
           padding-top: 0.25rem;
           padding-bottom: 1rem;
 
-          &:after { top: 0.45rem; }
+          &:before { top: 4px; }
         }
       }
 

@@ -2,12 +2,17 @@
     "/dist/scripts/main.js": "/dist/scripts/main.js",
     "/dist/styles/main.css": "/dist/styles/main.css",
     "/dist/styles/wufoo.css": "/dist/styles/wufoo.css",
+    "/docs/dist/styles/docs.css": "/docs/dist/styles/docs.css",
+    "/docs/dist/scripts/docs.js": "/docs/dist/scripts/docs.js",
     "/dist/fonts/feathericons.eot": "/dist/fonts/feathericons.eot",
     "/dist/fonts/feathericons.svg": "/dist/fonts/feathericons.svg",
     "/dist/fonts/feathericons.ttf": "/dist/fonts/feathericons.ttf",
     "/dist/fonts/feathericons.woff": "/dist/fonts/feathericons.woff",
     "/dist/images/logo-black.png": "/dist/images/logo-black.png",
-    "/dist/images/logo-red.png": "/dist/images/logo-red.png",
     "/dist/images/logo-white-long.png": "/dist/images/logo-white-long.png",
-    "/dist/images/logo-white.png": "/dist/images/logo-white.png"
+    "/dist/images/logo-white.png": "/dist/images/logo-white.png",
+    "/docs/dist/fonts/feathericons.eot": "/docs/dist/fonts/feathericons.eot",
+    "/docs/dist/fonts/feathericons.svg": "/docs/dist/fonts/feathericons.svg",
+    "/docs/dist/fonts/feathericons.ttf": "/docs/dist/fonts/feathericons.ttf",
+    "/docs/dist/fonts/feathericons.woff": "/docs/dist/fonts/feathericons.woff"
 }
