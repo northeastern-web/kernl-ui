@@ -13,7 +13,7 @@ html {
 
 *,
 *:before,
-*:after { box-sizing: inherit; }
+*:after { box-sizing: border-box; }
 
 @at-root {
   @-ms-viewport { width: device-width; }

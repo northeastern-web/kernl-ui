@@ -1,0 +1,181 @@
+// Components
+// Carousel
+
+@import '~formstone/dist/css/lightbox.css';
+
+.fs-lightbox {
+  width: auto;
+  max-width: 90%;
+  background: rgba($white, 0.2);
+
+  @include mqbp-up(d) {
+    max-width: 80%;
+  }
+
+  &-container {
+    background: transparent;
+  }
+
+  &-meta_content {
+    font-size: $fs-sm;
+    background-color: $white;
+
+    @include mqbp-up(d) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .fs-lightbox-position {
+    padding: 0.5rem 1rem;
+    font-size: $fs-sm;
+    margin-bottom: 0;
+    font-family: $type-serif;
+    font-style: italic;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 1rem;
+      width: 3rem;
+      border-bottom: 1px solid $gray-200;
+    }
+
+    &_current,
+    &_total {
+      font-style: normal;
+      font-family: $type-sans;
+      font-size: $fs-xs;
+    }
+
+    @include mqbp-up(d) {
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        display: none;
+      }
+
+      &_current,
+      &_total {
+        margin: 0 3px;
+      }
+    }
+  }
+
+  .caption {
+    padding: 0.5rem 1rem 1rem;
+    margin-bottom: 0;
+
+    @include mqbp-up(d) {
+      border-left: 1px solid $gray-300;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+.fs-lightbox-close {
+  width: 30px;
+  height: 30px;
+  top: -1rem;
+  right: -1rem;
+  z-index: 105;
+  background: $black;
+  border-radius: 100%;
+  text-indent: 200%;
+  white-space: nowrap;
+  border: 1px solid rgba($white, 0.7);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: $gray-100;
+    content: "\00d7";
+    display: block;
+    font-family: $type-sans;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: auto;
+    text-align: center;
+    text-indent: 0;
+    transition: color .15s linear;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::before {
+      color: $white;
+    }
+  }
+}
+
+.fs-lightbox-control {
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  background: rgba($white, 0.7);
+  border-radius: 100%;
+  overflow: hidden;
+  border: 1px solid $white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity $transition,
+    visibility $transition;
+
+  &::before {
+    color: $black;
+    content: "\00d7";
+    display: block;
+    font-family: 'feathericons', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: auto;
+    text-align: center;
+    text-indent: 0;
+    transition: color .15s linear;
+  }
+
+  &_previous {
+    transition: left $transition;
+
+    &::before {
+      content: $icon--chevron-left;
+      text-indent: -2px;
+    }
+  }
+
+  &_next {
+    transition: right $transition;
+
+    &::before {
+      content: $icon--chevron-right;
+      text-indent: 2px;
+    }
+  }
+}
+
+.fs-lightbox-container:hover {
+  .fs-lightbox-control {
+    opacity: 1;
+    visibility: visible;
+
+    &_previous {
+      left: 1rem;
+    }
+
+    &_next {
+      right: 1rem;
+    }
+  }
+}
