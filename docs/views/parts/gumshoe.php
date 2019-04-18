@@ -1,7 +1,7 @@
-<header class="section pos--sticky z--max">
-  <h2 class="k_section__header">Checkpoint</h2>
+<header class="section pos--sticky z--1">
+  <h2 class="k_section__header">Gumshoe</h2>
   <nav>
-    <ul class="gs ls--inline">
+    <ul class="gumshoe ls--inline">
       <li><a href="#section-1">Section 1</a></li>
       <li><a href="#section-2">Section 2</a></li>
       <li><a href="#section-3">Section 3</a></li>
