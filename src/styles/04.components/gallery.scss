@@ -5,13 +5,14 @@
 
 .fs-lightbox {
   width: auto;
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 90%;
   background: rgba($white, 0.2);
 
+  @include mqbp-up(d) {
+    max-width: 80%;
+  }
+
   &-container {
-    max-width: 90vw;
-    max-height: 90vh;
     background: transparent;
   }
 

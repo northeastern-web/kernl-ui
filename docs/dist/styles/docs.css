@@ -18,7 +18,7 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 @-ms-viewport {
@@ -2934,20 +2934,16 @@ _:-ms-lang(x), .card .__graphic__img {
   height: auto !important;
 }
 
-.fs-carousel-contained,
-.fs-carousel-viewport {
+.fs-carousel-contained, .fs-carousel-viewport {
   overflow: visible !important;
 }
-
 .fs-carousel-wrapper {
   overflow: hidden;
 }
-
 .fs-carousel-pagination {
   text-align: center;
   padding: 0.25rem 0;
 }
-
 .fs-carousel-page {
   margin: 0 3px;
   width: 0.75rem;
@@ -2961,7 +2957,19 @@ _:-ms-lang(x), .card .__graphic__img {
 .fs-carousel-page.fs-carousel-active {
   background: #000000;
 }
-
+.fs-carousel-item {
+  padding: 1rem;
+}
+.fs-carousel-item p:last-child,
+.fs-carousel-item ol:last-child,
+.fs-carousel-item ul:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .fs-carousel-item {
+    padding: 1.5rem;
+  }
+}
 .fs-carousel-control {
   position: absolute;
   bottom: -1.75rem;
@@ -2974,7 +2982,6 @@ _:-ms-lang(x), .card .__graphic__img {
   text-indent: 0;
   position: absolute;
 }
-
 .fs-carousel-control_previous {
   left: 0;
 }
@@ -2982,7 +2989,6 @@ _:-ms-lang(x), .card .__graphic__img {
   left: 0;
   content: "\E921";
 }
-
 .fs-carousel-control_next {
   right: 0;
 }
@@ -2993,13 +2999,15 @@ _:-ms-lang(x), .card .__graphic__img {
 
 .fs-lightbox {
   width: auto;
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 90%;
   background: rgba(255, 255, 255, 0.2);
 }
+@media (min-width: 992px) {
+  .fs-lightbox {
+    max-width: 80%;
+  }
+}
 .fs-lightbox-container {
-  max-width: 90vw;
-  max-height: 90vh;
   background: transparent;
 }
 .fs-lightbox-meta_content {
@@ -23595,6 +23603,98 @@ _:-ms-lang(x), .card .__graphic__img {
 
 .svg--stroke {
   stroke: currentColor;
+}
+
+div#nu__globalheader {
+  font-family: "Lato", sans-serif, "Material Icons";
+  line-height: 28px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  border-bottom: solid #979797 1px;
+  background: black;
+  width: 100vw;
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+}
+
+div#nu__utility-nav {
+  top: 0;
+  left: 0;
+  height: 44px;
+  width: 97vw;
+  margin: 0 auto 0 auto;
+}
+
+div#nu__globalheader {
+  padding: 2rem 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 28px;
+  font-weight: 300;
+  letter-spacing: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 0;
+  position: static;
+}
+@media (min-width: 720px) {
+  div#nu__globalheader {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+@media (min-width: 1280px) {
+  div#nu__globalheader {
+    padding-right: 72px;
+    padding-left: 72px;
+  }
+}
+
+.full div#nu__globalheader {
+  padding: 2rem 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media (min-width: 720px) {
+  .full div#nu__globalheader {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+@media (min-width: 1280px) {
+  .full div#nu__globalheader {
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+}
+
+.contain div#nu__globalheader {
+  padding: 2rem 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media (min-width: 720px) {
+  .contain div#nu__globalheader {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+div#nu__utility-nav {
+  width: 100%;
+}
+
+div#nu__utility-nav > a {
+  display: inline-block;
+  overflow: hidden;
+  height: 44px;
+}
+div#nu__utility-nav > a > img {
+  height: 58px;
+  margin-top: -13px;
 }
 
 @media print {

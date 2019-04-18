@@ -19792,7 +19792,10 @@ __webpack_require__.r(__webpack_exports__);
 // Gallery
  // Initialize Formstone carousel()
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(".lightbox").lightbox({});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(".lightbox").lightbox({
+  top: 30,
+  fixed: true
+});
 
 /***/ }),
 

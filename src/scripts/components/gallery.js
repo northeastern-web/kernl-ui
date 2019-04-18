@@ -4,4 +4,7 @@
 import $ from 'jquery';
 
 // Initialize Formstone carousel()
-$(".lightbox").lightbox({});
+$(".lightbox").lightbox({
+  top: 30,
+  fixed: true
+});
