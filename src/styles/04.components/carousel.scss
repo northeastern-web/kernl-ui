@@ -3,60 +3,81 @@
 
 @import '~formstone/dist/css/carousel.css';
 
-.fs-carousel-contained,
-.fs-carousel-viewport { overflow: visible !important; }
+.fs-carousel {
+  &-contained,
+  &-viewport { overflow: visible !important; }
 
-.fs-carousel-wrapper { overflow: hidden; }
+  &-wrapper { overflow: hidden; }
 
-.fs-carousel-pagination {
-  text-align: center;
-  padding: 0.25rem 0;
-}
+  &-pagination {
+    text-align: center;
+    padding: 0.25rem 0;
+  }
 
-.fs-carousel-page {
-  @extend .br--round;
+  &-page {
+    @extend .br--round;
 
-  margin: 0 3px;
-  width: 0.75rem;
-  height: 0.75rem;
-  overflow: hidden;
-  text-indent: 200%;
-  white-space: nowrap;
-  line-height: 0;
-  background: $gray-300;
+    margin: 0 3px;
+    width: 0.75rem;
+    height: 0.75rem;
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+    line-height: 0;
+    background: $gray-300;
 
-  &.fs-carousel-active { background: $black; }
-}
+    &.fs-carousel-active { background: $black; }
+  }
 
-.fs-carousel-controls {
-  @extend .pin;
-}
+  &-controls {
+    @extend .pin;
+  }
 
-.fs-carousel-control {
-  position: absolute;
-  bottom: -1.75rem;
-  text-indent: -9999px;
-  font-size: 1.25rem;
+  &-item {
+    padding: 1rem;
 
-  &:before {
-    font-family: "feathericons";
-    font-weight: normal;
-    text-indent: 0;
+    p,
+    ol,
+    ul {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include mqbp-up(d) {
+      padding: 1.5rem;
+    }
+  }
+
+  &-control {
     position: absolute;
-  }
-}
+    bottom: -1.75rem;
+    text-indent: -9999px;
+    font-size: 1.25rem;
 
-.fs-carousel-control_previous {
-  left: 0;
-  &:before {
-    left: 0;
-    content: "\e921";
+    &:before {
+      font-family: "feathericons";
+      font-weight: normal;
+      text-indent: 0;
+      position: absolute;
+    }
   }
-}
-.fs-carousel-control_next {
-  right: 0;
-  &:before {
+
+  &-control_previous {
+    left: 0;
+
+    &:before {
+      left: 0;
+      content: "\e921";
+    }
+  }
+
+  &-control_next {
     right: 0;
-    content: "\e922";
+
+    &:before {
+      right: 0;
+      content: "\e922";
+    }
   }
 }

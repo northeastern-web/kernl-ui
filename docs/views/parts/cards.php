@@ -85,7 +85,7 @@
 
     <!-- mixed ratios and orientations at multiple breakpoints -->
     <div class="col w--1/2@t w--1/4@d">
-      <article class="card">
+      <article class="card checkpoint" data-checkpoint-animation="fade-up">
         <a href="#" class="__link">
           <div class="__graphic ar--1x1 ar--16x9@w"></div>
           <div class="__body">
@@ -100,7 +100,7 @@
       </article>
     </div>
     <div class="col w--1/2@t w--1/4@d">
-      <article class="card --h --right --v@t">
+      <article class="card checkpoint --h --right --v@t" data-checkpoint-animation="fade-up">
         <a href="#" class="__link">
           <div class="__graphic ar--16x9 ar--1x1@t ar--16x9@w"></div>
           <div class="__body">
@@ -115,7 +115,7 @@
       </article>
     </div>
     <div class="col w--1/2@t w--1/4@d">
-      <article class="card">
+      <article class="card checkpoint" data-checkpoint-animation="fade-up">
         <a href="#" class="__link">
           <div class="__graphic ar--16x9 ar--1x1@d ar--16x9@w"></div>
           <div class="__body">
@@ -130,7 +130,7 @@
       </article>
     </div>
     <div class="col w--1/2@t w--1/4@d">
-      <article class="card">
+      <article class="card checkpoint" data-checkpoint-animation="fade-up">
         <a href="#" class="__link">
           <div class="__graphic ar--16x9 ar--1x1@d ar--16x9@w"></div>
           <div class="__body">
