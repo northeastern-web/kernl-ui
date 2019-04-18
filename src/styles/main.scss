@@ -41,7 +41,7 @@
 @import "04.components/button";
 @import "04.components/card";
 @import "04.components/carousel";
-@import "04.components/gallery";
+@import "04.components/checkpoint";
 @import "04.components/icon";
 @import "04.components/list-group";
 @import "04.components/loader";
@@ -123,8 +123,6 @@
 @import "05.utilities/misc/opacity";
 @import "05.utilities/misc/rotations";
 @import "05.utilities/misc/svg";
-
-@import "northeastern.scss";
 
 // Print overrides
 @import "print";
