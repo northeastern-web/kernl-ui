@@ -546,6 +546,11 @@
   &.\+utility {
     .__list:not(.\--utility) {
       @include mqbp-up(d) {
+        .__item {
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+        }
+
         margin-top: 3rem;
 
         > .__item > .__link {
