@@ -61,6 +61,10 @@ div#nu__globalheader {
   padding-bottom: 0;
 }
 
+.contain.\--body div#nu__globalheader {
+  @include make-section();
+}
+
 div#nu__utility-nav { width: 100%; }
 
 div#nu__utility-nav > a {

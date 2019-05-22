@@ -13,6 +13,9 @@
 .contain .section,
 .contain .masthead { @include make-section('contain', $contain: $contain-width); }
 
+// restrict container to non-masthead sections
+.contain.\--body .masthead { @include make-section(); }
+
 
 .section {
   @include make-section();
@@ -124,7 +127,8 @@
   }
 }
 
-.col--stretch {
+.col--stretch,
+.col__stretch {
   .col {
     @extend .d--flex;
     @extend .items--stretch;

@@ -4,9 +4,6 @@
 // .w--<value>
 
 
-.mw--0    { min-width: 0; }
-.mw--100  { min-width: 100%; }
-
 .w--fit {
   width: auto;
   flex: 1;
@@ -39,3 +36,8 @@
     }
   }
 }
+
+// Max widths
+.mw--0    { min-width: 0; }
+.mw--100  { min-width: 100%; }
+.mw--none { max-width: none; }
