@@ -3,7 +3,11 @@
 
 
 @mixin make-section($container: "default", $gutters: $gutters, $contain: $contain-width) {
-  padding: 2rem 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
