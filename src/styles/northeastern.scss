@@ -3,7 +3,7 @@
 
 
 // PODS overrides
-#nu__globalheader {
+div#nu__globalheader {
   @include make-section();
 
   padding-top: 0 !important;
@@ -18,21 +18,21 @@
   position: static;
 }
 
-.full #nu__globalheader {
+.full div#nu__globalheader {
   @include make-section('full');
 }
 
-.contain #nu__globalheader {
+.contain div#nu__globalheader {
   @include make-section('contain', $contain: $contain-width);
 }
 
-.contain.\--body #nu__globalheader {
+.contain.\--body div#nu__globalheader {
   @include make-section();
 }
 
-#nu__utility-nav { width: 100%; }
+div#nu__utility-nav { width: 100%; }
 
-#nu__utility-nav > a {
+div#nu__utility-nav > a {
   display: inline-block;
   overflow: hidden;
   height: 44px;
