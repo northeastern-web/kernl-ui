@@ -1,42 +1,13 @@
 // NU Marketing Elements
 // Global Header & Footer
 
-//
-// dev only:
-//
-div#nu__globalheader { // as defined by marcomm
-  font-family: "Lato", sans-serif, "Material Icons";
-  line-height: 28px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  border-bottom: solid #979797 1px;
-  background: black;
-  width: 100vw;
-  position: fixed;
-  z-index: 5000;
-  top: 0;
-}
-
-div#nu__utility-nav { // as defined by marcomm
-  top: 0;
-  left: 0;
-  height: 44px;
-  width: 97vw;
-  margin: 0 auto 0 auto;
-}
-//
-// end dev only
-//
 
 // PODS overrides
-
-div#nu__globalheader {
+#nu__globalheader {
   @include make-section();
 
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
   font-family: $type-sans;
   line-height: 28px;
   font-weight: 300;
@@ -47,27 +18,21 @@ div#nu__globalheader {
   position: static;
 }
 
-.full div#nu__globalheader {
+.full #nu__globalheader {
   @include make-section('full');
-
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
-.contain div#nu__globalheader {
+.contain #nu__globalheader {
   @include make-section('contain', $contain: $contain-width);
-
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
-.contain.\--body div#nu__globalheader {
+.contain.\--body #nu__globalheader {
   @include make-section();
 }
 
-div#nu__utility-nav { width: 100%; }
+#nu__utility-nav { width: 100%; }
 
-div#nu__utility-nav > a {
+#nu__utility-nav > a {
   display: inline-block;
   overflow: hidden;
   height: 44px;
