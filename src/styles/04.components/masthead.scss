@@ -35,7 +35,7 @@
 
   .__logo__image {
     max-width: 100%;
-    max-height: 3rem;
+    max-height: 2.5rem;
   }
 
   .__toggler {
@@ -620,6 +620,12 @@
 
     @include mqbp-up(w) {
       top: 1.5rem;
+    }
+  }
+
+  &.\--logo-lg {
+    .__logo__image {
+      max-height: 3.75rem;
     }
   }
 }
