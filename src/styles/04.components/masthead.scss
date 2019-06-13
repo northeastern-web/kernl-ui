@@ -621,6 +621,12 @@
     }
   }
 
+  &.\--logo-md {
+    .__logo__image {
+      max-height: 3.25rem;
+    }
+  }
+
   &.\--logo-lg {
     .__logo__image {
       max-height: 3.75rem;
