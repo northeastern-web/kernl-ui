@@ -4268,7 +4268,7 @@ _:-ms-lang(x), .card .__graphic__img {
 @media (min-width: 992px) {
   .masthead .__link,
 .masthead .__item a {
-    padding: 0.75rem 0;
+    padding: 1rem 0;
     font-size: 0.88rem;
     color: #333;
     border: 0 none;
@@ -4376,19 +4376,17 @@ _:-ms-lang(x), .card .__graphic__img {
     border-top: 1px solid #d0d0d0;
     background-color: #fff;
   }
-  .masthead .\+children:hover .__submenu, .masthead .\+children:focus .__submenu,
-.masthead .\+children > a:focus + .__submenu {
+  .masthead .\+children:hover .__submenu {
     height: auto;
     background-color: #ffffff;
     overflow: scroll;
     max-height: 25rem;
     width: 13rem;
-    top: 2.825rem;
+    top: 3.35rem;
     opacity: 1;
     padding: 1rem !important;
   }
-  .masthead .\+children:hover .__submenu .__item, .masthead .\+children:focus .__submenu .__item,
-.masthead .\+children > a:focus + .__submenu .__item {
+  .masthead .\+children:hover .__submenu .__item {
     margin: 0 0.75rem;
   }
 }
@@ -4894,7 +4892,7 @@ _:-ms-lang(x), .card .__graphic__img {
     max-height: 20rem;
     width: 13rem;
     opacity: 1;
-    padding: 1rem !important;
+    padding: 1rem;
   }
   .masthead .\+children:focus-within .__submenu .__item {
     margin: 0 0.75rem;
@@ -4917,7 +4915,7 @@ _:-ms-lang(x), .card .__graphic__img {
     z-index: 300;
     width: auto;
     opacity: 1;
-    padding: 1rem !important;
+    padding: 1rem;
     box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.1);
     transition: max-height 0.4s ease 0.1s, box-shadow 0.2s ease, color 0.2s ease 0.3s;
   }
