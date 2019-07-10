@@ -142,7 +142,7 @@
 // Page banner default styling
 // .banner used exclusively for sections immediately opening and page/article
 .section.\--banner {
-  @extend .fs--smooth;
+  @extend .fs-smooth;
   display: flex;
   align-items: center;
   padding-top: 4.4rem;

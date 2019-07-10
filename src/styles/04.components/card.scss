@@ -203,8 +203,8 @@
 
       .__body {
         @extend .pin--c;
-        @extend .ta--c;
-        @extend .w--100;
+        @extend .ta-c;
+        @extend .w-100;
       }
     }
   }
@@ -222,7 +222,7 @@
 
       .__body {
         @extend .pin--b;
-        @extend .w--100;
+        @extend .w-100;
       }
     }
   }

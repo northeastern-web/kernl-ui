@@ -1,7 +1,7 @@
 <section class="section --bal pt--2 col--stretch">
   <div class="row">
     <!-- basic cards -->
-    <div class="col w--1/3@t">
+    <div class="col w-1/3@t">
       <article class="card">
         <a href="#" class="__link">
           <div class="__body">
@@ -11,7 +11,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/3@t">
+    <div class="col w-1/3@t">
       <article class="card">
         <div class="__header pa--1">
           <div class="__column">Card Header</div>
@@ -22,7 +22,7 @@
         </div>
       </article>
     </div>
-    <div class="col w--1/3@t">
+    <div class="col w-1/3@t">
       <article class="card">
         <a href="#" class="__link">
           <div class="__body">
@@ -34,7 +34,7 @@
     </div>
 
     <!-- image example -->
-    <div class="col w--1/3@d">
+    <div class="col w-1/3@d">
       <article class="card --h@t --v@d">
         <a href="#" class="__link">
           <div class="__graphic ar--16x9"></div>
@@ -49,7 +49,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/3@d">
+    <div class="col w-1/3@d">
       <article class="card --h@t --v@d --right">
         <a href="#" class="__link">
           <div class="__graphic ar--16x9"></div>
@@ -69,7 +69,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/3@d">
+    <div class="col w-1/3@d">
       <article class="card --h@t --v@d">
         <div class="__graphic ar--16x9"></div>
         <div class="__body">
@@ -84,7 +84,7 @@
     </div>
 
     <!-- mixed ratios and orientations at multiple breakpoints -->
-    <div class="col w--1/2@t w--1/4@d">
+    <div class="col w-1/2@t w-1/4@d">
       <article class="card checkpoint" data-checkpoint-animation="fade-up">
         <a href="#" class="__link">
           <div class="__graphic ar--1x1 ar--16x9@w"></div>
@@ -99,7 +99,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2@t w--1/4@d">
+    <div class="col w-1/2@t w-1/4@d">
       <article class="card checkpoint --h --right --v@t" data-checkpoint-animation="fade-up">
         <a href="#" class="__link">
           <div class="__graphic ar--16x9 ar--1x1@t ar--16x9@w"></div>
@@ -114,7 +114,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2@t w--1/4@d">
+    <div class="col w-1/2@t w-1/4@d">
       <article class="card checkpoint" data-checkpoint-animation="fade-up">
         <a href="#" class="__link">
           <div class="__graphic ar--16x9 ar--1x1@d ar--16x9@w"></div>
@@ -129,7 +129,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2@t w--1/4@d">
+    <div class="col w-1/2@t w-1/4@d">
       <article class="card checkpoint" data-checkpoint-animation="fade-up">
         <a href="#" class="__link">
           <div class="__graphic ar--16x9 ar--1x1@d ar--16x9@w"></div>
@@ -147,7 +147,7 @@
 
     <!-- Profile -->
 
-    <div class="col w--1/2 w--1/3@t w--20@d">
+    <div class="col w-1/2 w-1/3@t w-20@d">
       <article class="card --profile">
         <a href="#" class="__link">
           <div class="__graphic ar--1x1"></div>
@@ -162,7 +162,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2 w--1/3@t w--20@d">
+    <div class="col w-1/2 w-1/3@t w-20@d">
       <article class="card --profile">
         <a href="#" class="__link">
           <div class="__graphic ar--1x1"></div>
@@ -177,7 +177,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2 w--1/3@t w--20@d">
+    <div class="col w-1/2 w-1/3@t w-20@d">
       <article class="card --profile">
         <a href="#" class="__link">
           <div class="__graphic ar--1x1"></div>
@@ -192,7 +192,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2 w--1/3@t w--20@d">
+    <div class="col w-1/2 w-1/3@t w-20@d">
       <article class="card --profile">
         <a href="#" class="__link">
           <div class="__graphic ar--1x1"></div>
@@ -207,7 +207,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2 w--1/3@t w--20@d">
+    <div class="col w-1/2 w-1/3@t w-20@d">
       <article class="card --profile">
         <a href="#" class="__link">
           <div class="__graphic ar--1x1"></div>
@@ -225,7 +225,7 @@
 
     <!-- image overlay example -->
 
-    <div class="col w--1/3@d">
+    <div class="col w-1/3@d">
       <article class="card --overlay">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -241,7 +241,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/3@d">
+    <div class="col w-1/3@d">
       <article class="card --overlay --middle">
         <div class="__graphic"></div>
         <header class="__header">
@@ -255,7 +255,7 @@
         </div>
       </article>
     </div>
-    <div class="col w--1/3@d">
+    <div class="col w-1/3@d">
       <article class="card --overlay --bottom">
         <a href="#" class="__link">
           <div class="__graphic"></div>
@@ -269,7 +269,7 @@
 
     <!-- tile option -->
 
-    <div class="col w--1/2 w--1/3@t w--1/6@d">
+    <div class="col w-1/2 w-1/3@t w-1/6@d">
       <article class="card --tile">
         <a href="#" class="__link">
           <div class="__body">
@@ -279,7 +279,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2 w--1/3@t w--1/6@d">
+    <div class="col w-1/2 w-1/3@t w-1/6@d">
       <article class="card --tile --middle">
         <a href="#" class="__link">
           <div class="__body">
@@ -289,7 +289,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2 w--1/3@t w--1/6@d">
+    <div class="col w-1/2 w-1/3@t w-1/6@d">
       <article class="card --tile">
         <a href="#" class="__link">
           <div class="__body">
@@ -299,7 +299,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2 w--1/3@t w--1/6@d">
+    <div class="col w-1/2 w-1/3@t w-1/6@d">
       <article class="card --tile --bottom">
         <a href="#" class="__link">
           <div class="__body">
@@ -309,7 +309,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2 w--1/3@t w--1/6@d">
+    <div class="col w-1/2 w-1/3@t w-1/6@d">
       <article class="card --tile">
         <a href="#" class="__link">
           <div class="__body">
@@ -319,7 +319,7 @@
         </a>
       </article>
     </div>
-    <div class="col w--1/2 w--1/3@t w--1/6@d">
+    <div class="col w-1/2 w-1/3@t w-1/6@d">
       <article class="card --tile --middle">
         <a href="#" class="__link">
           <div class="__body">

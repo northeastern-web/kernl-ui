@@ -60,15 +60,15 @@
         <h4 class="fw--700 fs--d2">Inline Form and Plaintext Input</h4>
         <div class="bg--gray-50 bc--gray-200 pa--1">
           <div class="row items--center">
-            <div class="col w--40@t">
+            <div class="col w-40@t">
               <label class="sr--only" for="exampleInputEmailx">Email address</label>
               <input class="--plaintext" readonly type="email" id="exampleInputEmailx" aria-describedby="emailHelp" placeholder="plain.text@readonly.com">
             </div>
-            <div class="col w--40@t">
+            <div class="col w-40@t">
               <label class="sr--only" for="exampleInputPasswordx">Password</label>
               <input type="password" id="exampleInputPasswordx" placeholder="Password">
             </div>
-            <div class="col w--20@t ta--c">
+            <div class="col w-20@t ta-c">
               <button type="submit" class="btn --block">Submit</button>
             </div>
           </div>

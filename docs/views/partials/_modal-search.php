@@ -5,7 +5,7 @@
      aria-labelledby="modal_search_label"
      aria-hidden="true">
   <div class="__screen" data-dismiss="modal"></div>
-  <div class="__content w--100@d">
+  <div class="__content w-100@d">
     <div class="__body">
       <form action="" method="">
         <div class="form__enclosed --search --dark --line">

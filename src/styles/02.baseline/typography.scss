@@ -96,7 +96,7 @@ a {
 // Blockquotes
 
 blockquote {
-  @extend .fs--smooth;
+  @extend .fs-smooth;
   @include type_lead();
 
   margin: 0 0 1rem;

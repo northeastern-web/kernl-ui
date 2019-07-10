@@ -150,14 +150,14 @@
         <p class="text-style-block">Text Alignment</p>
         <p>Override a text element's alignment</p>
         <ul class="fs--sm">
-          <li><code>ta--l</code> <i>align left</i></li>
-          <li><code>ta--r</code> <i>align right</i></li>
-          <li><code>ta--c</code> <i>align center</i></li>
+          <li><code>ta-l</code> <i>align left</i></li>
+          <li><code>ta-r</code> <i>align right</i></li>
+          <li><code>ta-c</code> <i>align center</i></li>
         </ul>
         <p>Optionally add a breakpoint:</p>
         <ul class="fs--sm">
-          <li><b>Example</b>: <code>ta--l@md</code> <i>align left at medium screen sizes</i></li>
-          <li><b>Example</b>: <code>ta--r@lg</code> <i>align right at large screen sizes</i></li>
+          <li><b>Example</b>: <code>ta-l@md</code> <i>align left at medium screen sizes</i></li>
+          <li><b>Example</b>: <code>ta-r@lg</code> <i>align right at large screen sizes</i></li>
         </ul>
       </div>
     </div>
@@ -192,18 +192,18 @@
             <table class="table --border fs--sm">
               <tr>
                 <td><code>bg--lt</code><br><i>left top</i></td>
-                <td class="ta--c"><code>bg--t</code><br><i>center top</i></td>
-                <td class="ta--r"><code>bg--rt</code><br><i>right top</i></td>
+                <td class="ta-c"><code>bg--t</code><br><i>center top</i></td>
+                <td class="ta-r"><code>bg--rt</code><br><i>right top</i></td>
               </tr>
               <tr>
                 <td><code>bg--l</code><br><i>left center</i></td>
-                <td class="ta--c"><b>default</b>:<br><i>center center</i></td>
-                <td class="ta--r"><code>bg--r</code><br><i>right center</i></td>
+                <td class="ta-c"><b>default</b>:<br><i>center center</i></td>
+                <td class="ta-r"><code>bg--r</code><br><i>right center</i></td>
               </tr>
               <tr>
                 <td><code>bg--lb</code><br><i>left bottom</i></td>
-                <td class="ta--c"><code>bg--b</code><br><i>center bottom</i></td>
-                <td class="ta--r"><code>bg--rb</code><br><i>right bottom</i></td>
+                <td class="ta-c"><code>bg--b</code><br><i>center bottom</i></td>
+                <td class="ta-r"><code>bg--rb</code><br><i>right bottom</i></td>
               </tr>
             </table>
           </div>

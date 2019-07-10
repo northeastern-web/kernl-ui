@@ -1,7 +1,7 @@
 <section class="section">
   <header class="k_section__header">Base</header>
   <div class="row">
-    <div class="col w--50@t">
+    <div class="col w-50@t">
       <p class="text-style-block">Default: thumb on the left</p>
       <div class="media --xs">
         <a class="__link" href="#">
@@ -40,7 +40,7 @@
         </a>
       </div>
     </div>
-    <div class="col w--50@t">
+    <div class="col w-50@t">
       <p class="text-style-block">Variation: thumb on the right</p>
       <div class="media --xs --right">
         <a class="__link" href="#">
@@ -86,7 +86,7 @@
 <section class="section">
   <header class="k_section__header">Media Object List</header>
   <div class="row">
-    <div class="col w--50@t">
+    <div class="col w-50@t">
       <p class="text-style-block">Default: circular thumb</p>
       <ul class="list-group --media">
         <li class="media">
@@ -127,7 +127,7 @@
         </li>
       </ul>
     </div>
-    <div class="col w--50@t">
+    <div class="col w-50@t">
       <p class="text-style-block">Variation: rectangular thumb</p>
       <ul class="list-group --media --rect">
         <li class="media">
@@ -178,7 +178,7 @@
     Add <code>col--stretch</code> class to parent <code>section</code>. Makes media objects parent columns within a row equal height. <b>Note</b>: Padding should be applied in the column's custom classes on the Wordpress backend.
   </div>
   <div class="row">
-    <div class="col w--50@t w--1/3@d">
+    <div class="col w-50@t w-1/3@d">
       <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
@@ -189,7 +189,7 @@
         </a>
       </div>
     </div>
-    <div class="col w--50@t w--1/3@d">
+    <div class="col w-50@t w-1/3@d">
       <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
@@ -200,7 +200,7 @@
         </a>
       </div>
     </div>
-    <div class="col w--50@t w--1/3@d">
+    <div class="col w-50@t w-1/3@d">
       <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
@@ -211,7 +211,7 @@
         </a>
       </div>
     </div>
-    <div class="col w--50@t w--1/3@d">
+    <div class="col w-50@t w-1/3@d">
       <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
@@ -222,7 +222,7 @@
         </a>
       </div>
     </div>
-    <div class="col w--50@t w--1/3@d">
+    <div class="col w-50@t w-1/3@d">
       <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>
@@ -233,7 +233,7 @@
         </a>
       </div>
     </div>
-    <div class="col w--50@t w--1/3@d">
+    <div class="col w-50@t w-1/3@d">
       <div class="media">
         <a class="__link" href="#">
           <figure class="__graphic"></figure>

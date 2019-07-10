@@ -1,6 +1,6 @@
 <section class="section">
   <div class="row">
-    <div class="col w--1/3@t">
+    <div class="col w-1/3@t">
       <header class="k_section__header">Base</header>
       <?php
         /**
@@ -8,7 +8,7 @@
          * do not use in development or production.
          */
       ?>
-      <p class="modal-demo ta--c">
+      <p class="modal-demo ta-c">
         <a class="btn --xs" href="#" data-size="sm" data-toggle="modal" data-target="#modal_base">Modal sm</a>
         <a class="btn --sm" href="#" data-size="base" data-toggle="modal" data-target="#modal_base">Modal</a><br>
         <a class="btn" href="#" data-size="lg" data-toggle="modal" data-target="#modal_base">Modal lg</a>
@@ -37,9 +37,9 @@
       </div>
     </div>
 
-    <div class="col w--1/3@t">
+    <div class="col w-1/3@t">
       <header class="k_section__header">Dark</header>
-      <p class="modal-demo ta--c">
+      <p class="modal-demo ta-c">
         <a class="btn --xs bg--transparent-dark" href="#" data-size="sm" data-toggle="modal" data-target="#modal_dark">Modal sm</a>
         <a class="btn --sm bg--transparent-dark" href="#" data-size="base" data-toggle="modal" data-target="#modal_dark">Modal</a><br>
         <a class="btn bg--transparent-dark" href="#" data-size="lg" data-toggle="modal" data-target="#modal_dark">Modal lg</a>
@@ -70,9 +70,9 @@
 
     </div>
 
-    <div class="col w--1/3@t">
+    <div class="col w-1/3@t">
       <header class="k_section__header">Grid</header>
-      <p class="modal-demo ta--c">
+      <p class="modal-demo ta-c">
         <a class="btn --xs bg--gray-200" href="#" data-size="sm" data-toggle="modal" data-target="#modal_grid">Grid sm</a>
         <a class="btn --sm bg--gray-200" href="#" data-size="base" data-toggle="modal" data-target="#modal_grid">Grid</a><br>
         <a class="btn bg--gray-200" href="#" data-size="lg" data-toggle="modal" data-target="#modal_grid">Grid lg</a>
@@ -88,9 +88,9 @@
         <div class="__content bg--white pa--0 section --nogutters">
 
           <div class="row">
-            <div class="col mx--auto w--2/3@t">
-              <div class="w--1/3@d f--r@d pt--2h@t ml--1@d mb--1@d ta--c">
-                <img class="w--100 w--90@t w--100@d" src="docs/images/random/337869.jpg" alt="image">
+            <div class="col mx--auto w-2/3@t">
+              <div class="w--1/3@d f--r@d pt--2h@t ml--1@d mb--1@d ta-c">
+                <img class="w--100 w-90@t w-100@d" src="docs/images/random/337869.jpg" alt="image">
               </div>
               <div class="__body">
                 <h2 class="__title">David Mary Davenport</h2>
@@ -120,7 +120,7 @@
   <header class="k_section__header">Full-Screen (Example: Search)</header>
   <div class="row">
     <div class="col">
-      <div class="modal-demo ta--c py--1 py--3@t">
+      <div class="modal-demo ta-c py--1 py--3@t">
         <a href="#" data-toggle="modal" data-size="full" data-target="#modal_search">
           <i data-feather="search"></i>
         </a>

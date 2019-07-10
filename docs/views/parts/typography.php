@@ -116,11 +116,11 @@
         <p class="mb--0">Works like the grid. Element <code>dl</code> extends <code>.row</code>. Elements <code>dt</code> and <code>dd</code> extend <code>.col</code> and stack by default, but can be overridden individually just by adding grid column classes: <code>w--&lt;value&gt;@&lt;breakpoint&gt;</code>.</p>
       </div>
       <dl>
-        <dt class="w--1/4@t w--20@w">Single room</dt>
-        <dd class="w--3/4@t w--80@w">$199/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
+        <dt class="w--1/4@t w-20@w">Single room</dt>
+        <dd class="w--3/4@t w-80@w">$199/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
 
-        <dt class="w--1/4@t w--20@w">Double room</dt>
-        <dd class="w--3/4@t w--80@w">$239/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
+        <dt class="w--1/4@t w-20@w">Double room</dt>
+        <dd class="w--3/4@t w-80@w">$239/night <small>(breakfast included, <abbr>VAT</abbr> not included)</small></dd>
       </dl>
       <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
       <hr>
@@ -154,7 +154,7 @@
   <p>Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 </header>
 
-<header class="section ta--c pt--3 bg--gray-800">
+<header class="section ta-c pt--3 bg--gray-800">
   <div class="__header">
     <div class="__pretitle mb--0h"><i>Now for something completely different:</i></div>
     <h2 class="__title fs--d4 mb--0h fw--300">A Sample of Real-World Text</h2>
@@ -163,7 +163,7 @@
 </header>
 <section class="section bg--gray-800">
   <div class="row">
-    <div class="col w--2/3@t ow--1/6@t">
+    <div class="col w-2/3@t ow--1/6@t">
       <section class="section pa--2 mb--2@d bg--white tc--gray-800">
         <!-- sample of dense text -->
         <h2>Tenure and Tenure-Track Faculty</h2>
@@ -284,8 +284,8 @@
     <div class="col">
       <header class="k_section__header">Breadcrumbs</header>
       <dl class="row pb--1">
-        <dt class="col w--1/4@t"><small class="text-style-block">Default</small></dt>
-        <dd class="col w--3/4@t">
+        <dt class="col w-1/4@t"><small class="text-style-block">Default</small></dt>
+        <dd class="col w-3/4@t">
           <nav class="breadcrumb">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -293,8 +293,8 @@
           </nav>
         </dd>
 
-        <dt class="col w--1/4@t"><small class="text-style-block">Default, Small</small></dt>
-        <dd class="col w--3/4@t">
+        <dt class="col w-1/4@t"><small class="text-style-block">Default, Small</small></dt>
+        <dd class="col w-3/4@t">
           <nav class="breadcrumb --sm">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -304,8 +304,8 @@
       </dl>
 
       <dl class="row pb--1">
-        <dt class="col w--1/4@t"><small class="text-style-block">Dot</small></dt>
-        <dd class="col w--3/4@t">
+        <dt class="col w-1/4@t"><small class="text-style-block">Dot</small></dt>
+        <dd class="col w-3/4@t">
           <nav class="breadcrumb +dot">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -313,8 +313,8 @@
           </nav>
         </dd>
 
-        <dt class="col w--1/4@t"><small class="text-style-block">Dot, Small</small></dt>
-        <dd class="col w--3/4@t">
+        <dt class="col w-1/4@t"><small class="text-style-block">Dot, Small</small></dt>
+        <dd class="col w-3/4@t">
           <nav class="breadcrumb --sm +dot">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -324,8 +324,8 @@
       </dl>
 
       <dl class="row pb--1">
-        <dt class="col w--1/4@t"><small class="text-style-block">Chevron</small></dt>
-        <dd class="col w--3/4@t">
+        <dt class="col w-1/4@t"><small class="text-style-block">Chevron</small></dt>
+        <dd class="col w-3/4@t">
           <nav class="breadcrumb +icon +chevron">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -333,8 +333,8 @@
           </nav>
         </dd>
 
-        <dt class="col w--1/4@t"><small class="text-style-block">Chevron, Small</small></dt>
-        <dd class="col w--3/4@t">
+        <dt class="col w-1/4@t"><small class="text-style-block">Chevron, Small</small></dt>
+        <dd class="col w-3/4@t">
           <nav class="breadcrumb --sm +icon +chevron">
             <a href="#">Home</a>
             <a href="#">Parent Page</a>
@@ -344,8 +344,8 @@
       </dl>
 
       <dl class="row pb--1">
-        <dt class="col w--1/4@t"><small class="text-style-block">Arrow</small></dt>
-        <dd class="col w--3/4@t">
+        <dt class="col w-1/4@t"><small class="text-style-block">Arrow</small></dt>
+        <dd class="col w-3/4@t">
           <nav class="breadcrumb +icon +arrow">
             <a href="#">Home</a>
             <a class="--active" href="#">Search</a>
@@ -359,8 +359,8 @@
       </dl>
 
       <dl class="row">
-        <dt class="col w--1/4@t"><small class="text-style-block">Arrow, Small</small></dt>
-        <dd class="col w--3/4@t">
+        <dt class="col w-1/4@t"><small class="text-style-block">Arrow, Small</small></dt>
+        <dd class="col w-3/4@t">
           <nav class="breadcrumb --sm +icon +arrow">
             <a href="#">Home</a>
             <a class="--active" href="#">Search</a>
@@ -421,7 +421,7 @@
 <section class="section k_bg-light">
   <header class="k_section__header">Blockquotes</header>
   <div class="row">
-    <div class="col w--1/3@d">
+    <div class="col w-1/3@d">
       <blockquote>
         Default blockquote says lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         <footer cite="http://www.washingtonpost.com/">
@@ -432,12 +432,12 @@
         </footer>
       </blockquote>
     </div>
-    <div class="col w--1/3@d">
+    <div class="col w-1/3@d">
       <blockquote class="bg--yellow">
         <p>Blockquote says a colored background is nice sometimes. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       </blockquote>
     </div>
-    <div class="col w--1/3@d">
+    <div class="col w-1/3@d">
       <blockquote class="bg--white --mark shadow">
         Shadowy blockquote has a mark. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         <footer cite="http://www.washingtonpost.com/">

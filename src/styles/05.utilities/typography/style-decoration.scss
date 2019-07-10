@@ -25,7 +25,7 @@
 }
 
 // Smoothing
-.fs--smooth {
+.fs-smooth {
   @media
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi) {
@@ -34,7 +34,7 @@
     }
 }
 
-.fs--smooth-auto {
+.fs-smooth-auto {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }

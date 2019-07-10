@@ -9,7 +9,7 @@ define( 'SHARE_URL', url_elements() );
 
 <section class="section">
   <div class="row">
-    <div class="col w--1/3@t p--y-2">
+    <div class="col w-1/3@t p--y-2">
       <header class="k_section__header">Base</header>
       <ul class="share">
         <li>
@@ -36,7 +36,7 @@ define( 'SHARE_URL', url_elements() );
       </ul>
     </div>
 
-    <div class="col w--1/3@t p--y-2">
+    <div class="col w-1/3@t p--y-2">
       <header class="k_section__header">Stacked</header>
       <ul class="share --stacked">
         <li>
@@ -62,7 +62,7 @@ define( 'SHARE_URL', url_elements() );
       </ul>
     </div>
 
-    <div class="col w--1/3@t p--y-2">
+    <div class="col w-1/3@t p--y-2">
       <header class="k_section__header">Flex/Responsive</header>
       <ul class="share --flex">
         <li>

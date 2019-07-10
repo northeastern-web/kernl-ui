@@ -11,22 +11,22 @@
   </nav>
 </header>
 
-<section id="section-1" class="checkpoint section bg--blue py--15 ta--c">
+<section id="section-1" class="checkpoint section bg--blue py--15 ta-c">
   <h2>Section 1</h2>
 </section>
 
-<section id="section-2" class="checkpoint section bg--green py--15 ta--c">
+<section id="section-2" class="checkpoint section bg--green py--15 ta-c">
   <h2>Section 2</h2>
 </section>
 
-<section id="section-3" class="checkpoint section bg--orange py--15 ta--c" data-checkpoint-animation="fade-up">
+<section id="section-3" class="checkpoint section bg--orange py--15 ta-c" data-checkpoint-animation="fade-up">
   <h2>Section 3</h2>
 </section>
 
-<section id="section-4" class="checkpoint section bg--purple py--15 ta--c">
+<section id="section-4" class="checkpoint section bg--purple py--15 ta-c">
   <h2>Section 4</h2>
 </section>
 
-<section id="section-5" class="checkpoint section bg--purple py--15 ta--c">
+<section id="section-5" class="checkpoint section bg--purple py--15 ta-c">
   <h2>Section 5</h2>
 </section>

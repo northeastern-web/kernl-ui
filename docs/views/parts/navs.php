@@ -8,8 +8,8 @@
 <section class="section">
 
   <div class="row">
-    <div class="col w--1/2@t w--1/4@d">
-      <div class="hidden--up@t ta--c">
+    <div class="col w-1/2@t w-1/4@d">
+      <div class="hidden--up@t ta-c">
         <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_0">
           <i data-feather="align-left"></i>
           Page Menu
@@ -35,8 +35,8 @@
         </ul>
       </nav>
     </div>
-    <div class="col w--1/2@t w--1/4@d">
-      <div class="hidden--up@t ta--c">
+    <div class="col w-1/2@t w-1/4@d">
+      <div class="hidden--up@t ta-c">
         <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_1">
           <i data-feather="align-left"></i>
           Page Menu
@@ -70,8 +70,8 @@
         </ul>
       </nav>
     </div>
-    <div class="col w--1/2@t w--1/4@d">
-      <div class="hidden--up@t ta--c">
+    <div class="col w-1/2@t w-1/4@d">
+      <div class="hidden--up@t ta-c">
         <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_2">
           <i data-feather="align-left"></i>
           Page Menu
@@ -107,8 +107,8 @@
         </ul>
       </nav>
     </div>
-  <div class="col w--1/2@t w--1/4@d">
-    <div class="hidden--up@t ta--c">
+  <div class="col w-1/2@t w-1/4@d">
+    <div class="hidden--up@t ta-c">
       <button class="btn --sm" data-toggle="nav" data-swap-target="#page_menu_3">
         <i data-feather="align-left"></i>
         Page Menu

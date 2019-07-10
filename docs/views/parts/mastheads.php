@@ -64,7 +64,7 @@
       <li class="__item +children">
         <a class="__link" href="<?= $url; ?>">Lorem Ipsum</a>
         <ul class="__submenu">
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Malesuada Bibendum</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Bibendum Mattis Dapibus</a></li>
@@ -72,7 +72,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Tortor Fusce</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Tortor Fusce</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Malesuada Bibendum</a></li>
@@ -81,7 +81,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Malesuada Bibendum</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Quam Vulputate Nibh</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Quam Vulputate Nibh</a></li>
@@ -91,7 +91,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Tortor Fusce</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d --feature">
+          <li class="col w-1/4@d --feature">
             <a class="__link --heading" href="<?= $url; ?>">Bibendum Mattis Dapibus</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Vulputate Nibh Quam</a></li>
@@ -105,7 +105,7 @@
       <li class="__item +children">
         <a class="__link" href="<?= $url; ?>">Bibendum</a>
         <ul class="__submenu">
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Tortor Fusce</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Malesuada Bibendum</a></li>
@@ -114,7 +114,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Malesuada Bibendum</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Quam Vulputate Nibh</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Quam Vulputate Nibh</a></li>
@@ -123,7 +123,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Bibendum Mattis Dapibus</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Malesuada Bibendum</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Bibendum Mattis Dapibus</a></li>
@@ -131,7 +131,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Tortor Fusce</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d --feature">
+          <li class="col w-1/4@d --feature">
             <a class="__link --heading" href="<?= $url; ?>">Purus Magna Pellentesque</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Vulputate Nibh Quam</a></li>
@@ -145,7 +145,7 @@
       <li class="__item +children">
         <a class="__link" href="<?= $url; ?>">Pudgi Homunculi</a>
         <ul class="__submenu">
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Quam Vulputate Nibh</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Quam Vulputate Nibh</a></li>
@@ -154,7 +154,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Tortor Fusce</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Malesuada Bibendum</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Bibendum Mattis Dapibus</a></li>
@@ -162,7 +162,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Tortor Fusce</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Tortor Fusce</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Malesuada Bibendum</a></li>
@@ -171,7 +171,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Malesuada Bibendum</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d --feature">
+          <li class="col w-1/4@d --feature">
             <a class="__link --heading" href="<?= $url; ?>">Vulputate Nibh Quam</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Bibendum Mattis Dapibus</a></li>
@@ -185,7 +185,7 @@
       <li class="__item +children">
         <a class="__link" href="<?= $url; ?>">Malesuada Nucleus</a>
         <ul class="__submenu">
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Malesuada Bibendum</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Bibendum Mattis Dapibus</a></li>
@@ -193,7 +193,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Tortor Fusce</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Quam Vulputate Nibh</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Quam Vulputate Nibh</a></li>
@@ -203,7 +203,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Tortor Fusce</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d">
+          <li class="col w-1/4@d">
             <a class="__link --heading" href="<?= $url; ?>">Mollis Elit</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Malesuada Bibendum</a></li>
@@ -212,7 +212,7 @@
               <li class="__item"><a class="__link" href="<?= $url; ?>">Malesuada Bibendum</a></li>
             </ul>
           </li>
-          <li class="col w--1/4@d --feature">
+          <li class="col w-1/4@d --feature">
             <a class="__link --heading" href="<?= $url; ?>">Dapibus Ornare Tellus</a>
             <ul>
               <li class="__item"><a class="__link" href="<?= $url; ?>">Vulputate Nibh Quam</a></li>

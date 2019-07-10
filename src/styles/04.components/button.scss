@@ -35,20 +35,19 @@
   // Icons
 
   // nested icon (defaults assume icon to the left)
-  .feather,
-  .icon {
+  .feather {
     margin: 0 0.5rem 0 -0.5rem;
     height: $btn-fs;
     width: $btn-fs;
   }
 
   // adjust margin for positioning icon on the right
-  &.\--right .feather { margin: 0 0 0 0.5rem; }
+  &.\-right .feather { margin: 0 0 0 0.5rem; }
 
   // --
   // Sizing
 
-  &.\--sm {
+  &.\-sm {
     padding: $btn-sm-padding-t $btn-sm-padding-x $btn-sm-padding-b;
     font-size: $btn-sm-fs;
 
@@ -58,14 +57,14 @@
       width: $btn-sm-fs;
     }
 
-    &.\--right .feather { margin: 0 0 0 ($btn-sm-fs/2); }
+    &.\-right .feather { margin: 0 0 0 ($btn-sm-fs/2); }
   }
 
   // --
   // Modifiers
 
   // extends button to fill area of container
-  &.\--block {
+  &.\-block {
     display: block;
     width: 100%;
     text-align: center;
@@ -84,7 +83,7 @@
   }
 
   // Marketing button
-  &.\--m {
+  &.\-m {
     @extend .fw--700;
     padding: $btn-padding-t 0 0.25rem;
     border: 0 none;
@@ -103,7 +102,7 @@
 // Wrappers
 
 // groups a set of buttons to appear flush together
-.btn__group {
+.btn_group {
   display: flex;
   flex-flow: row nowrap;
   overflow: hidden;

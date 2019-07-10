@@ -24,36 +24,36 @@
       </div>
     </div>
     <div class="row">
-      <div class="col w--25@t">
-        <div class="pa--1 bg--gray-50 bc--gray-500">col w--25@t</div>
+      <div class="col w-25@t">
+        <div class="pa--1 bg--gray-50 bc--gray-500">col w-25@t</div>
       </div>
-      <div class="col w--75@t">
-        <div class="pa--1 bg--gray-50 bc--gray-500">col w--75@t</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col w--1/3@d">
-        <div class="pa--1 bg--gray-50 bc--gray-500">col w--1/3@d</div>
-      </div>
-      <div class="col w--1/3@d">
-        <div class="pa--1 bg--gray-50 bc--gray-500">col w--1/3@d</div>
-      </div>
-      <div class="col w--1/3@d">
-        <div class="pa--1 bg--gray-50 bc--gray-500">col w--1/3@d</div>
+      <div class="col w-75@t">
+        <div class="pa--1 bg--gray-50 bc--gray-500">col w-75@t</div>
       </div>
     </div>
     <div class="row">
-      <div class="col w--50@d w--1/4@w">
-        <div class="pa--1 bg--gray-50 bc--gray-500">col w--50@d w--1/4@w</div>
+      <div class="col w-1/3@d">
+        <div class="pa--1 bg--gray-50 bc--gray-500">col w-1/3@d</div>
       </div>
-      <div class="col w--50@d w--1/4@w">
-        <div class="pa--1 bg--gray-50 bc--gray-500">col w--50@d w--1/4@w</div>
+      <div class="col w-1/3@d">
+        <div class="pa--1 bg--gray-50 bc--gray-500">col w-1/3@d</div>
       </div>
-      <div class="col w--50@d w--1/4@w">
-        <div class="pa--1 bg--gray-50 bc--gray-500">col w--50@d w--1/4@w</div>
+      <div class="col w-1/3@d">
+        <div class="pa--1 bg--gray-50 bc--gray-500">col w-1/3@d</div>
       </div>
-      <div class="col w--50@d w--1/4@w">
-        <div class="pa--1 bg--gray-50 bc--gray-500">col w--50@d w--1/4@w</div>
+    </div>
+    <div class="row">
+      <div class="col w-50@d w-1/4@w">
+        <div class="pa--1 bg--gray-50 bc--gray-500">col w-50@d w-1/4@w</div>
+      </div>
+      <div class="col w-50@d w-1/4@w">
+        <div class="pa--1 bg--gray-50 bc--gray-500">col w-50@d w-1/4@w</div>
+      </div>
+      <div class="col w-50@d w-1/4@w">
+        <div class="pa--1 bg--gray-50 bc--gray-500">col w-50@d w-1/4@w</div>
+      </div>
+      <div class="col w-50@d w-1/4@w">
+        <div class="pa--1 bg--gray-50 bc--gray-500">col w-50@d w-1/4@w</div>
       </div>
     </div>
   </section>
@@ -334,7 +334,7 @@ pre {
   <!-- end kitchen sink -->
 
   <section class="section bg--black">
-    <h3 class="ta--c mb--1">Video Embed Example</h3>
+    <h3 class="ta-c mb--1">Video Embed Example</h3>
     <div class="w--60@d mx--auto">
       <div class="ar--16x9">
         <iframe class="w--100 ar--object" src="https://www.youtube.com/embed/JHFXG3r_0B8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

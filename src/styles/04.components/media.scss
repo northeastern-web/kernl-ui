@@ -3,7 +3,7 @@
 
 
 .media {
-  @extend .w--100;
+  @extend .w-100;
   box-shadow: $box-shadow-inset;
   transition: box-shadow $transition;
   margin-bottom: 1rem;

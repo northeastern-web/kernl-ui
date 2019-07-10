@@ -118,12 +118,12 @@
 
   #main_content .section .section { padding: 0; }
 
-  #main_content > .article > .section > .row > .col.w--1\/4\@t {
+  #main_content > .article > .section > .row > .col.w-1\/4\@t {
     display: none;
     width: 0;
   }
 
-  #main_content > .article > .section > .row > .col.w--3\/4\@t {
+  #main_content > .article > .section > .row > .col.w-3\/4\@t {
     -ms-flex-preferred-size: 94%;
     flex-basis: 94%;
     max-width: 94%;
