@@ -1,10 +1,10 @@
 // Typography Utility
 // Line Height
 //
-// .lh--<size>
+// .lh-<size>
 
 
-.lh--inherit { line-height: inherit; }
-.lh--tight  { line-height: $line-height-tight; }
-.lh--normal { line-height: $line-height-normal; }
-.lh--loose  { line-height: $line-height-loose; }
+.lh-inherit { line-height: inherit; }
+.lh-tight  { line-height: $line-height-tight; }
+.lh-normal { line-height: $line-height-normal; }
+.lh-loose  { line-height: $line-height-loose; }

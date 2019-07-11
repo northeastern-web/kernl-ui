@@ -22,7 +22,7 @@
            aria-labelledby="modal_base_label"
            aria-hidden="true">
         <div class="__screen" data-dismiss="modal"></div>
-        <div class="__content bg--white">
+        <div class="__content bg-white">
           <p>Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
           <p>Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue.</p>
@@ -40,10 +40,10 @@
     <div class="col w-1/3@t">
       <header class="k_section__header">Dark</header>
       <p class="modal-demo ta-c">
-        <a class="btn --xs bg--transparent-dark" href="#" data-size="sm" data-toggle="modal" data-target="#modal_dark">Modal sm</a>
-        <a class="btn --sm bg--transparent-dark" href="#" data-size="base" data-toggle="modal" data-target="#modal_dark">Modal</a><br>
-        <a class="btn bg--transparent-dark" href="#" data-size="lg" data-toggle="modal" data-target="#modal_dark">Modal lg</a>
-        <a class="btn --lg bg--transparent-dark" href="#" data-size="xl" data-toggle="modal" data-target="#modal_dark">Modal xl</a>
+        <a class="btn --xs bg-transparent-dark" href="#" data-size="sm" data-toggle="modal" data-target="#modal_dark">Modal sm</a>
+        <a class="btn --sm bg-transparent-dark" href="#" data-size="base" data-toggle="modal" data-target="#modal_dark">Modal</a><br>
+        <a class="btn bg-transparent-dark" href="#" data-size="lg" data-toggle="modal" data-target="#modal_dark">Modal lg</a>
+        <a class="btn --lg bg-transparent-dark" href="#" data-size="xl" data-toggle="modal" data-target="#modal_dark">Modal xl</a>
       </p>
 
 
@@ -54,7 +54,7 @@
            aria-labelledby="modal_base_label"
            aria-hidden="true">
         <div class="__screen" data-dismiss="modal"></div>
-        <div class="__content bg--black">
+        <div class="__content bg-black">
           <p>Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
           <p>Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue.</p>
@@ -73,10 +73,10 @@
     <div class="col w-1/3@t">
       <header class="k_section__header">Grid</header>
       <p class="modal-demo ta-c">
-        <a class="btn --xs bg--gray-200" href="#" data-size="sm" data-toggle="modal" data-target="#modal_grid">Grid sm</a>
-        <a class="btn --sm bg--gray-200" href="#" data-size="base" data-toggle="modal" data-target="#modal_grid">Grid</a><br>
-        <a class="btn bg--gray-200" href="#" data-size="lg" data-toggle="modal" data-target="#modal_grid">Grid lg</a>
-        <a class="btn --lg bg--gray-200" href="#" data-size="xl" data-toggle="modal" data-target="#modal_grid">Grid xl</a>
+        <a class="btn --xs bg-gray-200" href="#" data-size="sm" data-toggle="modal" data-target="#modal_grid">Grid sm</a>
+        <a class="btn --sm bg-gray-200" href="#" data-size="base" data-toggle="modal" data-target="#modal_grid">Grid</a><br>
+        <a class="btn bg-gray-200" href="#" data-size="lg" data-toggle="modal" data-target="#modal_grid">Grid lg</a>
+        <a class="btn --lg bg-gray-200" href="#" data-size="xl" data-toggle="modal" data-target="#modal_grid">Grid xl</a>
       </p>
       <div class="modal"
            id="modal_grid"
@@ -85,11 +85,11 @@
            aria-labelledby="modal_base_label"
            aria-hidden="true">
         <div class="__screen" data-dismiss="modal"></div>
-        <div class="__content bg--white pa--0 section --nogutters">
+        <div class="__content bg-white pa-0 section --nogutters">
 
           <div class="row">
-            <div class="col mx--auto w-2/3@t">
-              <div class="w--1/3@d f--r@d pt--2h@t ml--1@d mb--1@d ta-c">
+            <div class="col mx-auto w-2/3@t">
+              <div class="w--1/3@d f--r@d pt-2h@t ml-1@d mb-1@d ta-c">
                 <img class="w--100 w-90@t w-100@d" src="docs/images/random/337869.jpg" alt="image">
               </div>
               <div class="__body">
@@ -120,7 +120,7 @@
   <header class="k_section__header">Full-Screen (Example: Search)</header>
   <div class="row">
     <div class="col">
-      <div class="modal-demo ta-c py--1 py--3@t">
+      <div class="modal-demo ta-c py-1 py-3@t">
         <a href="#" data-toggle="modal" data-size="full" data-target="#modal_search">
           <i data-feather="search"></i>
         </a>

@@ -6,58 +6,58 @@
 
 $size: 20;
 @while $size >= 0 {
-  .oa--#{$size}   { margin: -#{$size}rem !important; }
-  .oa--#{$size}h  { margin: -#{($size+.5)}rem !important; }
-  .ot--#{$size}   { margin-top: -#{$size}rem !important; }
-  .ot--#{$size}h  { margin-top: -#{($size+.5)}rem !important; }
-  .or--#{$size}   { margin-right: -#{$size}rem !important; }
-  .or--#{$size}h  { margin-right: -#{($size+.5)}rem !important; }
-  .ob--#{$size}   { margin-bottom: -#{$size}rem !important; }
-  .ob--#{$size}h  { margin-bottom: -#{($size+.5)}rem !important; }
-  .ol--#{$size}   { margin-left: -#{$size}rem !important; }
-  .ol--#{$size}h  { margin-left: -#{($size+.5)}rem !important; }
-  .ox--#{$size} {
+  .oa-#{$size}   { margin: -#{$size}rem !important; }
+  .oa-#{$size}h  { margin: -#{($size+.5)}rem !important; }
+  .ot-#{$size}   { margin-top: -#{$size}rem !important; }
+  .ot-#{$size}h  { margin-top: -#{($size+.5)}rem !important; }
+  .or-#{$size}   { margin-right: -#{$size}rem !important; }
+  .or-#{$size}h  { margin-right: -#{($size+.5)}rem !important; }
+  .ob-#{$size}   { margin-bottom: -#{$size}rem !important; }
+  .ob-#{$size}h  { margin-bottom: -#{($size+.5)}rem !important; }
+  .ol-#{$size}   { margin-left: -#{$size}rem !important; }
+  .ol-#{$size}h  { margin-left: -#{($size+.5)}rem !important; }
+  .ox-#{$size} {
     margin-right: -#{$size}rem !important;
     margin-left: -#{$size}rem !important;
   }
-  .ox--#{$size}h {
+  .ox-#{$size}h {
     margin-right: -#{($size+.5)}rem !important;
     margin-left: -#{($size+.5)}rem !important;
   }
-  .oy--#{$size} {
+  .oy-#{$size} {
     margin-top: -#{$size}rem !important;
     margin-bottom: -#{$size}rem !important;
   }
-  .oy--#{$size}h {
+  .oy-#{$size}h {
     margin-top: -#{($size+.5)}rem !important;
     margin-bottom: -#{($size+.5)}rem !important;
   }
 
   @each $breakpoint in map-keys($breakpoints) {
     @include mqbp-up($breakpoint) {
-      .oa--#{$size}\@#{$breakpoint}   { margin: -#{$size}rem !important; }
-      .oa--#{$size}h\@#{$breakpoint}  { margin: -#{($size+.5)}rem !important; }
-      .ot--#{$size}\@#{$breakpoint}   { margin-top: -#{$size}rem !important; }
-      .ot--#{$size}h\@#{$breakpoint}  { margin-top: -#{($size+.5)}rem !important; }
-      .or--#{$size}\@#{$breakpoint}   { margin-right: -#{$size}rem !important; }
-      .or--#{$size}h\@#{$breakpoint}  { margin-right: -#{($size+.5)}rem !important; }
-      .ob--#{$size}\@#{$breakpoint}   { margin-bottom: -#{$size}rem !important; }
-      .ob--#{$size}h\@#{$breakpoint}  { margin-bottom: -#{($size+.5)}rem !important; }
-      .ol--#{$size}\@#{$breakpoint}   { margin-left: -#{$size}rem !important; }
-      .ol--#{$size}h\@#{$breakpoint}  { margin-left: -#{($size+.5)}rem !important; }
-      .ox--#{$size}\@#{$breakpoint} {
+      .oa-#{$size}\@#{$breakpoint}   { margin: -#{$size}rem !important; }
+      .oa-#{$size}h\@#{$breakpoint}  { margin: -#{($size+.5)}rem !important; }
+      .ot-#{$size}\@#{$breakpoint}   { margin-top: -#{$size}rem !important; }
+      .ot-#{$size}h\@#{$breakpoint}  { margin-top: -#{($size+.5)}rem !important; }
+      .or-#{$size}\@#{$breakpoint}   { margin-right: -#{$size}rem !important; }
+      .or-#{$size}h\@#{$breakpoint}  { margin-right: -#{($size+.5)}rem !important; }
+      .ob-#{$size}\@#{$breakpoint}   { margin-bottom: -#{$size}rem !important; }
+      .ob-#{$size}h\@#{$breakpoint}  { margin-bottom: -#{($size+.5)}rem !important; }
+      .ol-#{$size}\@#{$breakpoint}   { margin-left: -#{$size}rem !important; }
+      .ol-#{$size}h\@#{$breakpoint}  { margin-left: -#{($size+.5)}rem !important; }
+      .ox-#{$size}\@#{$breakpoint} {
         margin-right:  -#{$size}rem !important;
         margin-left:   -#{$size}rem !important;
       }
-      .ox--#{$size}h\@#{$breakpoint} {
+      .ox-#{$size}h\@#{$breakpoint} {
         margin-right:  -#{($size+.5)}rem !important;
         margin-left:   -#{($size+.5)}rem !important;
       }
-      .oy--#{$size}\@#{$breakpoint} {
+      .oy-#{$size}\@#{$breakpoint} {
         margin-top:    -#{$size}rem !important;
         margin-bottom: -#{$size}rem !important;
       }
-      .oy--#{$size}h\@#{$breakpoint} {
+      .oy-#{$size}h\@#{$breakpoint} {
         margin-top:    -#{($size+.5)}rem !important;
         margin-bottom: -#{($size+.5)}rem !important;
       }

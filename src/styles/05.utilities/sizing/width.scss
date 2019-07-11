@@ -18,7 +18,7 @@
     }
   } @else {
     .w-#{$name} { width: $value; }
-    .ow--#{$name} { margin-left: $value; } // offset
+    .ow-#{$name} { margin-left: $value; } // offset
   }
 }
 
@@ -27,7 +27,7 @@
   @include mqbp-up($breakpoint) {
     @each $name, $value in $widths {
       .w-#{$name}\@#{$breakpoint} { width: $value; }
-      .ow--#{$name}\@#{$breakpoint} { margin-left: $value; } // offset
+      .ow-#{$name}\@#{$breakpoint} { margin-left: $value; } // offset
     }
 
     .w-fit\@#{$breakpoint} {
@@ -37,7 +37,7 @@
   }
 }
 
-// Max widths
-.mw--0    { min-width: 0; }
-.mw--100  { min-width: 100%; }
-.mw--none { max-width: none; }
+// Min/Max widths
+.w-min-0    { min-width: 0; }
+.w-min-100  { min-width: 100%; }
+.w-max-none { max-width: none; }

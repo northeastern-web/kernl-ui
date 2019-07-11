@@ -31,14 +31,14 @@
     height: 1.5rem;
   }
 
-  &.\--stacked,
-  &.\--flex {
+  &.\-stacked,
+  &.\-flex {
     flex-flow: column nowrap;
 
     li { margin: 0 0 -1px 0; }
   }
 
-  &.\--flex {
+  &.\-flex {
     @include mqbp-up(t) {
       flex-flow: row wrap;
 

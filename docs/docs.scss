@@ -344,7 +344,7 @@ html { background-color: #333; }
 
   .section .section .col-content { border: 1px solid #aed8da; }
 
-  .\--nogutters {
+  .\-nogutters {
     .col-content {
       border-right: 1px solid #aed8da;
       border-bottom: 1px solid #aed8da;
@@ -381,7 +381,7 @@ html { background-color: #333; }
   }
 }
 
-.fw--n { font-weight: 400; }
+.fw-n { font-weight: 400; }
 
 .text-style-block {
   @extend .fs-smooth;

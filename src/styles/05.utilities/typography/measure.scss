@@ -1,9 +1,9 @@
 // Typography Utility
 // Measure
 //
-// .measure--<length>
+// .measure-<length>
 
 
-.measure          { max-width: $measure; }
-.measure--wide    { max-width: $measure-wide; }
-.measure--narrow  { max-width: $measure-narrow; }
+.measure         { max-width: $measure; }
+.measure-wide    { max-width: $measure-wide; }
+.measure-narrow  { max-width: $measure-narrow; }

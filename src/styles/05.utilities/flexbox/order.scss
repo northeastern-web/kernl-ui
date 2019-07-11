@@ -1,12 +1,12 @@
 // Flexbox Utility
 // Order
 //
-// .order--<order>@<bp>
+// .order-<order>@<bp>
 
 
 $order: 0;
 @while $order < 9 {
-  .order--#{$order}   { order: #{$order}; }
+  .order-#{$order} { order: #{$order}; }
   $order: $order + 1;
 }
 
@@ -14,7 +14,7 @@ $order: 0;
   @include mqbp-up($breakpoint) {
     $order: 0;
     @while $order < 9 {
-      .order--#{$order}\@#{$breakpoint}   { order: #{$order}; }
+      .order-#{$order}\@#{$breakpoint} { order: #{$order}; }
       $order: $order + 1;
     }
   }

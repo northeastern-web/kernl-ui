@@ -1,7 +1,7 @@
 // Layout Utility
 // Visibility
 //
-// .<property>--<value>
+// .<property>-<value>
 
 
 .visible { visibility: visible; }
@@ -10,13 +10,13 @@
 .hidden { display: none !important; }
 
 @each $breakpoint in map-keys($breakpoints) {
-  .hidden--up\@#{$breakpoint} {
+  .hidden-up\@#{$breakpoint} {
     @include mqbp-up($breakpoint) {
       display: none !important;
     }
   }
 
-  .hidden--down\@#{$breakpoint} {
+  .hidden-down\@#{$breakpoint} {
     @include mqbp-down($breakpoint) {
       display: none !important;
     }

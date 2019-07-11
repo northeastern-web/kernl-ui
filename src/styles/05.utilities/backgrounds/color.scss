@@ -1,12 +1,12 @@
 // Backgrounds Utility
 // Color
 //
-// .bg--<color>
+// .bg-<color>
 
 
 @include make_colors('bg');
 
-.bg--none {
+.bg-none {
   background: none !important;
   background-color: transparent !important;
 }

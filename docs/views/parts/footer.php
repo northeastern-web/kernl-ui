@@ -1,5 +1,5 @@
 <section class="section k_bg-light">
-  <header class="k_section__header">Footer</header>
+  <header class="k_section__header">Footer (Legacy)</header>
 </section>
 
 <footer class="footer section" role="contentinfo">

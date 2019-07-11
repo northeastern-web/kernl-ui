@@ -91,9 +91,9 @@
   // --
   // Modifiers
 
-  &.\--active { display: flex; }
+  &.\-active { display: flex; }
 
-  &.\--sm {
+  &.\-sm {
     .__content {
       @include mqbp-up(t) {
         max-width: 400px;
@@ -101,7 +101,7 @@
     }
   }
 
-  &.\--lg {
+  &.\-lg {
     .__content {
       @include mqbp-up(d) {
         max-width: 992px;
@@ -109,7 +109,7 @@
     }
   }
 
-  &.\--xl {
+  &.\-xl {
     .__content {
       @include mqbp-up(t) {
         max-width: 86%;

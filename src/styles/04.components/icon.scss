@@ -13,34 +13,34 @@
   font-style: normal;
   speak: none;
 
-  &.\--thin { stroke-width: 1; }
+  &.\-thin { stroke-width: 1; }
 
-  &.\--sm {
+  &.\-sm {
     width: 14px;
     height: 14px;
   }
 
-  &.\--lg {
+  &.\-lg {
     width: 2.25rem;
     height: 2.25rem;
   }
 
   // various names to make the same thing
-  &.br--round,
-  &.br--pill,
-  &.br--circle {
+  &.br-round,
+  &.br-pill,
+  &.br-circle {
     padding: 8px;
     overflow: visible;
     width: 2.25rem;
     height: 2.25rem;
 
-    &.\--sm {
+    &.\-sm {
       padding: 6px;
       width: 1.5rem;
       height: 1.5rem;
     }
 
-    &.\--lg {
+    &.\-lg {
       padding: 12px;
       width: 3rem;
       height: 3rem;

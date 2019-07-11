@@ -16,7 +16,7 @@ function masthead($id, $masthead_classes, $banner_classes)
         $url = 'https://nuweb28dev.neu.edu/kernl-ui';
     }
 
-  ($masthead_classes == '--overlay' || $masthead_classes == 'bg--black') ? $logo = "-white" : $logo = "";
+  ($masthead_classes == '--overlay' || $masthead_classes == 'bg-black') ? $logo = "-white" : $logo = "";
 
     echo '
 <header class="masthead ' . $masthead_classes . '">
@@ -67,9 +67,9 @@ function masthead($id, $masthead_classes, $banner_classes)
   </nav>
 </header>
 <main id="main_content">
-  <div class="section bg--img --hero --center ' . $banner_classes . '">
+  <div class="section bg-img --hero --center ' . $banner_classes . '">
     <div class="__header">
-      <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
+      <h2 class="__title py-5@xs">{ <i>Example Hero</i> }</h2>
     </div>
   </div>
 </main>';

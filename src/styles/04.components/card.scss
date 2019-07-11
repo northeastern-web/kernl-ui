@@ -3,8 +3,8 @@
 
 
 .card {
-  @extend .flex--col;
-  @extend .d--flex;
+  @extend .flex-col;
+  @extend .d-flex;
   @include margin-bottom-gutter();
   @include type-sm();
   width: 100%;
@@ -14,8 +14,8 @@
   box-shadow: $box-shadow-inset;
 
   .__link {
-    @extend .flex--col;
-    @extend .d--flex;
+    @extend .flex-col;
+    @extend .d-flex;
     width: 100%;
     min-height: 100%;
     color: inherit;
@@ -81,14 +81,14 @@
   }
 
   .__header {
-    @extend .pos--absolute;
-    @extend .pin--t;
+    @extend .pos-absolute;
+    @extend .pin-t;
     width: 100%;
   }
 
   .__footer {
-    @extend .d--flex;
-    @extend .justify--between;
+    @extend .d-flex;
+    @extend .justify-between;
     @include card-padding();
     padding-top: 0 !important;
     font-size: 87.5%;
@@ -105,13 +105,13 @@
   // Modifiers
 
   // Smaller variant of .card
-  &.\--tile {
+  &.\-tile {
     @include type-xs();
     .__body { padding: 1rem; }
   }
 
   // Profile variant of .card
-  &.\--profile {
+  &.\-profile {
     box-shadow: none;
 
     .__body {
@@ -150,7 +150,7 @@
   }
 
   // Overlay's block level items to card
-  &.\--overlay {
+  &.\-overlay {
     background-color: $gray-800; // defined for accessibility conformance: contrast
     color: #fff;
     height: $tile_overlay_height;
@@ -170,12 +170,12 @@
     }
 
     .__body {
-      @extend .pos--absolute;
+      @extend .pos-absolute;
       overflow-y: hidden;
       max-height: 95%;
     }
 
-    &:not(.\--middle):not(.\--bottom) {
+    &:not(.\-middle):not(.\-bottom) {
       .__header + .__body {
         margin-top: 1.25rem;
         top: 0;
@@ -184,25 +184,25 @@
   }
 
   // Middle text variant
-  &.\--middle {
-    @extend .flex--middle;
+  &.\-middle {
+    @extend .flex-middle;
 
     .__link {
-      @extend .flex--middle;
+      @extend .flex-middle;
     }
 
-    &.\--overlay {
+    &.\-overlay {
       .__link {
-        @extend .d--block;
+        @extend .d-block;
         width: 100%;
       }
 
       .__header {
-        @extend .pin--xc;
+        @extend .pin-xc;
       }
 
       .__body {
-        @extend .pin--c;
+        @extend .pin-c;
         @extend .ta-c;
         @extend .w-100;
       }
@@ -210,39 +210,39 @@
   }
 
   // Bottom text variant
-  &.\--bottom {
-    @extend .justify--end;
+  &.\-bottom {
+    @extend .justify-end;
 
     .__link {
-      @extend .justify--end;
+      @extend .justify-end;
     }
 
-    &.\--overlay {
+    &.\-overlay {
       .__link { width: 100%; }
 
       .__body {
-        @extend .pin--b;
+        @extend .pin-b;
         @extend .w-100;
       }
     }
   }
 
-  &.\--overlay,
-  &.\--middle,
-  &.\--bottom {
+  &.\-overlay,
+  &.\-middle,
+  &.\-bottom {
     .__body { flex: 0; }
   }
 
   // --
   // Size variants
-  &.\--sm { height: $card-height-sm; }
-  &.\--md { height: $card-height-md; }
-  &.\--lg { height: $card-height-lg; }
-  &.\--xl { height: $card-height-xl; }
+  &.\-sm { height: $card-height-sm; }
+  &.\-md { height: $card-height-md; }
+  &.\-lg { height: $card-height-lg; }
+  &.\-xl { height: $card-height-xl; }
 
   // --
   // Orientation overrides
-  &.\--h {
+  &.\-h {
     flex-direction: row;
 
     .__link { flex-direction: row; }
@@ -285,7 +285,7 @@
     }
 
     @each $breakpoint in map-keys($breakpoints) {
-      &.\--v\@#{$breakpoint} {
+      &.\-v\@#{$breakpoint} {
         .__graphic {
           @each $ar-name, $ar-value in $aspect-ratios {
             &.ar--#{$ar-name} {
@@ -316,7 +316,7 @@
   }
 
   @each $breakpoint in map-keys($breakpoints) {
-    &.\--h\@#{$breakpoint} {
+    &.\-h\@#{$breakpoint} {
 
       @include mqbp-up($breakpoint) {
         flex-direction: row;
@@ -347,7 +347,7 @@
     }
 
     // horizontal shared with vertical override
-    &.\--v\@#{$breakpoint} {
+    &.\-v\@#{$breakpoint} {
 
       @include mqbp-up($breakpoint) {
         flex-direction: column;
@@ -379,7 +379,7 @@
 
   //
   // prevent + footer collision in horizontal orientations
-  &.\--h {
+  &.\-h {
     .__body {
       @include padding-bottom-gutter(3);
 
@@ -389,7 +389,7 @@
     }
 
     @each $breakpoint in map-keys($breakpoints) {
-      &.\--v\@#{$breakpoint} {
+      &.\-v\@#{$breakpoint} {
         @include mqbp-up($breakpoint) {
           .__body { @include padding-bottom-gutter(); }
         }
@@ -399,7 +399,7 @@
 
   @each $breakpoint in map-keys($breakpoints) {
     @include mqbp-up($breakpoint) {
-      &.\--h\@#{$breakpoint} {
+      &.\-h\@#{$breakpoint} {
         .__body {
           @include padding-bottom-gutter(2.5);
         }
@@ -409,7 +409,7 @@
     // don't adjust anything above this line!
 
     @include mqbp-up($breakpoint) {
-      &.\--v\@#{$breakpoint} {
+      &.\-v\@#{$breakpoint} {
         .__body {
           @include padding-bottom-gutter();
         }
@@ -417,7 +417,7 @@
     }
   }
 
-  &.\--zoom {
+  &.\-zoom {
     .__graphic__img {
       transform: scale(1);
       transform-origin: center;
@@ -431,7 +431,7 @@
     }
   }
 
-  &.\--flush {
+  &.\-flush {
     box-shadow: none;
 
     .__body { padding-top: 1rem; }
@@ -442,7 +442,7 @@
       padding-left: 0;
     }
 
-    &.\--h {
+    &.\-h {
       .__body {
         @include card-padding();
         padding-top: 0;
@@ -451,7 +451,7 @@
 
     @each $breakpoint in map-keys($breakpoints) {
       @include mqbp-up($breakpoint) {
-        &.\--h\@#{$breakpoint} {
+        &.\-h\@#{$breakpoint} {
           .__body { padding-top: 0; }
         }
       }
@@ -459,7 +459,7 @@
       // don't adjust anything above this line!
 
       @include mqbp-up($breakpoint) {
-        &.\--v\@#{$breakpoint} {
+        &.\-v\@#{$breakpoint} {
           @include mqbp-up($breakpoint) {
             .__body { padding-top: 1rem; }
 
@@ -480,7 +480,7 @@
     color: $white;
   }
 
-  &.\--overlay {
+  &.\-overlay {
     .badge {
       background: $white-alpha;
     }

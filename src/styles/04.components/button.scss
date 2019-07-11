@@ -72,8 +72,8 @@
   }
 
   // Stacked icon
-  &[class^='flex--col'],
-  &[class*=' flex--col'] {
+  &[class^='flex-col'],
+  &[class*=' flex-col'] {
     text-align: center;
 
     .__icon {
@@ -84,7 +84,7 @@
 
   // Marketing button
   &.\-m {
-    @extend .fw--700;
+    @extend .fw-700;
     padding: $btn-padding-t 0 0.25rem;
     border: 0 none;
     color: inherit;

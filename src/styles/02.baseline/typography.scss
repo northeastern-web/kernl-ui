@@ -131,7 +131,7 @@ blockquote {
     @include mqbp-up(d) { line-height: 1.625; }
   }
 
-  &.\--mark {
+  &.\-mark {
     padding-top: 3.125rem;
     position: relative;
 

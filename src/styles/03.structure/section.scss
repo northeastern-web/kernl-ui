@@ -14,7 +14,7 @@
 .contain .masthead { @include make-section('contain', $contain: $contain-width); }
 
 // restrict container to non-masthead sections
-.contain.\--body .masthead { @include make-section(); }
+.contain.\-body .masthead { @include make-section(); }
 
 
 .section {
@@ -33,7 +33,7 @@
   }
 
   // Remove padding-x for flush sections
-  &.\--flush {
+  &.\-flush {
     padding-right: 0;
     padding-left: 0;
   }
@@ -41,7 +41,7 @@
   // Remove the negative margin from a section's default .row,
   // then the horizontal padding from all immediate child
   // columns (to prevent runaway style inheritance).
-  &.\--nogutters {
+  &.\-nogutters {
     > .row {
       margin-right: 0;
       margin-left: 0;
@@ -92,31 +92,31 @@
   }
 
   // adds max-width via .section to nested .__header
-  &.\--measure {
+  &.\-measure {
     .__header { @extend .measure; }
   }
 
-  &.\--measure-narrow {
-    .__header { @extend .measure--narrow; }
+  &.\-measure-narrow {
+    .__header { @extend .measure-narrow; }
   }
 
-  &.\--measure-wide {
-    .__header { @extend .measure--wide; }
+  &.\-measure-wide {
+    .__header { @extend .measure-wide; }
   }
 
   // adds line after title on via a section
-  &.\--bal {
+  &.\-bal {
     .__header .__title { @extend .bal !optional; }
   }
 
   // centers .__header container and text
-  &.\--center {
+  &.\-center {
     > .__header {
-      @extend .mx--auto;
+      @extend .mx-auto;
       text-align: center;
     }
 
-    &.\--bal {
+    &.\-bal {
       .__title {
         &::after {
           right: 0;
@@ -130,8 +130,8 @@
 .col--stretch,
 .col__stretch {
   .col {
-    @extend .d--flex;
-    @extend .items--stretch;
+    @extend .d-flex;
+    @extend .items-stretch;
     flex-flow: row nowrap;
   }
 }
@@ -141,7 +141,7 @@
 
 // Page banner default styling
 // .banner used exclusively for sections immediately opening and page/article
-.section.\--banner {
+.section.\-banner {
   @extend .fs-smooth;
   display: flex;
   align-items: center;
@@ -171,8 +171,8 @@
     sub { font-weight: 400; }
   }
 
-  &.\--top { align-items: flex-start; }
-  &.\--bottom { align-items: flex-end; }
+  &.\-top { align-items: flex-start; }
+  &.\-bottom { align-items: flex-end; }
 
   @include mqbp-up(d) { flex-direction: row; }
 
@@ -188,8 +188,8 @@
       margin-top: 0;
     }
 
-    &.\--top { justify-content: flex-start; }
-    &.\--bottom { justify-content: flex-end; }
+    &.\-top { justify-content: flex-start; }
+    &.\-bottom { justify-content: flex-end; }
 
     @include mqbp-up(d) {
       padding-bottom: 4.5rem;
@@ -199,11 +199,11 @@
 
 // Hero default styling (HT Marketing)
 // designed to center and add a max width for generic use cases
-.section.\--hero {
-  @extend .\--banner;
-  @extend .\--measure-wide;
-  @extend .\--center;
-  @extend .flex--col;
+.section.\-hero {
+  @extend .\-banner;
+  @extend .\-measure-wide;
+  @extend .\-center;
+  @extend .flex-col;
   padding-top: 10.6rem;
   padding-bottom: 10.6rem;
   border-bottom: 0 none;

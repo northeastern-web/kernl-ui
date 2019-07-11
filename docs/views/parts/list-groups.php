@@ -12,13 +12,13 @@ and drop the desired icon into the item.
       <?= listgroup(''); ?>
     </div>
     <div class="col w-1/4">
-      <?= listgroup('--indent fs--sm'); ?>
+      <?= listgroup('--indent fs-sm'); ?>
     </div>
     <div class="col w-1/4">
-      <?= listgroup('fs--xs --left'); ?>
+      <?= listgroup('fs-xs --left'); ?>
     </div>
     <div class="col w-1/4">
-      <?= listgroup('fs--d1'); ?>
+      <?= listgroup('fs-d1'); ?>
     </div>
   </div>
 </section>
@@ -30,13 +30,13 @@ and drop the desired icon into the item.
         <?= listgroup('--outline --left'); ?>
       </div>
       <div class="col w-1/4">
-        <?= listgroup('--outline --right fs--sm'); ?>
+        <?= listgroup('--outline --right fs-sm'); ?>
       </div>
       <div class="col w-1/4">
-        <?= listgroup('--outline fs--xs'); ?>
+        <?= listgroup('--outline fs-xs'); ?>
       </div>
       <div class="col w-1/4">
-        <?= listgroup('--outline fs--d1'); ?>
+        <?= listgroup('--outline fs-d1'); ?>
       </div>
     </div>
 </section>
@@ -48,13 +48,13 @@ and drop the desired icon into the item.
       <?= listgroup('--striped '); ?>
     </div>
     <div class="col w-1/4">
-      <?= listgroup('--striped --left fs--sm'); ?>
+      <?= listgroup('--striped --left fs-sm'); ?>
     </div>
     <div class="col w-1/4">
-      <?= listgroup('--striped fs--xs'); ?>
+      <?= listgroup('--striped fs-xs'); ?>
     </div>
     <div class="col w-1/4">
-      <?= listgroup('--striped fs--d1'); ?>
+      <?= listgroup('--striped fs-d1'); ?>
     </div>
   </div>
 </section>

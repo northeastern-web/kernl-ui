@@ -45,13 +45,13 @@
         color: $gray-500;
       }
 
-      .\--active > .__link {
+      .\-active > .__link {
         font-weight: 700;
         color: $gray-900;
       }
     }
 
-    &.\--active {
+    &.\-active {
       > .__link {
         font-weight: 700;
         color: $gray-900;
@@ -69,12 +69,12 @@
       }
     }
 
-    &.\--title {
+    &.\-title {
       display: flex;
       flex: 1;
 
       .__link {
-        @extend .tt--caps;
+        @extend .tt-caps;
         display: inline-flex;
         flex: 1;
         align-items: center;
@@ -91,7 +91,7 @@
         }
       }
 
-      &.\--active {
+      &.\-active {
         display: none;
 
         +.__item { border-top: 1px solid $gray-200; }
@@ -103,7 +103,7 @@
 // --
 // Nav Options
 
-.nav.\--interior {
+.nav.\-interior {
   display: none;
 
   .__list {
@@ -144,7 +144,7 @@
           }
         }
 
-        .\--active .__link {
+        .\-active .__link {
           &::before {
             background-color: rgba($gray-900, 0.8);
           }
@@ -152,7 +152,7 @@
       }
     }
 
-    &.\--active { display: flex; }
+    &.\-active { display: flex; }
   }
 
   .\+children {
@@ -169,14 +169,14 @@
         padding-left: 1rem;
       }
 
-      &.\--active {
+      &.\-active {
         > .__list { display: flex; }
       }
     }
   }
 }
 
-.nav.\--tabbed {
+.nav.\-tabbed {
   border-bottom: 1px solid $gray-200;
 
   .__list { margin-bottom: 0; }
@@ -187,13 +187,13 @@
 
     &:hover { background-color: $gray-100; }
 
-    &.\--active,
-    &.\--active:hover {
+    &.\-active,
+    &.\-active:hover {
       color: inherit;
       cursor: default;
     }
 
-    &.\--active:hover {
+    &.\-active:hover {
       background-color: inherit;
     }
   }
@@ -210,8 +210,8 @@
     .__item {
       border-bottom: 0 none;
 
-      .\--active,
-      .\--active:hover {
+      .\-active,
+      .\-active:hover {
         border-left: 0 none;
         border-bottom: 3px solid $red;
       }
@@ -219,7 +219,7 @@
   }
 }
 
-.nav.\--bordered {
+.nav.\-bordered {
   @include mqbp-up(d) {
     border-bottom: 0 none;
 
@@ -237,8 +237,8 @@
 
       &:hover { background-color: rgba(0, 0, 0, 0.1); }
 
-      &.\--active,
-      &.\--active:hover {
+      &.\-active,
+      &.\-active:hover {
         border: 1px solid #d0d0d0;
         border-bottom-color: #fff;
       }
@@ -246,7 +246,7 @@
   }
 }
 
-.nav.\--buttons {
+.nav.\-buttons {
   border-bottom: 0 none;
 
   .__item {
@@ -269,15 +269,15 @@
     @include mqbp-up(d) {
       padding: 8px 1rem;
 
-      &.\--active,
-      &.\--active:hover {
+      &.\-active,
+      &.\-active:hover {
         border: 1px solid $gray-400;
       }
     }
   }
 }
 
-.nav.\--pagination {
+.nav.\-pagination {
   .__list {
     padding-left: 0;
     list-style: none;
@@ -307,8 +307,8 @@
 
     &:hover { background-color: rgba(0, 0, 0, 0.1); }
 
-    &.\--active,
-    &.\--active:hover {
+    &.\-active,
+    &.\-active:hover {
       background-color: $type-color;
       color: #fff;
       cursor: default;
@@ -333,9 +333,9 @@
 // Nav Wrappers
 
 .nav__content {
-  .hidden.\--active { display: block !important; }
+  .hidden.\-active { display: block !important; }
 
-  .\--bordered {
+  .\-bordered {
     padding: 1rem 1.5rem;
     border: 1px solid $gray-200;
     border-top: 0 none;
@@ -345,7 +345,7 @@
 // --
 // Banner option
 
-.\+nav .\--tabbed {
+.\+nav .\-tabbed {
   overflow: auto;
   position: absolute;
   bottom: -1px; // because of border-bottom on bottom
@@ -373,17 +373,17 @@
 
     &:hover { color: $type-color; }
 
-    &.\--active,
-    &.\--active:hover {
+    &.\-active,
+    &.\-active:hover {
       background-color: rgba(255, 255, 255, 1);
       color: $type-color;
     }
   }
 
-  .\--title {
+  .\-title {
     .__link { background-color: transparent !important; }
 
-    &.\--active {
+    &.\-active {
       +.__item { border-top: 0 none; }
     }
   }
@@ -400,7 +400,7 @@
   @include mqbp-up(d) {
     .__link {  }
 
-    .\--active {
+    .\-active {
       .__link { background-color: $white; }
 
       &.\+children > .__link { padding-bottom: 0.75rem; }

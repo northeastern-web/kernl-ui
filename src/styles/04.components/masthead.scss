@@ -142,8 +142,8 @@
     border-bottom: 1px solid rgba(177, 177, 177, 0.3);
   }
 
-  .__item.\--active > a,
-  .\--active > .__link {
+  .__item.\-active > a,
+  .\-active > .__link {
     font-weight: bold;
     color: lighten($type-color, 80%);
 
@@ -254,7 +254,7 @@
   // Modifiers
 
   // position the nav over an image or background
-  &.\--overlay {
+  &.\-overlay {
     position: absolute;
 
     > .__toggler { color: #fff; }
@@ -264,8 +264,8 @@
 
       .__item a,
       .__link,
-      .\--active>.__link,
-      .\--active.__item > a {
+      .\-active>.__link,
+      .\-active.__item > a {
         color: #fff;
       }
     }
@@ -322,7 +322,7 @@
   // add a border to the bottom of active nav link
   &.\+border {
     @include mqbp-up(d) {
-      .__list:not(.\--utility) {
+      .__list:not(.\-utility) {
         .__item:not(.\+icon) > .__link,
         .__item:not(.\+icon) > a {
           &::after {
@@ -345,8 +345,8 @@
           }
         }
 
-        .\--active > .__link,
-        .\--active.__item > a {
+        .\-active > .__link,
+        .\-active.__item > a {
           &::after {
             border-bottom-color: $red;
           }
@@ -362,7 +362,7 @@
     }
   }
 
-  &.\--megamenu {
+  &.\-megamenu {
     @include mqbp-up(d) {
       .__list,
       .__item { position: static; }
@@ -444,7 +444,7 @@
             }
           }
 
-          .__link.\--heading {
+          .__link.\-heading {
             font-size: 1.15rem;
             padding-top: 0;
             padding-bottom: 0.75rem;
@@ -463,7 +463,7 @@
 
           &:after { display: none; }
 
-          .\--feature {
+          .\-feature {
             padding-left: 1.5rem;
             background-color: rgba($gray-400, 0);
             transition: background 0.4s ease 0s;
@@ -490,7 +490,7 @@
 
             &:before { width: 100%; }
 
-            > .\--feature {
+            > .\-feature {
               background-color: rgba($gray-400, .15);
               transition: background 0.3s ease 0.1s;
             }
@@ -498,7 +498,7 @@
         }
       }
 
-      &.bg--black {
+      &.bg-black {
         .\+children {
           > .__link {
             &:focus { color: $white !important; }
@@ -521,7 +521,7 @@
                 color: $red !important;
               }
 
-              &.\--heading {
+              &.\-heading {
                 border-bottom: 1px solid rgba($white, 0.1);
 
                 &:hover,
@@ -537,7 +537,7 @@
   }
 
   &.\+utility {
-    .__list:not(.\--utility) {
+    .__list:not(.\-utility) {
       @include mqbp-up(d) {
         .__item {
           margin-top: 0 !important;
@@ -566,7 +566,7 @@
       @include mqbp-up(w) { top: 2.825rem; }
     }
 
-    &.\--megamenu {
+    &.\-megamenu {
       .\+children .__submenu {
         @include mqbp-up(d) { top: 5.5rem; }
         @include mqbp-up(w) { top: 5.95rem; }
@@ -574,7 +574,7 @@
     }
   }
 
-  .\--utility {
+  .\-utility {
     .__link {
       text-transform: uppercase;
       letter-spacing: 0.05rem;
@@ -616,13 +616,13 @@
     }
   }
 
-  &.\--logo-md {
+  &.\-logo-md {
     .__logo__image {
       max-height: 3.25rem;
     }
   }
 
-  &.\--logo-lg {
+  &.\-logo-lg {
     .__logo__image {
       max-height: 3.75rem;
     }
@@ -665,14 +665,14 @@
 }
 
 .masthead {
-  &.\--megamenu .\+children .__submenu {
+  &.\-megamenu .\+children .__submenu {
     display: none;
     flex-wrap: wrap;
 
     @include mqbp-up(d) { display: flex; }
   }
 
-  &.bg--black {
+  &.bg-black {
     &::after {
       border-bottom-color: $gray-400;
     }
@@ -744,10 +744,10 @@
   @include mqbp-up(d) { display: none; }
 }
 
-.\--overlay + main {
-  > .\--hero,
-  > .\--banner,
-  > .article > .\--banner {
+.\-overlay + main {
+  > .\-hero,
+  > .\-banner,
+  > .article > .\-banner {
     > .__header {
       margin-top: 3rem;
 
@@ -760,21 +760,21 @@
 
 @include mqbp-up(d) {
   .full {
-    .\--megamenu .\+children .__submenu {
+    .\-megamenu .\+children .__submenu {
       padding-right: 0 !important;
       padding-left: 0 !important;
     }
 
-    .\--utility { right: 0; }
+    .\-utility { right: 0; }
   }
 
   .contain {
-    .\--megamenu .\+children .__submenu {
+    .\-megamenu .\+children .__submenu {
       padding-right: 7rem !important;
       padding-left: 7rem !important;
     }
 
-    .\--utility { right: 4rem; }
+    .\-utility { right: 4rem; }
   }
 }
 
@@ -796,7 +796,7 @@
     }
   }
 
-  .masthead.bg--black .\+children {
+  .masthead.bg-black .\+children {
     &:focus-within {
       .__submenu {
         background-color: $black;
@@ -810,7 +810,7 @@
     }
   }
 
-  .masthead.\--megamenu .\+children {
+  .masthead.\-megamenu .\+children {
     &:focus-within {
       .__submenu {
         height: auto;
@@ -828,7 +828,7 @@
 
         &:before { width: 100%; }
 
-        > .\--feature {
+        > .\-feature {
           background-color: rgba($gray-400, .15);
           transition: background 0.3s ease 0.1s;
         }

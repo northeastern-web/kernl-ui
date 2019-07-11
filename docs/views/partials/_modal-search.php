@@ -10,11 +10,11 @@
       <form action="" method="">
         <div class="form__enclosed --search --dark --line">
           <label for="exampleText" class="sr--only">Search</label>
-          <input class="fs--d3 fw--300" type="search" id="modalSearch" aria-describedby="textHelp" placeholder="Search for meaning...">
+          <input class="fs-d3 fw-300" type="search" id="modalSearch" aria-describedby="textHelp" placeholder="Search for meaning...">
           <button type="submit" class="btn">Go</button>
         </div>
         <div class="__group --check --inline">
-          <label class="__check__label mr--1">
+          <label class="__check__label mr-1">
             <input type="radio" name="opt">
             Check me out
           </label>

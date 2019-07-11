@@ -11,7 +11,7 @@ table {
   overflow-x: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 
-  &.\--striped tr:nth-child(even) {
+  &.\-striped tr:nth-child(even) {
     background-color: $gray-100;
   }
 }

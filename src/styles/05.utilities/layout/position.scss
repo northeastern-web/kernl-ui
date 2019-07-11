@@ -1,14 +1,14 @@
 // Layout Utility
 // Position
 //
-// .pos--<value>
+// .pos-<value>
 
 
-.pos--static    { position: static !important; }
-.pos--fixed     { position: fixed !important; }
-.pos--absolute  { position: absolute !important; }
-.pos--relative  { position: relative !important; }
-.pos--sticky    {
+.pos-static    { position: static !important; }
+.pos-fixed     { position: fixed !important; }
+.pos-absolute  { position: absolute !important; }
+.pos-relative  { position: relative !important; }
+.pos-sticky    {
   position: sticky !important;
   top: 1rem;
 }
@@ -26,7 +26,7 @@
   left: 0;
 }
 
-.pin--none {
+.pin-none {
   width: auto;
   height: auto;
   top: auto;
@@ -35,13 +35,13 @@
   left: auto;
 }
 
-.pin--t { top: 0; }
-.pin--r { right: 0; }
-.pin--b { bottom: 0; }
-.pin--l { left: 0; }
+.pin-t { top: 0; }
+.pin-r { right: 0; }
+.pin-b { bottom: 0; }
+.pin-l { left: 0; }
 
 // center an item within container
-.pin--c {
+.pin-c {
   top: 50%;
   right: auto;
   bottom: auto;
@@ -49,23 +49,23 @@
   transform: translate(-50%, -50%);
 }
 
-.pin--x {
+.pin-x {
   right: 0;
   left: 0;
 }
 
-.pin--xc {
+.pin-xc {
   right: auto;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.pin--y {
+.pin-y {
   top: 0;
   bottom: 0;
 }
 
-.pin--yc {
+.pin-yc {
   bottom: auto;
   top: 50%;
   transform: translateY(-50%);

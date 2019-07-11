@@ -6,58 +6,58 @@
 
 $size: 20;
 @while $size >= 0 {
-  .pa--#{$size}   { padding: #{$size}rem !important; }
-  .pa--#{$size}h  { padding: #{($size+.5)}rem !important; }
-  .pt--#{$size}   { padding-top: #{$size}rem !important; }
-  .pt--#{$size}h  { padding-top: #{($size+.5)}rem !important; }
-  .pr--#{$size}   { padding-right: #{$size}rem !important; }
-  .pr--#{$size}h  { padding-right: #{($size+.5)}rem !important; }
-  .pb--#{$size}   { padding-bottom: #{$size}rem !important; }
-  .pb--#{$size}h  { padding-bottom: #{($size+.5)}rem !important; }
-  .pl--#{$size}   { padding-left: #{$size}rem !important; }
-  .pl--#{$size}h  { padding-left: #{($size+.5)}rem !important; }
-  .px--#{$size} {
+  .pa-#{$size}   { padding: #{$size}rem !important; }
+  .pa-#{$size}h  { padding: #{($size+.5)}rem !important; }
+  .pt-#{$size}   { padding-top: #{$size}rem !important; }
+  .pt-#{$size}h  { padding-top: #{($size+.5)}rem !important; }
+  .pr-#{$size}   { padding-right: #{$size}rem !important; }
+  .pr-#{$size}h  { padding-right: #{($size+.5)}rem !important; }
+  .pb-#{$size}   { padding-bottom: #{$size}rem !important; }
+  .pb-#{$size}h  { padding-bottom: #{($size+.5)}rem !important; }
+  .pl-#{$size}   { padding-left: #{$size}rem !important; }
+  .pl-#{$size}h  { padding-left: #{($size+.5)}rem !important; }
+  .px-#{$size} {
     padding-right:  #{$size}rem !important;
     padding-left:   #{$size}rem !important;
   }
-  .px--#{$size}h {
+  .px-#{$size}h {
     padding-right:  #{($size+.5)}rem !important;
     padding-left:   #{($size+.5)}rem !important;
   }
-  .py--#{$size} {
+  .py-#{$size} {
     padding-top:    #{$size}rem !important;
     padding-bottom: #{$size}rem !important;
   }
-  .py--#{$size}h {
+  .py-#{$size}h {
     padding-top:    #{($size+.5)}rem !important;
     padding-bottom: #{($size+.5)}rem !important;
   }
 
   @each $breakpoint in map-keys($breakpoints) {
     @include mqbp-up($breakpoint) {
-      .pa--#{$size}\@#{$breakpoint}   { padding: #{$size}rem !important; }
-      .pa--#{$size}h\@#{$breakpoint}  { padding: #{($size+.5)}rem !important; }
-      .pt--#{$size}\@#{$breakpoint}   { padding-top: #{$size}rem !important; }
-      .pt--#{$size}h\@#{$breakpoint}  { padding-top: #{($size+.5)}rem !important; }
-      .pr--#{$size}\@#{$breakpoint}   { padding-right: #{$size}rem !important; }
-      .pr--#{$size}h\@#{$breakpoint}  { padding-right: #{($size+.5)}rem !important; }
-      .pb--#{$size}\@#{$breakpoint}   { padding-bottom: #{$size}rem !important; }
-      .pb--#{$size}h\@#{$breakpoint}  { padding-bottom: #{($size+.5)}rem !important; }
-      .pl--#{$size}\@#{$breakpoint}   { padding-left: #{$size}rem !important; }
-      .pl--#{$size}h\@#{$breakpoint}  { padding-left: #{($size+.5)}rem !important; }
-      .px--#{$size}\@#{$breakpoint} {
+      .pa-#{$size}\@#{$breakpoint}   { padding: #{$size}rem !important; }
+      .pa-#{$size}h\@#{$breakpoint}  { padding: #{($size+.5)}rem !important; }
+      .pt-#{$size}\@#{$breakpoint}   { padding-top: #{$size}rem !important; }
+      .pt-#{$size}h\@#{$breakpoint}  { padding-top: #{($size+.5)}rem !important; }
+      .pr-#{$size}\@#{$breakpoint}   { padding-right: #{$size}rem !important; }
+      .pr-#{$size}h\@#{$breakpoint}  { padding-right: #{($size+.5)}rem !important; }
+      .pb-#{$size}\@#{$breakpoint}   { padding-bottom: #{$size}rem !important; }
+      .pb-#{$size}h\@#{$breakpoint}  { padding-bottom: #{($size+.5)}rem !important; }
+      .pl-#{$size}\@#{$breakpoint}   { padding-left: #{$size}rem !important; }
+      .pl-#{$size}h\@#{$breakpoint}  { padding-left: #{($size+.5)}rem !important; }
+      .px-#{$size}\@#{$breakpoint} {
         padding-right:  #{$size}rem !important;
         padding-left:   #{$size}rem !important;
       }
-      .px--#{$size}h\@#{$breakpoint} {
+      .px-#{$size}h\@#{$breakpoint} {
         padding-right:  #{($size+.5)}rem !important;
         padding-left:   #{($size+.5)}rem !important;
       }
-      .py--#{$size}\@#{$breakpoint} {
+      .py-#{$size}\@#{$breakpoint} {
         padding-top:    #{$size}rem !important;
         padding-bottom: #{$size}rem !important;
       }
-      .py--#{$size}h\@#{$breakpoint} {
+      .py-#{$size}h\@#{$breakpoint} {
         padding-top:    #{($size+.5)}rem !important;
         padding-bottom: #{($size+.5)}rem !important;
       }

@@ -5,7 +5,7 @@
 </section>
 
 <!-- start base masthead -->
-<?= masthead(0, 'bg--black', ''); ?>
+<?= masthead(0, 'bg-black', ''); ?>
 
 
 <!-- Fixed background  masthead -->
@@ -14,7 +14,7 @@
 </section>
 
 <!-- start fixed masthead -->
-<?= masthead(1, '', 'bg--fixed'); ?>
+<?= masthead(1, '', 'bg-fixed'); ?>
 
 
 <!-- Image background overlay masthead -->
@@ -31,7 +31,7 @@
   <header class="k_section__header">Overlay Fixed Background</header>
 </section>
 
-<?= masthead(3, '--overlay', 'bg--fixed'); ?>
+<?= masthead(3, '--overlay', 'bg-fixed'); ?>
 
 
 <!-- masthead with border-bottom nav -->
@@ -47,7 +47,7 @@
   <header class="k_section__header">Masthead, Megamenu</header>
 </section>
 
-<header class="masthead --megamenu +chevron +utility bg--black">
+<header class="masthead --megamenu +chevron +utility bg-black">
   <a class="__logo" href="<?= $url; ?>">
     <img class="__logo__image" alt="Logo" src="<?= $url; ?>/docs/images/logo-white.png">
   </a>
@@ -243,9 +243,9 @@
 
 </header>
 <!-- end mega-menu masthead -->
-<div class="section bg--img --hero --center">
+<div class="section bg-img --hero --center">
   <div class="__header">
-    <h2 class="__title py--5@xs">{ <i>Example Hero</i> }</h2>
+    <h2 class="__title py-5@xs">{ <i>Example Hero</i> }</h2>
   </div>
 </div>
       <?php include 'docs/views/partials/_modal-search.php'; ?>

@@ -56,7 +56,7 @@
 // Mixin to loop through color palette creating color variants
 @mixin make_colors($component) {
   @each $label, $color, $color_light, $color_dark, $text in $palette {
-    .#{$component}--#{$label} {
+    .#{$component}-#{$label} {
       @if $component == 'bg' { @include bg_variant($color, $color_light, $color_dark, $text); }
       @if $component == 'bc' { @include border_variant($color, $color_light, $color_dark, $text); }
       @if $component == 'tc' { @include text_variant($color); }

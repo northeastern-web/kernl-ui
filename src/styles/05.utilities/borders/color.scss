@@ -1,9 +1,9 @@
 // Borders Utility
 // Color
 //
-// .bc--<color>
+// .bc-<color>
 
 
 @include make_colors('bc');
 
-.bc--none { border-color: transparent !important; }
+.bc-none { border-color: transparent !important; }

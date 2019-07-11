@@ -1,16 +1,16 @@
 // Backgrounds Utility
 // Overlay
 //
-// .bgo--<value>
+// .bgo-<value>
 
 
-.bgo--none::after  { background-color: transparent !important; }
-.bgo--10::after    { background-color: rgba(0, 0, 0, 0.10) !important; }
-.bgo--20::after    { background-color: rgba(0, 0, 0, 0.20) !important; }
-.bgo--30::after    { background-color: rgba(0, 0, 0, 0.30) !important; }
-.bgo--40::after    { background-color: rgba(0, 0, 0, 0.40) !important; }
-.bgo--50::after    { background-color: rgba(0, 0, 0, 0.50) !important; }
-.bgo--60::after    { background-color: rgba(0, 0, 0, 0.60) !important; }
-.bgo--70::after    { background-color: rgba(0, 0, 0, 0.70) !important; }
-.bgo--80::after    { background-color: rgba(0, 0, 0, 0.80) !important; }
-.bgo--90::after    { background-color: rgba(0, 0, 0, 0.90) !important; }
+.bgo-none::after  { background-color: transparent !important; }
+.bgo-10::after    { background-color: rgba(0, 0, 0, 0.1) !important; }
+.bgo-20::after    { background-color: rgba(0, 0, 0, 0.2) !important; }
+.bgo-30::after    { background-color: rgba(0, 0, 0, 0.3) !important; }
+.bgo-40::after    { background-color: rgba(0, 0, 0, 0.4) !important; }
+.bgo-50::after    { background-color: rgba(0, 0, 0, 0.5) !important; }
+.bgo-60::after    { background-color: rgba(0, 0, 0, 0.6) !important; }
+.bgo-70::after    { background-color: rgba(0, 0, 0, 0.7) !important; }
+.bgo-80::after    { background-color: rgba(0, 0, 0, 0.8) !important; }
+.bgo-90::after    { background-color: rgba(0, 0, 0, 0.9) !important; }

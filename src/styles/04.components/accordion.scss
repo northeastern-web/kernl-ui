@@ -34,7 +34,7 @@
 
       &:active { outline: none; }
 
-      &.\--active,
+      &.\-active,
       &.fs-swap-active {
         &:after { content: "\e95c"; } // minus icon
       }
@@ -59,7 +59,7 @@
   // --
   // Modifiers
 
-  &.\--white {
+  &.\-white {
     @include accordion_variant($type-color, #fff, #fff);
 
     > .__item > .__title {
@@ -67,7 +67,7 @@
       color: $type-color;
       transition: color $transition;
 
-      &.\--active {
+      &.\-active {
         color: rgba($type-color, 0.5);
       }
     }
@@ -75,7 +75,7 @@
     .__copy { padding-top: 0; }
   }
 
-  &.\--dark {
+  &.\-dark {
     @include accordion_variant(#fff, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25));
 
     border: 1px solid rgba($white, 0.2);
@@ -89,7 +89,7 @@
     }
   }
 
-  &.\--spaced {
+  &.\-spaced {
     border: 0 none;
 
     > .__item {
@@ -98,7 +98,7 @@
     }
   }
 
-  .\--visible + .__content {
+  .\-visible + .__content {
     display: block;
   }
 }

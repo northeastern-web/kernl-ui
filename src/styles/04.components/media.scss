@@ -65,7 +65,7 @@
   // Modifiers
 
   // position __graphic to right (default assumes left)
-  &.\--right {
+  &.\-right {
     .__body { order: 1; }
 
     .__graphic {
@@ -75,7 +75,7 @@
   }
 
   // alter __graphic into a rectangle
-  &.\--rect {
+  &.\-rect {
     .__graphic {
       border-radius: 0;
 

@@ -1,7 +1,7 @@
 // Misc Utility
 // Aspect Ratios
 //
-// .ar--<something>
+// .ar-<something>
 
 
 .ar {
@@ -15,7 +15,7 @@
 }
 
 @each $ar-name, $ar-value in $aspect-ratios {
-  .ar--#{$ar-name} {
+  .ar-#{$ar-name} {
     @extend .ar;
 
     &::after {
@@ -28,7 +28,7 @@
 @each $breakpoint in map-keys($breakpoints) {
   @include mqbp-up($breakpoint) {
     @each $ar-name, $ar-value in $aspect-ratios {
-      .ar--#{$ar-name}\@#{$breakpoint} {
+      .ar-#{$ar-name}\@#{$breakpoint} {
         &::after {
           padding-top: $ar-value;
         }
@@ -37,7 +37,7 @@
   }
 }
 
-.ar--object {
+.ar-object {
   position: absolute;
   top: 0;
   left: 0;
