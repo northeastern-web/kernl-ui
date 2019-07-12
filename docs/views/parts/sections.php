@@ -20,11 +20,11 @@
   </div>
 </section>
 
-<section class="section -bal -center">
+<section class="section -lg -bal -center -measure">
   <div class="section_header">
     <div class="section_pretitle">Header Pre Title</div>
-    <h1 class="section_title">Header: 70vh, Top Position</h1>
-    <div class="section_subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
+    <h1 class="section_title">Header with Measure</h1>
+    <div class="section_subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
   </div>
 </section>
 

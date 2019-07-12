@@ -7,7 +7,7 @@
   margin-right: auto;
   margin-left: auto;
 
-  // Remove spacing when nesting sections
+  // Nesting sections, remove spacing to accomodate
   .section {
     padding: 0;
 
@@ -19,8 +19,13 @@
   // --
   // Options
 
-  // Page banner default styling
-  // banner option used exclusively for sections immediately opening and page/article
+  &.\-lg {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  // Banner option designed to function as page header,
+  // used once per page below masthead
   &.\-banner {
     @extend .fs-smooth;
     display: flex;
@@ -105,15 +110,15 @@
   sup,
   sub { font-weight: 400; }
 
-  .\-center & {
+  .section.\-center & {
     @extend .mx-auto;
     text-align: center;
   }
 
   // adds max-width via .section to nested .__header
-  .\-measure & { @extend .measure; }
-  .\-measure-narrow & { @extend .measure-narrow; }
-  .\-measure-wide & { @extend .measure-wide; }
+  .section.\-measure & { @extend .measure; }
+  .section.\-measure-narrow & { @extend .measure-narrow; }
+  .section.\-measure-wide & { @extend .measure-wide; }
 
   .\+nav {
     flex: 0;
