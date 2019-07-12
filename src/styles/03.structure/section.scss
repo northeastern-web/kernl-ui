@@ -19,6 +19,7 @@
   // --
   // Options
 
+  // Standardizing a common need for increased y-spacing on sections
   &.\-lg {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -163,10 +164,16 @@
     @include type-d4();
     line-height: 1.2;
     text-indent: -3px;
+
+    // increase the title when .-banner
+    .section.\-banner & { @include type-d5(); }
   }
 
   @include mqbp-up(d) {
     text-indent: -4px;
+
+    // increase the title when .-banner
+    .section.\-banner & { @include type-d6(); }
   }
 }
 
