@@ -18,3 +18,12 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+// Wrapper to stetch .col to equal heights
+.col_stretch {
+  .col {
+    @extend .d-flex;
+    @extend .items-stretch;
+    flex-flow: row nowrap;
+  }
+}

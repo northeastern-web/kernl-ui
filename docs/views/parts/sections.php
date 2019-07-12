@@ -20,7 +20,7 @@
   </div>
 </section>
 
-<section class="section -banner -top vh-70 bg-img">
+<section class="section -bal -center">
   <div class="section_header">
     <div class="section_pretitle">Header Pre Title</div>
     <h1 class="section_title">Header: 70vh, Top Position</h1>
@@ -28,15 +28,7 @@
   </div>
 </section>
 
-<section class="section -banner vh-80 -bottom bg-img">
-  <div class="section_header">
-    <div class="section_pretitle">Header Pre Title</div>
-    <h1 class="section_title">Header: Bottom Position, 80vh</h1>
-    <div class="section_subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
-  </div>
-</section>
-
-<section class="section -banner bg-fixed vh-60 bg-img">
+<section class="section -hero bg-fixed bg-img">
   <div class="section_header">
     <div class="section_pretitle">Header Pre Title</div>
     <h1 class="section_title">Header: Large, Fixed, 60vh</h1>
