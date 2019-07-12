@@ -1,210 +1,76 @@
 // Structure
 // Section
 
-
-// --
-// Document container options
-
-// container is full width
-.full .section,
-.full .masthead { @include make-section('full'); }
-
-// container is 2x default document margin
-.contain .section,
-.contain .masthead { @include make-section('contain', $contain: $contain-width); }
-
-// restrict container to non-masthead sections
-.contain.\-body .masthead { @include make-section(); }
-
-
 .section {
   @include make-section();
   position: relative;
   margin-right: auto;
   margin-left: auto;
 
-  // Remove spacing when nesting sections
-  .section {
-    padding: 0;
+  // Page banner default styling
+  // .banner used exclusively for sections immediately opening and page/article
+  &.\-banner {
+    @extend .fs-smooth;
+    display: flex;
+    align-items: center;
+    padding-top: 4.4rem;
+    padding-bottom: 4.4rem;
+    border-bottom: 1px solid rgba(177, 177, 177, 0.2);
 
-    .row:last-child {
-      .col { margin-bottom: 0; }
-    }
+    &.\-top { align-items: flex-start; }
+    &.\-bottom { align-items: flex-end; }
   }
 
-  // Remove padding-x for flush sections
-  &.\-flush {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  // Remove the negative margin from a section's default .row,
-  // then the horizontal padding from all immediate child
-  // columns (to prevent runaway style inheritance).
-  &.\-nogutters {
-    > .row {
-      margin-right: 0;
-      margin-left: 0;
-
-      > .col {
-        padding-right: 0;
-        padding-left: 0;
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  // --
-  // Header specific cascades
-
-  // default section header styling
-  > .__header {
-    flex: 1;
-    margin-bottom: 2rem;
-
-    .__title {
-      @include type-d3();
-      padding-top: 0;
-      margin-bottom: 0.125rem;
-      font-weight: $type-light;
-      line-height: 1.15;
-      max-width: none;
-
-      @include mqbp-up(t) {
-        @include type-d4();
-        line-height: 1.2;
-        text-indent: -3px;
-      }
-
-      @include mqbp-up(d) {
-        text-indent: -4px;
-      }
-    }
-
-    .__pretitle {
-      margin-bottom: 0.25rem;
-      font-weight: $type-light;
-    }
-    .__subtitle { @include type-lead(); }
-    .__title + .__subtitle { padding-top: 0.75rem; }
-    .__pretitle + .__title { padding-top: 0.5rem; }
-    .__pretitle + .__title + .__subtitle { padding-top: 0.5rem; }
-  }
-
-  // adds max-width via .section to nested .__header
-  &.\-measure {
-    .__header { @extend .measure; }
-  }
-
-  &.\-measure-narrow {
-    .__header { @extend .measure-narrow; }
-  }
-
-  &.\-measure-wide {
-    .__header { @extend .measure-wide; }
-  }
-
-  // adds line after title on via a section
-  &.\-bal {
-    .__header .__title { @extend .bal !optional; }
-  }
-
-  // centers .__header container and text
-  &.\-center {
-    > .__header {
-      @extend .mx-auto;
-      text-align: center;
-    }
-
-    &.\-bal {
-      .__title {
-        &::after {
-          right: 0;
-          margin: 0 auto;
-        }
-      }
-    }
+  // Hero default styling (HT Marketing)
+  // designed to center and add a max width for generic use cases
+  &.\-hero {
+    // @extend .\-banner;
+    // @extend .\-measure-wide;
+    // @extend .\-center;
+    // @extend .flex-col;
+    // padding-top: 10.6rem;
+    // padding-bottom: 10.6rem;
+    // border-bottom: 0 none;
   }
 }
 
-.col--stretch,
-.col__stretch {
-  .col {
-    @extend .d-flex;
-    @extend .items-stretch;
-    flex-flow: row nowrap;
+.section_header {
+  flex: 1;
+  margin-bottom: 2rem;
+
+  sup,
+  sub { font-weight: 400; }
+}
+
+.section_pretitle {
+  margin-bottom: 0.25rem;
+  font-weight: $type-light;
+
+  + .section_title { padding-top: 0.5rem; }
+  + .section_title + .section_subtitle { padding-top: 0.5rem; }
+}
+
+.section_title {
+  @include type-d3();
+  padding-top: 0;
+  margin-bottom: 0.125rem;
+  font-weight: $type-light;
+  line-height: 1.15;
+  max-width: none;
+
+  + .section_subtitle { padding-top: 0.75rem; }
+
+  @include mqbp-up(t) {
+    @include type-d4();
+    line-height: 1.2;
+    text-indent: -3px;
+  }
+
+  @include mqbp-up(d) {
+    text-indent: -4px;
   }
 }
 
-// --
-// Special .section options
-
-// Page banner default styling
-// .banner used exclusively for sections immediately opening and page/article
-.section.\-banner {
-  @extend .fs-smooth;
-  display: flex;
-  align-items: center;
-  padding-top: 4.4rem;
-  padding-bottom: 4.4rem;
-  border-bottom: 1px solid rgba(177, 177, 177, 0.2);
-
-  > .__header {
-    flex: 1;
-    width: 100%;
-    margin-bottom: 0;
-
-    .__title {
-      @include type-d4();
-      margin-bottom: 0.25rem;
-
-      @include mqbp-up(t) {
-        @include type-d5();
-      }
-
-      @include mqbp-up(d) {
-        @include type-d7();
-      }
-    }
-
-    sup,
-    sub { font-weight: 400; }
-  }
-
-  &.\-top { align-items: flex-start; }
-  &.\-bottom { align-items: flex-end; }
-
-  @include mqbp-up(d) { flex-direction: row; }
-
-  &.\+nav {
-    flex: 0;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-bottom: 5rem;
-    align-items: initial;
-
-    .__header {
-      flex: 0;
-      margin-top: 0;
-    }
-
-    &.\-top { justify-content: flex-start; }
-    &.\-bottom { justify-content: flex-end; }
-
-    @include mqbp-up(d) {
-      padding-bottom: 4.5rem;
-    }
-  }
-}
-
-// Hero default styling (HT Marketing)
-// designed to center and add a max width for generic use cases
-.section.\-hero {
-  @extend .\-banner;
-  @extend .\-measure-wide;
-  @extend .\-center;
-  @extend .flex-col;
-  padding-top: 10.6rem;
-  padding-bottom: 10.6rem;
-  border-bottom: 0 none;
+.section_subtitle {
+  @include type-lead();
 }
