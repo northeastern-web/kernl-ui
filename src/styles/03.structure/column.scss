@@ -2,6 +2,13 @@
 // Column
 
 
+// wrapper for .col items
+.row {
+  @include make-row();
+  display: flex;
+  flex-wrap: wrap;
+}
+
 // baseline column component (extend using width utility)
 .col {
   @include make-gutters();
@@ -10,18 +17,9 @@
   flex-flow: column nowrap;
   width: 100%;
   padding: 0 0.5rem;
-}
 
-// wrapper for .col items
-.row {
-  @include make-row();
-  display: flex;
-  flex-wrap: wrap;
-}
-
-// Wrapper to stetch .col to equal heights
-.col_stretch {
-  .col {
+  // Wrapper to stetch .col to equal heights
+  .col_stretch & {
     @extend .d-flex;
     @extend .items-stretch;
     flex-flow: row nowrap;

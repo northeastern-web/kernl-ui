@@ -120,7 +120,7 @@
   .section.\-measure-narrow & { @extend .measure-narrow; }
   .section.\-measure-wide & { @extend .measure-wide; }
 
-  .\+nav {
+  .section.\+nav {
     flex: 0;
     margin-top: 0;
   }
@@ -130,8 +130,11 @@
   margin-bottom: 0.25rem;
   font-weight: $type-light;
 
-  + .section_title { padding-top: 0.5rem; }
-  + .section_title + .section_subtitle { padding-top: 0.5rem; }
+  + .section_title {
+    padding-top: 0.25rem;
+
+    + .section_subtitle { padding-top: 0.5rem; }
+  }
 }
 
 .section_title {
@@ -148,6 +151,7 @@
   .section.\-bal & {
     @extend .bal !optional;
   }
+
   .section.\-bal.\-center & {
     &::after {
       right: 0;
