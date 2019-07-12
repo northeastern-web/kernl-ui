@@ -21428,7 +21428,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/rkingston/Sites/valet/kernl-ui/docs/docs.js */"./docs/docs.js");
+module.exports = __webpack_require__(/*! /Users/ray/Sites/kernl-ui/docs/docs.js */"./docs/docs.js");
 
 
 /***/ })

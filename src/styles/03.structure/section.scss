@@ -8,7 +8,7 @@
   margin-left: auto;
 
   // Page banner default styling
-  // .banner used exclusively for sections immediately opening and page/article
+  // banner option used exclusively for sections immediately opening and page/article
   &.\-banner {
     @extend .fs-smooth;
     display: flex;
@@ -19,19 +19,45 @@
 
     &.\-top { align-items: flex-start; }
     &.\-bottom { align-items: flex-end; }
+
+    @include mqbp-up(d) { flex-direction: row; }
+
+    &.\+nav {
+      flex: 0;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-bottom: 5rem;
+      align-items: initial;
+
+      &.\--top { justify-content: flex-start; }
+      &.\--bottom { justify-content: flex-end; }
+
+      @include mqbp-up(d) {
+        padding-bottom: 4.5rem;
+      }
+    }
   }
 
   // Hero default styling (HT Marketing)
   // designed to center and add a max width for generic use cases
   &.\-hero {
-    // @extend .\-banner;
-    // @extend .\-measure-wide;
-    // @extend .\-center;
-    // @extend .flex-col;
-    // padding-top: 10.6rem;
-    // padding-bottom: 10.6rem;
-    // border-bottom: 0 none;
+    @extend .\-banner;
+    @extend .\-measure-wide;
+    @extend .\-center;
+    @extend .flex-col;
+    padding-top: 10.6rem;
+    padding-bottom: 10.6rem;
+    border-bottom: 0 none;
   }
+
+  // --
+  // Document container options
+
+  // container is full width
+  .full & { @include make-section('full'); }
+
+  // container is 2x default document margin
+  .contain & { @include make-section('contain', $contain: $contain-width); }
 }
 
 .section_header {
@@ -40,6 +66,21 @@
 
   sup,
   sub { font-weight: 400; }
+
+  .\-center & {
+    @extend .mx-auto;
+    text-align: center;
+  }
+
+  // adds max-width via .section to nested .__header
+  .\-measure & { @extend .measure; }
+  .\-measure-narrow & { @extend .measure-narrow; }
+  .\-measure-wide & { @extend .measure-wide; }
+
+  .\+nav {
+    flex: 0;
+    margin-top: 0;
+  }
 }
 
 .section_pretitle {
@@ -73,4 +114,8 @@
 
 .section_subtitle {
   @include type-lead();
+
+  .\-banner & {
+    color: $blue;
+  }
 }

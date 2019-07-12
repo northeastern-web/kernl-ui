@@ -21361,10 +21361,10 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/rkingston/Sites/valet/kernl-ui/src/scripts/main.js */"./src/scripts/main.js");
-__webpack_require__(/*! /Users/rkingston/Sites/valet/kernl-ui/src/styles/main.scss */"./src/styles/main.scss");
-__webpack_require__(/*! /Users/rkingston/Sites/valet/kernl-ui/src/styles/wufoo.scss */"./src/styles/wufoo.scss");
-module.exports = __webpack_require__(/*! /Users/rkingston/Sites/valet/kernl-ui/docs/docs.scss */"./docs/docs.scss");
+__webpack_require__(/*! /Users/ray/Sites/kernl-ui/src/scripts/main.js */"./src/scripts/main.js");
+__webpack_require__(/*! /Users/ray/Sites/kernl-ui/src/styles/main.scss */"./src/styles/main.scss");
+__webpack_require__(/*! /Users/ray/Sites/kernl-ui/src/styles/wufoo.scss */"./src/styles/wufoo.scss");
+module.exports = __webpack_require__(/*! /Users/ray/Sites/kernl-ui/docs/docs.scss */"./docs/docs.scss");
 
 
 /***/ })

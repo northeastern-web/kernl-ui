@@ -19,7 +19,9 @@ mix.js('src/scripts/main.js', 'dist/scripts')
   .js('docs/docs.js', 'docs/dist/scripts')
   .sass('docs/docs.scss', 'docs/dist/styles')
   .copy('src/fonts/*', 'docs/dist/fonts')
-  .options({ processCssUrls: false });
+  .options({
+    processCssUrls: false
+  });
 
 mix.browserSync({
   proxy: 'https://kernl-ui.test/',
