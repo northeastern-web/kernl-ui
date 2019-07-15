@@ -1157,11 +1157,13 @@ dd {
 }
 .section_header {
   flex: 1;
-  margin-bottom: 2rem;
 }
 .section_header sup,
 .section_header sub {
   font-weight: 400;
+}
+.section_header + .row, .section_header + dl {
+  padding-top: 2rem;
 }
 .section.-center .section_header, .section.-hero .section_header {
   text-align: center;
@@ -1211,10 +1213,25 @@ dd {
   .section_title sup {
     top: -1.5rem;
   }
+  .section.-banner .section_title, .section.-hero .section_title {
+    line-height: 1.05;
+    font-size: 3rem;
+    letter-spacing: -0.05rem;
+  }
+  .section.-banner .section_title sup, .section.-hero .section_title sup {
+    top: -2.25rem;
+  }
 }
 @media (min-width: 992px) {
   .section_title {
     text-indent: -4px;
+  }
+  .section.-banner .section_title, .section.-hero .section_title {
+    line-height: 1.1;
+    font-size: 3.75rem;
+  }
+  .section.-banner .section_title sup, .section.-hero .section_title sup {
+    top: -1.5rem;
   }
 }
 
