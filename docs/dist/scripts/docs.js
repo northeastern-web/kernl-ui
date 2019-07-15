@@ -114,11 +114,11 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()('#kernl .bg-img').each(function ()
 
   jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).attr("style", "background-image: url(".concat(path).concat(selectedImg, ");"));
 });
-jquery__WEBPACK_IMPORTED_MODULE_1___default()('#kernl .__graphic').each(function () {
+jquery__WEBPACK_IMPORTED_MODULE_1___default()('#kernl .card_graphic').each(function () {
   var randomImages = Math.floor(Math.random() * images.length);
   var selectedImg = images.splice(randomImages, 1); // no repeated images
 
-  jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).append("<img class='__graphic__img' src='".concat(path).concat(selectedImg, "' alt=''>"));
+  jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).append("<img class='card_img' src='".concat(path).concat(selectedImg, "' alt=''>"));
 });
 /* Dynamically display responsive font sizes on typography page.
  * // * * Requires page reload after viewport resize. * * // *

@@ -13,490 +13,110 @@
   overflow: visible;
   box-shadow: $box-shadow-inset;
 
-  .__link {
-    @extend .flex-col;
-    @extend .d-flex;
-    width: 100%;
-    min-height: 100%;
-    color: inherit;
-    transition: box-shadow $transition;
-
-    &:hover {
-      box-shadow: $box-shadow-inset-hover;
-    }
-  }
-
-  // --
-  // Block level
-
-  .__body {
-    @include card-padding();
-    font-size: 100%;
-    flex: 1;
-
-    p {
-      font-size: inherit;
-      line-height: inherit;
-      &:last-child { margin-bottom: 0; }
-    }
-  }
-
-  .__title {
-    padding: 0;
-    margin: 0 0 0.5rem;
-    line-height: 1.25;
-    font-weight: 700;
-    font-size: 118%;
-    transition: color 0.2s ease;
-  }
-
-  .__pretitle { margin-bottom: 0.2rem; }
-
-  .__subtitle { font-size: 110%; }
-
-  .__graphic {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    background-color: $gray-800; // defined for accessibility conformance: contrast
-
-    &::after {
-      content: '';
-      display: block;
-      height: 0;
-    }
-  }
-
-  // pins the <img>
-  .__graphic__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-  }
-
-  .__header {
-    @extend .pos-absolute;
-    @extend .pin-t;
-    width: 100%;
-  }
-
-  .__footer {
-    @extend .d-flex;
-    @extend .justify-between;
-    @include card-padding();
-    padding-top: 0 !important;
-    font-size: 87.5%;
-  }
-
-  // Columns in header/footer
-  .__column {
-    @extend %component-column;
-    padding: 0;
-    align-self: center;
-  }
-
-  // --
-  // Modifiers
-
-  // Smaller variant of .card
-  &.\-tile {
-    @include type-xs();
-    .__body { padding: 1rem; }
-  }
-
-  // Profile variant of .card
-  &.\-profile {
-    box-shadow: none;
-
-    .__body {
-      padding: 1rem 0 1rem;
-
-      p { font-size: $fs-xs; }
-    }
-
-    .__title { margin-bottom: 0.25rem; }
-
-    .__subtitle {
-      font-size: $fs-xs;
-      margin-bottom: 0.5rem;
-      color: $gray-500;
-      font-style: italic;
-    }
-
-    .__footer {
-      padding: 0;
-
-      .__column:first-child {
-        display: inline-flex;
-        width: auto;
-        border-bottom: 2px solid transparent;
-        transition: border-bottom $transition;
-      }
-    }
-
-    &:hover {
-      .__link { box-shadow: none; }
-
-      .__footer .__column:first-child {
-        border-bottom: 2px solid $red;
-      }
-    }
-  }
-
-  // Overlay's block level items to card
-  &.\-overlay {
-    background-color: $gray-800; // defined for accessibility conformance: contrast
-    color: #fff;
-    height: $tile_overlay_height;
-
-    .__link { height: 100%; }
-
-    .__graphic {
-      min-height: 100%;
-      padding: 0;
-      min-width: 100%;
-
-      &::after {
-        @extend .pin;
-        content: '';
-        background-color: rgba(0, 0, 0, 0.7);
-      }
-    }
-
-    .__body {
-      @extend .pos-absolute;
-      overflow-y: hidden;
-      max-height: 95%;
-    }
-
-    &:not(.\-middle):not(.\-bottom) {
-      .__header + .__body {
-        margin-top: 1.25rem;
-        top: 0;
-      }
-    }
-  }
-
-  // Middle text variant
-  &.\-middle {
-    @extend .flex-middle;
-
-    .__link {
-      @extend .flex-middle;
-    }
-
-    &.\-overlay {
-      .__link {
-        @extend .d-block;
-        width: 100%;
-      }
-
-      .__header {
-        @extend .pin-xc;
-      }
-
-      .__body {
-        @extend .pin-c;
-        @extend .ta-c;
-        @extend .w-100;
-      }
-    }
-  }
-
-  // Bottom text variant
-  &.\-bottom {
-    @extend .justify-end;
-
-    .__link {
-      @extend .justify-end;
-    }
-
-    &.\-overlay {
-      .__link { width: 100%; }
-
-      .__body {
-        @extend .pin-b;
-        @extend .w-100;
-      }
-    }
-  }
-
-  &.\-overlay,
-  &.\-middle,
-  &.\-bottom {
-    .__body { flex: 0; }
-  }
-
-  // --
-  // Size variants
-  &.\-sm { height: $card-height-sm; }
-  &.\-md { height: $card-height-md; }
-  &.\-lg { height: $card-height-lg; }
-  &.\-xl { height: $card-height-xl; }
-
-  // --
-  // Orientation overrides
   &.\-h {
-    flex-direction: row;
-
-    .__link { flex-direction: row; }
-
-    .__graphic,
-    .__body { width: 50%; }
-
-    .__footer {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 50%;
-    }
-
-    &.--right {
-      .__graphic { order: 1; }
-      .__footer { left: auto; }
-    }
-
-    .__graphic {
-      @each $ar-name, $ar-value in $aspect-ratios {
-        &.ar--#{$ar-name} {
-          &::after {
-            padding-top: ($ar-value / 2);
-          }
-        }
-      }
-
-      @each $breakpoint in map-keys($breakpoints) {
-        @include mqbp-up($breakpoint) {
-          @each $ar-name, $ar-value in $aspect-ratios {
-            &.ar--#{$ar-name}\@#{$breakpoint} {
-              &::after {
-                padding-top: ($ar-value / 2);
-              }
-            }
-          }
-        }
-      }
-    }
+    @extend .flex-row;
 
     @each $breakpoint in map-keys($breakpoints) {
-      &.\-v\@#{$breakpoint} {
-        .__graphic {
-          @each $ar-name, $ar-value in $aspect-ratios {
-            &.ar--#{$ar-name} {
-              &::after {
-                padding-top: ($ar-value / 2);
-              }
-            }
-
-            @include mqbp-up($breakpoint) {
-              &.ar--#{$ar-name} {
-                &::after {
-                  padding-top: $ar-value !important;
-                }
-              }
-
-              @each $breakpoint in map-keys($breakpoints) {
-                &.ar--#{$ar-name}\@#{$breakpoint} {
-                  &::after {
-                    padding-top: $ar-value !important;
-                  }
-                }
-              }
-            }
-          }
+      @include mqbp-up($breakpoint) {
+        &\@#{$breakpoint} {
+          flex-direction: row;
         }
       }
     }
   }
 
   @each $breakpoint in map-keys($breakpoints) {
-    &.\-h\@#{$breakpoint} {
-
-      @include mqbp-up($breakpoint) {
-        flex-direction: row;
-
-        .__link { flex-direction: row; }
-
-        .__graphic,
-        .__body { width: 50%; }
-
-        .__graphic {
-          &::after {
-            padding-top: (56.25% / 2);
-          }
-        }
-
-        .__footer {
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 50%;
-        }
-
-        &.--right {
-          .__graphic { order: 1; }
-          .__footer { left: auto; }
-        }
-      }
-    }
-
-    // horizontal shared with vertical override
-    &.\-v\@#{$breakpoint} {
-
-      @include mqbp-up($breakpoint) {
+    @include mqbp-up($breakpoint) {
+      &.\-v\@#{$breakpoint} {
         flex-direction: column;
-
-        .__link { flex-direction: column; }
-
-        .__graphic,
-        .__body { width: 100%; }
-
-        .__graphic {
-          &::after {
-            padding-top: 56.25%;
-          }
-        }
-
-        .__footer {
-          position: relative;
-          bottom: auto;
-          left: auto;
-          width: auto;
-        }
-
-        &.--right {
-          .__graphic { order: 0; }
-        }
       }
-    }
-  }
-
-  //
-  // prevent + footer collision in horizontal orientations
-  &.\-h {
-    .__body {
-      @include padding-bottom-gutter(3);
-
-      @include mqbp-up(t) {
-        @include padding-bottom-gutter(2.5);
-      }
-    }
-
-    @each $breakpoint in map-keys($breakpoints) {
-      &.\-v\@#{$breakpoint} {
-        @include mqbp-up($breakpoint) {
-          .__body { @include padding-bottom-gutter(); }
-        }
-      }
-    }
-  }
-
-  @each $breakpoint in map-keys($breakpoints) {
-    @include mqbp-up($breakpoint) {
-      &.\-h\@#{$breakpoint} {
-        .__body {
-          @include padding-bottom-gutter(2.5);
-        }
-      }
-    }
-
-    // don't adjust anything above this line!
-
-    @include mqbp-up($breakpoint) {
-      &.\-v\@#{$breakpoint} {
-        .__body {
-          @include padding-bottom-gutter();
-        }
-      }
-    }
-  }
-
-  &.\-zoom {
-    .__graphic__img {
-      transform: scale(1);
-      transform-origin: center;
-      transition: transform 0.2s ease;
-    }
-
-    &:hover {
-      .__graphic__img {
-        transform: scale(1.04);
-      }
-    }
-  }
-
-  &.\-flush {
-    box-shadow: none;
-
-    .__body { padding-top: 1rem; }
-
-    .__body,
-    .__footer {
-      padding-right: 0;
-      padding-left: 0;
-    }
-
-    &.\-h {
-      .__body {
-        @include card-padding();
-        padding-top: 0;
-      }
-    }
-
-    @each $breakpoint in map-keys($breakpoints) {
-      @include mqbp-up($breakpoint) {
-        &.\-h\@#{$breakpoint} {
-          .__body { padding-top: 0; }
-        }
-      }
-
-      // don't adjust anything above this line!
-
-      @include mqbp-up($breakpoint) {
-        &.\-v\@#{$breakpoint} {
-          @include mqbp-up($breakpoint) {
-            .__body { padding-top: 1rem; }
-
-            .__body,
-            .__footer {
-              padding-right: 0;
-              padding-left: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .badge {
-    background: $black-alpha;
-    border: 0 none;
-    color: $white;
-  }
-
-  &.\-overlay {
-    .badge {
-      background: $white-alpha;
     }
   }
 }
 
-/* Polyfill for Edge */
-_:-ms-lang(x), .card .__graphic__img {
-  top: -10000px !important;
-  right: -10000px !important;
-  bottom: -10000px !important;
-  left: -10000px !important;
-  margin: auto;
+.card_link {
+  @extend .flex-col;
+  @extend .d-flex;
+  width: 100%;
+  min-height: 100%;
+  color: inherit;
+  transition: box-shadow $transition;
+
+  &:hover {
+    box-shadow: $box-shadow-inset-hover;
+  }
+}
+
+// --
+// Block level
+
+.card_body {
+  @include card-padding();
+  font-size: 100%;
+  flex: 1;
+
+  p {
+    font-size: inherit;
+    line-height: inherit;
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+.card_title {
+  padding: 0;
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+  font-weight: 700;
+  font-size: 118%;
+  transition: color 0.2s ease;
+}
+
+.card_pretitle { margin-bottom: 0.2rem; }
+.card_subtitle { font-size: 110%; }
+
+.card_graphic {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: $gray-800; // defined for accessibility conformance: contrast
+
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+  }
+}
+
+// pins the <img>
+.card_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
   min-width: 100%;
   min-height: 100%;
-  zoom: 0.1;
-  width: auto !important;
-  height: auto !important;
+  object-fit: cover;
+}
+
+.card_header {
+  @extend .pos-absolute;
+  @extend .pin-t;
+  width: 100%;
+}
+
+.card_footer {
+  @extend .d-flex;
+  @extend .justify-between;
+  @include card-padding();
+  padding-top: 0 !important;
+  font-size: 87.5%;
+}
+
+// Columns in header/footer
+.card_column {
+  @extend %component-column;
+  padding: 0;
+  align-self: center;
 }
