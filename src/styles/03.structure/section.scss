@@ -21,8 +21,8 @@
 
   // Standardizing a common need for increased y-spacing on sections
   &.\-lg {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   // Banner option designed to function as page header,
@@ -132,7 +132,7 @@
 
 .section_pretitle {
   margin-bottom: 0.25rem;
-  font-weight: $type-light;
+  // font-weight: $type-light;
 
   + .section_title {
     padding-top: 0.25rem;

@@ -4,7 +4,7 @@
   <h2 class="k_section__header">Sections &amp; Headers</h2>
 </header>
 
-<section class="section -lg">
+<section class="section">
   <div class="section_header">
     <h1 class="section_title">Section Header</h1>
     <div class="section_subtitle">Generic look and feel with columns following</div>
@@ -22,18 +22,16 @@
 </div>
 </section>
 
-<section class="section -banner -bal bg-img">
+<section class="section -banner -bal -measure-wide bg-img">
   <div class="section_header">
-    <div class="section_pretitle"><a href="#">Banner Pre Title</a></div>
-    <h1 class="section_title">Banner</h1>
-    <div class="section_subtitle">Banner Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
+    <h1 class="section_title">Banner</hner with wide measure - Cras justo odio, dapibus ac facilisis in, egestas eget quam justo odio, dapibus ac facilisis in, egestas eget quam justo odio, dapibus ac facilisis in, egestas eget quam.</div>
   </div>
 </section>
 
 <section class="section -lg -bal -center -measure">
   <div class="section_header">
     <div class="section_pretitle">Cras justo odio</div>
-    <h1 class="section_title">Centered with Measure</h1>
+    <h1 class="section_title">Centered with Measure and Lg</h1>
     <div class="section_subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
   </div>
 </section>
@@ -41,7 +39,7 @@
 <section class="section -hero bg-fixed bg-img">
   <div class="section_header">
     <div class="section_pretitle">Header Pre Title</div>
-    <h1 class="section_title">Header: Large, Fixed, 60vh</h1>
+    <h1 class="section_title">Header: Large, Fixed Background</h1>
     <div class="section_subtitle">Header Sub Title Cras justo odio, dapibus ac facilisis in, egestas eget quam</div>
   </div>
 </section>
