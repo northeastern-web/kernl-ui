@@ -46,7 +46,7 @@
 // Component Color Variants
 
 @mixin accordion_variant($color: $type-color, $trigger: rgba(0,0,0,0.05), $background: transparent) {
-  > .__item > .__title {
+  .accordion_title {
     background: $trigger;
 
     &:after { color: $color; }
@@ -56,7 +56,7 @@
     }
   }
 
-  .__copy {
+  .accordion_copy {
     color: $color;
     background: $background;
   }

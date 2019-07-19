@@ -48,25 +48,25 @@
     </div>
   </div>
 </section>
-<section class="section bg-gray-100 ta-c --nogutters">
+<section class="section bg-gray-100 ta-c -nogutters">
   <header class="k_section__header ta-l">Buttons in Color</header>
   <div class="row">
-    <div class="col w-1/4@t pt-2 pb-1">
+    <div class="col w-1/2@t w-1/4@d pt-2 pb-1">
       <p><a class="btn bg-gray-500" href="#">Gray-500 Button</a></p>
       <p><a class="btn bc-gray-500" href="#">Gray-500 Button Border</a></p>
       <p class="mt-2"><a class="btn -m" href="#">Marketing Variant</a></p>
     </div>
-    <div class="col w-1/4@t pt-2 pb-1">
+    <div class="col w-1/2@t w-1/4@d pt-2 pb-1">
       <p><a class="btn bg-red" href="#">Red Button</a></p>
       <p><a class="btn bc-red" href="#">Red Button Border</a></p>
-      <p class="mt-2"><a class="btn -m tt-caps" href="#"><i data-feather="arrow-right"></i> Marketing Variant</a></p>
+      <p class="mt-2"><a class="btn -m -left tt-caps" href="#"><i data-feather="arrow-right"></i> Marketing Variant</a></p>
     </div>
-    <div class="col w-1/4@t pt-2 pb-1 bg-black">
+    <div class="col w-1/2@t w-1/4@d pt-2 pb-1 bg-black">
       <p><a class="btn bg-yellow" href="#">Yellow Button</a></p>
       <p><a class="btn bc-yellow" href="#">Yellow Button Border</a></p>
       <p class="mt-2"><a class="btn -m" href="#">Marketing Variant</a></p>
     </div>
-    <div class="col w-1/4@t pt-2 pb-1 bg-black">
+    <div class="col w-1/2@t w-1/4@d pt-2 pb-1 bg-black">
       <p><a class="btn bg-beige" href="#">Beige Button</a></p>
       <p><a class="btn bc-beige" href="#">Beige Button Border</a></p>
       <p class="mt-2"><a class="btn -m -right tt-caps" href="#">Marketing Variant <i data-feather="arrow-right"></i></a></p>
@@ -82,10 +82,10 @@
         <small><i>Default behavior. Just keep them in the same element.</i></small>
       </p>
       <p>
-        <a class="btn -sm --transparent" href="#">Here a Button</a>
-        <a class="btn -sm" href="#">There a Button</a>
-        <a class="btn -sm" href="#">Everywhere a Button</a>
-        <a class="btn -sm" href="#">Button</a>
+        <a href="#" class="btn -sm -transparent">Here a Button</a>
+        <a href="#" class="btn -sm">There a Button</a>
+        <a href="#" class="btn -sm">Everywhere a Button</a>
+        <a href="#" class="btn -sm">Button</a>
       </p>
       <hr>
       <p>

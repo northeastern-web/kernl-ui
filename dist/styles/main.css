@@ -1324,28 +1324,28 @@ dd {
 .accordion {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-.accordion > .__item > .__title {
+.accordion .accordion_title {
   background: rgba(0, 0, 0, 0.05);
 }
-.accordion > .__item > .__title:after {
+.accordion .accordion_title:after {
   color: #333333;
 }
-.accordion > .__item > .__title.-active:after {
+.accordion .accordion_title.-active:after {
   color: rgba(51, 51, 51, 0.5);
 }
-.accordion .__copy {
+.accordion .accordion_copy {
   color: #333333;
   background: transparent;
 }
-.accordion > .__item {
+.accordion_item {
   padding-top: 0;
   margin-bottom: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
-.accordion > .__item:first-child {
+.accordion_item:first-child {
   border-top: 0 none;
 }
-.accordion > .__item > .__title {
+.accordion_title {
   padding: 1rem 3rem 1rem 0.75rem;
   width: 100%;
   position: relative;
@@ -1355,7 +1355,7 @@ dd {
   border: 0 none;
   cursor: pointer;
 }
-.accordion > .__item > .__title:after {
+.accordion_title:after {
   content: "\E970";
   font-family: "feathericons";
   font-weight: normal;
@@ -1363,88 +1363,78 @@ dd {
   top: 1rem;
   right: 1.5rem;
 }
-.accordion > .__item > .__title:active {
+.accordion_title:active {
   outline: none;
 }
-.accordion > .__item > .__title.-active:after, .accordion > .__item > .__title.fs-swap-active:after {
+.accordion_title.-active:after, .accordion_title.fs-swap-active:after {
   content: "\E95C";
 }
-.accordion .__content {
+.accordion_content {
   display: none;
   position: relative;
 }
-.accordion .__content.fs-swap-active {
+.accordion_content.fs-swap-active {
   display: block;
 }
-.accordion .__copy {
+.accordion_copy {
   padding: 1rem 3rem 1rem 0.75rem;
   font-size: 0.88rem;
   background: #fff;
 }
-.accordion.-white > .__item > .__title {
-  background: #fff;
-}
-.accordion.-white > .__item > .__title:after {
-  color: #333333;
-}
-.accordion.-white > .__item > .__title.-active:after {
-  color: rgba(51, 51, 51, 0.5);
-}
-.accordion.-white .__copy {
-  color: #333333;
-  background: #fff;
-}
-.accordion.-white > .__item > .__title {
-  font-weight: 700;
-  color: #333333;
-  transition: color 0.2s ease;
-}
-.accordion.-white > .__item > .__title.-active {
-  color: rgba(51, 51, 51, 0.5);
-}
-.accordion.-white .__copy {
-  padding-top: 0;
-}
-.accordion.-dark {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-.accordion.-dark > .__item > .__title {
-  background: rgba(0, 0, 0, 0.5);
-}
-.accordion.-dark > .__item > .__title:after {
-  color: #fff;
-}
-.accordion.-dark > .__item > .__title.-active:after {
-  color: rgba(255, 255, 255, 0.5);
-}
-.accordion.-dark .__copy {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.25);
-}
-.accordion.-dark .__item {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-.accordion.-dark .__item:first-child {
-  border-top: 0 none;
-}
-.accordion.-dark .__item > .__title {
-  color: #ffffff;
-}
-.accordion.-spaced {
-  border: 0 none;
-}
-.accordion.-spaced > .__item {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 1rem;
-}
-.accordion .-visible + .__content {
-  display: block;
+
+/*
+  // --
+  // Modifiers
+
+  &.\-white {
+    @include accordion_variant($type-color, #fff, #fff);
+
+    > .accordion_item > .accordion_title {
+      font-weight: 700;
+      color: $type-color;
+      transition: color $transition;
+
+      &.\-active {
+        color: rgba($type-color, 0.5);
+      }
+    }
+
+    .accordion_copy { padding-top: 0; }
+  }
+
+  &.\-dark {
+    @include accordion_variant(#fff, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25));
+
+    border: 1px solid rgba($white, 0.2);
+
+    .accordion_item {
+      border-top: 1px solid rgba($white, 0.2);
+
+      &:first-child { border-top: 0 none; }
+
+      > .__title { color: $white; }
+    }
+  }
+
+  &.\-spaced {
+    border: 0 none;
+
+    > .accordion_item {
+      border: 1px solid rgba($black, 0.2);
+      margin-bottom: 1rem;
+    }
+  }
+
+  .\-visible + .accordion_content {
+    display: block;
+  }
 }
 
-.accordion .card:first-child .__title {
-  border-top: 0 none;
+// card contained within an accordion
+.accordion .card {
+  &:first-child .accordion_title { border-top: 0 none; }
 }
-
+*/
 .badge {
   position: relative;
   display: inline-flex;
@@ -1588,11 +1578,8 @@ dd {
   border-bottom-color: rgba(151, 151, 151, 0.7);
   background: none;
 }
-
-.btn_group {
-  display: flex;
-  flex-flow: row nowrap;
-  overflow: hidden;
+.btn.-m.-left {
+  padding-left: 0.5rem;
 }
 .btn_group .btn {
   border-radius: 0;
@@ -1602,10 +1589,17 @@ dd {
   margin-right: 0;
 }
 
+.btn_group {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+}
+
 .card {
   margin-bottom: 1rem;
   line-height: 1.35;
   font-size: 0.88rem;
+  flex-direction: column;
   width: 100%;
   background: #ffffff;
   position: relative;
@@ -1622,38 +1616,66 @@ dd {
     margin-bottom: 36px;
   }
 }
-@media (min-width: 720px) {
-  .card.-h\@t {
-    flex-direction: row;
-  }
+.card.-tile {
+  line-height: 1.3;
+  font-size: 0.76rem;
 }
-@media (min-width: 992px) {
-  .card.-h\@d {
-    flex-direction: row;
-  }
+.card.-overlay {
+  background-color: #333333;
+  color: #fff;
+  height: 250px;
+  overflow: hidden;
 }
-@media (min-width: 1280px) {
-  .card.-h\@w {
-    flex-direction: row;
-  }
+.card.-h {
+  flex-direction: row;
 }
 @media (min-width: 720px) {
   .card.-v\@t {
     flex-direction: column;
+  }
+  .card.-h\@t {
+    flex-direction: row;
   }
 }
 @media (min-width: 992px) {
   .card.-v\@d {
     flex-direction: column;
   }
+  .card.-h\@d {
+    flex-direction: row;
+  }
 }
 @media (min-width: 1280px) {
   .card.-v\@w {
     flex-direction: column;
   }
+  .card.-h\@w {
+    flex-direction: row;
+  }
 }
-
+.card.-sm {
+  height: 250px;
+}
+.card.-md {
+  height: 350px;
+}
+.card.-lg {
+  height: 450px;
+}
+.card.-xl {
+  height: 550px;
+}
+.-flush .card {
+  margin-bottom: 0;
+  box-shadow: none;
+}
+.stack .card {
+  border: 1px solid #d0d0d0;
+  margin-bottom: -1px;
+  box-shadow: none;
+}
 .card_link {
+  flex-direction: column;
   width: 100%;
   min-height: 100%;
   color: inherit;
@@ -1662,7 +1684,39 @@ dd {
 .card_link:hover {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4), 0 3px 20px rgba(0, 0, 0, 0.1);
 }
-
+.-h .card_link {
+  flex-direction: row;
+}
+@media (min-width: 720px) {
+  .-v\@t .card_link {
+    flex-direction: column;
+  }
+  .-h\@t .card_link {
+    flex-direction: row;
+  }
+}
+@media (min-width: 992px) {
+  .-v\@d .card_link {
+    flex-direction: column;
+  }
+  .-h\@d .card_link {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1280px) {
+  .-v\@w .card_link {
+    flex-direction: column;
+  }
+  .-h\@w .card_link {
+    flex-direction: row;
+  }
+}
+.-overlay .card_link {
+  height: 100%;
+}
+.-middle.-overlay .card_link {
+  width: 100%;
+}
 .card_body {
   padding: 1rem;
   font-size: 100%;
@@ -1685,7 +1739,21 @@ dd {
 .card_body p:last-child {
   margin-bottom: 0;
 }
-
+.-overlay .card_body {
+  position: absolute;
+  overflow-y: hidden;
+  max-height: 95%;
+}
+.-tile .card_body {
+  padding: 1rem;
+}
+.-overlay .card_body, .-middle .card_body, .-bottom .card_body {
+  flex: 0;
+}
+.-middle.-overlay .card_body {
+  text-align: center;
+  width: 100%;
+}
 .card_title {
   padding: 0;
   margin: 0 0 0.5rem;
@@ -1694,27 +1762,39 @@ dd {
   font-size: 118%;
   transition: color 0.2s ease;
 }
-
 .card_pretitle {
   margin-bottom: 0.2rem;
 }
-
 .card_subtitle {
   font-size: 110%;
 }
-
-.card_graphic {
+.card_media {
   position: relative;
   width: 100%;
   overflow: hidden;
   background-color: #333333;
 }
-.card_graphic::after {
+.card_media::after {
   content: "";
   display: block;
   height: 0;
 }
-
+.-overlay .card_media {
+  min-height: 100%;
+  padding: 0;
+  min-width: 100%;
+}
+.-overlay .card_media::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.-r .card_media {
+  order: 1;
+}
+.\+avatar .card_media {
+  max-width: 4rem;
+  max-height: 4rem;
+}
 .card_img {
   position: absolute;
   top: 0;
@@ -1727,13 +1807,13 @@ dd {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .card_header {
   width: 100%;
 }
-
 .card_footer {
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
   padding-top: 0 !important;
   font-size: 87.5%;
 }
@@ -1747,10 +1827,27 @@ dd {
     padding: 36px;
   }
 }
-
+.-overlay .card_footer {
+  position: absolute;
+  bottom: 0;
+}
 .card_column {
   padding: 0;
   align-self: center;
+}
+
+/* Polyfill for object-fit:cover in MS Edge */
+_:-ms-lang(x), .card .card_img {
+  top: -10000px !important;
+  right: -10000px !important;
+  bottom: -10000px !important;
+  left: -10000px !important;
+  margin: auto;
+  min-width: 100%;
+  min-height: 100%;
+  zoom: 0.1;
+  width: auto !important;
+  height: auto !important;
 }
 
 /*! formstone v1.4.13 [carousel.css] 2019-03-17 | GPL-3.0 License | formstone.it */
@@ -4272,7 +4369,7 @@ dd {
   display: none;
 }
 
-.d-block {
+.d-block, .-middle.-overlay .card_link {
   display: block;
 }
 
@@ -4297,7 +4394,7 @@ dd {
 }
 
 .d-flex, .col_stretch .col, .col_stretch dt,
-.col_stretch dd, .card, .card_link, .card_footer {
+.col_stretch dd, .card, .card_link {
   display: flex;
 }
 
@@ -4410,7 +4507,7 @@ dd {
   top: 1rem;
 }
 
-.pin, .bg-img:after, .fs-carousel-controls {
+.pin, .bg-img:after, .-overlay .card_media::after, .fs-carousel-controls {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -4445,7 +4542,7 @@ dd {
   left: 0;
 }
 
-.pin-c {
+.pin-c, .-middle.-overlay .card_body {
   top: 50%;
   right: auto;
   bottom: auto;
@@ -4458,7 +4555,7 @@ dd {
   left: 0;
 }
 
-.pin-xc {
+.pin-xc, .-middle.-overlay .card_header {
   right: auto;
   left: 50%;
   transform: translateX(-50%);
@@ -6219,11 +6316,11 @@ dd {
   justify-content: center;
 }
 
-.justify-end {
+.justify-end, .card.-bottom, .-bottom .card_link {
   justify-content: flex-end;
 }
 
-.justify-between, .card_footer {
+.justify-between {
   justify-content: space-between;
 }
 
@@ -6287,13 +6384,13 @@ dd {
   align-self: stretch;
 }
 
-.flex-middle {
+.flex-middle, .card.-middle, .-middle .card_link {
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.flex-row, .card.-h {
+.flex-row {
   flex-direction: row;
 }
 
@@ -6301,7 +6398,7 @@ dd {
   flex-direction: row-reverse;
 }
 
-.flex-col, .section.-hero, .card, .card_link {
+.flex-col, .section.-hero {
   flex-direction: column;
 }
 

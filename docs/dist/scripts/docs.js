@@ -114,7 +114,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()('#kernl .bg-img').each(function ()
 
   jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).attr("style", "background-image: url(".concat(path).concat(selectedImg, ");"));
 });
-jquery__WEBPACK_IMPORTED_MODULE_1___default()('#kernl .card_graphic').each(function () {
+jquery__WEBPACK_IMPORTED_MODULE_1___default()('#kernl .card_media').each(function () {
   var randomImages = Math.floor(Math.random() * images.length);
   var selectedImg = images.splice(randomImages, 1); // no repeated images
 
@@ -137,12 +137,12 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()('#kernl .element-font-size').each(
 
 jquery__WEBPACK_IMPORTED_MODULE_1___default()(document).on('keyup', function (e) {
   if (e.keyCode == 27) {
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.modal').removeClass('--sm --base --lg --xl --full');
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.modal').removeClass('-sm -base -lg -xl -full');
   }
 });
 jquery__WEBPACK_IMPORTED_MODULE_1___default()('.modal-demo').on('click touch', 'a', function () {
   var modalSize = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).attr('data-size');
-  jquery__WEBPACK_IMPORTED_MODULE_1___default()('.modal').removeClass('--sm --base --lg --xl --full').addClass('--' + modalSize);
+  jquery__WEBPACK_IMPORTED_MODULE_1___default()('.modal').removeClass('-sm -base -lg -xl -full').addClass('-' + modalSize);
 });
 /**
  * Toggle 'parts' menu
@@ -178,8 +178,8 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()('[data-load]').on('click touch', f
   jquery__WEBPACK_IMPORTED_MODULE_1___default()('.spinner').delay(5000).queue(function () {
     jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).addClass('loaded').dequeue();
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('.loaded').removeClass('spinner');
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.k_loader-placeholder').addClass('__graphic ar--16x9').queue(function () {
-      jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).append("<img class=\"__graphic__img\" src=\"".concat(path, "truck.jpg\" alt=\"\">"));
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.k_loader-placeholder').addClass('card_media ar-16x9').queue(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).append("<img class=\"card_img\" src=\"".concat(path, "truck.jpg\" alt=\"\">"));
     });
   });
 });
@@ -21428,7 +21428,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ray/Sites/kernl-ui/docs/docs.js */"./docs/docs.js");
+module.exports = __webpack_require__(/*! /Users/rkingston/Sites/valet/kernl-ui/docs/docs.js */"./docs/docs.js");
 
 
 /***/ })

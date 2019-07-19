@@ -44,8 +44,8 @@
         </div>
         <div class="mb-1">
           <label for="exampleInputFile">File input</label>
-          <input type="file" class="__control __control-file" id="exampleInputFile" aria-describedby="fileHelp">
-          <small id="fileHelp" class="tc-gray-400">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+          <input type="file" id="exampleInputFile" aria-describedby="fileHelp">
+          <small class="tc-gray-400">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
         </div>
         <button type="submit" class="btn">Submit</button>
       </form>
@@ -59,17 +59,17 @@
       <form action="" method="">
         <h4 class="fw-700 fs-d2">Inline Form and Plaintext Input</h4>
         <div class="bg-gray-50 bc-gray-200 pa-1">
-          <div class="row items--center">
+          <div class="row items-center">
             <div class="col w-40@t">
               <label class="sr-only" for="exampleInputEmailx">Email address</label>
-              <input class="--plaintext" readonly type="email" id="exampleInputEmailx" aria-describedby="emailHelp" placeholder="plain.text@readonly.com">
+              <input class="-plaintext" readonly type="email" id="exampleInputEmailx" aria-describedby="emailHelp" placeholder="plain.text@readonly.com">
             </div>
             <div class="col w-40@t">
               <label class="sr-only" for="exampleInputPasswordx">Password</label>
               <input type="password" id="exampleInputPasswordx" placeholder="Password">
             </div>
             <div class="col w-20@t ta-c">
-              <button type="submit" class="btn --block">Submit</button>
+              <button type="submit" class="btn -block">Submit</button>
             </div>
           </div>
         </div>
@@ -84,8 +84,8 @@
       <form action="" method="">
         <fieldset>
           <legend class="fw-700 fs-d2">Radio Buttons and Checkboxes</legend>
-            <p class="fs-sm"><i>Wrap these elements in <code>.form__check</code>.</i></p>
-            <div class="form__check bg-gray-50 bc-gray-200 pa-1 mb-1">
+            <p class="fs-sm"><i>Wrap these elements in <code>.form-check</code>.</i></p>
+            <div class="form-check bg-gray-50 bc-gray-200 pa-1 mb-1">
               <label>
                 <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
                 Option one is this and that&mdash;be sure to include why it's great
@@ -104,8 +104,8 @@
               </label>
             </div>
 
-            <p class="fs-sm"><i>Wrap in <code>.form__check.--inline</code> to the chain to get them on the same line.</i></p>
-            <div class="form__check --inline bg-gray-50 bc-gray-200 pa-1">
+            <p class="fs-sm"><i>Wrap in <code>.form-check.-inline</code> to the chain to get them on the same line.</i></p>
+            <div class="form-check -inline bg-gray-50 bc-gray-200 pa-1">
               <label>
                 <input type="checkbox"> Check me out
               </label>
@@ -119,7 +119,7 @@
   </div>
 </section>
 
-<section class="section --md bg-white">
+<section class="section -md bg-white">
   <div class="row">
     <div class="col w-2/3@d mx-auto">
       <form action="" method="">

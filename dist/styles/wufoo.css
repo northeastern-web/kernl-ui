@@ -1320,11 +1320,8 @@ dd {
   border-bottom-color: rgba(151, 151, 151, 0.7);
   background: none;
 }
-
-.btn_group {
-  display: flex;
-  flex-flow: row nowrap;
-  overflow: hidden;
+.btn.-m.-left, .wufoo .-m.-left.submit {
+  padding-left: 0.5rem;
 }
 .btn_group .btn, .btn_group .wufoo .submit, .wufoo .btn_group .submit {
   border-radius: 0;
@@ -1332,6 +1329,12 @@ dd {
 }
 .btn_group .btn:last-child, .btn_group .wufoo .submit:last-child, .wufoo .btn_group .submit:last-child {
   margin-right: 0;
+}
+
+.btn_group {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
 }
 
 .columns-2 {

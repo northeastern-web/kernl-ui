@@ -18,7 +18,7 @@ $('#kernl .bg-img').each(function() {
   $(this).attr("style",`background-image: url(${path}${selectedImg});`);
 });
 
-$('#kernl .card_graphic').each(function() {
+$('#kernl .card_media').each(function() {
   const randomImages = Math.floor(Math.random() * images.length);
   const selectedImg = images.splice(randomImages,1); // no repeated images
   $(this).append(`<img class='card_img' src='${path}${selectedImg}' alt=''>`);
@@ -44,13 +44,13 @@ $('#kernl .element-font-size').each(function() {
 
 $(document).on('keyup', function(e) {
   if (e.keyCode == 27) {
-    $('.modal').removeClass('--sm --base --lg --xl --full');
+    $('.modal').removeClass('-sm -base -lg -xl -full');
   }
 });
 
 $('.modal-demo').on('click touch', 'a', function() {
   var modalSize = $(this).attr('data-size');
-  $('.modal').removeClass('--sm --base --lg --xl --full').addClass( '--' + modalSize )
+  $('.modal').removeClass('-sm -base -lg -xl -full').addClass( '-' + modalSize )
 });
 
 /**
@@ -86,8 +86,8 @@ $('[data-load]').on('click touch', function() {
   $('.spinner').delay(5000).queue(function() {
     $(this).addClass('loaded').dequeue();
     $('.loaded').removeClass('spinner');
-    $('.k_loader-placeholder').addClass('__graphic ar--16x9').queue(function(){
-      $(this).append(`<img class="__graphic__img" src="${path}truck.jpg" alt="">`);
+    $('.k_loader-placeholder').addClass('card_media ar-16x9').queue(function(){
+      $(this).append(`<img class="card_img" src="${path}truck.jpg" alt="">`);
     });
   });
 });

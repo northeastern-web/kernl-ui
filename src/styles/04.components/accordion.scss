@@ -4,44 +4,45 @@
 
 .accordion {
   @include accordion_variant();
+
   border: 1px solid rgba($black, 0.2);
 
-  > .__item {
+  &_item {
     padding-top: 0;
     margin-bottom: 0;
     border-top: 1px solid rgba($black, 0.2);
 
     &:first-child { border-top: 0 none; }
+  }
 
-    > .__title {
-      padding: 1rem 3rem 1rem 0.75rem;
-      width: 100%;
-      position: relative;
-      display: block;
-      text-align: left;
-      color: inherit;
-      border: 0 none;
-      cursor: pointer;
+  &_title {
+    padding: 1rem 3rem 1rem 0.75rem;
+    width: 100%;
+    position: relative;
+    display: block;
+    text-align: left;
+    color: inherit;
+    border: 0 none;
+    cursor: pointer;
 
-      &:after {
-        content: "\e970"; // plus icon
-        font-family: "feathericons";
-        font-weight: normal;
-        position: absolute;
-        top: 1rem;
-        right: 1.5rem;
-      }
+    &:after {
+      content: "\e970"; // plus icon
+      font-family: "feathericons";
+      font-weight: normal;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+    }
 
-      &:active { outline: none; }
+    &:active { outline: none; }
 
-      &.\-active,
-      &.fs-swap-active {
-        &:after { content: "\e95c"; } // minus icon
-      }
+    &.\-active,
+    &.fs-swap-active {
+      &:after { content: "\e95c"; } // minus icon
     }
   }
 
-  .__content {
+  &_content {
     display: none;
     position: relative;
 
@@ -50,19 +51,21 @@
     }
   }
 
-  .__copy {
+  &_copy {
     padding: 1rem 3rem 1rem 0.75rem;
     font-size: $fs-sm;
     background: #fff;
   }
+}
 
+/*
   // --
   // Modifiers
 
   &.\-white {
     @include accordion_variant($type-color, #fff, #fff);
 
-    > .__item > .__title {
+    > .accordion_item > .accordion_title {
       font-weight: 700;
       color: $type-color;
       transition: color $transition;
@@ -72,7 +75,7 @@
       }
     }
 
-    .__copy { padding-top: 0; }
+    .accordion_copy { padding-top: 0; }
   }
 
   &.\-dark {
@@ -80,7 +83,7 @@
 
     border: 1px solid rgba($white, 0.2);
 
-    .__item {
+    .accordion_item {
       border-top: 1px solid rgba($white, 0.2);
 
       &:first-child { border-top: 0 none; }
@@ -92,18 +95,19 @@
   &.\-spaced {
     border: 0 none;
 
-    > .__item {
+    > .accordion_item {
       border: 1px solid rgba($black, 0.2);
       margin-bottom: 1rem;
     }
   }
 
-  .\-visible + .__content {
+  .\-visible + .accordion_content {
     display: block;
   }
 }
 
 // card contained within an accordion
 .accordion .card {
-  &:first-child .__title { border-top: 0 none; }
+  &:first-child .accordion_title { border-top: 0 none; }
 }
+*/
