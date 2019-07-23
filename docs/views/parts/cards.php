@@ -271,44 +271,44 @@
       <div class="stack">
         <article class="card fs-xs">
           <a class="card_link" href="#">
-            <div class="card_body pa-1 pb-0">
+            <div class="card_body">
               <h2 class="card_title">Article Title</h2>
               <p>An excerpt would go here in the card body.
             </div>
-            <div class="card_footer pa-1 pt-0h">
+            <div class="card_footer">
               By Mr. Metadata on March 14, 2020.
             </div>
           </a>
         </article>
         <article class="card fs-xs">
           <a class="card_link" href="#">
-            <div class="card_body pa-1 pb-0">
+            <div class="card_body">
               <h2 class="card_title">Article Title</h2>
               <p>An excerpt would go here in the card body.
             </div>
-            <div class="card_footer pa-1 pt-0h">
+            <div class="card_footer">
               By Mr. Metadata on March 14, 2020.
             </div>
           </a>
         </article>
         <article class="card fs-xs">
           <a class="card_link" href="#">
-            <div class="card_body pa-1 pb-0">
+            <div class="card_body">
               <h2 class="card_title">Article Title</h2>
               <p>An excerpt would go here in the card body.
             </div>
-            <div class="card_footer pa-1 pt-0h">
+            <div class="card_footer">
               By Mr. Metadata on March 14, 2020.
             </div>
           </a>
         </article>
         <article class="card fs-xs">
           <a class="card_link" href="#">
-            <div class="card_body pa-1 pb-0">
+            <div class="card_body">
               <h2 class="card_title">Article Title</h2>
               <p>An excerpt would go here in the card body.
             </div>
-            <div class="card_footer pa-1 pt-0h">
+            <div class="card_footer">
               By Mr. Metadata on March 14, 2020.
             </div>
           </a>

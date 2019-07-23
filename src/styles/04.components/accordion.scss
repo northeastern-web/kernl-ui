@@ -15,7 +15,7 @@
     &:first-child { border-top: 0 none; }
   }
 
-  &_title {
+  &_header {
     padding: 1rem 3rem 1rem 0.75rem;
     width: 100%;
     position: relative;
@@ -42,7 +42,7 @@
     }
   }
 
-  &_content {
+  &_body {
     display: none;
     position: relative;
 

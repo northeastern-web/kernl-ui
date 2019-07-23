@@ -1066,8 +1066,8 @@ dd {
   margin-bottom: 0;
 }
 .section.-lg {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .section.-banner, .section.-hero {
   display: flex;
@@ -1175,7 +1175,6 @@ dd {
 
 .section_pretitle {
   margin-bottom: 0.25rem;
-  font-weight: 300;
 }
 .section_pretitle + .section_title {
   padding-top: 0.25rem;

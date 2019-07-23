@@ -156,6 +156,10 @@
       text-align: center;
       width: 100%;
     }
+
+    .stack & {
+      padding: 1rem 1rem 0.5rem;
+    }
   }
 
   &_title {
@@ -238,6 +242,10 @@
     .\-overlay & {
       position: absolute;
       bottom: 0;
+    }
+
+    .stack & {
+      padding: 0 1rem 1rem;
     }
   }
 
