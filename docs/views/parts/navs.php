@@ -81,7 +81,7 @@
 
     <div class="col w-1/2@t w-1/4@d">
 
-      <div class="hidden-up@t ta-c">
+      <div class="hidden-up@t ta-c mt-1">
         <button class="btn -sm" data-toggle="nav" data-swap-target="#page_menu_1">
           <i data-feather="align-left"></i>
           Page Menu
@@ -104,15 +104,15 @@
           </li>
           <li class="nav_item">
             <a class="nav_link" href="#" aria-current="true">Pharetra Magna Pellentesque Fusce</a>
-            <ul class="sub_list">
-              <li class="sub_item">
-                <a class="sub_link" href="#">Cras Lorem</a>
+            <ul class="nav_sublist">
+              <li class="nav_subitem">
+                <a class="nav_sublink" href="#">Cras Lorem</a>
               </li>
-              <li class="sub_item">
-                <a class="sub_link" href="#">Ridiculus Purus Ultricies Vehicula Euismod Sit Parturient Pellentesque Magna Sem</a>
+              <li class="nav_subitem">
+                <a class="nav_sublink" href="#">Ridiculus Purus Ultricies Vehicula Euismod Sit Parturient Pellentesque Magna Sem</a>
               </li>
-              <li class="sub_item">
-                <a class="sub_link" href="#">Tristique Ultricies Ligula Parturient</a>
+              <li class="nav_subitem">
+                <a class="nav_sublink" href="#">Tristique Ultricies Ligula Parturient</a>
               </li>
             </ul>
           </li>

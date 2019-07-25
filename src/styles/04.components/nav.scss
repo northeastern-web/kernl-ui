@@ -71,4 +71,39 @@
       color: inherit;
     }
   }
+
+  &_sublist {
+    @extend .nav_list;
+    padding-top: 0;
+
+    @include mqbp-up(t) {
+      display: none;
+
+      [aria-current="true"] + & {
+        display: flex;
+      }
+    }
+  }
+
+  &_subitem {
+    padding-left: 0;
+  }
+
+  &_sublink {
+    @extend .nav_link;
+
+    position: relative;
+    padding: 0.4rem 0.75rem 0.4rem 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 10px;
+      height: 1px;
+      background-color: rgba($gray-900, 0.3);
+      top: 0.9rem;
+      left: 0.5rem;
+    }
+  }
 }
