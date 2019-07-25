@@ -28,6 +28,24 @@
       background-color: transparent;
       height: auto;
     }
+
+    .\-inline & {
+      flex-direction: row;
+    }
+  }
+
+  &_item {
+    margin-bottom: 0;
+    padding-top: 0;
+
+    .\-interior & {
+      font-size: $fs-sm;
+      border-bottom: 1px solid $gray-200;
+    }
+
+    .\-inline & {
+      display: inline-flex;
+    }
   }
 
   &_link {
@@ -38,6 +56,10 @@
     color: $gray-700;
     transition: background-color 0.15s ease;
 
+    .\-inline & {
+      padding: 0.5rem;
+    }
+
     &[aria-current="true"] {
       font-weight: $type-bold;
       color: $black;
@@ -47,16 +69,6 @@
       background-color: rgba($gray-200, 0.3);
       text-decoration: none;
       color: inherit;
-    }
-  }
-
-  &_item {
-    border-bottom: 1px solid $gray-200;
-    margin-bottom: 0;
-    padding-top: 0;
-
-    .\-interior & {
-      font-size: $fs-sm;
     }
   }
 }

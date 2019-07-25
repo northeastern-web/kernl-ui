@@ -227,6 +227,7 @@
 <section class="section">
   <div class="row">
     <div class="col w-1/3@d">
+      <h3 class="fw-900">Stack of cards</h3>
       <div class="stack +avatar mb-1">
         <article class="card -h fs-xs">
           <a class="card_link items-center" href="#">
@@ -268,6 +269,7 @@
     </div>
 
     <div class="col w-1/3@d">
+      <h3 class="fw-900">Stack of articles</h3>
       <div class="stack">
         <article class="card fs-xs">
           <a class="card_link" href="#">

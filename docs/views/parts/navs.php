@@ -1,7 +1,7 @@
 <section class="section">
   <!-- Defaults -->
   <div class="row">
-    <div class="col w-1/2@t w-1/4@d">
+    <div class="col w-1/3@t w-1/4@d">
       <nav class="nav" role="navigation" aria-label="Page Navigation">
         <ul class="nav_list">
           <li class="nav_item">
@@ -18,6 +18,28 @@
           </li>
           <li class="nav_item">
             <a class="nav_link" href="#">Pharetra Magna Pellentesque Fusce</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Inline default -->
+    <div class="col w-2/3@t w-3/4@d">
+      <nav class="nav -inline" role="navigation" aria-label="Page Navigation">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a class="nav_link" href="#" aria-current="true">Dolor Fermentum</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav_link" href="#">Mattis Euismod</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav_link" href="#">Mollis Purus</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav_link" href="#">Sit Parturient</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav_link" href="#">Pharetra</a>
           </li>
         </ul>
       </nav>
