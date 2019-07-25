@@ -125,75 +125,75 @@ $l = 0;
   <header class="k_section__header">Gradient Options</header>
 
   <h3 class="fs-sm tt-caps fw-300">Primary Palette</h3>
-  <div class="row color-cell">
+  <div class="row color-cell gradients">
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-red-orange">NU Red/Objectively Orange<br><span class="hex-color">bg-red-orange</span></div>
+      <div class="bg-red-orange">NU Red/Objectively Orange<br><span class="hex-color">bg-red-orange</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-orange-gray-warm-light">Objectively Orange/Major Tan<br><span class="hex-color">bg-orange-gray-warm-light</span></div>
+      <div class="bg-orange-gray-warm-light">Objectively Orange/Major Tan<br><span class="hex-color">bg-orange-gray-warm-light</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-gray-warm-light-red">Major Tan/NU Red<br><span class="hex-color">bg-gray-warm-light-red</span></div>
+      <div class="bg-gray-warm-light-red">Major Tan/NU Red<br><span class="hex-color">bg-gray-warm-light-red</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-red-yellow">NU Red/Youthful Yellow<br><span class="hex-color">bg-red-yellow</span></div>
+      <div class="bg-red-yellow">NU Red/Youthful Yellow<br><span class="hex-color">bg-red-yellow</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-yellow-orange">Youthful Yellow/Objectively Orange<br><span class="hex-color">bg-yellow-orange</span></div>
+      <div class="bg-yellow-orange">Youthful Yellow/Objectively Orange<br><span class="hex-color">bg-yellow-orange</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-green-yellow">Gamma Green/Youthful Yellow<br><span class="hex-color">bg-green-yellow</span></div>
-    </div>
-
-    <div class="col w-1/3@t">
-      <div class="pb-3 bg-blue-teal">Bachelor’s Blue/Global Green<br><span class="hex-color">bg-blue-teal</span></div>
-    </div>
-    <div class="col w-1/3@t">
-      <div class="pb-3 bg-blue-light-blue-dark">Biology Blue/Business Blue<br><span class="hex-color">bg-blue-light-blue-dark</span></div>
-    </div>
-    <div class="col w-1/3@t">
-      <div class="pb-3 bg-blue-dark-teal">Business Blue/Global Green<br><span class="hex-color">bg-blue-dark-teal</span></div>
-    </div>
-    <div class="col w-1/3@t">
-      <div class="pb-3 bg-teal-green">Global Green/Gamma Green<br><span class="hex-color">bg-teal-green</span></div>
-    </div>
-    <div class="col w-1/3@t">
-      <div class="pb-3 bg-blue-green">Bachelor’s Blue/Gamma Green<br><span class="hex-color">bg-blue-green</span></div>
-    </div>
-    <div class="col w-1/3@t">
-      <div class="pb-3 bg-blue-light-blue">Biology Blue/Bachelor’s Blue<br><span class="hex-color">bg-blue-light-blue</span></div>
+      <div class="bg-green-yellow">Gamma Green/Youthful Yellow<br><span class="hex-color">bg-green-yellow</span></div>
     </div>
 
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-blue-gray-cool">Bachelor’s Blue/Grad Gray<br><span class="hex-color">bg-blue-gray-cool</span></div>
+      <div class="bg-blue-teal">Bachelor’s Blue/Global Green<br><span class="hex-color">bg-blue-teal</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-blue-dark-gray-warm">Business Blue/Husky Gray<br><span class="hex-color">bg-blue-dark-gray-warm</span></div>
+      <div class="bg-blue-light-blue-dark">Biology Blue/Business Blue<br><span class="hex-color">bg-blue-light-blue-dark</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-blue-gray-warm">Bachelor’s Blue/Husky Gray<br><span class="hex-color">bg-blue-gray-warm</span></div>
+      <div class="bg-blue-dark-teal">Business Blue/Global Green<br><span class="hex-color">bg-blue-dark-teal</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-blue-dark-gray-warm">Business Blue/Professor Gray<br><span class="hex-color">bg-blue-dark-gray-warm</span></div>
+      <div class="bg-teal-green">Global Green/Gamma Green<br><span class="hex-color">bg-teal-green</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-gray-cool-blue-dark">Grad Gray/Business Blue<br><span class="hex-color">bg-gray-cool-blue-dark</span></div>
+      <div class="bg-blue-green">Bachelor’s Blue/Gamma Green<br><span class="hex-color">bg-blue-green</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-gold-gray-warm-light">Presidential Gold/Major Tan<br><span class="hex-color">bg-gold-gray-warm-light</span></div>
+      <div class="bg-blue-light-blue">Biology Blue/Bachelor’s Blue<br><span class="hex-color">bg-blue-light-blue</span></div>
     </div>
 
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-red-blue">NU Red/Bachelor’s Blue<br><span class="hex-color">bg-red-blue</span></div>
+      <div class="bg-blue-gray-cool">Bachelor’s Blue/Grad Gray<br><span class="hex-color">bg-blue-gray-cool</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-blue-orange">Bachelor’s Blue/Objectively Orange<br><span class="hex-color">bg-blue-orange</span></div>
+      <div class="bg-blue-dark-gray-warm">Business Blue/Husky Gray<br><span class="hex-color">bg-blue-dark-gray-warm</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-blue-light-yellow">Biology Blue/Youthful Yellow<br><span class="hex-color">bg-blue-light-yellow</span></div>
+      <div class="bg-blue-gray-warm">Bachelor’s Blue/Husky Gray<br><span class="hex-color">bg-blue-gray-warm</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="pb-3 bg-yellow-blue">Youthful Yellow/Bachelor’s Blue<br><span class="hex-color">bg-yellow-blue</span></div>
+      <div class="bg-blue-dark-gray-warm">Business Blue/Professor Gray<br><span class="hex-color">bg-blue-dark-gray-warm</span></div>
+    </div>
+    <div class="col w-1/3@t">
+      <div class="bg-gray-cool-blue-dark">Grad Gray/Business Blue<br><span class="hex-color">bg-gray-cool-blue-dark</span></div>
+    </div>
+    <div class="col w-1/3@t">
+      <div class="bg-gold-gray-warm-light">Presidential Gold/Major Tan<br><span class="hex-color">bg-gold-gray-warm-light</span></div>
+    </div>
+
+    <div class="col w-1/3@t">
+      <div class="bg-red-blue">NU Red/Bachelor’s Blue<br><span class="hex-color">bg-red-blue</span></div>
+    </div>
+    <div class="col w-1/3@t">
+      <div class="bg-blue-orange">Bachelor’s Blue/Objectively Orange<br><span class="hex-color">bg-blue-orange</span></div>
+    </div>
+    <div class="col w-1/3@t">
+      <div class="bg-blue-light-yellow">Biology Blue/Youthful Yellow<br><span class="hex-color">bg-blue-light-yellow</span></div>
+    </div>
+    <div class="col w-1/3@t">
+      <div class="bg-yellow-blue">Youthful Yellow/Bachelor’s Blue<br><span class="hex-color">bg-yellow-blue</span></div>
     </div>
   </div>
 </section>

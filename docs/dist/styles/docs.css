@@ -23599,3 +23599,8 @@ p code, li code, td code, th code, dt code, dd code {
   font-family: "Source Code Pro", monospace;
   font-weight: 300;
 }
+.color-cell.gradients > .col > div, .color-cell.gradients > dt > div,
+.color-cell.gradients > dd > div {
+  padding-bottom: 3rem;
+  color: #ffffff;
+}

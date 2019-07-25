@@ -503,4 +503,11 @@ $black-alpha: rgba(0, 0, 0, 0.7);
     font-family: "Source Code Pro", monospace;
     font-weight: 300;
   }
+
+  &.gradients {
+    > .col > div {
+      padding-bottom: 3rem;
+      color: $white;
+    } 
+  }
 }
