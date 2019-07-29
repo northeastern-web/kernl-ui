@@ -8044,6 +8044,578 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
+/***/ "./node_modules/formstone/src/js/navigation.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/formstone/src/js/navigation.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* global define */
+
+(function(factory) {
+    if (true) {
+      !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+        __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"),
+        __webpack_require__(/*! ./core */ "./node_modules/formstone/src/js/core.js"),
+        __webpack_require__(/*! ./mediaquery */ "./node_modules/formstone/src/js/mediaquery.js"),
+        __webpack_require__(/*! ./swap */ "./node_modules/formstone/src/js/swap.js")
+      ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else {}
+  }(function($, Formstone) {
+
+    "use strict";
+
+    /**
+     * @method private
+     * @name setup
+     * @description Setup plugin.
+     */
+
+    function setup() {
+      // $Body  = Formstone.$body;
+      $Locks = $("html, body");
+    }
+
+    /**
+     * @method private
+     * @name construct
+     * @description Builds instance.
+     * @param data [object] "Instance data"
+     */
+
+    function construct(data) {
+      // guid
+      data.handleGuid = RawClasses.handle + data.guid;
+
+      data.isToggle = (data.type === "toggle");
+      data.open = false;
+
+      if (data.isToggle) {
+        data.gravity = "";
+      }
+
+      var baseClass = RawClasses.base,
+        typeClass = [baseClass, data.type].join("-"),
+        gravityClass = data.gravity ? [typeClass, data.gravity].join("-") : "",
+        classGroup = [data.rawGuid, data.theme, data.customClass].join(" ");
+
+      data.handle = this.data(Namespace + "-handle");
+      data.content = this.data(Namespace + "-content");
+
+      data.handleClasses = [
+        RawClasses.handle,
+        RawClasses.handle.replace(baseClass, typeClass),
+        gravityClass ? RawClasses.handle.replace(baseClass, gravityClass) : "",
+        data.handleGuid,
+        classGroup
+      ].join(" ");
+
+      data.thisClasses = [
+        RawClasses.nav.replace(baseClass, typeClass),
+        gravityClass ? RawClasses.nav.replace(baseClass, gravityClass) : "",
+        classGroup
+      ];
+
+      data.contentClasses = [
+        RawClasses.content.replace(baseClass, typeClass),
+        classGroup
+      ].join(" ");
+
+      data.contentClassesOpen = [
+        gravityClass ? RawClasses.content.replace(baseClass, gravityClass) : "",
+        RawClasses.open
+      ].join(" ");
+
+      // DOM
+
+      data.$nav = this.addClass(data.thisClasses.join(" ")).attr("role", "navigation");
+      data.$handle = $(data.handle).addClass(data.handleClasses);
+      data.$content = $(data.content).addClass(data.contentClasses);
+      data.$animate = $().add(data.$nav).add(data.$content);
+
+      cacheLabel(data);
+
+      // Tab index
+
+      data.navTabIndex = data.$nav.attr("tabindex");
+      data.$nav.attr("tabindex", -1);
+
+      // Aria
+
+      data.id = this.attr("id");
+
+      if (data.id) {
+        data.ariaId = data.id;
+      } else {
+        data.ariaId = data.rawGuid;
+        this.attr("id", data.ariaId);
+      }
+
+      // toggle
+
+      data.$handle.attr("data-swap-target", data.dotGuid)
+        .attr("data-swap-linked", data.handleGuid)
+        .attr("data-swap-group", RawClasses.base)
+        .attr("tabindex", 0)
+        .on("activate.swap" + data.dotGuid, data, onOpen)
+        .on("deactivate.swap" + data.dotGuid, data, onClose)
+        .on("enable.swap" + data.dotGuid, data, onEnable)
+        .on("disable.swap" + data.dotGuid, data, onDisable)
+        .on(Events.focus + data.dotGuid, data, onFocus)
+        .on(Events.blur + data.dotGuid, data, onBlur)
+        .fsSwap({
+          maxWidth: data.maxWidth,
+          classes: {
+            target: data.dotGuid,
+            enabled: Classes.enabled,
+            active: Classes.open,
+            raw: {
+              target: data.rawGuid,
+              enabled: RawClasses.enabled,
+              active: RawClasses.open
+            }
+          }
+        });
+
+      if (!data.$handle.is("a, button")) {
+        data.$handle.on(Events.keyPress + data.dotGuid, data, onKeyup);
+      }
+
+      // $Body.on( [ Events.focus + data.dotGuid, Events.focusIn + data.dotGuid ].join(" "), data, onDocumentFocus);
+    }
+
+    /**
+     * @method private
+     * @name destruct
+     * @description Tears down instance.
+     * @param data [object] "Instance data"
+     */
+
+    function destruct(data) {
+      data.$content.removeClass([data.contentClasses, data.contentClassesOpen].join(" "))
+        .off(Events.namespace);
+
+      data.$handle.removeAttr("aria-controls")
+        .removeAttr("aria-expanded")
+        .removeAttr("data-swap-target")
+        .removeData("swap-target")
+        .removeAttr("data-swap-linked")
+        .removeAttr("data-swap-group")
+        .removeData("swap-linked")
+        .removeData("tabindex")
+        .removeClass(data.handleClasses)
+        .off(data.dotGuid)
+        .html(data.originalLabel)
+        .fsSwap("destroy");
+
+      data.$nav.attr("tabindex", data.navTabIndex);
+
+      // $Body.off(data.dotGuid);
+
+      restoreLabel(data);
+
+      clearLocks(data);
+
+      this.removeAttr("aria-hidden")
+        .removeClass(data.thisClasses.join(" "))
+        .off(Events.namespace);
+
+      if (this.attr("id") === data.rawGuid) {
+        this.removeAttr("id");
+      }
+    }
+
+    /**
+     * @method
+     * @name open
+     * @description Opens instance.
+     * @example $(".target").navigation("open");
+     */
+
+    function open(data) {
+      data.$handle.fsSwap("activate");
+    }
+
+    /**
+     * @method
+     * @name close
+     * @description Closes instance.
+     * @example $(".target").navigation("close");
+     */
+
+    function close(data) {
+      data.$handle.fsSwap("deactivate");
+    }
+
+    /**
+     * @method
+     * @name enable
+     * @description Enables instance.
+     * @example $(".target").navigation("enable");
+     */
+
+    function enable(data) {
+      data.$handle.fsSwap("enable");
+    }
+
+    /**
+     * @method
+     * @name disable
+     * @description Disables instance.
+     * @example $(".target").navigation("disable");
+     */
+
+    function disable(data) {
+      data.$handle.fsSwap("disable");
+    }
+
+    /**
+     * @method private
+     * @name onFocus
+     * @description Handles instance focus
+     * @param e [object] "Event data"
+     */
+
+    function onFocus(e) {
+      e.data.$handle.addClass(RawClasses.focus);
+    }
+
+    /**
+     * @method private
+     * @name onBlur
+     * @description Handles instance blur
+     * @param e [object] "Event data"
+     */
+
+    function onBlur(e) {
+      e.data.$handle.removeClass(RawClasses.focus);
+    }
+
+    /**
+     * @method private
+     * @name onKeyup
+     * @description Handles keypress event on inputs
+     * @param e [object] "Event data"
+     */
+
+    function onKeyup(e) {
+      var data = e.data;
+
+      // If arrow keys
+      if (e.keyCode === 13 || e.keyCode === 32) {
+        Functions.killEvent(e);
+
+        data.$handle.trigger(Events.raw.click);
+      }
+    }
+
+    /**
+     * @method private
+     * @name onOpen
+     * @description Handles nav open event.
+     * @param e [object] "Event data"
+     */
+
+    function onOpen(e) {
+      if (!e.originalEvent) { // thanks IE :/
+        var data = e.data;
+
+        if (!data.open) {
+          data.$el.trigger(Events.open)
+            .attr("aria-hidden", false);
+
+          data.$content.addClass(data.contentClassesOpen)
+            .one(Events.click, function() {
+              close(data);
+            });
+
+          data.$handle.attr("aria-expanded", true);
+
+          if (data.label) {
+            data.$handle.html(data.labels.open);
+          }
+
+          addLocks(data);
+
+          data.open = true;
+
+          data.$nav.focus();
+        }
+      }
+    }
+
+    /**
+     * @method private
+     * @name onClose
+     * @description Handles nav close event.
+     * @param e [object] "Event data"
+     */
+
+    function onClose(e) {
+      if (!e.originalEvent) { // thanks IE :/
+        var data = e.data;
+
+        if (data.open) {
+          data.$el.trigger(Events.close)
+            .attr("aria-hidden", true);
+
+          data.$content.removeClass(data.contentClassesOpen)
+            .off(Events.namespace);
+
+          data.$handle.attr("aria-expanded", false);
+
+          if (data.label) {
+            data.$handle.html(data.labels.closed);
+          }
+
+          clearLocks(data);
+
+          data.open = false;
+
+          data.$el.focus();
+        }
+      }
+    }
+
+    /**
+     * @method private
+     * @name onEnable
+     * @description Handles nav enable event.
+     * @param e [object] "Event data"
+     */
+
+    function onEnable(e) {
+      var data = e.data;
+
+      data.$el.attr("aria-hidden", true);
+      data.$handle.attr("aria-controls", data.ariaId)
+        .attr("aria-expanded", false);
+      data.$content.addClass(RawClasses.enabled);
+
+      setTimeout(function() {
+        data.$animate.addClass(RawClasses.animated);
+      }, 0);
+
+      if (data.label) {
+        data.$handle.html(data.labels.closed);
+      }
+    }
+
+    /**
+     * @method private
+     * @name onDisable
+     * @description Handles nav disable event.
+     * @param e [object] "Event data"
+     */
+
+    function onDisable(e) {
+      var data = e.data;
+
+      data.$el.removeAttr("aria-hidden");
+      data.$handle.removeAttr("aria-controls")
+        .removeAttr("aria-expanded");
+      data.$content.removeClass(RawClasses.enabled, RawClasses.animated);
+      data.$animate.removeClass(RawClasses.animated);
+
+      restoreLabel(data);
+
+      clearLocks(data);
+    }
+
+    /**
+     * @method private
+     * @name addLocks
+     * @description Locks scrolling
+     * @param data [object] "Instance data"
+     */
+
+    function addLocks(data) {
+      if (!data.isToggle) {
+        $Locks.addClass(RawClasses.lock);
+      }
+    }
+
+    /**
+     * @method private
+     * @name clearLocks
+     * @description Unlocks scrolling
+     * @param data [object] "Instance data"
+     */
+
+    function clearLocks(data) {
+      if (!data.isToggle) {
+        $Locks.removeClass(RawClasses.lock);
+      }
+    }
+
+    /**
+     * @method private
+     * @name cacheLabel
+     * @description Sets handle labels
+     * @param data [object] "Instance data"
+     */
+
+    function cacheLabel(data) {
+      if (data.label) {
+        if (data.$handle.length > 1) {
+          data.originalLabel = [];
+
+          for (var i = 0, count = data.$handle.length; i < count; i++) {
+            data.originalLabel[i] = data.$handle.eq(i).html();
+          }
+        } else {
+          data.originalLabel = data.$handle.html();
+        }
+      }
+    }
+
+    /**
+     * @method private
+     * @name restoreLabel
+     * @description restores handle labels
+     * @param data [object] "Instance data"
+     */
+
+    function restoreLabel(data) {
+      if (data.label) {
+        if (data.$handle.length > 1) {
+          for (var i = 0, count = data.$handle.length; i < count; i++) {
+            data.$handle.eq(i).html(data.originalLabel[i]);
+          }
+        } else {
+          data.$handle.html(data.originalLabel);
+        }
+      }
+    }
+
+    /**
+     * @method private
+     * @name onDocumentFocus
+     * @description Handles document focus
+     * @param e [object] "Event data"
+     */
+
+    // function onDocumentFocus(e) {
+    //   var target = e.target,
+    //     data   = e.data;
+    //
+    //   if (data.open && !$.contains(data.$nav, target) && target !== data.$nav[0] && target !== data.$handle[0]) {
+    //     Functions.killEvent(e);
+    //
+    //     data.$nav.focus();
+    //   }
+    // }
+
+    /**
+     * @plugin
+     * @name Navigation
+     * @description A jQuery plugin for simple responsive navigation.
+     * @type widget
+     * @main navigation.js
+     * @main navigation.css
+     * @dependency jQuery
+     * @dependency core.js
+     * @dependency mediaquery.js
+     * @dependency swap.js
+     */
+
+    var Plugin = Formstone.Plugin("navigation", {
+        widget: true,
+
+        /**
+         * @options
+         * @param customClass [string] <''> "Class applied to instance"
+         * @param gravity [string] <'left'> "Gravity of 'push', 'reveal' and 'overlay' navigation; 'right', 'left'"
+         * @param label [boolean] <true> "Display handle width label"
+         * @param labels.closed [string] <'Menu'> "Closed state text"
+         * @param labels.open [string] <'Close'> "Open state text"
+         * @param maxWidth [string] <'980px'> "Width at which to auto-disable plugin"
+         * @param theme [string] <"fs-light"> "Theme class name"
+         * @param type [string] <'toggle'> "Type of navigation; 'toggle', 'push', 'reveal', 'overlay'"
+         */
+
+        defaults: {
+          customClass: "",
+          gravity: "left",
+          label: true,
+          labels: {
+            closed: "Menu",
+            open: "Close"
+          },
+          maxWidth: "980px",
+          theme: "fs-light",
+          type: "toggle"
+        },
+
+        classes: [
+          "handle",
+          "nav",
+          "content",
+          "animated",
+          "enabled",
+          "focus",
+          "open",
+          "toggle",
+          "push",
+          "reveal",
+          "overlay",
+          "left",
+          "right",
+          "lock"
+        ],
+
+        /**
+         * @events
+         * @event open.navigation "Navigation opened"
+         * @event close.navigation "Navigation closed"
+         */
+
+        events: {
+          open: "open",
+          close: "close"
+        },
+
+        methods: {
+          _construct: construct,
+          _destruct: destruct,
+
+          // Public Methods
+
+          open: open,
+          close: close,
+          enable: enable,
+          disable: disable
+        }
+      }),
+
+      // Localize References
+
+      Namespace = Plugin.namespace,
+      Classes = Plugin.classes,
+      RawClasses = Classes.raw,
+      Events = Plugin.events,
+      Functions = Plugin.functions,
+      // $Body         = null,
+
+      // Internal
+
+      $Locks = null;
+
+    // Setup
+
+    Formstone.Ready(setup);
+
+  })
+
+);
+
+
+/***/ }),
+
 /***/ "./node_modules/formstone/src/js/swap.js":
 /*!***********************************************!*\
   !*** ./node_modules/formstone/src/js/swap.js ***!
@@ -21177,10 +21749,11 @@ __webpack_require__.r(__webpack_exports__);
 // Components
 // Masthead
 
-/* Reveal mobile navigation */
-
-jquery__WEBPACK_IMPORTED_MODULE_0___default()('.masthead .__toggler').on('click touch', function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').toggleClass('menu-open');
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(".masthead .nav").navigation({
+  type: 'overlay',
+  gravity: 'left',
+  maxWidth: '991px',
+  theme: ''
 });
 /* Reveal mobile submenus */
 
@@ -21367,32 +21940,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var formstone_src_js_cookie__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(formstone_src_js_cookie__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var formstone_src_js_lightbox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! formstone/src/js/lightbox */ "./node_modules/formstone/src/js/lightbox.js");
 /* harmony import */ var formstone_src_js_lightbox__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(formstone_src_js_lightbox__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var formstone_src_js_swap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! formstone/src/js/swap */ "./node_modules/formstone/src/js/swap.js");
-/* harmony import */ var formstone_src_js_swap__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(formstone_src_js_swap__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var formstone_src_js_mediaquery__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! formstone/src/js/mediaquery */ "./node_modules/formstone/src/js/mediaquery.js");
-/* harmony import */ var formstone_src_js_mediaquery__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(formstone_src_js_mediaquery__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var formstone_src_js_touch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! formstone/src/js/touch */ "./node_modules/formstone/src/js/touch.js");
-/* harmony import */ var formstone_src_js_touch__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(formstone_src_js_touch__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var formstone_src_js_transition__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! formstone/src/js/transition */ "./node_modules/formstone/src/js/transition.js");
-/* harmony import */ var formstone_src_js_transition__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(formstone_src_js_transition__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var gumshoejs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! gumshoejs */ "./node_modules/gumshoejs/dist/gumshoe.min.js");
-/* harmony import */ var gumshoejs__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(gumshoejs__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/accordion */ "./src/scripts/components/accordion.js");
-/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/carousel */ "./src/scripts/components/carousel.js");
-/* harmony import */ var _components_checkpoint__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/checkpoint */ "./src/scripts/components/checkpoint.js");
-/* harmony import */ var _components_gallery__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/gallery */ "./src/scripts/components/gallery.js");
-/* harmony import */ var _components_gumshoe__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/gumshoe */ "./src/scripts/components/gumshoe.js");
-/* harmony import */ var _components_icon__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/icon */ "./src/scripts/components/icon.js");
-/* harmony import */ var _components_loader__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/loader */ "./src/scripts/components/loader.js");
-/* harmony import */ var _components_masthead__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/masthead */ "./src/scripts/components/masthead.js");
-/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/modal */ "./src/scripts/components/modal.js");
-/* harmony import */ var _components_nav__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/nav */ "./src/scripts/components/nav.js");
-/* harmony import */ var _components_sharing__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/sharing */ "./src/scripts/components/sharing.js");
-/* harmony import */ var _components_sharing__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_components_sharing__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var formstone_src_js_navigation__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! formstone/src/js/navigation */ "./node_modules/formstone/src/js/navigation.js");
+/* harmony import */ var formstone_src_js_navigation__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(formstone_src_js_navigation__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var formstone_src_js_swap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! formstone/src/js/swap */ "./node_modules/formstone/src/js/swap.js");
+/* harmony import */ var formstone_src_js_swap__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(formstone_src_js_swap__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var formstone_src_js_mediaquery__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! formstone/src/js/mediaquery */ "./node_modules/formstone/src/js/mediaquery.js");
+/* harmony import */ var formstone_src_js_mediaquery__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(formstone_src_js_mediaquery__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var formstone_src_js_touch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! formstone/src/js/touch */ "./node_modules/formstone/src/js/touch.js");
+/* harmony import */ var formstone_src_js_touch__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(formstone_src_js_touch__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var formstone_src_js_transition__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! formstone/src/js/transition */ "./node_modules/formstone/src/js/transition.js");
+/* harmony import */ var formstone_src_js_transition__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(formstone_src_js_transition__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var gumshoejs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! gumshoejs */ "./node_modules/gumshoejs/dist/gumshoe.min.js");
+/* harmony import */ var gumshoejs__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(gumshoejs__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/accordion */ "./src/scripts/components/accordion.js");
+/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/carousel */ "./src/scripts/components/carousel.js");
+/* harmony import */ var _components_checkpoint__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/checkpoint */ "./src/scripts/components/checkpoint.js");
+/* harmony import */ var _components_gallery__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/gallery */ "./src/scripts/components/gallery.js");
+/* harmony import */ var _components_gumshoe__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/gumshoe */ "./src/scripts/components/gumshoe.js");
+/* harmony import */ var _components_icon__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/icon */ "./src/scripts/components/icon.js");
+/* harmony import */ var _components_loader__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/loader */ "./src/scripts/components/loader.js");
+/* harmony import */ var _components_masthead__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/masthead */ "./src/scripts/components/masthead.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/modal */ "./src/scripts/components/modal.js");
+/* harmony import */ var _components_nav__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/nav */ "./src/scripts/components/nav.js");
+/* harmony import */ var _components_sharing__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/sharing */ "./src/scripts/components/sharing.js");
+/* harmony import */ var _components_sharing__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_components_sharing__WEBPACK_IMPORTED_MODULE_23__);
 // Main
 //
 // main entry importing dependencies
  // import Formstone
+
 
 
 
@@ -21428,7 +22004,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ray/Sites/kernl-ui/docs/docs.js */"./docs/docs.js");
+module.exports = __webpack_require__(/*! /Users/rkingston/Sites/valet/kernl-ui/docs/docs.js */"./docs/docs.js");
 
 
 /***/ })

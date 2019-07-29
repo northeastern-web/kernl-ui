@@ -1,10 +1,69 @@
 // Components
 // Masthead
 
+.fs-navigation {
+  &-overlay-nav {
+    &.fs-navigation-enabled {
+      width: 100%;
+      max-width: 35rem;
+      height: 100%;
+      height: calc(100% + 60px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block;
+      overflow: auto;
+      transform: translate3D(-35rem, 0, 0);
+    }
+
+    &.fs-navigation-open {
+      transform: translate3D(0, 0, 0);
+      transition:
+        transform 0.2s ease,
+        visibility 1ms ease;
+      visibility: visible;
+      z-index: 3;
+    }
+
+    &.fs-navigation-animated {
+      transition:
+        transform 0.2s ease,
+        visibility 0.1s linear 0.2s;
+    }
+  }
+
+  &-overlay-content {
+    &::before {
+      width: 100%;
+      height: 100%;
+      height: calc(100% + 60px);
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      content: '';
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      background-color: rgba($white, 0.75);
+      transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+    }
+
+    &.fs-navigation-open:before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
 
 .masthead {
   @extend .fs-smooth;
   @include make-section();
+
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -16,9 +75,9 @@
   overflow: visible;
   z-index: $z-1;
 
-  .__logo {
+  &_logo {
     max-width: 240px;
-    padding: 1rem 0;
+    padding: 1rem 1rem 1rem 0;
 
     @include mqbp-up(t) {
       max-width: 270px;
@@ -33,16 +92,15 @@
     }
   }
 
-  .__logo__image {
+  &_image {
     max-width: 100%;
     max-height: 2.5rem;
   }
 
-  .__toggler {
+  &_toggler {
     position: relative;
     overflow: hidden;
     height: auto;
-    font-size: 2rem;
     line-height: 1;
     border: none;
     cursor: pointer;
@@ -65,83 +123,82 @@
     }
   }
 
-  .__list {
-    padding-left: 0;
-    list-style: none;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding-left: 0;
-    clear: both;
-    padding-top: 1rem;
+  .nav {
+    &_list {
+      padding-left: 0;
+      list-style: none;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding-left: 0;
+      clear: both;
+      padding-top: 1rem;
 
-    > .__item { display: block; }
+      @include mqbp-up(d) {
+        padding-top: 0;
+        margin: 0;
+      }
+    }
 
-    @include mqbp-up(d) {
-      padding-top: 0;
+    &_item {
+      display: block;
+      position: relative;
+      padding: 0;
       margin: 0;
 
-      > .__item { display: inline-flex; }
+      @include mqbp-up(d) {
+        display: inline-flex;
+        margin: 1.25rem 0.75rem;
+      }
     }
-  }
 
-  .__item {
-    position: relative;
-    padding: 0;
-    margin: 0;
-
-    @include mqbp-up(d) {
-      margin: 1.25rem 0.75rem;
-    }
-  }
-
-  .__link,
-  .__item a {
-    position: relative;
-    display: block;
-    padding: 1rem 1.25rem 1rem 0;
-    font-size: 19px;
-    color: lighten($type-color, 70%);
-    border-bottom: 1px solid rgba(lighten($type-color, 70%), 0.2);
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
+    &_link {
+      position: relative;
+      display: block;
+      padding: 1rem 1.25rem 1rem 0;
+      font-size: 19px;
       color: lighten($type-color, 70%);
-    }
-
-    &:after {
-      font-family: "feathericons", sans-serif;
-      content: "\e922";
-      position: absolute;
-      right: 0;
-      vertical-align: middle;
-      font-size: 24px;
-      line-height: 1.2;
-    }
-
-    @include mqbp-up(d) {
-      padding: 1rem 0;
-      font-size: $fs-sm;
-      color: #333;
-      border: 0 none;
-
-      &:after { content: none; }
+      border-bottom: 1px solid rgba(lighten($type-color, 70%), 0.2);
 
       &:hover,
-      &:focus { color: darken($type-color, 15%); }
+      &:focus {
+        text-decoration: none;
+        color: lighten($type-color, 70%);
+      }
+
+      &:after {
+        font-family: "feathericons", sans-serif;
+        content: "\e922";
+        position: absolute;
+        right: 0;
+        vertical-align: middle;
+        font-size: 24px;
+        line-height: 1.2;
+      }
+
+      @include mqbp-up(d) {
+        padding: 1rem 0;
+        font-size: $fs-sm;
+        color: #333;
+        border: 0 none;
+
+        &:after { content: none; }
+
+        &:hover,
+        &:focus { color: darken($type-color, 15%); }
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 1px solid rgba(177, 177, 177, 0.3);
     }
   }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-bottom: 1px solid rgba(177, 177, 177, 0.3);
-  }
-
+/*
   .__item.\-active > a,
   .\-active > .__link {
     font-weight: bold;
@@ -152,8 +209,8 @@
       cursor: default;
     }
   }
-
-  .__submenu {
+*/
+  .nav_sublist {
     display: none;
     padding-top: 0;
     padding-left: 1.5rem;
@@ -161,18 +218,16 @@
     height: auto;
   }
 
-  .\+children {
-    &.__item > a,
-    > .__link {
-      &:after {
-        content: "\e970";
+  .nav_sublink {
+    &:after {
+      content: "\e970";
 
-        @include mqbp-up(d) {
-          content: none;
-        }
+      @include mqbp-up(d) {
+        content: none;
       }
     }
-
+  }
+/*
     &.submenu-open.__item > a,
     &.submenu-open > .__link {
       &:after {
@@ -249,6 +304,7 @@
       }
     }
   }
+  */
 
   //
   // Modifiers

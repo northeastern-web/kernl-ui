@@ -4,9 +4,11 @@
 
 import $ from 'jquery';
 
-/* Reveal mobile navigation */
-$('.masthead .__toggler').on('click touch', () => {
-  $('body').toggleClass('menu-open')
+$(".masthead .nav").navigation({
+  type: 'overlay',
+  gravity: 'left',
+  maxWidth: '991px',
+  theme: ''
 });
 
 /* Reveal mobile submenus */
