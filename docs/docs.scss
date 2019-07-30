@@ -511,3 +511,12 @@ $black-alpha: rgba(0, 0, 0, 0.7);
     } 
   }
 }
+
+
+// dev only; keep masthead at top
+.part--mastheads {
+  .k_header,
+  .k_nav {
+    display: none;
+  }
+}

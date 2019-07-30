@@ -8,33 +8,7 @@ $(".masthead .nav").navigation({
   type: 'overlay',
   gravity: 'left',
   maxWidth: '991px',
-  theme: ''
-});
-
-/* Reveal mobile submenus */
-$('.\\+children > a')
-.on('click touch', function(e) {
-  if ($('body').hasClass('menu-open')) {
-    e.preventDefault()
-  }
-
-  const $this = $(this)
-  const $parent = $this.parent()
-  const $submenu = $parent.find('.__submenu')
-  const $siblings = $parent.siblings().find('.__submenu')
-
-  // Condition block if menu has been opened
-  if ($parent.hasClass('submenu-open')) {
-    window.location.href = $this.attr('href')
-  } else {
-    $parent.siblings().removeClass('submenu-open')
-  }
-
-  if ($siblings.is(':visible')) {
-    $siblings.hide(350)
-  }
-
-  // Add .__submenu--open when clicked
-  $parent.addClass('submenu-open')
-  $submenu.show(350)
+  theme: '',
+  labels: { closed: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>',
+  open: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>' }
 });

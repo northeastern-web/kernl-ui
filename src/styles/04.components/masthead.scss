@@ -7,7 +7,6 @@
       width: 100%;
       max-width: 35rem;
       height: 100%;
-      height: calc(100% + 60px);
       position: fixed;
       top: 0;
       left: 0;
@@ -36,7 +35,6 @@
     &::before {
       width: 100%;
       height: 100%;
-      height: calc(100% + 60px);
       position: fixed;
       top: 0;
       right: 0;
@@ -97,33 +95,33 @@
     max-height: 2.5rem;
   }
 
-  &_toggler {
-    position: relative;
-    overflow: hidden;
-    height: auto;
-    line-height: 1;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    color: #888;
-    padding-right: 0;
-
-    &:focus { outline: none; }
-
-    &.menu-is-open {
-      font-size: 1.5rem;
-      color: #999;
-    }
-
-    @include mqbp-up(d) {
-      display: none;
-      width: 0;
-      height: 0;
-      float: none;
-    }
-  }
-
   .nav {
+    &_handle {
+      position: relative;
+      overflow: hidden;
+      height: auto;
+      line-height: 1;
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+      color: #888;
+      padding-right: 0;
+
+      &:focus { outline: none; }
+
+      &.menu-is-open {
+        font-size: 1.5rem;
+        color: #999;
+      }
+
+      @include mqbp-up(d) {
+        display: none;
+        width: 0;
+        height: 0;
+        float: none;
+      }
+    }
+
     &_list {
       padding-left: 0;
       list-style: none;
@@ -163,16 +161,19 @@
       &:focus {
         text-decoration: none;
         color: lighten($type-color, 70%);
+        background-color: transparent;
       }
 
-      &:after {
+      &::after {
         font-family: "feathericons", sans-serif;
         content: "\e922";
         position: absolute;
+        color: $gray-500;
         right: 0;
-        vertical-align: middle;
+        top: 50%;
+        transform: translateY(-50%);
         font-size: 24px;
-        line-height: 1.2;
+        line-height: 1;
       }
 
       @include mqbp-up(d) {
@@ -188,14 +189,32 @@
       }
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      border-bottom: 1px solid rgba(177, 177, 177, 0.3);
+    &_sublist {
+      display: none;
+      padding-top: 0;
+      padding-right: 0;
+      padding-left: 0.5rem;
+      list-style: none;
+      height: auto;
+    }
+
+    &_sublink {  
+      &:after {
+        content: "\e922";
+
+        @include mqbp-up(d) {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .\+children {
+    .nav_link {
+      &::after {
+        content: "\e970";
+        font-size: 20px;
+      }
     }
   }
 /*
@@ -210,23 +229,7 @@
     }
   }
 */
-  .nav_sublist {
-    display: none;
-    padding-top: 0;
-    padding-left: 1.5rem;
-    list-style: none;
-    height: auto;
-  }
 
-  .nav_sublink {
-    &:after {
-      content: "\e970";
-
-      @include mqbp-up(d) {
-        content: none;
-      }
-    }
-  }
 /*
     &.submenu-open.__item > a,
     &.submenu-open > .__link {

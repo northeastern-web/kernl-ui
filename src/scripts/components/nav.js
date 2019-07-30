@@ -14,7 +14,8 @@ $toggle.swap();
 
 // Activate and deactivate event
 $toggle.on('activate.swap deactivate.swap', function() {
-  $(this).toggleClass('--active')
+  $(this).toggleClass('-active')
+  $(this).swap('disable')
   $($(this).attr('data-swap-target')).slideToggle(600)
 });
 
@@ -29,12 +30,12 @@ $tab.swap({ collapse: false });
 
 // Activate and deactivate event
 $tab.on('activate.swap', function() {
-  $(this).addClass('--active')
-  $( $(this).attr('href') ).addClass('--active')
+  $(this).addClass('-active')
+  $( $(this).attr('href') ).addClass('-active')
 });
 
 // Deactivate event
 $tab.on('deactivate.swap', function() {
-  $(this).removeClass('--active')
-  $($(this).attr('href')).removeClass('--active')
+  $(this).removeClass('-active')
+  $($(this).attr('href')).removeClass('-active')
 });
