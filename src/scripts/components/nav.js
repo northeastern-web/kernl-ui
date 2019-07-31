@@ -15,7 +15,6 @@ $toggle.swap();
 // Activate and deactivate event
 $toggle.on('activate.swap deactivate.swap', function() {
   $(this).toggleClass('-active')
-  $(this).swap('disable')
   $($(this).attr('data-swap-target')).slideToggle(600)
 });
 

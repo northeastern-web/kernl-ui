@@ -21659,6 +21659,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 // Components
 // Masthead
+ // --
+// Masthead mobile menu
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(".masthead .nav").navigation({
   type: 'overlay',
@@ -21669,7 +21671,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(".masthead .nav").navigation({
     closed: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>',
     open: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'
   }
+}); // --
+// Progressive menu focus
+
+var $shuffle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-toggle="masthead_nav"][data-swap-target]'); // Initialize Formstone swap()
+
+$shuffle.swap(); // Activate and deactivate event
+
+$shuffle.on('activate.swap deactivate.swap', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('-active');
 });
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.back').swap('destroy');
 
 /***/ }),
 
@@ -21732,7 +21744,6 @@ $toggle.swap(); // Activate and deactivate event
 
 $toggle.on('activate.swap deactivate.swap', function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('-active');
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).swap('disable');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-swap-target')).slideToggle(600);
 }); // --
 // Tabs
