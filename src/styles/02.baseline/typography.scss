@@ -10,15 +10,16 @@ html {
   color: $type-color;
 }
 
-
+// --
 // Headings
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5rem;
   padding: 0;
   font-weight: $type-light;
 }
 
-// extra padding for heading immediately following certain elements
+// Add extra padding for heading immediately following certain elements
 h1, h2, h3, h4, h5, h6, p, ul, ol {
   // +h2, +h3, +h4, +h5, +h6 { padding-top: 0.25rem; }
 }
@@ -67,8 +68,7 @@ h6 {
   font-weight: $type-bold;
 }
 
-
-//
+// --
 // Paragraphs
 
 p {
@@ -79,8 +79,7 @@ p {
 // Small
 small { @include type_sm(); }
 
-
-//
+// --
 // Links
 
 a {
@@ -91,9 +90,8 @@ a {
   &:active { outline-width: 0; }
 }
 
-
-//
-// Blockquotes
+// --
+// Miscellaneous elements
 
 blockquote {
   @extend .fs-smooth;
@@ -158,19 +156,11 @@ blockquote {
   }
 }
 
-
-//
-// Address
-
 address {
   margin-bottom: 1rem;
   font-style: normal;
   line-height: inherit;
 }
-
-
-//
-// Abbreviations and acronyms
 
 abbr,
 abbr[title],
@@ -215,12 +205,13 @@ sup {
 
 sub { bottom: -0.25em; }
 
-sup { top: -0.425em; }
-/*
-h2, h3 {
-  sup { top: -0.85em; }
+sup {
+  top: -0.425em;
+
+  h2 &,
+  h2 & { top: -0.85em; }
 }
- */
+
 hr {
   box-sizing: content-box;
   height: 0;
@@ -231,9 +222,8 @@ hr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-
-//
-// For font on pseudo-elements
+// --
+// Feather Icon pseudo-elements
 // * https://icomoon.io/app/#/select/library
 @font-face {
   font-family: 'feathericons';

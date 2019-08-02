@@ -7,5 +7,5 @@ import $ from 'jquery';
 $(".gallery").lightbox({
   theme: "",
   top: 30,
-  fixed: true
+  fixed: true,
 });

@@ -16,6 +16,7 @@
 
   // --
   // Options
+
   &.\-tile {
     @include type-xs();
   }
@@ -35,7 +36,7 @@
     @extend .justify-end;
   }
 
-  // Horizontal
+  // Horizontal orientation
   &.\-h {
     flex-direction: row;
   }
@@ -152,7 +153,7 @@
 
     .\-middle.\-overlay & {
       @extend .pin-c;
-      
+
       text-align: center;
       width: 100%;
     }
@@ -258,7 +259,7 @@
   }
 }
 
-/* Polyfill for object-fit:cover in MS Edge */
+// Polyfill for object-fit:cover in MS Edge
 _:-ms-lang(x), .card .card_img {
   top: -10000px !important;
   right: -10000px !important;
