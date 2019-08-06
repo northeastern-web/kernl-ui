@@ -17,22 +17,22 @@
 // Pin positioning
 
 .pin {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
   bottom: 0;
+  height: 100%;
   left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
 
 .pin-none {
-  width: auto;
-  height: auto;
-  top: auto;
-  right: auto;
   bottom: auto;
+  height: auto;
   left: auto;
+  right: auto;
+  top: auto;
+  width: auto;
 }
 
 .pin-t { top: 0; }
@@ -42,27 +42,27 @@
 
 // center an item within container
 .pin-c {
-  top: 50%;
-  right: auto;
   bottom: auto;
   left: 50%;
+  right: auto;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
 .pin-x {
-  right: 0;
   left: 0;
+  right: 0;
 }
 
 .pin-xc {
-  right: auto;
   left: 50%;
+  right: auto;
   transform: translateX(-50%);
 }
 
 .pin-y {
-  top: 0;
   bottom: 0;
+  top: 0;
 }
 
 .pin-yc {

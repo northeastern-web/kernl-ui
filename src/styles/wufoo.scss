@@ -143,34 +143,34 @@
   }
 
   fieldset {
-    min-width: 0;
     border: 1px solid #c0c0c0;
-    padding: 0;
-    margin: 0;
     border: 0;
+    margin: 0;
+    min-width: 0;
+    padding: 0;
   }
 
   legend {
     box-sizing: border-box;
     color: inherit;
     display: table;
+    font-size: 1rem;
+    line-height: inherit;
+    margin-bottom: 0;
     max-width: 100%;
     padding: 0;
-    font-size: 1rem;
-    white-space: normal;
-    line-height: inherit;
-    padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    margin-bottom: 0;
+    padding-top: 0.5rem;
+    white-space: normal;
   }
 
   label {
-    display: inline-block;
-    margin-bottom: 0.25rem;
-    padding-top: 0.5rem;
     color: $gray-500;
+    display: inline-block;
     font-size: $fs-sm;
     line-height: 1.2;
+    margin-bottom: 0.25rem;
+    padding-top: 0.5rem;
 
     &:hover { cursor: pointer; }
   }
@@ -239,8 +239,8 @@
   textarea,
   select {
     display: inline-block;
-    width: auto;
     max-width: 80%;
+    width: auto;
   }
 
   .medium,
@@ -285,18 +285,18 @@
   input[type="range"],
   textarea,
   select {
-    // @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.25;
-    color: $gray-600;
+    background-clip: padding-box;
     background-color: #fff;
     background-image: none;
-    background-clip: padding-box;
     border: 1px solid $gray-200;
     border-radius: 1px;
+    color: $gray-600;
+    // @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+    display: block;
+    font-size: 1rem;
+    line-height: 1.25;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
 
     // Unstyle the caret on `<select>`s in IE10+.
     &::-ms-expand {
@@ -333,33 +333,33 @@
     }
 
     &:focus::-ms-value {
+      background-color: #fff;
       // Suppress the nested default white text on blue background highlight given to
       // the selected option text when the (still closed) <select> receives focus
       // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
       // match the appearance of the native widget.
       // See https://github.com/twbs/bootstrap/issues/19398.
       color: $gray-600;
-      background-color: #fff;
     }
   }
 
   // Make file inputs better match text inputs by forcing them to new lines.
   input[type="file"],
   input[type="range"] {
-    display: block;
-    padding: 0;
     background: none;
-    box-shadow: none;
     border: 0 none;
-    @include type-sm();
+    box-shadow: none;
+    display: block;
     margin: 3px 0;
+    padding: 0;
+    @include type-sm();
   }
 
   ////
 
   li.section {
-    padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-top: 1rem;
   }
 
   label.desc,
@@ -373,8 +373,8 @@
 
   .focused {
     background-color: $gray-50;
-    padding-left: 1rem;
     padding-bottom: 1rem;
+    padding-left: 1rem;
   }
 
   .col { padding: 0; }
@@ -384,8 +384,8 @@
     margin-top: 0.35rem;
 
     + .choice {
-      padding-top: 0;
       margin-right: 2rem;
+      padding-top: 0;
     }
   }
 
@@ -403,8 +403,8 @@
         margin-bottom: 0;
 
         + label:not(.choice) {
-          padding-top: 0.125rem;
           font-size: $fs-xs;
+          padding-top: 0.125rem;
         }
       }
     }

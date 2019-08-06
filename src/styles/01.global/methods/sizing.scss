@@ -3,8 +3,8 @@
 
 
 @mixin size($width, $height) {
-  width: $width;
   height: $height;
+  width: $width;
 }
 
 @mixin square($size) {

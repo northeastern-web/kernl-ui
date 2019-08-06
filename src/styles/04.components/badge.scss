@@ -3,20 +3,20 @@
 
 .badge {
   @extend .fs-smooth;
-  position: relative;
-  display: inline-flex;
+
   align-items: center;
-  padding: 0.4rem 0.6rem;
-  font-size: 76%;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  line-height: 1;
-  color: $type-color;
+  border-color: rgba($type-color, 0.5);
   border-style: solid;
   border-width: 1px;
-  border-color: rgba($type-color, 0.5);
+  color: $type-color;
+  display: inline-flex;
+  font-size: 76%;
+  line-height: 1;
+  padding: 0.4rem 0.6rem;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
   z-index: 1;
 
   a {
@@ -30,8 +30,8 @@
 
   // nested icon (defaults assume icon to the left)
   .feather {
-    margin: 0 ($fs-xs/2) 0 0;
     height: $fs-xs;
+    margin: 0 ($fs-xs/2) 0 0;
     width: $fs-xs;
   }
 

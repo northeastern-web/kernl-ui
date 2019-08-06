@@ -5,10 +5,11 @@
 // Wrapper for enclosed inputs
 .form-enclosed {
   @extend %clearfix;
-  position: relative;
-  padding: 0.5rem 0.75rem;
+
   background-color: #fff;
   border: 1px solid rgba(#000, 0.15);
+  padding: 0.5rem 0.75rem;
+  position: relative;
 
   &:focus,
   &:focus-within,
@@ -19,48 +20,67 @@
   input[type="search"],
   input[type="number"],
   input[type="password"] {
+    background: transparent;
+    border: 0 none;
+    box-shadow: none !important;
+    padding: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 65%;
-    background: transparent;
-    border: 0 none;
-    padding: 0;
-    box-shadow: none !important;
 
     &:focus { outline: none; }
 
-    @include mqbp-up(t) { width: 80%; }
-
     &:before {
+      color: rgba($type-color, 0.5);
+      content: "\e97b";
+      font-family: "feathericons";
+      left: 0.85rem;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      font-family: "feathericons";
-      content: "\e97b";
-      left: 0.85rem;
-      color: rgba($type-color, 0.5);
 
-      @include mqbp-up(t) { left: 1rem; }
+      @include mqbp-up(t) {
+        left: 1rem;
+        width: 80%;
+      }
 
-      @include mqbp-up(d) { left: 1.25rem; }
+      @include mqbp-up(d) {
+        left: 1.25rem;
+      }
     }
   }
 
   .btn {
-    padding: 0.5rem;
     float: right;
     margin-bottom: 0;
+    padding: 0.5rem;
+  }
+
+  &.\-dark {
+    border-color: rgba(255, 255, 255, 0.3);
+
+    &:before { color: rgba(255, 255, 255, 0.5); }
+
+    .btn {
+      border-color: rgba(255, 255, 255, 0.5);
+      color: #fff;
+
+      &:hover { color: $type-color; }
+    }
+
+    input,
+    ::placeholder { color: rgba($white, 0.7); }
   }
 
   &.\-line {
     background: transparent;
-    padding-right: 0;
-    padding-left: 0;
     border: 0 none;
-    box-shadow: none;
     border-bottom: 1px solid rgba($type-color, 0.5);
     border-radius: 0;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
 
     &:before {
       left: 0 !important;
@@ -70,22 +90,6 @@
       background: transparent;
     }
   }
-
-  &.\-dark {
-    border-color: rgba(255, 255, 255, 0.3);
-
-    &:before { color: rgba(255, 255, 255, 0.5); }
-
-    .btn {
-      color: #fff;
-      border-color: rgba(255, 255, 255, 0.5);
-
-      &:hover { color: $type-color; }
-    }
-
-    input,
-    ::placeholder { color: rgba($white, 0.7); }
-  }
 }
 
 // wrapper for checkboxes
@@ -94,9 +98,9 @@
 
   &.\-inline {
     @include mqbp-up(t) {
+      align-items: center;
       display: flex;
       flex-flow: row;
-      align-items: center;
 
       label { margin-right: 1rem; }
 

@@ -6,10 +6,10 @@
 .loaded { display: none; }
 
 .spinner {
-  width: 2rem;
+  animation: spin 2s infinite linear;
   height: 2rem;
   overflow: visible;
-  animation: spin 2s infinite linear;
+  width: 2rem;
 }
 
 @keyframes spin {

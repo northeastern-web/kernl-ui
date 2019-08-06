@@ -22,20 +22,20 @@ $size: 20;
   .ml-#{$size}   { margin-left: #{$size}rem !important; }
   .ml-#{$size}h  { margin-left: #{($size+.5)}rem !important; }
   .mx-#{$size} {
-    margin-right:  #{$size}rem !important;
     margin-left:   #{$size}rem !important;
+    margin-right:  #{$size}rem !important;
   }
   .mx-#{$size}h {
-    margin-right:  #{($size+.5)}rem !important;
     margin-left:   #{($size+.5)}rem !important;
+    margin-right:  #{($size+.5)}rem !important;
   }
   .my-#{$size} {
-    margin-top:    #{$size}rem !important;
     margin-bottom: #{$size}rem !important;
+    margin-top:    #{$size}rem !important;
   }
   .my-#{$size}h {
-    margin-top:    #{($size+.5)}rem !important;
     margin-bottom: #{($size+.5)}rem !important;
+    margin-top:    #{($size+.5)}rem !important;
   }
 
   @each $breakpoint in map-keys($breakpoints) {
@@ -51,20 +51,20 @@ $size: 20;
       .ml-#{$size}\@#{$breakpoint}   { margin-left: #{$size}rem !important; }
       .ml-#{$size}h\@#{$breakpoint}  { margin-left: #{($size+.5)}rem !important; }
       .mx-#{$size}\@#{$breakpoint} {
-        margin-right:  #{$size}rem !important;
         margin-left:   #{$size}rem !important;
+        margin-right:  #{$size}rem !important;
       }
       .mx-#{$size}h\@#{$breakpoint} {
-        margin-right:  #{($size+.5)}rem !important;
         margin-left:   #{($size+.5)}rem !important;
+        margin-right:  #{($size+.5)}rem !important;
       }
       .my-#{$size}\@#{$breakpoint} {
-        margin-top:    #{$size}rem !important;
         margin-bottom: #{$size}rem !important;
+        margin-top:    #{$size}rem !important;
       }
       .my-#{$size}h\@#{$breakpoint} {
-        margin-top:    #{($size+.5)}rem !important;
         margin-bottom: #{($size+.5)}rem !important;
+        margin-top:    #{($size+.5)}rem !important;
       }
     }
   }

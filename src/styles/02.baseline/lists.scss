@@ -5,16 +5,16 @@
 ol,
 ul,
 dl {
-  margin-top: 0;
   margin-bottom: 1.25rem;
+  margin-top: 0;
 }
 
 ol,
 ul { padding-left: 1.25rem; }
 
 li {
-  padding-top: 0.125rem;
   margin-bottom: 0.5rem;
+  padding-top: 0.125rem;
 
   ol,
   ul { padding-top: 0.5rem; }
@@ -29,6 +29,11 @@ ul ol {
   margin-bottom: 0;
 }
 
+dl { @extend .row; }
+
+dt,
+dd { @extend .col; }
+
 dt {
   font-weight: 700;
   margin-bottom: 0 !important;
@@ -42,8 +47,3 @@ dd {
     margin-bottom: 0;
   }
 }
-
-dl { @extend .row; }
-
-dt,
-dd { @extend .col; }

@@ -3,9 +3,25 @@
 
 .section {
   @include make-section();
-  position: relative;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  
+  // Remove the negative margin from a section's default .row,
+  // then the horizontal padding from all immediate child
+  // columns (to prevent runaway style inheritance).
+  &.\-nogutters {
+    > .row {
+      margin-left: 0;
+      margin-right: 0;
+
+      > .col {
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
 
   // Nesting sections, remove spacing to accomodate
   .section {
@@ -16,24 +32,15 @@
     }
   }
 
-  // --
-  // Options
-
-  // Standardizing a common need for increased y-spacing on sections
-  &.\-lg {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
   // Banner option designed to function as page header,
   // used once per page below masthead
   &.\-banner {
     @extend .fs-smooth;
-    display: flex;
     align-items: center;
-    padding-top: 4.4rem;
-    padding-bottom: 4.4rem;
     border-bottom: 1px solid rgba(177, 177, 177, 0.2);
+    display: flex;
+    padding-bottom: 4.4rem;
+    padding-top: 4.4rem;
 
     &.\-top { align-items: flex-start; }
     &.\-bottom { align-items: flex-end; }
@@ -41,11 +48,11 @@
     @include mqbp-up(d) { flex-direction: row; }
 
     &.\+nav {
+      align-items: initial;
       flex: 0;
       flex-direction: column;
       justify-content: space-around;
       padding-bottom: 5rem;
-      align-items: initial;
 
       &.\--top { justify-content: flex-start; }
       &.\--bottom { justify-content: flex-end; }
@@ -63,33 +70,25 @@
     @extend .\-measure-wide;
     @extend .\-center;
     @extend .flex-col;
-    padding-top: 10.6rem;
-    padding-bottom: 10.6rem;
     border-bottom: 0 none;
+    padding-bottom: 10.6rem;
+    padding-top: 10.6rem;
   }
 
   // Remove padding-x for flush sections
   &.\-flush {
-    padding-right: 0;
     padding-left: 0;
+    padding-right: 0;
   }
 
-  // Remove the negative margin from a section's default .row,
-  // then the horizontal padding from all immediate child
-  // columns (to prevent runaway style inheritance).
-  &.\-nogutters {
-    > .row {
-      margin-right: 0;
-      margin-left: 0;
+  // --
+  // Options
 
-      > .col {
-        padding-right: 0;
-        padding-left: 0;
-        margin-bottom: 0;
-      }
-    }
+  // Standardizing a common need for increased y-spacing on sections
+  &.\-lg {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
   }
-
   // --
   // Document container options
 
@@ -98,88 +97,4 @@
 
   // container is 2x default document margin
   .contain & { @include make-section('contain', $contain: $contain-width); }
-}
-
-// --
-// Blocks
-
-// Wrapper for titles within a section
-.section_header {
-  flex: 1;
-  // margin-bottom: 2rem; //removing for now
-
-  sup,
-  sub { font-weight: 400; }
-
-  // Add spacing on top when row/cols immediately follow
-  + .row { padding-top: 2rem; }
-
-  .section.\-center & {
-    @extend .mx-auto;
-    text-align: center;
-  }
-
-  // adds max-width via .section to nested .__header
-  .section.\-measure & { @extend .measure; }
-  .section.\-measure-narrow & { @extend .measure-narrow; }
-  .section.\-measure-wide & { @extend .measure-wide; }
-
-  .section.\+nav {
-    flex: 0;
-    margin-top: 0;
-  }
-}
-
-.section_pretitle {
-  margin-bottom: 0.25rem;
-  // font-weight: $type-light;
-
-  + .section_title {
-    padding-top: 0.25rem;
-
-    + .section_subtitle { padding-top: 0.5rem; }
-  }
-}
-
-.section_title {
-  @include type-d3();
-  padding-top: 0;
-  margin-bottom: 0.125rem;
-  font-weight: $type-light;
-  line-height: 1.15;
-  max-width: none;
-
-  + .section_subtitle { padding-top: 0.75rem; }
-
-  // adds line after title on via a section
-  .section.\-bal & {
-    @extend .bal !optional;
-  }
-
-  .section.\-bal.\-center & {
-    &::after {
-      right: 0;
-      margin: 0 auto;
-    }
-  }
-
-  @include mqbp-up(t) {
-    @include type-d4();
-    line-height: 1.2;
-    text-indent: -3px;
-
-    // increase the title when .-banner
-    .section.\-banner & { @include type-d5(); }
-  }
-
-  @include mqbp-up(d) {
-    text-indent: -4px;
-
-    // increase the title when .-banner
-    .section.\-banner & { @include type-d6(); }
-  }
-}
-
-.section_subtitle {
-  @include type-lead();
 }

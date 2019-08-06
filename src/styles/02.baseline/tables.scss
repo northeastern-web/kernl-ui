@@ -3,13 +3,13 @@
 
 
 table {
-  width: 100%;
-  margin-bottom: 1rem;
   border-collapse: collapse;
   border-spacing: 0;
   display: block;
-  overflow-x: auto;
+  margin-bottom: 1rem;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: auto;
+  width: 100%;
 
   &.\-striped tr:nth-child(even) {
     background-color: $gray-100;
@@ -18,21 +18,21 @@ table {
 
 td, th {
   @include type-sm();
+  border-color: $gray-200;
+  border-style: solid;
+  border-width: 1px;
+  line-height: 1.4;
   margin: 0;
   padding: .75rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $gray-200;
   vertical-align: top;
-  line-height: 1.4;
 }
 
 th { text-align: left; }
 
 caption {
-  color: $gray-400;
-  text-align: left;
   caption-side: bottom;
+  color: $gray-400;
   font-size: $fs-sm;
   margin-top: 0.25rem;
+  text-align: left;
 }

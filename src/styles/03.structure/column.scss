@@ -12,11 +12,11 @@
 // baseline column component (extend using width utility)
 .col {
   @include make-gutters();
-  flex: none;
   align-items: flex-start;
+  flex: none;
   flex-flow: column nowrap;
-  width: 100%;
   padding: 0 0.5rem;
+  width: 100%;
 
   // Wrapper to stetch .col to equal heights
   .col_stretch & {

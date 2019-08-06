@@ -17,20 +17,20 @@ $size: 20;
   .pl-#{$size}   { padding-left: #{$size}rem !important; }
   .pl-#{$size}h  { padding-left: #{($size+.5)}rem !important; }
   .px-#{$size} {
-    padding-right:  #{$size}rem !important;
     padding-left:   #{$size}rem !important;
+    padding-right:  #{$size}rem !important;
   }
   .px-#{$size}h {
-    padding-right:  #{($size+.5)}rem !important;
     padding-left:   #{($size+.5)}rem !important;
+    padding-right:  #{($size+.5)}rem !important;
   }
   .py-#{$size} {
-    padding-top:    #{$size}rem !important;
     padding-bottom: #{$size}rem !important;
+    padding-top:    #{$size}rem !important;
   }
   .py-#{$size}h {
-    padding-top:    #{($size+.5)}rem !important;
     padding-bottom: #{($size+.5)}rem !important;
+    padding-top:    #{($size+.5)}rem !important;
   }
 
   @each $breakpoint in map-keys($breakpoints) {
@@ -46,20 +46,20 @@ $size: 20;
       .pl-#{$size}\@#{$breakpoint}   { padding-left: #{$size}rem !important; }
       .pl-#{$size}h\@#{$breakpoint}  { padding-left: #{($size+.5)}rem !important; }
       .px-#{$size}\@#{$breakpoint} {
-        padding-right:  #{$size}rem !important;
         padding-left:   #{$size}rem !important;
+        padding-right:  #{$size}rem !important;
       }
       .px-#{$size}h\@#{$breakpoint} {
-        padding-right:  #{($size+.5)}rem !important;
         padding-left:   #{($size+.5)}rem !important;
+        padding-right:  #{($size+.5)}rem !important;
       }
       .py-#{$size}\@#{$breakpoint} {
-        padding-top:    #{$size}rem !important;
         padding-bottom: #{$size}rem !important;
+        padding-top:    #{$size}rem !important;
       }
       .py-#{$size}h\@#{$breakpoint} {
-        padding-top:    #{($size+.5)}rem !important;
         padding-bottom: #{($size+.5)}rem !important;
+        padding-top:    #{($size+.5)}rem !important;
       }
     }
   }

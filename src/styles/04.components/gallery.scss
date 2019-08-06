@@ -4,9 +4,9 @@
 @import '~formstone/dist/css/lightbox';
 
 .fs-lightbox {
-  width: auto;
-  max-width: 90%;
   background: rgba($white, 0.2);
+  max-width: 90%;
+  width: auto;
 
   @include mqbp-up(d) {
     max-width: 80%;
@@ -17,43 +17,43 @@
   }
 
   &-meta_content {
-    font-size: $fs-sm;
     background-color: $white;
+    font-size: $fs-sm;
 
     @include mqbp-up(d) {
-      display: flex;
       align-items: center;
+      display: flex;
     }
   }
 
   .fs-lightbox-position {
-    padding: 0.5rem 1rem;
-    font-size: $fs-sm;
-    margin-bottom: 0;
     font-family: $type-serif;
+    font-size: $fs-sm;
     font-style: italic;
+    margin-bottom: 0;
+    padding: 0.5rem 1rem;
     position: relative;
 
     &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 1rem;
-      width: 3rem;
       border-bottom: 1px solid $gray-200;
+      bottom: 0;
+      content: '';
+      left: 1rem;
+      position: absolute;
+      width: 3rem;
     }
 
     &_current,
     &_total {
-      font-style: normal;
       font-family: $type-sans;
       font-size: $fs-xs;
+      font-style: normal;
     }
 
     @include mqbp-up(d) {
-      padding: 0.5rem 1rem;
-      display: flex;
       align-items: center;
+      display: flex;
+      padding: 0.5rem 1rem;
 
       &::before {
         display: none;
@@ -67,8 +67,8 @@
   }
 
   .caption {
-    padding: 0.5rem 1rem 1rem;
     margin-bottom: 0;
+    padding: 0.5rem 1rem 1rem;
 
     @include mqbp-up(d) {
       border-left: 1px solid $gray-300;
@@ -78,33 +78,33 @@
 }
 
 .fs-lightbox-close {
-  width: 30px;
-  height: 30px;
-  top: -1rem;
-  right: -1rem;
-  z-index: 105;
   background: $black;
-  border-radius: 100%;
-  text-indent: 200%;
-  white-space: nowrap;
   border: 1px solid rgba($white, 0.7);
+  border-radius: 100%;
+  height: 30px;
+  right: -1rem;
+  text-indent: 200%;
+  top: -1rem;
+  white-space: nowrap;
+  width: 30px;
+  z-index: 105;
 
   &::before {
-    position: absolute;
-    top: 0;
-    right: 0;
     bottom: 0;
-    left: 0;
     color: $gray-100;
     content: "\00d7";
     display: block;
     font-family: $type-sans;
     font-size: 22px;
     font-weight: 700;
+    left: 0;
     line-height: 28px;
     margin: auto;
+    position: absolute;
+    right: 0;
     text-align: center;
     text-indent: 0;
+    top: 0;
     transition: color .15s linear;
   }
 
@@ -118,19 +118,19 @@
 }
 
 .fs-lightbox-control {
-  width: 30px;
-  height: 30px;
-  font-size: 0;
   background: rgba($white, 0.7);
-  border-radius: 100%;
-  overflow: hidden;
   border: 1px solid $white;
+  border-radius: 100%;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  font-size: 0;
+  height: 30px;
   opacity: 0;
-  visibility: hidden;
+  overflow: hidden;
   transition:
     opacity $transition,
     visibility $transition;
+  visibility: hidden;
+  width: 30px;
 
   &::before {
     color: $black;

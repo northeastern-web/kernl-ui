@@ -5,41 +5,41 @@
 
 .sr,
 .sr-only {
-  position: absolute;
-  width: 1px;
+  border: 0;
+  clip: rect(0,0,0,0);
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .skip {
-  position: absolute;
-  top: -100px;
-  height: 1px;
-  width: 100%;
-  padding: 0 1rem;
-  text-align: left;
-  overflow: hidden;
-  font-weight: 700;
-  margin: 0;
   background-color: #c00;
-  color: #fff;
-  text-decoration: none;
   border: 0 none;
+  color: #fff;
+  font-weight: 700;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  position: absolute;
+  text-align: left;
+  text-decoration: none;
+  top: -100px;
+  width: 100%;
 
   &:focus,
   &:active {
-    position: relative;
     display: block;
+    height: auto;
+    outline: none;
+    overflow: visible;
+    padding: 1rem;
+    position: relative;
     top: 0;
     width: 100%;
-    height: auto;
-    padding: 1rem;
-    overflow: visible;
     z-index: 5000;
-    outline: none;
   }
 }

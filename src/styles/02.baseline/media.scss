@@ -10,7 +10,6 @@ img {
 
 img,
 embed,
-iframe:not(.wufoo-form-container):not(.ar--object),
 object,
 audio,
 video {
@@ -30,7 +29,13 @@ figure { margin: 0 0 1rem; }
 
 
 // Embedded content
-iframe { border: 0; }
+iframe {
+  border: 0;
+
+  &:not(.wufoo-form-container):not(.ar--object) {
+    @extend object;
+  }
+}
 
 audio,
 video { display: inline-block; }

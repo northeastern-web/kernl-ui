@@ -7,12 +7,13 @@
   @include margin-bottom-gutter();
   @include type-sm();
 
-  flex-direction: column;
-  width: 100%;
   background: $white;
-  position: relative;
-  overflow: visible;
   box-shadow: $box-shadow-inset;
+
+  flex-direction: column;
+  overflow: visible;
+  position: relative;
+  width: 100%;
 
   // --
   // Options
@@ -63,26 +64,26 @@
 
   // Parent influence
   .\-flush & {
-    margin-bottom: 0;
     box-shadow: none;
+    margin-bottom: 0;
   }
 
   .stack & {
     border: 1px solid $gray-200;
-    margin-bottom: -1px;
     box-shadow: none;
+    margin-bottom: -1px;
   }
 
   // --
   // Block-level child elements
   &_link {
     @extend .d-flex;
+    color: inherit;
 
     flex-direction: column;
-    width: 100%;
     min-height: 100%;
-    color: inherit;
     transition: box-shadow $transition;
+    width: 100%;
 
     &:hover {
       box-shadow: $box-shadow-inset-hover;
@@ -115,21 +116,21 @@
       @extend .flex-middle;
     }
 
+    .\-bottom & {
+      @extend .justify-end;
+    }
+
     .\-middle.\-overlay & {
       @extend .d-block;
       width: 100%;
-    }
-
-    .\-bottom & {
-      @extend .justify-end;
     }
   }
 
   &_body {
     @include card-padding();
+    flex: 1;
 
     font-size: 100%;
-    flex: 1;
 
     p {
       font-size: inherit;
@@ -137,10 +138,14 @@
       &:last-child { margin-bottom: 0; }
     }
 
+    .stack & {
+      padding: 1rem 1rem 0.5rem;
+    }
+
     .\-overlay & {
-      position: absolute;
-      overflow-y: hidden;
       max-height: 95%;
+      overflow-y: hidden;
+      position: absolute;
     }
 
     .\-tile & { padding: 1rem; }
@@ -157,18 +162,14 @@
       text-align: center;
       width: 100%;
     }
-
-    .stack & {
-      padding: 1rem 1rem 0.5rem;
-    }
   }
 
   &_title {
-    padding: 0;
-    margin: 0 0 0.5rem;
-    line-height: 1.25;
-    font-weight: 700;
     font-size: 118%;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0.5rem;
+    padding: 0;
     transition: color 0.2s ease;
   }
 
@@ -176,10 +177,10 @@
   &_subtitle { font-size: 110%; }
 
   &_media {
+    background-color: $gray-800; // defined for accessibility conformance: contrast
+    overflow: hidden;
     position: relative;
     width: 100%;
-    overflow: hidden;
-    background-color: $gray-800; // defined for accessibility conformance: contrast
 
     &::after {
       content: '';
@@ -189,13 +190,13 @@
 
     .\-overlay & {
       min-height: 100%;
-      padding: 0;
       min-width: 100%;
+      padding: 0;
 
       &::after {
         @extend .pin;
-        content: '';
         background-color: rgba(0, 0, 0, 0.7);
+        content: '';
       }
     }
 
@@ -205,22 +206,22 @@
     }
 
     .\+avatar & {
-      max-width: 4rem;
       max-height: 4rem;
+      max-width: 4rem;
     }
   }
 
   // pins the <img>
   &_img {
+    flex-shrink: 0;
+    height: 100%;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
   }
 
   &_header {
@@ -236,13 +237,13 @@
     @include card-padding();
 
     display: flex;
+    font-size: 87.5%;
     justify-content: space-between;
     padding-top: 0 !important;
-    font-size: 87.5%;
 
     .\-overlay & {
-      position: absolute;
       bottom: 0;
+      position: absolute;
     }
 
     .stack & {
@@ -253,22 +254,24 @@
   // Columns in header/footer
   &_column {
     @extend %component-column;
+    align-self: center;
 
     padding: 0;
-    align-self: center;
   }
 }
 
 // Polyfill for object-fit:cover in MS Edge
+// stylelint-disable selector-type-no-unknown
 _:-ms-lang(x), .card .card_img {
-  top: -10000px !important;
-  right: -10000px !important;
   bottom: -10000px !important;
+  height: auto !important;
   left: -10000px !important;
   margin: auto;
-  min-width: 100%;
   min-height: 100%;
-  zoom: 0.1;
+  min-width: 100%;
+  right: -10000px !important;
+  top: -10000px !important;
   width: auto !important;
-  height: auto !important;
+  zoom: 0.1;
 }
+// stylelint-enable selector-type-no-unknown

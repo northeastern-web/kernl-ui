@@ -5,24 +5,24 @@
 
 
 .bg-img {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.25);
-  color: #fff;
   background-color: $gray-800; // defined for accessibility conformance: contrast
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.25);
 
   &:after {
     @extend .pin;
-    content: "";
     background: rgba(0, 0, 0, 0.55206);
+    content: "";
     z-index: $z-0;
   }
 
   > * {
     @extend .fs-smooth;
-    z-index: 1;
     position: relative;
+    z-index: 1;
   }
 
   .btn,

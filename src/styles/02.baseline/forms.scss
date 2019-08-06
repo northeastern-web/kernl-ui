@@ -45,34 +45,34 @@ button:focus {
 }
 
 fieldset {
-  min-width: 0;
   border: 1px solid #c0c0c0;
-  padding: 0;
-  margin: 0;
   border: 0;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
 }
 
 legend {
   box-sizing: border-box;
   color: inherit;
   display: table;
+  font-size: 1rem;
+  line-height: inherit;
+  margin-bottom: 0;
   max-width: 100%;
   padding: 0;
-  font-size: 1rem;
-  white-space: normal;
-  line-height: inherit;
-  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  margin-bottom: 0;
+  padding-top: 0.5rem;
+  white-space: normal;
 }
 
 label {
-  display: inline-block;
-  margin-bottom: 0.25rem;
-  padding-top: 0.5rem;
   color: $gray-500;
+  display: inline-block;
   font-size: $fs-sm;
   line-height: 1.2;
+  margin-bottom: 0.25rem;
+  padding-top: 0.5rem;
 
   &:hover { cursor: pointer; }
 }
@@ -91,9 +91,9 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  padding: 0;
-  margin: 0.15rem 0.25rem 0 0;
   box-sizing: border-box;
+  margin: 0.15rem 0.25rem 0 0;
+  padding: 0;
   vertical-align: top;
 
   &:disabled { cursor: not-allowed; }
@@ -128,7 +128,6 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="search"],
-input[type="file"],
 input[type="number"],
 input[type="tel"],
 input[type="url"],
@@ -138,21 +137,18 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="week"],
 input[type="time"],
-input[type="range"],
-textarea,
-select {
-  // @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
-  display: block;
-  width: 100%;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.25;
-  color: $gray-600;
+textarea {
+  background-clip: padding-box;
   background-color: #fff;
   background-image: none;
-  background-clip: padding-box;
   border: 1px solid $gray-200;
   border-radius: 1px;
+  color: $gray-600;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.25;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
 
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
@@ -183,29 +179,33 @@ select {
 }
 
 select {
+  @extend textarea;
+
   &:not([size]):not([multiple]) {
     $select-border-width: 2px;
   }
 
   &:focus::-ms-value {
+    background-color: #fff;
     // Suppress the nested default white text on blue background highlight given to
     // the selected option text when the (still closed) <select> receives focus
     // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
     // match the appearance of the native widget.
     // See https://github.com/twbs/bootstrap/issues/19398.
     color: $gray-600;
-    background-color: #fff;
   }
 }
 
 // Make file inputs better match text inputs by forcing them to new lines.
 input[type="file"],
 input[type="range"] {
-  display: block;
-  padding: 0;
-  background: none;
-  box-shadow: none;
-  border: 0 none;
+  @extend textarea;
   @include type-sm();
+
+  background: none;
+  border: 0 none;
+  box-shadow: none;
+  display: block;
   margin: 3px 0;
+  padding: 0;
 }

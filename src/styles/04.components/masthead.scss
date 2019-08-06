@@ -1,18 +1,20 @@
 // Components
 // Masthead
 
+// Note to self: explore https://www.jqueryscript.net/menu/Multilevel-Sliding-Menu-jQuery-Mobile-Menu.html;
+
 .fs-navigation {
   &-overlay-nav {
     &.fs-navigation-enabled {
-      width: 100%;
-      max-width: 35rem;
+      display: block;
       height: 100%;
+      left: 0;
+      max-width: 35rem;
+      overflow: auto;
       position: fixed;
       top: 0;
-      left: 0;
-      display: block;
-      overflow: auto;
       transform: translate3D(-35rem, 0, 0);
+      width: 100%;
     }
 
     &.fs-navigation-open {
@@ -35,22 +37,22 @@
 
   &-overlay-content {
     &::before {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      right: 0;
+      background-color: rgba($black, 0.75);
       bottom: 0;
-      left: 0;
-      z-index: 2;
       content: '';
       display: block;
+      height: 100%;
+      left: 0;
       opacity: 0;
-      visibility: hidden;
-      background-color: rgba($black, 0.75);
+      position: fixed;
+      right: 0;
+      top: 0;
       transition:
         opacity 0.2s ease,
         visibility 0.2s ease;
+      visibility: hidden;
+      width: 100%;
+      z-index: 2;
     }
 
     &.fs-navigation-open:before {
@@ -63,16 +65,16 @@
 .masthead {
   @extend .fs-smooth;
   @include make-section();
+  align-items: center;
 
   display: flex;
   flex-wrap: wrap;
-  position: relative;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
   overflow: visible;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  position: relative;
+  width: 100%;
   z-index: $z-1;
 
   &_logo {
@@ -93,57 +95,57 @@
   }
 
   &_image {
-    max-width: 100%;
     max-height: 2.5rem;
+    max-width: 100%;
   }
 
   .nav {
     &_handle {
-      position: relative;
-      overflow: hidden;
+      background-color: transparent;
+      border: none;
+      color: #888;
+      cursor: pointer;
       height: auto;
       line-height: 1;
-      border: none;
-      cursor: pointer;
-      background-color: transparent;
-      color: #888;
+      overflow: hidden;
       padding-right: 0;
+      position: relative;
 
       &:focus { outline: none; }
 
       &.menu-is-open {
-        font-size: 1.5rem;
         color: #999;
+        font-size: 1.5rem;
       }
 
       @include mqbp-up(d) {
         display: none;
-        width: 0;
-        height: 0;
         float: none;
+        height: 0;
+        width: 0;
       }
     }
 
     &_list {
-      position: relative;
-      padding-left: 0;
+      clear: both;
       list-style: none;
       margin-left: 1rem;
       margin-right: 1rem;
-      clear: both;
+      padding-left: 0;
       padding-top: 1rem;
+      position: relative;
 
       @include mqbp-up(d) {
-        padding-top: 0;
         margin: 0;
+        padding-top: 0;
       }
     }
 
     &_item {
       display: block;
-      position: static;
-      padding: 0;
       margin: 0;
+      padding: 0;
+      position: static;
 
       @include mqbp-up(d) {
         display: inline-flex;
@@ -152,17 +154,17 @@
     }
 
     &_link {
-      position: relative;
-      display: block;
-      padding: 1rem 1.25rem 1rem 0;
-      font-size: 19px;
-      color: inherit;
       border-bottom: 1px solid rgba(lighten($type-color, 70%), 0.2);
+      color: inherit;
+      display: block;
+      font-size: 19px;
+      padding: 1rem 1.25rem 1rem 0;
+      position: relative;
 
       &:hover,
       &:focus {
-        text-decoration: none;
         background-color: transparent;
+        text-decoration: none;
       }
 
       &.\-active {
@@ -170,10 +172,10 @@
       }
 
       @include mqbp-up(d) {
-        padding: 1rem 0;
-        font-size: $fs-sm;
-        color: #333;
         border: 0 none;
+        color: #333;
+        font-size: $fs-sm;
+        padding: 1rem 0;
 
         &:after { content: none; }
 
@@ -184,12 +186,12 @@
 
     &_sublist {
       display: none;
-      padding-top: 0;
-      padding-right: 0;
-      padding-left: 0;
-      margin-right: 0;
-      list-style: none;
       height: auto;
+      list-style: none;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
     }
 
     &_sublink {  
@@ -202,15 +204,15 @@
   .\+children {
     .nav_link {
       &::after {
-        font-family: "feathericons", sans-serif;
-        content: "\e922";
-        position: absolute;
         color: $gray-500;
+        content: "\e922";
+        font-family: "feathericons", sans-serif;
+        font-size: 24px;
+        line-height: 1;
+        position: absolute;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 24px;
-        line-height: 1;
       }
     }
 
@@ -229,17 +231,17 @@
 
   .\-active {
     + .nav_sublist {
+      background-color: $white;
       display: block;
+      height: 100%;
+      left: 0;
+      margin: 0;
       position: absolute;
       top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
-      margin: 0;
-      background-color: $white;
     }
   }
-/*
+  /*
   .__item.\-active > a,
   .\-active > .__link {
     font-weight: bold;
@@ -252,7 +254,7 @@
   }
 */
 
-/*
+  /*
     &.submenu-open.__item > a,
     &.submenu-open > .__link {
       &:after {
@@ -335,6 +337,7 @@
   // Modifiers
 
   // position the nav over an image or background
+  /*
   &.\-overlay {
     position: absolute;
 
@@ -355,25 +358,25 @@
   .\+icon {
     a {
       svg {
-        width: 20px;
         height: 20px;
+        width: 20px;
       }
 
       @include mqbp-up(d) {
-        padding-bottom: 0 !important;
         color: rgba($type-color, 0.7);
+        padding-bottom: 0 !important;
 
         svg {
+          height: 18px;
           margin-bottom: -2px;
           width: 18px;
-          height: 18px;
         }
       }
     }
 
-    &:last-child a { 
+    &:last-child a {
+      padding-bottom: 0.75rem; 
       padding-right: 0;
-      padding-bottom: 0.75rem;
     }
   }
 
@@ -387,13 +390,13 @@
           padding-right: 1.75rem;
 
           &:before { // 'before' because 'after' competes with other modifiers
-            content: "\e920" !important;
-            position: absolute;
-            font-family: "feathericons", sans-serif;
             color: $gray-200;
+            content: "\e920" !important;
+            font-family: "feathericons", sans-serif;
             font-size: 1rem;
-            top: 15px;
+            position: absolute;
             right: 6px;
+            top: 15px;
           }
         }
       }
@@ -407,16 +410,16 @@
         .__item:not(.\+icon) > .__link,
         .__item:not(.\+icon) > a {
           &::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            bottom: -1px;
-            left: 0;
-            right: 0;
-            border-bottom-width: 3px;
-            border-bottom-style: solid;
             border-bottom-color: transparent;
-            transition: border-bottom $transition
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
+            bottom: -1px;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            transition: border-bottom $transition;
+            width: 100%
           }
 
           &:hover {
@@ -461,44 +464,44 @@
         }
 
         .__submenu {
+          background-color: $gray-100;
+          border: 0 none;
+          border-radius: 0;
+          box-shadow: 0px 2px 1px 0 rgba($black, 0);
           display: flex;
           flex-wrap: wrap;
-          padding: 0 3rem !important;
-          top: 4.5rem;
           left: 0;
-          right: 0;
-          background-color: $gray-100;
           max-height: 0;
           min-width: 0;
-          width: 100%;
-          border-radius: 0;
-          border: 0 none;
-          box-shadow: 0px 2px 1px 0 rgba($black, 0);
           overflow: hidden;
+          padding: 0 3rem !important;
+          right: 0;
+          top: 4.5rem;
           transition: max-height 0.4s ease 0.1s,
-                      box-shadow 0.1s ease 0s;
+            box-shadow 0.1s ease 0s;
+          width: 100%;
 
           &:before {
+            border-top: 1px solid $gray-200;
             content: "";
+            left: 0;
             position: absolute;
             top: 0;
-            left: 0;
-            border-top: 1px solid $gray-200;
-            width: 1%;
             transition: width 0.6s ease;
+            width: 1%;
           }
 
           > li {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
             margin-bottom: 0;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
           }
 
           .__item > a,
           .__link {
             @include type-sm();
-            padding: 0.5rem 0 !important;
             color: inherit;
+            padding: 0.5rem 0 !important;
 
             &:hover,
             &:focus {
@@ -509,12 +512,12 @@
           }
 
           ul {
-            padding-left: 0;
             list-style: none;
+            padding-left: 0;
 
             .__link {
-              margin: 0;
               color: inherit;
+              margin: 0;
               transition: color 0.15s ease;
 
               &:hover,
@@ -526,27 +529,27 @@
           }
 
           .__link.\-heading {
-            font-size: 1.15rem;
-            padding-top: 0;
-            padding-bottom: 0.75rem;
-            margin-right: 0;
             border-bottom: 1px solid rgba($black, 0.3);
+            font-size: 1.15rem;
+            margin-right: 0;
+            padding-bottom: 0.75rem;
+            padding-top: 0;
             transition:
               border-bottom $transition,
               color $transition;
 
             &:hover {
               background-color: transparent;
-              color: $type-link;
               border-bottom: 1px solid rgba($black, 0.6);
+              color: $type-link;
             }
           }
 
           &:after { display: none; }
 
           .\-feature {
-            padding-left: 1.5rem;
             background-color: rgba($gray-400, 0);
+            padding-left: 1.5rem;
             transition: background 0.4s ease 0s;
           }
         }
@@ -562,12 +565,12 @@
           }
 
           .__submenu {
-            max-height: 20rem;
-            z-index: 300;
             box-shadow: 0px 2px 1px 0 rgba($black, 0.1);
+            max-height: 20rem;
             transition: max-height 0.4s ease 0.1s,
-                        box-shadow $transition,
-                        color $transition 0.3s;
+              box-shadow $transition,
+              color $transition 0.3s;
+            z-index: 300;
 
             &:before { width: 100%; }
 
@@ -597,8 +600,8 @@
 
               &:hover,
               &:focus {
-                border-bottom-color: rgba($white, 0.325);
                 background-color: transparent !important;
+                border-bottom-color: rgba($white, 0.325);
                 color: $red !important;
               }
 
@@ -621,15 +624,15 @@
     .__list:not(.\-utility) {
       @include mqbp-up(d) {
         .__item {
-          margin-top: 0 !important;
           margin-bottom: 0 !important;
+          margin-top: 0 !important;
         }
 
         margin-top: 3rem;
 
         > .__item > .__link {
-          padding-top: 0.25rem;
           padding-bottom: 1rem;
+          padding-top: 0.25rem;
 
           &:before { top: 4px; }
         }
@@ -657,21 +660,25 @@
 
   .\-utility {
     .__link {
-      text-transform: uppercase;
-      letter-spacing: 0.05rem;
       font-size: $fs-root;
+      letter-spacing: 0.05rem;
+      text-transform: uppercase;
     }
 
     @include mqbp-up(d) {
       @include make-section();
-      padding-top: 0;
-      padding-left: 0 !important;
       padding-bottom: 0;
+      padding-left: 0 !important;
+      padding-top: 0;
+
+      position: absolute !important;
+      right: 0;
+      top: 1.25rem;
       z-index: $z-max;
 
       .__item {
-        margin: 0;
         border-right: 1px solid rgba($type-color, 0.3);
+        margin: 0;
 
         &:last-child {
           border-right: 0 none;
@@ -681,14 +688,10 @@
         }
       }
 
-      position: absolute !important;
-      top: 1.25rem;
-      right: 0;
-
       .__link {
-        padding: 0 0.5rem;
-        font-size: $fs-xs;
         color: rgba($type-color, 0.7);
+        font-size: $fs-xs;
+        padding: 0 0.5rem;
       }
     }
 
@@ -707,41 +710,41 @@
     .__logo__image {
       max-height: 3.75rem;
     }
-  }
+  }*/
 }
-
+/*
 .__drawer {
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  right: auto;
-  left: 0;
-  overflow-y: scroll;
-  width: 100%;
-  height: 100%;
-  max-width: 35rem;
   background-color: $gray-800;
-  z-index: 1000;
+  height: 100%;
+  left: 0;
+  max-width: 35rem;
+  overflow-y: scroll;
+  position: fixed;
+  right: auto;
+  top: 0;
   transform: translateX(-100%);
   transition:
     transform 0.375s ease-in,
     visibility 0.375s ease-in;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1000;
 
   .__toggler { margin-top: 1.125rem; }
 
   @include mqbp-up(d) {
-    position: static;
-    width: auto;
-    max-width: none;
-    padding: 0;
-    margin-left: 1rem;
-    top: auto;
-    left: auto;
-    visibility: visible;
     background-color: transparent;
-    transition: none;
-    transform: none;
+    left: auto;
+    margin-left: 1rem;
+    max-width: none;
     overflow-y: visible;
+    padding: 0;
+    position: static;
+    top: auto;
+    transform: none;
+    transition: none;
+    visibility: visible;
+    width: auto;
   }
 }
 
@@ -763,8 +766,8 @@
         color: rgba($white, 0.8) !important;
 
         &:hover {
-          color: rgba($white, 1) !important;
           background-color: transparent !important;
+          color: rgba($white, 1) !important;
         }
       }
       .\+children {
@@ -804,8 +807,8 @@
 .menu-open {
   .masthead {
     .__drawer {
-      visibility: visible;
       transform: translateX(0);
+      visibility: visible;
 
       .hidden--up\@d {
         .__logo { margin-left: 1rem; }
@@ -842,8 +845,8 @@
 @include mqbp-up(d) {
   .full {
     .\-megamenu .\+children .__submenu {
-      padding-right: 0 !important;
       padding-left: 0 !important;
+      padding-right: 0 !important;
     }
 
     .\-utility { right: 0; }
@@ -851,8 +854,8 @@
 
   .contain {
     .\-megamenu .\+children .__submenu {
-      padding-right: 7rem !important;
       padding-left: 7rem !important;
+      padding-right: 7rem !important;
     }
 
     .\-utility { right: 4rem; }
@@ -866,13 +869,13 @@
   .masthead .\+children {
     &:focus-within {
       .__submenu {
-        height: auto;
         background-color: $white;
-        overflow: visible;
+        height: auto;
         max-height: 20rem;
-        width: 13rem;
         opacity: 1;
+        overflow: visible;
         padding: 1rem;
+        width: 13rem;
       }
     }
   }
@@ -894,18 +897,18 @@
   .masthead.\-megamenu .\+children {
     &:focus-within {
       .__submenu {
-        height: auto;
         background-color: $white;
-        overflow: visible;
-        max-height: 20rem;
-        z-index: 300;
-        width: auto;
-        opacity: 1;
-        padding: 1rem;
         box-shadow: 0px 2px 1px 0 rgba($black, 0.1);
+        height: auto;
+        max-height: 20rem;
+        opacity: 1;
+        overflow: visible;
+        padding: 1rem;
         transition: max-height 0.4s ease 0.1s,
-                    box-shadow $transition,
-                    color $transition 0.3s;
+          box-shadow $transition,
+          color $transition 0.3s;
+        width: auto;
+        z-index: 300;
 
         &:before { width: 100%; }
 
@@ -926,3 +929,4 @@
     }
   }
 }
+*/

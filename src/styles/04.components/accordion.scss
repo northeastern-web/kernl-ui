@@ -8,30 +8,30 @@
   border: 1px solid rgba($black, 0.2);
 
   &_item {
-    padding-top: 0;
-    margin-bottom: 0;
     border-top: 1px solid rgba($black, 0.2);
+    margin-bottom: 0;
+    padding-top: 0;
 
     &:first-child { border-top: 0 none; }
   }
 
   &_header {
-    padding: 1rem 3rem 1rem 0.75rem;
-    width: 100%;
-    position: relative;
-    display: block;
-    text-align: left;
-    color: inherit;
     border: 0 none;
+    color: inherit;
     cursor: pointer;
+    display: block;
+    padding: 1rem 3rem 1rem 0.75rem;
+    position: relative;
+    text-align: left;
+    width: 100%;
 
     &:after {
       content: "\e970"; // plus icon
       font-family: "feathericons";
       font-weight: normal;
       position: absolute;
-      top: 1rem;
       right: 1.5rem;
+      top: 1rem;
     }
 
     &:active { outline: none; }
@@ -52,9 +52,9 @@
   }
 
   &_copy {
-    padding: 1rem 3rem 1rem 0.75rem;
-    font-size: $fs-sm;
     background: #fff;
+    font-size: $fs-sm;
+    padding: 1rem 3rem 1rem 0.75rem;
   }
 }
 

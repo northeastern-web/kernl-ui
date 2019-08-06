@@ -17,20 +17,20 @@ $size: 20;
   .ol-#{$size}   { margin-left: -#{$size}rem !important; }
   .ol-#{$size}h  { margin-left: -#{($size+.5)}rem !important; }
   .ox-#{$size} {
-    margin-right: -#{$size}rem !important;
     margin-left: -#{$size}rem !important;
+    margin-right: -#{$size}rem !important;
   }
   .ox-#{$size}h {
-    margin-right: -#{($size+.5)}rem !important;
     margin-left: -#{($size+.5)}rem !important;
+    margin-right: -#{($size+.5)}rem !important;
   }
   .oy-#{$size} {
-    margin-top: -#{$size}rem !important;
     margin-bottom: -#{$size}rem !important;
+    margin-top: -#{$size}rem !important;
   }
   .oy-#{$size}h {
-    margin-top: -#{($size+.5)}rem !important;
     margin-bottom: -#{($size+.5)}rem !important;
+    margin-top: -#{($size+.5)}rem !important;
   }
 
   @each $breakpoint in map-keys($breakpoints) {
@@ -46,20 +46,20 @@ $size: 20;
       .ol-#{$size}\@#{$breakpoint}   { margin-left: -#{$size}rem !important; }
       .ol-#{$size}h\@#{$breakpoint}  { margin-left: -#{($size+.5)}rem !important; }
       .ox-#{$size}\@#{$breakpoint} {
-        margin-right:  -#{$size}rem !important;
         margin-left:   -#{$size}rem !important;
+        margin-right:  -#{$size}rem !important;
       }
       .ox-#{$size}h\@#{$breakpoint} {
-        margin-right:  -#{($size+.5)}rem !important;
         margin-left:   -#{($size+.5)}rem !important;
+        margin-right:  -#{($size+.5)}rem !important;
       }
       .oy-#{$size}\@#{$breakpoint} {
-        margin-top:    -#{$size}rem !important;
         margin-bottom: -#{$size}rem !important;
+        margin-top:    -#{$size}rem !important;
       }
       .oy-#{$size}h\@#{$breakpoint} {
-        margin-top:    -#{($size+.5)}rem !important;
         margin-bottom: -#{($size+.5)}rem !important;
+        margin-top:    -#{($size+.5)}rem !important;
       }
     }
   }

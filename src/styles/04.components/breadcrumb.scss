@@ -4,17 +4,19 @@
 
 .breadcrumb {
   a {
+    color: inherit;
     padding-right: 1rem;
     position: relative;
-    color: inherit;
 
     &:after {
       content: "\/";
-      position: absolute;
-      top: 2px;
-      right: 5px;
       line-height: 1;
+      position: absolute;
+      right: 5px;
+      top: 2px;
     }
+
+    &:last-child:after { display: none; }
   }
 
   .\-active {
@@ -47,6 +49,4 @@
       }
     }
   }
-
-  a:last-child:after { display: none; }
 }

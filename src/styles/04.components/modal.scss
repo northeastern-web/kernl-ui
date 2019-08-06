@@ -4,16 +4,16 @@
 
 .modal {
   align-items: center;
+  bottom: 0;
   display: none;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
-  z-index: $z-max;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z-max;
 
   // --
   // Block level
@@ -25,21 +25,21 @@
 
   // centered content within modal
   .__content {
-    position: relative;
     display: flex;
-    padding: 2rem;
-    margin: 4rem auto 5rem;
-    width: 90%;
-    max-width: 450px;
-    max-height: 96vh;
-    overflow-y: scroll;
-    z-index: 50;
-    flex-direction: column;
     flex: 0 1 auto;
+    flex-direction: column;
+    margin: 4rem auto 5rem;
+    max-height: 96vh;
+    max-width: 450px;
+    overflow-y: scroll;
+    padding: 2rem;
+    position: relative;
+    width: 90%;
+    z-index: 50;
 
     @include mqbp-up(t) {
-      width: 80%;
       max-width: 760px;
+      width: 80%;
     }
 
     @include mqbp-up(w) {
@@ -49,34 +49,34 @@
 
   .__body {
     @include card-padding();
-    font-size: 100%;
     flex: 1;
+    font-size: 100%;
   }
 
   // dark screen as modal backdrop
   .__screen {
-    position: fixed;
-    top: 0;
-    right: 0;
+    background-color: rgba($black, 0.85);
     bottom: 0;
     left: 0;
-    background-color: rgba($black, 0.85);
+    position: fixed;
+    right: 0;
+    top: 0;
   }
 
   // close button in top right corner of browser window
   .__close {
-    position: absolute;
-    top: 0.25rem;
-    right: 0.5rem;
-    padding: 0.5rem;
-    color: #fff;
-    cursor: pointer;
     background: 0 none;
     border: 0;
+    color: #fff;
+    cursor: pointer;
     font-size: 2rem;
     font-weight: 400;
-    text-shadow: 0 1px 0 #fff;
     opacity: 0.85;
+    padding: 0.5rem;
+    position: absolute;
+    right: 0.5rem;
+    text-shadow: 0 1px 0 #fff;
+    top: 0.25rem;
     transition: opacity 0.2s ease;
 
     .feather { stroke-width: 3; }
@@ -112,8 +112,8 @@
   &.\-xl {
     .__content {
       @include mqbp-up(t) {
-        max-width: 86%;
         height: 100%;
+        max-width: 86%;
       }
 
       @include mqbp-up(d) {

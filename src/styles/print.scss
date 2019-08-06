@@ -4,8 +4,8 @@
 
 @media print {
   @page {
-    size: letter portrait;
     margin: 0.5in 1in 0.75in 1in;
+    size: letter portrait;
   }
 
   body {
@@ -21,24 +21,24 @@
   *::after {
     background: transparent !important;
     color: black !important;
-    text-shadow: none !important;
-    filter: none !important;
     -ms-filter: none !important;
+    filter: none !important;
+    text-shadow: none !important;
   }
 
   a,
   a:visited {
+    border-bottom: 1pt dotted #666;
     color: #444 !important;
     text-decoration: none;
-    border-bottom: 1pt dotted #666;
   }
 
   a abbr[title]::after,
   a:visited abbr[title]::after {
+    color: #444;
     content: " (" attr(title) ")";
     font-size: 9pt;
     text-decoration: none;
-    color: #444;
   }
 
   a[href^="javascript: "]::after,
@@ -73,65 +73,43 @@
   h4,
   h5,
   h6 {
-    page-break-after: avoid;
-    line-height: 1.125;
     font-weight: 700;
+    line-height: 1.125;
+    page-break-after: avoid;
   }
 
   .masthead {
-    padding-bottom: 0.25in;
-    margin-bottom: 0.125in;
     border-bottom: 1pt solid #ccc;
+    margin-bottom: 0.125in;
+    padding-bottom: 0.25in;
 
     .__logo {
-      width: 2in;
-      height: auto;
-      max-width: none;
-      max-height: none;
-      margin: 0;
       border-bottom: 0 none;
+      height: auto;
+      margin: 0;
+      max-height: none;
+      max-width: none;
+      width: 2in;
     }
 
     .__logo__image {
-      width: 100%;
       height: auto;
-      max-width: none;
       max-height: none;
+      max-width: none;
+      width: 100%;
     }
   }
 
   header.section.\-banner {
-    padding: 0.1in 0 0.15in !important;
-    margin-bottom: 0.25in;
     border-bottom: 1pt solid #ccc;
+    margin-bottom: 0.25in;
+    padding: 0.1in 0 0.15in !important;
 
     .__title {
+      color: #333 !important;
       font-size: 26pt;
       font-weight: 700;
-      color: #333 !important;
     }
-  }
-
-  #main_content .col { padding-left: 0; }
-
-  #main_content .section { padding: 0 0 0.25in; }
-
-  #main_content .section .section { padding: 0; }
-
-  #main_content > .article > .section > .row > .col.w-1\/4\@t {
-    display: none;
-    width: 0;
-  }
-
-  #main_content > .article > .section > .row > .col.w-3\/4\@t {
-    -ms-flex-preferred-size: 94%;
-    flex-basis: 94%;
-    max-width: 94%;
-  }
-
-  #main_content {
-    display: block;
-    overflow: visible;
   }
 
   nav,
@@ -150,27 +128,53 @@
 
   .row,
   .footer {
-    padding: 0;
-    margin: 0;
     border: 0 none;
+    margin: 0;
     max-width: none;
+    padding: 0;
   }
 
   .footer {
-    padding-top: 0.25in;
     border-top: 1pt solid #aaa;
+    padding-top: 0.25in;
 
     .section { padding: 0; }
     .__copy { color: $gray; }
   }
 
-  hr {
+  #main_content {
     display: block;
-    height: 1pt;
+    overflow: visible;
+
+    .col { padding-left: 0; }
+
+    .section {
+      padding: 0 0 0.25in;
+
+      .section { padding: 0; }
+    }
+
+    > .article > .section > .row > .col {
+      &.w-1\/4\@t {
+        display: none;
+        width: 0;
+      }
+
+      &.w-3\/4\@t {
+        flex-basis: 94%;
+        -ms-flex-preferred-size: 94%;
+        max-width: 94%;
+      }
+    }
+  }
+
+  hr {
     background: transparent;
-    width: 100%;
     border: none;
     border-top: solid 1pt #ccc;
+    display: block;
+    height: 1pt;
+    width: 100%;
   }
 
   a.btn {
