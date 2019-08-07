@@ -34,6 +34,9 @@
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^5.2",
+    "eslint": "5.3.0",
+    "eslint-config-airbnb-base": "13.2.0",
+    "eslint-plugin-import": "^2.17.2",
     "laravel-mix": "^4.1",
     "npm-run-all": "^4.1",
     "rimraf": "^2.6",
@@ -42,9 +45,12 @@
     "stylelint": "^10.1",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-order": "^0.8.1",
-    "stylelint-scss": "^3.1.0"
+    "stylelint-scss": "^3.1.0",
+    "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-markdown": "^1.0.0",
     "feather-icons": "^4.7.3",
     "formstone": "^1.4.13",
     "gumshoejs": "^5.1.1",
