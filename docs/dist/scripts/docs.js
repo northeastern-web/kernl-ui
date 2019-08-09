@@ -21806,8 +21806,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.masthead .nav').navigation({
 }); // --
 // Progressive menu focus
 
-var $shuffle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-toggle="masthead_nav"][data-swap-target]');
-var $back = jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-back]'); // Initialize Formstone swap()
+var $shuffle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-toggle="masthead_nav"][data-swap-target]'); // Initialize Formstone swap()
 
 $shuffle.swap(); // Activate and deactivate event
 
@@ -21818,15 +21817,20 @@ $shuffle.on('activate.swap deactivate.swap', function () {
       disfA = disPar.find('> a'),
       disBack = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<li/>', {
     'class': 'back',
-    'html': '<a href="#" data-toggle="masthead_nav" data-back>' + disfA.text() + '</a>'
+    'html': '<a href="#">' + disfA.text() + '</a>'
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(dis).toggleClass('-active');
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(disNext).css('backgroundColor', 'red');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(dis).toggleClass('-active'); // $(disNext).css('backgroundColor', 'red')
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(disBack).prependTo(disNext);
-});
-$back.on('click touch', function () {
-  console.log('clickity');
-  $shuffle.swap("deactivate");
+  var $back = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.back > a');
+  $back.on('click touch', function () {
+    $shuffle.swap('deactivate').closest('[data-swap-target]', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(dis).toggleClass('-active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(disBack).prependTo(disNext);
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.nav_sublist > .back').remove();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(disBack).prependTo(disNext);
+  });
 });
 
 /***/ }),

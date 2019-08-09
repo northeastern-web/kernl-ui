@@ -26,54 +26,54 @@
 
     <ul class="nav_list">
       <li class="nav_item">
-        <a class="nav_link" href="#_0">Lorem Ipsum</a>
+        <a class="nav_link" href="#">Lorem Ipsum</a>
       </li>
       <li class="nav_item +children">
-        <a class="nav_link" href="#_0" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_0">Bibendum</a>
+        <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_0">Bibendum</a>
         <ul class="nav_sublist" id="sub_0">
-          <li class="nav_subitem" data-depth="1">
-            <a class="nav_sublink" href="#_1">Quam Vulputate Nibh</a>
+          <li class="nav_subitem">
+            <a class="nav_sublink" href="#">Quam Vulputate Nibh</a>
           </li>
-          <li class="nav_subitem" data-depth="1">
-            <a class="nav_sublink" href="#_1">Tortor Fusce</a>
+          <li class="nav_subitem">
+            <a class="nav_sublink" href="#">Tortor Fusce</a>
           </li>
         </ul>
       </li>
       <li class="nav_item +children">
-        <a class="nav_link" href="#_0" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_1">Pudgi Homunculi</a>
+        <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_1">Pudgi Homunculi</a>
         <ul class="nav_sublist" id="sub_1">
-          <li class="nav_subitem" data-depth="1">
-            <a class="nav_sublink" href="#_1">Malesuada Bibendum</a>
+          <li class="nav_subitem">
+            <a class="nav_sublink" href="#">Malesuada Bibendum</a>
           </li>
-          <li class="nav_subitem" data-depth="1">
-            <a class="nav_sublink" href="#_1">Bibendum Mattis Dapibus</a>
+          <li class="nav_subitem">
+            <a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a>
           </li>
-          <li class="nav_subitem" data-depth="1">
-            <a class="nav_sublink +children" href="#_1">Venenatis Pharetra Sit Dolor</a>
+          <li class="nav_subitem">
+            <a class="nav_sublink +children" href="#" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_3">Venenatis Pharetra Sit Dolor</a>
             <ul class="nav_sublist" id="sub_3">
-              <li class="nav_subitem" data-depth="2">
-                <a class="nav_sublink" href="#_4">Malesuada Bibendum</a>
+              <li class="nav_subitem">
+                <a class="nav_sublink" href="#">Malesuada Bibendum</a>
               </li>
-              <li class="nav_subitem" data-depth="2">
-                <a class="nav_sublink" href="#_4">Bibendum Mattis Dapibus</a>
+              <li class="nav_subitem">
+                <a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a>
               </li>
             </ul>
           </li>
         </ul>
       </li>
       <li class="nav_item +children">
-        <a class="nav_link" href="#_0" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_2">Malesuada Nucleus</a>
+        <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_2">Malesuada Nucleus</a>
         <ul class="nav_sublist" id="sub_2">
-          <li class="nav_subitem" data-depth="1">
-            <a class="nav_sublink" href="#_1">Quam Vulputate Nibh</a>
+          <li class="nav_subitem">
+            <a class="nav_sublink" href="#">Quam Vulputate Nibh</a>
           </li>
-          <li class="nav_subitem" data-depth="1">
-            <a class="nav_sublink" href="#_1">Tortor Fusce</a>
+          <li class="nav_subitem">
+            <a class="nav_sublink" href="#">Tortor Fusce</a>
           </li>
         </ul>
       </li>
       <li class="nav_item">
-        <a class="nav_link" href="#_0">Pharetra Sit Dolor Venenatis</a>
+        <a class="nav_link" href="#">Pharetra Sit Dolor Venenatis</a>
       </li>
     </ul>
   </nav>

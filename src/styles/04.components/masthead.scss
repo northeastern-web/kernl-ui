@@ -937,3 +937,24 @@
   }
 }
 */
+
+.back {
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+
+  a {
+    display: block;
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    position: relative;
+
+    &:after {
+      content: "\e90c"; // left arrow icon
+      font-family: "feathericons";
+      font-weight: normal;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
