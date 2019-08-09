@@ -2,11 +2,11 @@
 // Loader
 
 
-import $ from 'jquery';
+import $ from 'jquery'
 
-$('[data-load]').on('click touch', e => {
-  e.preventDefault();
-  $('.load').addClass('spinner').removeClass('load');
-});
+$('[data-load]').on('click touch', (e) => {
+  e.preventDefault()
+  $('.load').addClass('spinner').removeClass('load')
+})
 
 // TODO: listen for loaded element and remove loader

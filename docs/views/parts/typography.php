@@ -163,7 +163,7 @@
 </header>
 <section class="section bg-gray-800">
   <div class="row">
-    <div class="col w-2/3@t ow--1/6@t">
+    <div class="col w-2/3@t ow-1/6@t">
       <section class="section pa-2 mb-2@d bg-white tc-gray-800">
         <!-- sample of dense text -->
         <h2>Tenure and Tenure-Track Faculty</h2>

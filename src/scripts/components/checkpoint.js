@@ -1,9 +1,9 @@
 // Components
 // Checkpoint
 
-import $ from 'jquery';
+import $ from 'jquery'
 
 // Initialize Formstone checkpoint()
 $('.checkpoint').checkpoint({
   offset: 100,
-});
+})

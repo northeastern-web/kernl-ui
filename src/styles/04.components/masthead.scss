@@ -65,8 +65,8 @@
 .masthead {
   @extend .fs-smooth;
   @include make-section();
-  align-items: center;
 
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -128,6 +128,7 @@
 
     &_list {
       clear: both;
+      height: 100%;
       list-style: none;
       margin-left: 1rem;
       margin-right: 1rem;
@@ -194,6 +195,11 @@
       padding-top: 0;
     }
 
+    &_subitem {
+      margin-bottom: 0;
+      padding-top: 0;
+    }
+
     &_sublink {  
       &::before {
         content: none;
@@ -239,6 +245,7 @@
       position: absolute;
       top: 0;
       width: 100%;
+      z-index: 1;
     }
   }
   /*

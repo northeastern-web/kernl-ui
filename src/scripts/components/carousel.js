@@ -1,10 +1,10 @@
 // Components
 // Carousel
 
-import $ from 'jquery';
+import $ from 'jquery'
 
 // Initialize Formstone carousel()
 $('.carousel').carousel({
   theme: '',
   controls: false,
-});
+})

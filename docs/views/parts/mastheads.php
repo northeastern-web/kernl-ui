@@ -31,7 +31,6 @@
       <li class="nav_item +children">
         <a class="nav_link" href="#_0" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_0">Bibendum</a>
         <ul class="nav_sublist" id="sub_0">
-          <li><a href="#" class="back">Back</a></li>
           <li class="nav_subitem" data-depth="1">
             <a class="nav_sublink" href="#_1">Quam Vulputate Nibh</a>
           </li>

@@ -1,6 +1,6 @@
 // Components
 // Accordion
 
-import $ from 'jquery';
+import $ from 'jquery'
 
-$('.accordion [data-swap-target]').swap();
+$('.accordion [data-swap-target]').swap()

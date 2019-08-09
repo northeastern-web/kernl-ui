@@ -1,6 +1,7 @@
 // Structure
 // Section
 
+// stylelint-disable no-descending-specificity
 .section {
   @include make-section();
   margin-left: auto;
@@ -98,3 +99,88 @@
   // container is 2x default document margin
   .contain & { @include make-section('contain', $contain: $contain-width); }
 }
+
+// --
+// Blocks
+
+// Wrapper for titles within a section
+.section_header {
+  flex: 1;
+  // margin-bottom: 2rem; //removing for now
+
+  sup,
+  sub { font-weight: 400; }
+
+  // Add spacing on top when row/cols immediately follow
+  + .row { padding-top: 2rem; }
+
+  .section.\-center & {
+    @extend .mx-auto;
+    text-align: center;
+  }
+
+  // adds max-width via .section to nested .__header
+  .section.\-measure & { @extend .measure; }
+  .section.\-measure-narrow & { @extend .measure-narrow; }
+  .section.\-measure-wide & { @extend .measure-wide; }
+
+  .section.\+nav {
+    flex: 0;
+    margin-top: 0;
+  }
+}
+
+.section_subtitle {
+  @include type-lead();
+}
+
+.section_pretitle {
+  margin-bottom: 0.25rem;
+
+  + .section_title {
+    padding-top: 0.25rem;
+
+    + .section_subtitle { padding-top: 0.5rem; }
+  }
+}
+
+.section_title {
+  @include type-d3();
+
+  font-weight: $type-light;
+  line-height: 1.15;
+  margin-bottom: 0.125rem;
+  max-width: none;
+  padding-top: 0;
+
+  + .section_subtitle { padding-top: 0.75rem; }
+
+  // adds line after title on via a section
+  .section.\-bal & {
+    @extend .bal !optional;
+  }
+
+  .section.\-bal.\-center & {
+    &::after {
+      margin: 0 auto;
+      right: 0;
+    }
+  }
+
+  @include mqbp-up(t) {
+    @include type-d4();
+    line-height: 1.2;
+    text-indent: -3px;
+
+    // increase the title when .-banner
+    .section.\-banner & { @include type-d5(); }
+  }
+
+  @include mqbp-up(d) {
+    text-indent: -4px;
+
+    // increase the title when .-banner
+    .section.\-banner & { @include type-d6(); }
+  }
+}
+// stylelint-enable no-descending-specificity

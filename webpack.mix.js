@@ -13,7 +13,6 @@ let mix = require('laravel-mix');
 
 mix.js('src/scripts/main.js', 'dist/scripts')
   .sass('src/styles/main.scss', 'dist/styles')
-  .sass('src/styles/wufoo.scss', 'dist/styles')
   .copy('src/fonts/*', 'dist/fonts')
   .copy('src/images/*', 'dist/images')
   .js('docs/docs.js', 'docs/dist/scripts')

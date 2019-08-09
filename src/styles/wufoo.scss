@@ -97,6 +97,7 @@
 @import "05.utilities/misc/box-shadow";
 @import "05.utilities/misc/clears";
 
+// stylelint-disable no-descending-specificity
 .wufoo {
   * { font-family: $type-sans; }
 
@@ -266,6 +267,7 @@
     }
   }
 
+  // stylelint-disable no-duplicate-selectors
   //
   // Textual form controls
   input[type="text"],
@@ -291,12 +293,12 @@
     border: 1px solid $gray-200;
     border-radius: 1px;
     color: $gray-600;
-    // @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
     display: block;
     font-size: 1rem;
     line-height: 1.25;
     padding: 0.5rem 0.75rem;
     width: 100%;
+    // stylelint-enable no-duplicate-selectors
 
     // Unstyle the caret on `<select>`s in IE10+.
     &::-ms-expand {
@@ -416,3 +418,4 @@
     @extend .btn;
   }
 }
+// stylelint-enable no-descending-specificity
