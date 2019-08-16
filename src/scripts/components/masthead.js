@@ -43,11 +43,11 @@ $shuffle.on('activate.swap deactivate.swap', function () {
   const $back = $('.back > a')
 
   $back.on('click touch', function() {
+    $('.nav_sublist > .back').remove()
     $shuffle.swap('deactivate').closest('[data-swap-target]', function() {
       $(dis).toggleClass('-active')
       $(disBack).prependTo(disNext)
     })
-    $('.nav_sublist > .back').remove()
     $(disBack).prependTo(disNext)
   })
 })

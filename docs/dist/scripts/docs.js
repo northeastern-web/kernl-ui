@@ -21824,11 +21824,11 @@ $shuffle.on('activate.swap deactivate.swap', function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(disBack).prependTo(disNext);
   var $back = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.back > a');
   $back.on('click touch', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.nav_sublist > .back').remove();
     $shuffle.swap('deactivate').closest('[data-swap-target]', function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(dis).toggleClass('-active');
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(disBack).prependTo(disNext);
     });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.nav_sublist > .back').remove();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(disBack).prependTo(disNext);
   });
 });
