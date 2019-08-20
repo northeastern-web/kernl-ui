@@ -3653,10 +3653,6 @@ _:-ms-lang(x), .card .card_img {
 .masthead .nav_handle:focus {
   outline: none;
 }
-.masthead .nav_handle.menu-is-open {
-  color: #999;
-  font-size: 1.5rem;
-}
 @media (min-width: 992px) {
   .masthead .nav_handle {
     display: none;
@@ -3677,6 +3673,7 @@ _:-ms-lang(x), .card .card_img {
 }
 @media (min-width: 992px) {
   .masthead .nav_list, .masthead .nav_sublist {
+    flex-direction: row;
     margin: 0;
     padding-top: 0;
   }
@@ -3738,21 +3735,23 @@ _:-ms-lang(x), .card .card_img {
 .masthead .nav_sublink::before {
   content: none;
 }
-.masthead .\+children .nav_link::after, .masthead .\+children .nav_sublink::after {
-  color: #767676;
-  content: "\E922";
-  font-family: "feathericons", sans-serif;
-  font-size: 24px;
-  line-height: 1;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+@media (max-width: 991px) {
+  .masthead .\+children .nav_link::after, .masthead .\+children .nav_sublink::after {
+    color: #767676;
+    content: "\E922";
+    font-family: "feathericons", sans-serif;
+    font-size: 24px;
+    line-height: 1;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
-.masthead .\+children .nav_sublink::after {
+.masthead .\+children .nav_link .nav_sublink::after, .masthead .\+children .nav_sublink .nav_sublink::after {
   content: "";
 }
-.masthead .\+children.nav_sublink::after {
+.masthead .\+children .nav_link.nav_sublink::after, .masthead .\+children .nav_sublink::after {
   content: "\E922";
 }
 .masthead .-active + .nav_sublist {
@@ -3985,16 +3984,16 @@ _:-ms-lang(x), .card .card_img {
   }
 }
 */
-.back {
+.nav_back {
   margin-bottom: 0;
   margin-top: 0.5rem;
 }
-.back a {
+.nav_back a {
   display: block;
   padding: 0.25rem 0 0.25rem 1.5rem;
   position: relative;
 }
-.back a:after {
+.nav_back a:after {
   content: "\E90C";
   font-family: "feathericons";
   font-weight: normal;

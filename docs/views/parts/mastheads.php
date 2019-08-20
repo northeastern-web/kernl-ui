@@ -9,8 +9,8 @@
       <span class="sr-only">Menu</span>
     </button>
   </div>
-  <nav class="nav hidden-up@d bg-white" data-navigation-handle=".nav_handle" data-navigation-content=".nav_content">
-    <div class="w-100 d-flex justify-between">
+  <nav class="nav bg-white" data-navigation-handle=".nav_handle" data-navigation-content=".nav_content">
+    <div class="w-100 d-flex justify-between hidden-up@d">
       <a class="masthead_logo pl-1" href="#">
         <img class="masthead_image" alt="Logo" src="/docs/images/logo.png">
       </a>
@@ -18,7 +18,7 @@
         <span class="sr-only">Close Menu</span>
       </button>
     </div>
-    <div class="form-enclosed -search bg-gray-50 mb-3@t pl-1">
+    <div class="form-enclosed -search bg-gray-50 mb-0h@t hidden-up@d pl-1">
       <label class="sr-only">Search</label>
       <input type="text" placeholder="Search for meaning">
       <button type="submit" class="btn">Go</button>

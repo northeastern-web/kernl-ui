@@ -21727,20 +21727,17 @@ $shuffle.on('activate.swap deactivate.swap', function () {
       disPar = dis.closest('li'),
       disfA = disPar.find('> a'),
       disBack = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<li/>', {
-    'class': 'back',
+    'class': 'nav_back',
     'html': '<a href="#">' + disfA.text() + '</a>'
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(dis).toggleClass('-active'); // $(disNext).css('backgroundColor', 'red')
-
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(dis).toggleClass('-active');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(disBack).prependTo(disNext);
-  var $back = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.back > a');
+  var $back = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.nav_back > a');
   $back.on('click touch', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.nav_sublist > .back').remove();
     $shuffle.swap('deactivate').closest('[data-swap-target]', function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(dis).toggleClass('-active');
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(disBack).prependTo(disNext);
     });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(disBack).prependTo(disNext);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.nav_sublist > .nav_back').remove(); // $(disBack).prependTo(disNext)
   });
 });
 
@@ -21977,9 +21974,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/rkingston/Sites/valet/kernl-ui/src/scripts/main.js */"./src/scripts/main.js");
-__webpack_require__(/*! /Users/rkingston/Sites/valet/kernl-ui/src/styles/main.scss */"./src/styles/main.scss");
-module.exports = __webpack_require__(/*! /Users/rkingston/Sites/valet/kernl-ui/docs/docs.scss */"./docs/docs.scss");
+__webpack_require__(/*! /Users/ray/Sites/kernl-ui/src/scripts/main.js */"./src/scripts/main.js");
+__webpack_require__(/*! /Users/ray/Sites/kernl-ui/src/styles/main.scss */"./src/styles/main.scss");
+module.exports = __webpack_require__(/*! /Users/ray/Sites/kernl-ui/docs/docs.scss */"./docs/docs.scss");
 
 
 /***/ })

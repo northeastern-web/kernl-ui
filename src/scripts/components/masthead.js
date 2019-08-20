@@ -34,20 +34,19 @@ $shuffle.on('activate.swap deactivate.swap', function () {
         disPar  = dis.closest('li'),
         disfA   = disPar.find('> a'),
         disBack = $('<li/>',{ 
-          'class' : 'back',
+          'class' : 'nav_back',
           'html'  : '<a href="#">' + disfA.text() + '</a>' })
   $(dis).toggleClass('-active')
-  // $(disNext).css('backgroundColor', 'red')
   $(disBack).prependTo(disNext)
 
-  const $back = $('.back > a')
+  const $back = $('.nav_back > a')
 
   $back.on('click touch', function() {
-    $('.nav_sublist > .back').remove()
     $shuffle.swap('deactivate').closest('[data-swap-target]', function() {
       $(dis).toggleClass('-active')
-      $(disBack).prependTo(disNext)
     })
-    $(disBack).prependTo(disNext)
+    $('.nav_sublist > .nav_back').remove()
+    
+    // $(disBack).prependTo(disNext)
   })
 })

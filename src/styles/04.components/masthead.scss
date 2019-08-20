@@ -113,11 +113,6 @@
 
       &:focus { outline: none; }
 
-      &.menu-is-open {
-        color: #999;
-        font-size: 1.5rem;
-      }
-
       @include mqbp-up(d) {
         display: none;
         float: none;
@@ -137,6 +132,7 @@
       position: relative;
 
       @include mqbp-up(d) {
+        flex-direction: row;
         margin: 0;
         padding-top: 0;
       }
@@ -209,28 +205,30 @@
 
   .\+children {
     .nav_link {
-      &::after {
-        color: $gray-500;
-        content: "\e922";
-        font-family: "feathericons", sans-serif;
-        font-size: 24px;
-        line-height: 1;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+      @include mqbp-down(t) {
+        &::after {
+          color: $gray-500;
+          content: "\e922";
+          font-family: "feathericons", sans-serif;
+          font-size: 24px;
+          line-height: 1;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
       }
-    }
 
-    .nav_sublink {
-      &::after {
-        content: '';
+      .nav_sublink {
+        &::after {
+          content: '';
+        }
       }
-    }
 
-    &.nav_sublink {
-      &::after {
-        content: '\e922';
+      &.nav_sublink {
+        &::after {
+          content: '\e922';
+        }
       }
     }
   }
@@ -938,7 +936,7 @@
 }
 */
 
-.back {
+.nav_back {
   margin-bottom: 0;
   margin-top: 0.5rem;
 
@@ -946,6 +944,7 @@
     display: block;
     padding: 0.25rem 0 0.25rem 1.5rem;
     position: relative;
+    color: $gray-600;
 
     &:after {
       content: "\e90c"; // left arrow icon
