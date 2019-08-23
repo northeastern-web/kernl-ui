@@ -60,7 +60,8 @@
       padding: 0.5rem;
     }
 
-    &[aria-current="true"] {
+    &[aria-current="true"],
+    &[aria-selected="true"] {
       color: $black;
       font-weight: $type-bold;
     }
