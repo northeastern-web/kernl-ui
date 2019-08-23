@@ -29,12 +29,12 @@ $tab.swap({ collapse: false })
 
 // Activate and deactivate event
 $tab.on('activate.swap', function () {
-  $(this).addClass('-active')
+  $(this).attr('aria-current', true)
   $($(this).attr('href')).addClass('-active')
 })
 
 // Deactivate event
 $tab.on('deactivate.swap', function () {
-  $(this).removeClass('-active')
+  $(this).attr('aria-current', false)
   $($(this).attr('href')).removeClass('-active')
 })
