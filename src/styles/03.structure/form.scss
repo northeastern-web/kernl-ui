@@ -3,7 +3,7 @@
 
 
 // Wrapper for enclosed inputs
-.form-enclosed {
+.form_enclosed {
   @extend %clearfix;
 
   background-color: #fff;
@@ -93,7 +93,7 @@
 }
 
 // wrapper for checkboxes
-.form-check {
+.form_check {
   label { display: block; }
 
   &.\-inline {

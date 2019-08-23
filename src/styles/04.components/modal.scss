@@ -18,13 +18,8 @@
   // --
   // Block level
 
-  .__title {
-    @include type_d3();
-    padding-top: 1rem;
-  }
-
   // centered content within modal
-  .__content {
+  &_body {
     display: flex;
     flex: 0 1 auto;
     flex-direction: column;
@@ -47,14 +42,8 @@
     }
   }
 
-  .__body {
-    @include card-padding();
-    flex: 1;
-    font-size: 100%;
-  }
-
   // dark screen as modal backdrop
-  .__screen {
+  &_screen {
     background-color: rgba($black, 0.85);
     bottom: 0;
     left: 0;
@@ -64,7 +53,7 @@
   }
 
   // close button in top right corner of browser window
-  .__close {
+  &_close {
     background: 0 none;
     border: 0;
     color: #fff;
@@ -94,7 +83,7 @@
   &.\-active { display: flex; }
 
   &.\-sm {
-    .__content {
+    .modal_body {
       @include mqbp-up(t) {
         max-width: 400px;
       }
@@ -102,7 +91,7 @@
   }
 
   &.\-lg {
-    .__content {
+    .modal_body {
       @include mqbp-up(d) {
         max-width: 992px;
       }
@@ -110,7 +99,7 @@
   }
 
   &.\-xl {
-    .__content {
+    .modal_body {
       @include mqbp-up(t) {
         height: 100%;
         max-width: 86%;

@@ -21668,27 +21668,6 @@ feather_icons__WEBPACK_IMPORTED_MODULE_0___default.a.replace();
 
 /***/ }),
 
-/***/ "./src/scripts/components/loader.js":
-/*!******************************************!*\
-  !*** ./src/scripts/components/loader.js ***!
-  \******************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-// Components
-// Loader
-
-jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-load]').on('click touch', function (e) {
-  e.preventDefault();
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.load').addClass('spinner').removeClass('load');
-}); // TODO: listen for loaded element and remove loader
-
-/***/ }),
-
 /***/ "./src/scripts/components/masthead.js":
 /*!********************************************!*\
   !*** ./src/scripts/components/masthead.js ***!
@@ -21917,12 +21896,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_gallery__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/gallery */ "./src/scripts/components/gallery.js");
 /* harmony import */ var _components_gumshoe__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/gumshoe */ "./src/scripts/components/gumshoe.js");
 /* harmony import */ var _components_icon__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/icon */ "./src/scripts/components/icon.js");
-/* harmony import */ var _components_loader__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/loader */ "./src/scripts/components/loader.js");
-/* harmony import */ var _components_masthead__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/masthead */ "./src/scripts/components/masthead.js");
-/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/modal */ "./src/scripts/components/modal.js");
-/* harmony import */ var _components_nav__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/nav */ "./src/scripts/components/nav.js");
-/* harmony import */ var _components_sharing__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/sharing */ "./src/scripts/components/sharing.js");
-/* harmony import */ var _components_sharing__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_components_sharing__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _components_masthead__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/masthead */ "./src/scripts/components/masthead.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/modal */ "./src/scripts/components/modal.js");
+/* harmony import */ var _components_nav__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/nav */ "./src/scripts/components/nav.js");
+/* harmony import */ var _components_sharing__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/sharing */ "./src/scripts/components/sharing.js");
+/* harmony import */ var _components_sharing__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_components_sharing__WEBPACK_IMPORTED_MODULE_22__);
 // Main
 //
 // main entry importing dependencies
@@ -21941,7 +21919,6 @@ __webpack_require__.r(__webpack_exports__);
  // import gumshoe
 
  // import Kernl(UI) items
-
 
 
 

@@ -147,6 +147,14 @@
       @include mqbp-up(d) {
         display: inline-flex;
         margin: 1.25rem 0.75rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
 
@@ -218,13 +226,15 @@
           transform: translateY(-50%);
         }
       }
+    }
 
-      .nav_sublink {
-        &::after {
-          content: '';
-        }
+    .nav_sublink {
+      &::after {
+        content: '';
       }
+    }
 
+    @include mqbp-down(t) {
       &.nav_sublink {
         &::after {
           content: '\e922';
@@ -947,6 +957,7 @@
     color: $gray-600;
 
     &:after {
+
       content: "\e90c"; // left arrow icon
       font-family: "feathericons";
       font-weight: normal;
