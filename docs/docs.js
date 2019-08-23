@@ -81,11 +81,11 @@ $("#contSelect").on('click touch', 'li a', function(e) {
 /**
  * For 'loader' demonstration;
  */
-$('[data-load]').on('click touch', function() {
+$('[data-load]').on('click touch', function(e) {
+  e.preventDefault()
   $('.k_loader_example').text((index, text) => text.replace("Load Something", "Wait for it..."));
-  $('.spinner').delay(5000).queue(function() {
-    $(this).addClass('loaded').dequeue();
-    $('.loaded').removeClass('spinner');
+  $('.loader').removeClass('d-none').delay(5000).queue(function() {
+    $(this).addClass('d-none').dequeue();
     $('.k_loader-placeholder').addClass('card_media ar-16x9').queue(function(){
       $(this).append(`<img class="card_img" src="${path}truck.jpg" alt="">`);
     });

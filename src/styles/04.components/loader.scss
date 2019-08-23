@@ -1,11 +1,7 @@
 // Components
 // Loader
 
-
-.load,
-.loaded { display: none; }
-
-.spinner {
+.loader {
   animation: spin 2s infinite linear;
   height: 2rem;
   overflow: visible;
