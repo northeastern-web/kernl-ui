@@ -11,17 +11,17 @@
     }
   }
 
+  &.\-underline,
+  &.\-border {
+    border-bottom: 1px solid $gray-200;
+  }
+
+
   &_list {
     display: flex;
     flex-direction: column;
     list-style: none;
     padding-left: 0;
-
-    .\-interior & {
-      flex-basis: 100%;
-      margin-bottom: 0;
-      transition: all 0.05s ease-in;
-    }
 
     @include mqbp-up(t) {
       background-color: transparent;
@@ -29,8 +29,15 @@
       visibility: visible;
     }
 
+    .\-interior & {
+      flex-basis: 100%;
+      margin-bottom: 0;
+      transition: all 0.05s ease-in;
+    }
+
     .\-inline & {
       flex-direction: row;
+      margin: 0;
     }
   }
 
@@ -60,10 +67,31 @@
       padding: 0.5rem;
     }
 
+    .\-underline &,
+    .\-border & {
+      padding: 1rem 1.5rem;
+    }
+
     &[aria-current="true"],
     &[aria-selected="true"] {
       color: $black;
       font-weight: $type-bold;
+
+      .\-underline & {
+        border-bottom: 3px solid $red;
+        margin-top: -2px;
+        top: 2px;
+      }
+
+      .\-border & {
+        background: $white;
+        border-color: $gray-200;
+        border-style: solid;
+        border-width: 1px 1px 0;
+        font-weight: 400;
+        margin-top: -1px;
+        top: 1px;
+      }
     }
 
     &:hover {

@@ -23,8 +23,6 @@ $toggle.on('activate.swap deactivate.swap', function () {
 // Tabs
 
 const $tab = $('[data-toggle="tab"]')
-
-// Initialize Formstone swap()
 $tab.swap({ collapse: false })
 
 // Activate and deactivate event
