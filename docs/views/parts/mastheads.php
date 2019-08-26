@@ -29,8 +29,9 @@
         <a class="nav_link" href="#">Lorem Ipsum</a>
       </li>
       <li class="nav_item +children">
-        <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_0">Bibendum</a>
-        <ul class="nav_sublist" id="sub_0">
+        <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Bibendum</a>
+        <ul class="nav_sublist" aria-expanded="false">
+          <li class="nav_back"><a href="#">Bibendum</a></li>
           <li class="nav_subitem">
             <a class="nav_sublink" href="#">Quam Vulputate Nibh</a>
           </li>
@@ -40,30 +41,36 @@
         </ul>
       </li>
       <li class="nav_item +children">
-        <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_1">Pudgi Homunculi</a>
-        <ul class="nav_sublist" id="sub_1">
+        <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Pudgi Homunculi</a>
+        <ul class="nav_sublist" aria-expanded="false">
+          <li class="nav_back"><a href="#">Pudgi Homunculi</a></li>
           <li class="nav_subitem">
             <a class="nav_sublink" href="#">Malesuada Bibendum</a>
           </li>
           <li class="nav_subitem">
             <a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a>
           </li>
-          <li class="nav_subitem">
-            <a class="nav_sublink +children" href="#" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_3">Venenatis Pharetra Sit Dolor</a>
-            <ul class="nav_sublist" id="sub_3">
+          <li class="nav_subitem +children">
+            <a class="nav_sublink" href="#" aria-haspopup="true" aria-expanded="false">Venenatis Pharetra Sit Dolor</a>
+            <ul class="nav_sublist" aria-expanded="false">
+              <li class="nav_back"><a href="#">Venenatis Pharetra Sit Dolor</a></li>
               <li class="nav_subitem">
-                <a class="nav_sublink" href="#">Malesuada Bibendum</a>
+                <a class="nav_sublink" href="#">Mollis Aliquam</a>
               </li>
               <li class="nav_subitem">
-                <a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a>
+                <a class="nav_sublink" href="#">Ut Porttitor</a>
+              </li>
+              <li class="nav_subitem">
+                <a class="nav_sublink" href="#">Leo Dolor</a>
               </li>
             </ul>
           </li>
         </ul>
       </li>
       <li class="nav_item +children">
-        <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false" data-toggle="masthead_nav" data-swap-target="#sub_2">Malesuada Nucleus</a>
-        <ul class="nav_sublist" id="sub_2">
+        <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Malesuada Nucleus</a>
+        <ul class="nav_sublist" aria-expanded="false">
+          <li class="nav_back"><a href="#">Malesuada Nucleus</a></li>
           <li class="nav_subitem">
             <a class="nav_sublink" href="#">Quam Vulputate Nibh</a>
           </li>
@@ -71,9 +78,6 @@
             <a class="nav_sublink" href="#">Tortor Fusce</a>
           </li>
         </ul>
-      </li>
-      <li class="nav_item">
-        <a class="nav_link" href="#">Pharetra Sit Dolor Venenatis</a>
       </li>
     </ul>
   </nav>
