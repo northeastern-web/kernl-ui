@@ -80,7 +80,7 @@
   // --
   // Modifiers
 
-  &.\-active { display: flex; }
+  &[aria-hidden="false"] { display: flex; }
 
   &.\-sm {
     .modal_body {

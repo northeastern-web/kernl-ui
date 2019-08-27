@@ -18,7 +18,7 @@
         <span class="sr-only">Close Menu</span>
       </button>
     </div>
-    <div class="form-enclosed -search bg-gray-50 mb-0h@t hidden-up@d pl-1">
+    <div class="form_enclosed -search bg-gray-50 mb-0h@t hidden-up@d pl-1">
       <label class="sr-only">Search</label>
       <input type="text" placeholder="Search for meaning">
       <button type="submit" class="btn">Go</button>

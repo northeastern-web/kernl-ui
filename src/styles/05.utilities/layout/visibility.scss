@@ -6,11 +6,10 @@
 
 .visible { visibility: visible; }
 .invisible { visibility: hidden; }
+.hidden { display: none !important; }
 
-.hidden,
-[aria-hidden="true"] { display: none !important; }
-
-[aria-hidden="false"] { display: block !important; }
+[aria-hidden="true"] { display: none; }
+[aria-hidden="false"] { display: block; }
 
 @each $breakpoint in map-keys($breakpoints) {
   .hidden-up\@#{$breakpoint} {
