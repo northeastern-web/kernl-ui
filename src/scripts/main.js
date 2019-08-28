@@ -21,7 +21,6 @@ import 'formstone/src/js/transition'
 import 'gumshoejs'
 
 // import Kernl(UI) items
-// import './components/accordion'
 import './components/carousel'
 import './components/checkpoint'
 import './components/gallery'
@@ -30,4 +29,3 @@ import './components/icon'
 import './components/masthead'
 import './components/modal'
 import './components/toggle'
-import './components/sharing'

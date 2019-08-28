@@ -1,12 +1,9 @@
 // Components
-// Nav
+// Toggle
+// changes the appopriate aria attibutes for toggle effect
 
 
 import $ from 'jquery'
-
-
-// --
-// Toggle
 
 const $toggle = $('[data-toggle]')
 $toggle.swap({ collapse: false })
