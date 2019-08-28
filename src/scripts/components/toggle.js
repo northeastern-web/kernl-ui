@@ -8,14 +8,32 @@ import $ from 'jquery'
 const $toggle = $('[data-toggle]')
 $toggle.swap({ collapse: false })
 
-// Activate and deactivate event
+//--
+// Formstone Swap activate and deactivate event listeners
+
+// Activate
 $toggle.on('activate.swap', function () {
   $(this).attr('aria-selected', true)
   $($(this).attr('href')).attr('aria-hidden', false)
 })
 
-// Deactivate event
+// Deactivate
 $toggle.on('deactivate.swap', function () {
   $(this).attr('aria-selected', false)
   $($(this).attr('href')).attr('aria-hidden', true)
+})
+
+// --
+// Formstone Swap deactivate events
+
+// Close button click
+$('[toggle-dismiss]').click(function() {
+  $toggle.swap("deactivate")
+})
+
+// Escape key listener
+$(document).on('keyup', (e) => {
+  if (e.keyCode === 27) {
+    $toggle.swap("deactivate")
+  }
 })
