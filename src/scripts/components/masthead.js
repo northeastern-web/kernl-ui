@@ -21,6 +21,12 @@ $masthead
     $('[aria-expanded="true"]').attr('aria-expanded', false)
   })
 
+// Escape key listener
+$(document).on('keyup', (e) => {
+  if (e.keyCode === 27) {
+    $masthead.navigation("close")
+  }
+})
 
 // --
 // Sublist opened
