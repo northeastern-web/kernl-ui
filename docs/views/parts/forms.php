@@ -125,7 +125,7 @@
       <form action="" method="">
         <h4 class="fw-700 fs-d2">Enclosures</h4>
         <p class="fs-sm"><i>Add the <code>.input_enclosed</code> wrapper to make the appearance of a self-contained input and button.</i></p>
-        <div class="input_enclosed -search mb-3@t">
+        <div class="input_enclosed mb-3@t">
           <label class="sr-only">Search</label>
           <input type="text" placeholder="Search (.input_enclosed)">
           <button type="submit" class="btn">Go</button>
@@ -146,7 +146,7 @@
   <div class="row">
     <div class="col w-2/3@d mx-auto">
       <form action="" method="">
-        <div class="input_enclosed -search -line my-2@t">
+        <div class="input_enclosed -dark -line my-2@t">
           <label class="sr-only">Search</label>
           <input type="text" class="tc-white" placeholder="Search">
           <button type="submit" class="btn tc-white">Go</button>
