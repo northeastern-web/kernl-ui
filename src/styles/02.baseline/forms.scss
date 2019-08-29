@@ -40,8 +40,9 @@ button:-moz-focusring,
 [type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; }
 
 button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  border-color: transparent;
+  outline: 2px solid $focus;
+  outline-offset: -2px;
 }
 
 fieldset {
@@ -174,7 +175,8 @@ textarea {
   }
 
   &:focus {
-    outline-width: 3px;
+    outline: 2px solid $focus;
+    outline-offset: -2px;
   }
 }
 

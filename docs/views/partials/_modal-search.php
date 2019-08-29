@@ -8,12 +8,12 @@
   <div class="modal_body w-100@d">
     <div class="pa-1">
       <form action="" method="">
-        <div class="form_enclosed -search -dark -line">
+        <div class="input_enclosed -search -dark -line">
           <label for="exampleText" class="sr-only">Search</label>
           <input class="fs-d3 fw-300" type="search" id="modalSearch" aria-describedby="textHelp" placeholder="Search for meaning...">
           <button type="submit" class="btn">Go</button>
         </div>
-        <div class="form_check -inline">
+        <div class="input_choice -inline">
           <label class="mr-1">
             <input type="radio" name="opt">
             Check me out

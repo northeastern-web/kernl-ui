@@ -71,3 +71,5 @@ $palette: (
   ('beige', $beige, lighten($beige, 5%), darken($beige, 5%), 'dark'),
   ('gold', $gold, lighten($gold, 5%), darken($gold, 5%), 'light')
 ) !default;
+
+$focus: #1984f3;
