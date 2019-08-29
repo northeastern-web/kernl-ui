@@ -11,11 +11,7 @@
     }
   }
 
-  &.\-underline,
-  &.\-border {
-    border-bottom: 1px solid $gray-200;
-  }
-
+  &.\-inline { overflow-x: scroll; }
 
   &_list {
     display: flex;

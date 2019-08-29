@@ -17,6 +17,9 @@
           <li class="nav_item">
             <a id="navtab_0_4" href="#tabcontent_0_4" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_0">Sit Parturient</a>
           </li>
+          <li class="nav_item">
+            <a id="navtab_0_5" href="#tabcontent_0_5" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_0">Sit Partent</a>
+          </li>
         </ul>
       </nav>
       <div class="pt-1">
@@ -34,6 +37,10 @@
         </div>
         <div id="tabcontent_0_4" role="tabpanel" aria-hidden="true" aria-labelledby="navtab_0_4">
           <h3>Content 4</h3>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        </div>
+        <div id="tabcontent_0_5" role="tabpanel" aria-hidden="true" aria-labelledby="navtab_0_5">
+          <h3>Content 5</h3>
           <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
         </div>
       </div>
@@ -55,6 +62,12 @@
           <li class="nav_item">
             <a id="navtab_1_4" href="#tabcontent_1_4" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_1">Sit Parturient</a>
           </li>
+          <li class="nav_item">
+            <a id="navtab_1_5" href="#tabcontent_1_5" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_1">Sit Parturient</a>
+          </li>
+          <li class="nav_item">
+            <a id="navtab_1_6" href="#tabcontent_1_6" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_1">Sit Parturient</a>
+          </li>
         </ul>
       </nav>
       <div class="pt-1">
@@ -72,6 +85,14 @@
         </div>
         <div id="tabcontent_1_4" role="tabpanel" aria-hidden="true" aria-labelledby="navtab_1_4">
           <h3>Content 4</h3>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        </div>
+        <div id="tabcontent_1_5" role="tabpanel" aria-hidden="true" aria-labelledby="navtab_1_5">
+          <h3>Content 5</h3>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        </div>
+        <div id="tabcontent_1_6" role="tabpanel" aria-hidden="true" aria-labelledby="navtab_1_6">
+          <h3>Content 6</h3>
           <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
         </div>
       </div>
