@@ -27,6 +27,8 @@
     color: #fff;
     height: $tile_overlay_height;
     overflow: hidden;
+
+    .card_media + .card_header + .card_body { margin-top: 3.5rem; }
   }
 
   &.\-middle {
@@ -191,6 +193,8 @@
     + .card_header {
       border-bottom-color: $white-alpha;
       color: $white;
+
+      + .card_body { margin-top: 0; }
     }
 
     .\-overlay & {

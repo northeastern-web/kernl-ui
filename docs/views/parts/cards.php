@@ -172,9 +172,15 @@
       <article class="card -h -v@d -h@w">
         <a class="card_link" href="#">
           <div class="card_media w-1/4 w-1/3@t w-100@d ar-1x1 ar-16x9@d w-1/2@w"></div>
+          <div class="card_header">
+            Header
+          </div>
           <div class="card_body">
             <h2 class="card_title">Variable Orientation Demo</h2>
             <p>Resize the viewport and watch me.</p>
+          </div>
+          <div class="card_footer">
+            Learn More
           </div>
         </a>
       </article>
