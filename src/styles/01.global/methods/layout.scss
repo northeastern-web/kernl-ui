@@ -34,12 +34,20 @@
   }
 }
 
-@mixin make-gutters($gutters: $gutters) {
+@mixin make-gutters($x: 0.5, $y: 0) {
   @each $breakpoint in map-keys($gutters) {
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
-      padding-left:  ($gutter / 2);
-      padding-right: ($gutter / 2);
+      $gutter_x: $gutter * $x;
+      $gutter_y: $gutter * $y;
+
+      padding-left: $gutter_x;
+      padding-right: $gutter_x;
+
+      @if ($y) {
+        padding-bottom: $gutter_y;
+        padding-top: $gutter_y;
+      }
     }
   }
 }

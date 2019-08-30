@@ -127,9 +127,8 @@
   }
 
   &_body {
-    @include card-padding();
+    @include make-gutters(1, 1);
     flex: 1;
-
     font-size: 100%;
 
     p {
@@ -146,6 +145,7 @@
       max-height: 95%;
       overflow-y: hidden;
       position: absolute;
+      width: 100%;
     }
 
     .\-tile & { padding: 1rem; }
@@ -188,6 +188,11 @@
       height: 0;
     }
 
+    + .card_header {
+      border-bottom-color: $white-alpha;
+      color: $white;
+    }
+
     .\-overlay & {
       min-height: 100%;
       min-width: 100%;
@@ -227,20 +232,21 @@
   &_header {
     @extend .pos-absolute;
     @extend .pin-t;
-    padding: 1rem;
-
+    @include make-gutters(1, 0.5);
+    border-bottom: 1px solid $gray-100;
     width: 100%;
+    z-index: 1;
 
     .\-middle.\-overlay & { @extend .pin-xc; }
+    + .card_body { margin-top: 3.5rem; }
   }
 
   &_footer {
-    @include card-padding();
+    @include make-gutters(1, 1);
 
     display: flex;
     font-size: 87.5%;
     justify-content: space-between;
-    padding-top: 0 !important;
 
     .\-overlay & {
       bottom: 0;

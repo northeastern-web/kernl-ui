@@ -2,21 +2,6 @@
 // Methods
 
 
-// set card padding to complement grid gutter spacing
-@mixin card-padding($y-multiple: 1, $x-multiple: 1, $margin-bottom: 1, $gutters: $gutters) {
-  padding: 1rem;
-  @each $breakpoint in map-keys($gutters) {
-    @include mqbp-up($breakpoint) {
-      $gutter: map-get($gutters, $breakpoint);
-
-      @if ($y-multiple == $x-multiple) {
-        padding: ($gutter * $y-multiple);
-      } @else {
-        padding: ($gutter * $y-multiple) ($gutter * $x-multiple);
-      }
-    }
-  }
-}
 
 // set component margin-bottom to complement grid gutter spacing
 @mixin margin-bottom-gutter($margin-bottom: 1, $gutters: $gutters) {
@@ -38,50 +23,6 @@
     @include mqbp-up($breakpoint) {
       $gutter: map-get($gutters, $breakpoint);
       padding-bottom: ($gutter * $padding-bottom);
-    }
-  }
-}
-
-// --
-// Component Color Variants
-
-@mixin accordion_variant($color: $type-color, $trigger: rgba(0,0,0,0.05), $background: transparent) {
-  .accordion_title {
-    background: $trigger;
-
-    &:after { color: $color; }
-
-    &.\-active {
-      &:after { color: rgba($color, 0.5); }
-    }
-  }
-
-  .accordion_copy {
-    background: $background;
-    color: $color;
-  }
-}
-
-@mixin list_group_variant($color: inherit, $background: transparent, $striped: rgba(255, 255, 255, 0.1)) {
-  background: $background;
-
-  > .__item,
-  > li,
-  > div { border-color: rgba($color, 0.25); }
-
-  &.\-striped .__item,
-  &.\-striped > li {
-    border: 0 none;
-
-    &:nth-child(odd) { background-color: $striped; }
-  }
-
-  &.\+outline { border: 1px solid rgba($color, 0.25); }
-
-  &.\+indent:not(.\-striped):not(.\+outline):not(.\+shadow) {
-    > .__item,
-    > li {
-      &:hover { background-color: rgba($color, 0.05); }
     }
   }
 }

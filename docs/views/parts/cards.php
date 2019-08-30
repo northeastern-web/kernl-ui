@@ -12,10 +12,10 @@
     <div class="col w-1/2@t w-1/3@d">
       <article class="card">
         <a class="card_link" href="#">
-          <div class="card_header bc-gray-100 bwa-0 bwb-1">
+          <div class="card_header">
             <div class="card_column">Header</div>
           </div>
-          <div class="card_body mt-3">
+          <div class="card_body">
             <h2 class="card_title">Basic Card Title</h2>
             <p>Card content lorem ipsum</p>
           </div>
@@ -49,6 +49,24 @@
       <article class="card">
         <a class="card_link" href="#">
         <div class="card_media ar-16x9"></div>
+          <div class="card_body">
+            <h2 class="card_title">Image Card Title</h2>
+            <p>Card content lorem ipsum</p>
+          </div>
+          <div class="card_footer">
+            <div class="card_column">Footer Left</div>
+            <div class="card_column">Footer Right</div>
+          </div>
+        </a>
+      </article>
+    </div>
+    <div class="col w-1/2@t w-1/3@d">
+      <article class="card">
+        <a class="card_link" href="#">
+          <div class="card_media ar-16x9"></div>
+          <div class="card_header">
+            <div class="card_column">Header</div>
+          </div>
           <div class="card_body">
             <h2 class="card_title">Image Card Title</h2>
             <p>Card content lorem ipsum</p>
@@ -110,6 +128,23 @@
       <article class="card -overlay">
         <a class="card_link" href="#">
         <div class="card_media ar-16x9"></div>
+          <div class="card_body">
+            <h2 class="card_title">Overlay Card Title</h2>
+            <p>Card content lorem ipsum</p>
+          </div>
+          <div class="card_footer">
+            <div class="card_column">Footer Content</div>
+          </div>
+        </a>
+      </article>
+    </div>
+    <div class="col w-1/2@t w-1/4@d">
+      <article class="card -overlay">
+        <a class="card_link" href="#">
+          <div class="card_media ar-16x9"></div>
+          <div class="card_header">
+            <div class="card_column">Header Content</div>
+          </div>
           <div class="card_body">
             <h2 class="card_title">Overlay Card Title</h2>
             <p>Card content lorem ipsum</p>
