@@ -1,15 +1,15 @@
 <!-- start base masthead -->
 
-<header class="masthead">
+<header class="masthead bg-black">
   <a class="masthead_logo" href="#">
-    <img class="masthead_image" alt="Logo" src="/docs/images/logo.png">
+    <img class="masthead_image" alt="Logo" src="/docs/images/logo-white.png">
   </a>
   <div class="nav_content">
     <button type="button" class="nav_handle hidden-up@d">
       <span class="sr-only">Menu</span>
     </button>
   </div>
-  <nav class="nav bg-white" data-navigation-handle=".nav_handle" data-navigation-content=".nav_content">
+  <nav class="nav" data-navigation-handle=".nav_handle" data-navigation-content=".nav_content">
     <div class="w-100 d-flex justify-between hidden-up@d">
       <a class="masthead_logo pl-1" href="#">
         <img class="masthead_image" alt="Logo" src="/docs/images/logo.png">
