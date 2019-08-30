@@ -29,8 +29,6 @@
 
 @mixin border_variant($color, $color_light, $color_dark, $text) {
   border-color: $color;
-  border-style: solid;
-  border-width: 1px;
 
   &.btn,
   &.badge {
