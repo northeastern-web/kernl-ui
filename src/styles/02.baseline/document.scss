@@ -13,7 +13,10 @@ html {
 
 *,
 *:before,
-*:after { box-sizing: border-box; }
+*:after {
+  box-sizing: border-box;
+  border: 0 solid;
+}
 
 @at-root {
   @-ms-viewport { width: device-width; }
