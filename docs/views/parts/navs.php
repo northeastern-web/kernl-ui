@@ -98,13 +98,13 @@
     <div class="col w-1/2@t w-1/4@d">
 
       <div class="hidden-up@t ta-c">
-        <a class="btn -sm" data-toggle data-swap-options='{"collapse":true}' data-swap-group="navinterior_0" href="#page_menu_0">
+        <button class="btn -sm" data-toggle data-swap-target="#page_menu_0" data-swap-options='{"collapse":true}'>
           <i data-feather="align-left"></i>
-          Page Menu 1
-        </a>
+          Page Menu
+        </button>
       </div>
 
-      <nav class="nav -interior" id="page_menu_0" role="navigation" aria-hidden="true" aria-label="Page Navigation">
+      <nav class="nav -interior" id="page_menu_0" aria-hidden="true" role="navigation" aria-label="Page Navigation">
         <ul class="nav_list">
           <li class="nav_item">
             <a class="nav_link" href="#" aria-current="true">Dolor Fermentum Ullamcorper Fringilla</a>
@@ -128,13 +128,13 @@
     <div class="col w-1/2@t w-1/4@d">
 
       <div class="hidden-up@t ta-c mt-1">
-        <button class="btn -sm" data-toggle data-swap-options='{"collapse":true}' data-swap-group="navinterior_1" data-swap-target="#page_menu_1">
+        <button class="btn -sm" data-toggle="nav" data-swap-target="#page_menu_1">
           <i data-feather="align-left"></i>
           Page Menu
         </button>
       </div>
 
-      <nav class="nav -interior" id="page_menu_1" role="navigation" aria-hidden="true" aria-label="Page Navigation">
+      <nav class="nav -interior" id="page_menu_1" role="navigation" aria-label="Page Navigation">
         <ul class="nav_list">
           <li class="nav_item">
             <a class="nav_link" href="#">Dolor Fermentum Ullamcorper Fringilla</a>

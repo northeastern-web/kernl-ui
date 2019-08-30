@@ -12,7 +12,7 @@
     <div class="col w-1/2@t w-1/3@d">
       <article class="card">
         <a class="card_link" href="#">
-          <div class="card_header pa-1 bc-gray-100 bwa-0 bwb-1">
+          <div class="card_header bc-gray-100 bwa-0 bwb-1">
             <div class="card_column">Header</div>
           </div>
           <div class="card_body mt-3">
@@ -228,8 +228,8 @@
   <div class="row">
     <div class="col w-1/3@d">
       <h3 class="fw-900">Stack of cards</h3>
-      <div class="stack +avatar mb-1">
-        <article class="card -h fs-xs">
+      <div class="stack mb-1">
+        <article class="card +avatar -h fs-xs">
           <a class="card_link items-center" href="#">
             <div class="card_media ar-1x1 w-1/4 br-round ma-1 mr-0"></div>
             <div class="card_body pa-1">
@@ -238,7 +238,7 @@
             </div>
           </a>
         </article>
-        <article class="card -h fs-xs">
+        <article class="card +avatar -h fs-xs">
           <a class="card_link items-center" href="#">
             <div class="card_media ar-1x1 w-1/4 br-round ma-1 mr-0"></div>
             <div class="card_body pa-1">
@@ -247,7 +247,7 @@
             </div>
           </a>
         </article>
-        <article class="card -h fs-xs">
+        <article class="card +avatar -h fs-xs">
           <a class="card_link items-center" href="#">
             <div class="card_media ar-1x1 w-1/4 br-round ma-1 mr-0"></div>
             <div class="card_body pa-1">
@@ -256,7 +256,7 @@
             </div>
           </a>
         </article>
-        <article class="card -h fs-xs">
+        <article class="card +avatar -h fs-xs">
           <a class="card_link items-center" href="#">
             <div class="card_media ar-1x1 w-1/4 br-round ma-1 mr-0"></div>
             <div class="card_body pa-1">

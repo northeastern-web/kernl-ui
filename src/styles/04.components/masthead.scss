@@ -197,6 +197,16 @@
       padding-left: 0;
       padding-right: 0;
       padding-top: 0;
+
+      @include mqbp-up(d) {
+        display: block;
+        height: 0;
+        max-height: 0;
+        opacity: 0;
+        position: absolute;
+        top: 2.5rem;
+        width: 0;
+      }
     }
 
     &_subitem {
@@ -236,6 +246,21 @@
         }
       }
     }
+
+    @include mqbp-up(d) {
+      &:hover {
+        .__submenu {
+          background-color: $white;
+          height: auto;
+          max-height: 25rem;
+          opacity: 1;
+          overflow: scroll;
+          padding: 1rem !important;
+          top: 3.35rem;
+          width: 13rem;
+        }
+      }
+    }
   }
 
   .nav_sublist {
@@ -257,21 +282,25 @@
     margin-top: 0.5rem;
 
     a {
+      color: $gray-600;
       display: block;
       padding: 0.25rem 0 0.25rem 1.5rem;
       position: relative;
-      color: $gray-600;
 
       &:after {
 
         content: "\e90c"; // left arrow icon
         font-family: "feathericons";
         font-weight: normal;
-        position: absolute;
         left: 0;
+        position: absolute;
         top: 50%;
         transform: translateY(-50%);
       }
+    }
+
+    @include mqbp-up(d) {
+      display: none;
     }
   }
 }

@@ -14,13 +14,13 @@ $toggle.swap({ collapse: false })
 // Activate
 $toggle.on('activate.swap', function () {
   $(this).attr('aria-selected', true)
-  $($(this).attr('href')).attr('aria-hidden', false)
+  $($(this).data('swap-target')).attr('aria-hidden', false)
 })
 
 // Deactivate
 $toggle.on('deactivate.swap', function () {
   $(this).attr('aria-selected', false)
-  $($(this).attr('href')).attr('aria-hidden', true)
+  $($(this).data('swap-target')).attr('aria-hidden', true)
 })
 
 // --

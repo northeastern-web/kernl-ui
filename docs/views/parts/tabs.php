@@ -6,16 +6,16 @@
       <nav class="nav -inline -underline" aria-label="Tabs">
         <ul class="nav_list">
           <li class="nav_item">
-            <a id="navtab_0_1" href="#tabcontent_0_1" class="nav_link" aria-selected="true" data-toggle role="tab" data-swap-group="tabgroup_0">Dolor Fermentum</a>
+            <a id="navtab_0_1" href="#tabcontent_0_1" data-swap-target="#tabcontent_0_1" class="nav_link" aria-selected="true" data-toggle role="tab" data-swap-group="tabgroup_0">Dolor Fermentum</a>
           </li>
           <li class="nav_item">
-            <a id="navtab_0_2" href="#tabcontent_0_2" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_0">Mattis Euismod</a>
+            <a id="navtab_0_2" href="#tabcontent_0_2" data-swap-target="#tabcontent_0_2" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_0">Mattis Euismod</a>
           </li>
           <li class="nav_item">
-            <a id="navtab_0_3" href="#tabcontent_0_3" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_0">Mollis Purus</a>
+            <a id="navtab_0_3" href="#tabcontent_0_3" data-swap-target="#tabcontent_0_3" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_0">Mollis Purus</a>
           </li>
           <li class="nav_item">
-            <a id="navtab_0_4" href="#tabcontent_0_4" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_0">Sit Parturient</a>
+            <a id="navtab_0_4" href="#tabcontent_0_4" data-swap-target="#tabcontent_0_4" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_0">Sit Parturient</a>
           </li>
           <li class="nav_item">
             <a id="navtab_0_5" href="#tabcontent_0_5" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_0">Sit Partent</a>
@@ -51,16 +51,16 @@
       <nav class="nav -inline -border" aria-label="Tabs">
         <ul class="nav_list">
           <li class="nav_item">
-            <a id="navtab_1_1" href="#tabcontent_1_1" class="nav_link" aria-selected="true" data-toggle role="tab" data-swap-group="tabgroup_1">Dolor Fermentum</a>
+            <a id="navtab_1_1" href="#tabcontent_1_1" data-swap-target="#tabcontent_1_1" class="nav_link" aria-selected="true" data-toggle role="tab" data-swap-group="tabgroup_1">Dolor Fermentum</a>
           </li>
           <li class="nav_item">
-            <a id="navtab_1_2" href="#tabcontent_1_2" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_1">Mattis Euismod</a>
+            <a id="navtab_1_2" href="#tabcontent_1_2" data-swap-target="#tabcontent_1_2" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_1">Mattis Euismod</a>
           </li>
           <li class="nav_item">
-            <a id="navtab_1_3" href="#tabcontent_1_3" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_1">Mollis Purus</a>
+            <a id="navtab_1_3" href="#tabcontent_1_3" data-swap-target="#tabcontent_1_3" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_1">Mollis Purus</a>
           </li>
           <li class="nav_item">
-            <a id="navtab_1_4" href="#tabcontent_1_4" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_1">Sit Parturient</a>
+            <a id="navtab_1_4" href="#tabcontent_1_4" data-swap-target="#tabcontent_1_4" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_1">Sit Parturient</a>
           </li>
           <li class="nav_item">
             <a id="navtab_1_5" href="#tabcontent_1_5" class="nav_link" data-toggle role="tab" data-swap-group="tabgroup_1">Sit Parturient</a>

@@ -227,6 +227,7 @@
   &_header {
     @extend .pos-absolute;
     @extend .pin-t;
+    padding: 1rem;
 
     width: 100%;
 
