@@ -1,6 +1,6 @@
 <!-- start base masthead -->
 
-<header class="masthead bg-black">
+<header class="masthead -overlay">
   <a class="masthead_logo" href="#">
     <img class="masthead_image" alt="Logo" src="/docs/images/logo-white.png">
   </a>
@@ -78,6 +78,11 @@
             <a class="nav_sublink" href="#">Tortor Fusce</a>
           </li>
         </ul>
+      </li>
+      <li class="nav_item +icon hidden-down@t">
+        <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="9.5" cy="9.5" r="6.5"/><path d="M18 18l-3.2-3.2"/></svg>
+        </a>
       </li>
     </ul>
   </nav>
