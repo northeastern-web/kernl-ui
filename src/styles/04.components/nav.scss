@@ -35,6 +35,11 @@
       flex-direction: row;
       margin: 0;
     }
+
+    .\-underline &,
+    .\-border & {
+      border-bottom: 1px solid $gray-200;
+    }
   }
 
   &_item {
@@ -65,7 +70,6 @@
 
     .\-underline &,
     .\-border & {
-      border-bottom: 1px solid $gray-200;
       padding: 1rem 1.5rem;
     }
 

@@ -48,8 +48,8 @@
           </li>
         </ul>
       </nav>
-      <h2 class="mt-">Underline</h2>
-      <nav class="nav -inline -underline mt-1" role="navigation" aria-label="Page Navigation">
+      <h2 class="mt-2">Underline</h2>
+      <nav class="nav -inline -underline" role="navigation" aria-label="Page Navigation">
         <ul class="nav_list">
           <li class="nav_item">
             <a class="nav_link" href="#" aria-current="true">Dolor Fermentum</a>
@@ -68,8 +68,8 @@
           </li>
         </ul>
       </nav>
-      <h2 class="mt-">Tabbed</h2>
-      <nav class="nav -inline -border mt-2" role="navigation" aria-label="Page Navigation">
+      <h2 class="mt-2">Tabbed</h2>
+      <nav class="nav -inline -border" role="navigation" aria-label="Page Navigation">
         <ul class="nav_list">
           <li class="nav_item">
             <a class="nav_link" href="#" aria-current="true">Dolor Fermentum</a>
