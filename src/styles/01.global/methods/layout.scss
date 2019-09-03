@@ -37,7 +37,7 @@
 @mixin make-gutters($x: 0.5, $y: 0) {
   padding-left: $gutter/2;
   padding-right: $gutter/2;
-  @if ($y) {
+  @if ($y != 0) {
     padding-bottom: $gutter/2;
     padding-top: $gutter/2;
   }
@@ -51,7 +51,7 @@
       padding-left: $gutter_x;
       padding-right: $gutter_x;
 
-      @if ($y) {
+      @if ($y != 0) {
         padding-bottom: $gutter_y;
         padding-top: $gutter_y;
       }
