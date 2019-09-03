@@ -33,11 +33,11 @@ $col-prefix: '\\-' !default;
 $contain-width: 10% !default;
 
 // Gutter widths
-$gutter-t: 30px !default;
+$gutter: 30px !default;
 $gutter-w: 36px !default;
 
 $gutters: (
-  t: $gutter-t,
+  t: $gutter,
   w: $gutter-w
 ) !default;
 
