@@ -5,13 +5,10 @@
 // PODS overrides
 div#nu__globalheader {
   @include make-section();
-  font-family: $type-sans;
-  font-weight: 300;
   letter-spacing: 0;
   line-height: 28px;
   margin: 0;
   padding-bottom: 0 !important;
-
   padding-top: 0 !important;
   position: static;
   width: 100%;
