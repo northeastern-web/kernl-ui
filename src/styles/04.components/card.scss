@@ -129,9 +129,10 @@
   }
 
   &_body {
-    @include make-gutters(1, 1);
+    // @include make-gutters(2, 1);
     flex: 1;
     font-size: 100%;
+    padding: $gutter / 2;
 
     p {
       font-size: inherit;
@@ -140,7 +141,7 @@
     }
 
     .stack & {
-      padding: 1rem 1rem 0.5rem;
+      padding: $gutter $gutter ($gutter / 2);
     }
 
     .\-overlay & {
@@ -150,7 +151,7 @@
       width: 100%;
     }
 
-    .\-tile & { padding: 1rem; }
+    .\-tile & { padding: $gutter / 2; }
 
     .\-overlay &,
     .\-middle &,
@@ -163,6 +164,10 @@
 
       text-align: center;
       width: 100%;
+    }
+
+    @include mqbp-up(d) {
+      padding: $gutter;
     }
   }
 
@@ -236,21 +241,25 @@
   &_header {
     @extend .pos-absolute;
     @extend .pin-t;
-    @include make-gutters(1, 0.5);
+
     border-bottom: 1px solid $gray-100;
+    padding: ($gutter / 2);
     width: 100%;
     z-index: 1;
 
     .\-middle.\-overlay & { @extend .pin-xc; }
     + .card_body { margin-top: 3.5rem; }
+
+    @include mqbp-up(d) {
+      padding: ($gutter / 2) $gutter;
+    }
   }
 
   &_footer {
-    @include make-gutters(1, 1);
-
     display: flex;
     font-size: 87.5%;
     justify-content: space-between;
+    padding: 0 ($gutter / 2) ($gutter / 2);
 
     .\-overlay & {
       bottom: 0;
@@ -258,7 +267,11 @@
     }
 
     .stack & {
-      padding: 0 1rem 1rem;
+      padding: 0 $gutter $gutter;
+    }
+
+    @include mqbp-up(d) {
+      padding: 0 $gutter $gutter;
     }
   }
 

@@ -5,6 +5,7 @@
 // wrapper for .col items
 .row {
   @include make-row();
+
   display: flex;
   flex-wrap: wrap;
 }
@@ -12,6 +13,7 @@
 // baseline column component (extend using width utility)
 .col {
   @include make-gutters();
+
   align-items: flex-start;
   flex: none;
   flex-flow: column nowrap;

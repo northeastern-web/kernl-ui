@@ -2,72 +2,39 @@
 // Layout
 
 
-@mixin make-section($container: "default", $gutters: $gutters, $contain: $contain-width) {
-  padding-bottom: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 2rem;
+@mixin make-section($container: "default", $gutter: $gutter, $contain: $contain-width) {
+  padding: $gutter ($gutter / 2);
 
-  @each $breakpoint in map-keys($gutters) {
-    @include mqbp-up($breakpoint) {
-      $gutter: map-get($gutters, $breakpoint);
-      @if ($container == "full") {
-        @if ($breakpoint == "t" or $breakpoint == "d" or $breakpoint == "w") {
-          padding-left: $gutter;
-          padding-right: $gutter;
-        }
-      } @else if ($container == "contain") {
-        @if ($breakpoint == "t") {
-          padding-left: $contain;
-          padding-right: $contain;
-        }
-      } @else {
-        @if ($breakpoint == "t" or $breakpoint == "d" or $breakpoint == "w") {
-          padding-left: ($gutter * 2);
-          padding-right: ($gutter * 2);
-        } @else {
-          padding-left: $gutter;
-          padding-right: $gutter;
-        }
-      }
+  @include mqbp-up(t) {
+    @if ($container == "full") {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    } @else if ($container == "contain") {
+      padding-left: $contain;
+      padding-right: $contain;
+    } @else {
+      padding-left: $gutter * 2;
+      padding-right: $gutter * 2;
     }
   }
 }
 
 @mixin make-gutters($x: 0.5, $y: 0) {
-  padding-left: $gutter/2;
-  padding-right: $gutter/2;
+  padding-left: $gutter / 4;
+  padding-right: $gutter / 4;
+
   @if ($y != 0) {
-    padding-bottom: $gutter/2;
-    padding-top: $gutter/2;
+    padding-bottom: $gutter / 4;
+    padding-top: $gutter / 4;
   }
 
-  @each $breakpoint in map-keys($gutters) {
-    @include mqbp-up($breakpoint) {
-      $gutter: map-get($gutters, $breakpoint);
-      $gutter_x: $gutter * $x;
-      $gutter_y: $gutter * $y;
-
-      padding-left: $gutter_x;
-      padding-right: $gutter_x;
-
-      @if ($y != 0) {
-        padding-bottom: $gutter_y;
-        padding-top: $gutter_y;
-      }
-    }
+  @include mqbp-up(t) {
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
   }
 }
 
-@mixin make-row($gutters: $gutters) {
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-
-  @each $breakpoint in map-keys($gutters) {
-    @include mqbp-up($breakpoint) {
-      $gutter: map-get($gutters, $breakpoint);
-      margin-left:  ($gutter / -2);
-      margin-right: ($gutter / -2);
-    }
-  }
+@mixin make-row() {
+  margin-left: $gutter / -4;
+  margin-right: $gutter / -4;
 }
