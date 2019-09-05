@@ -49,11 +49,32 @@
       // Veritcal @breakpoint
       &.\-v\@#{$breakpoint} {
         flex-direction: column;
+
+        .card_header {
+          width: 100%;
+        }
+
+        .card_footer {
+          position: relative;
+          left: auto;
+          width: auto;
+        }
       }
 
       // Horizontal @breakpoint
       &.\-h\@#{$breakpoint} {
         flex-direction: row;
+
+        .card_header {
+          width: 50%;
+        }
+
+        .card_footer {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 50%;
+        }
       }
     }
   }
@@ -129,7 +150,6 @@
   }
 
   &_body {
-    // @include make-gutters(2, 1);
     flex: 1;
     font-size: 100%;
     padding: $gutter / 2;
@@ -137,7 +157,10 @@
     p {
       font-size: inherit;
       line-height: inherit;
-      &:last-child { margin-bottom: 0; }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     .stack & {
@@ -166,6 +189,24 @@
       width: 100%;
     }
 
+    .\-h & {
+      padding-bottom: $gutter * 2;
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+      @include mqbp-up($breakpoint) {
+        // Veritcal @breakpoint
+        .\-v\@#{$breakpoint} & {
+          padding-bottom: $gutter;
+        }
+
+        // Horizontal @breakpoint
+        .\-h\@#{$breakpoint} & {
+          padding-bottom: $gutter * 2;
+        }
+      }
+    }
+
     @include mqbp-up(d) {
       padding: $gutter;
     }
@@ -184,6 +225,8 @@
   &_subtitle { font-size: 110%; }
 
   &_media {
+    @extend .ar-16x9;
+
     background-color: $gray-800; // defined for accessibility conformance: contrast
     overflow: hidden;
     position: relative;
@@ -220,8 +263,30 @@
     }
 
     .\+avatar & {
+      @extend .ar-1x1;
+      @extend .br-round;
+
       max-height: 4rem;
       max-width: 4rem;
+      margin: ($gutter / 2) 0 ($gutter / 2) ($gutter / 2);
+    }
+
+    .\-h & {
+      width: 50%;
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+      @include mqbp-up($breakpoint) {
+        // Veritcal @breakpoint
+        .\-v\@#{$breakpoint} & {
+          width: auto;
+        }
+
+        // Horizontal @breakpoint
+        .\-h\@#{$breakpoint} & {
+          width: 50%;
+        }
+      }
     }
   }
 
@@ -253,6 +318,10 @@
     @include mqbp-up(d) {
       padding: ($gutter / 2) $gutter;
     }
+
+    .\-h & {
+      width: 50%;
+    }
   }
 
   &_footer {
@@ -273,14 +342,51 @@
     @include mqbp-up(d) {
       padding: 0 $gutter $gutter;
     }
+
+    .\-h & {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 50%;
+    }
   }
 
   // Columns in header/footer
   &_column {
     @extend %component-column;
-    align-self: center;
 
+    align-self: center;
     padding: 0;
+  }
+
+  // cascade card_media aspect ratio
+  @each $ar-name, $ar-value in $aspect-ratios {
+    &.\+ar-#{$ar-name} {
+      .card_media {
+        @extend .ar-#{$ar-name};
+      }
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    @include mqbp-up($breakpoint) {
+      @each $ar-name, $ar-value in $aspect-ratios {
+        &.\+ar-#{$ar-name}\@#{$breakpoint} {
+          .card_media {
+            @extend .ar-#{$ar-name}\@#{$breakpoint};
+          }
+        }
+      }
+    }
+  }
+
+  // cascade card_media width
+  @each $cw-name, $cw-value in $card_widths {
+    &.\+w-#{$cw-name} {
+      .card_media {
+        @extend .w-#{$cw-name};
+      }
+    }
   }
 }
 

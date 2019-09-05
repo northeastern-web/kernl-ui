@@ -37,8 +37,8 @@
 
     <!-- image cap example -->
     <div class="col w-1/2@t w-1/3@d">
-      <article class="card">
-        <div class="card_media ar-16x9"></div>
+      <article class="card +ar-1x1">
+        <div class="card_media"></div>
         <div class="card_body">
           <h2 class="card_title">Image Card Title</h2>
           <p>Card content lorem ipsum</p>
@@ -48,7 +48,7 @@
     <div class="col w-1/2@t w-1/3@d">
       <article class="card">
         <a class="card_link" href="#">
-        <div class="card_media ar-16x9"></div>
+        <div class="card_media"></div>
           <div class="card_body">
             <h2 class="card_title">Image Card Title</h2>
             <p>Card content lorem ipsum</p>
@@ -63,7 +63,7 @@
     <div class="col w-1/2@t w-1/3@d">
       <article class="card">
         <a class="card_link" href="#">
-          <div class="card_media ar-16x9"></div>
+          <div class="card_media"></div>
           <div class="card_header">
             <div class="card_column">Header</div>
           </div>
@@ -80,7 +80,7 @@
     </div>
     <div class="col w-1/2@t w-1/3@d">
       <article class="card bg-gray-800">
-        <div class="card_media ar-16x9"></div>
+        <div class="card_media"></div>
         <div class="card_body">
           <h2 class="card_title">Image Card Title</h2>
           <p>Card content lorem ipsum</p>
@@ -91,7 +91,7 @@
     <!-- image overlay example -->
     <div class="col w-1/2@t w-1/4@d">
       <article class="card -overlay">
-        <div class="card_media ar-16x9"></div>
+        <div class="card_media"></div>
         <div class="card_body">
           <h2 class="card_title">Overlay Card Title</h2>
           <p>Card content lorem ipsum</p>
@@ -104,7 +104,7 @@
     <div class="col w-1/2@t w-1/4@d">
       <article class="card -overlay -middle">
         <a class="card_link" href="#">
-        <div class="card_media ar-16x9"></div>
+        <div class="card_media"></div>
           <div class="card_body">
             <h2 class="card_title">Overlay Card Title</h2>
             <p>Card content lorem ipsum</p>
@@ -117,7 +117,7 @@
     </div>
     <div class="col w-1/2@t w-1/4@d">
       <article class="card -overlay -bottom">
-        <div class="card_media ar-16x9"></div>
+        <div class="card_media"></div>
         <div class="card_body">
           <h2 class="card_title">Overlay Card Title</h2>
           <p>Card content lorem ipsum</p>
@@ -127,7 +127,7 @@
     <div class="col w-1/2@t w-1/4@d">
       <article class="card -overlay">
         <a class="card_link" href="#">
-        <div class="card_media ar-16x9"></div>
+        <div class="card_media"></div>
           <div class="card_body">
             <h2 class="card_title">Overlay Card Title</h2>
             <p>Card content lorem ipsum</p>
@@ -141,7 +141,7 @@
     <div class="col w-1/2@t w-1/4@d">
       <article class="card -overlay">
         <a class="card_link" href="#">
-          <div class="card_media ar-16x9"></div>
+          <div class="card_media"></div>
           <div class="card_header">
             <div class="card_column">Header Content</div>
           </div>
@@ -161,7 +161,7 @@
   <div class="row">
     <div class="col w-1/2@t">
       <article class="card -h -v@d -h@w">
-        <div class="card_media w-1/4 w-1/3@t w-100@d ar-1x1 ar-16x9@d w-1/2@w"></div>
+        <div class="card_media"></div>
         <div class="card_body">
           <h2 class="card_title">Variable Orientation Demo</h2>
           <p>Resize the viewport and watch me.</p>
@@ -171,7 +171,7 @@
     <div class="col w-1/2@t">
       <article class="card -h -v@d -h@w">
         <a class="card_link" href="#">
-          <div class="card_media w-1/4 w-1/3@t w-100@d ar-1x1 ar-16x9@d w-1/2@w"></div>
+          <div class="card_media"></div>
           <div class="card_header">
             Header
           </div>
@@ -241,20 +241,20 @@
 </section>
 
 <!-- Flush variant -->
-<section class="section -flush py-0">
+<section class="section -nogutters -flush py-0">
   <div class="row">
     <div class="col">
       <article class="card -h vh-30 bg-blue-dark">
-        <div class="card_media w-1/2"></div>
+        <div class="card_media"></div>
         <div class="card_body">
           <h2 class="card_title">Flush Card Title</h2>
-          <p>Cards can be flush. Just add <code>-flush</code> to its parent <code>.section</code>.</p>
+          <p>Cards can be flush. Just add <code>-flush</code> and <code>-nogutters</code> options to its parent <code>.section</code>.</p>
         </div>
       </article>
     </div>
     <div class="col">
       <article class="card -h vh-30 bg-blue-dark -r">
-        <div class="card_media w-1/2"></div>
+        <div class="card_media"></div>
         <div class="card_body">
           <h2 class="card_title">Flush Card Title</h2>
           <p>Cards can be flush. Just add <code>-flush</code> to its parent <code>.section</code>.</p>
@@ -272,7 +272,7 @@
       <div class="stack mb-1">
         <article class="card +avatar -h fs-xs">
           <a class="card_link items-center" href="#">
-            <div class="card_media ar-1x1 w-1/4 br-round ma-1 mr-0"></div>
+            <div class="card_media"></div>
             <div class="card_body pa-1">
               <h2 class="card_title">Stacked Horizontal Cards</h2>
               <p>These cards are wrapped in a Stack.</p>
@@ -281,7 +281,7 @@
         </article>
         <article class="card +avatar -h fs-xs">
           <a class="card_link items-center" href="#">
-            <div class="card_media ar-1x1 w-1/4 br-round ma-1 mr-0"></div>
+            <div class="card_media"></div>
             <div class="card_body pa-1">
               <h2 class="card_title">Stacked Horizontal Cards</h2>
               <p>These cards are wrapped in a Stack.</p>
@@ -290,7 +290,7 @@
         </article>
         <article class="card +avatar -h fs-xs">
           <a class="card_link items-center" href="#">
-            <div class="card_media ar-1x1 w-1/4 br-round ma-1 mr-0"></div>
+            <div class="card_media"></div>
             <div class="card_body pa-1">
               <h2 class="card_title">Stacked Horizontal Cards</h2>
               <p>These cards are wrapped in a Stack.</p>
@@ -299,7 +299,7 @@
         </article>
         <article class="card +avatar -h fs-xs">
           <a class="card_link items-center" href="#">
-            <div class="card_media ar-1x1 w-1/4 br-round ma-1 mr-0"></div>
+            <div class="card_media"></div>
             <div class="card_body pa-1">
               <h2 class="card_title">Stacked Horizontal Cards</h2>
               <p>These cards are wrapped in a Stack.</p>
