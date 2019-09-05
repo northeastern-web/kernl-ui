@@ -1,8 +1,8 @@
 <!-- start base masthead -->
 
-<header class="masthead -overlay">
+<header class="masthead -megamenu">
   <a class="masthead_logo" href="#">
-    <img class="masthead_image" alt="Logo" src="/docs/images/logo-white.png">
+    <img class="masthead_image" alt="Logo" src="/docs/images/logo.png">
   </a>
   <div class="nav_content">
     <button type="button" class="nav_handle hidden-up@d">
@@ -23,7 +23,9 @@
       <input type="text" placeholder="Search for meaning">
       <button type="submit" class="btn">Go</button>
     </div>
-
+<?php
+/* 
+// standard nav list
     <ul class="nav_list">
       <li class="nav_item">
         <a class="nav_link" href="#">Lorem Ipsum</a>
@@ -85,6 +87,183 @@
         </a>
       </li>
     </ul>
+<?php 
+*/ 
+?>
+<?php 
+// megamenu list
+?>
+
+  <ul class="nav_list">
+    <li class="nav_item +children">
+      <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Lorem Ipsum</a>
+      <ul class="nav_sublist" aria-expanded="false">
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Malesuada Bibendum</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Tortor Fusce</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Quam Vulputate Nibh</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d --feature">
+          <a class="nav_sublink --heading" href="#">Bibendum Mattis Dapibus</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Vulputate Nibh Quam</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="nav_item +children">
+      <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Bibendum</a>
+      <ul class="nav_sublist" aria-expanded="false">
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Tortor Fusce</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Quam Vulputate Nibh</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Malesuada Bibendum</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d --feature">
+          <a class="nav_sublink --heading" href="#">Purus Magna Pellentesque</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Vulputate Nibh Quam</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="nav_item +children">
+      <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Pudgi Homunculi</a>
+      <ul class="nav_sublist" aria-expanded="false">
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Quam Vulputate Nibh</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Malesuada Bibendum</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Tortor Fusce</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d --feature">
+          <a class="nav_sublink --heading" href="#">Vulputate Nibh Quam</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="nav_item +children">
+      <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Malesuada Nucleus</a>
+      <ul class="nav_sublist" aria-expanded="false">
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Malesuada Bibendum</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Quam Vulputate Nibh</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d">
+          <a class="nav_sublink --heading" href="#">Mollis Elit</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+          </ul>
+        </li>
+        <li class="col w-1/4@d --feature">
+          <a class="nav_sublink --heading" href="#">Dapibus Ornare Tellus</a>
+          <ul>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Vulputate Nibh Quam</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
+            <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="nav_item +icon hidden-down@t">
+      <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="9.5" cy="9.5" r="6.5"/><path d="M18 18l-3.2-3.2"/></svg>
+      </a>
+    </li>
+  </ul>
+
   </nav>
 </header>
 <main id="main_content">
