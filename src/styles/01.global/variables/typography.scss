@@ -4,8 +4,9 @@
 
 // Families
 $type-sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$type-serif: "Baskerville", Georgia, "Times New Roman", Times, serif !default;
-$type-metro: "Netto", $type-sans !default;
+$type-serif: "Noe", Georgia, "Times New Roman", Times, serif !default;
+$type-condensed: "Tungsten Rounded", $type-sans !default;
+$type-tech: "Netto", $type-sans !default;
 $type-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 // Weight
