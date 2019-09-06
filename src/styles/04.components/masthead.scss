@@ -269,7 +269,7 @@
       }
 
       &_item {
-        margin: 1.25rem 0.75rem;
+        margin: 0.75rem;
         position: relative;
         display: flex;
         align-items: center;
@@ -278,7 +278,7 @@
       &_link {
         border-bottom: 0 none;
         font-size: $fs-sm;
-        padding: 1rem 0;
+        padding: 1.5rem 0;
 
         &:hover {
           color: $black;
@@ -323,6 +323,31 @@
     }
 
     .\+children {
+      .nav_link {
+        padding-left: 0.5rem;
+        padding-right: 1.75rem;
+
+        &:before { // 'before' because 'after' competes with other modifiers
+          content: "\e920" !important;
+          position: absolute;
+          font-family: "feathericons", sans-serif;
+          color: inherit;
+          font-size: 1rem;
+          right: 6px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .nav_sublink {
+        padding-left: 0;
+        padding-right: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+
       &:hover {
         .nav_sublist {
           background-color: $white;
@@ -364,6 +389,29 @@
 
         &:hover {
           color: $black;
+        }
+      }
+    }
+
+    &.\-megamenu {
+      .nav {
+        &_list,
+        &_item { position: static; }
+
+        &_sublist {
+          position: absolute;
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .\+children {
+          &:hover {
+            .nav_sublist {
+              left: 0;
+              width: 100%;
+              top: 5rem;
+            }
+          }
         }
       }
     }
