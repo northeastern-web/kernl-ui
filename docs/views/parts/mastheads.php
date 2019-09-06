@@ -99,15 +99,15 @@
       <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Lorem Ipsum</a>
       <ul class="nav_sublist" aria-expanded="false">
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Malesuada Bibendum</a>
-          <ul>
+          <a class="nav_sublink -heading" href="#" aria-haspopup="true" aria-expanded="false">Malesuada Bibendum</a>
+          <ul aria-expanded="false">
             <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
           </ul>
         </li>
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Tortor Fusce</a>
+          <a class="nav_sublink -heading" href="#">Tortor Fusce</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
@@ -116,7 +116,7 @@
           </ul>
         </li>
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Quam Vulputate Nibh</a>
+          <a class="nav_sublink -heading" href="#">Quam Vulputate Nibh</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
@@ -126,7 +126,7 @@
           </ul>
         </li>
         <li class="col w-1/4@d --feature">
-          <a class="nav_sublink --heading" href="#">Bibendum Mattis Dapibus</a>
+          <a class="nav_sublink -heading" href="#">Bibendum Mattis Dapibus</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Vulputate Nibh Quam</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
@@ -140,7 +140,7 @@
       <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Bibendum</a>
       <ul class="nav_sublist" aria-expanded="false">
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Tortor Fusce</a>
+          <a class="nav_sublink -heading" href="#">Tortor Fusce</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
@@ -149,7 +149,7 @@
           </ul>
         </li>
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Quam Vulputate Nibh</a>
+          <a class="nav_sublink -heading" href="#">Quam Vulputate Nibh</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
@@ -158,7 +158,7 @@
           </ul>
         </li>
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Malesuada Bibendum</a>
+          <a class="nav_sublink -heading" href="#">Malesuada Bibendum</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
@@ -166,7 +166,7 @@
           </ul>
         </li>
         <li class="col w-1/4@d --feature">
-          <a class="nav_sublink --heading" href="#">Purus Magna Pellentesque</a>
+          <a class="nav_sublink -heading" href="#">Purus Magna Pellentesque</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Vulputate Nibh Quam</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
@@ -180,7 +180,7 @@
       <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Pudgi Homunculi</a>
       <ul class="nav_sublist" aria-expanded="false">
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Quam Vulputate Nibh</a>
+          <a class="nav_sublink -heading" href="#">Quam Vulputate Nibh</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
@@ -189,7 +189,7 @@
           </ul>
         </li>
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Malesuada Bibendum</a>
+          <a class="nav_sublink -heading" href="#">Malesuada Bibendum</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
@@ -197,7 +197,7 @@
           </ul>
         </li>
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Tortor Fusce</a>
+          <a class="nav_sublink -heading" href="#">Tortor Fusce</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
@@ -206,7 +206,7 @@
           </ul>
         </li>
         <li class="col w-1/4@d --feature">
-          <a class="nav_sublink --heading" href="#">Vulputate Nibh Quam</a>
+          <a class="nav_sublink -heading" href="#">Vulputate Nibh Quam</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
@@ -220,7 +220,7 @@
       <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Malesuada Nucleus</a>
       <ul class="nav_sublist" aria-expanded="false">
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Malesuada Bibendum</a>
+          <a class="nav_sublink -heading" href="#">Malesuada Bibendum</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
@@ -228,7 +228,7 @@
           </ul>
         </li>
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Quam Vulputate Nibh</a>
+          <a class="nav_sublink -heading" href="#">Quam Vulputate Nibh</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Tortor Fusce</a></li>
@@ -238,7 +238,7 @@
           </ul>
         </li>
         <li class="col w-1/4@d">
-          <a class="nav_sublink --heading" href="#">Mollis Elit</a>
+          <a class="nav_sublink -heading" href="#">Mollis Elit</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Malesuada Bibendum</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Bibendum Mattis Dapibus</a></li>
@@ -247,7 +247,7 @@
           </ul>
         </li>
         <li class="col w-1/4@d --feature">
-          <a class="nav_sublink --heading" href="#">Dapibus Ornare Tellus</a>
+          <a class="nav_sublink -heading" href="#">Dapibus Ornare Tellus</a>
           <ul>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Vulputate Nibh Quam</a></li>
             <li class="nav_subitem"><a class="nav_sublink" href="#">Quam Vulputate Nibh</a></li>

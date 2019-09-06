@@ -361,9 +361,18 @@
 
   // cascade card_media aspect ratio
   @each $ar-name, $ar-value in $aspect-ratios {
-    &.\+ar-#{$ar-name} {
+    &.\-ar-#{$ar-name} {
       .card_media {
         @extend .ar-#{$ar-name};
+      }
+    }
+  }
+
+  // cascade card_media width
+  @each $cw-name, $cw-value in $card_widths {
+    &.\-w-#{$cw-name} {
+      .card_media {
+        @extend .w-#{$cw-name};
       }
     }
   }
@@ -371,20 +380,11 @@
   @each $breakpoint in map-keys($breakpoints) {
     @include mqbp-up($breakpoint) {
       @each $ar-name, $ar-value in $aspect-ratios {
-        &.\+ar-#{$ar-name}\@#{$breakpoint} {
+        &.\-ar-#{$ar-name}\@#{$breakpoint} {
           .card_media {
             @extend .ar-#{$ar-name}\@#{$breakpoint};
           }
         }
-      }
-    }
-  }
-
-  // cascade card_media width
-  @each $cw-name, $cw-value in $card_widths {
-    &.\+w-#{$cw-name} {
-      .card_media {
-        @extend .w-#{$cw-name};
       }
     }
   }
