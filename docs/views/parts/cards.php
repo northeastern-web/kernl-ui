@@ -37,7 +37,7 @@
 
     <!-- image cap example -->
     <div class="col w-1/2@t w-1/3@d">
-      <article class="card +ar-1x1">
+      <article class="card -ar-1x1">
         <div class="card_media"></div>
         <div class="card_body">
           <h2 class="card_title">Image Card Title</h2>

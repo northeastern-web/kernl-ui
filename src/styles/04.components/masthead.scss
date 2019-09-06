@@ -271,7 +271,7 @@
       &_item {
         margin: 0.75rem;
         position: relative;
-        display: flex;
+        display: inline-flex;
         align-items: center;
       }
 
@@ -309,7 +309,9 @@
         z-index: 200;
       }
 
-      &_subitem { margin: 0 0.75rem; }
+      &_subitem {
+        margin: 0 0.75rem;
+      }
 
       &_sublink {
         font-size: 0.83rem;
@@ -323,6 +325,9 @@
     }
 
     .\+children {
+      margin-right: 0;
+      margin-left: 0;
+
       .nav_link {
         padding-left: 0.5rem;
         padding-right: 1.75rem;
@@ -362,6 +367,8 @@
           .nav_sublist { display: none; }
         }
       }
+
+      .nav_subitem { margin: 0; }
     }
 
     &.bg-black,
@@ -399,19 +406,34 @@
         &_item { position: static; }
 
         &_sublist {
-          position: absolute;
-          display: flex;
+          @include make-section();
+
+          display: none;
           flex-wrap: wrap;
+          max-height: 0;
+          position: absolute;
+          transition: max-height 0.2s ease;
+
+          ul {
+            list-style: none;
+            padding-left: 0;
+          }
         }
 
         .\+children {
           &:hover {
             .nav_sublist {
+              display: flex;
               left: 0;
-              width: 100%;
+              max-height: auto;
               top: 5rem;
+              width: 100%;
             }
           }
+        }
+
+        .\-heading {
+          font-size: $fs-d1;
         }
       }
     }
