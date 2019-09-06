@@ -2,7 +2,9 @@
 // Media
 
 
-// Images
+// --
+// Imagery
+
 img {
   border-style: none;
   vertical-align: middle;
@@ -19,16 +21,18 @@ video {
 
 svg:not(:root) { overflow: hidden; }
 
+// --
+// Groupings
 
-// Grouping
 figcaption,
 figure,
 main { display: block; }
 
 figure { margin: 0 0 1rem; }
 
-
+// --
 // Embedded content
+
 iframe {
   border: 0;
 

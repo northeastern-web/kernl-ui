@@ -8,7 +8,7 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  
+
   // Remove the negative margin from a section's default .row,
   // then the horizontal padding from all immediate child
   // columns (to prevent runaway style inheritance).
@@ -91,14 +91,15 @@
     padding-bottom: 6rem;
     padding-top: 6rem;
   }
+
   // --
   // Document container options
 
   // container is full width
-  .full & { @include make-section('full'); }
+  .section_full & { @include make-section('full'); }
 
   // container is 2x default document margin
-  .contain & { @include make-section('contain', $contain: $contain-width); }
+  .section_contain & { @include make-section('contain', $contain: $contain-width); }
 }
 
 // --
@@ -107,7 +108,6 @@
 // Wrapper for titles within a section
 .section_header {
   flex: 1;
-  // margin-bottom: 2rem; //removing for now
 
   sup,
   sub { font-weight: 400; }
