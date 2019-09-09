@@ -187,7 +187,12 @@
   // --
   // mobile styles
   @include mqbp-down(t) {
-    .nav { background-color: $white; }
+    .nav {
+      background-color: $white;
+
+      &_item,
+      &_subitem { margin: 0; }
+    }
 
     .\+children {
       >.nav_link,
@@ -361,7 +366,7 @@
           opacity: 1;
           overflow: scroll;
           padding: 1rem;
-          top: 3rem;
+          top: 4rem;
           width: 13rem;
 
           .nav_sublist { display: none; }
@@ -406,18 +411,26 @@
         &_item { position: static; }
 
         &_sublist {
-          @include make-section();
+          &[data-depth="0"] {
+            @include make-section();
 
-          display: none;
-          flex-wrap: wrap;
-          max-height: 0;
-          position: absolute;
-          transition: max-height 0.2s ease;
+            display: none;
+            flex-wrap: wrap;
+            max-height: 0;
+            position: absolute;
+            transition: max-height 0.2s ease;
 
-          ul {
-            list-style: none;
-            padding-left: 0;
+            .nav_subitem {
+              flex: 1;
+              margin-right: 1rem;
+            }
           }
+
+          &[data-depth="1"] {
+            border: 0 none;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;          }
         }
 
         .\+children {
@@ -425,7 +438,7 @@
             .nav_sublist {
               display: flex;
               left: 0;
-              max-height: auto;
+              max-height: none;
               top: 5rem;
               width: 100%;
             }
@@ -434,6 +447,29 @@
 
         .\-heading {
           font-size: $fs-d1;
+          border-bottom: 1px solid rgba($gray, 0.25);
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    &.\-border {
+      .nav_link {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          bottom: -1px;
+          left: 0;
+          right: 0;
+          border-bottom: 3px solid transparent;
+          transition: border-bottom .2s ease;
+        }
+
+        &:hover {
+          &::after {
+            border-bottom-color: rgba(212, 27, 44, 0.75);
+          }
         }
       }
     }
