@@ -1,15 +1,15 @@
 <!-- start base masthead -->
 
-<header class="masthead -megamenu">
+<header class="masthead -megamenu -utility -dark">
   <a class="masthead_logo" href="#">
     <img class="masthead_image" alt="Logo" src="/docs/images/logo.png">
   </a>
-  <div class="nav_content">
+  <div class="masthead_toggle">
     <button type="button" class="nav_handle hidden-up@d">
       <span class="sr-only">Menu</span>
     </button>
   </div>
-  <nav class="nav" data-navigation-handle=".nav_handle" data-navigation-content=".nav_content">
+  <nav class="nav masthead_nav" data-navigation-handle=".nav_handle" data-navigation-content=".masthead_toggle">
     <div class="w-100 d-flex justify-between hidden-up@d">
       <a class="masthead_logo pl-1" href="#">
         <img class="masthead_image" alt="Logo" src="/docs/images/logo.png">
@@ -23,9 +23,9 @@
       <input type="text" placeholder="Search for meaning">
       <button type="submit" class="btn">Go</button>
     </div>
-<?php
-/* 
-// standard nav list
+
+<!-- standard nav list -->
+<!-- 
     <ul class="nav_list">
       <li class="nav_item">
         <a class="nav_link" href="#">Lorem Ipsum</a>
@@ -87,13 +87,9 @@
         </a>
       </li>
     </ul>
-<?php 
-*/ 
-?>
-<?php 
-// megamenu list
-?>
+ -->
 
+<!-- // megamenu list -->
   <ul class="nav_list">
     <li class="nav_item +children">
       <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Lorem Ipsum</a>
@@ -278,6 +274,17 @@
       <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="9.5" cy="9.5" r="6.5"/><path d="M18 18l-3.2-3.2"/></svg>
       </a>
+    </li>
+  </ul>
+  <ul class="nav_list masthead_utility">
+    <li class="nav_item">
+      <a class="nav_link" href="#">About</a>
+    </li>
+    <li class="nav_item">
+      <a class="nav_link" href="#">Forms</a>
+    </li>
+    <li class="nav_item">
+      <a class="nav_link" href="#">Faculty &amp; Staff</a>
     </li>
   </ul>
 
