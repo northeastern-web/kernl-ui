@@ -1,6 +1,6 @@
 <!-- start base masthead -->
 
-<header class="masthead -megamenu -utility -dark">
+<header class="masthead -border">
   <a class="masthead_logo" href="#">
     <img class="masthead_image" alt="Logo" src="/docs/images/logo.png">
   </a>
@@ -25,7 +25,7 @@
     </div>
 
 <!-- standard nav list -->
-<!-- 
+
     <ul class="nav_list">
       <li class="nav_item">
         <a class="nav_link" href="#">Lorem Ipsum</a>
@@ -87,9 +87,9 @@
         </a>
       </li>
     </ul>
- -->
 
 <!-- // megamenu list -->
+<!-- 
   <ul class="nav_list">
     <li class="nav_item +children">
       <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Lorem Ipsum</a>
@@ -287,7 +287,7 @@
       <a class="nav_link" href="#">Faculty &amp; Staff</a>
     </li>
   </ul>
-
+ -->
   </nav>
 </header>
 <main id="main_content">

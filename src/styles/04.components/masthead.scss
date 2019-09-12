@@ -183,13 +183,16 @@
     }
   }
 
-  .masthead_utility {
+  &.\-dark { background-color: $black; }
+
+  &_utility {
     .nav_link {
       text-transform: uppercase;
       letter-spacing: 0.05rem;
       font-size: $fs-root;
     }
   }
+
 
   // --
   // mobile styles
@@ -395,8 +398,6 @@
     }
 
     &.\-dark {
-      background-color: $black;
-
       .\+children {
         &:hover {
           .nav_sublist { background-color: $black; }
@@ -524,7 +525,7 @@
           content: "";
           position: absolute;
           width: 100%;
-          bottom: -1px;
+          bottom: 3px;
           left: 0;
           right: 0;
           border-bottom: 3px solid transparent;
