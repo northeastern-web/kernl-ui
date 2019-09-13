@@ -5,15 +5,15 @@
 </header>
 
 <section class="section">
-  <div class="section_header line-l-gradient">
+  <div class="section_header line-l-gold">
     <h1 class="section_title">Section Header</h1>
     <div class="section_subtitle">Generic look and feel with columns following</div>
   </div>
   <div class="row">
-    <div class="col w-1/3@t line-l-gradient">
+    <div class="col w-1/3@t line-l-gold-gray-warm-light">
       Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam
     </div>
-    <div class="col w-1/3@t">
+    <div class="col w-1/3@t line-l-red-orange">
       Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam
     </div>
     <div class="col w-1/3@t">

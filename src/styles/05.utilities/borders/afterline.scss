@@ -51,8 +51,12 @@
     &::after { background-color: $gold; }
   }
 
-  &[class*="-gradient"] {
+  &[class*="-gold-gray-warm-light"] {
     &::after { background: linear-gradient(to bottom, $gold 0%, $gray-warm-light 100%); }
+  }
+
+  &[class*="-red-orange"] {
+    &::after { background: linear-gradient(to bottom, $red 0%, $orange 100%); }
   }
 }
 
