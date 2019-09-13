@@ -288,6 +288,8 @@
         position: relative;
         display: inline-flex;
         align-items: center;
+
+        &:last-child { margin-right: 0; }
       }
 
       &_link {
@@ -427,12 +429,6 @@
       .nav {
         &_list,
         &_item { position: static; }
-
-        &_item {
-          &:last-child {
-            margin-right: 0;
-          }
-        }
 
         &_sublist {
           &[data-depth="0"] {

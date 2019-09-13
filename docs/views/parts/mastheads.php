@@ -1,6 +1,6 @@
 <!-- start base masthead -->
 
-<header class="masthead -border">
+<header class="masthead">
   <a class="masthead_logo" href="#">
     <img class="masthead_image" alt="Logo" src="/docs/images/logo.png">
   </a>
@@ -32,7 +32,7 @@
       </li>
       <li class="nav_item +children">
         <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Bibendum</a>
-        <ul class="nav_sublist" aria-expanded="false">
+        <ul class="nav_sublist" aria-expanded="false" data-depth="0">
           <li class="nav_back"><a href="#">Bibendum</a></li>
           <li class="nav_subitem">
             <a class="nav_sublink" href="#">Quam Vulputate Nibh</a>
@@ -44,7 +44,7 @@
       </li>
       <li class="nav_item +children">
         <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Pudgi Homunculi</a>
-        <ul class="nav_sublist" aria-expanded="false">
+        <ul class="nav_sublist" aria-expanded="false" data-depth="0">
           <li class="nav_back"><a href="#">Pudgi Homunculi</a></li>
           <li class="nav_subitem">
             <a class="nav_sublink" href="#">Malesuada Bibendum</a>
@@ -54,7 +54,7 @@
           </li>
           <li class="nav_subitem +children">
             <a class="nav_sublink" href="#" aria-haspopup="true" aria-expanded="false">Venenatis Pharetra Sit Dolor</a>
-            <ul class="nav_sublist" aria-expanded="false">
+            <ul class="nav_sublist" aria-expanded="false" data-depth="1">
               <li class="nav_back"><a href="#">Venenatis Pharetra Sit Dolor</a></li>
               <li class="nav_subitem">
                 <a class="nav_sublink" href="#">Mollis Aliquam</a>
@@ -71,7 +71,7 @@
       </li>
       <li class="nav_item +children">
         <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Malesuada Nucleus</a>
-        <ul class="nav_sublist" aria-expanded="false">
+        <ul class="nav_sublist" aria-expanded="false" data-depth="0">
           <li class="nav_back"><a href="#">Malesuada Nucleus</a></li>
           <li class="nav_subitem">
             <a class="nav_sublink" href="#">Quam Vulputate Nibh</a>
@@ -81,7 +81,7 @@
           </li>
         </ul>
       </li>
-      <li class="nav_item +icon hidden-down@t">
+      <li class="nav_item hidden-down@t">
         <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="9.5" cy="9.5" r="6.5"/><path d="M18 18l-3.2-3.2"/></svg>
         </a>
