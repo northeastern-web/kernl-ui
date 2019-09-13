@@ -70,7 +70,7 @@ $("#contSelect").on('click touch', 'li a', function(e) {
   $('#contSelect .\\--active').removeClass('--active');
   const contID = $(this).closest('li a').prop('id');
   $(this).closest('li a').addClass('--active');
-  const contArray = ['default', 'full', 'contain'];
+  const contArray = ['section_default', 'section_full', 'section_contain'];
   $.each(contArray, function(i, v) {
      $('body').removeClass(v);
   });
