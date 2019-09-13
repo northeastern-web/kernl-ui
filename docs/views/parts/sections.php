@@ -5,12 +5,12 @@
 </header>
 
 <section class="section">
-  <div class="section_header">
+  <div class="section_header line-l-gradient">
     <h1 class="section_title">Section Header</h1>
     <div class="section_subtitle">Generic look and feel with columns following</div>
   </div>
   <div class="row">
-    <div class="col w-1/3@t">
+    <div class="col w-1/3@t line-l-gradient">
       Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam
     </div>
     <div class="col w-1/3@t">
