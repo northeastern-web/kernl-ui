@@ -7,9 +7,13 @@
 .bs {
   box-shadow: $box-shadow;
 
-  &.btn:hover { box-shadow: $box-shadow-hover; }
+  &.btn:hover { box-shadow: $box-shadow-lg; }
 }
 
-.bs-inset { box-shadow: $box-shadow-inset }
+.bs-sm { box-shadow: $box-shadow-sm; }
+.bs-lg { box-shadow: $box-shadow-lg; }
+.bs-xl { box-shadow: $box-shadow-xl; }
+
+.bs-inset { box-shadow: $box-shadow-inset; }
 
 .bs-none { box-shadow: none !important; }
