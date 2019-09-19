@@ -15,15 +15,15 @@ div#nu__globalheader {
   z-index: 0;
 }
 
-.full div#nu__globalheader {
+.section_full div#nu__globalheader {
   @include make-section('full');
 }
 
-.contain div#nu__globalheader {
+.section_contain div#nu__globalheader {
   @include make-section('contain', $contain: $contain-width);
 }
 
-.contain.\-body div#nu__globalheader {
+.section_contain.\-body div#nu__globalheader {
   @include make-section();
 }
 
