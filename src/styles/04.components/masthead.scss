@@ -75,6 +75,15 @@
   width: 100%;
   z-index: $z-1;
 
+  // --
+  // Document container options
+
+  // container is full width
+  .section_full & { @include make-section('full'); }
+
+  // container is 2x default document margin
+  .section_contain & { @include make-section('contain', $contain: $contain-width); }
+
   &_logo {
     max-width: 240px;
     padding: 1rem 1rem 1rem 0;
@@ -196,7 +205,6 @@
       font-size: $fs-root;
     }
   }
-
 
   // --
   // mobile styles

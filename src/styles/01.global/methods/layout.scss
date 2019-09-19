@@ -3,7 +3,8 @@
 
 
 @mixin make-section($container: "default", $gutter: $gutter, $contain: $contain-width) {
-  padding: $gutter ($gutter / 2);
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
 
   @include mqbp-up(t) {
     @if ($container == "full") {
