@@ -1,68 +1,71 @@
 // Spacing Utility
 // Padding
 //
-// .p<side>--<value>
+// .p<side>-<value>
 
 
 $size: 20;
-@while $size >= 0 {
-  .pa-#{$size}   { padding: #{$size}rem !important; }
-  .pa-#{$size}h  { padding: #{($size+.5)}rem !important; }
-  .pt-#{$size}   { padding-top: #{$size}rem !important; }
-  .pt-#{$size}h  { padding-top: #{($size+.5)}rem !important; }
-  .pr-#{$size}   { padding-right: #{$size}rem !important; }
-  .pr-#{$size}h  { padding-right: #{($size+.5)}rem !important; }
-  .pb-#{$size}   { padding-bottom: #{$size}rem !important; }
-  .pb-#{$size}h  { padding-bottom: #{($size+.5)}rem !important; }
-  .pl-#{$size}   { padding-left: #{$size}rem !important; }
-  .pl-#{$size}h  { padding-left: #{($size+.5)}rem !important; }
-  .px-#{$size} {
-    padding-left:   #{$size}rem !important;
-    padding-right:  #{$size}rem !important;
-  }
-  .px-#{$size}h {
-    padding-left:   #{($size+.5)}rem !important;
-    padding-right:  #{($size+.5)}rem !important;
-  }
-  .py-#{$size} {
-    padding-bottom: #{$size}rem !important;
-    padding-top:    #{$size}rem !important;
-  }
-  .py-#{$size}h {
-    padding-bottom: #{($size+.5)}rem !important;
-    padding-top:    #{($size+.5)}rem !important;
-  }
 
-  @each $breakpoint in map-keys($breakpoints) {
+// Non-breakpoint loop
+@for $i from 0 through $size {
+  .pa-#{$i}   { padding: #{$i}rem !important; }
+  .pa-#{$i}h  { padding: #{($i+.5)}rem !important; }
+  .pt-#{$i}   { padding-top: #{$i}rem !important; }
+  .pt-#{$i}h  { padding-top: #{($i+.5)}rem !important; }
+  .pr-#{$i}   { padding-right: #{$i}rem !important; }
+  .pr-#{$i}h  { padding-right: #{($i+.5)}rem !important; }
+  .pb-#{$i}   { padding-bottom: #{$i}rem !important; }
+  .pb-#{$i}h  { padding-bottom: #{($i+.5)}rem !important; }
+  .pl-#{$i}   { padding-left: #{$i}rem !important; }
+  .pl-#{$i}h  { padding-left: #{($i+.5)}rem !important; }
+  .px-#{$i} {
+    padding-left:   #{$i}rem !important;
+    padding-right:  #{$i}rem !important;
+  }
+  .px-#{$i}h {
+    padding-left:   #{($i+.5)}rem !important;
+    padding-right:  #{($i+.5)}rem !important;
+  }
+  .py-#{$i} {
+    padding-bottom: #{$i}rem !important;
+    padding-top:    #{$i}rem !important;
+  }
+  .py-#{$i}h {
+    padding-bottom: #{($i+.5)}rem !important;
+    padding-top:    #{($i+.5)}rem !important;
+  }
+}
+
+// Breakpoint loops
+@each $breakpoint in map-keys($breakpoints) {
+  @for $i from 0 through $size {
     @include mqbp-up($breakpoint) {
-      .pa-#{$size}\@#{$breakpoint}   { padding: #{$size}rem !important; }
-      .pa-#{$size}h\@#{$breakpoint}  { padding: #{($size+.5)}rem !important; }
-      .pt-#{$size}\@#{$breakpoint}   { padding-top: #{$size}rem !important; }
-      .pt-#{$size}h\@#{$breakpoint}  { padding-top: #{($size+.5)}rem !important; }
-      .pr-#{$size}\@#{$breakpoint}   { padding-right: #{$size}rem !important; }
-      .pr-#{$size}h\@#{$breakpoint}  { padding-right: #{($size+.5)}rem !important; }
-      .pb-#{$size}\@#{$breakpoint}   { padding-bottom: #{$size}rem !important; }
-      .pb-#{$size}h\@#{$breakpoint}  { padding-bottom: #{($size+.5)}rem !important; }
-      .pl-#{$size}\@#{$breakpoint}   { padding-left: #{$size}rem !important; }
-      .pl-#{$size}h\@#{$breakpoint}  { padding-left: #{($size+.5)}rem !important; }
-      .px-#{$size}\@#{$breakpoint} {
-        padding-left:   #{$size}rem !important;
-        padding-right:  #{$size}rem !important;
+      .pa-#{$i}\@#{$breakpoint}   { padding: #{$i}rem !important; }
+      .pa-#{$i}h\@#{$breakpoint}  { padding: #{($i+.5)}rem !important; }
+      .pt-#{$i}\@#{$breakpoint}   { padding-top: #{$i}rem !important; }
+      .pt-#{$i}h\@#{$breakpoint}  { padding-top: #{($i+.5)}rem !important; }
+      .pr-#{$i}\@#{$breakpoint}   { padding-right: #{$i}rem !important; }
+      .pr-#{$i}h\@#{$breakpoint}  { padding-right: #{($i+.5)}rem !important; }
+      .pb-#{$i}\@#{$breakpoint}   { padding-bottom: #{$i}rem !important; }
+      .pb-#{$i}h\@#{$breakpoint}  { padding-bottom: #{($i+.5)}rem !important; }
+      .pl-#{$i}\@#{$breakpoint}   { padding-left: #{$i}rem !important; }
+      .pl-#{$i}h\@#{$breakpoint}  { padding-left: #{($i+.5)}rem !important; }
+      .px-#{$i}\@#{$breakpoint} {
+        padding-left:   #{$i}rem !important;
+        padding-right:  #{$i}rem !important;
       }
-      .px-#{$size}h\@#{$breakpoint} {
-        padding-left:   #{($size+.5)}rem !important;
-        padding-right:  #{($size+.5)}rem !important;
+      .px-#{$i}h\@#{$breakpoint} {
+        padding-left:   #{($i+.5)}rem !important;
+        padding-right:  #{($i+.5)}rem !important;
       }
-      .py-#{$size}\@#{$breakpoint} {
-        padding-bottom: #{$size}rem !important;
-        padding-top:    #{$size}rem !important;
+      .py-#{$i}\@#{$breakpoint} {
+        padding-bottom: #{$i}rem !important;
+        padding-top:    #{$i}rem !important;
       }
-      .py-#{$size}h\@#{$breakpoint} {
-        padding-bottom: #{($size+.5)}rem !important;
-        padding-top:    #{($size+.5)}rem !important;
+      .py-#{$i}h\@#{$breakpoint} {
+        padding-bottom: #{($i+.5)}rem !important;
+        padding-top:    #{($i+.5)}rem !important;
       }
     }
   }
-
-  $size: $size - 1; // increment size
 }

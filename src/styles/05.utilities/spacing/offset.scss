@@ -1,68 +1,71 @@
 // Spacing Utility
 // Negative margin
 //
-// .o--<value>
+// .o-<value>
 
 
 $size: 20;
-@while $size >= 0 {
-  .oa-#{$size}   { margin: -#{$size}rem !important; }
-  .oa-#{$size}h  { margin: -#{($size+.5)}rem !important; }
-  .ot-#{$size}   { margin-top: -#{$size}rem !important; }
-  .ot-#{$size}h  { margin-top: -#{($size+.5)}rem !important; }
-  .or-#{$size}   { margin-right: -#{$size}rem !important; }
-  .or-#{$size}h  { margin-right: -#{($size+.5)}rem !important; }
-  .ob-#{$size}   { margin-bottom: -#{$size}rem !important; }
-  .ob-#{$size}h  { margin-bottom: -#{($size+.5)}rem !important; }
-  .ol-#{$size}   { margin-left: -#{$size}rem !important; }
-  .ol-#{$size}h  { margin-left: -#{($size+.5)}rem !important; }
-  .ox-#{$size} {
-    margin-left: -#{$size}rem !important;
-    margin-right: -#{$size}rem !important;
-  }
-  .ox-#{$size}h {
-    margin-left: -#{($size+.5)}rem !important;
-    margin-right: -#{($size+.5)}rem !important;
-  }
-  .oy-#{$size} {
-    margin-bottom: -#{$size}rem !important;
-    margin-top: -#{$size}rem !important;
-  }
-  .oy-#{$size}h {
-    margin-bottom: -#{($size+.5)}rem !important;
-    margin-top: -#{($size+.5)}rem !important;
-  }
 
-  @each $breakpoint in map-keys($breakpoints) {
+// Non-breakpoint loop
+@for $i from 0 through $size {
+  .oa-#{$i}   { margin: -#{$i}rem !important; }
+  .oa-#{$i}h  { margin: -#{($i+.5)}rem !important; }
+  .ot-#{$i}   { margin-top: -#{$i}rem !important; }
+  .ot-#{$i}h  { margin-top: -#{($i+.5)}rem !important; }
+  .or-#{$i}   { margin-right: -#{$i}rem !important; }
+  .or-#{$i}h  { margin-right: -#{($i+.5)}rem !important; }
+  .ob-#{$i}   { margin-bottom: -#{$i}rem !important; }
+  .ob-#{$i}h  { margin-bottom: -#{($i+.5)}rem !important; }
+  .ol-#{$i}   { margin-left: -#{$i}rem !important; }
+  .ol-#{$i}h  { margin-left: -#{($i+.5)}rem !important; }
+  .ox-#{$i} {
+    margin-left: -#{$i}rem !important;
+    margin-right: -#{$i}rem !important;
+  }
+  .ox-#{$i}h {
+    margin-left: -#{($i+.5)}rem !important;
+    margin-right: -#{($i+.5)}rem !important;
+  }
+  .oy-#{$i} {
+    margin-bottom: -#{$i}rem !important;
+    margin-top: -#{$i}rem !important;
+  }
+  .oy-#{$i}h {
+    margin-bottom: -#{($i+.5)}rem !important;
+    margin-top: -#{($i+.5)}rem !important;
+  }
+}
+
+// Breakpoint loops
+@each $breakpoint in map-keys($breakpoints) {
+  @for $i from 0 through $size {
     @include mqbp-up($breakpoint) {
-      .oa-#{$size}\@#{$breakpoint}   { margin: -#{$size}rem !important; }
-      .oa-#{$size}h\@#{$breakpoint}  { margin: -#{($size+.5)}rem !important; }
-      .ot-#{$size}\@#{$breakpoint}   { margin-top: -#{$size}rem !important; }
-      .ot-#{$size}h\@#{$breakpoint}  { margin-top: -#{($size+.5)}rem !important; }
-      .or-#{$size}\@#{$breakpoint}   { margin-right: -#{$size}rem !important; }
-      .or-#{$size}h\@#{$breakpoint}  { margin-right: -#{($size+.5)}rem !important; }
-      .ob-#{$size}\@#{$breakpoint}   { margin-bottom: -#{$size}rem !important; }
-      .ob-#{$size}h\@#{$breakpoint}  { margin-bottom: -#{($size+.5)}rem !important; }
-      .ol-#{$size}\@#{$breakpoint}   { margin-left: -#{$size}rem !important; }
-      .ol-#{$size}h\@#{$breakpoint}  { margin-left: -#{($size+.5)}rem !important; }
-      .ox-#{$size}\@#{$breakpoint} {
-        margin-left:   -#{$size}rem !important;
-        margin-right:  -#{$size}rem !important;
+      .oa-#{$i}\@#{$breakpoint}   { margin: -#{$i}rem !important; }
+      .oa-#{$i}h\@#{$breakpoint}  { margin: -#{($i+.5)}rem !important; }
+      .ot-#{$i}\@#{$breakpoint}   { margin-top: -#{$i}rem !important; }
+      .ot-#{$i}h\@#{$breakpoint}  { margin-top: -#{($i+.5)}rem !important; }
+      .or-#{$i}\@#{$breakpoint}   { margin-right: -#{$i}rem !important; }
+      .or-#{$i}h\@#{$breakpoint}  { margin-right: -#{($i+.5)}rem !important; }
+      .ob-#{$i}\@#{$breakpoint}   { margin-bottom: -#{$i}rem !important; }
+      .ob-#{$i}h\@#{$breakpoint}  { margin-bottom: -#{($i+.5)}rem !important; }
+      .ol-#{$i}\@#{$breakpoint}   { margin-left: -#{$i}rem !important; }
+      .ol-#{$i}h\@#{$breakpoint}  { margin-left: -#{($i+.5)}rem !important; }
+      .ox-#{$i}\@#{$breakpoint} {
+        margin-left:   -#{$i}rem !important;
+        margin-right:  -#{$i}rem !important;
       }
-      .ox-#{$size}h\@#{$breakpoint} {
-        margin-left:   -#{($size+.5)}rem !important;
-        margin-right:  -#{($size+.5)}rem !important;
+      .ox-#{$i}h\@#{$breakpoint} {
+        margin-left:   -#{($i+.5)}rem !important;
+        margin-right:  -#{($i+.5)}rem !important;
       }
-      .oy-#{$size}\@#{$breakpoint} {
-        margin-bottom: -#{$size}rem !important;
-        margin-top:    -#{$size}rem !important;
+      .oy-#{$i}\@#{$breakpoint} {
+        margin-bottom: -#{$i}rem !important;
+        margin-top:    -#{$i}rem !important;
       }
-      .oy-#{$size}h\@#{$breakpoint} {
-        margin-bottom: -#{($size+.5)}rem !important;
-        margin-top:    -#{($size+.5)}rem !important;
+      .oy-#{$i}h\@#{$breakpoint} {
+        margin-bottom: -#{($i+.5)}rem !important;
+        margin-top:    -#{($i+.5)}rem !important;
       }
     }
   }
-
-  $size: $size - 1; // decrement size
 }
