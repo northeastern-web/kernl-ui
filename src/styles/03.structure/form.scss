@@ -103,6 +103,13 @@
 .input_choice {
   label { display: block; }
 
+  input,
+  select,
+  textarea {
+    display: inline-block;
+    width: auto;
+  }
+
   &.\-inline {
     @include mqbp-up(t) {
       align-items: center;
@@ -110,10 +117,6 @@
       flex-flow: row;
 
       label { margin-right: 1rem; }
-
-      input,
-      select,
-      textarea { display: inline-block; }
 
       .btn { margin-bottom: 0; }
     }

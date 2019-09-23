@@ -93,7 +93,7 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
-  margin: 0.15rem 0.25rem 0 0;
+  margin: 0 0.25rem 0 0;
   padding: 0;
   vertical-align: top;
 
@@ -125,19 +125,7 @@ output { display: inline-block; }
 
 //
 // Textual form controls
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="url"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
+input,
 textarea {
   background-clip: padding-box;
   background-color: #fff;
