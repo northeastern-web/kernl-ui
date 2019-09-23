@@ -5,14 +5,14 @@
 // PODS overrides
 div#nu__globalheader {
   @include make-section();
-  letter-spacing: 0;
+
   line-height: 28px;
   margin: 0;
   padding-bottom: 0 !important;
   padding-top: 0 !important;
   position: static;
   width: 100%;
-  z-index: 0;
+  z-index: 1;
 }
 
 .section_full div#nu__globalheader {
