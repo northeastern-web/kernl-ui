@@ -13,28 +13,28 @@ div#nu__globalheader {
   position: static;
   width: 100%;
   z-index: 1;
+
+  .section_full & { @include make-section('full'); }
+  .section_contain & { @include make-section('contain', $contain: $contain-width); }
 }
 
-.section_full div#nu__globalheader {
-  @include make-section('full');
+div#nu__global-footer {
+  .section_full & { @include make-section('full'); }
+  .section_contain & {
+    @include make-section('contain', $contain: $contain-width);
+
+    > div.nu__footer > div { width: 100% !important; }
+  }
 }
 
-.section_contain div#nu__globalheader {
-  @include make-section('contain', $contain: $contain-width);
-}
+#nu__utility-nav {
+  width: 100% !important;
 
-.section_contain.\-body div#nu__globalheader {
-  @include make-section();
-}
-
-div#nu__utility-nav { width: 100%; }
-
-div#nu__utility-nav > a {
-  display: inline-block;
-  height: 44px;
-  overflow: hidden;
-
-  > img {
+  > a {
+    display: inline-block;
     height: 44px;
+    overflow: hidden;
+
+    > img { height: 44px; }
   }
 }
