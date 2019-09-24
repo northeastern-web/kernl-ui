@@ -27,6 +27,12 @@ div#nu__global-footer {
   }
 }
 
+@media screen and (max-width: 740px) {
+  div#nu__supernav {
+    z-index: $z-4;
+  }
+}
+
 #nu__utility-nav {
   width: 100% !important;
 
