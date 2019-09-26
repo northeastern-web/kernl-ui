@@ -1,8 +1,9 @@
+<?php $opt = (isset($_GET['opt']) ? $_GET['opt'] : null); ?>
 <!-- start base masthead -->
 
-<header class="masthead">
+<header class="masthead<?= ' ' . $opt ?>">
   <a class="masthead_logo" href="#">
-    <img class="masthead_image" alt="Logo" src="/docs/images/logo.png">
+    <img class="masthead_image" alt="Logo" src="/docs/images/logo<?= ($opt == '-overlay') ? '-white' : '' ?>.png">
   </a>
   <div class="masthead_toggle">
     <button type="button" class="nav_handle hidden-up@d">
@@ -291,9 +292,16 @@
   </nav>
 </header>
 <main id="main_content">
-  <div class="section bg-img -hero -center">
+<!--   <div class="section bg-img -hero -center">
     <div class="section_header">
       <h2 class="section_title">{ <i>Example Hero</i> }</h2>
+    </div>
+  </div> -->
+
+  <div class="banner -bottom bg-blue-dark">
+    <div class="section_header">
+      <h2 class="section_title">Banner Example</h2>
+      <div class="section_subtitle">Here's a little example subtitle</div>
     </div>
   </div>
 </main>

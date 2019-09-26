@@ -187,10 +187,18 @@
     position: absolute;
 
     + main {
-      > .-banner,
+      > .banner,
       > .-hero {
         .section_header {
-          margin-top: 2rem;
+          margin-top: 3rem;
+
+          @include mqbp-up(t) {
+            margin-top: 4rem;
+          }
+
+          @include mqbp-up(d) {
+            margin-top: 5rem;
+          }
         }
       }
     }

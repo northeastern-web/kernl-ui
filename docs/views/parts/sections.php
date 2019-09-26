@@ -22,7 +22,7 @@
 </div>
 </section>
 
-<section class="section -banner -bal -measure-wide bg-img">
+<section class="banner -bal -measure-wide bg-img">
   <div class="section_header">
     <h1 class="section_title">Banner</hner with wide measure - Cras justo odio, dapibus ac facilisis in, egestas eget quam justo odio, dapibus ac facilisis in, egestas eget quam justo odio, dapibus ac facilisis in, egestas eget quam.</div>
   </div>

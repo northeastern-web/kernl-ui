@@ -36,44 +36,14 @@
     }
   }
 
-  // Banner option designed to function as page header,
-  // used once per page below masthead
-  &.\-banner {
-    @extend .fs-smooth;
-    align-items: center;
-    border-bottom: 1px solid rgba(177, 177, 177, 0.2);
-    display: flex;
-    padding-bottom: 4.4rem;
-    padding-top: 4.4rem;
-
-    &.\-top { align-items: flex-start; }
-    &.\-bottom { align-items: flex-end; }
-
-    @include mqbp-up(d) { flex-direction: row; }
-
-    &.\+nav {
-      align-items: initial;
-      flex: 0;
-      flex-direction: column;
-      justify-content: space-around;
-      padding-bottom: 5rem;
-
-      &.\--top { justify-content: flex-start; }
-      &.\--bottom { justify-content: flex-end; }
-
-      @include mqbp-up(d) {
-        padding-bottom: 4.5rem;
-      }
-    }
-  }
-
   // Hero default styling (HT Marketing)
   // designed to center and add a max width for generic use cases
   &.\-hero {
-    @extend .\-banner;
+    @extend .banner;
     @extend .\-measure-wide;
     @extend .\-center;
     @extend .flex-col;
+
     border-bottom: 0 none;
     padding-bottom: 10.6rem;
     padding-top: 10.6rem;
@@ -89,9 +59,14 @@
   // Options
 
   // Standardizing a common need for increased y-spacing on sections
-  &.\-lg {
+  &.\-md {
     padding-bottom: 6rem;
     padding-top: 6rem;
+  }
+
+  &.\-lg {
+    padding-bottom: 10rem;
+    padding-top: 10rem;
   }
 
   // --
@@ -156,7 +131,7 @@
   max-width: none;
   padding-top: 0;
 
-  + .section_subtitle { padding-top: 0.75rem; }
+  + .section_subtitle { padding-top: 0.5rem; }
 
   // adds line after title on via a section
   .section.\-bal & {
@@ -175,15 +150,15 @@
     line-height: 1.2;
     text-indent: -2px;
 
-    // increase the title when .-banner
-    .section.\-banner & { @include type-d5(); }
+    // increase the title when .banner
+    .section.banner & { @include type-d5(); }
   }
 
   @include mqbp-up(d) {
     text-indent: -3px;
 
-    // increase the title when .-banner
-    .section.\-banner & { @include type-d6(); }
+    // increase the title when .banner
+    .section.banner & { @include type-d6(); }
   }
 }
 // stylelint-enable no-descending-specificity
