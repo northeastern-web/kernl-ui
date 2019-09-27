@@ -3,20 +3,19 @@
 
 
 .accordion {
-  // @include accordion_variant();
   border: 1px solid $gray-200;
   margin-top: -1px;
 
   &_link {
     color: inherit;
     display: block;
-    padding: 1rem 3rem 1rem 0.75rem;
+    padding: $gutter 3rem $gutter $gutter; // padding right for toggle icon
     position: relative;
     text-align: left;
     width: 100%;
 
     &:after {
-      content: "\e970"; // plus icon
+      content: "\e970"; // 'plus' icon
       font-family: "feathericons";
       font-weight: normal;
       position: absolute;
@@ -25,113 +24,11 @@
     }
 
     &[aria-selected="true"] {
-      &:after { content: "\e95c"; } // minus icon
+      &:after { content: "\e95c"; } // 'minus' icon
     }
   }
 
-  &_body { padding: 0 0.75rem; }
-
-  // &_item {
-  //   border-top: 1px solid rgba($black, 0.2);
-  //   margin-bottom: 0;
-  //   padding-top: 0;
-
-  //   &:first-child { border-top: 0 none; }
-  // }
-
-  // &_header {
-  //   border: 0 none;
-  //   color: inherit;
-  //   cursor: pointer;
-  //   display: block;
-  //   padding: 1rem 3rem 1rem 0.75rem;
-  //   position: relative;
-  //   text-align: left;
-  //   width: 100%;
-
-  //   &:after {
-  //     content: "\e970"; // plus icon
-  //     font-family: "feathericons";
-  //     font-weight: normal;
-  //     position: absolute;
-  //     right: 1.5rem;
-  //     top: 1rem;
-  //   }
-
-  //   &:active { outline: none; }
-
-  //   &.\-active,
-  //   &.fs-swap-active {
-  //     &:after { content: "\e95c"; } // minus icon
-  //   }
-  // }
-
-  // &_body {
-  //   display: none;
-  //   position: relative;
-
-  //   &.fs-swap-active {
-  //     display: block;
-  //   }
-  // }
-
-  // &_copy {
-  //   background: #fff;
-  //   font-size: $fs-sm;
-  //   padding: 1rem 3rem 1rem 0.75rem;
-  // }
-}
-
-/*
-  // --
-  // Modifiers
-
-  &.\-white {
-    @include accordion_variant($type-color, #fff, #fff);
-
-    > .accordion_item > .accordion_title {
-      font-weight: 700;
-      color: $type-color;
-      transition: color $transition;
-
-      &.\-active {
-        color: rgba($type-color, 0.5);
-      }
-    }
-
-    .accordion_copy { padding-top: 0; }
-  }
-
-  &.\-dark {
-    @include accordion_variant(#fff, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25));
-
-    border: 1px solid rgba($white, 0.2);
-
-    .accordion_item {
-      border-top: 1px solid rgba($white, 0.2);
-
-      &:first-child { border-top: 0 none; }
-
-      > .__title { color: $white; }
-    }
-  }
-
-  &.\-spaced {
-    border: 0 none;
-
-    > .accordion_item {
-      border: 1px solid rgba($black, 0.2);
-      margin-bottom: 1rem;
-    }
-  }
-
-  .\-visible + .accordion_content {
-    display: block;
+  &_body {
+    padding: 0 $gutter;
   }
 }
-
-// card contained within an accordion
-.accordion .card {
-  &:first-child .accordion_title { border-top: 0 none; }
-}
-*/

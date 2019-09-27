@@ -40,6 +40,13 @@
     .\-border & {
       border-bottom: 1px solid $gray-200;
     }
+
+    .\-pagination & {
+      padding-left: 0;
+      list-style: none;
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 
   &_item {
@@ -53,6 +60,12 @@
 
     .\-inline & {
       display: inline-flex;
+    }
+
+    .\-pagination & {
+      border-bottom: 0 none;
+      margin-right: 1px;
+      margin-left: 1px;
     }
   }
 
@@ -97,6 +110,43 @@
       background-color: rgba($gray-200, 0.3);
       color: inherit;
       text-decoration: none;
+    }
+
+    .\-pagination & {
+      display: block;
+      width: 1.75rem;
+      height: 1.75rem;
+      line-height: 1.75rem;
+      background: none;
+      text-align: center;
+      font-size: 0.875rem;
+      color: $type-color;
+      border-radius: 2rem;
+      padding: 0;
+      border: 0 none;
+      font-weight: initial;
+
+      &:hover { background-color: rgba(0, 0, 0, 0.1); }
+
+      &.\-active,
+      &.\-active:hover {
+        background-color: $type-color;
+        color: #fff;
+        cursor: default;
+      }
+
+      .feather {
+        margin-top: 1px;
+        stroke-width: 1;
+
+        @include mqbp-up(t) {
+          margin-top: 2px;
+        }
+
+        @include mqbp-up(w) {
+          margin-top: 3px;
+        }
+      }
     }
   }
 

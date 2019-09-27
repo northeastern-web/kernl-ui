@@ -19,6 +19,8 @@ div#nu__globalheader {
 }
 
 div#nu__global-footer {
+  @include make-section();
+
   .section_full & { @include make-section('full'); }
   .section_contain & {
     @include make-section('contain', $contain: $contain-width);

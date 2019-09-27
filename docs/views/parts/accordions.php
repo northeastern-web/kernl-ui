@@ -10,7 +10,7 @@ $bg_param = (isset($_GET['bg']) ? $_GET['bg'] : null);
 <section class="section">
   <div class="row">
     <div class="col mx-auto pb-1">
-      <header class="k_section__header">Base Accordion</header>
+      <header class="k_section__header">Based Accordion</header>
       <div class="accordion">
         <a id="toggle_0_1" href="#" data-swap-target="#accordion_0_1" class="accordion_link" data-toggle data-swap-options='{"collapse":true}' role="tab" data-swap-group="accordiongroup_0">Dolor Fermentum</a>
         <div id="accordion_0_1" class="accordion_body" role="tabpanel" aria-hidden="true" aria-labelledby="toggle_0_1">

@@ -168,3 +168,28 @@
 
   </div>
 </section>
+
+<section class="section">
+  <header class="k_section__header mb-2">Pagination</header>
+  <nav class="nav -pagination" aria-label="Page navigation">
+    <ul class="nav_list">
+      <li class="nav_item">
+        <a class="nav_link" href="#" aria-label="Previous">
+          <i data-feather="chevron-left"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="nav_item"><a class="nav_link" href="#">1</a></li>
+      <li class="nav_item"><a class="nav_link" href="#">2</a></li>
+      <li class="nav_item"><a class="nav_link -active" href="#">3</a></li>
+      <li class="nav_item"><a class="nav_link" href="#">4</a></li>
+      <li class="nav_item"><a class="nav_link" href="#">5</a></li>
+      <li class="nav_item">
+        <a class="nav_link" href="#" aria-label="Next">
+          <i data-feather="chevron-right"></i>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>

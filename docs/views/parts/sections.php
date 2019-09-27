@@ -10,7 +10,7 @@
     <div class="section_subtitle">Generic look and feel with columns following</div>
   </div>
   <div class="row">
-    <div class="col w-1/3@t line-l-gold-gray-warm-light">
+    <div class="col w-1/3@t line-l-gold-beige">
       Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam
     </div>
     <div class="col w-1/3@t line-l-red-orange">

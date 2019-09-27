@@ -130,10 +130,10 @@ $l = 0;
       <div class="bg-red-orange">NU Red/Objectively Orange<br><span class="hex-color">bg-red-orange</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="bg-orange-gray-warm-light">Objectively Orange/Major Tan<br><span class="hex-color">bg-orange-gray-warm-light</span></div>
+      <div class="bg-orange-beige">Objectively Orange/Major Tan<br><span class="hex-color">bg-orange-beige</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="bg-gray-warm-light-red">Major Tan/NU Red<br><span class="hex-color">bg-gray-warm-light-red</span></div>
+      <div class="bg-beige-red">Major Tan/NU Red<br><span class="hex-color">bg-beige-red</span></div>
     </div>
     <div class="col w-1/3@t">
       <div class="bg-red-yellow">NU Red/Youthful Yellow<br><span class="hex-color">bg-red-yellow</span></div>
@@ -180,7 +180,7 @@ $l = 0;
       <div class="bg-gray-cool-blue-dark">Grad Gray/Business Blue<br><span class="hex-color">bg-gray-cool-blue-dark</span></div>
     </div>
     <div class="col w-1/3@t">
-      <div class="bg-gold-gray-warm-light">Presidential Gold/Major Tan<br><span class="hex-color">bg-gold-gray-warm-light</span></div>
+      <div class="bg-gold-beige">Presidential Gold/Major Tan<br><span class="hex-color">bg-gold-beige</span></div>
     </div>
 
     <div class="col w-1/3@t">
