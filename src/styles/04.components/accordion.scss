@@ -9,7 +9,7 @@
   &_link {
     color: inherit;
     display: block;
-    padding: $gutter 3rem $gutter $gutter; // padding right for toggle icon
+    padding: ($gutter / 2) 3rem ($gutter / 2) ($gutter / 2); // padding right for toggle icon
     position: relative;
     text-align: left;
     width: 100%;
@@ -20,7 +20,7 @@
       font-weight: normal;
       position: absolute;
       right: 1.5rem;
-      top: 1rem;
+      top: $gutter / 2;
     }
 
     &[aria-selected="true"] {
@@ -29,6 +29,6 @@
   }
 
   &_body {
-    padding: 0 $gutter;
+    padding: 0 ($gutter / 2);
   }
 }
