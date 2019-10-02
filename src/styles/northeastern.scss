@@ -22,11 +22,9 @@ div#nu__global-footer {
   @include make-section();
 
   .section_full & { @include make-section('full'); }
-  .section_contain & {
-    @include make-section('contain', $contain: $contain-width);
+  .section_contain & { @include make-section('contain', $contain: $contain-width); }
 
-    > div.nu__footer > div { width: 100% !important; }
-  }
+  > div.nu__footer > div { width: 100% !important; }
 }
 
 div#nu__supernav {
