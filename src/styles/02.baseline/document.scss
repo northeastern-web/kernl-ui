@@ -27,6 +27,9 @@ body {
   margin: 0;
   overflow-x: hidden; // prevent longer words on xs from forcing an x-axis scroll
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 article,
@@ -36,6 +39,7 @@ header,
 nav,
 section { display: block; }
 
+main { flex: 1; }
 
 //
 // Text-level semantics
