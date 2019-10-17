@@ -206,7 +206,7 @@
 
   &.\-dark { background-color: $black; }
 
-  &_utility {
+  &_support {
     .nav_link {
       text-transform: uppercase;
       letter-spacing: 0.05rem;
@@ -502,8 +502,8 @@
       }
     }
 
-    &.\-utility {
-      .nav_list:not(.masthead_utility) {
+    &.\-support {
+      .nav_list:not(.masthead_support) {
         margin-top: 2rem;
 
         .nav_item {
@@ -535,7 +535,17 @@
       }
     }
 
-    &.\-navbar { padding-bottom: 2rem !important; }
+    &.\-navbar {
+      padding-bottom: 2rem !important;
+    }
+
+    &.\-support {
+      .\+children {
+        &:hover {
+          .nav_sublist { top: 0.25rem; }
+        }
+      }
+    }
 
     &.\-border {
       .nav_link {
@@ -558,7 +568,7 @@
       }
     }
 
-    .masthead_utility {
+    .masthead_support {
       @include make-section();
 
       padding-bottom: 0;
@@ -622,6 +632,20 @@
 }
 
 .masthead_navbar {
+  @include mqbp-up(d) {
+    @include make-section();
+
+    background-color: $gray-100;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 2rem;
+    right: 0;
+    display: inline-flex;
+    justify-content: space-between;
+  }
+
   .nav_list {
     padding-top: 0;
 
@@ -637,27 +661,17 @@
     }
   }
 
-  .nav_link {
+  .nav_link:not(.masthead_navbar_id) {
     @include mqbp-up(d) {
-      padding-bottom: 0 !important;
-      padding-top: 0 !important;
+      padding-bottom: 0.5rem !important;
+      padding-top: 0.5rem !important;
     }
   }
-}
 
-.masthead_navbar {
-  @include mqbp-up(d) {
-    @include make-section();
-
-    background-color: $gray-100;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    bottom: 0;
-    height: 2rem;
-    right: 0;
-    display: inline-flex;
-    justify-content: space-between;
+  .\+children {
+    &:hover {
+      .nav_sublist { top: 1.75rem !important; }
+    }
   }
 }
 
