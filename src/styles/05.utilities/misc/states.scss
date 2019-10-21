@@ -1,0 +1,19 @@
+// Misc Utility
+// States
+//
+// .<state>:<selector>-<value>
+
+
+.hover\: {
+    &tc-blue {
+        &:hover { color: $blue; }
+    }
+}
+
+.group-hover\: {
+    .group & {
+        &tc-blue {
+            &:hover { color: $blue; }
+        }
+    }
+}

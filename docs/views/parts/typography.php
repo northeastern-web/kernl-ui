@@ -23,6 +23,18 @@
     </div>
   </div>
 </section>
+
+<section class="section bwt-1 bc-gray-100">
+  <div class="row">
+    <div class="col">
+      <p><a class="hover:tc-blue" href="#">Hover Me</a></p>
+      <div class="group pa-1 bg-gray-100 ta-c">
+        <p class="mb-0"><a href="#" class="tc-black group-hover:tc-blue">Group Hover</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section k_bg-light">
   <div class="row">
     <div class="col">
