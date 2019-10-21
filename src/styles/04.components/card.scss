@@ -35,6 +35,11 @@
     @extend .flex-middle;
   }
 
+  &.\-profile {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
   &.\-bottom {
     @extend .justify-end;
   }
@@ -112,6 +117,12 @@
       box-shadow: $box-shadow-inset-xl;
     }
 
+    .\-profile & {
+      &:hover {
+        box-shadow: $box-shadow-none;
+      }
+    }
+
     // Horizontal
     .\-h & {
       flex-direction: row;
@@ -180,6 +191,10 @@
     .\-middle &,
     .\-bottom & {
       flex: 0;
+    }
+
+    .\-profile & {
+      padding: 0;
     }
 
     .\-middle.\-overlay & {
@@ -351,6 +366,11 @@
       bottom: 0;
       left: 50%;
       width: 50%;
+    }
+
+    .\-profile & {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
