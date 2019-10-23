@@ -27,9 +27,13 @@
 <section class="section bwt-1 bc-gray-100">
   <div class="row">
     <div class="col">
-      <p><a class="hover:tc-blue" href="#">Hover Me</a></p>
-      <div class="group pa-1 bg-gray-100 ta-c">
-        <p class="mb-0"><a href="#" class="tc-black group-hover:tc-blue">Group Hover</a></p>
+      <p><a class="hover:tc-blue" href="#">Red turn blue</a></p>
+      <div class="group pa-2 bg-gray-100 ta-c">
+        <p class="mb-0">
+          <a href="#" class="bwa-0 bwb-2 bc-none bg-white tc-black group-hover:tc-blue group-hover:bc-red">
+            Group hover affects targeted element
+          </a>
+        </p>
       </div>
     </div>
   </div>

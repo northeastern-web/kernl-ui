@@ -192,7 +192,7 @@
 
   <div class="row">
     <div class="col w-1/2 w-1/3@t w-20@d">
-      <article class="card -profile">
+      <article class="card -profile group">
         <a href="#" class="card_link">
           <div class="card_media ar-1x1"></div>
           <div class="card_body py-1">
@@ -201,13 +201,13 @@
             <p>General Educational Development (GED) Examiner</p>
           </div>
           <div class="card_footer">
-            <div class="card_column"><i data-feather="more-vertical" class="-sm"></i>View Profile</div>
+            <div class="card_column bwa-0 bwb-2 bc-none group-hover:bc-red"><i data-feather="more-vertical" class="-sm"></i>View Profile</div>
           </div>
         </a>
       </article>
     </div>
     <div class="col w-1/2 w-1/3@t w-20@d">
-      <article class="card -profile">
+      <article class="card -profile group">
         <a href="#" class="card_link">
           <div class="card_media ar-1x1"></div>
           <div class="card_body py-1">
@@ -216,13 +216,13 @@
             <p>Individualized Education Plan (IEP) Aide</p>
           </div>
           <div class="card_footer">
-            <div class="card_column"><i data-feather="more-vertical" class="-sm"></i>View Profile</div>
+            <div class="card_column bwa-0 bwb-2 bc-none group-hover:bc-red"><i data-feather="more-vertical" class="-sm"></i>View Profile</div>
           </div>
         </a>
       </article>
     </div>
     <div class="col w-1/2 w-1/3@t w-20@d">
-      <article class="card -profile">
+      <article class="card -profile group">
         <a href="#" class="card_link">
           <div class="card_media ar-1x1"></div>
           <div class="card_body py-1">
@@ -231,13 +231,13 @@
             <p>Assistant Professor, Communication Studies and Faculty Affiliate, Women's', Gender, &amp; Sexuality Studies Program and Department of Cultures, Societies, &amp; Global Studies</p>
           </div>
           <div class="card_footer">
-            <div class="card_column"><i data-feather="more-vertical" class="-sm"></i>View Profile</div>
+            <div class="card_column bwa-0 bwb-2 bc-none group-hover:bc-red"><i data-feather="more-vertical" class="-sm"></i>View Profile</div>
            </div>
         </a>
       </article>
     </div>
     <div class="col w-1/2 w-1/3@t w-20@d">
-      <article class="card -profile">
+      <article class="card -profile group">
         <a href="#" class="card_link">
           <div class="card_media ar-1x1"></div>
           <div class="card_body py-1">
@@ -246,13 +246,13 @@
             <p>Scholastic Aptitude Test (SAT) Grader</p>
           </div>
           <div class="card_footer">
-            <div class="card_column"><i data-feather="more-vertical" class="-sm"></i>View Profile</div>
+            <div class="card_column bwa-0 bwb-2 bc-none group-hover:bc-red"><i data-feather="more-vertical" class="-sm"></i>View Profile</div>
           </div>
         </a>
       </article>
     </div>
     <div class="col w-1/2 w-1/3@t w-20@d">
-      <article class="card -profile">
+      <article class="card -profile group">
         <a href="#" class="card_link">
           <div class="card_media ar-1x1"></div>
           <div class="card_body py-1">
@@ -261,7 +261,7 @@
             <p>Associate Dean of Academic Affairs, Diversity and Inclusion and Dean's Professor of Civic Sustainability, College of Social Sciences and Humanities</p>
           </div>
           <div class="card_footer">
-            <div class="card_column"><i data-feather="more-vertical" class="-sm"></i>View Profile</div>
+            <div class="card_column bwa-0 bwb-2 bc-none group-hover:bc-red"><i data-feather="more-vertical" class="-sm"></i>View Profile</div>
           </div>
         </a>
       </article>

@@ -11,9 +11,13 @@
 }
 
 .group-hover\: {
-    .group & {
+    .group:hover & {
         &tc-blue {
-            &:hover { color: $blue; }
+            color: $blue;
+        }
+
+        &bc-red {
+            border-color: $red !important;
         }
     }
 }
