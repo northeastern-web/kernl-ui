@@ -3,21 +3,5 @@
 //
 // .<state>:<selector>-<value>
 
-
-.hover\: {
-    &tc-blue {
-        &:hover { color: $blue; }
-    }
-}
-
-.group-hover\: {
-    .group:hover & {
-        &tc-blue {
-            color: $blue;
-        }
-
-        &bc-red {
-            border-color: $red !important;
-        }
-    }
-}
+// colors moved to utilities/background||border||typography/color
+// keeping file for future state utilities...

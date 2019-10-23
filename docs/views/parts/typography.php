@@ -15,7 +15,7 @@
         <li>17px base font-size (<code>xl</code>)</li>
         <li>18px base font-size (<code>xx</code>)</li>
       </ul>
-      <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. <a href="#" script="preventDefault()">Pellentesque ornare sem lacinia</a> quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+      <p>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. <a class="hover:tc-green" href="#" script="preventDefault()">Pellentesque ornare sem lacinia</a> quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       <section class="section bg-img mb-1 pa-2">
         <p class="mb-0"><b>Body copy <span class="show-font-size">(<span class="element-font-size"></span> @ 1rem)</span> in a nested banner.</b> Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       </section>
@@ -27,10 +27,10 @@
 <section class="section bwt-1 bc-gray-100">
   <div class="row">
     <div class="col">
-      <p><a class="hover:tc-blue" href="#">Red turn blue</a></p>
+      <p class="group"><a class="hover:tc-blue bwa-1 group-hover:bc-green" href="#">Red turn blue</a></p>
       <div class="group pa-2 bg-gray-100 ta-c">
         <p class="mb-0">
-          <a href="#" class="bwa-0 bwb-2 bc-none bg-white tc-black group-hover:tc-blue group-hover:bc-red">
+          <a href="#" class="bwa-0 bwb-2 bc-none bg-white tc-black group-hover:bg-yellow group-hover:tc-blue group-hover:bc-red">
             Group hover affects targeted element
           </a>
         </p>

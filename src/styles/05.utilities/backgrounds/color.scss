@@ -5,6 +5,8 @@
 
 
 @include make_colors('bg');
+@include make_colors('hover\\:bg');
+@include make_colors('group-hover\\:bg');
 
 .bg-none {
   background: none !important;

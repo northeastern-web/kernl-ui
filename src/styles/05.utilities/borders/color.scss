@@ -5,5 +5,7 @@
 
 
 @include make_colors('bc');
+@include make_colors('hover\\:bc');
+@include make_colors('group-hover\\:bc');
 
 .bc-none { border-color: transparent !important; }
