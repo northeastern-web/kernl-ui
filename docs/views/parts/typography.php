@@ -27,7 +27,7 @@
 <section class="section bwt-1 bc-gray-100">
   <div class="row">
     <div class="col">
-      <p class="group"><a class="hover:tc-blue bwa-1 group-hover:bc-green" href="#">Red turn blue</a></p>
+      <p><a class="tc-gray-200 hover:tc-blue" href="#">Red turn blue</a></p>
       <div class="group pa-2 bg-gray-100 ta-c">
         <p class="mb-0">
           <a href="#" class="bwa-0 bwb-2 bc-none bg-white tc-black group-hover:bg-yellow group-hover:tc-blue group-hover:bc-red">

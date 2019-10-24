@@ -31,12 +31,15 @@
     width: 65%;
 
     &:focus { outline: none; }
+  }
 
-    &:before {
+  &.\-search input {
+    &::before {
       color: rgba($type-color, 0.5);
-      content: "\e97b";
-      font-family: "feathericons";
+      content: $icon-search;
+      font-family: "feathericons", sans-serif;
       left: 0.85rem;
+      font-size: inherit;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);

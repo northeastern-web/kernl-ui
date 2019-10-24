@@ -150,7 +150,7 @@
     transition: left $transition;
 
     &::before {
-      content: $icon--chevron-left;
+      content: $icon-chevron-left;
       text-indent: -2px;
     }
   }
@@ -159,7 +159,7 @@
     transition: right $transition;
 
     &::before {
-      content: $icon--chevron-right;
+      content: $icon-chevron-right;
       text-indent: 2px;
     }
   }

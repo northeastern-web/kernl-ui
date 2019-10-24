@@ -7,7 +7,7 @@
 
 <header class="masthead<?= ' ' . $opt ?> -support -navbar">
   <a class="masthead_logo" href="#">
-    <img class="masthead_image" alt="Logo" src="/docs/images/logo<?= ($opt == '-overlay') ? '-white' : '' ?>.png">
+    <img class="masthead_image" alt="Logo" src="/docs/images/logo<?= ($opt == '-overlay' || $opt == '-dark') ? '-white' : '' ?>.png">
   </a>
   <div class="masthead_toggle">
     <button type="button" class="nav_handle hidden-up@d">
@@ -16,26 +16,27 @@
   </div>
   <nav class="nav masthead_nav" data-navigation-handle=".nav_handle" data-navigation-content=".masthead_toggle">
     <div class="w-100 d-flex justify-between hidden-up@d">
-      <a class="masthead_logo pl-1" href="#">
-        <img class="masthead_image" alt="Logo" src="/docs/images/logo.png">
+      <a class="masthead_logo pl-1 mb-0h" href="#">
+        <img class="masthead_image" alt="Logo" src="/docs/images/logo<?= ($opt == '-dark') ? '-white' : '' ?>.png">
       </a>
       <button type="button" class="nav_handle hidden-up@d mr-1">
         <span class="sr-only">Close Menu</span>
       </button>
     </div>
-    <div class="input_enclosed -search bg-gray-50 mb-0h@t hidden-up@d pl-1">
+    <div class="input_enclosed -search bg-gray-50 mx-1 mb-3h hidden-up@d pl-1 br">
       <label class="sr-only">Search</label>
-      <input type="text" placeholder="Search for meaning">
-      <button type="submit" class="btn">Go</button>
+      <input type="text" placeholder="Search">
+      <button type="submit" class="btn tt-caps">Go</button>
     </div>
 
 
     <!-- local id navbar list -->
     <div class="masthead_navbar">
-      <a class="masthead_navbar_id line-l-red ml-1" href="#">
+      <a class="masthead_navbar_id" href="#">
         Identifier
       </a>
       <ul class="nav_list">
+        <li class="nav_item">
         <li class="nav_item">
           <a class="nav_link" href="#">Parturient Lorem</a>
         </li>
@@ -330,7 +331,7 @@
     </ul>
 
   </nav>
-  <a class="masthead_navbar_id bwt-1 bc-black-alpha hidden-up@d" href="#">
+  <a class="masthead_navbar_id bwt-1 hidden-up@d" href="#">
     Identifier
   </a>
 </header>

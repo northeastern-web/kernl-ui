@@ -128,6 +128,7 @@
     &_list {
       clear: both;
       list-style: none;
+      margin-bottom: 3.5rem;
       margin-left: 1rem;
       margin-right: 1rem;
       padding-left: 0;
@@ -143,7 +144,7 @@
     }
 
     &_link {
-      border-bottom: 1px solid rgba(lighten($type-color, 70%), 0.2);
+      border-bottom: 1px solid rgba(lighten($type-color, 50%), 0.3);
       color: inherit;
       display: block;
       font-size: 19px;
@@ -202,9 +203,37 @@
         }
       }
     }
+
+    &.\-navbar {
+      + main {
+        > .banner,
+        > .-hero {
+          .section_header {
+            margin-top: 6rem;
+
+            @include mqbp-up(t) {
+              margin-top: 7rem;
+            }
+
+            @include mqbp-up(d) {
+              margin-top: 8rem;
+            }
+          }
+        }
+      }
+    }
   }
 
-  &.\-dark { background-color: $black; }
+  &.\-dark {
+    @extend .bg-black;
+
+    @include mqbp-down(t) {
+      .nav,
+      .nav_sublist[aria-expanded=true] {
+        background-color: $black;
+      }
+    }
+  }
 
   &_support {
     .nav_link {
@@ -536,7 +565,7 @@
     }
 
     &.\-navbar {
-      padding-bottom: 2rem !important;
+      padding-bottom: 3rem !important;
     }
 
     &.\-support {
@@ -615,12 +644,24 @@
 
 .masthead_navbar_id {
   @extend .nav_link;
+  @extend .tt-caps;
 
+  border-bottom: 0 none !important;
   flex-basis: 100%;
+  font-weight: 700;
+
+  @include mqbp-down(t) {
+    border-top: 1px solid $black-alpha;
+
+    .\-dark &,
+    .\-overlay & {
+      border-top: 1px solid $white-alpha;
+      color: $white;
+    }
+  }
 
   .masthead_nav & {
     margin-left: 1rem;
-    font-weight: 700;
 
     @include mqbp-up(d) {
       flex-basis: auto;
@@ -635,12 +676,12 @@
   @include mqbp-up(d) {
     @include make-section();
 
-    background-color: $gray-100;
+    background-color: rgba($gray-200, 0.35);
     position: absolute;
     left: 0;
     width: 100%;
     bottom: 0;
-    height: 2rem;
+    height: 3rem;
     right: 0;
     display: inline-flex;
     justify-content: space-between;
@@ -670,9 +711,15 @@
 
   .\+children {
     &:hover {
-      .nav_sublist { top: 1.75rem !important; }
+      .nav_sublist { top: 2.5rem !important; }
     }
   }
 }
 
-div#nu__globalheader + .masthead.\-overlay { margin-top: 44px; }
+.masthead_nav .masthead_navbar_id {
+  border-top: 0 none;
+
+  .\-overlay & { color: $type-color; }
+}
+
+// div#nu__globalheader + .masthead.\-overlay { margin-top: 44px; }
