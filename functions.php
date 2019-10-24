@@ -2,7 +2,7 @@
 $url = '';
 
 if ($_SERVER['HTTP_HOST'] == 'kernl-ui.test') {
-    $url = 'https://'. $_SERVER['HTTP_HOST'];
+    $url = 'https://' . $_SERVER['HTTP_HOST'];
 } else {
     $url = 'https://assets.provost.northeastern.edu/kernl-ui';
 }
@@ -13,7 +13,7 @@ if ($_SERVER['HTTP_HOST'] == 'kernl-ui.test') {
  */
 function getKernlFiles()
 {
-    $dir = new DirectoryIterator(dirname(__FILE__).'/docs/views/parts');
+    $dir = new DirectoryIterator(dirname(__FILE__) . '/docs/views/parts');
     $files = [];
     foreach ($dir as $fileinfo) {
         if (!$fileinfo->isDot() && $fileinfo->getFilename() != 'cards-old.php') {
@@ -35,4 +35,19 @@ function getVersion()
     $json = json_decode($str, true); // decode the JSON into an associative array
     $version = $json['version'];
     return $version;
+}
+
+function chromeHeader()
+{
+    $context = stream_context_create([
+        'http' => [
+            'timeout' => 3,
+        ]
+    ]);
+
+    $header = file_get_contents('https://www.northeastern.edu/resources/components/?return=main-menu', false, $context);
+
+    if (!empty($header)) {
+        return $header;
+    }
 }

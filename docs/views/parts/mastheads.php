@@ -1,6 +1,10 @@
 <?php $opt = (isset($_GET['opt']) ? $_GET['opt'] : null); ?>
 <!-- start base masthead -->
 
+<div id="nu__globalheader">
+  <?= chromeHeader(); ?>
+</div>
+
 <header class="masthead<?= ' ' . $opt ?> -support -navbar">
   <a class="masthead_logo" href="#">
     <img class="masthead_image" alt="Logo" src="/docs/images/logo<?= ($opt == '-overlay') ? '-white' : '' ?>.png">
@@ -26,7 +30,7 @@
     </div>
 
 
-<!-- local id navbar list -->
+    <!-- local id navbar list -->
     <div class="masthead_navbar">
       <a class="masthead_navbar_id line-l-red ml-1" href="#">
         Identifier
@@ -55,7 +59,7 @@
         </li>
       </ul>
     </div>
-<!-- standard nav list -->
+    <!-- standard nav list -->
 
     <div class="masthead_central">
       <ul class="nav_list">
@@ -115,12 +119,14 @@
         </li>
         <li class="nav_item hidden-down@t">
           <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="9.5" cy="9.5" r="6.5"/><path d="M18 18l-3.2-3.2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+              <circle cx="9.5" cy="9.5" r="6.5" />
+              <path d="M18 18l-3.2-3.2" /></svg>
           </a>
         </li>
       </ul>
     </div>
-<?php /*
+    <?php /*
 <!-- // megamenu list -->
     <div class="masthead_central">
       <ul class="nav_list">
@@ -329,7 +335,7 @@
   </a>
 </header>
 <main id="main_content">
-<!--   <div class="section bg-img -hero -center">
+  <!--   <div class="section bg-img -hero -center">
     <div class="section_header">
       <h2 class="section_title">{ <i>Example Hero</i> }</h2>
     </div>
