@@ -709,9 +709,11 @@
     }
   }
 
-  .\+children {
-    &:hover {
-      .nav_sublist { top: 2.5rem !important; }
+  @include mqbp-up(d) {
+    .\+children {
+      &:hover {
+        .nav_sublist { top: 2.5rem !important; }
+      }
     }
   }
 }
@@ -722,4 +724,78 @@
   .\-overlay & { color: $type-color; }
 }
 
-// div#nu__globalheader + .masthead.\-overlay { margin-top: 44px; }
+// restated for focus-within seperately from hover,
+// as IE and Edge will completely ignore all
+// definitions if grouped together :\
+@include mqbp-up(d) {
+  .masthead .\+children {
+    &:focus-within {
+      .nav_sublist {
+        background-color: $white;
+        height: auto;
+        margin-top: 0;
+        max-height: 25rem;
+        opacity: 1;
+        overflow: scroll;
+        padding: 1rem;
+        width: 13rem;
+
+        .nav_sublist { display: none; }
+      }
+    }
+  }
+
+  .masthead.\-dark .\+children {
+    &:focus-within {
+      .nav_sublist {
+        background-color: $black;
+        border-color: $gray-400;
+
+        &::after {
+          background-color: $black;
+          border-color: $gray-300;
+        }
+      }
+    }
+  }
+
+  .masthead.\-megamenu .\+children {
+    &:focus-within {
+      .nav_sublist {
+        height: auto;
+        background-color: $white;
+        overflow: visible;
+        max-height: 20rem;
+        z-index: 300;
+        width: auto;
+        opacity: 1;
+        padding: 1rem;
+        box-shadow: 0px 2px 1px 0 rgba($black, 0.1);
+        transition: max-height 0.4s ease 0.1s,
+                    box-shadow $transition,
+                    color $transition 0.3s;
+
+        &:before { width: 100%; }
+
+        > .\-feature {
+          background-color: rgba($gray-400, .15);
+          transition: background 0.3s ease 0.1s;
+        }
+      }
+
+      .nav_item { margin: 0; }
+
+      > .nav_link {
+        border-bottom-color: rgba($type-color, 0.25);
+
+        &:after { color: $gray-400; }
+      }
+    }
+  }
+
+  .masthead_navbar .\+children {
+    &:focus-within {
+      .nav_sublist { top: 2.5rem !important; }
+    }
+  }
+}

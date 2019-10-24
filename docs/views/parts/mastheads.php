@@ -37,12 +37,11 @@
       </a>
       <ul class="nav_list">
         <li class="nav_item">
-        <li class="nav_item">
           <a class="nav_link" href="#">Parturient Lorem</a>
         </li>
         <li class="nav_item +children">
-          <a class="nav_link" href="#">Parturient</a>
-          <ul class="nav_sublist">
+          <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Parturient</a>
+          <ul class="nav_sublist" aria-expanded="false" data-depth="0">
             <li class="nav_back"><a href="#">Parturient</a></li>
             <li class="nav_subitem">
               <a class="nav_sublink" href="#">Something</a>
