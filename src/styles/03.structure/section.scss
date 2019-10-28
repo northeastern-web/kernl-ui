@@ -145,6 +145,9 @@
     }
   }
 
+  // increase the title when .banner
+  .section.banner & { @include type-d4(); }
+
   @include mqbp-up(t) {
     @include type-d4();
     line-height: 1.2;
