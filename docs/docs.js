@@ -21,7 +21,7 @@ $('#kernl .bg-img').each(function() {
 $('#kernl .card_media').each(function() {
   const randomImages = Math.floor(Math.random() * images.length);
   const selectedImg = images.splice(randomImages,1); // no repeated images
-  $(this).append(`<img class='card_img' src='${path}${selectedImg}' alt=''>`);
+  $(this).append(`<img class='card_img group-hover:scale' src='${path}${selectedImg}' alt=''>`);
 });
 
 
