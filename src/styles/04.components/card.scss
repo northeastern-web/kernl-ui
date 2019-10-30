@@ -239,8 +239,18 @@
     + p { margin-top: 0.5rem; }
   }
 
-  &_pretitle { margin-bottom: 0.2rem; }
-  &_subtitle { font-size: 110%; }
+  &_pretitle {
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-size: 82%;
+  }
+
+  &_subtitle {
+    margin-bottom: 0.25rem;
+    font-size: 96%;
+    font-weight: 300;
+  }
 
   &_media {
     @extend .ar-16x9;

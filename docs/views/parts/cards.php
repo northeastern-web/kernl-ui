@@ -163,7 +163,9 @@
       <article class="card -h -v@d -h@w">
         <div class="card_media"></div>
         <div class="card_body">
+          <div class="card_pretitle">Before the Title</div>
           <h2 class="card_title">Variable Orientation Demo</h2>
+          <div class="card_subtitle">Subtitle is a bunch of lorem and other ipsum.</div>
           <p>Resize the viewport and watch me.</p>
         </div>
       </article>
