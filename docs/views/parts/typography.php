@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col">
       <p class="fs-lead"><b>This is a lead paragraph</b> <span class="show-font-size">(<span class="element-font-size"></span> @ 1.25rem)</span>. The pixel values currently shown on this page are rounded to the nearest whole-number in pixels from a rem value times the <span class="bg-beige"><span class="html-font-size"></span>-pixel html base</span> as read from the last page load (<em>note that, for now, you'll need to refresh the page if you resize the viewport and want to see the updated pixel values for that viewport width</em>).</p>
-      <ul class="ls--none fs-sm">
+      <ul class="ls-none fs-sm">
         <li>15px base font-size (<code>xs</code>)</li>
         <li>16px base font-size (<code>sm</code>, <code>md</code>, and <code>lg</code>)</li>
         <li>17px base font-size (<code>xl</code>)</li>
@@ -77,13 +77,13 @@
       <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
       <h4>Unstyled List Style</h4>
-      <ul class="ls--none">
+      <ul class="ls-none">
         <li>4 loaves whole wheat bread</li>
         <li>1 lb. <a href="#" script="preventDefault()">SweetLeaf Farms</a> unsalted butter</li>
         <li>1 bag unrefined sugar</li>
         <li>2 boxes graham crackers, crumbled</li>
         <li>1 bag butterscotch hard candies. <i>Now, this line item may require some explanation, at least for text-wrap demonstration: Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</i>
-          <ul class="ls--default">
+          <ul class="ls-default">
             <li>Best not use Werther's. Those aren't butterscotch, they're caramel.</li>
             <li>Look for the ones individually wrapped in crinkly, transparent yellow cellophane.</li>
           </ul>
@@ -92,10 +92,24 @@
         <li>9 sq feet of polysterene floor liner</li>
         <li>1 player piano</li>
       </ul>
+      <h4>Stacked Unstyled List</h4>
+      <p>Just wrap an unstyled list (<code>.ls-none</code>) in a <code>.stack</code> and style with utilities.</p>
+      <div class="stack">
+        <ul class="ls-none fs-sm">
+          <li>4 loaves whole wheat bread</li>
+          <li>1 lb. SweetLeaf Farms unsalted butter</li>
+          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue hover:tc-red">1 bag unrefined sugar</a></li>
+          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">2 boxes graham crackers, crumbled</a></li>
+          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue hover:tc-red">1 bag butterscotch hard candies.</a></li>
+          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">17 rolls of tin foil</a></li>
+          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">9 sq feet of polysterene floor liner</a></li>
+          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">1 player piano</a></li>
+        </ul>
+      </div>
       <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
       <h4>Inline Lists</h4>
-      <ul class="ls--inline">
+      <ul class="ls-inline">
         <li><a href="#" script="preventDefault()">item one</a></li>
         <li><a href="#" script="preventDefault()">item two</a></li>
         <li><a href="#" script="preventDefault()">item three</a></li>

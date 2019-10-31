@@ -4,27 +4,48 @@
 // .ls-<style>
 
 
-.ls-none {
-  list-style: none;
-  padding-left: 0;
+.ls {
+  &\-none {
+    list-style: none;
+    padding-left: 0;
 
-  li,
-  .__item {
-    margin-bottom: .25rem;
-    padding-top: .25rem;
+    li,
+    .list_item {
+      margin-bottom: .25rem;
+      padding-top: .25rem;
+
+      .stack & {
+        padding: 0.5rem 0.75rem;
+        border: 1px solid $gray-300;
+        margin-bottom: -1px;
+      }
+    }
   }
-}
+  
+  &\-inline {
+    list-style: none;
+    padding-left: 0;
 
-.ls-inline {
-  list-style: none;
-  padding-left: 0;
+    li,
+    .list_item {
+      display: inline-block;
 
-  li,
-  .__item {
-    display: inline-block;
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
 
-    &:not(:last-child) {
-      margin-right: 1rem;
+  // reset to default when needed,
+  // as in a nested bulleted list
+  // inside an unstyled list.
+  &\-default {
+    list-style: disc;
+
+    li,
+    .list_item {
+      margin-bottom: initial;
+      padding-top: initial;
     }
   }
 }
