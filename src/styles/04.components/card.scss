@@ -1,7 +1,6 @@
 // Components
 // Card
 
-
 .card {
   @extend .d-flex;
   @include margin-bottom-gutter();
@@ -28,7 +27,9 @@
     height: $tile_overlay_height;
     overflow: hidden;
 
-    .card_media + .card_header + .card_body { margin-top: 3.5rem; }
+    .card_media + .card_header + .card_body {
+      margin-top: 3.5rem;
+    }
   }
 
   &.\-middle {
@@ -85,10 +86,18 @@
   }
 
   // Size variants
-  &.\-sm { height: $card-height-sm; }
-  &.\-md { height: $card-height-md; }
-  &.\-lg { height: $card-height-lg; }
-  &.\-xl { height: $card-height-xl; }
+  &.\-sm {
+    height: $card-height-sm;
+  }
+  &.\-md {
+    height: $card-height-md;
+  }
+  &.\-lg {
+    height: $card-height-lg;
+  }
+  &.\-xl {
+    height: $card-height-xl;
+  }
 
   // Parent influence
   .\-flush & {
@@ -185,7 +194,9 @@
       width: 100%;
     }
 
-    .\-tile & { padding: $gutter / 2; }
+    .\-tile & {
+      padding: $gutter / 2;
+    }
 
     .\-overlay &,
     .\-middle &,
@@ -194,7 +205,7 @@
     }
 
     .\-profile & {
-      padding: 0;
+      padding: 1rem 0;
     }
 
     .\-middle.\-overlay & {
@@ -236,7 +247,9 @@
     transition: color 0.2s ease;
 
     + div,
-    + p { margin-top: 0.5rem; }
+    + p {
+      margin-top: 0.5rem;
+    }
   }
 
   &_pretitle {
@@ -250,6 +263,11 @@
     margin-bottom: 0.25rem;
     font-size: 96%;
     font-weight: 300;
+
+    .\-profile & {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &_media {
@@ -270,7 +288,9 @@
       border-bottom-color: $white-alpha;
       color: $white;
 
-      + .card_body { margin-top: 0; }
+      + .card_body {
+        margin-top: 0;
+      }
     }
 
     .\-overlay & {
@@ -340,8 +360,12 @@
     width: 100%;
     z-index: 1;
 
-    .\-middle.\-overlay & { @extend .pin-xc; }
-    + .card_body { margin-top: 3.5rem; }
+    .\-middle.\-overlay & {
+      @extend .pin-xc;
+    }
+    + .card_body {
+      margin-top: 3.5rem;
+    }
 
     @include mqbp-up(d) {
       padding: ($gutter / 2) $gutter;
@@ -425,7 +449,8 @@
 
 // Polyfill for object-fit:cover in MS Edge
 // stylelint-disable selector-type-no-unknown
-_:-ms-lang(x), .card .card_img {
+_:-ms-lang(x),
+.card .card_img {
   bottom: -10000px !important;
   height: auto !important;
   left: -10000px !important;
