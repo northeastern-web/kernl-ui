@@ -31,9 +31,94 @@ $nudge-lg: 1rem;
             .group:hover & { transform: scale(1.2); }
         }
     }
+
+    // nudge
+    &nudge {
+        &-t {
+            .group & { transition: margin-top $transition; }
+            .group:hover & { margin-top: $nudge; }
+
+            &-sm {
+                .group & { transition: margin-top $transition; }
+                .group:hover & { margin-top: $nudge-sm; }
+            }
+
+            &-lg {
+                .group & { transition: margin-top $transition; }
+                .group:hover & { margin-top: $nudge-lg; }
+            }
+        }
+
+        &-r {
+            .group & { transition: margin-right $transition; }
+            .group:hover & { margin-right: $nudge; }
+
+            &-sm {
+                .group & { transition: margin-right $transition; }
+                .group:hover & { margin-right: $nudge-sm; }
+            }
+
+            &-lg {
+                .group & { transition: margin-right $transition; }
+                .group:hover & { margin-right: $nudge-lg; }
+            }
+        }
+
+        &-b {
+            .group & { transition: margin-bottom $transition; }
+            .group:hover & { margin-bottom: $nudge; }
+
+            &-sm {
+                .group & { transition: margin-bottom $transition; }
+                .group:hover & { margin-bottom: $nudge-sm; }
+            }
+
+            &-lg {
+                .group & { transition: margin-bottom $transition; }
+                .group:hover & { margin-bottom: $nudge-lg; }
+            }
+        }
+
+        &-l {
+            .group & { transition: margin-left $transition; }
+            &:hover { margin-left: $nudge; }
+
+            &-sm {
+                .group & { transition: margin-left $transition; }
+                .group:hover & { margin-left: $nudge-sm; }
+            }
+
+            &-lg {
+                .group & { transition: margin-left $transition; }
+                .group:hover & { margin-left: $nudge-lg; }
+            }
+        }
+    }
+
+    // spin
+    &spin {
+        .group:hover & {
+            animation: spin 2s infinite linear;
+        }
+    }
 }
 
 .hover\: {
+    &scale {
+        transition: transform $transition;
+        &:hover { transform: scale(1.1); }
+
+        &-sm {
+            transition: transform $transition;
+            &:hover { transform: scale(1.05); }
+        }
+
+        &-lg {
+            transition: transform $transition;
+            &:hover { transform: scale(1.2); }
+        }
+    }
+
     // nudge
     &nudge {
         &-t {

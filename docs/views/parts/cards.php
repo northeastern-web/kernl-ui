@@ -2,7 +2,7 @@
   <div class="row">
     <!-- basic cards -->
     <div class="col w-1/2@t w-1/3@d">
-      <article class="card">
+      <article class="card hover:spin">
         <div class="card_body">
           <h2 class="card_title">Basic Card Title</h2>
           <p>Card content lorem ipsum</p>
