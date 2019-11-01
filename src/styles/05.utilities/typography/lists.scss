@@ -13,8 +13,11 @@
     .list_item {
       margin-bottom: .25rem;
       padding-top: .25rem;
+    }
 
-      .stack & {
+    &.stack {
+      li,
+      .list_item {
         padding: 0.5rem 0.75rem;
         border: 1px solid $gray-300;
         margin-bottom: -1px;

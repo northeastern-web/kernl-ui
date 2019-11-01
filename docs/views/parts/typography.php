@@ -94,18 +94,16 @@
       </ul>
       <h4>Stacked Unstyled List</h4>
       <p>Just wrap an unstyled list (<code>.ls-none</code>) in a <code>.stack</code> and style with utilities.</p>
-      <div class="stack">
-        <ul class="ls-none fs-sm">
-          <li>4 loaves whole wheat bread</li>
-          <li>1 lb. SweetLeaf Farms unsalted butter</li>
-          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue hover:tc-red">1 bag unrefined sugar</a></li>
-          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">2 boxes graham crackers, crumbled</a></li>
-          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue hover:tc-red">1 bag butterscotch hard candies.</a></li>
-          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">17 rolls of tin foil</a></li>
-          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">9 sq feet of polysterene floor liner</a></li>
-          <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">1 player piano</a></li>
-        </ul>
-      </div>
+      <ul class="ls-none stack fs-sm">
+        <li>4 loaves whole wheat bread</li>
+        <li>1 lb. SweetLeaf Farms unsalted butter</li>
+        <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue hover:tc-red">1 bag unrefined sugar</a></li>
+        <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">2 boxes graham crackers, crumbled</a></li>
+        <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue hover:tc-red">1 bag butterscotch hard candies.</a></li>
+        <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">17 rolls of tin foil</a></li>
+        <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">9 sq feet of polysterene floor liner</a></li>
+        <li><a href="#" script="preventDefault()" class="d-block hover:nudge-l-sm tc-blue">1 player piano</a></li>
+      </ul>
       <p>Here's some trailing text for showing some flow. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
       <h4>Inline Lists</h4>
