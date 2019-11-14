@@ -727,6 +727,8 @@
 // restated for focus-within seperately from hover,
 // as IE and Edge will completely ignore all
 // definitions if grouped together :\
+
+
 @include mqbp-up(d) {
   .masthead .\+children {
     &:focus-within {
@@ -770,7 +772,7 @@
         width: auto;
         opacity: 1;
         padding: 1rem;
-        box-shadow: 0px 2px 1px 0 rgba($black, 0.1);
+        box-shadow: 0 2px 1px 0 rgba($black, 0.1);
         transition: max-height 0.4s ease 0.1s,
                     box-shadow $transition,
                     color $transition 0.3s;
@@ -796,6 +798,14 @@
   .masthead_navbar .\+children {
     &:focus-within {
       .nav_sublist { top: 2.5rem !important; }
+    }
+  }
+
+  .masthead .\+children {
+    &:focus-within:hover {
+      .nav_sublist {
+        margin-top: 2rem;
+      }
     }
   }
 }
