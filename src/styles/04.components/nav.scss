@@ -4,8 +4,6 @@
 
 .nav {
   &.\-interior {
-    display: none;
-
     @include mqbp-up(t) {
       display: flex;
     }
