@@ -10,7 +10,7 @@
       </article>
     </div>
     <div class="col w-1/2@t w-1/3@d">
-      <article class="card">
+      <article class="card -bal">
         <a class="card_link" href="#">
           <div class="card_header">
             <div class="card_column">Header</div>

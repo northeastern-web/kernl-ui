@@ -252,6 +252,10 @@
     }
   }
 
+  &.\-bal .card_title {
+    @extend .bal;
+  }
+
   &_pretitle {
     margin-bottom: 0.25rem;
     text-transform: uppercase;
