@@ -106,6 +106,25 @@
       }
     }
 
+    .nav_title & {
+      @extend .tt-caps;
+ 
+      display: inline-flex;
+      flex: 1;
+      align-items: center;
+      color: inherit;
+      font-size: $fs-xs;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+
+      svg {
+        margin-right: 0.5rem;
+        flex: 0 0 auto;
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+
     &:hover {
       background-color: rgba($gray-200, 0.3);
       color: inherit;
@@ -147,6 +166,17 @@
           margin-top: 3px;
         }
       }
+    }
+  }
+
+  &_title {
+    display: flex;
+    flex: 1;
+
+    &[aria-current="true"] {
+      display: none;
+
+      +.nav_item { border-top: 1px solid $gray-200; }
     }
   }
 
