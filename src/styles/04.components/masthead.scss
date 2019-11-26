@@ -18,17 +18,13 @@
 
       &.fs-navigation-open {
         transform: translate3D(0, 0, 0);
-        transition:
-          transform 0.2s ease,
-          visibility 1ms ease;
+        transition: transform 0.2s ease, visibility 1ms ease;
         visibility: visible;
         z-index: 3;
       }
 
       &.fs-navigation-animated {
-        transition:
-          transform 0.2s ease,
-          visibility 0.1s linear 0.2s;
+        transition: transform 0.2s ease, visibility 0.1s linear 0.2s;
       }
     }
 
@@ -36,7 +32,7 @@
       &::before {
         background-color: rgba($black, 0.75);
         bottom: 0;
-        content: '';
+        content: "";
         display: block;
         height: 100%;
         left: 0;
@@ -44,9 +40,7 @@
         position: fixed;
         right: 0;
         top: 0;
-        transition:
-          opacity 0.2s ease,
-          visibility 0.2s ease;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
         visibility: hidden;
         width: 100%;
         z-index: 2;
@@ -79,10 +73,14 @@
   // Document container options
 
   // container is full width
-  .section_full & { @include make-section('full'); }
+  .section_full & {
+    @include make-section("full");
+  }
 
   // container is 2x default document margin
-  .section_contain & { @include make-section('contain', $contain: $contain-width); }
+  .section_contain & {
+    @include make-section("contain", $contain: $contain-width);
+  }
 
   &_logo {
     max-width: 240px;
@@ -106,8 +104,12 @@
     max-width: 100%;
 
     // masthead options for logo size
-    .masthead.\-logo-md & { max-height: 3.25rem; }
-    .masthead.\-logo-lg & { max-height: 3.75rem; }
+    .masthead.\-logo-md & {
+      max-height: 3.25rem;
+    }
+    .masthead.\-logo-lg & {
+      max-height: 3.75rem;
+    }
   }
 
   .nav {
@@ -122,7 +124,9 @@
       padding-right: 0;
       position: relative;
 
-      &:focus { outline: none; }
+      &:focus {
+        outline: none;
+      }
     }
 
     &_list {
@@ -229,7 +233,7 @@
 
     @include mqbp-down(t) {
       .nav,
-      .nav_sublist[aria-expanded=true] {
+      .nav_sublist[aria-expanded="true"] {
         background-color: $black;
       }
     }
@@ -250,12 +254,14 @@
       background-color: $white;
 
       &_item,
-      &_subitem { margin: 0; }
+      &_subitem {
+        margin: 0;
+      }
     }
 
     .\+children {
-      >.nav_link,
-      >.nav_sublink {
+      > .nav_link,
+      > .nav_sublink {
         &::after {
           color: $gray-500;
           content: "\e922";
@@ -271,7 +277,7 @@
 
       &.nav_sublink {
         &::after {
-          content: '\e922';
+          content: "\e922";
         }
       }
     }
@@ -338,7 +344,9 @@
         display: inline-flex;
         align-items: center;
 
-        &:last-child { margin-right: 0; }
+        &:last-child {
+          margin-right: 0;
+        }
       }
 
       &_link {
@@ -350,10 +358,14 @@
           color: $black;
         }
 
-        .nav_item:last-child & { padding-right: 0; }
+        .nav_item:last-child & {
+          padding-right: 0;
+        }
       }
 
-      &_back { display: none; }
+      &_back {
+        display: none;
+      }
 
       &_sublist {
         background-color: transparent;
@@ -367,10 +379,7 @@
         position: absolute;
         right: 0;
         top: 2.5rem;
-        transition:
-          opacity .2s ease,
-          background-color .2s ease,
-          top .2s ease;
+        transition: opacity 0.2s ease, background-color 0.2s ease, top 0.2s ease;
         width: 0;
         z-index: 200;
       }
@@ -398,7 +407,8 @@
         padding-left: 0.5rem;
         padding-right: 1.75rem;
 
-        &:before { // 'before' because 'after' competes with other modifiers
+        &:before {
+          // 'before' because 'after' competes with other modifiers
           content: "\e920" !important;
           position: absolute;
           font-family: "feathericons", sans-serif;
@@ -430,11 +440,15 @@
           top: 4rem;
           width: 13rem;
 
-          .nav_sublist { display: none; }
+          .nav_sublist {
+            display: none;
+          }
         }
       }
 
-      .nav_subitem { margin: 0; }
+      .nav_subitem {
+        margin: 0;
+      }
     }
 
     &.\-dark,
@@ -451,7 +465,9 @@
     &.\-dark {
       .\+children {
         &:hover {
-          .nav_sublist { background-color: $black; }
+          .nav_sublist {
+            background-color: $black;
+          }
         }
 
         &.\-feature {
@@ -477,7 +493,9 @@
     &.\-megamenu {
       .nav {
         &_list,
-        &_item { position: static; }
+        &_item {
+          position: static;
+        }
 
         &_sublist {
           &[data-depth="0"] {
@@ -526,7 +544,7 @@
         .\-heading {
           font-size: $fs-root;
           border-bottom: 1px solid rgba($gray, 0.25);
-          margin: 0.5rem 0 0.5rem;;
+          margin: 0.5rem 0 0.5rem;
         }
       }
     }
@@ -571,7 +589,9 @@
     &.\-support {
       .\+children {
         &:hover {
-          .nav_sublist { top: 0.25rem; }
+          .nav_sublist {
+            top: 0.25rem;
+          }
         }
       }
     }
@@ -586,7 +606,7 @@
           left: 0;
           right: 0;
           border-bottom: 3px solid transparent;
-          transition: border-bottom .2s ease;
+          transition: border-bottom 0.2s ease;
         }
 
         &:hover {
@@ -615,7 +635,9 @@
         &:last-child {
           border-right: 0 none;
 
-          .nav_link { padding-right: 0; }
+          .nav_link {
+            padding-right: 0;
+          }
         }
       }
 
@@ -712,7 +734,9 @@
   @include mqbp-up(d) {
     .\+children {
       &:hover {
-        .nav_sublist { top: 2.5rem !important; }
+        .nav_sublist {
+          top: 2.5rem !important;
+        }
       }
     }
   }
@@ -721,13 +745,14 @@
 .masthead_nav .masthead_navbar_id {
   border-top: 0 none;
 
-  .\-overlay & { color: $type-color; }
+  .\-overlay & {
+    color: $type-color;
+  }
 }
 
 // restated for focus-within seperately from hover,
 // as IE and Edge will completely ignore all
 // definitions if grouped together :\
-
 
 @include mqbp-up(d) {
   .masthead .\+children {
@@ -742,7 +767,9 @@
         padding: 1rem;
         width: 13rem;
 
-        .nav_sublist { display: none; }
+        .nav_sublist {
+          display: none;
+        }
       }
     }
   }
@@ -773,38 +800,45 @@
         opacity: 1;
         padding: 1rem;
         box-shadow: 0 2px 1px 0 rgba($black, 0.1);
-        transition: max-height 0.4s ease 0.1s,
-                    box-shadow $transition,
-                    color $transition 0.3s;
+        transition: max-height 0.4s ease 0.1s, box-shadow $transition,
+          color $transition 0.3s;
 
-        &:before { width: 100%; }
+        &:before {
+          width: 100%;
+        }
 
         > .\-feature {
-          background-color: rgba($gray-400, .15);
+          background-color: rgba($gray-400, 0.15);
           transition: background 0.3s ease 0.1s;
         }
       }
 
-      .nav_item { margin: 0; }
+      .nav_item {
+        margin: 0;
+      }
 
       > .nav_link {
         border-bottom-color: rgba($type-color, 0.25);
 
-        &:after { color: $gray-400; }
+        &:after {
+          color: $gray-400;
+        }
       }
     }
   }
 
   .masthead_navbar .\+children {
     &:focus-within {
-      .nav_sublist { top: 2.5rem !important; }
+      .nav_sublist {
+        top: 2.5rem !important;
+      }
     }
   }
 
   .masthead .\+children {
     &:focus-within:hover {
       .nav_sublist {
-        margin-top: 2rem;
+        // margin-top: 2rem; - seems to be the issue, but needs investigation
       }
     }
   }
