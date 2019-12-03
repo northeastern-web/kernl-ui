@@ -378,6 +378,10 @@
     .\-h & {
       width: 50%;
     }
+
+    .\-r.\-h & {
+      @extend .pos-relative;
+    }
   }
 
   &_footer {
@@ -452,6 +456,13 @@
         }
       }
     }
+  }
+}
+
+.card_zigzag {
+  .card:nth-child(2),
+  .col:nth-child(2) {
+    @extend .\-r;
   }
 }
 

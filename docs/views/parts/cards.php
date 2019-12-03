@@ -158,7 +158,7 @@
   </div>
 
   <!-- orientation demo -->
-  <div class="row">
+  <div class="row card_zigzag">
     <div class="col w-1/2@t">
       <article class="card -h -v@d -h@w">
         <div class="card_media"></div>
