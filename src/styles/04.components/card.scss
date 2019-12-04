@@ -459,9 +459,10 @@
   }
 }
 
+.card-zigzag,
 .card_zigzag {
-  .card:nth-child(2),
-  .col:nth-child(2) {
+  .card:nth-child(even),
+  .col:nth-child(even) {
     @extend .\-r;
   }
 }
