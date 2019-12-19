@@ -307,13 +307,18 @@
         position: relative;
 
         &:after {
-          content: "\e90c"; // left arrow icon
+          content: $icon-chevron-left; // left arrow icon
           font-family: "feathericons";
           font-weight: normal;
           left: 0;
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
+          border: 1px solid rgba($gray-500, 70%);
+          width: 1.125rem;
+          height: 1.125rem;
+          line-height: 1;
+          border-radius: 1000px;
         }
       }
     }
