@@ -43,8 +43,8 @@
           <a class="nav_link" href="#Parturient" aria-haspopup="true" aria-expanded="false">Solutions</a>
           <ul class="nav_sublist" aria-expanded="false" data-depth="0">
             <li class="nav_back"><a href="#Back">Previous</a></li>
-            <li class="nav_subitem">
-              <a class="nav_sublink" href="#Something">Solutions</a>
+            <li class="nav_subitem hidden-up@d">
+              <a class="nav_sublink fw-700" href="#Something">Solutions</a>
             </li>
             <li class="nav_subitem">
               <a class="nav_sublink" href="#Something">Something</a>
@@ -73,6 +73,9 @@
           <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Bibendum</a>
           <ul class="nav_sublist" aria-expanded="false" data-depth="0">
             <li class="nav_back"><a href="#Back">Previous</a></li>
+            <li class="nav_subitem hidden-up@d">
+              <a class="nav_sublink fw-700" href="#">Bibendum</a>
+            </li>
             <li class="nav_subitem">
               <a class="nav_sublink" href="#">Quam Vulputate Nibh</a>
             </li>
@@ -85,6 +88,9 @@
           <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Pudgi Homunculi</a>
           <ul class="nav_sublist" aria-expanded="false" data-depth="0">
             <li class="nav_back"><a href="#Back">Previous</a></li>
+            <li class="nav_subitem hidden-up@d">
+              <a class="nav_sublink fw-700" href="#">Pudgi Homunculi</a>
+            </li>
             <li class="nav_subitem">
               <a class="nav_sublink" href="#">Malesuada Bibendum</a>
             </li>
@@ -95,6 +101,9 @@
               <a class="nav_sublink" href="#" aria-haspopup="true" aria-expanded="false">Venenatis Pharetra Sit Dolor</a>
               <ul class="nav_sublist" aria-expanded="false" data-depth="1">
                 <li class="nav_back"><a href="#Back">Previous</a></li>
+                <li class="nav_subitem hidden-up@d">
+                  <a class="nav_sublink fw-700" href="#">Venenatis Pharetra Sit Dolor</a>
+                </li>
                 <li class="nav_subitem">
                   <a class="nav_sublink" href="#">Mollis Aliquam</a>
                 </li>
@@ -112,6 +121,9 @@
           <a class="nav_link" href="#" aria-haspopup="true" aria-expanded="false">Malesuada Nucleus</a>
           <ul class="nav_sublist" aria-expanded="false" data-depth="0">
             <li class="nav_back"><a href="#Back">Previous</a></li>
+            <li class="nav_subitem hidden-up@d">
+              <a class="nav_sublink fw-700" href="#">Malesuada Nucleus</a>
+            </li>
             <li class="nav_subitem">
               <a class="nav_sublink" href="#">Quam Vulputate Nibh</a>
             </li>

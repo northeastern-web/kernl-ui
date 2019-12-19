@@ -5,7 +5,7 @@
   .fs-navigation {
     &-overlay-nav {
       &.fs-navigation-enabled {
-        display: block;
+        display: block !important;
         height: 100%;
         left: 0;
         max-width: 35rem;
@@ -252,6 +252,7 @@
   @include mqbp-down(t) {
     .nav {
       background-color: $white;
+      display: none;
 
       &_item,
       &_subitem {
