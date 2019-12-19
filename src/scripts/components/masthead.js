@@ -31,13 +31,15 @@ $(document).on('keyup', (e) => {
 // --
 // Sublist opened
 
-$('[aria-haspopup="true"]', $masthead).click(function() {
+$('[aria-haspopup="true"]', $masthead).click(function(e) {
   let $this = $(this)
   let $sublist = $this.siblings('.nav_sublist')
 
   // expand list
   $this.attr('aria-expanded', true)
   $sublist.attr('aria-expanded', true)
+  e.preventDefault()
+  console.log('opened')
 
   // set focus on back link within sublist
   $('.nav_back > a', $sublist).focus()
