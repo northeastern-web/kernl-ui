@@ -51,12 +51,13 @@ $('[aria-haspopup="true"]', $masthead).click(function(e) {
 $('.nav_back > a', $masthead).click(function() {
   let $this = $(this)
   let $sublist = $this.parent().closest('.nav_sublist')
-  let $sublink = $sublist.siblings('.nav_sublink')
 
   // close list
   $sublist.attr('aria-expanded', false)
   $sublink.attr('aria-expanded', false)
+  $this.parent().closest('.nav_link').attr('aria-expanded', false)
 
   // focus set to link clicked to enter sublist
   $sublink.focus()
+  console.log('closed')
 })
