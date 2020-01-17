@@ -465,7 +465,6 @@
 </ul>
 </div>
 */ ?>
-<?php /*
         <ul class="nav_list masthead_support">
             <li class="nav_item">
                 <a class="nav_link" href="#">About</a>
@@ -477,7 +476,6 @@
                 <a class="nav_link" href="#">Faculty &amp; Staff</a>
             </li>
         </ul>
-*/ ?>
     </nav>
     <a class="masthead_navbar_id bwt-1 hidden-up@d" href="#">
         Property Identifier
