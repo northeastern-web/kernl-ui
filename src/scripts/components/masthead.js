@@ -31,7 +31,7 @@ $(document).on('keyup', (e) => {
 // --
 // Sublist opened
 
-$('[aria-haspopup="true"]', $masthead).click(function(e) {
+$('[aria-haspopup="true"]', $masthead).on('click touch', function(e) {
   let $this = $(this)
   let $sublist = $this.siblings('.nav_sublist')
 
@@ -48,7 +48,7 @@ $('[aria-haspopup="true"]', $masthead).click(function(e) {
 // --
 // Sublist closed
 
-$('.nav_back > a', $masthead).click(function() {
+$('.nav_back > a', $masthead).on('click touch', function() {
   let $this = $(this)
   let $sublist = $this.parent().closest('.nav_sublist')
 
@@ -61,3 +61,8 @@ $('.nav_back > a', $masthead).click(function() {
   $sublink.focus()
   console.log('closed')
 })
+
+const windowWidth = $(document).width()
+if (windowWidth > 991) {
+  $('.nav_link', $masthead).unbind('click touch')
+}
