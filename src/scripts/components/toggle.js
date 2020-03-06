@@ -21,6 +21,7 @@ $toggle.on('activate.swap', function () {
 $toggle.on('deactivate.swap', function () {
   $(this).attr('aria-selected', false)
   $($(this).data('swap-target')).attr('aria-hidden', true)
+  $('body').removeClass('of-hidden') // req for active modals
 })
 
 // --
