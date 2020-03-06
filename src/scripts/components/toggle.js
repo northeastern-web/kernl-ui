@@ -37,3 +37,13 @@ $(document).on('keyup', (e) => {
     $toggle.swap("deactivate")
   }
 })
+
+// --
+// modal-specific rules
+
+// prevent scroll on body
+// add autofocus if modal is search
+$('[data-toggle="modal"]').on('click touch', function() {
+  $('body').addClass('of-hidden')
+  $('.has-autofocus').focus()
+})
