@@ -2,12 +2,14 @@
 
 Northeastern front-end framework built on Tailwind CSS and Alpine.js.
 
-## Installation
+## Usage
 
-1. Run `yarn`.
+For documentation and examples for how to use this package, visit the [documentation site](https://northeastern.netlify.com).
+
+## Installing the package for update
+
+- Run `npm install`.
 
 ### Available tasks
 
-* `yarn local` — Compile and optimize the files in your assets directory.
-* `yarn watch` — Compile assets when file changes are made.
-* `yarn prod` — Compile assets for production (no source maps).
+- `npm run build-cdn` — Compile the CDN build of the package.
