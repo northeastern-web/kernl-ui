@@ -33,7 +33,7 @@ module.exports = {
       'white-semi-8': 'rgba(255, 255, 255, 0.8)',
       'white-semi-3': 'rgba(255, 255, 255, 0.3)',
       'white-semi-2': 'rgba(255, 255, 255, 0.2)',
-      black: '#000000',
+      black: '#ff0000',
       'black-semi-4': 'rgba(0, 0, 0, 0.4)',
       'black-semi-5': 'rgba(0, 0, 0, 0.5)',
       gray: {
