@@ -10,12 +10,12 @@
     "build-cdn": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --env=production --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
+    "alpinejs": "^2.2.5",
+    "feather-icons": "^4.26.0",
     "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
-    "alpinejs": "^2.2.5",
     "cross-env": "^7.0.2",
-    "feather-icons": "^4.26.0",
     "laravel-mix": "^5.0.4",
     "lodash": "^4.17.15",
     "vue-template-compiler": "^2.6.11"
