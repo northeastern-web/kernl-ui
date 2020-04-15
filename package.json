@@ -7,7 +7,8 @@
   "repository": "https://bitbucket.org/nupods/kernl-ui.git",
   "homepage": "https://northeastern.netlify.com",
   "scripts": {
-    "build-cdn": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --env=production --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "build-cdn": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --env=production --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build-cdn-dev": "cross-env NODE_ENV=local node_modules/webpack/bin/webpack.js --progress --hide-modules --env=local --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
     "alpinejs": "^2.2.5",

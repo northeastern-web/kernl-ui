@@ -37,7 +37,7 @@ module.exports = function({ addComponents, theme }) {
       ...commonStyles,
     },
     '.btn-lg': {
-      fontSize: theme('fontSize.default'),
+      fontSize: theme('fontSize.base'),
       ...commonStyles,
     },
   }
