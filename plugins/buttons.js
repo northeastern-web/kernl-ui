@@ -6,7 +6,7 @@ module.exports = function({ addComponents, theme }) {
     padding: theme('spacing.3') + ' ' + theme('spacing.6'),
     textAlign: 'center',
     whiteSpace: 'nowrap',
-    lineHight: '1rem',
+    lineHeight: '1em',
     borderWidth: '1px',
     borderColor: 'transparent',
     transitionProperty: theme('transitions.colors'),
@@ -37,6 +37,7 @@ module.exports = function({ addComponents, theme }) {
       ...commonStyles,
     },
     '.btn-lg': {
+      fontSize: theme('fontSize.default'),
       ...commonStyles,
     },
   }
