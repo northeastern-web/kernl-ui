@@ -1,6 +1,14 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  target: [
+    'ie11',
+    {
+      objectFit: 'relaxed',
+      objectPosition: 'relaxed',
+      position: 'relaxed',
+    },
+  ],
   theme: {
     borderRadius: {
       none: '0',
@@ -383,30 +391,6 @@ module.exports = {
         },
       },
     }),
-  },
-  corePlugins: {
-    transform: false,
-    transformOrigin: false,
-    rotate: false,
-    scale: false,
-    skew: false,
-    translate: false,
-    transitionDuration: false,
-    transitionProperty: false,
-    transitionTimingFunction: false,
-    space: false,
-    divideColor: false,
-    divideWidth: false,
-    gap: false,
-    gridAutoFlow: false,
-    gridTemplateColumns: false,
-    gridColumn: false,
-    gridColumnStart: false,
-    gridColumnEnd: false,
-    gridTemplateRows: false,
-    gridRow: false,
-    gridRowStart: false,
-    gridRowEnd: false,
   },
   variants: {
     accessibility: ['responsive', 'focus'],
