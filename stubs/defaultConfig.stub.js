@@ -202,6 +202,12 @@ module.exports = {
       mono: ['Consolas', ...defaultTheme.fontFamily.mono],
       tech: ['Barlow', 'Lato', ...defaultTheme.fontFamily.sans],
     },
+    fontWeight: {
+      light: '300',
+      normal: '400',
+      bold: '700',
+      black: '900',
+    },
     minHeight: {
       '0': '0',
       '10vh': '10vh',
