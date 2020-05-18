@@ -389,6 +389,7 @@ module.exports = {
         },
         'input, textarea, multiselect, select': {
           color: theme('colors.gray.600'),
+          borderColor: theme('colors.gray.600'),
           display: 'block',
           lineHeight: theme('lineHeight.tight'),
           width: '100%',
@@ -403,6 +404,7 @@ module.exports = {
         },
         'checkbox, radio': {
           color: theme('colors.gray.500'),
+          borderColor: theme('colors.gray.600'),
           '&:disabled': {
             backgroundColor: theme('colors.gray.200'),
             opacity: theme('opacity.75'),
