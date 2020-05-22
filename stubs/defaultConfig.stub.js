@@ -270,6 +270,8 @@ module.exports = {
       '4xl': '3.00rem',
       '5xl': '3.75rem',
       '6xl': '4.50rem',
+      '7xl': '5.50rem',
+      '8xl': '6.50rem',
     },
     zIndex: {
       auto: 'auto',
