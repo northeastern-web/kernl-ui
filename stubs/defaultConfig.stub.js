@@ -209,12 +209,13 @@ module.exports = {
       lg: '1.24rem',
       xl: '1.375rem',
       '2xl': '1.80rem',
-      '3xl': '2.66rem',
-      '4xl': '3.00rem',
-      '5xl': '3.75rem',
-      '6xl': '4.50rem',
-      '7xl': '5.50rem',
-      '8xl': '6.50rem',
+      '3xl': '2.20rem',
+      '4xl': '2.66rem',
+      '5xl': '3.00rem',
+      '6xl': '3.75rem',
+      '7xl': '4.50rem',
+      '8xl': '5.50rem',
+      '9xl': '6.50rem',
     },
     fontWeight: {
       light: '300',
@@ -269,6 +270,7 @@ module.exports = {
     spacing: {
       ...defaultTheme.spacing,
       '2px': '2px',
+      '72': '18rem',
       '80': '20rem',
       '96': '24rem',
       '128': '32rem',
@@ -284,7 +286,7 @@ module.exports = {
       '50': '50',
       max: 1000,
     },
-    aspectRatios: ['21x9', '16x9', '4x3', '3x2', '8x5', '5x8', '1x1'],
+    aspectRatios: ['21x9', '16x9', '4x3', '4x5', '3x2', '8x5', '5x8', '1x1'],
     gradients: theme => ({
       directions: ['90deg', '135deg'],
       colors: {
