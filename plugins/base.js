@@ -3,7 +3,7 @@ const defaultConfig = require('../defaultConfig')
 
 module.exports = plugin(function({ addBase }) {
   const baseStyles = {
-    "@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,700,900')": {},
+    "@import url('https://fonts.googleapis.com/css?family=Lato:300,400,600,700,900')": {},
     'html, body': {
       fontSize: '15px',
     },
