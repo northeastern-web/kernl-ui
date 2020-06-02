@@ -17,6 +17,9 @@ module.exports = plugin(function({ addBase }) {
         fontSize: '17px',
       },
     },
+    '[x-cloak]': {
+      display: 'none',
+    },
   }
 
   addBase(baseStyles)
