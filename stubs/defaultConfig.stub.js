@@ -200,7 +200,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Lato', ...defaultTheme.fontFamily.sans],
-      serif: ['Noe', ...defaultTheme.fontFamily.serif],
+      serif: [...defaultTheme.fontFamily.serif],
       mono: ['Consolas', ...defaultTheme.fontFamily.mono],
       tech: ['Barlow', 'Lato', ...defaultTheme.fontFamily.sans],
     },
