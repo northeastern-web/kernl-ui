@@ -1,6 +1,6 @@
 {
   "name": "@northeastern-web/kernl-ui",
-  "version": "2.0.0-alpha.21",
+  "version": "2.0.0-alpha.22",
   "main": "index.js",
   "description": "Northeastern front-end framework built on Tailwind CSS and Alpine.js.",
   "style": "dist/tailwind.css",
