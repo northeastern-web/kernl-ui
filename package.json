@@ -1,6 +1,6 @@
 {
   "name": "@northeastern-web/kernl-ui",
-  "version": "2.0.0-alpha.26",
+  "version": "2.0.0-alpha.27",
   "source": "src/js/index.js",
   "main": "dist/js/index.js",
   "unpkg": "dist/js/index.umd.js",
@@ -10,7 +10,6 @@
   "repository": "https://github.com/northeastern-web/kernl-ui.git",
   "homepage": "https://northeastern.netlify.com",
   "scripts": {
-    "watch": "npx rollup -c -w",
     "build": "microbundle && npx babel-node scripts/build.js"
   },
   "dependencies": {

@@ -1,8 +1,8 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 
-window.Alpine = require('alpinejs/dist/alpine-ie11')
+import Alpine from 'alpinejs/dist/alpine-ie11'
+window.Alpine = Alpine
 
-window.Feather = require('feather-icons')
-
-window.Feather.replace()
+import 'feather-icons'
+Feather.replace()
