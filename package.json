@@ -1,16 +1,15 @@
 {
   "name": "@northeastern-web/kernl-ui",
-  "version": "2.0.0-alpha.28",
+  "version": "2.0.0-alpha.29",
   "source": "src/js/index.js",
   "main": "dist/js/index.js",
   "unpkg": "dist/js/index.umd.js",
-  "module": "dist/js/index.m.js",
   "description": "Northeastern front-end framework built on Tailwind CSS and Alpine.js.",
   "style": "dist/css/index.css",
   "repository": "https://github.com/northeastern-web/kernl-ui.git",
   "homepage": "https://northeastern.netlify.com",
   "scripts": {
-    "build": "microbundle && npx babel-node scripts/build.js"
+    "build": "microbundle --name=@northeastern-web/kernl-ui --external=none && npx babel-node scripts/build.js"
   },
   "dependencies": {
     "alpinejs": "^2.4.1",
