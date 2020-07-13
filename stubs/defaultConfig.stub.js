@@ -336,6 +336,13 @@ module.exports = {
       270: '270deg',
       315: '315deg',
     },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1440px',
+    },
     spacing: {
       ...spacing,
       '128': '32rem',
@@ -352,7 +359,7 @@ module.exports = {
       max: 1000,
     },
     aspectRatios: ['21x9', '16x9', '4x3', '4x5', '3x2', '8x5', '5x8', '1x1'],
-    gradients: theme => ({
+    gradients: (theme) => ({
       directions: ['90deg', '135deg'],
       colors: {
         'red-orange': [theme('colors.red.700'), theme('colors.orange.500')],
@@ -451,7 +458,7 @@ module.exports = {
       '700': '700ms',
       '1000': '1000ms',
     },
-    customForms: theme => ({
+    customForms: (theme) => ({
       default: {
         'input, textarea, multiselect, select, checkbox': {
           borderRadius: 0,
@@ -572,6 +579,9 @@ module.exports = {
     width: ['responsive'],
     wordBreak: [],
     zIndex: ['responsive'],
+  },
+  corePlugins: {
+    container: false,
   },
   plugins: [],
 }

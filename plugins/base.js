@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin')
 const defaultConfig = require('../defaultConfig')
 
-module.exports = plugin(function({ addBase, addComponents, theme }) {
+module.exports = plugin(function ({ addBase, addComponents, theme }) {
   const baseStyles = {
     "@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900');": {},
     '[x-cloak]': {
@@ -10,6 +10,21 @@ module.exports = plugin(function({ addBase, addComponents, theme }) {
   }
 
   addBase(baseStyles)
+
+  // Container
+  addComponents({
+    '.container': {
+      'max-width': '1440px',
+      'margin-left': 'auto',
+      'margin-right': 'auto',
+      padding: '1rem',
+    },
+    [`@screen lg`]: {
+      '.container': {
+        padding: '4rem',
+      },
+    },
+  })
 
   // Loader component
   addBase({
