@@ -17,11 +17,13 @@ module.exports = plugin(function ({ addBase, addComponents, theme }) {
       'max-width': '1440px',
       'margin-left': 'auto',
       'margin-right': 'auto',
-      padding: '1rem',
+      'padding-left': '1rem',
+      'padding-right': '1rem',
     },
     [`@screen lg`]: {
       '.container': {
-        padding: '4rem',
+        'padding-left': '4rem',
+        'padding-right': '4rem',
       },
     },
   })
