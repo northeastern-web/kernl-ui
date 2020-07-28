@@ -32,7 +32,7 @@ module.exports = plugin(function ({ addBase, addComponents, theme }) {
     '.loading': {
       position: 'absolute',
       display: 'block',
-      animation: 'spin 1s infinite linear',
+      animation: 'spin 750ms infinite linear',
       borderRadius: theme('borderRadius.full'),
       borderWidth: '0.125em',
       borderTopColor: 'currentColor',
