@@ -28,19 +28,11 @@ module.exports = plugin(function ({ addBase, addComponents, theme }) {
     },
   })
 
-  // Loader component
-  addBase({
-    '@keyframes spin': {
-      from: { transform: 'rotate(0deg)' },
-      to: { transform: 'rotate(359deg)' },
-    },
-  })
-
   addComponents({
     '.loading': {
       position: 'absolute',
       display: 'block',
-      animation: 'spin 500ms infinite linear',
+      animation: 'spin 1s infinite linear',
       borderRadius: theme('borderRadius.full'),
       borderWidth: '0.125em',
       borderTopColor: 'currentColor',
