@@ -1,6 +1,6 @@
 {
   "name": "@northeastern-web/kernl-ui",
-  "version": "2.0.0-alpha.34",
+  "version": "2.0.0-alpha.35",
   "source": "src/js/index.js",
   "main": "dist/js/index.js",
   "unpkg": "dist/js/index.umd.js",
@@ -12,7 +12,7 @@
     "build": "microbundle --name=@northeastern-web/kernl-ui --external=none && npx babel-node scripts/build.js"
   },
   "dependencies": {
-    "alpinejs": "^2.4.1",
+    "alpinejs": "^2.5.0",
     "feather-icons": "^4.28.0",
     "tailwindcss": "^1.6.0"
   },
