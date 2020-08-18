@@ -76,6 +76,13 @@ module.exports = {
       position: 'relaxed',
     },
   ],
+  purge: {
+    content: [
+      'vendor/northeastern-web/**/*.blade.php',
+      'vendor/northeastern-web/**/*.md',
+      'vendor/northeastern-web/**/*.html',
+    ],
+  },
   theme: {
     borderRadius: {
       none: '0',
