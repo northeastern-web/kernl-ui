@@ -12,16 +12,16 @@
     "build": "microbundle --name=@northeastern-web/kernl-ui --external=none && npx babel-node scripts/build.js"
   },
   "dependencies": {
-    "alpinejs": "^2.5.0",
+    "alpinejs": "^2.6.0",
     "feather-icons": "^4.28.0",
-    "tailwindcss": "^1.6.0"
+    "tailwindcss": "^1.7.6"
   },
   "devDependencies": {
     "clean-css": "^4.2.3",
     "core-js": "^3.6.5",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "microbundle": "^0.12.3",
     "postcss": "^7.0.32",
-    "regenerator-runtime": "^0.13.5"
+    "regenerator-runtime": "^0.13.7"
   }
 }
