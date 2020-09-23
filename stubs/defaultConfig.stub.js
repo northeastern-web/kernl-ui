@@ -70,6 +70,7 @@ const spacing = {
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
   target: [
     'ie11',

@@ -1,6 +1,6 @@
 {
   "name": "@northeastern-web/kernl-ui",
-  "version": "2.0.0-alpha.37",
+  "version": "2.0.0-alpha.38",
   "source": "src/js/index.js",
   "main": "dist/js/index.js",
   "unpkg": "dist/js/index.umd.js",
@@ -12,16 +12,16 @@
     "build": "microbundle --name=@northeastern-web/kernl-ui --external=none && npx babel-node scripts/build.js"
   },
   "dependencies": {
-    "alpinejs": "^2.6.0",
+    "alpinejs": "^2.7.0",
     "feather-icons": "^4.28.0",
-    "tailwindcss": "^1.7.6"
+    "tailwindcss": "^1.8.10"
   },
   "devDependencies": {
     "clean-css": "^4.2.3",
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
     "microbundle": "^0.12.3",
-    "postcss": "^7.0.32",
+    "postcss": "^7.0.34",
     "regenerator-runtime": "^0.13.7"
   }
 }
