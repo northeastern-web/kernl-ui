@@ -82,7 +82,7 @@ module.exports = {
   ],
   purge: {
     content: [
-      'vendor/northeastern-web/**/*.blade.php',
+      'vendor/northeastern-web/**/*.php',
       'vendor/northeastern-web/**/*.md',
       'vendor/northeastern-web/**/*.html',
     ],
