@@ -1,6 +1,6 @@
 {
   "name": "@northeastern-web/kernl-ui",
-  "version": "2.0.0-alpha.39",
+  "version": "2.0.0-alpha.40",
   "source": "src/js/index.js",
   "main": "dist/js/index.js",
   "unpkg": "dist/js/index.umd.js",
@@ -9,7 +9,7 @@
   "repository": "https://github.com/northeastern-web/kernl-ui.git",
   "homepage": "https://northeastern.netlify.com",
   "scripts": {
-    "build": "microbundle --name=@northeastern-web/kernl-ui --external=none && npx babel-node scripts/build.js"
+    "build": "microbundle --name=@northeastern-web/kernl-ui --external=none && microbundle -i src/js/browser-update.js -o dist/js/browser-update.js --no-pkg-main -f cjs && npx babel-node scripts/build.js"
   },
   "dependencies": {
     "alpinejs": "^2.7.0",
@@ -18,10 +18,8 @@
   },
   "devDependencies": {
     "clean-css": "^4.2.3",
-    "core-js": "^3.6.5",
     "lodash": "^4.17.20",
-    "microbundle": "^0.12.3",
-    "postcss": "^7.0.34",
-    "regenerator-runtime": "^0.13.7"
+    "microbundle": "^0.12.4",
+    "postcss": "^7.0.35"
   }
 }
