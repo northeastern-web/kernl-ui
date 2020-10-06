@@ -82,7 +82,6 @@ module.exports = {
   ],
   purge: {
     content: [
-      'node_modules/@northeastern-web/global-elements/dist/**/*.js',
       'vendor/northeastern-web/**/*.php',
       'vendor/northeastern-web/**/*.md',
       'vendor/northeastern-web/**/*.html',
