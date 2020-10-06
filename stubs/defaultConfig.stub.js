@@ -86,7 +86,9 @@ module.exports = {
       'vendor/northeastern-web/**/*.md',
       'vendor/northeastern-web/**/*.html',
     ],
-    whitelist: [/body\s/],
+    options: {
+      whitelistPatternsChildren: [/body/, /body\s/],
+    },
   },
   theme: {
     borderRadius: {
