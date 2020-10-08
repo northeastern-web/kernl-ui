@@ -300,6 +300,7 @@ module.exports = {
       '7xl': '4.50rem',
       '8xl': '5.50rem',
       '9xl': '6.50rem',
+      '10xl': '7.5rem',
     },
     fontWeight: {
       light: '300',
@@ -361,6 +362,9 @@ module.exports = {
     spacing: {
       ...spacing,
       128: '32rem',
+      144: '36rem',
+      160: '40rem',
+      192: '48rem',
     },
     zIndex: {
       auto: 'auto',
