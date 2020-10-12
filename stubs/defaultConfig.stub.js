@@ -9,14 +9,6 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  target: [
-    'ie11',
-    {
-      objectFit: 'relaxed',
-      objectPosition: 'relaxed',
-      position: 'relaxed',
-    },
-  ],
   purge: {
     content: [
       'vendor/northeastern-web/**/*.php',
