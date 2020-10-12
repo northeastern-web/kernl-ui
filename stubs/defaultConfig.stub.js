@@ -19,25 +19,25 @@ module.exports = {
       whitelistPatternsChildren: [/body/, /body\s/],
     },
   },
-  extend: {
-    borderWidth: {
-      3: '3px',
-    },
-    screens: {
-      '2xl': '1440px',
-    },
-    spacing: {
-      128: '32rem',
-      144: '36rem',
-      160: '40rem',
-      192: '48rem',
-    },
-    zIndex: {
-      behind: -1,
-      max: 1000,
-    },
-  },
   theme: {
+    extend: {
+      borderWidth: {
+        3: '3px',
+      },
+      screens: {
+        '2xl': '1440px',
+      },
+      spacing: {
+        128: '32rem',
+        144: '36rem',
+        160: '40rem',
+        192: '48rem',
+      },
+      zIndex: {
+        behind: -1,
+        max: 1000,
+      },
+    },
     boxShadow: {
       outline: defaultTheme.boxShadow.outline,
       default: '0 0 4px rgba(0, 0, 0, 0.2)',
@@ -231,6 +231,10 @@ module.exports = {
       '9xl': ['6.50rem', { lineHeight: '1' }],
       '10xl': ['7.5rem', { lineHeight: '1' }],
     },
+    maxHeight: {
+      0: '0',
+      ...defaultTheme.maxHeight,
+    },
     minHeight: {
       0: '0',
       '10vh': '10vh',
@@ -245,10 +249,6 @@ module.exports = {
       '100vh': '100vh',
       screen: '100vh',
       full: '100%',
-    },
-    maxHeight: {
-      0: '0',
-      ...defaultTheme.maxHeight,
     },
     opacity: {
       0: 0,
