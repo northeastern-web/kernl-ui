@@ -272,31 +272,6 @@ module.exports = {
       100: 1,
     },
     aspectRatios: ['21x9', '16x9', '4x3', '4x5', '3x2', '8x5', '5x8', '1x1'],
-    gradients: (theme) => ({
-      directions: ['90deg', '135deg'],
-      colors: {
-        'red-orange': [theme('colors.red.700'), theme('colors.orange.500')],
-        'orange-tan': [theme('colors.orange.500'), theme('colors.tan.400')],
-        'tan-red': [theme('colors.tan.400'), theme('colors.red.700')],
-        'red-yellow': [theme('colors.red.700'), theme('colors.yellow.500')],
-        'yellow-orange': [theme('colors.yellow.500'), theme('colors.orange.500')],
-        'green-yellow': [theme('colors.green.500'), theme('colors.yellow.500')],
-        'blue-teal': [theme('colors.blue.700'), theme('colors.teal.400')],
-        'aqua-blue-dark': [theme('colors.aqua.500'), theme('colors.blue.900')],
-        'blue-dark-teal': [theme('colors.blue.900'), theme('colors.teal.400')],
-        'teal-green': [theme('colors.teal.400'), theme('colors.green.500')],
-        'blue-green': [theme('colors.blue.700'), theme('colors.green.500')],
-        'blue-gray-cool': [theme('colors.blue.700'), theme('colors.gray-cool.500')],
-        'blue-dark-gray-warm': [theme('colors.blue.900'), theme('colors.gray-warm.700')],
-        'blue-gray-warm': [theme('colors.blue.700'), theme('colors.gray-warm.700')],
-        'gray-cool-blue-dark': [theme('colors.gray-cool.500'), theme('colors.blue.900')],
-        'gold-tan': [theme('colors.gold.500'), theme('colors.tan.400')],
-        'red-blue': [theme('colors.red.700'), theme('colors.blue.700')],
-        'blue-orange': [theme('colors.blue.700'), theme('colors.orange.500')],
-        'aqua-yellow': [theme('colors.aqua.500'), theme('colors.yellow.500')],
-        'yellow-blue': [theme('colors.yellow.500'), theme('colors.blue.700')],
-      },
-    }),
     customForms: (theme) => ({
       default: {
         'input, textarea, multiselect, select, checkbox': {
