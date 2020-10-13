@@ -1,4 +1,4 @@
-module.exports = function({ addComponents, theme }) {
+module.exports = function ({ addComponents, theme }) {
   const commonStyles = {
     display: 'inline-flex',
     alignItems: 'center',
@@ -29,15 +29,15 @@ module.exports = function({ addComponents, theme }) {
 
   const components = {
     '.btn': {
-      fontSize: theme('fontSize.sm'),
+      fontSize: theme('fontSize.sm')[0],
       ...commonStyles,
     },
     '.btn-sm': {
-      fontSize: theme('fontSize.xs'),
+      fontSize: theme('fontSize.xs')[0],
       ...commonStyles,
     },
     '.btn-lg': {
-      fontSize: theme('fontSize.base'),
+      fontSize: theme('fontSize.base')[0],
       ...commonStyles,
     },
   }
