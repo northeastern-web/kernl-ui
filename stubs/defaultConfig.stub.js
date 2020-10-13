@@ -3,11 +3,12 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   experimental: {
     extendedSpacingScale: true,
-    defaultLineHeights: true,
   },
   future: {
+    defaultLineHeights: true,
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
+    standardFontWeights: true,
   },
   purge: {
     content: [
