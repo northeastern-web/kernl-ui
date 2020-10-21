@@ -14,7 +14,7 @@
   "dependencies": {
     "alpinejs": "^2.7.0",
     "feather-icons": "^4.28.0",
-    "tailwindcss": "^1.9.4"
+    "tailwindcss": "^2.0.0-alpha.1"
   },
   "devDependencies": {
     "clean-css": "^4.2.3",

@@ -29,15 +29,15 @@ module.exports = function ({ addComponents, theme }) {
 
   const components = {
     '.btn': {
-      fontSize: theme('fontSize.sm')[0],
+      fontSize: theme('fontSize.sm'),
       ...commonStyles,
     },
     '.btn-sm': {
-      fontSize: theme('fontSize.xs')[0],
+      fontSize: theme('fontSize.xs'),
       ...commonStyles,
     },
     '.btn-lg': {
-      fontSize: theme('fontSize.base')[0],
+      fontSize: theme('fontSize.base'),
       ...commonStyles,
     },
   }

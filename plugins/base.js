@@ -11,7 +11,7 @@ module.exports = plugin(function ({ addBase, addComponents, theme }) {
       color: theme('colors.black'),
       backgroundColor: theme('colors.yellow.500'),
       fontSize: '1rem',
-      fontFamily: theme('fontFamily.sans').join(' '),
+      fontFamily: theme('fontFamily.sans'),
       boxShadow: theme('boxShadow.default'),
       animation: 'none',
     },
