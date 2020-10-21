@@ -1,7 +1,4 @@
-const defaultConfig = require('./defaultConfig')
-
 module.exports = {
-  ...defaultConfig,
+  presets: [require('./defaultConfig')],
   purge: false,
-  plugins: [require('./plugins/base.js')],
 }

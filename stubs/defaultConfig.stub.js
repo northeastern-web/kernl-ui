@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  presets: [require('tailwindcss/defaultConfig')],
   purge: {
     content: [
       'vendor/northeastern-web/**/*.php',
@@ -269,5 +270,5 @@ module.exports = {
   corePlugins: {
     container: false,
   },
-  plugins: [],
+  plugins: [require('../plugins/base.js')],
 }

@@ -1,5 +1,4 @@
 const plugin = require('tailwindcss/plugin')
-const defaultConfig = require('../defaultConfig')
 
 module.exports = plugin(function ({ addBase, addComponents, theme }) {
   const baseStyles = {
@@ -61,4 +60,4 @@ module.exports = plugin(function ({ addBase, addComponents, theme }) {
       },
     },
   })
-}, defaultConfig)
+})
