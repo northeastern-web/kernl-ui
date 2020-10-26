@@ -5,6 +5,7 @@ module.exports = {
   gold: '#a4804a',
   silver: '#8a8d8f',
   gray: {
+    50: '#fafafa',
     100: '#f7f7f7',
     200: '#ebebeb',
     300: '#d0d0d0',
@@ -16,6 +17,7 @@ module.exports = {
     900: '#1f1f1f',
   },
   'gray-warm': {
+    50: '#f9faf7',
     100: '#f4f2f0',
     200: '#e9e6e2',
     300: '#dfdad4',
@@ -27,6 +29,7 @@ module.exports = {
     900: '#3f3731',
   },
   'gray-cool': {
+    50: '#f8fafb',
     100: '#f3f4f7',
     200: '#e9edf1',
     300: '#d5dde6',
