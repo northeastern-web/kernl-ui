@@ -17,7 +17,7 @@ fs.readFile(`./src/css/index.css`, (err, css) => {
     .then((result) => {
       fs.writeFileSync(`./dist/css/index.css`, result.css)
       if (result.map) {
-        fs.writeFileSync(`./dist/css/index.css.map`, result.map)
+        fs.writeFileSync(`./dist/css/index.css.map`, String(result.map))
       }
       return result
     })
