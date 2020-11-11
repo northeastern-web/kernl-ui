@@ -35,7 +35,6 @@ module.exports = {
       },
     },
     boxShadow: {
-      outline: defaultTheme.boxShadow.outline,
       DEFAULT: '0 0 4px rgba(0, 0, 0, 0.2)',
       none: '0 0 0 rgba(0, 0, 0, 0)',
       sm: '0 0 1px rgba(0, 0, 0, 0.5)',
