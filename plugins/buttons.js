@@ -12,7 +12,7 @@ module.exports = function ({ addComponents, theme }) {
     transitionDuration: theme('transitionDuration.100'),
     '&:focus': {
       outline: 'none',
-      boxShadow: theme('boxShadow.outline'),
+      boxShadow: 'rgba(66, 153, 225, 0.5) 0px 0px 0px 3px',
     },
     '&:disabled': {
       cursor: 'not-allowed',
