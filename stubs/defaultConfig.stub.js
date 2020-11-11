@@ -33,6 +33,49 @@ module.exports = {
         behind: -1,
         max: 1000,
       },
+      customForms: (theme) => ({
+        DEFAULT: {
+          css: {
+            'input, textarea, multiselect, select, checkbox': {
+              borderRadius: 0,
+            },
+            'input, textarea, multiselect, select': {
+              color: theme('colors.gray.600'),
+              borderColor: theme('colors.gray.600'),
+              display: 'block',
+              lineHeight: theme('lineHeight.5'),
+              width: '100%',
+              '&::placeholder': {
+                color: theme('colors.gray.400'),
+              },
+              '&:disabled': {
+                backgroundColor: theme('colors.gray.200'),
+                opacity: theme('opacity.75'),
+                cursor: theme('cursor.not-allowed'),
+              },
+              '&:focus': {
+                '--ring-offset-shadow': '0 0 0 var(--ring-offset-width, 0) var(--ring-offset-color, #fff)',
+                '--ring-shadow':
+                  '0 0 0 calc(3px + var(--ring-offset-width, 0px)) var(--ring-color, rgba(66, 153, 225, 0.5))',
+              },
+            },
+            'checkbox, radio': {
+              color: theme('colors.gray.500'),
+              borderColor: theme('colors.gray.600'),
+              '&:disabled': {
+                backgroundColor: theme('colors.gray.200'),
+                opacity: theme('opacity.75'),
+                cursor: theme('cursor.not-allowed'),
+              },
+              '&:focus': {
+                '--ring-offset-shadow': '0 0 0 var(--ring-offset-width, 0) var(--ring-offset-color, #fff)',
+                '--ring-shadow':
+                  '0 0 0 calc(3px + var(--ring-offset-width, 0px)) var(--ring-color, rgba(66, 153, 225, 0.5))',
+              },
+            },
+          },
+        },
+      }),
     },
     boxShadow: {
       DEFAULT: '0 0 4px rgba(0, 0, 0, 0.2)',
@@ -98,38 +141,6 @@ module.exports = {
       90: '0.9',
       100: '1',
     },
-    aspectRatios: ['21x9', '16x9', '4x3', '4x5', '3x2', '8x5', '5x8', '1x1'],
-    customForms: (theme) => ({
-      default: {
-        'input, textarea, multiselect, select, checkbox': {
-          borderRadius: 0,
-        },
-        'input, textarea, multiselect, select': {
-          color: theme('colors.gray.600'),
-          borderColor: theme('colors.gray.600'),
-          display: 'block',
-          lineHeight: theme('lineHeight.tight'),
-          width: '100%',
-          '&::placeholder': {
-            color: theme('colors.gray.400'),
-          },
-          '&:disabled': {
-            backgroundColor: theme('colors.gray.200'),
-            opacity: theme('opacity.75'),
-            cursor: theme('cursor.not-allowed'),
-          },
-        },
-        'checkbox, radio': {
-          color: theme('colors.gray.500'),
-          borderColor: theme('colors.gray.600'),
-          '&:disabled': {
-            backgroundColor: theme('colors.gray.200'),
-            opacity: theme('opacity.75'),
-            cursor: theme('cursor.not-allowed'),
-          },
-        },
-      },
-    }),
   },
   variants: {
     accessibility: ['responsive', 'focus'],

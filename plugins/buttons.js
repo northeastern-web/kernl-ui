@@ -6,7 +6,6 @@ module.exports = function ({ addComponents, theme }) {
     padding: theme('spacing.3') + ' ' + theme('spacing.6'),
     textAlign: 'center',
     whiteSpace: 'nowrap',
-    lineHeight: '1em',
     borderWidth: '1px',
     borderColor: 'transparent',
     transitionProperty: theme('transitions.colors'),
@@ -30,14 +29,17 @@ module.exports = function ({ addComponents, theme }) {
   const components = {
     '.btn': {
       fontSize: theme('fontSize.sm'),
+      lineHeight: theme('lineHeight.5'),
       ...commonStyles,
     },
     '.btn-sm': {
       fontSize: theme('fontSize.xs'),
+      lineHeight: theme('lineHeight.4'),
       ...commonStyles,
     },
     '.btn-lg': {
       fontSize: theme('fontSize.base'),
+      lineHeight: theme('lineHeight.6'),
       ...commonStyles,
     },
   }
