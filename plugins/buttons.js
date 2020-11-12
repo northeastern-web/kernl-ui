@@ -12,8 +12,13 @@ module.exports = function ({ addComponents, theme }) {
     transitionDuration: theme('transitionDuration.100'),
     '&:focus': {
       outline: 'none',
-      '--ring-shadow': '0px 0px 0px 3px rgba(66, 153, 225, 0.5)',
-      '--ring-offset-shadow': '',
+      '--ring-inset': 'var(--tailwind-empty,/*!*/ /*!*/)',
+      '--ring-offset-width': '0px',
+      '--ring-offset-color': '#fff',
+      '--ring-color': 'rgba(66, 153, 225, 0.5)',
+      '--ring-offset-shadow': 'var(--ring-inset) 0 0 0 var(--ring-offset-width) var(--ring-offset-color)',
+      '--ring-shadow': 'var(--ring-inset) 0 0 0 calc(2px + var(--ring-offset-width)) var(--ring-color)',
+      boxShadow: 'var(--ring-offset-shadow), var(--ring-shadow), var(--box-shadow, 0 0 #0000)',
     },
     '&:disabled': {
       cursor: 'not-allowed',
