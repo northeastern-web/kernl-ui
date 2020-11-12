@@ -12,7 +12,8 @@ module.exports = function ({ addComponents, theme }) {
     transitionDuration: theme('transitionDuration.100'),
     '&:focus': {
       outline: 'none',
-      boxShadow: 'var(--ring-offset-shadow), var(--ring-shadow), rgba(66, 153, 225, 0.5) 0px 0px 0px 3px',
+      '--ring-shadow': '0px 0px 0px 3px rgba(66, 153, 225, 0.5)',
+      '--ring-offset-shadow': '',
     },
     '&:disabled': {
       cursor: 'not-allowed',
