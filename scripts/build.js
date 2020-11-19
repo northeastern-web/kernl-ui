@@ -8,7 +8,7 @@ console.log('Building kernl(ui) CSS...')
 fs.readFile(`./src/css/index.css`, (err, css) => {
   if (err) throw err
 
-  return postcss([tailwind('./cdn.config.js')])
+  return postcss([tailwind('./cdn.config.js'), require('autoprefixer')])
     .process(css, {
       from: `./src/css/index.css`,
       to: `./dist/css/index.css`,
