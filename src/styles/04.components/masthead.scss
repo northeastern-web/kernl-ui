@@ -67,7 +67,7 @@
   padding-top: 0 !important;
   position: relative;
   width: 100%;
-  z-index: $z-3;
+  z-index: 19; // keeps local header nav behind global header flyout
 
   // --
   // Document container options
