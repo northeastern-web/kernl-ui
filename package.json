@@ -1,6 +1,6 @@
 {
   "name": "@northeastern-web/kernl-ui",
-  "version": "2.0.0-beta.24",
+  "version": "2.0.0-beta.25",
   "source": "src/js/index.js",
   "main": "dist/js/index.js",
   "unpkg": "dist/js/index.umd.js",
@@ -12,11 +12,11 @@
     "build": "microbundle --name=@northeastern-web/kernl-ui --external=none && microbundle -i src/js/browser-update.js -o dist/js/browser-update.js --name=@northeastern-web/browser-update --no-pkg-main -f cjs && npx babel-node scripts/build.js"
   },
   "dependencies": {
-    "alpinejs": "^2.7.1",
-    "autoprefixer": "^9.8.6",
+    "alpinejs": "^2.8.0",
+    "autoprefixer": "^10.2.3",
     "feather-icons": "^4.28.0",
-    "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1"
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "clean-css": "^4.2.3",
