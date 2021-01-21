@@ -13,7 +13,7 @@ module.exports = function ({ addComponents, theme }) {
     '&:focus': {
       outline: 'none',
       '--ring-inset': 'var(--tailwind-empty,/*!*/ /*!*/)',
-      '--ring-offset-width': '0px',
+      '--ring-offset-width': '2px',
       '--ring-offset-color': '#fff',
       '--ring-color': theme('colors.blue.500'),
       '--ring-offset-shadow': 'var(--ring-inset) 0 0 0 var(--ring-offset-width) var(--ring-offset-color)',
