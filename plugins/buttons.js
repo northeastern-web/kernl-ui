@@ -3,7 +3,6 @@ module.exports = function ({ addComponents, theme }) {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: theme('spacing.3') + ' ' + theme('spacing.6'),
     textAlign: 'center',
     whiteSpace: 'nowrap',
     borderWidth: '1px',
@@ -36,16 +35,25 @@ module.exports = function ({ addComponents, theme }) {
     '.btn': {
       fontSize: theme('fontSize.sm'),
       lineHeight: theme('lineHeight.5'),
+      padding: theme('spacing[2.5]') + ' ' + theme('spacing.4'),
       ...commonStyles,
     },
     '.btn-sm': {
       fontSize: theme('fontSize.xs'),
       lineHeight: theme('lineHeight.4'),
+      padding: theme('spacing.2') + ' ' + theme('spacing.3'),
       ...commonStyles,
     },
     '.btn-lg': {
       fontSize: theme('fontSize.base'),
       lineHeight: theme('lineHeight.6'),
+      padding: theme('spacing[2.5]') + ' ' + theme('spacing.5'),
+      ...commonStyles,
+    },
+    '.btn-xl': {
+      fontSize: theme('fontSize.lg'),
+      lineHeight: theme('lineHeight.7'),
+      padding: theme('spacing.3') + ' ' + theme('spacing.6'),
       ...commonStyles,
     },
   }

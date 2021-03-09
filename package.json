@@ -19,6 +19,9 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
     "clean-css": "^4.2.3",
     "lodash": "^4.17.20",
     "microbundle": "^0.12.4"
