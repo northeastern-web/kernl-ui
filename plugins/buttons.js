@@ -48,6 +48,11 @@ module.exports = function ({ addComponents, theme }) {
       lineHeight: theme('lineHeight.6'),
       ...commonStyles,
     },
+    '.btn-xl': {
+      fontSize: theme('fontSize.lg'),
+      lineHeight: theme('lineHeight.8'),
+      ...commonStyles,
+    },
   }
 
   addComponents(components)
